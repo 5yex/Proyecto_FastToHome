@@ -10,17 +10,29 @@
 
 
 require_once '../modelo/usuario.php';
-$usuario = new usuario();
+
+//obtenemos parametro
+$nombre = $_POST["nom"];
 $dni = $_POST["dni"];
 $email = $_POST["email"];
-$dni = $_POST["dni"];
 $tlf = $_POST["tlf"];
 $rol = $_POST["rol"];
-$direccion = $_POST["dir"];
+$id_direccion = $_POST["dir"];
 $password = $_POST["pass"];
 
-$objUsuario->setCodigo($codigo);
-$resultado = $objUsuario->listarCodigo();
+//creamos usuario y los pasamos sus datos al objeto;
+$usuario = new usuario();
+$usuario->setNombre($nombre);
+$usuario->setDni($dni);
+$usuario->setEmail($email);
+$usuario->setId_direccion($id_direccion);
+$usuario->setTlf($tlf);
+$usuario->setRol($rol);
+$usuario->setPassword($password);
+//realizamos la accion
+$resultado = $usuario->agregar();
+
+//generamos la respuesta en json
 $respuesta = array(
     "codigo" => $resultado
 );
