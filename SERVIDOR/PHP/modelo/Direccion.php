@@ -9,7 +9,7 @@ require_once '../controlador/conexion.php';
  * 
  * 
  */
-class Direccion{
+class Direccion extends Conexion{
     var $id_direccion;
     var $calle;
     var $numero;
