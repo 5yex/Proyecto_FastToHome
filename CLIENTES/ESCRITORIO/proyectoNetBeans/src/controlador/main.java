@@ -5,6 +5,6 @@ package controlador;
  *
  * @author jmcbg
  */
-public class main {
+public class Main {
     
 }
