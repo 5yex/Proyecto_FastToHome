@@ -12,5 +12,75 @@ class usuario extends Conexion {
    private $email;
    private $tlf;
    private $rol;
-   private
+   private $id_direccion;
+   private $password;
+   public function __construct() {
+       
+   }
+   public function getId() {
+       return $this->id;
+   }
+
+   public function getNombre() {
+       return $this->nombre;
+   }
+
+   public function getDni() {
+       return $this->dni;
+   }
+
+   public function getEmail() {
+       return $this->email;
+   }
+
+   public function getTlf() {
+       return $this->tlf;
+   }
+
+   public function getRol() {
+       return $this->rol;
+   }
+
+   public function getId_direccion() {
+       return $this->id_direccion;
+   }
+
+   public function getPassword() {
+       return $this->password;
+   }
+
+   public function setId($id): void {
+       $this->id = $id;
+   }
+
+   public function setNombre($nombre): void {
+       $this->nombre = $nombre;
+   }
+
+   public function setDni($dni): void {
+       $this->dni = $dni;
+   }
+
+   public function setEmail($email): void {
+       $this->email = $email;
+   }
+
+   public function setTlf($tlf): void {
+       $this->tlf = $tlf;
+   }
+
+   public function setRol($rol): void {
+       $this->rol = $rol;
+   }
+
+   public function setId_direccion($id_direccion): void {
+       $this->id_direccion = $id_direccion;
+   }
+
+   public function setPassword($password): void {
+       $this->password = $password;
+   }
+
+
+
 }
