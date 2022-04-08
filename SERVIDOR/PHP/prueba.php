@@ -1,3 +1,3 @@
 <?php
 
-printf("hola")
+printf("hola");
