@@ -1,7 +1,15 @@
 <?php
-
-/* 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
- */
-
+    class Conexion {
+        protected $dblink;
+                
+        function __construct() {
+            $servidor = "mysql:host=localhost;dbname=pf";
+            $usuario = "root";
+            $clave = "";
+            
+            $this->dblink = new PDO($servidor, $usuario, $clave);
+            $this->dblink->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->dblink->exec("SET NAMES utf8");
+        }   
+}
+?>
