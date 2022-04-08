@@ -88,7 +88,7 @@ class usuario extends Conexion {
 
     public function agregar() {
         //$sql = "insert into articulos(codigo, descripcion, precio) values(:cod, :des, :pre);";
-        $sql = "INSERT INTO `usuarios` (`id`, `Nombre`, `Dni`, `Email`, `tlf`, `Rol`, `id_direccion`, `password`) VALUES (NULL, '', '', '', '', '', '', '')";
+        $sql = "INSERT INTO usuarios (Nombre, Dni, Email, tlf, Rol, id_direccion, password) VALUES (NULL, '', '', '', '', '', '', '')";
         $sentencia = $this->dblink->prepare($sql);
         $codigo = $this->getCodigo();
         $descripcion = $this->getDescripcion();
