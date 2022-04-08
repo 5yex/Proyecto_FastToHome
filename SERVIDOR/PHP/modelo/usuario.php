@@ -5,6 +5,12 @@
  *
  * @author jmcbg
  */
-class usuario {
-   
+class usuario extends Conexion {
+   private $id;
+   private $nombre;
+   private $dni;
+   private $email;
+   private $tlf;
+   private $rol;
+   private
 }
