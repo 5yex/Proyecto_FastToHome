@@ -106,6 +106,7 @@ class usuario extends Conexion {
 
         if ($resultado != 1) {
             //ocurrio un error al insertar
+            printf('aaa');
             return FALSE;
         }
 
