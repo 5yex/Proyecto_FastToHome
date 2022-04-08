@@ -9,24 +9,20 @@
 //        $sentencia->bindParam(":pass", $this->getPassword());
 
 
-    require_once '../modelo/usuario.php';
-    $objUsuario = new usuario();
-    $dni= $_POST["dni"];
-    $email= $_POST["email"];
-    $dni= $_POST["dni"];
-   $tlf= $_POST["tlf"];
-   $rol= $_POST["rol"];
-   $direccion= $_POST["dir"];
-   $password= $_POST["pass"];
-   
-   
-   
-   
-    
-    $objUsuario->setCodigo($codigo);
-    $resultado = $objUsuario->listarCodigo();
-    $respuesta = array(
-        "codigo"=>$resultado
-    );
-    echo json_encode($respuesta);   
+require_once '../modelo/usuario.php';
+$usuario = new usuario();
+$dni = $_POST["dni"];
+$email = $_POST["email"];
+$dni = $_POST["dni"];
+$tlf = $_POST["tlf"];
+$rol = $_POST["rol"];
+$direccion = $_POST["dir"];
+$password = $_POST["pass"];
+
+$objUsuario->setCodigo($codigo);
+$resultado = $objUsuario->listarCodigo();
+$respuesta = array(
+    "codigo" => $resultado
+);
+echo json_encode($respuesta);
 ?>
