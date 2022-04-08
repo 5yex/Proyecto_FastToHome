@@ -1,7 +1,7 @@
 <?php
-    require_once '../modelo/Producto.php';
-    $objUsuario = new Articulo();
-    $codigo= $_POST["codigo"];
+    require_once '../modelo/usuario.php';
+    $objUsuario = new ;
+    //$codigo= $_POST["codigo"];
     $objUsuario->setCodigo($codigo);
     $resultado = $objUsuario->listarCodigo();
     $respuesta = array(
