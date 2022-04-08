@@ -1,5 +1,5 @@
 <?php
-    require_once '../negocio/Articulo.clase.php';
+    require_once '../modelo/Producto.php';
     $objUsuario = new Articulo();
     $codigo= $_POST["codigo"];
     $objUsuario->setCodigo($codigo);
