@@ -1,6 +1,6 @@
 <?php
     class Conexion {
-        protected $dblink;
+        var $dblink;
                 
         function __construct() {
             $servidor = "mysql:host=localhost;dbname=pf";
