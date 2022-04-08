@@ -1,7 +1,11 @@
 <?php
-
-/* 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
- */
-
+    require_once '../negocio/Articulo.clase.php';
+    $objUsuario = new Articulo();
+    $codigo= $_POST["codigo"];
+    $objUsuario->setCodigo($codigo);
+    $resultado = $objUsuario->listarCodigo();
+    $respuesta = array(
+        "codigo"=>$resultado
+    );
+    echo json_encode($respuesta);   
+?>
