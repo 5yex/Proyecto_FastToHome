@@ -18,10 +18,7 @@ class usuario extends conexion {
     private $id_direccion;
     private $password;
 
-    public function __construct() {
-        
-    }
-
+    
     public function getId() {
         return $this->id;
     }
