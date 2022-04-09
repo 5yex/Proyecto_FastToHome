@@ -13,10 +13,6 @@ class Producto extends Conexion{
     private $descripcion;
     private $stock;
     
-    public function __construct() {
-        
-    }
-    
     public function getId_producto() {
         return $this->id_producto;
     }
@@ -67,7 +63,7 @@ class Producto extends Conexion{
 
     public function agregar() {
         //$sql = "insert into articulos(codigo, descripcion, precio) values(:cod, :des, :pre);";
-        $sql = "INSERT INTO productos (Nombre, Dni, Email, tlf, Rol, id_direccion, password) VALUES (:nom, :dni, :email, :tlf, :rol, :dir, :pass)";
+        $sql = "INSERT INTO productos (id_negocio, Nombre, Precio, Stock, id_direccion, password) VALUES (:nom, :dni, :email, :tlf, :rol, :dir, :pass)";
         $sentencia = $this->dblink->prepare($sql);
                
 
