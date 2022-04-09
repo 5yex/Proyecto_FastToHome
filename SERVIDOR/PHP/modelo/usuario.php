@@ -18,8 +18,6 @@ class usuario extends conexion {
     private $id_direccion;
     private $password;
 
-    
-
     public function getId() {
         return $this->id;
     }
@@ -91,13 +89,21 @@ class usuario extends conexion {
         $sentencia = $this->dblink->prepare($sql);
 
         // $stmt->bindParam(':name', $userName);
-        $sentencia->bindParam(":nom", $this->getNombre());
-        $sentencia->bindParam(":dni", $this->getDni());
-        $sentencia->bindParam(":email", $this->getEmail());
-        $sentencia->bindParam(":tlf", $this->getTlf());
-        $sentencia->bindParam(":rol", $this->getRol());
-        $sentencia->bindParam(":dir", $this->getId_direccion());
-        $sentencia->bindParam(":pass", $this->getPassword());
+        $nombre = $this->getNombre();
+        $dni = $this->getDni();
+        $email = $this->getEmail();
+        $tlf = $this->getTlf();
+        $rol = $this->getRol();
+        $id_direccion = $this->getId_direccion();
+        $password = $this->getPassword();
+                
+        $sentencia->bindParam(":nom", $nombre);
+        $sentencia->bindParam(":dni", $dni);
+        $sentencia->bindParam(":email", $email);
+        $sentencia->bindParam(":tlf", $tlf);
+        $sentencia->bindParam(":rol", $rol);
+        $sentencia->bindParam(":dir", $id_direccion);
+        $sentencia->bindParam(":pass", $password);
 
         // $sentencia->bindParam(":fot", $this->getFoto() );
         $resultado = $sentencia->execute();
