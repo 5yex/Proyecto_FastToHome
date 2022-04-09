@@ -19,6 +19,7 @@ class usuario extends conexion {
     private $password;
 
     
+
     public function getId() {
         return $this->id;
     }
