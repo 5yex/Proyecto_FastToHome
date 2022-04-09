@@ -1,5 +1,5 @@
 <?php
-    class Conexion {
+    class conexion {
         var $dblink;
                 
         function __construct() {
