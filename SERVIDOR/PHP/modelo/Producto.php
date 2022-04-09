@@ -76,10 +76,10 @@ class Producto extends Conexion{
         
         // $stmt->bindParam(':name', $userName);
         $sentencia->bindParam(":neg", $id_negocio);
-        $sentencia->bindParam(":nom", );
-        $sentencia->bindParam(":pre", );
-        $sentencia->bindParam(":stock", );
-        $sentencia->bindParam(":dir", $this->getId_direccion());
+        $sentencia->bindParam(":nom", $nombre);
+        $sentencia->bindParam(":pre", $precio);
+        $sentencia->bindParam(":stock", $stock);
+        $sentencia->bindParam(":descr", $descripcion);
         
 
         // $sentencia->bindParam(":fot", $this->getFoto() );
