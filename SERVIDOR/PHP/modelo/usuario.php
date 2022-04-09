@@ -89,9 +89,8 @@ class usuario extends conexion {
     public function agregar() {
         //$sql = "insert into articulos(codigo, descripcion, precio) values(:cod, :des, :pre);";
         $sql = "INSERT INTO usuarios (Nombre, Dni, Email, tlf, Rol, id_direccion, password) VALUES (:nom, :dni, :email, :tlf, :rol, :dir, :pass)";
-        
+
         $sentencia = $this->dblink->prepare($sql);
-               
 
         // $stmt->bindParam(':name', $userName);
         $sentencia->bindParam(":nom", $this->getNombre());
@@ -114,7 +113,5 @@ class usuario extends conexion {
         //Insertó correctamente
         return TRUE;
     }
-    
-    
 
 }
