@@ -65,7 +65,7 @@ class Producto extends Conexion{
         //$sql = "insert into articulos(codigo, descripcion, precio) values(:cod, :des, :pre);";
         $sql = "INSERT INTO productos (id_negocio, Nombre, Precio, Stock, id_direccion, password) VALUES (:neg, :nom, :pre, :stock, :dir, :pass)";
         $sentencia = $this->dblink->prepare($sql);
-               
+  
 
         // $stmt->bindParam(':name', $userName);
         $sentencia->bindParam(":neg", $this->getId_negocio());
