@@ -65,6 +65,32 @@ class Producto extends Conexion{
         $this->stock = $stock;
     }
 
+    public function agregar() {
+        //$sql = "insert into articulos(codigo, descripcion, precio) values(:cod, :des, :pre);";
+        $sql = "INSERT INTO productos (Nombre, Dni, Email, tlf, Rol, id_direccion, password) VALUES (:nom, :dni, :email, :tlf, :rol, :dir, :pass)";
+        $sentencia = $this->dblink->prepare($sql);
+               
 
+        // $stmt->bindParam(':name', $userName);
+        $sentencia->bindParam(":nom", $this->getNombre());
+        $sentencia->bindParam(":dni", $this->getDni());
+        $sentencia->bindParam(":email", $this->getEmail());
+        $sentencia->bindParam(":tlf", $this->getTlf());
+        $sentencia->bindParam(":rol", $this->getRol());
+        $sentencia->bindParam(":dir", $this->getId_direccion());
+        $sentencia->bindParam(":pass", $this->getPassword());
+
+        // $sentencia->bindParam(":fot", $this->getFoto() );
+        $resultado = $sentencia->execute();
+
+        if ($resultado != 1) {
+            //ocurrio un error al insertar
+            printf('aaa');
+            return FALSE;
+        }
+
+        //Insertó correctamente
+        return TRUE;
+    }
 
 }
