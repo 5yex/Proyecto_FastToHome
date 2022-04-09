@@ -63,16 +63,15 @@ class Producto extends Conexion{
 
     public function agregar() {
         //$sql = "insert into articulos(codigo, descripcion, precio) values(:cod, :des, :pre);";
-        $sql = "INSERT INTO productos (id_negocio, Nombre, Precio, Stock, id_direccion, password) VALUES (:nom, :dni, :email, :tlf, :rol, :dir, :pass)";
+        $sql = "INSERT INTO productos (id_negocio, Nombre, Precio, Stock, id_direccion, password) VALUES (:neg, :nom, :pre, :stock, :dir, :pass)";
         $sentencia = $this->dblink->prepare($sql);
                
 
         // $stmt->bindParam(':name', $userName);
-        $sentencia->bindParam(":nom", $this->getNombre());
-        $sentencia->bindParam(":dni", $this->getDni());
-        $sentencia->bindParam(":email", $this->getEmail());
-        $sentencia->bindParam(":tlf", $this->getTlf());
-        $sentencia->bindParam(":rol", $this->getRol());
+        $sentencia->bindParam(":neg", $this->getNombre());
+        $sentencia->bindParam(":nom", $this->getDni());
+        $sentencia->bindParam(":pre", $this->getEmail());
+        $sentencia->bindParam(":stock", $this->getTlf());
         $sentencia->bindParam(":dir", $this->getId_direccion());
         $sentencia->bindParam(":pass", $this->getPassword());
 
