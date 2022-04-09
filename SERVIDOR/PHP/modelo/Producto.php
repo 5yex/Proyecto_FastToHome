@@ -63,7 +63,7 @@ class Producto extends Conexion{
 
     public function agregar() {
         //$sql = "insert into articulos(codigo, descripcion, precio) values(:cod, :des, :pre);";
-        $sql = "INSERT INTO productos (id_negocio, Nombre, Precio, Descripcion, Stock) VALUES (:neg, :nom, :pre, ,:stock)";
+        $sql = "INSERT INTO productos (id_negocio, Nombre, Precio, Descripcion, Stock) VALUES (:neg, :nom, :pre, :descr, :stock)";
         $sentencia = $this->dblink->prepare($sql);
         
         $id_negocio = $this->getId_negocio();
