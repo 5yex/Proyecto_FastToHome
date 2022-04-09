@@ -72,14 +72,13 @@ class Producto extends Conexion{
         $descripcion = $this->getDescripcion();
         $stock = $this->getStock();
         
-        
-        
         // $stmt->bindParam(':name', $userName);
         $sentencia->bindParam(":neg", $id_negocio);
         $sentencia->bindParam(":nom", $nombre);
         $sentencia->bindParam(":pre", $precio);
-        $sentencia->bindParam(":stock", $stock);
         $sentencia->bindParam(":descr", $descripcion);
+        $sentencia->bindParam(":stock", $stock);
+        
         
 
         // $sentencia->bindParam(":fot", $this->getFoto() );
