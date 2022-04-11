@@ -72,25 +72,23 @@ class Pedido extends Conexion{
     }
     
     public function agregar() {
-        $sql = "INSERT INTO pedido (id_usuario, id_negocio, fecha_hora, estado, total, transporte) VALUES (:usu, :neg, :fec_hora, :est, :tot, :otros, :tra)";
+        $sql = "INSERT INTO pedido (id_usuario, id_negocio, fecha_hora, estado, total, transporte) VALUES (:usu, :neg, :fec_hora, :est, :tot, :tra)";
        
         $sentencia = $this->dblink->prepare($sql);
         
         $id_usuario = $this->getId_usuario();
         $id_negocio = $this->getId_negocio();
-        $f = $this->getCiudad();
-        $provincia = $this->getProvincia();
-        $codigo_postal = $this->getCodigo_postal();
-        $otros = $this->getOtros();
-        $coordenadas = $this->getCoordenadas();
+        $fecha_hora = $this->getFecha_hora();
+        $estado = $this->getEstado();
+        $total = $this->getTotal();
+        $transporte = $this->getTransporte();
         
-        $sentencia->bindParam(":calle", $calle);
-        $sentencia->bindParam(":num", $numero);
-        $sentencia->bindParam(":ciu", $ciudad);
-        $sentencia->bindParam(":prov", $provincia);
-        $sentencia->bindParam(":cp", $codigo_postal);
-        $sentencia->bindParam(":otros", $otros);
-        $sentencia->bindParam(":coor", $coordenadas);
+        $sentencia->bindParam(":usu", $id_usuario);
+        $sentencia->bindParam(":neg", $id_negocio);
+        $sentencia->bindParam(":fec_hora", $fecha_hora);
+        $sentencia->bindParam(":est", $estado);
+        $sentencia->bindParam(":tot", $total);
+        $sentencia->bindParam(":tra", $transporte);
         
         $resultado = $sentencia->execute();
 
