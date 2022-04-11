@@ -29,9 +29,9 @@ import org.apache.http.util.EntityUtils;
 public class ProyectoPrueba {
 
     public static void main(String[] args) throws IOException {
-        CloseableHttpClient client = HttpClients.createDefault();
-        HttpPost httpPost = new HttpPost("http://localhost/Php/webService/nuevoUsuario.php");
-
+       
+        
+        
         List<NameValuePair> params = new ArrayList<NameValuePair>();
 
         params.add(new BasicNameValuePair("nom", "John"));
@@ -41,26 +41,16 @@ public class ProyectoPrueba {
         params.add(new BasicNameValuePair("rol", "Cliente"));
         params.add(new BasicNameValuePair("dir", "0"));
         params.add(new BasicNameValuePair("pass", "123"));
-        httpPost.setEntity(new UrlEncodedFormEntity(params));
-
-        CloseableHttpResponse response = client.execute(httpPost);
-
-        HttpEntity entity = response.getEntity();
-        Header headers = entity.getContentType();
-
-        if (entity != null) {
-            String result = EntityUtils.toString(entity);
-            System.out.println(result);
-        }
-
-        client.close();
+        
+        hacerConsulta("http://localhost/Php/webService/nuevoUsuario.php", params);
+        
     }
 
     public static String hacerConsulta(String uri, List<NameValuePair> params) {
         String json = null;
         try {
             CloseableHttpClient client = HttpClients.createDefault();
-            HttpPost httpPost = new HttpPost("http://localhost/Php/webService/nuevoUsuario.php");
+            HttpPost httpPost = new HttpPost(uri);
 
             httpPost.setEntity(new UrlEncodedFormEntity(params));
 
