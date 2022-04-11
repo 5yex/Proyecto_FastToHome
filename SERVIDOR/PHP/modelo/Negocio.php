@@ -64,5 +64,19 @@ class Negocio extends Conexion{
 
     public function agregar() {
         $sql = "INSERT INTO negocio (id_categoria, id_direccion, id_mercader, Nombre, Descripcion) VALUES (:cat, :dir, :mer, :nom, :des)";
+        
+        $sentencia = $this->dblink->prepare($sql);
+        
+        $id_categoria = $this->getId_categoria();
+        $id_direccion = $this->getId_direccion();
+        $id_mercader = $this->getId_mercader();
+        $nombre = $this->getNombre();
+        $descripcion = $this->getDescripcion();
+        
+        $sentencia->bindParam(":cat", $id_categoria);
+        $sentencia->bindParam(":dir", $id_direccion);
+        $sentencia->bindParam(":mer", $id_mercader);
+        $sentencia->bindParam(":nom", $nombre);
+        $sentencia->bindParam(":des", $descripcion);
     }
 }
