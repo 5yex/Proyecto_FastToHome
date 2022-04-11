@@ -2,7 +2,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
-
 package com.donoso.proyectoprueba;
 
 import java.io.IOException;
@@ -27,26 +26,26 @@ import org.apache.http.util.EntityUtils;
 public class ProyectoPrueba {
 
     public static void main(String[] args) throws IOException {
-    CloseableHttpClient client = HttpClients.createDefault();
-    HttpPost httpPost = new HttpPost("http://localhost/Php/webService/nuevoUsuario.php");
+        CloseableHttpClient client = HttpClients.createDefault();
+        HttpPost httpPost = new HttpPost("http://localhost/Php/webService/nuevoUsuario.php");
 
-    List<NameValuePair> params = new ArrayList<NameValuePair>();
-    params.add(new BasicNameValuePair("username", "John"));
-    params.add(new BasicNameValuePair("password", "pass"));
-    httpPost.setEntity(new UrlEncodedFormEntity(params));
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("username", "John"));
+        params.add(new BasicNameValuePair("password", "pass"));
+        httpPost.setEntity(new UrlEncodedFormEntity(params));
 
-    HttpResponse response = client.execute(httpPost);
-    
-    HttpEntity entity = response.getEntity();
-            Header headers = entity.getContentType();
-            System.out.println(headers);
+        HttpResponse response = client.execute(httpPost);
 
-            if (entity != null) {
-                // return it as a String
-                String result = EntityUtils.toString(entity);
-                System.out.println(result);
-            }
-        
-    client.close();
+        HttpEntity entity = response.getEntity();
+        Header headers = entity.getContentType();
+        System.out.println(headers);
+
+        if (entity != null) {
+            // return it as a String
+            String result = EntityUtils.toString(entity);
+            System.out.println(result);
+        }
+
+        client.close();
     }
 }
