@@ -57,8 +57,11 @@ public class gestion {
             }
 
         } catch (UnsupportedEncodingException ex) {
+            System.out.println("controlador.gestion.hacerConsulta()");
         } catch (IOException ex) {
+            System.out.println("controlador.gestion.hacerConsulta()");
         } catch (ParseException ex) {
+            System.out.println("controlador.gestion.hacerConsulta()");
         } catch (JsonSyntaxException ex) {
             System.out.println("controlador.gestion.hacerConsulta()");
         }
