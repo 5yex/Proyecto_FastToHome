@@ -60,6 +60,7 @@ public class gestion {
         } catch (IOException ex) {
         } catch (ParseException ex) {
         } catch (JsonSyntaxException ex) {
+            System.out.println("controlador.gestion.hacerConsulta()");
         }
         return json;
     }
