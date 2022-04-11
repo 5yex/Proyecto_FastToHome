@@ -33,7 +33,7 @@ import org.apache.http.util.EntityUtils;
  */
 public class gestion {
 
-    public static String hacerConsulta(String uri, List<NameValuePair> params) {
+    public static Boolean hacerConsulta(String uri, List<NameValuePair> params) {
         String json = null;
         try {
             CloseableHttpClient client = HttpClients.createDefault();
@@ -65,6 +65,6 @@ public class gestion {
         } catch (JsonSyntaxException ex) {
             System.out.println("Error en la consulta");
         }
-        return json;
+        return true;
     }
 }
