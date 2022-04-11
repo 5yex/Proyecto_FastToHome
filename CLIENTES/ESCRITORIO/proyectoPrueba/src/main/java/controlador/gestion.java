@@ -57,13 +57,9 @@ public class gestion {
             }
 
         } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParseException ex) {
-            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
         } catch (JsonSyntaxException ex) {
-            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
         }
         return json;
     }
