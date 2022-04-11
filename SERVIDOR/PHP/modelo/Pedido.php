@@ -31,7 +31,7 @@ class Pedido extends Conexion{
         return $this->id_negocio;
     }
 
-    public function getFehca_hora() {
+    public function getFecha_hora() {
         return $this->fecha_hora;
     }
 
