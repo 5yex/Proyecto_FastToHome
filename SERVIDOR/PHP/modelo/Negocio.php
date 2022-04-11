@@ -14,10 +14,6 @@ class Negocio extends Conexion{
     private $nombre;
     private $descripcion;
     
-    public function __construct() {
-        
-    }
-    
     public function getId_negocio() {
         return $this->id_negocio;
     }
