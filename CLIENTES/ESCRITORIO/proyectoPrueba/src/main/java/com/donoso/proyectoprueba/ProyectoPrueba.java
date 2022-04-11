@@ -5,6 +5,7 @@
 package com.donoso.proyectoprueba;
 
 import java.io.IOException;
+import java.net.http.HttpClient;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.http.Header;
@@ -12,6 +13,7 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -39,7 +41,7 @@ public class ProyectoPrueba {
         params.add(new BasicNameValuePair("pass", "123"));
         httpPost.setEntity(new UrlEncodedFormEntity(params));
 
-        HttpResponse response = client.execute(httpPost);
+        CloseableHttpResponse response = client.execute(httpPost);
 
         HttpEntity entity = response.getEntity();
         Header headers = entity.getContentType();
