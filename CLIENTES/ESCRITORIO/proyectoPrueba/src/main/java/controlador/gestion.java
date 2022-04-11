@@ -7,6 +7,7 @@ package controlador;
 import com.donoso.proyectoprueba.principal;
 import com.donoso.proyectoprueba.principal;
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import java.io.IOException;
@@ -49,8 +50,8 @@ public class gestion {
                 System.out.println(json);
 
                 JsonObject jsonObject = new JsonParser().parse(json).getAsJsonObject();
-                String estado = jsonObject.get("estado").toString();
-                System.out.println("Estado: " + estado );
+                JsonElement estado = jsonObject.get("estado");
+                System.out.println("Estado: " + estado.getAsString() );
             }
 
         } catch (UnsupportedEncodingException ex) {
