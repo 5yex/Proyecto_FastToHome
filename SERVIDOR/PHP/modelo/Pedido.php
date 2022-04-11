@@ -15,10 +15,6 @@ class Pedido extends Conexion{
     private $total;
     private $transporte;
     
-    public function __construct() {
-        
-    }
-    
     public function getId_pedido() {
         return $this->id_pedido;
     }
@@ -59,7 +55,7 @@ class Pedido extends Conexion{
         $this->id_negocio = $id_negocio;
     }
 
-    public function setFehca_hora($fehca_hora): void {
+    public function setFecha_hora($fehca_hora): void {
         $this->fecha_hora = $fehca_hora;
     }
 
