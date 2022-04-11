@@ -74,6 +74,6 @@ class Pedido extends Conexion{
     public function setTransporte($transporte): void {
         $this->transporte = $transporte;
     }
-
-
+    
+    
 }
