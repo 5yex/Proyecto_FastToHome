@@ -57,7 +57,7 @@ public class ProyectoPrueba {
     }
 
     public static String hacerConsulta(String uri, List<NameValuePair> params) {
-        String json;
+        String json = null;
         try {
             CloseableHttpClient client = HttpClients.createDefault();
             HttpPost httpPost = new HttpPost("http://localhost/Php/webService/nuevoUsuario.php");
@@ -80,6 +80,6 @@ public class ProyectoPrueba {
         } catch (ParseException ex) {
             Logger.getLogger(ProyectoPrueba.class.getName()).log(Level.SEVERE, null, ex);
         }
-        reuturn json;
+        return json;
     }
 }
