@@ -80,6 +80,6 @@ public class ProyectoPrueba {
         } catch (ParseException ex) {
             Logger.getLogger(ProyectoPrueba.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+        reuturn json;
     }
 }
