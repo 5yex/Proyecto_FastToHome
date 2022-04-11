@@ -9,5 +9,13 @@ package modelo;
  * @author jmcbg
  */
 public class Usuario {
-    
+    private int id;
+    private String nombre;
+    private String dni;
+    private String email;
+    private String tlf;
+    private String rol;
+    private int id_direccion;
+    private String password;
+
 }
