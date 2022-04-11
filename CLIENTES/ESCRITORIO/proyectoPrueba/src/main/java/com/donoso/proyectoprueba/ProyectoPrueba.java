@@ -43,7 +43,6 @@ public class ProyectoPrueba {
 
         HttpEntity entity = response.getEntity();
         Header headers = entity.getContentType();
-        System.out.println(headers);
 
         if (entity != null) {
             String result = EntityUtils.toString(entity);
