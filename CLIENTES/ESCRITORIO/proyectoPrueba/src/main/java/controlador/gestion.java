@@ -5,6 +5,9 @@
 package controlador;
 
 import com.donoso.proyectoprueba.principal;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
@@ -26,7 +29,8 @@ import org.apache.http.util.EntityUtils;
  * @author jmcbg
  */
 public class gestion {
-     public static String hacerConsulta(String uri, List<NameValuePair> params) {
+
+    public static String hacerConsulta(String uri, List<NameValuePair> params) {
         String json = null;
         try {
             CloseableHttpClient client = HttpClients.createDefault();
@@ -42,6 +46,10 @@ public class gestion {
             if (entity != null) {
                 json = EntityUtils.toString(entity);
                 System.out.println(json);
+
+                JsonObject jsonObject = new JsonParser().parse(json).getAsJsonObject();
+                String estado = jsonObject.get("estado").toString();
+                System.out.println("Estado: " + estado );
             }
 
         } catch (UnsupportedEncodingException ex) {
