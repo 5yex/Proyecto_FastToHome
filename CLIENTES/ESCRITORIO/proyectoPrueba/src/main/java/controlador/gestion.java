@@ -63,7 +63,7 @@ public class gestion {
         } catch (ParseException ex) {
             System.out.println("controlador.gestion.hacerConsulta()");
         } catch (JsonSyntaxException ex) {
-            System.out.println("controlador.gestion.hacerConsulta()");
+            System.out.println("Error en la consulta");
         }
         return json;
     }
