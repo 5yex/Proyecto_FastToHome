@@ -35,6 +35,7 @@ public class ProyectoPrueba {
     
     String respuesta = response.getEntity().toString();
         System.out.println(respuesta);
+        System.out.println("com.donoso.proyectoprueba.ProyectoPrueba.main()");
     client.close();
     }
 }
