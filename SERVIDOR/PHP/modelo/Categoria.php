@@ -22,7 +22,7 @@ class Categoria extends Conexion{
     }
     
     public function agregar() {
-        $sql = "INSERT INTO categoria (Nombre) VALUES (:nom)";
+        $sql = "INSERT INTO categoria_negocio (Nombre) VALUES (:nom)";
         
         $sentencia = $this->dblink->prepare($sql);
         
