@@ -30,4 +30,13 @@ class Categoria extends Conexion{
         
         $sentencia->bindParam(":nom", $nombre);
     }
+    
+    public function obtenerIdCategoria(){
+        $sql = "SELECT id_categoria FROM categoria_bici WHERE Nombre = :nom";
+        $sentencia = $this->dblink->prepare($sql);
+        $nombre = $this->getNombre();
+        $sentencia->bindParam(":nom", $nombre);
+        $sentencia->execute();            
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }   
 }
