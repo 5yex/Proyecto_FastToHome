@@ -33,7 +33,7 @@ public class ProyectoPrueba {
 
     CloseableHttpResponse response = client.execute(httpPost);
     
-    String respuesta = response.toString();
+    String respuesta = response.getEntity().toString();
     client.close();
     }
 }
