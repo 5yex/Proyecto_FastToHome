@@ -75,5 +75,36 @@ class Pedido extends Conexion{
         $this->transporte = $transporte;
     }
     
-    
+    public function agregar() {
+        $sql = "INSERT INTO pedido (id_usuario, id_negocio, fecha_hora, estado, total, transporte) VALUES (:usu, :neg, :fec_hora, :est, :tot, :otros, :tra)";
+       
+        $sentencia = $this->dblink->prepare($sql);
+        
+        $id_usuario = $this->getId_usuario();
+        $id_negocio = $this->getId_negocio();
+        $f = $this->getCiudad();
+        $provincia = $this->getProvincia();
+        $codigo_postal = $this->getCodigo_postal();
+        $otros = $this->getOtros();
+        $coordenadas = $this->getCoordenadas();
+        
+        $sentencia->bindParam(":calle", $calle);
+        $sentencia->bindParam(":num", $numero);
+        $sentencia->bindParam(":ciu", $ciudad);
+        $sentencia->bindParam(":prov", $provincia);
+        $sentencia->bindParam(":cp", $codigo_postal);
+        $sentencia->bindParam(":otros", $otros);
+        $sentencia->bindParam(":coor", $coordenadas);
+        
+        $resultado = $sentencia->execute();
+
+        if ($resultado != 1) {
+            //ocurrio un error al insertar
+            printf('aaa');
+            return FALSE;
+        }
+
+        //Insertó correctamente
+        return TRUE;
+    }
 }
