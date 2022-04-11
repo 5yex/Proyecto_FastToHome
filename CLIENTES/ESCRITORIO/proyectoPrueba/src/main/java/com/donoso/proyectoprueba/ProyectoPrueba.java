@@ -72,7 +72,7 @@ public class ProyectoPrueba {
             if (entity != null) {
                 json = EntityUtils.toString(entity);
                 System.out.println("com.donoso.proyectoprueba.ProyectoPrueba.hacerConsulta()");
-                System.out.println("json");
+                System.out.println(json);
             }
 
         } catch (UnsupportedEncodingException ex) {
