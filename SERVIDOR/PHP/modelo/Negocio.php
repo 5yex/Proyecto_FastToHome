@@ -8,7 +8,7 @@ require_once '../controlador/conexion.php';
  */
 class Negocio extends Conexion{
     private $id_negocio;
-    private $id_ciudad;
+    private $id_direccion;
     private $id_categoria;
     private $id_mercader;
     private $nombre;
@@ -23,7 +23,7 @@ class Negocio extends Conexion{
     }
 
     public function getId_ciudad() {
-        return $this->id_ciudad;
+        return $this->id_direccion;
     }
 
     public function getId_categoria() {
@@ -47,7 +47,7 @@ class Negocio extends Conexion{
     }
 
     public function setId_ciudad($id_ciudad): void {
-        $this->id_ciudad = $id_ciudad;
+        $this->id_direccion = $id_ciudad;
     }
 
     public function setId_categoria($id_categoria): void {
