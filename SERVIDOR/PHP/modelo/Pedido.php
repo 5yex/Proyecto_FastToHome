@@ -10,7 +10,7 @@ class Pedido extends Conexion{
     private $id_pedido;
     private $id_usuario;
     private $id_negocio;
-    private $fehca_hora;
+    private $fecha_hora;
     private $estado;
     private $total;
     private $transporte;
@@ -32,7 +32,7 @@ class Pedido extends Conexion{
     }
 
     public function getFehca_hora() {
-        return $this->fehca_hora;
+        return $this->fecha_hora;
     }
 
     public function getEstado() {
@@ -60,7 +60,7 @@ class Pedido extends Conexion{
     }
 
     public function setFehca_hora($fehca_hora): void {
-        $this->fehca_hora = $fehca_hora;
+        $this->fecha_hora = $fehca_hora;
     }
 
     public function setEstado($estado): void {
