@@ -46,8 +46,8 @@ class Negocio extends Conexion{
         $this->id_negocio = $id_negocio;
     }
 
-    public function setId_ciudad($id_ciudad): void {
-        $this->id_direccion = $id_ciudad;
+    public function setId_direccion($id_direccion): void {
+        $this->id_direccion = $id_direccion;
     }
 
     public function setId_categoria($id_categoria): void {
