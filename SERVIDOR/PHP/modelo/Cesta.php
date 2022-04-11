@@ -43,5 +43,30 @@ class Cesta extends Conexion{
     public function setId_producto($id_producto): void {
         $this->id_producto = $id_producto;
     }
+    
+    public function agregar() {
+        $sql = "INSERT INTO cesta (Cantidad, id_pedido, id_producto) VALUES (:cant, :ped, :pro)";
+        
+        $sentencia = $this->dblink->prepare($sql);
+        
+        $cantidad = $this->getCantidad();
+        $id_pedido = $this->getId_pedido();
+        $id_producto = $this->getId_producto();
+        
+        $sentencia->bindParam(":cant", $cantidad);
+        $sentencia->bindParam(":ped", $this->id_pedido);
+        $sentencia->bindParam(":pro", $this->id_producto);
+        
+        $resultado = $sentencia->execute();
+
+        if ($resultado != 1) {
+            //ocurrio un error al insertar
+            printf('aaa');
+            return FALSE;
+        }
+
+        //Insertó correctamente
+        return TRUE;
+    }
 
 }
