@@ -20,5 +20,14 @@ class Categoria extends Conexion{
     public function setNombre($nombre): void {
         $this->nombre = $nombre;
     }
-
+    
+    public function agregar() {
+        $sql = "INSERT INTO categoria (Nombre) VALUES (:nom)";
+        
+        $sentencia = $this->dblink->prepare($sql);
+        
+        $nombre = $this->getNombre();
+        
+        $sentencia->bindParam(":nom", $nombre);
+    }
 }
