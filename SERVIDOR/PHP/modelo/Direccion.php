@@ -99,5 +99,16 @@ class Direccion extends Conexion{
         $sentencia->bindParam(":cp", $codigo_postal);
         $sentencia->bindParam(":otros", $otros);
         $sentencia->bindParam(":coor", $coordenadas);
+        
+        $resultado = $sentencia->execute();
+
+        if ($resultado != 1) {
+            //ocurrio un error al insertar
+            printf('aaa');
+            return FALSE;
+        }
+
+        //Insertó correctamente
+        return TRUE;
     }
 }

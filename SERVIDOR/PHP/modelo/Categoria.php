@@ -29,6 +29,17 @@ class Categoria extends Conexion{
         $nombre = $this->getNombre();
         
         $sentencia->bindParam(":nom", $nombre);
+        
+        $resultado = $sentencia->execute();
+
+        if ($resultado != 1) {
+            //ocurrio un error al insertar
+            printf('aaa');
+            return FALSE;
+        }
+
+        //Insertó correctamente
+        return TRUE;
     }
     
     public function obtenerIdCategoria(){
