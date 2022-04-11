@@ -62,5 +62,7 @@ class Negocio extends Conexion{
         $this->descripcion = $descripcion;
     }
 
-
+    public function agregar() {
+        $sql = "INSERT INTO negocio (id_categoria, id_direccion, id_mercader, Nombre, Descripcion) VALUES (:cat, :dir, :mer, :nom, :des)";
+    }
 }
