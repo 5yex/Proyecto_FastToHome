@@ -4,6 +4,7 @@
  */
 package com.donoso.proyectoprueba;
 
+import controlador.gestion;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -40,37 +41,6 @@ public class principal {
         params.add(new BasicNameValuePair("dir", "0"));
         params.add(new BasicNameValuePair("pass", "123"));
 
-        hacerConsulta("http://localhost/Php/webService/nuevoUsuario.php", params);
-
     }
 
-    public static String hacerConsulta(String uri, List<NameValuePair> params) {
-        String json = null;
-        try {
-            CloseableHttpClient client = HttpClients.createDefault();
-            HttpPost httpPost = new HttpPost(uri);
-
-            httpPost.setEntity(new UrlEncodedFormEntity(params));
-
-            CloseableHttpResponse response = client.execute(httpPost);
-
-            HttpEntity entity = response.getEntity();
-            Header headers = entity.getContentType();
-
-            if (entity != null) {
-                json = EntityUtils.toString(entity);
-                System.out.println(json);
-            }
-
-        } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ParseException ex) {
-            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return json;
-    }
-    
-    
 }
