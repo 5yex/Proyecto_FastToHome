@@ -41,7 +41,6 @@ public class ProyectoPrueba {
         System.out.println(headers);
 
         if (entity != null) {
-            // return it as a String
             String result = EntityUtils.toString(entity);
             System.out.println(result);
         }
