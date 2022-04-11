@@ -22,7 +22,7 @@ class Negocio extends Conexion{
         return $this->id_negocio;
     }
 
-    public function getId_ciudad() {
+    public function getId_direccion() {
         return $this->id_direccion;
     }
 
