@@ -24,7 +24,7 @@ public class ProyectoPrueba {
 
     public static void main(String[] args) throws IOException {
          CloseableHttpClient client = HttpClients.createDefault();
-    HttpPost httpPost = new HttpPost("http://www.example.com");
+    HttpPost httpPost = new HttpPost("http://localhost/Php/webService/nuevoUsuario.php");
 
     List<NameValuePair> params = new ArrayList<NameValuePair>();
     params.add(new BasicNameValuePair("username", "John"));
