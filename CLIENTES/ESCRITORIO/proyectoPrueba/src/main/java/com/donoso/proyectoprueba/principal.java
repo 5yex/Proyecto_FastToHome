@@ -26,7 +26,7 @@ import org.apache.http.util.EntityUtils;
  *
  * @author jmcbg
  */
-public class ProyectoPrueba {
+public class principal {
 
     public static void main(String[] args) throws IOException {
 
@@ -63,11 +63,11 @@ public class ProyectoPrueba {
             }
 
         } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(ProyectoPrueba.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(ProyectoPrueba.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParseException ex) {
-            Logger.getLogger(ProyectoPrueba.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
         }
         return json;
     }

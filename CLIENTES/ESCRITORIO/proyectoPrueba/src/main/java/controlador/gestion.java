@@ -4,7 +4,7 @@
  */
 package controlador;
 
-import com.donoso.proyectoprueba.ProyectoPrueba;
+import com.donoso.proyectoprueba.principal;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
@@ -45,11 +45,11 @@ public class gestion {
             }
 
         } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(ProyectoPrueba.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(ProyectoPrueba.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParseException ex) {
-            Logger.getLogger(ProyectoPrueba.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
         }
         return json;
     }
