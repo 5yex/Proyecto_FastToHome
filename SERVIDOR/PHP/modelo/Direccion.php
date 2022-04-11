@@ -79,5 +79,5 @@ class Direccion extends Conexion{
         $this->coordenadas = $coordenadas;
     }
 
-
+    
 }
