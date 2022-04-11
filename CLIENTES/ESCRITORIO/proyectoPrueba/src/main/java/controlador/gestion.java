@@ -52,6 +52,7 @@ public class gestion {
                 JsonObject jsonObject = new JsonParser().parse(json).getAsJsonObject();
                 JsonElement estado = jsonObject.get("codigo");
                 System.out.println(estado.getAsString() );
+                
             }
 
         } catch (UnsupportedEncodingException ex) {
