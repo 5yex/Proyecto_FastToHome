@@ -78,5 +78,16 @@ class Negocio extends Conexion{
         $sentencia->bindParam(":mer", $id_mercader);
         $sentencia->bindParam(":nom", $nombre);
         $sentencia->bindParam(":des", $descripcion);
+        
+        $resultado = $sentencia->execute();
+
+        if ($resultado != 1) {
+            //ocurrio un error al insertar
+            printf('aaa');
+            return FALSE;
+        }
+
+        //Insertó correctamente
+        return TRUE;
     }
 }
