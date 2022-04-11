@@ -6,22 +6,10 @@ package com.donoso.proyectoprueba;
 
 import controlador.gestion;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
-import org.apache.http.ParseException;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
 
 /**
  *
@@ -41,6 +29,7 @@ public class principal {
         params.add(new BasicNameValuePair("dir", "0"));
         params.add(new BasicNameValuePair("pass", "123"));
 
+        gestion.hacerConsulta("http://localhost/php/webService/nuevoUsuario.php", params);
     }
 
 }
