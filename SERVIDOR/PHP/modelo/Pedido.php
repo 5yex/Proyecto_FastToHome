@@ -56,7 +56,7 @@ class Pedido extends Conexion{
     }
 
     public function setFecha_hora($fecha_hora): void {
-        $this->fecha_hora = $fehca_hora;
+        $this->fecha_hora = $fecha_hora;
     }
 
     public function setEstado($estado): void {
