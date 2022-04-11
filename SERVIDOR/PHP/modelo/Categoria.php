@@ -5,10 +5,6 @@ class Categoria extends Conexion{
     private $id_categoria;
     private $nombre;
     
-    public function __construct() {
-        
-    }
-    
     public function getId_categoria() {
         return $this->id_categoria;
     }
