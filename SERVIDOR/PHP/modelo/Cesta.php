@@ -12,10 +12,6 @@ class Cesta extends Conexion{
     private $id_pedido;
     private $id_producto;
     
-    public function __construct() {
-        
-    }
-    
     public function getId_cesta() {
         return $this->id_cesta;
     }
