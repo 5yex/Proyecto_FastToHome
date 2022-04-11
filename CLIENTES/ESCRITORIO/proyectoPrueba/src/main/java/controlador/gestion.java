@@ -10,6 +10,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.google.gson.JsonSyntaxException;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
@@ -51,8 +52,8 @@ public class gestion {
 
                 JsonObject jsonObject = new JsonParser().parse(json).getAsJsonObject();
                 JsonElement estado = jsonObject.get("codigo");
-                System.out.println(estado.getAsString() );
-                
+                System.out.println(estado.getAsString());
+
             }
 
         } catch (UnsupportedEncodingException ex) {
@@ -60,6 +61,8 @@ public class gestion {
         } catch (IOException ex) {
             Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParseException ex) {
+            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (JsonSyntaxException ex) {
             Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
         }
         return json;
