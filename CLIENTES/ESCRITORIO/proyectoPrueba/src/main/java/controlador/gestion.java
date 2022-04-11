@@ -33,7 +33,7 @@ import org.apache.http.util.EntityUtils;
  */
 public class gestion {
 
-    public static Boolean hacerConsulta(String uri, List<NameValuePair> params) {
+    public static boolean hacerConsulta(String uri, List<NameValuePair> params) {
         String json = null;
         try {
             CloseableHttpClient client = HttpClients.createDefault();
