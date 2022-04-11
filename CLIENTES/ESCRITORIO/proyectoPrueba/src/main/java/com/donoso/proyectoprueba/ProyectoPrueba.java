@@ -30,8 +30,14 @@ public class ProyectoPrueba {
         HttpPost httpPost = new HttpPost("http://localhost/Php/webService/nuevoUsuario.php");
 
         List<NameValuePair> params = new ArrayList<NameValuePair>();
-        params.add(new BasicNameValuePair("username", "John"));
-        params.add(new BasicNameValuePair("password", "pass"));
+
+        params.add(new BasicNameValuePair("nom", "John"));
+        params.add(new BasicNameValuePair("dni", "123"));
+        params.add(new BasicNameValuePair("email", "123"));
+        params.add(new BasicNameValuePair("tlf", "123"));
+        params.add(new BasicNameValuePair("rol", "Cliente"));
+        params.add(new BasicNameValuePair("dir", "0"));
+        params.add(new BasicNameValuePair("pass", "123"));
         httpPost.setEntity(new UrlEncodedFormEntity(params));
 
         HttpResponse response = client.execute(httpPost);
