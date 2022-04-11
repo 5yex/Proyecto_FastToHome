@@ -4,7 +4,7 @@
  */
 package com.donoso.proyectoprueba;
 
-import static com.donoso.proyectoprueba.gestion.hacerConsulta;
+import static controlador.gestion.hacerConsulta;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
