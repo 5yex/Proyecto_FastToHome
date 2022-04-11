@@ -5,13 +5,15 @@
 package com.donoso.proyectoprueba;
 
 import java.io.IOException;
-import java.net.http.HttpClient;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+import org.apache.http.ParseException;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -52,5 +54,32 @@ public class ProyectoPrueba {
         }
 
         client.close();
+    }
+
+    public static String hacerConsulta(String uri, List<NameValuePair> params) {
+        String json;
+        try {
+            CloseableHttpClient client = HttpClients.createDefault();
+            HttpPost httpPost = new HttpPost("http://localhost/Php/webService/nuevoUsuario.php");
+
+            httpPost.setEntity(new UrlEncodedFormEntity(params));
+
+            CloseableHttpResponse response = client.execute(httpPost);
+
+            HttpEntity entity = response.getEntity();
+            Header headers = entity.getContentType();
+
+            if (entity != null) {
+                json = EntityUtils.toString(entity);
+            }
+
+        } catch (UnsupportedEncodingException ex) {
+            Logger.getLogger(ProyectoPrueba.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(ProyectoPrueba.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParseException ex) {
+            Logger.getLogger(ProyectoPrueba.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
 }
