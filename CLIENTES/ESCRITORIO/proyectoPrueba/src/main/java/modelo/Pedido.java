@@ -18,4 +18,65 @@ public class Pedido {
     private String estado;
     private int total;
     private int transporte;
+
+    public Pedido() {
+    }
+
+    public int getId_pedido() {
+        return id_pedido;
+    }
+
+    public void setId_pedido(int id_pedido) {
+        this.id_pedido = id_pedido;
+    }
+
+    public int getId_usuario() {
+        return id_usuario;
+    }
+
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
+    }
+
+    public int getId_negocio() {
+        return id_negocio;
+    }
+
+    public void setId_negocio(int id_negocio) {
+        this.id_negocio = id_negocio;
+    }
+
+    public Date getFecha_hora() {
+        return fecha_hora;
+    }
+
+    public void setFecha_hora(Date fecha_hora) {
+        this.fecha_hora = fecha_hora;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
+    public int getTransporte() {
+        return transporte;
+    }
+
+    public void setTransporte(int transporte) {
+        this.transporte = transporte;
+    }
+    
+    
 }
