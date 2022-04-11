@@ -15,10 +15,6 @@ class Direccion extends Conexion{
     private $otros;
     private $coordenadas;
     
-    public function __construct() {
-        
-    }
-    
     public function getId_direccion() {
         return $this->id_direccion;
     }
