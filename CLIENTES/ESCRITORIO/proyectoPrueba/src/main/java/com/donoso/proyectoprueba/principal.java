@@ -4,6 +4,7 @@
  */
 package com.donoso.proyectoprueba;
 
+import static com.donoso.proyectoprueba.gestion.hacerConsulta;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +29,7 @@ public class principal {
         params.add(new BasicNameValuePair("dir", "0"));
         params.add(new BasicNameValuePair("pass", "123"));
 
-        gestion.hacerConsulta("http://localhost/php/webService/nuevoUsuario.php", params);
+        hacerConsulta("http://localhost/php/webService/nuevoUsuario.php", params);
     }
 
 }
