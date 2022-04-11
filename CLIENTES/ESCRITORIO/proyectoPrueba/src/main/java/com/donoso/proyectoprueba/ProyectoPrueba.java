@@ -34,7 +34,7 @@ public class ProyectoPrueba {
     CloseableHttpResponse response = client.execute(httpPost);
     
     String respuesta = response.getEntity().toString();
-        System.out.println(response);
+        System.out.println(respuesta);
     client.close();
     }
 }
