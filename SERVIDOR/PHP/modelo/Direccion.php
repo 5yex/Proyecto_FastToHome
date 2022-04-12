@@ -111,4 +111,5 @@ class Direccion extends Conexion{
         //Insertó correctamente
         return TRUE;
     }
+    
 }
