@@ -1,4 +1,5 @@
 <?php
+
 require_once '../controlador/conexion.php';
 
 /**
@@ -6,14 +7,15 @@ require_once '../controlador/conexion.php';
  *
  * @author Jesus
  */
-class Negocio extends Conexion{
+class Negocio extends Conexion {
+
     private $id_negocio;
     private $id_direccion;
     private $id_categoria;
     private $id_mercader;
     private $nombre;
     private $descripcion;
-    
+
     public function getId_negocio() {
         return $this->id_negocio;
     }
@@ -64,21 +66,21 @@ class Negocio extends Conexion{
 
     public function agregar() {
         $sql = "INSERT INTO negocio (id_categoria, id_direccion, id_mercader, Nombre, Descripcion) VALUES (:cat, :dir, :mer, :nom, :des)";
-        
+
         $sentencia = $this->dblink->prepare($sql);
-        
+
         $id_categoria = $this->getId_categoria();
         $id_direccion = $this->getId_direccion();
         $id_mercader = $this->getId_mercader();
         $nombre = $this->getNombre();
         $descripcion = $this->getDescripcion();
-        
+
         $sentencia->bindParam(":cat", $id_categoria);
         $sentencia->bindParam(":dir", $id_direccion);
         $sentencia->bindParam(":mer", $id_mercader);
         $sentencia->bindParam(":nom", $nombre);
         $sentencia->bindParam(":des", $descripcion);
-        
+
         $resultado = $sentencia->execute();
 
         if ($resultado != 1) {
@@ -90,4 +92,35 @@ class Negocio extends Conexion{
         //Insertó correctamente
         return TRUE;
     }
+    
+    public function obtenerIdNegocio(){
+        
+    }
+
+    public function modificar() {
+        $sql = "UPDATE negocio set id_direccion = :dir, id_mercader = :mer, Nombre = :nom, Descripcion = :des where id = :id_neg";
+
+        $sentencia = $this->dblink->prepare($sql);
+        $marca = $this->getMarca();
+        $propietario = $this->getPropietario();
+        $precio = $this->getPrecio();
+
+        // $stmt->bindParam(':name', $userName);
+        $sentencia->bindParam(":marca", $marca);
+        $sentencia->bindParam(":pre", $precio);
+        $sentencia->bindParam(":prop", $propietario);
+        // $sentencia->bindParam(":fot", $this->getFoto() );
+        $resultado = $sentencia->execute();
+
+        if ($resultado != 1) {
+            //ocurrio un error al borrar
+            return FALSE;
+        }
+
+        //InsertÃ³ correctamente
+        return TRUE;
+    }
+    
+    
+
 }
