@@ -100,7 +100,7 @@ class Negocio extends Conexion {
     public function modificar() {
         $sql = "UPDATE negocio set id_direccion = :dir, id_mercader = :mer, Nombre = :nom, Descripcion = :des where id = :id_neg";
 
-        $sentencia = $this->dblink->prepare($sql);
+        /*$sentencia = $this->dblink->prepare($sql);
         $marca = $this->getMarca();
         $propietario = $this->getPropietario();
         $precio = $this->getPrecio();
@@ -118,7 +118,7 @@ class Negocio extends Conexion {
         }
 
         //InsertÃ³ correctamente
-        return TRUE;
+        return TRUE;*/
     }
     
     
