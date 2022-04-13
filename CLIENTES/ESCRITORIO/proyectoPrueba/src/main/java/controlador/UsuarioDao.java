@@ -14,6 +14,6 @@ import modelo.Usuario;
  */
 public class UsuarioDao {
     public boolean nuevoUsuario(Usuario user){
-         hacerConsulta(new Peticion("nuevo_usuario", user.getJSON()));
+         return hacerConsulta(new Peticion("nuevo_usuario", user.getJSON()));
     }
 }
