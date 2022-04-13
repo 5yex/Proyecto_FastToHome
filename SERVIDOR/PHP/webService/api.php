@@ -31,8 +31,7 @@ function nuevoUsuario($datos) {
 //realizamos la accion
     $resultado = $usuario->agregar();
     
-    vardump $usuario;
-}
+    var_dump($usuario);
 
 function mandarRespuesta($error, $datos) {
     require_once '../modelo/Respuesta.php';
