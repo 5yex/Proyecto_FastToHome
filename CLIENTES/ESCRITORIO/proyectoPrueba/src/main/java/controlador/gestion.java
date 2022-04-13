@@ -49,7 +49,7 @@ public class gestion {
 
             if (entity != null) {
                 JsonObject jsonObject = new JsonParser().parse(EntityUtils.toString(entity)).getAsJsonObject();
-                return jsonObject.get("error").getAsBoolean();
+                return !jsonObject.get("error").getAsBoolean();
             }else{
             return false;
             }
