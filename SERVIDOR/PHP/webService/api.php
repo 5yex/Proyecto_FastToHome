@@ -1,10 +1,10 @@
 <?php
 
-if (empty(filter_input(INPUT_POST, 'DATA'))) {
+if (empty($_POST["DATA"])) {
     mandarRespuesta(true, 'error en parametros');
 } else {
 
-    $peticion = json_decode(filter_input(IMPUT_POST, 'DATA'));
+    $peticion = json_decode($_POST["DATA"]);
 
     switch ($peticion->comando) {
 
