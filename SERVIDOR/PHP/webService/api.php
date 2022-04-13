@@ -9,7 +9,7 @@ if (empty($_POST["DATA"])) {
     switch ($peticion->comando) {
      
         case 'nuevo_usuario';
-            nuevoUsuario();
+            nuevoUsuario($peticion->datos);
             break;
         default;
             mandarRespuesta(true, 'comando no  reconocido');
@@ -25,6 +25,6 @@ function mandarRespuesta($error, $datos) {
 }
 
 
-function nuevoUsuario($parametros){
+function nuevoUsuario($datos){
     
 }
