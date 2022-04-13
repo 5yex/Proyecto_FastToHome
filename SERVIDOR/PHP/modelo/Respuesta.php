@@ -13,7 +13,11 @@
 class Respuesta {
     private $error;
     private $datos;
-  
+    public function __construct($error, $datos) {
+        $this->error = $error;
+        $this->datos = $datos;
+    }
+
     public function getError() {
         return $this->error;
     }
