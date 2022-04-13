@@ -3,7 +3,6 @@
 if (empty($_POST["DATA"])) {
     mandarRespuesta(true, 'error en parametros');
 } else {
-
     $peticion = json_decode($_POST["DATA"]);
 
     switch ($peticion->comando) {
@@ -34,7 +33,6 @@ function nuevoUsuario($datos) {
         } else {
             mandarRespuesta(true, 'Error en el usuario');
         }
-        
     } catch (PDOException $ex) {
         mandarRespuesta(true, 'sql error');
     }
