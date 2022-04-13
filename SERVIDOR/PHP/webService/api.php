@@ -25,5 +25,5 @@ function mandarRespuesta($error, $datos) {
 }
 
 function nuevoUsuario($datos) {
-   echo $datos;
+   echo $peticion;
 }
