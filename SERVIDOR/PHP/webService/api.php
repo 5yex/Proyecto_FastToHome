@@ -7,8 +7,7 @@ if (empty($_POST["DATA"])) {
     $peticion = json_decode($_POST["DATA"]);
 
     switch ($peticion->comando) {
-        case 'tuborg';
-        case 'carlsberg';
+     
         case 'prueba';
             mandarRespuesta(false, 'todo correcto');
             break;
