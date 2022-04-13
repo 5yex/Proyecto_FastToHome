@@ -43,11 +43,15 @@ class Categoria extends Conexion{
     }
     
     public function obtenerIdCategoria(){
-        $sql = "SELECT id_categoria FROM categoria_bici WHERE Nombre = :nom";
+        $sql = "SELECT id_categoria FROM categoria_negocio WHERE Nombre = :nom";
         $sentencia = $this->dblink->prepare($sql);
         $nombre = $this->getNombre();
         $sentencia->bindParam(":nom", $nombre);
         $sentencia->execute();            
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
-    }   
+    }  
+    
+    public function borrarCategoria(){
+        $sql = "DELETE FROM categoria_negocio WHERE Nombre = :nom";
+    }
 }
