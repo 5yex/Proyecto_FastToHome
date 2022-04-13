@@ -28,7 +28,7 @@ public class principal {
        user.setRol("clientes");
        user.setTlf("asdfgsfdg");
 
-        hacerConsulta(new Peticion("", new Categoria()));
+        hacerConsulta(new Peticion("", user.));
     }
 
 }

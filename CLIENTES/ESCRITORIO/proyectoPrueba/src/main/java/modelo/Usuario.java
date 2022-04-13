@@ -4,6 +4,8 @@
  */
 package modelo;
 
+import com.google.gson.Gson;
+
 /**
  *
  * @author jmcbg
@@ -84,6 +86,9 @@ public class Usuario {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+     public String getJSON(){
+       return new Gson().toJson(this);
     }
 
 }
