@@ -6,6 +6,9 @@ package com.donoso.proyectoprueba;
 
 import static controlador.gestion.hacerConsulta;
 import java.io.IOException;
+import modelo.Categoria;
+import modelo.Peticion;
+import modelo.Usuario;
 
 
 /**
@@ -16,9 +19,16 @@ public class principal {
 
     public static void main(String[] args) throws IOException {
 
-       
+       Usuario user = new Usuario();
+       user.setDni("sdfsf");
+       user.setEmail("fasdfa");
+       user.setId_direccion(0);
+       user.setNombre("pruweasd");
+       user.setPassword("pruebas");
+       user.setRol("clientes");
+       user.setTlf("asdfgsfdg");
 
-        hacerConsulta();
+        hacerConsulta(new Peticion("", new Categoria()));
     }
 
 }
