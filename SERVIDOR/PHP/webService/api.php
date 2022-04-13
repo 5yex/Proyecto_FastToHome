@@ -25,6 +25,6 @@ function mandarRespuesta($error, $datos) {
 }
 
 
-function nuevoUsuario(){
+function nuevoUsuario($parametros){
     
 }
