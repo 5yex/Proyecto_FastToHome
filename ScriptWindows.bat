@@ -1,7 +1,7 @@
 @echo off 
 
 set directorio=%cd%
-set segundos=10
+set segundos=3
 
 cd %directorio%
 :loop
