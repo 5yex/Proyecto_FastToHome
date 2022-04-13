@@ -4,7 +4,7 @@ if (empty(filter_input(INPUT_POST, 'DATA'))) {
     mandarRespuesta(true, 'error en parametros');
 } else {
 
-    $peticion = json_decode(filter_input(INPUT_POST, 'DATA'));
+    $peticion = json_decode(filter_input(IMPUT_POST, 'DATA'));
 
     switch ($peticion->comando) {
 
