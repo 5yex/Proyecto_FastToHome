@@ -28,7 +28,7 @@ public class principal {
         user.setTlf("asdfgsfdg");
         
         
-        System.out.println(hacerConsulta(new Peticion("nuevo_usuario", user.getJSON())););
+        System.out.println(hacerConsulta(new Peticion("nuevo_usuario", user.getJSON())));
     }
     
 }
