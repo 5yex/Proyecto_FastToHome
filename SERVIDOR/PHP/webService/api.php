@@ -3,9 +3,10 @@
 require_once '../modelo/Respuesta.php';
 
 if (empty($_POST["DATA"])) {
-    $error = true;
-    $datos = "llamada a api malformada";
     $respuesta = new Respuesta();
+    $respuesta ->setError(true);
+    $respuesta ->setDatos('llamada a api malformada');
+    
     echo json_encode($respuesta);
 } else {
    
