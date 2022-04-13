@@ -29,7 +29,7 @@ public class principal {
         params.add(new BasicNameValuePair("dir", "0"));
         //params.add(new BasicNameValuePair("pass", "123"));
 
-        hacerConsulta("http://localhost/php/webService/nuevoUsuario.php", params);
+        hacerConsulta("http://localhost/php/webService/api.php", params);
     }
 
 }
