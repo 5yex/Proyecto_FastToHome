@@ -9,7 +9,7 @@ if (empty($_POST["DATA"])) {
     
     
     $json = json_encode($respuesta);
-    print_r($json);
+    echo($json);
 } else {
    
 }
