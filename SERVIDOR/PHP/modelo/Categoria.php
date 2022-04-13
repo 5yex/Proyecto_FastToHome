@@ -53,5 +53,21 @@ class Categoria extends Conexion{
     
     public function borrarCategoria(){
         $sql = "DELETE FROM categoria_negocio WHERE Nombre = :nom";
+        
+        $sentencia = $this->dblink->prepare($sql);
+        $nombre = $this->getNombre();
+        
+        $sentencia->bindParam(":nom", $nombre);
+        
+        $resultado = $sentencia->execute();
+
+        if ($resultado != 1) {
+            //ocurrio un error al insertar
+            printf('aaa');
+            return FALSE;
+        }
+
+        //Borró correctamente
+        return TRUE;
     }
 }
