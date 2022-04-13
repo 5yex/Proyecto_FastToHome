@@ -9,5 +9,6 @@ package modelo;
  * @author jmcbg
  */
 public class Peticion {
-    
+    String comando;
+    String datos;
 }
