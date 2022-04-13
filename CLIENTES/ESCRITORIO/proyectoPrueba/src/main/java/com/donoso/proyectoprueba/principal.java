@@ -10,7 +10,6 @@ import modelo.Categoria;
 import modelo.Peticion;
 import modelo.Usuario;
 
-
 /**
  *
  * @author jmcbg
@@ -19,17 +18,14 @@ public class principal {
 
     public static void main(String[] args) throws IOException {
 
-       Usuario user = new Usuario();
-       user.setDni("sdfsf");
-       user.setEmail("fasdfa");
-       user.setId_direccion(0);
-       user.setNombre("pruweasd");
-       user.setPassword("pruebas");
-       user.setRol("clientes");
-       user.setTlf("asdfgsfdg");
-
-        System.out.println(user.getJSON());
-        
+        Usuario user = new Usuario();
+        user.setDni("sdfsf");
+        user.setEmail("fasdfa");
+        user.setId_direccion(0);
+        user.setNombre("pruweasd");
+        user.setPassword("pruebas");
+        user.setRol("clientes");
+        user.setTlf("asdfgsfdg");
         hacerConsulta(new Peticion("nuevo_usuario", user.getJSON()));
     }
 
