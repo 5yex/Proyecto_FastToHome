@@ -13,9 +13,11 @@ import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import modelo.Peticion;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
@@ -25,6 +27,7 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
 /**
@@ -33,11 +36,15 @@ import org.apache.http.util.EntityUtils;
  */
 public class gestion {
 
-    public static boolean hacerConsulta(String uri, List<NameValuePair> params) {
+    public static boolean hacerConsulta() {
         String json = null;
         try {
             CloseableHttpClient client = HttpClients.createDefault();
-            HttpPost httpPost = new HttpPost(uri);
+            HttpPost httpPost = new HttpPost("http://localhost/Php/webService/api.php");
+
+            List<NameValuePair> params = new ArrayList<NameValuePair>();
+
+            params.add(new BasicNameValuePair("DATA", new Peticion("prueba", null).getJSON()));
 
             httpPost.setEntity(new UrlEncodedFormEntity(params));
 
