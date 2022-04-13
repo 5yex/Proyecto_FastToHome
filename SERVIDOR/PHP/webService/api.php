@@ -8,8 +8,8 @@ if (empty($_POST["DATA"])) {
 
     switch ($peticion->comando) {
      
-        case 'prueba';
-            mandarRespuesta(false, 'todo correcto');
+        case 'nuevo_usuario';
+            nuevoUsuario();
             break;
         default;
             mandarRespuesta(true, 'comando no  reconocido');
@@ -22,4 +22,9 @@ function mandarRespuesta($error, $datos) {
     require_once '../modelo/Respuesta.php';
     $respuesta = new Respuesta($error, $datos);
     echo json_encode($respuesta);
+}
+
+
+function nuevoUsuario(){
+    
 }
