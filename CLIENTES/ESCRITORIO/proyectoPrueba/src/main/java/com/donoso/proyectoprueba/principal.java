@@ -6,11 +6,7 @@ package com.donoso.proyectoprueba;
 
 import static controlador.gestion.hacerConsulta;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import modelo.Peticion;
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
+
 
 /**
  *
