@@ -5,7 +5,7 @@ if (empty($_POST["DATA"])) {
 } else {
 
     $peticion = json_decode($_POST["DATA"]);
-echo$peticion
+echo$peticion;
     switch ($peticion->comando) {
 
         case 'nuevo_usuario';
@@ -25,4 +25,5 @@ function mandarRespuesta($error, $datos) {
 }
 
 function nuevoUsuario($datos) {
+    
 }
