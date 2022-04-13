@@ -11,27 +11,29 @@
  * @author jmcbg
  */
 class Respuesta {
-    private $tipo; // tipos: DATOS, CONFIMRACION
-    private $datos; // Si es datos, habrá un array de datos, si es Confirmacion habrá si o no.
-    public function __construct($tipo, $datos) {
-        $this->tipo = $tipo;
+    private $error;
+    private $datos;
+    public function __construct($error, $datos) {
+        $this->error = $error;
         $this->datos = $datos;
     }
-    public function getTipo() {
-        return $this->tipo;
+
+    public function getError() {
+        return $this->error;
     }
 
     public function getDatos() {
         return $this->datos;
     }
 
-    public function setTipo($tipo): void {
-        $this->tipo = $tipo;
+    public function setError($error): void {
+        $this->error = $error;
     }
 
     public function setDatos($datos): void {
         $this->datos = $datos;
     }
+
 
 
 }
