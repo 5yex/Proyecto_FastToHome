@@ -12,7 +12,7 @@
  */
 class Respuesta {
     
-    
+    //no tiene atributos privados debido a problemas con la comversión a json
     
     var $error;
     var $datos;
