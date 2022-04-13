@@ -4,6 +4,8 @@
  */
 package modelo;
 
+import com.google.gson.Gson;
+
 /**
  *
  * @author jmcbg
@@ -33,5 +35,8 @@ public class Peticion {
         this.datos = datos;
     }
     
+    public String getJSON(){
+       return new Gson().toJson(this);
+    }
     
 }
