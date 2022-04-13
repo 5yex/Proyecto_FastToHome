@@ -4,10 +4,13 @@ if (empty($_POST["DATA"])) {
     mandarRespuesta(true, 'error en parametros');
    
 } else {
-    switch ($_POST["DATA"]) {
+    
+    $peticion = json_decode($_POST["DATA"]);
+    
+    switch ($peticion["comando"]) {
         case 'tuborg';
         case 'carlsberg';
-        case 'heineken';
+        case 'prueba';
             echo 'Good choice';
             break;
         default;
