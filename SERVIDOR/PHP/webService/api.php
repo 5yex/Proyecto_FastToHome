@@ -18,19 +18,20 @@ if (empty($_POST["DATA"])) {
 }
 
 function nuevoUsuario($datos) {
-    $datos = json_decode($datos);
     require_once '../modelo/usuario.php';
 //creamos usuario y los pasamos sus datos al objeto;
     $usuario = new usuario();
-    $usuario->setNombre($nombre);
-    $usuario->setDni($dni);
-    $usuario->setEmail($email);
-    $usuario->setId_direccion($id_direccion);
-    $usuario->setTlf($tlf);
-    $usuario->setRol($rol);
-    $usuario->setPassword($password);
+    $usuario->setNombre($datos->nombre);
+    $usuario->setDni($datos->dni);
+    $usuario->setEmail($datos->email);
+    $usuario->setId_direccion($datos->id_direccion);
+    $usuario->setTlf($datos->tlf);
+    $usuario->setRol($datos->rol);
+    $usuario->setPassword($datos->password);
 //realizamos la accion
     $resultado = $usuario->agregar();
+    
+    vardump $usuario;
 }
 
 function mandarRespuesta($error, $datos) {
