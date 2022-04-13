@@ -14,8 +14,8 @@ class Respuesta {
     
     
     
-    private $error;
-    private $datos;
+    var $error;
+    var $datos;
    
 
     public function getError() {
