@@ -29,9 +29,8 @@ function nuevoUsuario($datos) {
     $usuario->setRol($datos->rol);
     $usuario->setPassword($datos->password);
 //realizamos la accion
-    $resultado = $usuario->agregar();
     
-    var_dump($usuario);
+    mandarRespuesta($usuario->agregar(),'');
 }
 function mandarRespuesta($error, $datos) {
     require_once '../modelo/Respuesta.php';
