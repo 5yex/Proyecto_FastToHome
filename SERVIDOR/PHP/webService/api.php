@@ -8,6 +8,7 @@ if (empty($_POST["DATA"])) {
     $respuesta ->setDatos('llamada a api malformada');
     
     echo json_encode($respuesta);
+    echo $respuesta;
 } else {
    
 }
