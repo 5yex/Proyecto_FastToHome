@@ -28,7 +28,7 @@ public class principal {
        user.setRol("clientes");
        user.setTlf("asdfgsfdg");
 
-        hacerConsulta(new Peticion("", user.));
+        hacerConsulta(new Peticion("", user.getJSON()));
     }
 
 }
