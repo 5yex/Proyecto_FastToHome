@@ -7,7 +7,6 @@ if (empty($_POST["DATA"])) {
     $datos = "llamada a api malformada";
     $respuesta = new Respuesta($error, $datos);
     echo json_encode($respuesta);
-    echo 'aaa';
 } else {
    
 }
