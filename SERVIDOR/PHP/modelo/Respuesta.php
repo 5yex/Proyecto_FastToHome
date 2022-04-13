@@ -11,6 +11,9 @@
  * @author jmcbg
  */
 class Respuesta {
+    
+    
+    
     private $error;
     private $datos;
    
