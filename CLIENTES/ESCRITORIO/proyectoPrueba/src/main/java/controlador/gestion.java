@@ -51,8 +51,8 @@ public class gestion {
                 System.out.println(json);
 
                 JsonObject jsonObject = new JsonParser().parse(json).getAsJsonObject();
-                JsonElement estado = jsonObject.get("codigo");
-                System.out.println(estado.getAsString());
+                JsonElement estado = jsonObject.get("error");
+                System.out.println(estado.getAsBoolean());
 
             }
 
