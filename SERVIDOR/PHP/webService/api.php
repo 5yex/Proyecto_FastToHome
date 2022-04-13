@@ -26,5 +26,5 @@ function mandarRespuesta($error, $datos) {
 
 
 function nuevoUsuario($datos){
-    
+    echo 'probando';
 }
