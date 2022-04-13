@@ -19,7 +19,7 @@ if (empty($_POST["DATA"])) {
 
 function nuevoUsuario($datos) {
     require_once '../modelo/usuario.php';
-//creamos usuario y los pasamos sus datos al objeto;
+
     $usuario = new usuario();
     $usuario->setNombre($datos->nombre);
     $usuario->setDni($datos->dni);
@@ -28,7 +28,6 @@ function nuevoUsuario($datos) {
     $usuario->setTlf($datos->tlf);
     $usuario->setRol($datos->rol);
     $usuario->setPassword($datos->password);
-//realizamos la accion
 
     if ($usuario->agregar()) {
         mandarRespuesta(false, 'Se ha realizado la insercion de un usuario');

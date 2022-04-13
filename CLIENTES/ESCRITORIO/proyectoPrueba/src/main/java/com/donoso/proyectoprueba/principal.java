@@ -22,7 +22,7 @@ public class principal {
         user.setDni("sdfsf");
         user.setEmail("fasdfa");
         user.setId_direccion(0);
-        user.setNombre("pruweasd");
+        user.setNombre(null);
         user.setPassword("pruebas");
         user.setRol("clientes");
         user.setTlf("asdfgsfdg");
