@@ -20,13 +20,9 @@ public class principal {
 
     public static void main(String[] args) throws IOException {
 
-        List<NameValuePair> params = new ArrayList<NameValuePair>();
+       
 
-        
-        params.add(new BasicNameValuePair("DATA", new Peticion("prueba", null).getJSON()));
-      
-
-        hacerConsulta("http://localhost/php/webService/api.php", params);
+        hacerConsulta();
     }
 
 }
