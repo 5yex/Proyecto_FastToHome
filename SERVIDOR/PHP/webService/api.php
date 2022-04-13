@@ -13,17 +13,18 @@ if (empty($_POST["DATA"])) {
             break;
         default;
             mandarRespuesta(true, 'comando no  reconocido');
-
             break;
     }
+}
+
+
+function nuevoUsuario($datos) {
+    require_once '../modelo/usuario.php';
+
 }
 
 function mandarRespuesta($error, $datos) {
     require_once '../modelo/Respuesta.php';
     $respuesta = new Respuesta($error, $datos);
     echo json_encode($respuesta);
-}
-
-function nuevoUsuario($datos) {
-    
 }
