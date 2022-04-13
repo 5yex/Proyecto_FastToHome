@@ -28,5 +28,4 @@ public class principal {
         user.setTlf("asdfgsfdg");
         hacerConsulta(new Peticion("nuevo_usuario", user.getJSON()));
     }
-
 }
