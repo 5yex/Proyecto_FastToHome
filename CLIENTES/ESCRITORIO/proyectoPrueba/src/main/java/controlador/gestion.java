@@ -48,24 +48,13 @@ public class gestion {
             Header headers = entity.getContentType();
 
             if (entity != null) {
-                json = EntityUtils.toString(entity);
-                System.out.println(json);
-
-                JsonObject jsonObject = new JsonParser().parse(json).getAsJsonObject();
-                JsonElement estado = jsonObject.get("error");
-                System.out.println(estado.getAsBoolean());
-
+                JsonObject jsonObject = new JsonParser().parse(EntityUtils.toString(entity)).getAsJsonObject();
+                return jsonObject.get("error").getAsBoolean();
+            }else{
+            return false;
             }
-
-        } catch (UnsupportedEncodingException ex) {
-            System.out.println("controlador.gestion.hacerConsulta()");
-        } catch (IOException ex) {
-            System.out.println("controlador.gestion.hacerConsulta()");
-        } catch (ParseException ex) {
-            System.out.println("controlador.gestion.hacerConsulta()");
-        } catch (JsonSyntaxException ex) {
-            System.out.println("Error en la consulta");
+        } catch (Exception ex) {
+            return false;
         }
-        return true;
     }
 }
