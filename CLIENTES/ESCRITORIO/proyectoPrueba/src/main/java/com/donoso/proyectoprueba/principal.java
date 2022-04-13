@@ -8,6 +8,7 @@ import static controlador.gestion.hacerConsulta;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import modelo.Peticion;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
@@ -22,7 +23,7 @@ public class principal {
         List<NameValuePair> params = new ArrayList<NameValuePair>();
 
         
-        params.add(new BasicNameValuePair("DATA", "123"));
+        params.add(new BasicNameValuePair("DATA", new Peticion("prueba", null).getJSON()));
       
 
         hacerConsulta("http://localhost/php/webService/api.php", params);
