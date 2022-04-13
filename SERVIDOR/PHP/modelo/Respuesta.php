@@ -11,5 +11,6 @@
  * @author jmcbg
  */
 class Respuesta {
-    //put your code here
+    private $tipo; // tipos: DATOS, CONFIMRACION
+    private $datos; // Si es datos, habrá un array de datos, si es Confirmacion habrá si o no.
 }
