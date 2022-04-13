@@ -31,7 +31,7 @@ import org.apache.http.message.BasicNameValuePair;
  */
 public class gestion {
 
-    public static boolean hacerConsulta() {
+    public static boolean hacerConsulta(Peticion peticion) {
         String json = null;
         try {
             CloseableHttpClient client = HttpClients.createDefault();
@@ -39,7 +39,7 @@ public class gestion {
 
             List<NameValuePair> params = new ArrayList<>();
 
-            params.add(new BasicNameValuePair("DATA", new Peticion("prueba", null).getJSON()));
+            params.add(new BasicNameValuePair("DATA", peticion.getJSON()));
 
             httpPost.setEntity(new UrlEncodedFormEntity(params));
 
