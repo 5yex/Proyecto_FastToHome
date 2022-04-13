@@ -11,7 +11,8 @@ if (empty($_POST["DATA"])) {
             echo 'Good choice';
             break;
         default;
-            echo 'Please make a new selection...';
+                mandarRespuesta(true, 'comando no  reconocido');
+
             break;
     }
 }
