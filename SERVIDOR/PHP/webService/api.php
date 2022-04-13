@@ -32,7 +32,7 @@ function nuevoUsuario($datos) {
     $resultado = $usuario->agregar();
     
     var_dump($usuario);
-
+}
 function mandarRespuesta($error, $datos) {
     require_once '../modelo/Respuesta.php';
     $respuesta = new Respuesta($error, $datos);
