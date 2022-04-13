@@ -21,13 +21,9 @@ public class principal {
 
         List<NameValuePair> params = new ArrayList<NameValuePair>();
 
-       // params.add(new BasicNameValuePair("nom", "John"));
-        params.add(new BasicNameValuePair("dni", "123"));
-        params.add(new BasicNameValuePair("email", "123"));
-        params.add(new BasicNameValuePair("tlf", "123"));
-        params.add(new BasicNameValuePair("rol", "Cliente"));
-        params.add(new BasicNameValuePair("dir", "0"));
-        //params.add(new BasicNameValuePair("pass", "123"));
+        
+        params.add(new BasicNameValuePair("DATA", "123"));
+      
 
         hacerConsulta("http://localhost/php/webService/api.php", params);
     }
