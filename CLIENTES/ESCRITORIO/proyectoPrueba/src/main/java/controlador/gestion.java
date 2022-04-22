@@ -47,8 +47,6 @@ public class gestion {
             HttpEntity entity = response.getEntity();
             Header headers = entity.getContentType();
             
-            System.out.println(EntityUtils.toString(entity));
-            
             if (entity != null) {
                 JsonObject jsonObject = new JsonParser().parse(EntityUtils.toString(entity)).getAsJsonObject();
                 return !jsonObject.get("error").getAsBoolean();
