@@ -48,7 +48,12 @@ public class gestion {
             Header headers = entity.getContentType();
             
             if (entity != null) {
-                JsonObject jsonObject = new JsonParser().parse(EntityUtils.toString(entity)).getAsJsonObject();
+                
+                String htmlTxt = EntityUtils.toString(entity);
+                
+                System.err.println(htmlTxt);
+                
+                JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
                 return !jsonObject.get("error").getAsBoolean();
             }else{
             return false;
