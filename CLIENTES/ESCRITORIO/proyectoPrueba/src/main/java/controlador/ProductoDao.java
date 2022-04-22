@@ -6,10 +6,15 @@
  */
 package controlador;
 
+import modelo.Peticion;
+import modelo.Producto;
+
 /**
  *
  * @author Jesus
  */
 public class ProductoDao {
-    
+    public boolean nuevoProducto(Producto product){
+        return gestion.hacerConsulta(new Peticion("nuevo_producto", product.getJSON()));
+    }
 }
