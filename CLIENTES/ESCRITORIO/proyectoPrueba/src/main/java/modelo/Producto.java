@@ -4,6 +4,8 @@
  */
 package modelo;
 
+import com.google.gson.Gson;
+
 /**
  *
  * @author jmcbg
@@ -66,5 +68,9 @@ public class Producto {
 
     public void setStock(int stock) {
         this.stock = stock;
+    }
+    
+    public String getJSON(){
+       return new Gson().toJson(this);
     }
 }
