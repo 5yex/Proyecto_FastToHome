@@ -50,7 +50,7 @@ function nuevoProducto($datos){
         $producto->setDescripcion($datos->descripcion);
         $producto->setStock($datos->stock);
         
-        if($datos->agregar()){
+        if($producto->agregar()){
             mandarRespuesta(false, 'Se ha realizado la insercion de un producto');
         } else {
             mandarRespuesta(true, 'Error en la inserccion del producto');
