@@ -44,7 +44,7 @@ function nuevoProducto($datos){
     require_once '../modelo/Producto.php';
     try{
         $producto = new Producto();
-        $producto->setId_ngeocio($datos->id_negocio);
+        $producto->setId_negocio($datos->id_negocio);
         $producto->setNombre($datos->nombre);
         $producto->setPrecio($datos->precio);
         $descripcion->setDescripcion($datos->descripcion);
