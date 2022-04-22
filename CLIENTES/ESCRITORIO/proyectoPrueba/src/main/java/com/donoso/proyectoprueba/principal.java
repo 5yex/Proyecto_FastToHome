@@ -25,7 +25,7 @@ public class principal {
         user.setNombre("paco");
         user.setPassword("pruebas");
         user.setRol("clientes");
-        user.setTlf("asdfgsfdg");
+        user.setTlf("654789211");
         
         
         System.out.println(hacerConsulta(new Peticion("nuevo_usuario", user.getJSON())));
