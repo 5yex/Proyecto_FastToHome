@@ -38,6 +38,8 @@ function nuevoUsuario($datos) {
     }
 }
 
+
+
 function mandarRespuesta($error, $datos) {
     require_once '../modelo/Respuesta.php';
     $respuesta = new Respuesta($error, $datos);
