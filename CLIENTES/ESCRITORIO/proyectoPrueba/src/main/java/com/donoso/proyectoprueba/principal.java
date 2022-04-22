@@ -8,6 +8,7 @@ import static controlador.gestion.hacerConsulta;
 import java.io.IOException;
 import modelo.Categoria;
 import modelo.Peticion;
+import modelo.Producto;
 import modelo.Usuario;
 
 /**
@@ -18,14 +19,21 @@ public class principal {
 
     public static void main(String[] args) throws IOException {
 
-        Usuario user = new Usuario();
+        /*Usuario user = new Usuario();
         user.setDni("34567890a");
         user.setEmail("fasdfa");
         user.setId_direccion(0);
         user.setNombre("paco");
         user.setPassword("pruebas");
         user.setRol("clientes");
-        user.setTlf("654789211");
+        user.setTlf("654789211");*/
+        
+        Producto producto = new Producto();
+        producto.setId_negocio(1);
+        producto.setNombre("Manzana");
+        producto.setPrecio(3.40);
+        producto.setDescripcion("Manzana roja de la huerta");
+        producto.setStock(20);
         
         
         System.out.println(hacerConsulta(new Peticion("nuevo_usuario", user.getJSON())));
