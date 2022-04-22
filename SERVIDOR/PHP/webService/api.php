@@ -38,7 +38,25 @@ function nuevoUsuario($datos) {
     }
 }
 
-
+function nuevoProducto($datos){
+    require_once '../modelo/Producto.php';
+    try{
+        $producto = new Producto();
+        $producto->setId_ngeocio($datos->id_negocio);
+        $producto->setNombre($datos->nombre);
+        $producto->setPrecio($datos->precio);
+        $descripcion->setDescripcion($datos->descripcion);
+        $stock->setStock($datos->stock);
+        
+        if($datos->agregar()){
+            mandarRespuesta(false, 'Se ha realizado la insercion de un producto');
+        } else {
+            mandarRespuesta(true, 'Error en la inserccion del producto');
+        }
+    }catch (PDOException $ex) {
+        mandarRespuesta(true, 'sql error');
+    }
+}
 
 function mandarRespuesta($error, $datos) {
     require_once '../modelo/Respuesta.php';
