@@ -19,7 +19,7 @@ public class principal {
     public static void main(String[] args) throws IOException {
 
         Usuario user = new Usuario();
-        user.setDni("sdfsf");
+        user.setDni("34567890a");
         user.setEmail("fasdfa");
         user.setId_direccion(0);
         user.setNombre("paco");
