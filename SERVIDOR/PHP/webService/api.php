@@ -47,8 +47,8 @@ function nuevoProducto($datos){
         $producto->setId_negocio($datos->id_negocio);
         $producto->setNombre($datos->nombre);
         $producto->setPrecio($datos->precio);
-        $descripcion->setDescripcion($datos->descripcion);
-        $stock->setStock($datos->stock);
+        $producto->setDescripcion($datos->descripcion);
+        $producto->setStock($datos->stock);
         
         if($datos->agregar()){
             mandarRespuesta(false, 'Se ha realizado la insercion de un producto');
