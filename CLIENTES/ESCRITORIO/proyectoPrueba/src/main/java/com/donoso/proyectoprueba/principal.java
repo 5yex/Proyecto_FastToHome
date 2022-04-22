@@ -36,7 +36,8 @@ public class principal {
         producto.setStock(20);
         
         
-        System.out.println(hacerConsulta(new Peticion("nuevo_usuario", user.getJSON())));
+        //System.out.println(hacerConsulta(new Peticion("nuevo_usuario", user.getJSON())));
+        System.out.println(hacerConsulta(new Peticion("nuevo_producto", producto.getJSON())));
     }
     
 }
