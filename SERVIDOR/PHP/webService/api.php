@@ -10,6 +10,8 @@ if (empty($_POST["DATA"])) {
         case 'nuevo_usuario';
             nuevoUsuario(json_decode($peticion->datos));
             break;
+        case 'nuevo_producto';
+            nuevoProducto(json_decode($peticion->datos));
         default;
             mandarRespuesta(true, 'comando no  reconocido');
             break;
