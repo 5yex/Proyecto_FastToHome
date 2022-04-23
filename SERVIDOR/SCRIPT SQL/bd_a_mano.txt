@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS direccion(
 );
 
 INSERT INTO direccion (calle, numero, ciudad, provincia, cp, otros, coordenadas) 
-	VALUES ('Martires', 34, 'Espa', 'Bada', 06439, 'Con terraza y patio', '18,-63'));
+	VALUES ('Martires', 34, 'Espa', 'Bada', 06439, 'Con terraza y patio', '18,-63');
 
 CREATE TABLE IF NOT EXISTS categoria_negocio(
     id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
