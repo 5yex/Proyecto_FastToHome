@@ -14,5 +14,5 @@ CREATE TABLE IF NOT EXISTS direccion(
 
 CREATE TABLE IF NOT EXISTS categoria_negocio(
     id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nombre varchar(11) NOT NULL
+    nombre varchar(30) NOT NULL
 );
