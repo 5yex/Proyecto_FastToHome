@@ -8,9 +8,12 @@ CREATE TABLE IF NOT EXISTS direccion(
     ciudad varchar(30) NOT NULL,
     provincia varchar(30) NOT NULL,
     cp int(5) NOT NULL,
-    otros int(11) NOT NULL,
+    otros int(20) NOT NULL,
     coordenadas point NOT NULL
 );
+
+INSERT INTO direccion (calle, numero, ciudad, provincia, cp, otros, coordenadas) 
+	VALUES ('Martires', 34, 'Espa', 'Bada', 06439, 'Con terraza y patio', POINT(18, -63));
 
 CREATE TABLE IF NOT EXISTS categoria_negocio(
     id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
