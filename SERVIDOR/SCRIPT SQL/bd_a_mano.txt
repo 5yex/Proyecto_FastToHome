@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS direccion(
     provincia varchar(30) NOT NULL,
     cp int(5) NOT NULL,
     otros int(20) NOT NULL,
-    coordenadas point NOT NULL
+    coordenadas varchar(40) NOT NULL
 );
 
 INSERT INTO direccion (calle, numero, ciudad, provincia, cp, otros, coordenadas) 
