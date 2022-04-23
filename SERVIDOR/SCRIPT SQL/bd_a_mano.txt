@@ -2,7 +2,7 @@ DROP DATABASE bdamano;
 CREATE DATABASE bdamano;
 
 CREATE TABLE IF NOT EXISTS direccion(
-	id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     calle varchar(50) NOT NULL,
     numero int(3) NOT NULL,
     ciudad varchar(30) NOT NULL,
