@@ -1,0 +1,15 @@
+DROP DATABASE bdamano;
+CREATE DATABASE bdamano;
+
+CREATE TABLE IF NOT EXISTS direccion(
+	id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    calle varchar(50) NOT NULL,
+    numero int(3) NOT NULL,
+    ciudad varchar(30) NOT NULL,
+    provincia varchar(30) NOT NULL,
+    cp int(5) NOT NULL,
+    otros int(11) NOT NULL,
+    coordenadas point NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS categoria
