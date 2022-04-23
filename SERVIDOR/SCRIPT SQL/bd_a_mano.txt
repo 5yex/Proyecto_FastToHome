@@ -12,4 +12,7 @@ CREATE TABLE IF NOT EXISTS direccion(
     coordenadas point NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS categoria
+CREATE TABLE IF NOT EXISTS categoria_negocio(
+    id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombre varchar(11) NOT NULL
+);
