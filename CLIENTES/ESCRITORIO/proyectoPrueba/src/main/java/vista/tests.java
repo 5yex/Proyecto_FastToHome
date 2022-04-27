@@ -110,6 +110,7 @@ public class tests extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRegisterActionPerformed
+        this.setVisible(false);
         new registro().setVisible(true);
     }//GEN-LAST:event_buttonRegisterActionPerformed
 
