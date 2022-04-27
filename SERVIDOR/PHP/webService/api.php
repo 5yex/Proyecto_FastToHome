@@ -65,13 +65,13 @@ function nuevaDireccion($datos){
     require_once '../modelo/Direccion.php';
     try{
         $direccion = new Producto();
-        $producto->setId_negocio($datos->id_negocio);
-        $producto->setNombre($datos->nombre);
-        $producto->setPrecio($datos->precio);
-        $producto->setDescripcion($datos->descripcion);
-        $producto->setStock($datos->stock);
+        $direccion->setId_negocio($datos->id_negocio);
+        $direccion->setNombre($datos->nombre);
+        $direccion->setPrecio($datos->precio);
+        $direccion->setDescripcion($datos->descripcion);
+        $direccion->setStock($datos->stock);
         
-        if($producto->agregar()){
+        if($direccion->agregar()){
             mandarRespuesta(false, 'Se ha realizado la insercion de un producto');
         } else {
             mandarRespuesta(true, 'Error en la inserccion del producto');
