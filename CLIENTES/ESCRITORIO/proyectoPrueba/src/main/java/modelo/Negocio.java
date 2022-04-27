@@ -4,6 +4,8 @@
  */
 package modelo;
 
+import com.google.gson.Gson;
+
 /**
  *
  * @author jmcbg
@@ -26,6 +28,66 @@ public class Negocio {
         this.id_mercadeer = id_mercadeer;
         this.nombre = nombre;
         this.descripcion = descripcion;
+    }
+
+    public Negocio(int id_direccion, int id_categoria, int id_mercadeer, String nombre, String descripcion) {
+        this.id_direccion = id_direccion;
+        this.id_categoria = id_categoria;
+        this.id_mercadeer = id_mercadeer;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+    }
+
+    public int getId_negocio() {
+        return id_negocio;
+    }
+
+    public void setId_negocio(int id_negocio) {
+        this.id_negocio = id_negocio;
+    }
+
+    public int getId_direccion() {
+        return id_direccion;
+    }
+
+    public void setId_direccion(int id_direccion) {
+        this.id_direccion = id_direccion;
+    }
+
+    public int getId_categoria() {
+        return id_categoria;
+    }
+
+    public void setId_categoria(int id_categoria) {
+        this.id_categoria = id_categoria;
+    }
+
+    public int getId_mercadeer() {
+        return id_mercadeer;
+    }
+
+    public void setId_mercadeer(int id_mercadeer) {
+        this.id_mercadeer = id_mercadeer;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+    
+    public String getJSON(){
+       return new Gson().toJson(this);
     }
     
     
