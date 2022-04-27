@@ -64,7 +64,7 @@ function nuevoProducto($datos){
 function nuevaDireccion($datos){
     require_once '../modelo/Direccion.php';
     try{
-        $direccion = new Producto();
+        $direccion = new Direccion();
         $direccion->setId_negocio($datos->id_negocio);
         $direccion->setNombre($datos->nombre);
         $direccion->setPrecio($datos->precio);
