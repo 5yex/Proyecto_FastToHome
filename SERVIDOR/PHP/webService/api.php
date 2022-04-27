@@ -74,7 +74,7 @@ function nuevaDireccion($datos){
         $direccion->setCoordenadas($datos->coordenadas);
         
         if($direccion->agregar()){
-            mandarRespuesta(false, 'Se ha realizado la insercion de un producto');
+            mandarRespuesta(false, 'Se ha realizado la insercion de una direccion');
         } else {
             mandarRespuesta(true, 'Error en la inserccion del producto');
         }
