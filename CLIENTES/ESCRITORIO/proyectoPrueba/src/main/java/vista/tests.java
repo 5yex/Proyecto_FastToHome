@@ -103,7 +103,7 @@ public class tests extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-       try {S
+       try {
             javax.swing.UIManager.setLookAndFeel(new FlatDarkLaf());
         } catch (UnsupportedLookAndFeelException ex) {
            
