@@ -70,6 +70,8 @@ function nuevaDireccion($datos){
         $direccion->setCiudad($datos->ciudad);
         $direccion->setProvincia($datos->provincia);
         $direccion->setCodigo_postal($datos->codigo_postal);
+        $direccion->setOtros($datos->otros);
+        $direccion->setCoordenadas($datos->coordenadas);
         
         if($direccion->agregar()){
             mandarRespuesta(false, 'Se ha realizado la insercion de un producto');
