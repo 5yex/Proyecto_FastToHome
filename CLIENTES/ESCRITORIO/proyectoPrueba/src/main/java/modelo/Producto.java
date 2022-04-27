@@ -22,6 +22,16 @@ public class Producto {
     public Producto() {
     }
 
+    public Producto(int id_negocio, String nombre, double precio, String descripcion, int stock) {
+        this.id_negocio = id_negocio;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.descripcion = descripcion;
+        this.stock = stock;
+    }
+    
+    
+
     public int getId_producto() {
         return id_producto;
     }
