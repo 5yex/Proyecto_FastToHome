@@ -23,6 +23,17 @@ public class Pedido {
     public Pedido() {
     }
 
+    public Pedido(int id_usuario, int id_negocio, Date fecha_hora, String estado, int total, int transporte) {
+        this.id_usuario = id_usuario;
+        this.id_negocio = id_negocio;
+        this.fecha_hora = fecha_hora;
+        this.estado = estado;
+        this.total = total;
+        this.transporte = transporte;
+    }
+    
+    
+
     public int getId_pedido() {
         return id_pedido;
     }
