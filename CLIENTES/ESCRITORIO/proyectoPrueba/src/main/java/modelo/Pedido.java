@@ -4,6 +4,7 @@
  */
 package modelo;
 
+import com.google.gson.Gson;
 import java.util.Date;
 
 /**
@@ -78,5 +79,7 @@ public class Pedido {
         this.transporte = transporte;
     }
     
-    
+    public String getJSON(){
+       return new Gson().toJson(this);
+    }
 }
