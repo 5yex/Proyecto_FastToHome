@@ -65,11 +65,11 @@ function nuevaDireccion($datos){
     require_once '../modelo/Direccion.php';
     try{
         $direccion = new Direccion();
-        $direccion->setId_negocio($datos->id_negocio);
-        $direccion->setNombre($datos->nombre);
-        $direccion->setPrecio($datos->precio);
-        $direccion->setDescripcion($datos->descripcion);
-        $direccion->setStock($datos->stock);
+        $direccion->setCalle($datos->calle);
+        $direccion->setNumero($datos->numero);
+        $direccion->setCiudad($datos->ciudad);
+        $direccion->setProvincia($datos->provincia);
+        $direccion->setCodigo_postal($datos->codigo_postal);
         
         if($direccion->agregar()){
             mandarRespuesta(false, 'Se ha realizado la insercion de un producto');
