@@ -58,7 +58,6 @@ public class tests extends javax.swing.JFrame {
 
         passwordTxt.setText("CONTRASEÑA");
 
-        buttonLogin1.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Green"));
         buttonLogin1.setText("ENTRAR");
         buttonLogin1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
