@@ -108,6 +108,7 @@ public class tests extends javax.swing.JFrame {
         } catch (UnsupportedLookAndFeelException ex) {
            
         }
+       new tests().setVisible(true);
 //        if (conex.testConexion()) {
 //            new Login().setVisible(true);
 //        } else {
