@@ -34,6 +34,18 @@ public class Direccion {
         this.coordenads = coordenads;
     }
 
+    public Direccion(String calle, int numero, String ciudad, String provincia, int codigo_postal, String otros, int coordenads) {
+        this.calle = calle;
+        this.numero = numero;
+        this.ciudad = ciudad;
+        this.provincia = provincia;
+        this.codigo_postal = codigo_postal;
+        this.otros = otros;
+        this.coordenads = coordenads;
+    }
+    
+    
+
     public int getId_direccion() {
         return id_direccion;
     }
