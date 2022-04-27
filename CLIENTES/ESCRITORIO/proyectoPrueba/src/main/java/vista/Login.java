@@ -1,9 +1,7 @@
 package vista;
 
-import com.formdev.flatlaf.FlatDarkLaf;
-import com.formdev.flatlaf.FlatIntelliJLaf;
-import controlador.conexion;
-import controlador.usuarioDAO;
+//import com.formdev.flatlaf.FlatDarkLaf;
+//import com.formdev.flatlaf.FlatIntelliJLaf;
 import java.awt.Color;
 import java.sql.Connection;
 import java.util.logging.Level;
@@ -11,13 +9,12 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.showMessageDialog;
 import javax.swing.UnsupportedLookAndFeelException;
-import modelo.usuario;
-import vista.paneles.informacionUsuario;
+
 
 public class Login extends javax.swing.JFrame {
 
     int xMouse, yMouse;
-    static conexion conex = new conexion("jmcbg.es", "starconex", "test", "1234");
+   // static conexion conex = new conexion("jmcbg.es", "starconex", "test", "1234");
 
     public Login() {
         initComponents();
@@ -318,24 +315,24 @@ public class Login extends javax.swing.JFrame {
 
     private void registrarsetxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registrarsetxtMousePressed
         //JOptionPane.showOptionDialog(null,new informacionUsuario(conex),);
-        JOptionPane.showOptionDialog(null, new informacionUsuario(conex), "Selector de opciones", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, new Object[]{"SALIR"}, "SALIR");
+//        JOptionPane.showOptionDialog(null, new informacionUsuario(conex), "Selector de opciones", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, new Object[]{"SALIR"}, "SALIR");
     }//GEN-LAST:event_registrarsetxtMousePressed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        try {
-            javax.swing.UIManager.setLookAndFeel(new FlatIntelliJLaf());
-        } catch (UnsupportedLookAndFeelException ex) {
-            Logger.getLogger(VentanaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        if (conex.testConexion()) {
-            new Login().setVisible(true);
-        } else {
-            showMessageDialog(null, "ERROR DE CONEXION CON EL SERVIDOR", "LOGIN", JOptionPane.ERROR_MESSAGE);
-            System.exit(0);
-        }
+//        try {S
+//            javax.swing.UIManager.setLookAndFeel(new FlatIntelliJLaf());
+//        } catch (UnsupportedLookAndFeelException ex) {
+//            Logger.getLogger(VentanaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        if (conex.testConexion()) {
+//            new Login().setVisible(true);
+//        } else {
+//            showMessageDialog(null, "ERROR DE CONEXION CON EL SERVIDOR", "LOGIN", JOptionPane.ERROR_MESSAGE);
+//            System.exit(0);
+//        }
 
     }
 
@@ -363,13 +360,13 @@ public class Login extends javax.swing.JFrame {
      * pasandole el usuario que ha iniciado la sesión.
      */
     private void comenzarConexion() {
-        usuario userTmp = new usuario(String.valueOf(passTxt.getPassword()), userDNI.getText());
-        if (usuarioDAO.validarUsuario(conex, userTmp)) {
-            this.dispose();
-            VentanaPrincipal vp = new VentanaPrincipal(usuarioDAO.obtenerUsuarioPricipal(conex, userTmp), conex);
-            vp.setVisible(true);
-        } else {
-            javax.swing.JOptionPane.showMessageDialog(this, "USUARIO O CONTRASEÑA INCORRECTOS", "LOGIN", javax.swing.JOptionPane.ERROR_MESSAGE);
-        }
+//        usuario userTmp = new usuario(String.valueOf(passTxt.getPassword()), userDNI.getText());
+//        if (usuarioDAO.validarUsuario(conex, userTmp)) {
+//            this.dispose();
+//            VentanaPrincipal vp = new VentanaPrincipal(usuarioDAO.obtenerUsuarioPricipal(conex, userTmp), conex);
+//            vp.setVisible(true);
+//        } else {
+//            javax.swing.JOptionPane.showMessageDialog(this, "USUARIO O CONTRASEÑA INCORRECTOS", "LOGIN", javax.swing.JOptionPane.ERROR_MESSAGE);
+//        }
     }
 }
