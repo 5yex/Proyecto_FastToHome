@@ -76,7 +76,7 @@ function nuevaDireccion($datos){
         if($direccion->agregar()){
             mandarRespuesta(false, 'Se ha realizado la insercion de una direccion');
         } else {
-            mandarRespuesta(true, 'Error en la inserccion del producto');
+            mandarRespuesta(true, 'Error en la inserccion de la direccion');
         }
     }catch (PDOException $ex) {
         mandarRespuesta(true, 'sql error');
