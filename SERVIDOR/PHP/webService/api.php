@@ -63,6 +63,22 @@ function nuevoProducto($datos){
 
 function nuevaDireccion($datos){
     require_once '../modelo/Direccion.php';
+    try{
+        $direccion = new Producto();
+        $producto->setId_negocio($datos->id_negocio);
+        $producto->setNombre($datos->nombre);
+        $producto->setPrecio($datos->precio);
+        $producto->setDescripcion($datos->descripcion);
+        $producto->setStock($datos->stock);
+        
+        if($producto->agregar()){
+            mandarRespuesta(false, 'Se ha realizado la insercion de un producto');
+        } else {
+            mandarRespuesta(true, 'Error en la inserccion del producto');
+        }
+    }catch (PDOException $ex) {
+        mandarRespuesta(true, 'sql error');
+    }
 }
 
 function mandarRespuesta($error, $datos) {
