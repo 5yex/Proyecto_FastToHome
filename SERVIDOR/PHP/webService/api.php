@@ -95,7 +95,6 @@ function obtenerIdNegocio($datos){
         $negocio = new Negocio();
         $negocio->setNombre($datos->nombre);
         $respuesta = $negocio->obtenerIdNegocio();
-        var_dump($respuesta);
         if($respuesta){
             mandarRespuesta(false, $respuesta);
         } else {
