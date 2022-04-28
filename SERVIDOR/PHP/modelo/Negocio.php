@@ -94,6 +94,8 @@ class Negocio extends Conexion {
     
     public function obtenerIdNegocio(){
         $sql = "SELECT id FROM negocio WHERE nombre = :nom";
+        
+        $sentencia = $this->dblink->prepare($sql);
     }
 
     public function modificar() {
