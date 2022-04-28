@@ -93,7 +93,7 @@ class Negocio extends Conexion {
     }
     
     public function obtenerIdNegocio(){
-        
+        $sql = "SELECT id FROM negocio WHERE nombre = :nom";
     }
 
     public function modificar() {
