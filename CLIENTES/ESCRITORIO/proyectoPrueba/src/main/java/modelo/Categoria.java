@@ -4,6 +4,8 @@
  */
 package modelo;
 
+import com.google.gson.Gson;
+
 /**
  *
  * @author jmcbg
