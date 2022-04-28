@@ -14,7 +14,7 @@ public class Negocio {
     private int id_negocio;
     private int id_direccion;
     private int id_categoria;
-    private int id_mercadeer;
+    private int id_mercader;
     private String nombre;
     private String descripcion;
 
@@ -25,7 +25,7 @@ public class Negocio {
         this.id_negocio = id_negocio;
         this.id_direccion = id_direccion;
         this.id_categoria = id_categoria;
-        this.id_mercadeer = id_mercadeer;
+        this.id_mercader = id_mercadeer;
         this.nombre = nombre;
         this.descripcion = descripcion;
     }
@@ -33,7 +33,7 @@ public class Negocio {
     public Negocio(int id_direccion, int id_categoria, int id_mercadeer, String nombre, String descripcion) {
         this.id_direccion = id_direccion;
         this.id_categoria = id_categoria;
-        this.id_mercadeer = id_mercadeer;
+        this.id_mercader = id_mercadeer;
         this.nombre = nombre;
         this.descripcion = descripcion;
     }
@@ -63,11 +63,11 @@ public class Negocio {
     }
 
     public int getId_mercadeer() {
-        return id_mercadeer;
+        return id_mercader;
     }
 
     public void setId_mercadeer(int id_mercadeer) {
-        this.id_mercadeer = id_mercadeer;
+        this.id_mercader = id_mercadeer;
     }
 
     public String getNombre() {
