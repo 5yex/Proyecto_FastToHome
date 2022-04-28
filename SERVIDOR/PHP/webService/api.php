@@ -98,7 +98,7 @@ function obtenerIdNegocio($datos){
         $respuesta = $negocio->obtenerIdNegocio();
         
         if($respuesta){
-            mandarRespuesta(false, $respuesta );
+            mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error en obtener el id del negocio');
         }
