@@ -94,7 +94,7 @@ function obtenerIdNegocio($datos){
     try{
         $negocio = new Negocio();
        // $negocio->setNombre($datos->$nombre);
-        $negocio->setNombre("$datos->$nombre");
+        $negocio->setNombre($datos->$nombre);
         $respuesta = $negocio->obtenerIdNegocio();
         var_dump($respuesta);
         if($respuesta){
