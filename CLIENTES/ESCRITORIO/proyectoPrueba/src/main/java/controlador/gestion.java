@@ -38,6 +38,12 @@ public class gestion {
             HttpPost httpPost = new HttpPost("http://localhost/Php/webService/api.php");
 
             List<NameValuePair> params = new ArrayList<>();
+            
+            
+            
+            //prueba
+            System.out.println(peticion.getJSON());
+            
             params.add(new BasicNameValuePair("DATA", peticion.getJSON()));
 
             httpPost.setEntity(new UrlEncodedFormEntity(params));
