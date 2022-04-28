@@ -92,8 +92,10 @@ function obtenerIdNegocio($datos){
         $negocio = new Negocio();
         $negocio->setNombre($datos->$nombre);
         
-        if($negocio->obtenerIdNegocio()){
-            mandarRespuesta(false, );
+        $respuesta = $negocio->obtenerIdNegocio();
+        
+        if($respuesta){
+            mandarRespuesta(false, $respuesta );
         } else {
             mandarRespuesta(true, 'Error en la inserccion de la direccion');
         }
