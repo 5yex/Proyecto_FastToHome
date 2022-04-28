@@ -97,7 +97,7 @@ function obtenerIdNegocio($datos){
         if($respuesta){
             mandarRespuesta(false, $respuesta );
         } else {
-            mandarRespuesta(true, 'Error en la inserccion de la direccion');
+            mandarRespuesta(true, 'Error en obtener el id del negocio');
         }
     }catch (PDOException $ex) {
         mandarRespuesta(true, 'sql error');
