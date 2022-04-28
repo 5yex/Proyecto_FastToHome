@@ -17,7 +17,7 @@ if (empty($_POST["DATA"])) {
             nuevaDireccion(json_decode($peticion->datos));
             break;
         case 'get_id_negocio';
-            (json_decode($peticion->datos));
+            obtenerIdNegocio(json_decode($peticion->datos));
             break;
         default;
             mandarRespuesta(true, 'comando no  reconocido');
