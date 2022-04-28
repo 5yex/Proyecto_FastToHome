@@ -88,6 +88,18 @@ function nuevaDireccion($datos){
 
 function obtenerIdNegocio($datos){
     require_once '../modelo/Negocio.php';
+    try{
+        $negocio = new Negocio();
+        $negocio->setNombre($datos->$nombre);
+        
+        if($negocio->obtenerIdNegocio()){
+            mandarRespuesta(false, );
+        } else {
+            mandarRespuesta(true, 'Error en la inserccion de la direccion');
+        }
+    }catch (PDOException $ex) {
+        mandarRespuesta(true, 'sql error');
+    }
 }
 
 function mandarRespuesta($error, $datos) {
