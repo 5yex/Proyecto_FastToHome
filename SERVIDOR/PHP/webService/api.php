@@ -90,8 +90,8 @@ function obtenerIdNegocio($datos){
     require_once '../modelo/Negocio.php';
     try{
         $negocio = new Negocio();
-        $negocio->setNombre($datos->$nombre);
-        
+       // $negocio->setNombre($datos->$nombre);
+        $negocio->setNombre('Panaderia');
         $respuesta = $negocio->obtenerIdNegocio();
         
         if($respuesta){
