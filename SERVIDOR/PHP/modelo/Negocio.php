@@ -96,6 +96,15 @@ class Negocio extends Conexion {
         $sql = "SELECT id FROM negocio WHERE nombre = :nom";
         
         $sentencia = $this->dblink->prepare($sql);
+        
+        $nombre = $this->getNombre();
+        
+        $sentencia->bindParam(":nom", $nombre);
+        
+        $sentencia->execute();            
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+        
+        
     }
 
     public function modificar() {
