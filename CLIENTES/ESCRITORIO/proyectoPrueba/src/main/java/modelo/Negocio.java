@@ -62,12 +62,12 @@ public class Negocio {
         this.id_categoria = id_categoria;
     }
 
-    public int getId_mercadeer() {
+    public int getId_mercader() {
         return id_mercader;
     }
 
-    public void setId_mercadeer(int id_mercadeer) {
-        this.id_mercader = id_mercadeer;
+    public void setId_mercader(int id_mercader) {
+        this.id_mercader = id_mercader;
     }
 
     public String getNombre() {
