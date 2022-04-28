@@ -31,12 +31,12 @@ public class tests extends javax.swing.JFrame {
     private void initComponents() {
 
         titleText = new javax.swing.JLabel();
-        buttonRegister = new javax.swing.JButton();
+        buttonLogin = new javax.swing.JButton();
         emailField = new javax.swing.JTextField();
         emailTxt = new javax.swing.JLabel();
         passwordTxt = new javax.swing.JLabel();
         passwordField = new javax.swing.JPasswordField();
-        buttonLogin = new javax.swing.JButton();
+        buttonLogin1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio Sesión");
@@ -46,11 +46,10 @@ public class tests extends javax.swing.JFrame {
         titleText.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         titleText.setText("INICIAR SESIÓN");
 
-        buttonRegister.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
-        buttonRegister.setText("REGISTRO");
-        buttonRegister.addActionListener(new java.awt.event.ActionListener() {
+        buttonLogin.setText("REGISTRO");
+        buttonLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonRegisterActionPerformed(evt);
+                buttonLoginActionPerformed(evt);
             }
         });
 
@@ -58,10 +57,10 @@ public class tests extends javax.swing.JFrame {
 
         passwordTxt.setText("CONTRASEÑA");
 
-        buttonLogin.setText("ENTRAR");
-        buttonLogin.addActionListener(new java.awt.event.ActionListener() {
+        buttonLogin1.setText("ENTRAR");
+        buttonLogin1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonLoginActionPerformed(evt);
+                buttonLogin1ActionPerformed(evt);
             }
         });
 
@@ -80,10 +79,10 @@ public class tests extends javax.swing.JFrame {
                         .addGap(8, 8, 8)
                         .addComponent(titleText))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(buttonRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(133, Short.MAX_VALUE))
+                        .addComponent(buttonLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,23 +99,22 @@ public class tests extends javax.swing.JFrame {
                 .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(89, Short.MAX_VALUE))
+                    .addComponent(buttonLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRegisterActionPerformed
-        this.setVisible(false);
-        new registro().setVisible(true);
-    }//GEN-LAST:event_buttonRegisterActionPerformed
-
     private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_buttonLoginActionPerformed
+
+    private void buttonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogin1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonLogin1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,7 +136,7 @@ public class tests extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonLogin;
-    private javax.swing.JButton buttonRegister;
+    private javax.swing.JButton buttonLogin1;
     private javax.swing.JTextField emailField;
     private javax.swing.JLabel emailTxt;
     private javax.swing.JPasswordField passwordField;
