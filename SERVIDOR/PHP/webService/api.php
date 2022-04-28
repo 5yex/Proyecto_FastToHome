@@ -96,7 +96,7 @@ function obtenerIdNegocio($datos){
        // $negocio->setNombre($datos->$nombre);
         $negocio->setNombre("$datos->$nombre");
         $respuesta = $negocio->obtenerIdNegocio();
-        
+        var_dump($respuesta);
         if($respuesta){
             mandarRespuesta(false, $respuesta);
         } else {
