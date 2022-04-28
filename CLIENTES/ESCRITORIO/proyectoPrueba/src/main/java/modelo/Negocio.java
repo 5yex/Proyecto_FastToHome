@@ -30,10 +30,10 @@ public class Negocio {
         this.descripcion = descripcion;
     }
 
-    public Negocio(int id_direccion, int id_categoria, int id_mercadeer, String nombre, String descripcion) {
+    public Negocio(int id_direccion, int id_categoria, int id_mercader, String nombre, String descripcion) {
         this.id_direccion = id_direccion;
         this.id_categoria = id_categoria;
-        this.id_mercader = id_mercadeer;
+        this.id_mercader = id_mercader;
         this.nombre = nombre;
         this.descripcion = descripcion;
     }
