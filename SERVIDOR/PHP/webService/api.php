@@ -86,6 +86,10 @@ function nuevaDireccion($datos){
     }
 }
 
+function obtenerIdNegocio($datos){
+    require_once '../modelo/Negocio.php';
+}
+
 function mandarRespuesta($error, $datos) {
     require_once '../modelo/Respuesta.php';
     $respuesta = new Respuesta($error, $datos);
