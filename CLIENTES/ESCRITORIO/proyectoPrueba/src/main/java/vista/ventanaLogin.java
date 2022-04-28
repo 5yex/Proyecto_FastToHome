@@ -12,12 +12,12 @@ import javax.swing.UnsupportedLookAndFeelException;
  *
  * @author jmcbg
  */
-public class tests extends javax.swing.JFrame {
+public class ventanaLogin extends javax.swing.JFrame {
 
     /**
      * Creates new form tests
      */
-    public tests() {
+    public ventanaLogin() {
         initComponents();
     }
 
@@ -125,7 +125,7 @@ public class tests extends javax.swing.JFrame {
         } catch (UnsupportedLookAndFeelException ex) {
            
         }
-       new tests().setVisible(true);
+       new ventanaLogin().setVisible(true);
 //        if (conex.testConexion()) {
 //            new Login().setVisible(true);
 //        } else {
