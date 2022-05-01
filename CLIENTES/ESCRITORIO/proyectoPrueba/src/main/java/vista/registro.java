@@ -4,10 +4,7 @@
  */
 package vista;
 
-import com.formdev.flatlaf.FlatDarkLaf;
-import com.formdev.flatlaf.FlatIntelliJLaf;
 import controlador.UsuarioDao;
-import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Usuario;
 
 /**
