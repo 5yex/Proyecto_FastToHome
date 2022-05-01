@@ -156,7 +156,7 @@ public class registro extends javax.swing.JFrame {
         newUsuario.setDni(dniField.getText());
         newUsuario.setTlf(nombreField.getText());
         newUsuario.setEmail(emailField.getText());
-        newUsuario.setPassword(passwordField.getPassword().toString());
+        newUsuario.setPassword(new String(passwordField.getPassword()).toString());
         
         System.out.println(newUsuario.getJSON());
         
