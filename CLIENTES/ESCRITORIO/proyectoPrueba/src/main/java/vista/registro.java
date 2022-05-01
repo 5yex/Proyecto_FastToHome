@@ -157,7 +157,7 @@ public class registro extends javax.swing.JFrame {
 
     }//GEN-LAST:event_registerConfirmActionPerformed
 
-//    private void registrarUsuario() {
+    private void registrarUsuario() {
 //        newUsuario.setNombre(nombreField.getText());
 //        newUsuario.setDni(dniField.getText());
 //        newUsuario.setTlf(nombreField.getText());
@@ -172,7 +172,7 @@ public class registro extends javax.swing.JFrame {
         user.setNombre("paco");
         user.setPassword("pruebas");
         user.setRol("clientes");
-        user.setTlf("654789211");*/
+        user.setTlf("654789211");
     
     
               UsuarioDao.nuevoUsuario(user);
