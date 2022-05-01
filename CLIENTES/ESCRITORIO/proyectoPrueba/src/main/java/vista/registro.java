@@ -165,7 +165,8 @@ public class registro extends javax.swing.JFrame {
         newUsuario.setPassword(new String(passwordField.getPassword()).toString());
         System.out.println(newUsuario.getJSON());
         
-        controlador.UsuarioDao
+        
+UsuarioDao.nuevoUsuario(newUsuario);
     }
 
 
