@@ -14,7 +14,7 @@ import modelo.Usuario;
  * @author jmcbg
  */
 public class registro extends javax.swing.JFrame {
-
+    Usuario newUsuario = new Usuario();
     /**
      * Creates new form tests
      */
@@ -151,7 +151,7 @@ public class registro extends javax.swing.JFrame {
 
     private void registerConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerConfirmActionPerformed
         
-        Usuario newUsuario = new Usuario();
+        
         newUsuario.setNombre(nombreField.getText());
         newUsuario.setDni(dniField.getText());
         newUsuario.setTlf(nombreField.getText());
