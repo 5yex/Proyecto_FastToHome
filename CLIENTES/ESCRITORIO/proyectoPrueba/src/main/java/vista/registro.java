@@ -14,7 +14,7 @@ import modelo.Usuario;
  * @author jmcbg
  */
 public class registro extends javax.swing.JFrame {
-    Usuario newUsuario = new Usuario();
+    private Usuario newUsuario = new Usuario();
     /**
      * Creates new form tests
      */
@@ -158,7 +158,7 @@ public class registro extends javax.swing.JFrame {
         newUsuario.setEmail(emailField.getText());
         newUsuario.setPassword(passwordField.getPassword().toString());
         
-        System.out.println(newUsuario.toString());
+        System.out.println(newUsuario.getJSON();
         
     }//GEN-LAST:event_registerConfirmActionPerformed
 
