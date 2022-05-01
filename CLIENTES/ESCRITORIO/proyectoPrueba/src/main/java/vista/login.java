@@ -12,12 +12,12 @@ import javax.swing.UnsupportedLookAndFeelException;
  *
  * @author jmcbg
  */
-public class registro extends javax.swing.JFrame {
+public class login extends javax.swing.JFrame {
 
     /**
      * Creates new form tests
      */
-    public registro() {
+    public login() {
         initComponents();
     }
 
