@@ -31,21 +31,21 @@ public class registro extends javax.swing.JFrame {
     private void initComponents() {
 
         titleText = new javax.swing.JLabel();
-        buttonLogin = new javax.swing.JButton();
-        emailField = new javax.swing.JTextField();
-        emailTxt = new javax.swing.JLabel();
+        registerConfirm = new javax.swing.JButton();
+        nombreField = new javax.swing.JTextField();
+        nombreTXT = new javax.swing.JLabel();
         passwordTxt = new javax.swing.JLabel();
         passwordField = new javax.swing.JPasswordField();
-        passwordField1 = new javax.swing.JPasswordField();
-        emailField1 = new javax.swing.JTextField();
-        emailField2 = new javax.swing.JTextField();
-        emailTxt1 = new javax.swing.JLabel();
-        emailTxt2 = new javax.swing.JLabel();
-        passwordTxt1 = new javax.swing.JLabel();
-        emailField4 = new javax.swing.JTextField();
-        emailTxt3 = new javax.swing.JLabel();
-        emailField3 = new javax.swing.JTextField();
-        emailTxt4 = new javax.swing.JLabel();
+        passwordConfirmField = new javax.swing.JPasswordField();
+        apellidosField = new javax.swing.JTextField();
+        tlfField = new javax.swing.JTextField();
+        apellidosTXT = new javax.swing.JLabel();
+        dniTXT = new javax.swing.JLabel();
+        passwordConfirmTxt = new javax.swing.JLabel();
+        dniField = new javax.swing.JTextField();
+        tlfTXT = new javax.swing.JLabel();
+        emailField = new javax.swing.JTextField();
+        emailTXT = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio Sesión");
@@ -55,121 +55,121 @@ public class registro extends javax.swing.JFrame {
         titleText.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         titleText.setText("REGISTRO DE USUARIO");
 
-        buttonLogin.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Green"));
-        buttonLogin.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        buttonLogin.setText("CONFIRMAR REGISTRO");
-        buttonLogin.addActionListener(new java.awt.event.ActionListener() {
+        registerConfirm.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Green"));
+        registerConfirm.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        registerConfirm.setText("CONFIRMAR REGISTRO");
+        registerConfirm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonLoginActionPerformed(evt);
+                registerConfirmActionPerformed(evt);
             }
         });
 
-        emailTxt.setText("NOMBRE");
+        nombreTXT.setText("NOMBRE");
 
         passwordTxt.setText("CONTRASEÑA");
 
-        emailTxt1.setText("APELLIDOS");
+        apellidosTXT.setText("APELLIDOS");
 
-        emailTxt2.setText("DNI");
+        dniTXT.setText("DNI");
 
-        passwordTxt1.setText("CONFIRMAR CONTRASEÑA");
+        passwordConfirmTxt.setText("CONFIRMAR CONTRASEÑA");
 
-        emailTxt3.setText("TELÉFONO");
+        tlfTXT.setText("TELÉFONO");
 
-        emailTxt4.setText("CORREO ELECTRÓNICO");
+        emailTXT.setText("CORREO ELECTRÓNICO");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(67, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(emailTxt3, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(titleText, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tlfTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(emailField4)
+                        .addComponent(dniField)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(emailTxt2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(emailTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dniTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(apellidosTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(passwordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(emailField1, javax.swing.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE)
-                                .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(apellidosField)
+                                .addComponent(nombreTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(passwordField)
-                                .addComponent(titleText)
-                                .addComponent(emailField2, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(tlfField, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(nombreField)
+                                .addComponent(passwordConfirmField)
+                                .addComponent(passwordConfirmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(emailTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(emailField)
-                                .addComponent(passwordField1)
-                                .addComponent(passwordTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(emailTxt4, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(emailField3)
-                                .addComponent(buttonLogin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addGap(71, 71, 71))
+                                .addComponent(registerConfirm, javax.swing.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE)))))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addContainerGap()
                 .addComponent(titleText, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(emailTxt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nombreTXT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nombreField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(apellidosTXT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(apellidosField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dniTXT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dniField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tlfTXT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tlfField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(emailTXT)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(emailTxt1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(emailField1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(emailTxt2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(emailField4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(emailTxt3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(emailField2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(emailTxt4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(emailField3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(passwordTxt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(passwordTxt1)
+                .addComponent(passwordConfirmTxt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(passwordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(passwordConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
-                .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addComponent(registerConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
+    private void registerConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerConfirmActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_buttonLoginActionPerformed
+    }//GEN-LAST:event_registerConfirmActionPerformed
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonLogin;
+    private javax.swing.JTextField apellidosField;
+    private javax.swing.JLabel apellidosTXT;
+    private javax.swing.JTextField dniField;
+    private javax.swing.JLabel dniTXT;
     private javax.swing.JTextField emailField;
-    private javax.swing.JTextField emailField1;
-    private javax.swing.JTextField emailField2;
-    private javax.swing.JTextField emailField3;
-    private javax.swing.JTextField emailField4;
-    private javax.swing.JLabel emailTxt;
-    private javax.swing.JLabel emailTxt1;
-    private javax.swing.JLabel emailTxt2;
-    private javax.swing.JLabel emailTxt3;
-    private javax.swing.JLabel emailTxt4;
+    private javax.swing.JLabel emailTXT;
+    private javax.swing.JTextField nombreField;
+    private javax.swing.JLabel nombreTXT;
+    private javax.swing.JPasswordField passwordConfirmField;
+    private javax.swing.JLabel passwordConfirmTxt;
     private javax.swing.JPasswordField passwordField;
-    private javax.swing.JPasswordField passwordField1;
     private javax.swing.JLabel passwordTxt;
-    private javax.swing.JLabel passwordTxt1;
+    private javax.swing.JButton registerConfirm;
     private javax.swing.JLabel titleText;
+    private javax.swing.JTextField tlfField;
+    private javax.swing.JLabel tlfTXT;
     // End of variables declaration//GEN-END:variables
 }
