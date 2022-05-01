@@ -13,7 +13,7 @@ import modelo.Usuario;
  * @author jmcbg
  */
 public class UsuarioDao {
-    public boolean nuevoUsuario(Usuario user){
+    public static boolean nuevoUsuario(Usuario user){
          return hacerConsulta(new Peticion("nuevo_usuario", user.getJSON()));
     }
 }

@@ -6,6 +6,7 @@ package vista;
 
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatIntelliJLaf;
+import controlador.UsuarioDao;
 import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Usuario;
 
@@ -14,7 +15,9 @@ import modelo.Usuario;
  * @author jmcbg
  */
 public class registro extends javax.swing.JFrame {
+
     private Usuario newUsuario = new Usuario();
+
     /**
      * Creates new form tests
      */
@@ -150,20 +153,21 @@ public class registro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void registerConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerConfirmActionPerformed
-        
-        
+        registrarUsuario();
+
+    }//GEN-LAST:event_registerConfirmActionPerformed
+
+    private void registrarUsuario() {
         newUsuario.setNombre(nombreField.getText());
         newUsuario.setDni(dniField.getText());
         newUsuario.setTlf(nombreField.getText());
         newUsuario.setEmail(emailField.getText());
         newUsuario.setPassword(new String(passwordField.getPassword()).toString());
-        
         System.out.println(newUsuario.getJSON());
         
-    }//GEN-LAST:event_registerConfirmActionPerformed
+        controlador.UsuarioDao
+    }
 
-   
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellidosField;

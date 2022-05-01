@@ -9,5 +9,15 @@ package util;
  * @author jmcbg
  */
 public class validaciones {
-    
+
+    class InvalidAgeException extends Exception {
+        public InvalidAgeException(String str) {
+            super(str);
+        }
+    }
+
+    public void validarString() {
+
+    }
+
 }
