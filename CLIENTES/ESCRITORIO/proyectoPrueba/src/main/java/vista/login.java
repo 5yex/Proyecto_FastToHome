@@ -47,6 +47,7 @@ public class login extends javax.swing.JFrame {
         titleText.setText("INICIAR SESIÓN");
 
         buttonLogin.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
+        buttonLogin.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         buttonLogin.setText("REGISTRO");
         buttonLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +59,8 @@ public class login extends javax.swing.JFrame {
 
         passwordTxt.setText("CONTRASEÑA");
 
+        buttonLogin1.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Blue"));
+        buttonLogin1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         buttonLogin1.setText("ENTRAR");
         buttonLogin1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,11 +101,11 @@ public class login extends javax.swing.JFrame {
                 .addComponent(passwordTxt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         pack();

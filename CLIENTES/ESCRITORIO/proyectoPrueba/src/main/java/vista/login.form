@@ -60,12 +60,12 @@
               <Component id="passwordTxt" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="passwordField" min="-2" pref="33" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="buttonLogin1" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="buttonLogin" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="buttonLogin" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="buttonLogin1" min="-2" pref="32" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="89" max="32767" attributes="0"/>
+              <EmptySpace pref="79" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -83,6 +83,9 @@
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="50" green="54" id="Actions.Red" palette="3" red="c7" type="palette"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="REGISTRO"/>
       </Properties>
@@ -106,6 +109,12 @@
     </Component>
     <Component class="javax.swing.JButton" name="buttonLogin1">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="c4" green="92" id="Actions.Blue" palette="3" red="35" type="palette"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="3"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="ENTRAR"/>
       </Properties>
       <Events>
