@@ -158,7 +158,7 @@ public class registro extends javax.swing.JFrame {
         newUsuario.setEmail(emailField.getText());
         newUsuario.setPassword(passwordField.getPassword().toString());
         
-        System.out.println(newUsuario.getJSON();
+        System.out.println(newUsuario.getJSON());
         
     }//GEN-LAST:event_registerConfirmActionPerformed
 
