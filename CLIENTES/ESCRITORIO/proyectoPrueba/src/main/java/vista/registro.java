@@ -16,7 +16,7 @@ import modelo.Usuario;
  */
 public class registro extends javax.swing.JFrame {
 
-    private Usuario newUsuario = new Usuario();
+    private Usuario user = new Usuario();
 
     /**
      * Creates new form tests
@@ -157,15 +157,25 @@ public class registro extends javax.swing.JFrame {
 
     }//GEN-LAST:event_registerConfirmActionPerformed
 
-    private void registrarUsuario() {
-        newUsuario.setNombre(nombreField.getText());
-        newUsuario.setDni(dniField.getText());
-        newUsuario.setTlf(nombreField.getText());
-        newUsuario.setEmail(emailField.getText());
-        newUsuario.setPassword(new String(passwordField.getPassword()).toString());
-        newUsuario.setRol("mercader");
-        newUsuario.setId_direccion(2);
-              UsuarioDao.nuevoUsuario(newUsuario);
+//    private void registrarUsuario() {
+//        newUsuario.setNombre(nombreField.getText());
+//        newUsuario.setDni(dniField.getText());
+//        newUsuario.setTlf(nombreField.getText());
+//        newUsuario.setEmail(emailField.getText());
+//        newUsuario.setPassword(new String(passwordField.getPassword()).toString());
+//        newUsuario.setRol("mercader");
+//        newUsuario.setId_direccion(2);
+    
+     user.setDni("34567890a");
+        user.setEmail("fasdfa");
+        user.setId_direccion(0);
+        user.setNombre("paco");
+        user.setPassword("pruebas");
+        user.setRol("clientes");
+        user.setTlf("654789211");*/
+    
+    
+              UsuarioDao.nuevoUsuario(user);
     }
 
 
