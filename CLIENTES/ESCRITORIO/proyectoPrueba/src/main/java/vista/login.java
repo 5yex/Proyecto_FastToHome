@@ -110,7 +110,8 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        new registro().setVisible(true);
     }//GEN-LAST:event_buttonLoginActionPerformed
 
     private void buttonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogin1ActionPerformed
