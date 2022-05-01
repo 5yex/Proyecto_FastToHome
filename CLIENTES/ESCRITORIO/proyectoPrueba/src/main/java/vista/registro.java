@@ -56,7 +56,8 @@ public class registro extends javax.swing.JFrame {
         titleText.setText("REGISTRO DE USUARIO");
 
         buttonLogin.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Green"));
-        buttonLogin.setText("REGISTRO");
+        buttonLogin.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        buttonLogin.setText("CONFIRMAR REGISTRO");
         buttonLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonLoginActionPerformed(evt);
@@ -108,9 +109,9 @@ public class registro extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(24, 24, 24)
                 .addComponent(titleText, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addComponent(emailTxt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
