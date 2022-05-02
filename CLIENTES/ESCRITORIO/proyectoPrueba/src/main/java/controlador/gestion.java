@@ -98,7 +98,7 @@ public class gestion {
 
                 JsonArray jarray = jsonObject.get("datos").getAsJsonArray();
 
-                return jarray.get(0).getAsString();
+                return String.valueOf(jarray.get(0).getAsInt()); 
             } else {
                 return "error entity es null";
             }
