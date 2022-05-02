@@ -40,7 +40,7 @@ public class principal {
         //System.out.println(hacerConsulta(new Peticion("nuevo_usuario", user.getJSON())));
         //System.out.println(hacerConsulta(new Peticion("nuevo_producto", producto.getJSON())));
         
-        System.out.println(gestion.consultaSeleccion(new Peticion("obtener_id_usuario", user.getJSON())));
+        System.out.println(gestion.consultaSeleccion(new Peticion("obtener_id_cliente", user.getJSON())));
     }
     
 }
