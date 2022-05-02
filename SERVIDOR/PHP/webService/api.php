@@ -11,7 +11,7 @@ if (empty($_POST["DATA"])) {
             nuevoUsuario(json_decode($peticion->datos));
             break;
         case 'obtner_id_cliente';
-            obtenerIdCliente(json_decode($peticion->datos))
+            obtenerIdCliente(json_decode($peticion->datos));
             break;
         case 'nuevo_producto';
             nuevoProducto(json_decode($peticion->datos));
