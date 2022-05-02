@@ -4,6 +4,7 @@
  */
 package com.donoso.proyectoprueba;
 
+import controlador.UsuarioDao;
 import controlador.gestion;
 import static controlador.gestion.hacerConsulta;
 import java.io.IOException;
@@ -40,7 +41,7 @@ public class principal {
         //System.out.println(hacerConsulta(new Peticion("nuevo_usuario", user.getJSON())));
         //System.out.println(hacerConsulta(new Peticion("nuevo_producto", producto.getJSON())));
         
-        System.out.println(gestion.consultaSeleccion(new Peticion("obtener_id_cliente", user.getJSON())));
+        System.out.println(UsuarioDao.obtenerIdCliente(user));
     }
     
 }
