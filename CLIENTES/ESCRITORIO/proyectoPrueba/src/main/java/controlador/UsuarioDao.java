@@ -4,7 +4,7 @@
  */
 package controlador;
 
-import static controlador.gestion.hacerConsulta;
+import controlador;
 import modelo.Peticion;
 import modelo.Usuario;
 
@@ -14,6 +14,9 @@ import modelo.Usuario;
  */
 public class UsuarioDao {
     public static boolean nuevoUsuario(Usuario user){
-         return hacerConsulta(new Peticion("nuevo_usuario", user.getJSON()));
+         return gestion.hacerConsulta(new Peticion("nuevo_usuario", user.getJSON()));
+    }
+    public static String obtenerId(Usuario user){
+        return gestion.consultaSeleccion(new Peticion("obtener_id_cliente", user.getJSON()));
     }
 }
