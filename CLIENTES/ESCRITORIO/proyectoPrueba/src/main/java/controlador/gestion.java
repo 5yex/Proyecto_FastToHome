@@ -96,7 +96,7 @@ public class gestion {
                 JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
                 return jsonObject.get("error").getAsString();
             }else{
-            return "error";
+                return "error entity es null";
             }
         } catch (Exception ex) {
             return "excepcion";
