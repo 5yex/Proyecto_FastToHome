@@ -15,7 +15,7 @@ public class UsuarioDao {
     public static boolean nuevoUsuario(Usuario user){
          return gestion.hacerConsulta(new Peticion("nuevo_usuario", user.getJSON()));
     }
-    public static String obtenerId(Usuario user){
+    public static String obtenerIdCliente(Usuario user){
         return gestion.consultaSeleccion(new Peticion("obtener_id_cliente", user.getJSON()));
     }
 }
