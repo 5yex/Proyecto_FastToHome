@@ -96,9 +96,9 @@ public class gestion {
 
                 JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
 
-                JsonArray jarray = jsonObject.get("datos").getAsJsonArray();
+              return jsonObject.get("datos").getAsJsonArray().get(0).getAsJsonObject().get("id").getAsString();
 
-                return null;
+                 
             } else {
                 return "error entity es null";
             }
