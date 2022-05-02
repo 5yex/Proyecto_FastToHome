@@ -101,4 +101,18 @@ class Pedido extends Conexion{
         //Insertó correctamente
         return TRUE;
     }
+    
+    public function calcularTotalPedido(){
+        
+        $sql = "SELECT totalPrecioPedido(:id_ped)";
+        
+        $sentencia = $this->dblink->prepare($sql);
+        
+        $id_pedido = $this->getId_pedido();
+        
+        $sentencia->bindParam(":id_ped", $id_pedido);
+        
+        $sentencia->execute();            
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }
 }

@@ -118,6 +118,32 @@ class usuario extends conexion {
         return TRUE;
     }
     
+    public function obtenerIdMercader(){
+        
+        $sql = "SELECT id FROM usuarios where Dni like :dni AND rol = 'mercader'";
+        
+        $sentencia = $this->dblink->prepare($sql);
+        
+        $dni = $this->getDni();
+        
+        $sentencia->bindParam(":dni", $dni);
+        
+        $sentencia->execute();            
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }
     
+    public function obtenerIdCliente(){
+        
+        $sql = "SELECT id FROM usuarios where Dni like :dni AND rol = 'cliente'";
+        
+        $sentencia = $this->dblink->prepare($sql);
+        
+        $dni = $this->getDni();
+        
+        $sentencia->bindParam(":dni", $dni);
+        
+        $sentencia->execute();            
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }
 
 }

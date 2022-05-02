@@ -39,8 +39,6 @@ public class gestion {
 
             List<NameValuePair> params = new ArrayList<>();
             
-            
-            
             //prueba
             System.out.println(peticion.getJSON());
             
