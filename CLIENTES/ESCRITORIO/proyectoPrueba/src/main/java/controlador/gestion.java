@@ -39,10 +39,10 @@ public class gestion {
             HttpPost httpPost = new HttpPost("http://localhost/Php/webService/api.php");
 
             List<NameValuePair> params = new ArrayList<>();
-            
+
             //prueba
             System.out.println(peticion.getJSON());
-            
+
             params.add(new BasicNameValuePair("DATA", peticion.getJSON()));
 
             httpPost.setEntity(new UrlEncodedFormEntity(params));
@@ -51,23 +51,23 @@ public class gestion {
 
             HttpEntity entity = response.getEntity();
             Header headers = entity.getContentType();
-            
+
             if (entity != null) {
-                
+
                 String htmlTxt = EntityUtils.toString(entity);
-                
+
                 System.err.println(htmlTxt);
-                
+
                 JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
                 return !jsonObject.get("error").getAsBoolean();
-            }else{
-            return false;
+            } else {
+                return false;
             }
         } catch (Exception ex) {
             return false;
         }
     }
-    
+
     public static String consultaSeleccion(Peticion peticion) {
         String json = null;
         try {
@@ -75,10 +75,10 @@ public class gestion {
             HttpPost httpPost = new HttpPost("http://localhost/Php/webService/api.php");
 
             List<NameValuePair> params = new ArrayList<>();
-            
+
             //prueba
             System.out.println(peticion.getJSON());
-            
+
             params.add(new BasicNameValuePair("DATA", peticion.getJSON()));
 
             httpPost.setEntity(new UrlEncodedFormEntity(params));
@@ -87,19 +87,19 @@ public class gestion {
 
             HttpEntity entity = response.getEntity();
             Header headers = entity.getContentType();
-            
+
             if (entity != null) {
-                
+
                 String htmlTxt = EntityUtils.toString(entity);
-                
+
                 System.err.println(htmlTxt);
-                
+
                 JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
-                
+
                 JsonArray jarray = jsonObject.get("datos").getAsJsonArray();
-                
-                return null;
-            }else{
+
+                return jarray.get(0).getAsString();
+            } else {
                 return "error entity es null";
             }
         } catch (Exception ex) {
