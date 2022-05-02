@@ -4,6 +4,7 @@
  */
 package controlador;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -94,7 +95,10 @@ public class gestion {
                 System.err.println(htmlTxt);
                 
                 JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
-                return jsonObject.get("datos").getAsString();
+                
+                JsonArray jarray = jsonObject.get("datos").getAsJsonArray();
+                
+                return null;
             }else{
                 return "error entity es null";
             }
