@@ -21,7 +21,7 @@ public class principal {
 
     public static void main(String[] args) throws IOException {
 
-        Usuario user = new Usuario("11");
+        Usuario user = new Usuario("121");
         //user.setDni("12345678D");
         /*user.setEmail("fasdfa");
         user.setId_direccion(0);
