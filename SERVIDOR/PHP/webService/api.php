@@ -109,7 +109,7 @@ function obtenerIdNegocio($datos){
 }
 
 function obtenerIdCliente($datos){
-    require_once '../modelo/Usuario.php';
+    require_once '../modelo/usuario.php';
     try{
         $cliente = new usuario();
         $cliente->setDni($datos->dni);
