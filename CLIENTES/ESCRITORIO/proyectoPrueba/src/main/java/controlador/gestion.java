@@ -99,6 +99,7 @@ public class gestion {
                 return "error entity es null";
             }
         } catch (Exception ex) {
+            ex.printStackTrace();
             return "excepcion";
         }
     }
