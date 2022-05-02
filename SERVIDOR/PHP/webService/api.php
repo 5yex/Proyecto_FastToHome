@@ -10,6 +10,8 @@ if (empty($_POST["DATA"])) {
         case 'nuevo_usuario';
             nuevoUsuario(json_decode($peticion->datos));
             break;
+        case 'obtner_id_cliente';
+            break;
         case 'nuevo_producto';
             nuevoProducto(json_decode($peticion->datos));
             break;
@@ -99,6 +101,22 @@ function obtenerIdNegocio($datos){
             mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error en obtener el id del negocio');
+        }
+    }catch (PDOException $ex) {
+        mandarRespuesta(true, 'sql error');
+    }
+}
+
+function obtenerIdCliente($datos){
+    require_once '../modelo/Usuario.php';
+    try{
+        $cliente = new usuario();
+        $cliente->setDni($datos->dni);
+        $respuesta = $cliente->obtenerIdCliente();
+        if($respuesta){
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error en obtener el id del cliente');
         }
     }catch (PDOException $ex) {
         mandarRespuesta(true, 'sql error');
