@@ -66,4 +66,40 @@ public class gestion {
             return false;
         }
     }
+    
+    public static String consultaSeleccion(Peticion peticion){
+        String json = null;
+        try {
+            CloseableHttpClient client = HttpClients.createDefault();
+            HttpPost httpPost = new HttpPost("http://localhost/Php/webService/api.php");
+
+            List<NameValuePair> params = new ArrayList<>();
+            
+            //prueba
+            System.out.println(peticion.getJSON());
+            
+            params.add(new BasicNameValuePair("DATA", peticion.getJSON()));
+
+            httpPost.setEntity(new UrlEncodedFormEntity(params));
+
+            CloseableHttpResponse response = client.execute(httpPost);
+
+            HttpEntity entity = response.getEntity();
+            Header headers = entity.getContentType();
+            
+            if (entity != null) {
+                
+                String htmlTxt = EntityUtils.toString(entity);
+                
+                System.err.println(htmlTxt);
+                
+                JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
+                return jsonObject.get("datos").getAsString();
+            }else{
+                return "Error";
+            }
+        } catch (Exception ex) {
+            System.err.println("excepcion");
+        }
+    }
 }
