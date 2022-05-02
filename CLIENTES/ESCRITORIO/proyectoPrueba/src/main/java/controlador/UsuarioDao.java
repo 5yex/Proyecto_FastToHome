@@ -4,7 +4,6 @@
  */
 package controlador;
 
-import controlador;
 import modelo.Peticion;
 import modelo.Usuario;
 
