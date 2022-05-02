@@ -10,7 +10,7 @@ if (empty($_POST["DATA"])) {
         case 'nuevo_usuario';
             nuevoUsuario(json_decode($peticion->datos));
             break;
-        case 'obtner_id_cliente';
+        case 'obtener_id_cliente';
             obtenerIdCliente(json_decode($peticion->datos));
             break;
         case 'nuevo_producto';
