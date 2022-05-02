@@ -4,15 +4,16 @@
  */
 package vista;
 
-import com.formdev.flatlaf.FlatDarkLaf;
-import com.formdev.flatlaf.FlatIntelliJLaf;
-import javax.swing.UnsupportedLookAndFeelException;
+import controlador.UsuarioDao;
+import modelo.Usuario;
 
 /**
  *
  * @author jmcbg
  */
 public class registro extends javax.swing.JFrame {
+
+    private Usuario newUsuario = new Usuario();
 
     /**
      * Creates new form tests
@@ -31,12 +32,21 @@ public class registro extends javax.swing.JFrame {
     private void initComponents() {
 
         titleText = new javax.swing.JLabel();
-        buttonLogin = new javax.swing.JButton();
-        emailField = new javax.swing.JTextField();
-        emailTxt = new javax.swing.JLabel();
+        registerConfirm = new javax.swing.JButton();
+        nombreField = new javax.swing.JTextField();
+        nombreTXT = new javax.swing.JLabel();
         passwordTxt = new javax.swing.JLabel();
         passwordField = new javax.swing.JPasswordField();
-        buttonLogin1 = new javax.swing.JButton();
+        passwordConfirmField = new javax.swing.JPasswordField();
+        apellidosField = new javax.swing.JTextField();
+        tlfField = new javax.swing.JTextField();
+        apellidosTXT = new javax.swing.JLabel();
+        dniTXT = new javax.swing.JLabel();
+        passwordConfirmTxt = new javax.swing.JLabel();
+        dniField = new javax.swing.JTextField();
+        tlfTXT = new javax.swing.JLabel();
+        emailField = new javax.swing.JTextField();
+        emailTXT = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio Sesión");
@@ -44,90 +54,134 @@ public class registro extends javax.swing.JFrame {
         setResizable(false);
 
         titleText.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        titleText.setText("INICIAR SESIÓN");
+        titleText.setText("REGISTRO DE USUARIO");
 
-        buttonLogin.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
-        buttonLogin.setText("REGISTRO");
-        buttonLogin.addActionListener(new java.awt.event.ActionListener() {
+        registerConfirm.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Green"));
+        registerConfirm.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        registerConfirm.setText("CONFIRMAR REGISTRO");
+        registerConfirm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonLoginActionPerformed(evt);
+                registerConfirmActionPerformed(evt);
             }
         });
 
-        emailTxt.setText("CORREO ELECTRÓNICO");
+        nombreTXT.setText("NOMBRE");
 
         passwordTxt.setText("CONTRASEÑA");
 
-        buttonLogin1.setText("ENTRAR");
-        buttonLogin1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonLogin1ActionPerformed(evt);
-            }
-        });
+        apellidosTXT.setText("APELLIDOS");
+
+        dniTXT.setText("DNI");
+
+        passwordConfirmTxt.setText("CONFIRMAR CONTRASEÑA");
+
+        tlfTXT.setText("TELÉFONO");
+
+        emailTXT.setText("CORREO ELECTRÓNICO");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(135, 135, 135)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(passwordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(emailField)
-                    .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(passwordField)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(titleText))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(buttonLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(titleText, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tlfTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(dniField)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(dniTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(apellidosTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(passwordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(apellidosField)
+                                .addComponent(nombreTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(passwordField)
+                                .addComponent(tlfField, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(nombreField)
+                                .addComponent(passwordConfirmField)
+                                .addComponent(passwordConfirmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(emailTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(emailField)
+                                .addComponent(registerConfirm, javax.swing.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE)))))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
+                .addContainerGap()
                 .addComponent(titleText, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(emailTxt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nombreTXT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nombreField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(apellidosTXT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(apellidosField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dniTXT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dniField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tlfTXT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tlfField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(emailTXT)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(passwordTxt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(passwordConfirmTxt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(passwordConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(registerConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonLoginActionPerformed
+    private void registerConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerConfirmActionPerformed
+        registrarUsuario();
 
-    private void buttonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogin1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonLogin1ActionPerformed
+    }//GEN-LAST:event_registerConfirmActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-  
+    private void registrarUsuario() {
+        newUsuario.setNombre(nombreField.getText());
+        newUsuario.setDni(dniField.getText());
+        newUsuario.setTlf(nombreField.getText());
+        newUsuario.setEmail(emailField.getText());
+        newUsuario.setPassword(new String(passwordField.getPassword()));
+        newUsuario.setRol("mercader");
+        System.out.println(newUsuario.getJSON());
+        UsuarioDao.nuevoUsuario(newUsuario);
+    }
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonLogin;
-    private javax.swing.JButton buttonLogin1;
+    private javax.swing.JTextField apellidosField;
+    private javax.swing.JLabel apellidosTXT;
+    private javax.swing.JTextField dniField;
+    private javax.swing.JLabel dniTXT;
     private javax.swing.JTextField emailField;
-    private javax.swing.JLabel emailTxt;
+    private javax.swing.JLabel emailTXT;
+    private javax.swing.JTextField nombreField;
+    private javax.swing.JLabel nombreTXT;
+    private javax.swing.JPasswordField passwordConfirmField;
+    private javax.swing.JLabel passwordConfirmTxt;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JLabel passwordTxt;
+    private javax.swing.JButton registerConfirm;
     private javax.swing.JLabel titleText;
+    private javax.swing.JTextField tlfField;
+    private javax.swing.JLabel tlfTXT;
     // End of variables declaration//GEN-END:variables
 }
