@@ -116,7 +116,7 @@ class Pedido extends Conexion{
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
     
-    public function actualizacionEstdadoPedido(){
+    public function actualizacionEstadoPedido(){
         $sql = "CALL actualizarEstadoPedido(:est, :id_ped)";
         
         $sentencia = $this->dblink->prepare($sql);
