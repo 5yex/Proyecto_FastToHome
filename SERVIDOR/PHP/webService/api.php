@@ -97,7 +97,7 @@ function obtenerIdNegocio($datos){
     try{
         $negocio = new Negocio();
         $negocio->setNombre($datos->nombre);
-        $respuesta = int($negocio->obtenerIdNegocio());
+        $respuesta = (int)$negocio->obtenerIdNegocio();
         if($respuesta){
             mandarRespuesta(false, $respuesta);
         } else {
@@ -113,7 +113,7 @@ function obtenerIdCliente($datos){
     try{
         $cliente = new usuario();
         $cliente->setDni($datos->dni);
-        $respuesta = int($cliente->obtenerIdCliente());
+        $respuesta = (int) $cliente->obtenerIdCliente();
         if($respuesta){
             mandarRespuesta(false, $respuesta);
         } else {
