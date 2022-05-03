@@ -96,7 +96,7 @@ public class gestion {
 
                 JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
 
-              return jsonObject.get("datos").getAsJsonArray().get(0).getAsJsonObject().get("id").getAsString();
+              return String.valueOf(jsonObject.get("datos").getAsInt());
 
                  
             } else {
