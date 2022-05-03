@@ -134,7 +134,7 @@ class usuario extends conexion {
     
     public function obtenerIdCliente(){
         
-        $sql = "SELECT id FROM usuarios where Dni like :dni AND rol = 'cliente'";
+        $sql = "SELECT id FROM usuarios";
         
         $sentencia = $this->dblink->prepare($sql);
         
