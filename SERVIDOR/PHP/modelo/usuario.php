@@ -125,7 +125,7 @@ class usuario extends conexion {
         $sentencia = $this->dblink->prepare($sql);
         
         $dni = $this->getDni();
-        
+                
         $sentencia->bindParam(":dni", $dni);
         
         $sentencia->execute();            
