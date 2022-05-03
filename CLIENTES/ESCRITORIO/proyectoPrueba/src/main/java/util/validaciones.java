@@ -4,6 +4,9 @@
  */
 package util;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  *
  * @author jmcbg
@@ -14,5 +17,17 @@ public class validaciones {
     public void validarString() {
         
     }
+    
+    public static boolean validar(String campo, String patron) {
+		
+		Pattern p = Pattern.compile(patron);
+		Matcher m = p.matcher(campo);
+
+		if (m.matches()) {
+			return true;
+		}
+
+		return false;
+	}
 
 }
