@@ -116,8 +116,8 @@ function obtenerIdCliente($datos){
         $cliente = new usuario();
         $cliente->setDni($datos->dni);
         $respuesta = (int) $cliente->obtenerIdCliente();
-        printf($cliente->obtenerIdCliente());
-        printf($respuesta);
+        var_dump($cliente->obtenerIdCliente());
+        var_dump($respuesta);
         if($respuesta){
             mandarRespuesta(false, $respuesta);
         } else {
