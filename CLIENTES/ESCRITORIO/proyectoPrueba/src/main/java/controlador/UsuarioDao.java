@@ -16,6 +16,6 @@ public class UsuarioDao {
          return gestion.hacerConsulta(new Peticion("nuevo_usuario", user.getJSON()));
     }
     public static String obtenerIdCliente(Usuario user){
-        return gestion.consultaSeleccion(new Peticion("obtener_id_cliente", user.getJSON()));
+       return gestion.consultaSeleccion(new Peticion("obtener_id_cliente", user.getJSON())).get("id").getAsString();
     }
 }
