@@ -115,4 +115,27 @@ class Pedido extends Conexion{
         $sentencia->execute();            
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
+    
+    public function actualizacionEstdadoPedido(){
+        $sql = "CALL actualizarEstadoPedido(:est, :id_ped)";
+        
+        $sentencia = $this->dblink->prepare($sql);
+        
+        $id_pedido = $this->getId_pedido();
+        $estado = $this->getEstado();
+        
+        $sentencia->bindParam(":id_ped", $id_pedido);
+        $sentencia->bindParam(":est", $estado);
+        
+        $resultado = $sentencia->execute();
+
+        if ($resultado != 1) {
+            //ocurrio un error al insertar
+            printf('aaa');
+            return FALSE;
+        }
+
+        //Insertó correctamente
+        return TRUE;
+    }
 }
