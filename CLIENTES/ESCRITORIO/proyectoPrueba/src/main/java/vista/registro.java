@@ -160,11 +160,15 @@ public class registro extends javax.swing.JFrame {
         newUsuario.setDni(dniField.getText());
         newUsuario.setTlf(nombreField.getText());
         newUsuario.setEmail(emailField.getText());
-        
+
         String password = new String(passwordField.getPassword());
-        
-        
+
         newUsuario.setPassword(BCrypt.hashpw(password, BCrypt.gensalt(10)));
+
+        if (BCrypt.checkpw(password, newUsuario.getPassword())) {
+            System.out.println("LA CONTRASEÑA SE HA GENERADO CORRECTAMENTE Wey");
+        }
+
         newUsuario.setRol("cliente");
         System.out.println(newUsuario.getJSON());
         UsuarioDao.nuevoUsuario(newUsuario);
