@@ -41,16 +41,16 @@ public class principal {
         //System.out.println(hacerConsulta(new Peticion("nuevo_producto", producto.getJSON())));
         //System.out.println(UsuarioDao.obtenerIdCliente(user));
         if (BCrypt.checkpw("PACO", "$2a$10$jIukrdC3Om1/OXSCfVmUl.9SToQjOzL48AgdPYcfTbqmFRHNrfHTS")) {
-            System.out.println("LA CONTRASEÑA SE HA GENERADO CORRECTAMENTE Wey");
+            System.out.println("LA CONTRASEÑA SE HA GENERADO CORRECTAMENTE");
         }
         if (BCrypt.checkpw("PACO", "$2a$10$7pPIorywzYnthCFpvoPuHuNtN997fkmbJTlS/LfEnCIv48BtmJ7Hm")) {
-            System.out.println("LA CONTRASEÑA SE HA GENERADO CORRECTAMENTE Wey");
+            System.out.println("LA CONTRASEÑA SE HA GENERADO CORRECTAMENTE");
         }
         if (BCrypt.checkpw("PACO", "$2a$10$36VUzMqDJ9F/8j7n32pcPOoCW2UAh.23uESbHDYowyv7kClLa25/C")) {
-            System.out.println("LA CONTRASEÑA SE HA GENERADO CORRECTAMENTE Wey");
+            System.out.println("LA CONTRASEÑA SE HA GENERADO CORRECTAMENTE");
         }
         if (BCrypt.checkpw("PACO", "$2a$10$uv1n0lPuPv1V7/C/6wdn..y7v2SPiKMEN15iIbHS/WYnAlTWa6rIG")) {
-            System.out.println("LA CONTRASEÑA SE HA GENERADO CORRECTAMENTE Wey");
+            System.out.println("LA CONTRASEÑA SE HA GENERADO CORRECTAMENTE");
         }
     }
 
