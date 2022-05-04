@@ -12,7 +12,7 @@ import modelo.Categoria;
 import modelo.Peticion;
 import modelo.Producto;
 import modelo.Usuario;
-import org.mindrot.jbcrypt.BCrypt;
+
 
 /**
  *
@@ -40,6 +40,7 @@ public class principal {
         //System.out.println(hacerConsulta(new Peticion("nuevo_usuario", user.getJSON())));
         //System.out.println(hacerConsulta(new Peticion("nuevo_producto", producto.getJSON())));
         //System.out.println(UsuarioDao.obtenerIdCliente(user));
+        
     }
 
 }
