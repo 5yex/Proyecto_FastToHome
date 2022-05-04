@@ -169,6 +169,8 @@ public class registro extends javax.swing.JFrame {
             System.out.println("LA CONTRASEÑA SE HA GENERADO CORRECTAMENTE Wey");
         }
 
+
+
         newUsuario.setRol("cliente");
         System.out.println(newUsuario.getJSON());
         UsuarioDao.nuevoUsuario(newUsuario);
