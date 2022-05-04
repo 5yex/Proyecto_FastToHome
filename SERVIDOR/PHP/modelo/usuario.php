@@ -147,7 +147,6 @@ class usuario extends conexion {
     }
     
     public function login(){
-        
         $sql = "SELECT password FROM usuarios where Dni like :dni";
         
         $sentencia = $this->dblink->prepare($sql);
