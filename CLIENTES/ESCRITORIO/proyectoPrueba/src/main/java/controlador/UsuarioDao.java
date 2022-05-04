@@ -41,7 +41,7 @@ public class UsuarioDao {
     
     public static String login(Usuario user){
    
-    return gestion.consultaSeleccion(new Peticion("obtener_id_cliente", user.getJSON())).get("id").getAsString();
+    return gestion.consultaSeleccion(new Peticion("user_login", user.getJSON())).get("password").getAsString();
 
     
     }
