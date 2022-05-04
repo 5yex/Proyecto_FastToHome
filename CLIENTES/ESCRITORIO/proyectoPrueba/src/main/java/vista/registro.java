@@ -160,7 +160,7 @@ public class registro extends javax.swing.JFrame {
         newUsuario.setDni(dniField.getText());
         newUsuario.setTlf(nombreField.getText());
         newUsuario.setEmail(emailField.getText());
-        newUsuario.setPassword(BCrypt.hashpw(new StringBuilder(passwordField.getPassword()), BCrypt.gensalt(10)));
+        newUsuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
         newUsuario.setRol("cliente");
         System.out.println(newUsuario.getJSON());
         UsuarioDao.nuevoUsuario(newUsuario);
