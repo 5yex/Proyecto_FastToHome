@@ -73,7 +73,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         setMaximumSize(null);
         setMinimumSize(null);
         setName(""); // NOI18N
-        setPreferredSize(null);
 
         panelOpciones.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         panelOpciones.setMaximumSize(null);

@@ -118,7 +118,7 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonLoginActionPerformed
 
     private void buttonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogin1ActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_buttonLogin1ActionPerformed
 
     
