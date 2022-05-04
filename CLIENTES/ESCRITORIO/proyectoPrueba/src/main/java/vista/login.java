@@ -144,7 +144,7 @@ public class login extends javax.swing.JFrame {
         newUsuario.setDni(emailField.getText());
         
         if(BCrypt.checkpw(new String(passwordField.getPassword()),UsuarioDao.login(newUsuario))) {
-            System.out.println("Has logeado");
+            System.out.println(UsuarioDao.login(newUsuario) +"   Has logeado");
         }
         
     }   
