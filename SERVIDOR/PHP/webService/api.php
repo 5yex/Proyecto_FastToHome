@@ -124,6 +124,22 @@ function obtenerIdCliente($datos){
     }
 }
 
+function login($datos){
+    require_once '../modelo/usuario.php';
+    try{
+        $cliente = new usuario();
+        $cliente->setDni($datos->dni);
+        $respuesta = $cliente->obtenerIdCliente();
+        if($respuesta){
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error en obtener el id del cliente');
+        }
+    }catch (PDOException $ex) {
+        mandarRespuesta(true, 'sql error');
+    }
+}
+
 function mandarRespuesta($error, $datos) {
     require_once '../modelo/Respuesta.php';
     $respuesta = new Respuesta($error, $datos);
