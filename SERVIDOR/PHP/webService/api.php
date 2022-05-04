@@ -129,11 +129,11 @@ function login($datos){
     try{
         $cliente = new usuario();
         $cliente->setDni($datos->dni);
-        $respuesta = $cliente->obtenerIdCliente();
+        $respuesta = $cliente->login();
         if($respuesta){
             mandarRespuesta(false, $respuesta);
         } else {
-            mandarRespuesta(true, 'Error en obtener el id del cliente');
+            mandarRespuesta(true, 'Su usuario no existe');
         }
     }catch (PDOException $ex) {
         mandarRespuesta(true, 'sql error');
