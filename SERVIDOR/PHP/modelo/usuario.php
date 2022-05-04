@@ -145,5 +145,20 @@ class usuario extends conexion {
         $sentencia->execute();            
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
+    
+    public function login(){
+        
+        $sql = "SELECT password FROM usuarios where Dni like :dni";
+        
+        $sentencia = $this->dblink->prepare($sql);
+        
+        $dni = $this->getDni();
+        
+        $sentencia->bindParam(":dni", $dni);
+        
+        $sentencia->execute();            
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }
+    
 
 }
