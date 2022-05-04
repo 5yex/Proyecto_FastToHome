@@ -6,13 +6,17 @@ package vista;
 
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatIntelliJLaf;
+import controlador.UsuarioDao;
 import javax.swing.UnsupportedLookAndFeelException;
+import modelo.Usuario;
+import org.mindrot.jbcrypt.BCrypt;
 
 /**
  *
  * @author jmcbg
  */
 public class login extends javax.swing.JFrame {
+        private Usuario newUsuario = new Usuario();
 
     /**
      * Creates new form tests
@@ -130,9 +134,20 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonLoginActionPerformed
 
     private void buttonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogin1ActionPerformed
-       
+       comprobarLogin();
     }//GEN-LAST:event_buttonLogin1ActionPerformed
 
+    
+    private void comprobarLogin(){
+
+        
+        newUsuario.setDni(emailField.getText());
+        
+        if(BCrypt.checkpw(new String(passwordField.getPassword()),UsuarioDao.login(newUsuario))) {
+            System.out.println("Has logeado");
+        }
+        
+    }   
     
     /**
      * @param args the command line arguments
