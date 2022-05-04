@@ -6,6 +6,7 @@ package vista;
 
 import controlador.UsuarioDao;
 import modelo.Usuario;
+import org.mindrot.jbcrypt.BCrypt;
 
 /**
  *
@@ -159,7 +160,11 @@ public class registro extends javax.swing.JFrame {
         newUsuario.setDni(dniField.getText());
         newUsuario.setTlf(nombreField.getText());
         newUsuario.setEmail(emailField.getText());
-        newUsuario.setPassword(new String(passwordField.getPassword()));
+        
+        String password = new String(passwordField.getPassword());
+        
+        
+        newUsuario.setPassword(BCrypt.hashpw(password, BCrypt.gensalt(10)) );
         newUsuario.setRol("cliente");
         System.out.println(newUsuario.getJSON());
         UsuarioDao.nuevoUsuario(newUsuario);
