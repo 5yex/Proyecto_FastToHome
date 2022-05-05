@@ -37,35 +37,82 @@ public class PruebaVentanaLogin extends javax.swing.JFrame implements Constantes
     private void initComponents() {
 
         panelPrincipal = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
+        buttonLogin1 = new javax.swing.JButton();
+        passwordField = new javax.swing.JPasswordField();
+        passwordTxt = new javax.swing.JLabel();
+        emailTxt = new javax.swing.JLabel();
+        emailField = new javax.swing.JTextField();
+        buttonLogin = new javax.swing.JButton();
+        titleText = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio Sesión");
         setAlwaysOnTop(true);
         setResizable(false);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 399, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 337, Short.MAX_VALUE)
-        );
+        buttonLogin1.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Blue"));
+        buttonLogin1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        buttonLogin1.setText("ENTRAR");
+        buttonLogin1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLogin1ActionPerformed(evt);
+            }
+        });
+
+        passwordTxt.setText("CONTRASEÑA");
+
+        emailTxt.setText("CORREO ELECTRÓNICO");
+
+        buttonLogin.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
+        buttonLogin.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        buttonLogin.setText("REGISTRO");
+        buttonLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLoginActionPerformed(evt);
+            }
+        });
+
+        titleText.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        titleText.setText("INICIAR SESIÓN");
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
         panelPrincipal.setLayout(panelPrincipalLayout);
         panelPrincipalLayout.setHorizontalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelPrincipalLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(passwordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(emailField)
+                    .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(passwordField)
+                    .addGroup(panelPrincipalLayout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(titleText))
+                    .addGroup(panelPrincipalLayout.createSequentialGroup()
+                        .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(buttonLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(23, 23, 23)
+                .addComponent(titleText, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(emailTxt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(passwordTxt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -82,6 +129,15 @@ public class PruebaVentanaLogin extends javax.swing.JFrame implements Constantes
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogin1ActionPerformed
+        comprobarLogin();
+    }//GEN-LAST:event_buttonLogin1ActionPerformed
+
+    private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
+        this.setVisible(false);
+        new registro().setVisible(true);
+    }//GEN-LAST:event_buttonLoginActionPerformed
 
     private void comprobarLogin() {
         Usuario userTmp = new Usuario();
@@ -124,7 +180,13 @@ public class PruebaVentanaLogin extends javax.swing.JFrame implements Constantes
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton buttonLogin;
+    private javax.swing.JButton buttonLogin1;
+    private javax.swing.JTextField emailField;
+    private javax.swing.JLabel emailTxt;
     private javax.swing.JPanel panelPrincipal;
+    private javax.swing.JPasswordField passwordField;
+    private javax.swing.JLabel passwordTxt;
+    private javax.swing.JLabel titleText;
     // End of variables declaration//GEN-END:variables
 }
