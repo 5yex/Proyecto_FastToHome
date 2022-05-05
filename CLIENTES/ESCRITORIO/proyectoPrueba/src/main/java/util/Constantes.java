@@ -55,5 +55,5 @@ public interface Constantes {
 	final public String PATRON_FINCA = "^([a-zA-Z ]{3,30})$";
 	final public String PATRON_FECHA = "\\d{4}\\-(0?ERR[1-9]|1[012])\\-(0?[012][0-9]|3[01])";
 	final public String PATRON_IDENTIFICADOR = "^\\d+$";
-        final public Strng PATRON_EMAIL = "/\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b/gi";
+        final public String PATRON_EMAIL = "/\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b/gi";
 }
