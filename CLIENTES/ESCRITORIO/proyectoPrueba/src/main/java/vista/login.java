@@ -137,20 +137,14 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonLogin1ActionPerformed
 
     private void comprobarLogin() {
-//        Usuario userTmp = new Usuario();
-//
-//        userTmp.setDni(emailField.getText());
-//
-//        if (BCrypt.checkpw(new String(passwordField.getPassword()), UsuarioDao.login(userTmp))) {
-//            System.out.println(UsuarioDao.login(userTmp));
-//            System.out.println("Has logeado");
-//        }
-    
-        
-        
-           
+        Usuario userTmp = new Usuario();
 
+        userTmp.setDni(emailField.getText());
 
+        if (BCrypt.checkpw(new String(passwordField.getPassword()), UsuarioDao.login(userTmp))) {
+            System.out.println(UsuarioDao.login(userTmp));
+            System.out.println("Has logeado");
+        }
 
     }
 
