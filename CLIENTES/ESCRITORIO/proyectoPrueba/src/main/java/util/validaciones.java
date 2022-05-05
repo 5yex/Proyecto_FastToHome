@@ -11,23 +11,22 @@ import java.util.regex.Pattern;
  *
  * @author jmcbg
  */
-public class validaciones implements Constantes{
+public class validaciones implements Constantes {
 
-   
     public void validarString() {
-        
+
     }
-    
+
     public static boolean validar(String campo, String patron) {
-		
-		Pattern p = Pattern.compile(patron);
-		Matcher m = p.matcher(campo);
 
-		if (m.matches()) {
-			return true;
-		}
+        Pattern p = Pattern.compile(patron);
+        Matcher m = p.matcher(campo);
 
-		return false;
-	}
+        if (m.matches()) {
+            return true;
+        }
+
+        return false;
+    }
 
 }
