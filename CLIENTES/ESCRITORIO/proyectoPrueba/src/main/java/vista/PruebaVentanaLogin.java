@@ -17,7 +17,7 @@ import util.validaciones;
  *
  * @author jmcbg
  */
-public class PruebaVentanaLogin extends javax.swing.JFrame {
+public class PruebaVentanaLogin extends javax.swing.JFrame implements Constantes{
 
     /**
      * Creates new form tests
@@ -141,7 +141,8 @@ public class PruebaVentanaLogin extends javax.swing.JFrame {
     private void comprobarLogin() {
         Usuario userTmp = new Usuario();
         
-        if(validaciones.validar(emailField.getText(),PATRON_EMAIL))
+        if(validaciones.validar(emailField.getText(),PATRON_EMAIL)){
+        }
         
         /*userTmp.setDni(emailField.getText());
 
