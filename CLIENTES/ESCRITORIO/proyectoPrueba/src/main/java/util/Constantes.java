@@ -30,7 +30,9 @@ public interface Constantes {
 	
 	//MENSAJES DE INFORMACIÓN
 	final public String MENSAJE_CLAVE_USUARIO = "Clave de usuario (Entre 4 y 20 caracteres ): ";
-	final public String MENSAJE_PASS_USUARIO = "Contraseña (Entre 8 y 20 ): ";
+	final public String MENSAJE_PASS_INFO = "Introduzca una contaseña con formato valido: \n"
+                + "* más de 8 carácteres \n"
+                + "* ";
 	final public String MENSAJE_ANIO_CAMPANIA = "\nDame el año de la campaña (Mayor o igual a 2020 y maximo "+ANIO_ACTUAL+"): ";
 	final public String MENSAJE_PRECIO_KILO = "Precio de la aceituna por kilo (pj:0.58 o 0.3): ";
 	final public String MENSAJE_DNI = "Introduce el dni de la persona (8 numeros y 1 letra): ";
@@ -42,11 +44,11 @@ public interface Constantes {
 	final public String MENSAJE_ID_RECOLECTOR = "Dame el id del recolector: ";
 	final public String MENSAJE_COD_PESADA = "Dame el codigo de la pesada: ";
 	final public String MENSAJE_COD_PRECIO = "Dame el codigo del precio: ";
-        final public String MENSAJE_EMAIL_INFO = "Introduce un email con formato válido (user@email.es)";
+        final public String MENSAJE_EMAIL_INFO = "Introduzca un email con formato válido (user@email.es)";
 	
 	//PATRONES
 	final public String PATRON_CLAVE_USUARIO = "[a-zA-Z0-9-_]{4,20}";
-	final public String PATRON_PASS_USUARIO = "[a-zA-Z0-9-_]{8,20}";
+	final public String PATRON_PASS_USUARIO = "^(?=\\w*\\d)(?=\\w*[A-Z])(?=\\w*[a-z])\\S{8,20}$";
 	final public String PATRON_ANIO = "^(2020|"+ANIO_ACTUAL+")$";
 	final public String PATRON_PRECIO_KILO = "^0\\.(?!0+$)\\d{1,2}$";
 	final public String PATRON_DNI = "(([x-z]|[X-Z]{1})([-]?)(\\d{7})([-]?)([a-z]|[A-Z]{1}))|((\\d{8})([-]?)([a-z]|[A-Z]{1}))";
