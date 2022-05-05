@@ -59,9 +59,26 @@ public class PruebaVentanaLogin extends javax.swing.JFrame implements Constantes
             }
         });
 
+        passwordField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordFieldActionPerformed(evt);
+            }
+        });
+
         passwordTxt.setText("CONTRASEÑA");
 
         emailTxt.setText("CORREO ELECTRÓNICO");
+
+        emailField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                emailFieldFocusLost(evt);
+            }
+        });
+        emailField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailFieldActionPerformed(evt);
+            }
+        });
 
         buttonLogin.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
         buttonLogin.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
@@ -139,10 +156,25 @@ public class PruebaVentanaLogin extends javax.swing.JFrame implements Constantes
         comprobarLogin();
     }//GEN-LAST:event_buttonLogin1ActionPerformed
 
+    private void emailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailFieldActionPerformed
+        
+    }//GEN-LAST:event_emailFieldActionPerformed
+
+    private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
+        
+    }//GEN-LAST:event_passwordFieldActionPerformed
+
+    private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
+        if(validaciones.validar(emailField.getText(),PATRON_EMAIL)){
+            JOptionPane.showMessageDialog(this, "Introduce un ","Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_emailFieldFocusLost
+
     private void comprobarLogin() {
         Usuario userTmp = new Usuario();
         
         if(validaciones.validar(emailField.getText(),PATRON_EMAIL)){
+            JOptionPane.showMessageDialog(this, "","Error",JOptionPane.ERROR_MESSAGE);
         }
         
         /*userTmp.setDni(emailField.getText());

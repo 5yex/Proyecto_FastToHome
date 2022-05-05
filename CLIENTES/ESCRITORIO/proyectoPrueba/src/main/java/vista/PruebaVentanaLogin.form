@@ -101,6 +101,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JPasswordField" name="passwordField">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passwordFieldActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="passwordTxt">
           <Properties>
@@ -113,6 +116,10 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="emailField">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="emailFieldFocusLost"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emailFieldActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="buttonLogin">
           <Properties>
