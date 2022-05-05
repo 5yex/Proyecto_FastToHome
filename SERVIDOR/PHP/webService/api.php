@@ -131,7 +131,7 @@ function login($datos){
     require_once '../modelo/usuario.php';
     try{
         $cliente = new usuario();
-        $cliente->setEmail($datos->Email);
+        $cliente->setEmail($datos->email);
         $respuesta = $cliente->login();
         if($respuesta){
             mandarRespuesta(false, $respuesta);
