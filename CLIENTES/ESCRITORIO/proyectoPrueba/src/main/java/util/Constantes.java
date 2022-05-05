@@ -42,6 +42,7 @@ public interface Constantes {
 	final public String MENSAJE_ID_RECOLECTOR = "Dame el id del recolector: ";
 	final public String MENSAJE_COD_PESADA = "Dame el codigo de la pesada: ";
 	final public String MENSAJE_COD_PRECIO = "Dame el codigo del precio: ";
+        final public String MENSAJE_EMAIL_INFO = "Introduce un email con formato válido (user@email.es)";
 	
 	//PATRONES
 	final public String PATRON_CLAVE_USUARIO = "[a-zA-Z0-9-_]{4,20}";
