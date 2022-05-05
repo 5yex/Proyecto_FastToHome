@@ -44,7 +44,6 @@ public class login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio Sesión");
-        setAlwaysOnTop(true);
         setResizable(false);
 
         buttonLogin1.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Blue"));
