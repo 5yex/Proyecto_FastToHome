@@ -70,13 +70,12 @@ public class gestion {
     }
 
     /**
-     * 
-     * @param peticion Objeto con comando a realizar por el php y datos para la consulta
-     * @return json object con las filas que se han pedido en la consulta y sus atributos
+     *
+     * @param peticion Objeto con comando a realizar por el php y datos para la
+     * consulta
+     * @return json object con las filas que se han pedido en la consulta y sus
+     * atributos
      */
-    
-    
-    
     public static JsonObject consultaSeleccion(Peticion peticion) {
         String json = null;
         try {
@@ -106,20 +105,18 @@ public class gestion {
                 JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
 
                 boolean hayError = jsonObject.get("error").getAsBoolean();
-                
-                if(hayError){
-                    JOptionPane.showMessageDialog(
-   null,
-   "Un aviso puñetero");
+
+                if (hayError) {
+                    String errorMsg = jsonObject.get("datos").getAsString();
+                    throw new Exception(errorMsg);
+                }else{
+                    return jsonObject.get("datos").getAsJsonArray().get(0).getAsJsonObject();
                 }
-                
-                
-                //return jsonObject.get("datos").getAsJsonArray().get(0).getAsJsonObject();
             }
             return null;
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+             JOptionPane.showMessageDialog(null,ex.getMessage());
             return null;
         }
     }
