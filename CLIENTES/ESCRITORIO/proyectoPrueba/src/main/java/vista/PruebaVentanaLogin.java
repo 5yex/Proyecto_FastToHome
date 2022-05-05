@@ -10,12 +10,13 @@ import controlador.UsuarioDao;
 import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
+import javax.swing.JFrame;
 
 /**
  *
  * @author jmcbg
  */
-public class PruebaVentanaLogin extends javax.swing.JFrame {
+public class PruebaVentanaLogin extends  {
 
     /**
      * Creates new form tests
