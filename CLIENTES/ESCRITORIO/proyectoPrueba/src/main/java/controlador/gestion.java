@@ -104,7 +104,16 @@ public class gestion {
 
                 JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
 
-                return jsonObject.get("datos").getAsJsonArray().get(0).getAsJsonObject();
+                boolean hayError = jsonObject.get("error").getAsBoolean();
+                
+                if(hayError){
+                    JOptionPane.showMessageDialog(
+   componentePadre,
+   "Un aviso puñetero");
+                }
+                
+                
+                //return jsonObject.get("datos").getAsJsonArray().get(0).getAsJsonObject();
             }
             return null;
 
