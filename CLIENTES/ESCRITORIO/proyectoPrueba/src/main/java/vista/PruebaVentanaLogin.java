@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
+import util;
 
 /**
  *
@@ -140,7 +141,9 @@ public class PruebaVentanaLogin extends javax.swing.JFrame {
     private void comprobarLogin() {
         Usuario userTmp = new Usuario();
         
-        userTmp.setDni(emailField.getText());
+        if(validaciones.validar(emailField.getText(),PATRON_EMAIL))
+        
+        /*userTmp.setDni(emailField.getText());
 
         boolean correctPass = false;
 
@@ -151,7 +154,7 @@ public class PruebaVentanaLogin extends javax.swing.JFrame {
             System.out.println("Has logeado");
         } else {
             JOptionPane.showMessageDialog(this, "No existe un usuario con esas credenciales","Error",JOptionPane.ERROR_MESSAGE);
-        }
+        }*/
 
     }
 
