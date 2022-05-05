@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
+import util.Constantes;
 import util.validaciones;
 
 /**
