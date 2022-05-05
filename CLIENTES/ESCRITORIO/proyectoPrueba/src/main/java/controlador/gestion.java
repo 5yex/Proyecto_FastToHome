@@ -22,6 +22,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import modelo.Peticion;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -108,7 +109,7 @@ public class gestion {
                 
                 if(hayError){
                     JOptionPane.showMessageDialog(
-   componentePadre,
+   null,
    "Un aviso puñetero");
                 }
                 
