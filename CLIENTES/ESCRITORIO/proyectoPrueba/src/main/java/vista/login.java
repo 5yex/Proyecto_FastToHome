@@ -143,7 +143,7 @@ public class login extends javax.swing.JFrame {
 
         if (BCrypt.checkpw(new String(passwordField.getPassword()), UsuarioDao.login(userTmp))) {
             System.out.println(UsuarioDao.login(userTmp));
-            System.out.println("   Has logeado");
+            System.out.println("Has logeado");
         }
 
     }
