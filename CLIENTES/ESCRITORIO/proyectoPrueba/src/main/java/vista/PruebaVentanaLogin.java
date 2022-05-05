@@ -63,6 +63,12 @@ public class PruebaVentanaLogin extends javax.swing.JFrame implements Constantes
 
         emailTxt.setText("CORREO ELECTRÓNICO");
 
+        emailField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                emailFieldFocusLost(evt);
+            }
+        });
+
         buttonLogin.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
         buttonLogin.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         buttonLogin.setText("REGISTRO");
@@ -139,12 +145,18 @@ public class PruebaVentanaLogin extends javax.swing.JFrame implements Constantes
         new registro().setVisible(true);
     }//GEN-LAST:event_buttonLoginActionPerformed
 
+    private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
+       if(validaciones.validar(emailField.getText(),PATRON_EMAIL)){
+            JOptionPane.showMessageDialog(null, "Introduce un email valido","Advertencia",JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_emailFieldFocusLost
+
     private void comprobarLogin() {
         Usuario userTmp = new Usuario();
         
-        /*if(validaciones.validar(emailField.getText(),PATRON_EMAIL)){
+        if(validaciones.validar(emailField.getText(),PATRON_EMAIL)){
             JOptionPane.showMessageDialog(null, "Introduce un email valido","Advertencia",JOptionPane.ERROR_MESSAGE);
-        }*/
+        }
         
         /*userTmp.setDni(emailField.getText());
 
