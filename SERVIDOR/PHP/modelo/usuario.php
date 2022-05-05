@@ -147,13 +147,13 @@ class usuario extends conexion {
     }
     
     public function login(){
-        $sql = "SELECT * FROM usuarios";
+        $sql = "SELECT * FROM usuarios where Email like :email";
         
         $sentencia = $this->dblink->prepare($sql);
         
-//        $dni = $this->getDni();
-//        
-//        $sentencia->bindParam(":dni", $dni);
+        $email = $this->getEmail();
+        
+        $sentencia->bindParam(":email", $email);
         
         $sentencia->execute();            
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
