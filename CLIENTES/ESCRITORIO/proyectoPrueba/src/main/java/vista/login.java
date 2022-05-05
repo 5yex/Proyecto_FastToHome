@@ -139,7 +139,7 @@ public class login extends javax.swing.JFrame {
     private void comprobarLogin() {
         Usuario userTmp = new Usuario();
 
-        userTmp.setDni(emailField.getText());
+        userTmp.setEmail(emailField.getText());
 
         if (BCrypt.checkpw(new String(passwordField.getPassword()), UsuarioDao.login(userTmp))) {
             System.out.println(UsuarioDao.login(userTmp));
