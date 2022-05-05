@@ -151,9 +151,9 @@ class usuario extends conexion {
         
         $sentencia = $this->dblink->prepare($sql);
         
-        $dni = $this->getDni();
-        
-        $sentencia->bindParam(":dni", $dni);
+//        $dni = $this->getDni();
+//        
+//        $sentencia->bindParam(":dni", $dni);
         
         $sentencia->execute();            
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
