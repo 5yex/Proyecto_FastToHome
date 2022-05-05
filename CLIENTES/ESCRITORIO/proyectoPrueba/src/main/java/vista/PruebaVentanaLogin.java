@@ -59,6 +59,11 @@ public class PruebaVentanaLogin extends javax.swing.JFrame implements Constantes
             }
         });
 
+        passwordField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passwordFieldFocusLost(evt);
+            }
+        });
         passwordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordFieldActionPerformed(evt);
@@ -167,9 +172,13 @@ public class PruebaVentanaLogin extends javax.swing.JFrame implements Constantes
     private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
         
         if(!validaciones.validar(emailField.getText(),PATRON_EMAIL)){
-            JOptionPane.showMessageDialog(null, "Introduce un email valido","Advertencia",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, MENSAJE,"Advertencia",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_emailFieldFocusLost
+
+    private void passwordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFieldFocusLost
+        
+    }//GEN-LAST:event_passwordFieldFocusLost
 
     private void comprobarLogin() {
         Usuario userTmp = new Usuario();
