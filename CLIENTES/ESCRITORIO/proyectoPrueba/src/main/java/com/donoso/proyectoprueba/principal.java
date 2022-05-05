@@ -4,15 +4,17 @@
  */
 package com.donoso.proyectoprueba;
 
+import com.formdev.flatlaf.FlatDarkLaf;
 import controlador.UsuarioDao;
 import controlador.gestion;
 import static controlador.gestion.hacerConsulta;
 import java.io.IOException;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Categoria;
 import modelo.Peticion;
 import modelo.Producto;
 import modelo.Usuario;
-
 
 /**
  *
@@ -20,9 +22,9 @@ import modelo.Usuario;
  */
 public class principal {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, UnsupportedLookAndFeelException {
 
-       // Usuario user = new Usuario("11");
+        // Usuario user = new Usuario("11");
         //user.setDni("12345678D");
         /*user.setEmail("fasdfa");
         user.setId_direccion(0);
@@ -40,8 +42,10 @@ public class principal {
         //System.out.println(hacerConsulta(new Peticion("nuevo_usuario", user.getJSON())));
         //System.out.println(hacerConsulta(new Peticion("nuevo_producto", producto.getJSON())));
         //System.out.println(UsuarioDao.obtenerIdCliente(user));
-        new vista.login().setVisible(true);
         
+        UIManager.setLookAndFeel(new FlatDarkLaf());
+        new vista.login().setVisible(true);
+
     }
 
 }
