@@ -15,12 +15,12 @@ import org.mindrot.jbcrypt.BCrypt;
  *
  * @author jmcbg
  */
-public class login extends javax.swing.JFrame {
+public class PruebaVentanaLogin extends javax.swing.JFrame {
 
     /**
      * Creates new form tests
      */
-    public login() {
+    public PruebaVentanaLogin() {
         initComponents();
     }
 
@@ -157,7 +157,7 @@ public class login extends javax.swing.JFrame {
         } catch (UnsupportedLookAndFeelException ex) {
 
         }
-        new login().setVisible(true);
+        new PruebaVentanaLogin().setVisible(true);
 //        if (conex.testConexion()) {
 //            new Login().setVisible(true);
 //        } else {
