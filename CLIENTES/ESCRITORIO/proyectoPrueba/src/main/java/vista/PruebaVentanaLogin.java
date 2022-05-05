@@ -165,6 +165,7 @@ public class PruebaVentanaLogin extends javax.swing.JFrame implements Constantes
     }//GEN-LAST:event_passwordFieldActionPerformed
 
     private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
+        System.out.println("dasdasd");
         if(validaciones.validar(emailField.getText(),PATRON_EMAIL)){
             JOptionPane.showMessageDialog(this, "Introduce un email valido","Advertencia",JOptionPane.ERROR_MESSAGE);
         }
