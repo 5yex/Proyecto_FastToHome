@@ -139,7 +139,7 @@ public class PruebaVentanaLogin extends javax.swing.JFrame {
 
     private void comprobarLogin() {
         Usuario userTmp = new Usuario();
-
+        
         userTmp.setDni(emailField.getText());
 
         boolean correctPass = false;
