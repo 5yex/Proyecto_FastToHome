@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  *
  * @author jmcbg
  */
-public class validaciones {
+public class validaciones implements Constantes{
 
    
     public void validarString() {
