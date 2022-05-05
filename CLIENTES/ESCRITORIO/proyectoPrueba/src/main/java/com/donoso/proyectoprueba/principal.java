@@ -40,7 +40,7 @@ public class principal {
         //System.out.println(hacerConsulta(new Peticion("nuevo_usuario", user.getJSON())));
         //System.out.println(hacerConsulta(new Peticion("nuevo_producto", producto.getJSON())));
         //System.out.println(UsuarioDao.obtenerIdCliente(user));
-        
+        new vista.login().setVisible(true);
         
     }
 
