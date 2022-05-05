@@ -49,7 +49,7 @@ public class registro extends javax.swing.JFrame {
         emailField = new javax.swing.JTextField();
         emailTXT = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Inicio Sesión");
         setAlwaysOnTop(true);
         setResizable(false);
