@@ -7,6 +7,7 @@ package vista;
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatIntelliJLaf;
 import controlador.UsuarioDao;
+import javax.swing.JOptionPane;
 import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
@@ -141,9 +142,15 @@ public class PruebaVentanaLogin extends javax.swing.JFrame {
 
         userTmp.setDni(emailField.getText());
 
-        if (BCrypt.checkpw(new String(passwordField.getPassword()), UsuarioDao.login(userTmp))) {
+        boolean correctPass = false;
+
+        correctPass = BCrypt.checkpw(new String(passwordField.getPassword()), UsuarioDao.login(userTmp));
+
+        if (correctPass) {
             System.out.println(UsuarioDao.login(userTmp));
             System.out.println("Has logeado");
+        } else {
+            JOptionPane.showMessageDialog(this, "No existe un usuario con esas credenciales","Error",JOptionPane.ERROR_MESSAGE);
         }
 
     }
