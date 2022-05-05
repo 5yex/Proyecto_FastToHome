@@ -16,7 +16,6 @@ import org.mindrot.jbcrypt.BCrypt;
  * @author jmcbg
  */
 public class login extends javax.swing.JFrame {
-        private Usuario newUsuario = new Usuario();
 
     /**
      * Creates new form tests
@@ -134,32 +133,32 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonLoginActionPerformed
 
     private void buttonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogin1ActionPerformed
-       comprobarLogin();
+        comprobarLogin();
     }//GEN-LAST:event_buttonLogin1ActionPerformed
 
-    
-    private void comprobarLogin(){
+    private void comprobarLogin() {
+        Usuario newUsuario = new Usuario();
 
-        
         newUsuario.setDni(emailField.getText());
-        
-        if(BCrypt.checkpw(new String(passwordField.getPassword()),UsuarioDao.login(newUsuario))) {
-              System.out.println(UsuarioDao.login(newUsuario));
+
+        if (BCrypt.checkpw(
+                new String(passwordField.getPassword()), UsuarioDao.login(newUsuario))) {
+            System.out.println(UsuarioDao.login(newUsuario));
             System.out.println("   Has logeado");
         }
-        
-    }   
-    
+
+    }
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-       try {
+        try {
             javax.swing.UIManager.setLookAndFeel(new FlatDarkLaf());
         } catch (UnsupportedLookAndFeelException ex) {
-           
+
         }
-       new login().setVisible(true);
+        new login().setVisible(true);
 //        if (conex.testConexion()) {
 //            new Login().setVisible(true);
 //        } else {
@@ -167,7 +166,7 @@ public class login extends javax.swing.JFrame {
 //            System.exit(0);
 //        }
     }
-  
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonLogin;
     private javax.swing.JButton buttonLogin1;
