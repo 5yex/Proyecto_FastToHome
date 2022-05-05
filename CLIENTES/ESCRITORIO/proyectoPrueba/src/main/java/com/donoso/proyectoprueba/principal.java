@@ -22,7 +22,7 @@ public class principal {
 
     public static void main(String[] args) throws IOException {
 
-        Usuario user = new Usuario("11");
+       // Usuario user = new Usuario("11");
         //user.setDni("12345678D");
         /*user.setEmail("fasdfa");
         user.setId_direccion(0);
@@ -40,6 +40,7 @@ public class principal {
         //System.out.println(hacerConsulta(new Peticion("nuevo_usuario", user.getJSON())));
         //System.out.println(hacerConsulta(new Peticion("nuevo_producto", producto.getJSON())));
         //System.out.println(UsuarioDao.obtenerIdCliente(user));
+        
         
     }
 
