@@ -192,7 +192,6 @@ public class registro extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void cerrar() {
-       principal.lg.setVisible(true);
        this.dispose();
        
     }
