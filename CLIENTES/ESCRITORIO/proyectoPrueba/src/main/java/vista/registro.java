@@ -158,7 +158,7 @@ public class registro extends javax.swing.JFrame {
     private void registrarUsuario() {
         newUsuario.setNombre(nombreField.getText());
         newUsuario.setDni(dniField.getText());
-        newUsuario.setTlf(nombreField.getText());
+        newUsuario.setTlf(tlfField.getText());
         newUsuario.setEmail(emailField.getText());
         newUsuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
         newUsuario.setRol("cliente");
