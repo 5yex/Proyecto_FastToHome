@@ -123,7 +123,6 @@ public class login extends javax.swing.JFrame implements util.Constantes {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
-        this.setVisible(false);
         new registro().setVisible(true);
     }//GEN-LAST:event_buttonLoginActionPerformed
 
