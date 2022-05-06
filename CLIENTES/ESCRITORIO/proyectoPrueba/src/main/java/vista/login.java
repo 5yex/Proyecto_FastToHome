@@ -137,7 +137,7 @@ public class login extends javax.swing.JFrame {
         pass = new String(passwordField.getPassword());
        
         
-        Usuario user = new Usuario();
+        user = new Usuario();
         user.setEmail(emailField.getText());
         user = UsuarioDao.getHash(user);
         hash = user.getPassword();
