@@ -45,4 +45,30 @@ public class UsuarioDao {
 
     
     }
+    
+     
+    public static Usuario obtenerDatosUsuario(Usuario user){
+    //generamos un json con los datos que vamos a pasarle al php, en este caso solo el usuario
+    String json = user.getJSON();
+    //hacemos una petición con el comando que deberá realizar el php, y los datos en json    
+    Peticion peticion = new Peticion("obtener_cliente",json);
+    //mandamos la peticion como consulta selección para obtener valores
+    JsonObject respuesta = gestion.consultaSeleccion(peticion);
+    //de la respuesta, obtenemos el id
+   
+    
+    user.setDni(respuesta.get("Dni").getAsString());
+    user.setEmail(respuesta.get("Email").getAsString());
+    user.setId(respuesta.get("id").getAsInt());
+    user.setId_direccion(respuesta.get("direccion_id").getAsInt());
+    user.setNombre(respuesta.get("Nombre").getAsString());
+    user.setPassword(respuesta.get("password").getAsString());
+    user.setRol(respuesta.get("Rol").getAsString());
+    user.setTlf(respuesta.get("tlf").getAsString());
+  
+    
+    return user;
+    
+    }
+    
 }
