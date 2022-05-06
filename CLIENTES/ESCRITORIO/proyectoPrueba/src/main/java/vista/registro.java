@@ -167,8 +167,7 @@ public class registro extends javax.swing.JFrame {
         
         
         UsuarioDao.nuevoUsuario(newUsuario);
-        principal.lg.setVisible(true);
-        this.setVisible(false);
+        cerrar();
     }
 
 
