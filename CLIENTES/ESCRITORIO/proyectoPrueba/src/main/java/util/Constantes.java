@@ -58,9 +58,11 @@ public interface Constantes {
     final public String PATRON_FECHA = "\\d{4}\\-(0?ERR[1-9]|1[012])\\-(0?[012][0-9]|3[01])";
     final public String PATRON_IDENTIFICADOR = "^\\d+$";
     final public String PATRON_EMAIL = "/\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b/gi";
-
-    enum roles {
-        cliente, mercader, admin;
-    }
+    
+    //VARIABLES FIJAS
+    final public String CLIENTE = "cliente";
+    final public String ADMIN = "admin";
+    final public String MERCADER = "mercader";
+    
 
 }
