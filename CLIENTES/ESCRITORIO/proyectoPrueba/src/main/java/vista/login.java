@@ -138,13 +138,13 @@ public class login extends javax.swing.JFrame implements util.Constantes {
         if (validaciones.validar(tFieldEmail, PATRON_EMAIL) && validaciones.validar(tFieldPass, PATRON_PASS_USUARIO)) {
             
             boolean passCorrecto;
-            String hash;
+            String passHash;
             
             Usuario user = new Usuario(tFieldEmail);
             
             user = UsuarioDao.getHash(user);
-            hash = user.getPassword();
-            passCorrecto = BCrypt.checkpw(tFieldPass, hash);
+            passHash = user.getPassword();
+            passCorrecto = BCrypt.checkpw(tFieldPass, passHash);
 
             if (passCorrecto) {
                 System.out.println("vista.login.comprobarLogin()  -   LOGEADO");
