@@ -7,6 +7,7 @@ package vista;
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatIntelliJLaf;
 import controlador.UsuarioDao;
+import javax.swing.JOptionPane;
 import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
@@ -16,15 +17,17 @@ import util.validaciones;
  *
  * @author jmcbg
  */
-public class login extends javax.swing.JFrame implements util.Constantes{
+public class login extends javax.swing.JFrame implements util.Constantes {
+
     private Boolean passCorrecto;
     private String hash;
     private Usuario user;
+
     /**
      * Creates new form tests
      */
     public login() {
-        initComponents();    
+        initComponents();
     }
 
     @SuppressWarnings("unchecked")
@@ -133,42 +136,45 @@ public class login extends javax.swing.JFrame implements util.Constantes{
     }//GEN-LAST:event_buttonLogin1ActionPerformed
 
     private void comprobarLogin() {
-        
+
         String tFieldEmail = emailField.getText();
         String tFieldPass = String.valueOf(passwordField.getPassword());
-        
-        if(validaciones.validar(tFieldEmail,PATRON_EMAIL) && validaciones.validar(tFieldPass,PATRON_PASS_USUARIO))
-        
-        user = new Usuario();
-        user.setEmail(emailField.getText());
-        user = UsuarioDao.getHash(user);
-        hash = user.getPassword();
-        passCorrecto = BCrypt.checkpw(tFieldPass,hash);
-        
-        if(passCorrecto){
-            System.out.println("vista.login.comprobarLogin()  -   LOGEADO");
-            user = UsuarioDao.obtenerDatosUsuario(user);
-            String rol = user.getRol();
 
-            switch (rol) {
-                case CLIENTE:
-                    
-                    break;
-                case ADMIN:
-                    
-                    break;
-                case MERCADER:
-                    
-                    break;
-                default:
-                    throw new AssertionError();
+        if (validaciones.validar(tFieldEmail, PATRON_EMAIL) && validaciones.validar(tFieldPass, PATRON_PASS_USUARIO)) {
+
+            user = new Usuario();
+            user.setEmail(emailField.getText());
+            user = UsuarioDao.getHash(user);
+            hash = user.getPassword();
+            passCorrecto = BCrypt.checkpw(tFieldPass, hash);
+
+            if (passCorrecto) {
+                System.out.println("vista.login.comprobarLogin()  -   LOGEADO");
+                user = UsuarioDao.obtenerDatosUsuario(user);
+                String rol = user.getRol();
+
+                switch (rol) {
+                    case CLIENTE:
+
+                        break;
+                    case ADMIN:
+
+                        break;
+                    case MERCADER:
+
+                        break;
+                    default:
+                        throw new AssertionError();
+                }
+
             }
-            
+        }else{
+            JOptionPane.showMessageDialog(this, "Debes rellenar ambos campos correctamente","Error",JOptionPane.ERROR_MESSAGE);
         }
-       
+
     }
 
-   /**
+    /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
