@@ -146,7 +146,7 @@ public class login extends javax.swing.JFrame implements util.Constantes{
             user = UsuarioDao.obtenerDatosUsuario(user);
             String rol = user.getRol();
             switch (rol) {
-                case String.valueOf(roles.cliente):
+                case roles.cliente.name():
                     
                     break;
                 default:
