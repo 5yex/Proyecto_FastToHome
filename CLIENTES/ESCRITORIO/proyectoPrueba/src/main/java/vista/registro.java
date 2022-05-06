@@ -167,7 +167,7 @@ public class registro extends javax.swing.JFrame {
         
         UsuarioDao.nuevoUsuario(newUsuario);
         
-        this.dispose();
+        this.setVisible(false);
     }
 
 
