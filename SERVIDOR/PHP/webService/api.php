@@ -136,7 +136,7 @@ function getHash($datos){
         if($respuesta){
             mandarRespuesta(false, $respuesta);
         } else {
-            mandarRespuesta(true, 'Su usuario no existe');
+            mandarRespuesta(true, 'El usuario introducido no existe');
         }
     }catch (PDOException $ex) {
         mandarRespuesta(true, 'sql error');
