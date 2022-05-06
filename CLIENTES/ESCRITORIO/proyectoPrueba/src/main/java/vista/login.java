@@ -136,9 +136,9 @@ public class login extends javax.swing.JFrame {
         pass = new String(passwordField.getPassword());
        
         
-        Usuario userTmp = new Usuario();
-        userTmp.setEmail(emailField.getText());
-        userTmp = UsuarioDao.getHash(userTmp);
+        Usuario user = new Usuario();
+        user.setEmail(emailField.getText());
+        user = UsuarioDao.getHash(user);
         
         passCorrecto = BCrypt.checkpw(pass,hash);
         
