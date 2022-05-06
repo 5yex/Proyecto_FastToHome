@@ -16,10 +16,10 @@ import org.mindrot.jbcrypt.BCrypt;
  * @author jmcbg
  */
 public class login extends javax.swing.JFrame {
-    protected Boolean passCorrecto;
-    protected String pass;
-    protected String hash;
-    protected Usuario user;
+    private Boolean passCorrecto;
+    private String pass;
+    private String hash;
+    private Usuario user;
     /**
      * Creates new form tests
      */
@@ -135,8 +135,6 @@ public class login extends javax.swing.JFrame {
     private void comprobarLogin() {
         
         pass = new String(passwordField.getPassword());
-       
-        
         user = new Usuario();
         user.setEmail(emailField.getText());
         user = UsuarioDao.getHash(user);
