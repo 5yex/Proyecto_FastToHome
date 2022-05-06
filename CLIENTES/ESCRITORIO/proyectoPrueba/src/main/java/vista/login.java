@@ -154,7 +154,7 @@ public class login extends javax.swing.JFrame implements util.Constantes {
                 switch (rol) {
                     case CLIENTE:
                         JOptionPane.showMessageDialog(this, "No está disponible una aplicación de escritorio para los clientes.\n"
-                                + "Si quieres registrar tu negocio y acceder como mercader ponte en solicitalo a los adminsitradores", "Advertencia.", JOptionPane.INFORMATION_MESSAGE);
+                                + "Si quieres registrar tu negocio y acceder como mercader solicítalo a los adminsitradores", "Advertencia.", JOptionPane.INFORMATION_MESSAGE);
                         break;
                     case ADMIN:
                         this.setVisible(false);
