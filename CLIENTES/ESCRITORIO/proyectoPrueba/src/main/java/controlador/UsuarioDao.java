@@ -38,10 +38,12 @@ public class UsuarioDao {
     public static Usuario getHash(Usuario user) {
 
         JsonObject ob = gestion.consultaSeleccion(new Peticion("getHash", user.getJSON()));
-        user.setPassword(ob.get("password").getAsString());
-        user.setId(ob.get("id").getAsInt());
-        return user;
-
+        if (ob != null) {
+            user.setPassword(ob.get("password").getAsString());
+            user.setId(ob.get("id").getAsInt());
+            return user;
+        }
+        return null;
     }
 
     public static Usuario obtenerDatosUsuario(Usuario user) {
