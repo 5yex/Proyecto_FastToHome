@@ -61,6 +61,9 @@ public class UsuarioDao {
         user.setPassword(respuesta.get("password").getAsString());
         user.setRol(respuesta.get("Rol").getAsString());
         user.setTlf(respuesta.get("tlf").getAsString());
+        
+        System.out.println("controlador.UsuarioDao.obtenerDatosUsuario()   "+ user.toString());
+        
         return user;
     }
 
