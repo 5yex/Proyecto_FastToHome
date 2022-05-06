@@ -41,8 +41,8 @@ public class gestion {
 
             List<NameValuePair> params = new ArrayList<>();
 
-            System.out.println("controlador.gestion.hacerConsulta() ---- PETICION ENVIADO: peticion.getJSON()");
-            
+            System.out.println("controlador.gestion.hacerConsulta() ---- PETICION ENVIADO: " + peticion.getJSON());
+
             params.add(new BasicNameValuePair("DATA", peticion.getJSON()));
 
             httpPost.setEntity(new UrlEncodedFormEntity(params));
@@ -56,7 +56,7 @@ public class gestion {
 
                 String htmlTxt = EntityUtils.toString(entity);
 
-                  System.out.println("controlador.gestion.hacerConsulta() ---- RECEPCIÓN: "+htmlTxt);
+                System.out.println("controlador.gestion.hacerConsulta() ---- RECEPCIÓN: " + htmlTxt);
 
                 JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
                 return !jsonObject.get("error").getAsBoolean();
@@ -84,7 +84,7 @@ public class gestion {
             List<NameValuePair> params = new ArrayList<>();
 
             //prueba
-            System.out.println(peticion.getJSON());
+            System.out.println("controlador.gestion.hacerConsulta() ---- PETICION ENVIADO: " + peticion.getJSON());
 
             params.add(new BasicNameValuePair("DATA", peticion.getJSON()));
 
@@ -99,7 +99,7 @@ public class gestion {
 
                 String htmlTxt = EntityUtils.toString(entity);
 
-                System.err.println(htmlTxt);
+                System.out.println("controlador.gestion.hacerConsulta() ---- RECEPCIÓN: " + htmlTxt);
 
                 JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
 
@@ -108,14 +108,14 @@ public class gestion {
                 if (hayError) {
                     String errorMsg = jsonObject.get("datos").getAsString();
                     throw new Exception(errorMsg);
-                }else{
+                } else {
                     return jsonObject.get("datos").getAsJsonArray().get(0).getAsJsonObject();
                 }
             }
             return null;
 
         } catch (Exception ex) {
-             JOptionPane.showMessageDialog(null,ex.getMessage());
+            JOptionPane.showMessageDialog(null, ex.getMessage());
             return null;
         }
     }
