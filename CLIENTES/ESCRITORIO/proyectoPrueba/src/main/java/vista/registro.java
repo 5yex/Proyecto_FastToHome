@@ -53,6 +53,7 @@ public class registro extends javax.swing.JFrame {
         setDefaultCloseOperation(cerrar());
         setTitle("Inicio Sesión");
         setAlwaysOnTop(true);
+        setFocusable(false);
         setResizable(false);
 
         titleText.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
