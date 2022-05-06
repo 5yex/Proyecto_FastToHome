@@ -45,7 +45,7 @@ public static login lg;
         //System.out.println(UsuarioDao.obtenerIdCliente(user));
         
         UIManager.setLookAndFeel(new FlatDarkLaf());
-        login lg = new login();
+        lg = new login();
         lg.setVisible(true);
 
     }
