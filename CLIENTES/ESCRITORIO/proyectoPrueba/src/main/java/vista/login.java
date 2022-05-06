@@ -157,7 +157,8 @@ public class login extends javax.swing.JFrame implements util.Constantes {
                                 + "Si quieres registrar tu negocio y acceder como mercader ponte en solicitalo a los adminsitradores", "Advertencia.", JOptionPane.INFORMATION_MESSAGE);
                         break;
                     case ADMIN:
-
+                        this.setVisible(false);
+                         //new administrador(user).setVisible(true);    
                         break;
                     case MERCADER:
                         this.setVisible(false);
