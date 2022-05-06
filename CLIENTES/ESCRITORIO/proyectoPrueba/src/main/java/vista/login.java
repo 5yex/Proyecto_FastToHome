@@ -146,9 +146,18 @@ public class login extends javax.swing.JFrame implements util.Constantes{
             user = UsuarioDao.obtenerDatosUsuario(user);
             String rol = user.getRol();
 
-            if(rol.compareTo(roles.cliente.name()) == 0){
-
-            
+            switch (rol) {
+                case CLIENTE:
+                    
+                    break;
+                case ADMIN:
+                    
+                    break;
+                case MERCADER:
+                    
+                    break;
+                default:
+                    throw new AssertionError();
             }
             
         }
