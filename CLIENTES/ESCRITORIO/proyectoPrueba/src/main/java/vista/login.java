@@ -136,17 +136,37 @@ public class login extends javax.swing.JFrame {
 
     private void comprobarLogin() {
         Usuario userTmp = new Usuario();
-
         userTmp.setEmail(emailField.getText());
 
-        if (BCrypt.checkpw(new String(passwordField.getPassword()), UsuarioDao.login(userTmp))) {
-            System.out.println(UsuarioDao.login(userTmp));
-            System.out.println("Has logeado");
-        }
+        
+        
+        
+        
+        
+//        if (BCrypt.checkpw(new String(passwordField.getPassword()), UsuarioDao.login(userTmp))) {
+//            System.out.println(UsuarioDao.login(userTmp));
+//            System.out.println("Has logeado");
+//        }
 
     }
 
-   
+   /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        try {
+            javax.swing.UIManager.setLookAndFeel(new FlatDarkLaf());
+        } catch (UnsupportedLookAndFeelException ex) {
+
+        }
+        new PruebaVentanaLogin().setVisible(true);
+//        if (conex.testConexion()) {
+//            new Login().setVisible(true);
+//        } else {
+//            showMessageDialog(null, "ERROR DE CONEXION CON EL SERVIDOR", "LOGIN", JOptionPane.ERROR_MESSAGE);
+//            System.exit(0);
+//        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonLogin;
