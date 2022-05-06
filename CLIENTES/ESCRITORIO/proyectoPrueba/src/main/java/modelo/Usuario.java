@@ -99,6 +99,11 @@ public class Usuario {
         this.rol = rol;
     }
 
+    @Override
+    public String toString() {
+        return "Usuario{" + "id=" + id + ", nombre=" + nombre + ", dni=" + dni + ", email=" + email + ", tlf=" + tlf + ", rol=" + rol + ", id_direccion=" + id_direccion + ", password=" + password + '}';
+    }
+
     public int getId_direccion() {
         return id_direccion;
     }
