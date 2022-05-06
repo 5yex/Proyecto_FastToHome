@@ -6,7 +6,9 @@ if (empty($_POST["DATA"])) {
     $peticion = json_decode($_POST["DATA"]);
 
     switch ($peticion->comando) {
-
+        case 'getUsuario';
+            getHash(json_decode($peticion->datos));
+            break;
         case 'nuevo_usuario';
             nuevoUsuario(json_decode($peticion->datos));
             break;
@@ -25,6 +27,7 @@ if (empty($_POST["DATA"])) {
         case 'getHash';
             getHash(json_decode($peticion->datos));
             break;
+
         default;
             mandarRespuesta(true, 'comando no  reconocido');
             break;
@@ -53,29 +56,29 @@ function nuevoUsuario($datos) {
     }
 }
 
-function nuevoProducto($datos){
+function nuevoProducto($datos) {
     require_once '../modelo/Producto.php';
-    try{
+    try {
         $producto = new Producto();
         $producto->setId_negocio($datos->id_negocio);
         $producto->setNombre($datos->nombre);
         $producto->setPrecio($datos->precio);
         $producto->setDescripcion($datos->descripcion);
         $producto->setStock($datos->stock);
-        
-        if($producto->agregar()){
+
+        if ($producto->agregar()) {
             mandarRespuesta(false, 'Se ha realizado la insercion de un producto');
         } else {
             mandarRespuesta(true, 'Error en la inserccion del producto');
         }
-    }catch (PDOException $ex) {
+    } catch (PDOException $ex) {
         mandarRespuesta(true, 'sql error');
     }
 }
 
-function nuevaDireccion($datos){
+function nuevaDireccion($datos) {
     require_once '../modelo/Direccion.php';
-    try{
+    try {
         $direccion = new Direccion();
         $direccion->setCalle($datos->calle);
         $direccion->setNumero($datos->numero);
@@ -84,78 +87,78 @@ function nuevaDireccion($datos){
         $direccion->setCodigo_postal($datos->codigo_postal);
         $direccion->setOtros($datos->otros);
         $direccion->setCoordenadas($datos->coordenadas);
-        
-        if($direccion->agregar()){
+
+        if ($direccion->agregar()) {
             mandarRespuesta(false, 'Se ha realizado la insercion de una direccion');
         } else {
             mandarRespuesta(true, 'Error en la inserccion de la direccion');
         }
-    }catch (PDOException $ex) {
+    } catch (PDOException $ex) {
         mandarRespuesta(true, 'sql error');
     }
 }
 
-function obtenerIdNegocio($datos){
+function obtenerIdNegocio($datos) {
     require_once '../modelo/Negocio.php';
-    try{
+    try {
         $negocio = new Negocio();
         $negocio->setNombre($datos->nombre);
         $respuesta = $negocio->obtenerIdNegocio();
-        if($respuesta){
+        if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error en obtener el id del negocio');
         }
-    }catch (PDOException $ex) {
+    } catch (PDOException $ex) {
         mandarRespuesta(true, 'sql error');
     }
 }
 
-function obtenerIdCliente($datos){
+function obtenerIdCliente($datos) {
     require_once '../modelo/usuario.php';
-    try{
+    try {
         $cliente = new usuario();
         $cliente->setDni($datos->dni);
         $respuesta = $cliente->obtenerIdCliente();
-        if($respuesta){
+        if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error en obtener el id del cliente');
         }
-    }catch (PDOException $ex) {
+    } catch (PDOException $ex) {
         mandarRespuesta(true, 'sql error');
     }
 }
 
-function getHash($datos){
+function getHash($datos) {
     require_once '../modelo/usuario.php';
-    try{
+    try {
         $cliente = new usuario();
         $cliente->setEmail($datos->email);
         $respuesta = $cliente->getHash();
-        if($respuesta){
+        if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'El usuario introducido no existe');
         }
-    }catch (PDOException $ex) {
+    } catch (PDOException $ex) {
         mandarRespuesta(true, 'sql error');
     }
 }
 
-function getUsuario($datos){
+function getUsuario($datos) {
     require_once '../modelo/usuario.php';
-    try{
+    try {
         $cliente = new usuario();
         $cliente->setId($datos->id);
         $cliente->setPassword($datos->password);
         $respuesta = $cliente->usuarioCompleto();
-        if($respuesta){
+        if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
         }
-    }catch (PDOException $ex) {
+    } catch (PDOException $ex) {
         mandarRespuesta(true, 'sql error');
     }
 }

@@ -83,7 +83,7 @@ class usuario extends conexion {
     }
 
     public function agregar() {
-      
+
         $sql = "INSERT INTO usuarios (Nombre, Dni, Email, tlf, Rol, direccion_id, password) VALUES (:nom, :dni, :email, :tlf, :rol, :dir, :pass)";
 
         $sentencia = $this->dblink->prepare($sql);
@@ -96,7 +96,7 @@ class usuario extends conexion {
         $rol = $this->getRol();
         $id_direccion = $this->getId_direccion();
         $password = $this->getPassword();
-                
+
         $sentencia->bindParam(":nom", $nombre);
         $sentencia->bindParam(":dni", $dni);
         $sentencia->bindParam(":email", $email);
@@ -117,60 +117,61 @@ class usuario extends conexion {
         //Insertó correctamente
         return TRUE;
     }
-    
-    public function obtenerIdMercader(){
-        
+
+    public function obtenerIdMercader() {
+
         $sql = "SELECT id FROM usuarios where Dni like :dni AND rol = 'mercader'";
-        
+
         $sentencia = $this->dblink->prepare($sql);
-        
+
         $dni = $this->getDni();
-                
+
         $sentencia->bindParam(":dni", $dni);
-        
-        $sentencia->execute();            
+
+        $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
-    
-    public function obtenerIdCliente(){
-        
+
+    public function obtenerIdCliente() {
+
         $sql = "SELECT id FROM usuarios where Dni like :dni AND rol = 'cliente'";
-        
+
         $sentencia = $this->dblink->prepare($sql);
-        
+
         $dni = $this->getDni();
-        
+
         $sentencia->bindParam(":dni", $dni);
-        
-        $sentencia->execute();            
+
+        $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
-    
-    public function getHash(){
+
+    public function getHash() {
         $sql = "SELECT password,id FROM usuarios where Email like :email";
-        
+
         $sentencia = $this->dblink->prepare($sql);
-        
+
         $email = $this->getEmail();
-        
+
         $sentencia->bindParam(":email", $email);
-        
-        $sentencia->execute();            
+
+        $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
-    
-     public function usuarioCompleto(){
-        $sql = "SELECT * FROM usuarios where Email like :email";
-        
+
+    public function usuarioCompleto() {
+        $sql = "SELECT * FROM usuarios where id like :id and password :pass ";
+
         $sentencia = $this->dblink->prepare($sql);
-        
-        $email = $this->getEmail();
-        
-        $sentencia->bindParam(":email", $email);
-        
-        $sentencia->execute();            
+
+        $id = $this->getId();
+        $sentencia->bindParam(":id", $id);
+
+        $pass = $this->getPassword();
+        $sentencia->bindParam(":pass", $pass);
+
+        $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
-    
 
 }
