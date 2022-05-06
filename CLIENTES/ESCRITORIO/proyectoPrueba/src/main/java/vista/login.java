@@ -152,7 +152,7 @@ public class login extends javax.swing.JFrame implements util.Constantes {
 
                 switch (rol) {
                     case CLIENTE:
-
+                        new mercader(user).setVisible(true);
                         break;
                     case ADMIN:
 
