@@ -50,7 +50,7 @@ public class registro extends javax.swing.JFrame {
         emailField = new javax.swing.JTextField();
         emailTXT = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(cerrar());
         setTitle("Inicio Sesión");
         setAlwaysOnTop(true);
         setResizable(false);
@@ -190,4 +190,8 @@ public class registro extends javax.swing.JFrame {
     private javax.swing.JTextField tlfField;
     private javax.swing.JLabel tlfTXT;
     // End of variables declaration//GEN-END:variables
+
+    private int cerrar() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
