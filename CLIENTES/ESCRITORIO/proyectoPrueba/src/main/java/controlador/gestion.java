@@ -41,9 +41,8 @@ public class gestion {
 
             List<NameValuePair> params = new ArrayList<>();
 
-            //prueba
-            System.out.println(peticion.getJSON());
-
+            System.out.println("controlador.gestion.hacerConsulta() ---- PETICION ENVIADO: peticion.getJSON()");
+            
             params.add(new BasicNameValuePair("DATA", peticion.getJSON()));
 
             httpPost.setEntity(new UrlEncodedFormEntity(params));
@@ -57,7 +56,7 @@ public class gestion {
 
                 String htmlTxt = EntityUtils.toString(entity);
 
-                System.err.println(htmlTxt);
+                  System.out.println("controlador.gestion.hacerConsulta() ---- RECEPCIÓN: "+htmlTxt);
 
                 JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
                 return !jsonObject.get("error").getAsBoolean();
