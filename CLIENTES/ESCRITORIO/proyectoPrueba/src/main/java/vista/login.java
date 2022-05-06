@@ -145,7 +145,7 @@ public class login extends javax.swing.JFrame implements util.Constantes{
             System.out.println("vista.login.comprobarLogin()  -   LOGEADO");
             user = UsuarioDao.obtenerDatosUsuario(user);
             String rol = user.getRol();
-            if(rol.compareTo(roles.cliente.toString())){
+            if(rol.compareTo(roles.cliente.toString())==0){
             
             }
             
