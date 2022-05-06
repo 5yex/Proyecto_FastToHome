@@ -46,7 +46,7 @@ public class principal {
         
         UIManager.setLookAndFeel(new FlatDarkLaf());
         login lg = new login();
-        lg.setVisible(true)
+        lg.setVisible(true);
 
     }
 
