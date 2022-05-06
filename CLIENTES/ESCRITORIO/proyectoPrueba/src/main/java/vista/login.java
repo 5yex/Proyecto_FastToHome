@@ -15,7 +15,7 @@ import org.mindrot.jbcrypt.BCrypt;
  *
  * @author jmcbg
  */
-public class login extends javax.swing.JFrame {
+public class login extends javax.swing.JFrame implements util.Constantes{
     private Boolean passCorrecto;
     private String pass;
     private String hash;
@@ -143,7 +143,14 @@ public class login extends javax.swing.JFrame {
         
         if(passCorrecto){
             System.out.println("vista.login.comprobarLogin()  -   LOGEADO");
-            UsuarioDao.obtenerDatosUsuario(user);
+            user = UsuarioDao.obtenerDatosUsuario(user);
+            switch (user.getRol()) {
+                case :
+                    
+                    break;
+                default:
+                    throw new AssertionError();
+            }
         }
        
     }
