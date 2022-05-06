@@ -22,8 +22,8 @@ if (empty($_POST["DATA"])) {
         case 'get_id_negocio';
             obtenerIdNegocio(json_decode($peticion->datos));
             break;
-        case 'user_login';
-            login(json_decode($peticion->datos));
+        case 'getHash';
+            getHash(json_decode($peticion->datos));
             break;
         default;
             mandarRespuesta(true, 'comando no  reconocido');
@@ -127,7 +127,7 @@ function obtenerIdCliente($datos){
     }
 }
 
-function login($datos){
+function getHash($datos){
     require_once '../modelo/usuario.php';
     try{
         $cliente = new usuario();
