@@ -18,10 +18,6 @@ import util.validaciones;
  * @author jmcbg
  */
 public class login extends javax.swing.JFrame implements util.Constantes {
-
-    private Boolean passCorrecto;
-    private String hash;
-
     /**
      * Creates new form tests
      */
@@ -141,6 +137,8 @@ public class login extends javax.swing.JFrame implements util.Constantes {
 
         if (validaciones.validar(tFieldEmail, PATRON_EMAIL) && validaciones.validar(tFieldPass, PATRON_PASS_USUARIO)) {
             
+            boolean passCorrecto;
+            String hash;
             
             Usuario user = new Usuario(tFieldEmail);
             
