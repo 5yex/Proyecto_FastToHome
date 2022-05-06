@@ -45,11 +45,14 @@ public class Usuario {
         this.password = password;
     }
 
-    public Usuario(String dni) {
-        this.dni = dni;
+    public Usuario(String email) {
+        this.email = email;
     }
-    
-    
+
+    public Usuario(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
 
     public int getId() {
         return id;
