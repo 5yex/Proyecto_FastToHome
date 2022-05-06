@@ -49,7 +49,7 @@ public class UsuarioDao {
         //generamos un json con los datos que vamos a pasarle al php, en este caso solo el usuario
         String json = user.getJSON();
         //hacemos una petición con el comando que deberá realizar el php, y los datos en json    
-        Peticion peticion = new Peticion("obtener_cliente", json);
+        Peticion peticion = new Peticion("getUsuario", json);
         //mandamos la peticion como consulta selección para obtener valores
         JsonObject respuesta = gestion.consultaSeleccion(peticion);
         //de la respuesta, obtenemos el id    
