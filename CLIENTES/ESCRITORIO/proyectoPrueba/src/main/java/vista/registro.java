@@ -194,5 +194,6 @@ public class registro extends javax.swing.JFrame {
     private int cerrar() {
        principal.lg.setVisible(true);
        this.dispose();
+       return 0;
     }
 }
