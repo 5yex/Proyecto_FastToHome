@@ -52,7 +52,7 @@ function nuevoUsuario($datos) {
             mandarRespuesta(true, 'Error en el usuario');
         }
     } catch (PDOException $ex) {
-        mandarRespuesta(true, 'sql error');
+        mandarRespuesta(true, $ex->getMessage());
     }
 }
 
@@ -72,7 +72,7 @@ function nuevoProducto($datos) {
             mandarRespuesta(true, 'Error en la inserccion del producto');
         }
     } catch (PDOException $ex) {
-        mandarRespuesta(true, 'sql error');
+        mandarRespuesta(true, $ex->getMessage());
     }
 }
 
@@ -94,7 +94,7 @@ function nuevaDireccion($datos) {
             mandarRespuesta(true, 'Error en la inserccion de la direccion');
         }
     } catch (PDOException $ex) {
-        mandarRespuesta(true, 'sql error');
+        mandarRespuesta(true, $ex->getMessage());
     }
 }
 
@@ -110,7 +110,7 @@ function obtenerIdNegocio($datos) {
             mandarRespuesta(true, 'Error en obtener el id del negocio');
         }
     } catch (PDOException $ex) {
-        mandarRespuesta(true, 'sql error');
+        mandarRespuesta(true, $ex->getMessage());
     }
 }
 
@@ -126,7 +126,7 @@ function obtenerIdCliente($datos) {
             mandarRespuesta(true, 'Error en obtener el id del cliente');
         }
     } catch (PDOException $ex) {
-        mandarRespuesta(true, 'sql error');
+        mandarRespuesta(true, $ex->getMessage());
     }
 }
 
@@ -142,7 +142,7 @@ function getHash($datos) {
             mandarRespuesta(true, 'El usuario introducido no existe');
         }
     } catch (PDOException $ex) {
-        mandarRespuesta(true, 'sql error');
+        mandarRespuesta(true, $ex->getMessage());
     }
 }
 
