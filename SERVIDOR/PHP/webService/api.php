@@ -143,6 +143,23 @@ function getHash($datos){
     }
 }
 
+function getUsuario($datos){
+    require_once '../modelo/usuario.php';
+    try{
+        $cliente = new usuario();
+        $cliente->setId($datos->id);
+        $cliente->setPassword($datos->password);
+        $respuesta = $cliente->getHash();
+        if($respuesta){
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Su usuario no existe');
+        }
+    }catch (PDOException $ex) {
+        mandarRespuesta(true, 'sql error');
+    }
+}
+
 function mandarRespuesta($error, $datos) {
     require_once '../modelo/Respuesta.php';
     $respuesta = new Respuesta($error, $datos);
