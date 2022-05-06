@@ -4,6 +4,7 @@
  */
 package vista;
 
+import com.donoso.proyectoprueba.principal;
 import controlador.UsuarioDao;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
@@ -166,7 +167,7 @@ public class registro extends javax.swing.JFrame {
         
         
         UsuarioDao.nuevoUsuario(newUsuario);
-        
+        principal.lg.setVisible(true);
         this.setVisible(false);
     }
 
