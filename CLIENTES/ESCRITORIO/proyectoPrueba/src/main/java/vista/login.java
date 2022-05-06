@@ -144,7 +144,7 @@ public class login extends javax.swing.JFrame {
         
         if(passCorrecto){
             System.out.println("vista.login.comprobarLogin()  -   LOGEADO");
-            
+            UsuarioDao.obtenerDatosUsuario(user);
         }
        
     }
