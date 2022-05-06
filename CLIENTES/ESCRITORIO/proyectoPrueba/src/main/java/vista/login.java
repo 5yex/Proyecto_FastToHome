@@ -139,11 +139,11 @@ public class login extends javax.swing.JFrame {
         Usuario user = new Usuario();
         user.setEmail(emailField.getText());
         user = UsuarioDao.getHash(user);
-        
+        hash = user.getPassword();
         passCorrecto = BCrypt.checkpw(pass,hash);
         
         if(passCorrecto){
-            
+            System.out.println("vista.login.comprobarLogin()  -   LOGEADO");
         }
        
     }
