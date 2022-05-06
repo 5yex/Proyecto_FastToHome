@@ -153,7 +153,7 @@ function getUsuario($datos){
         if($respuesta){
             mandarRespuesta(false, $respuesta);
         } else {
-            mandarRespuesta(true, 'Su usuario no existe');
+            mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
         }
     }catch (PDOException $ex) {
         mandarRespuesta(true, 'sql error');
