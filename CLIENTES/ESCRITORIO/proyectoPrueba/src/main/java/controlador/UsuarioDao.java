@@ -35,9 +35,12 @@ public class UsuarioDao {
 
     }
 
-    public static String login(Usuario user) {
+    public static Usuario getHash(Usuario user) {
 
-        return gestion.consultaSeleccion(new Peticion("user_login", user.getJSON())).get("password").getAsString();
+        JsonObject ob = gestion.consultaSeleccion(new Peticion("user_login", user.getJSON()));
+        
+        
+        
 
     }
 
