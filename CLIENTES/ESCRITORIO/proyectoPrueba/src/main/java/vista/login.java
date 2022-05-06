@@ -141,8 +141,9 @@ public class login extends javax.swing.JFrame implements util.Constantes {
 
         if (validaciones.validar(tFieldEmail, PATRON_EMAIL) && validaciones.validar(tFieldPass, PATRON_PASS_USUARIO)) {
             
-            user = new Usuario();
-            user.setEmail(emailField.getText());
+            
+            Usuario user = new Usuario(tFieldEmail);
+            
             user = UsuarioDao.getHash(user);
             hash = user.getPassword();
             passCorrecto = BCrypt.checkpw(tFieldPass, hash);
