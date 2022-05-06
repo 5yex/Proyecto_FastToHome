@@ -192,6 +192,7 @@ public class registro extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private int cerrar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       principal.lg.setVisible(true);
+       this.dispose();
     }
 }
