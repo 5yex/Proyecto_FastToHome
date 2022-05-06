@@ -23,7 +23,8 @@ public class login extends javax.swing.JFrame {
      * Creates new form tests
      */
     public login() {
-        initComponents();    }
+        initComponents();    
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
