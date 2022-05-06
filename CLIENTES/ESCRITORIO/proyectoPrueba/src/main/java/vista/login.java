@@ -153,14 +153,14 @@ public class login extends javax.swing.JFrame implements util.Constantes {
 
                 switch (rol) {
                     case CLIENTE:
-                        this.setVisible(false);
-                        new mercader(user).setVisible(true);
+                        
                         break;
                     case ADMIN:
 
                         break;
                     case MERCADER:
-
+                        this.setVisible(false);
+                        new mercader(user).setVisible(true);
                         break;
                     default:
                         throw new AssertionError();
