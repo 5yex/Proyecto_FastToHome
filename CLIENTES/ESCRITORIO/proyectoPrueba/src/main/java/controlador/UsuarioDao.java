@@ -36,7 +36,6 @@ public class UsuarioDao {
     }
 
     public static Usuario getHash(Usuario user) {
-
         JsonObject ob = gestion.consultaSeleccion(new Peticion("getHash", user.getJSON()));
         if (ob != null) {
             user.setPassword(ob.get("password").getAsString());
