@@ -21,7 +21,6 @@ public class login extends javax.swing.JFrame implements util.Constantes {
 
     private Boolean passCorrecto;
     private String hash;
-    private Usuario user;
 
     /**
      * Creates new form tests
@@ -141,7 +140,7 @@ public class login extends javax.swing.JFrame implements util.Constantes {
         String tFieldPass = String.valueOf(passwordField.getPassword());
 
         if (validaciones.validar(tFieldEmail, PATRON_EMAIL) && validaciones.validar(tFieldPass, PATRON_PASS_USUARIO)) {
-
+            
             user = new Usuario();
             user.setEmail(emailField.getText());
             user = UsuarioDao.getHash(user);
