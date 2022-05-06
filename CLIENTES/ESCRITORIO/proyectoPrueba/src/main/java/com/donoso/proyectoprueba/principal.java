@@ -22,7 +22,7 @@ import vista.login;
  * @author jmcbg
  */
 public class principal {
-
+public static login lg;
     public static void main(String[] args) throws IOException, UnsupportedLookAndFeelException {
 
         // Usuario user = new Usuario("11");
