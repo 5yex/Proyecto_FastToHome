@@ -22,6 +22,8 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import modelo.Peticion;
 import org.apache.http.NameValuePair;
@@ -77,8 +79,9 @@ public class gestion {
      * atributos
      */
     public static JsonObject consultaSeleccion(Peticion peticion) {
-        String json = null;
         try {
+            String json = null;
+            
             CloseableHttpClient client = HttpClients.createDefault();
             HttpPost httpPost = new HttpPost("http://localhost/Php/webService/api.php");
 
@@ -114,10 +117,15 @@ public class gestion {
                 }
             }
             return null;
-
+        } catch (UnsupportedEncodingException ex) {
+            Logger.getLogger(gestion.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(gestion.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
-             JOptionPane.showMessageDialog(null,ex.getMessage());
+            Logger.getLogger(gestion.class.getName()).log(Level.SEVERE, null, ex);
+        } finally{
             return null;
         }
+            
     }
 }
