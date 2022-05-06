@@ -159,7 +159,7 @@ public class login extends javax.swing.JFrame {
         } catch (UnsupportedLookAndFeelException ex) {
 
         }
-        new PruebaVentanaLogin().setVisible(true);
+        new login().setVisible(true);
 //        if (conex.testConexion()) {
 //            new Login().setVisible(true);
 //        } else {
