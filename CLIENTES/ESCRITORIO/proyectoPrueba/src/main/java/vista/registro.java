@@ -50,7 +50,7 @@ public class registro extends javax.swing.JFrame {
         emailField = new javax.swing.JTextField();
         emailTXT = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(cerrar());
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Inicio Sesión");
         setAlwaysOnTop(true);
         setFocusable(false);
@@ -191,9 +191,9 @@ public class registro extends javax.swing.JFrame {
     private javax.swing.JLabel tlfTXT;
     // End of variables declaration//GEN-END:variables
 
-    private int cerrar() {
+    private void cerrar() {
        principal.lg.setVisible(true);
        this.dispose();
-       return 0;
+       
     }
 }
