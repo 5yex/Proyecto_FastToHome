@@ -15,6 +15,7 @@ import modelo.Categoria;
 import modelo.Peticion;
 import modelo.Producto;
 import modelo.Usuario;
+import vista.login;
 
 /**
  *
@@ -44,7 +45,8 @@ public class principal {
         //System.out.println(UsuarioDao.obtenerIdCliente(user));
         
         UIManager.setLookAndFeel(new FlatDarkLaf());
-        new vista.login().setVisible(true);
+        login lg = new login();
+        lg.setVisible(true)
 
     }
 
