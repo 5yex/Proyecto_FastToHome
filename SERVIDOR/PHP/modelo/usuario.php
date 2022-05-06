@@ -160,7 +160,7 @@ class usuario extends conexion {
     }
 
     public function usuarioCompleto() {
-        $sql = "SELECT * FROM usuarios where id like :id and password :pass ";
+        $sql = "SELECT * FROM usuarios where id like :id and password like :pass ";
 
         $sentencia = $this->dblink->prepare($sql);
 
