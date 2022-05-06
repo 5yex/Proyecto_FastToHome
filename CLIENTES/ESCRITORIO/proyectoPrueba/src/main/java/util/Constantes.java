@@ -59,7 +59,7 @@ public interface Constantes {
     final public String PATRON_IDENTIFICADOR = "^\\d+$";
     final public String PATRON_EMAIL = "/\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b/gi";
     
-    //VARIABLES FIJAS
+    //VARIABLES FIJAS (CONSTANTES)
     final public String CLIENTE = "cliente";
     final public String ADMIN = "admin";
     final public String MERCADER = "mercader";
