@@ -19,6 +19,7 @@ public class login extends javax.swing.JFrame {
     protected Boolean passCorrecto;
     protected String pass;
     protected String hash;
+    protected Usuario user;
     /**
      * Creates new form tests
      */
