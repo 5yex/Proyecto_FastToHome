@@ -140,7 +140,9 @@ public class login extends javax.swing.JFrame implements util.Constantes{
         user = UsuarioDao.getHash(user);
         hash = user.getPassword();
         passCorrecto = BCrypt.checkpw(pass,hash);
-        
+         enum roles {
+        cliente, mercader, admin;
+    }
         if(passCorrecto){
             System.out.println("vista.login.comprobarLogin()  -   LOGEADO");
             user = UsuarioDao.obtenerDatosUsuario(user);
