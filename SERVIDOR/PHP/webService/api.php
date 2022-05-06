@@ -149,7 +149,7 @@ function getUsuario($datos){
         $cliente = new usuario();
         $cliente->setId($datos->id);
         $cliente->setPassword($datos->password);
-        $respuesta = $cliente->getUsuario;
+        $respuesta = $cliente->usuarioCompleto();
         if($respuesta){
             mandarRespuesta(false, $respuesta);
         } else {
