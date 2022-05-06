@@ -11,12 +11,13 @@ import modelo.Usuario;
  * @author jmcbg
  */
 public class mercader extends javax.swing.JFrame {
-
+    Usuario user;
     /**
      * Creates new form VentanaPrincipal
      */
     public mercader(Usuario user) {
         initComponents();
+        user = user;
     }
 
     /**
