@@ -159,7 +159,7 @@ function getUsuario($datos) {
             mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
         }
     } catch (PDOException $ex) {
-        mandarRespuesta(true, 'sql error');
+        mandarRespuesta(true, $ex->getMessage());
     }
 }
 
