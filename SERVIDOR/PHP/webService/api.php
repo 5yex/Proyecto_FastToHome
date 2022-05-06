@@ -132,7 +132,7 @@ function login($datos){
     try{
         $cliente = new usuario();
         $cliente->setEmail($datos->email);
-        $respuesta = $cliente->login();
+        $respuesta = $cliente->getHash();
         if($respuesta){
             mandarRespuesta(false, $respuesta);
         } else {

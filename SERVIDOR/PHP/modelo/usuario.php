@@ -146,7 +146,7 @@ class usuario extends conexion {
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
     
-    public function login(){
+    public function getHash(){
         $sql = "SELECT password,id FROM usuarios where Email like :email";
         
         $sentencia = $this->dblink->prepare($sql);
