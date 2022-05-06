@@ -59,10 +59,8 @@ public interface Constantes {
     final public String PATRON_IDENTIFICADOR = "^\\d+$";
     final public String PATRON_EMAIL = "/\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b/gi";
 
-    enum Level {
-        LOW,
-        MEDIUM,
-        HIGH
+    enum roles {
+        cliente, mercader, admin;
     }
 
 }
