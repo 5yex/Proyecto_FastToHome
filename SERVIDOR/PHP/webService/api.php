@@ -7,7 +7,7 @@ if (empty($_POST["DATA"])) {
 
     switch ($peticion->comando) {
         case 'getUsuario';
-            getHash(json_decode($peticion->datos));
+            getUsuario(json_decode($peticion->datos));
             break;
         case 'nuevo_usuario';
             nuevoUsuario(json_decode($peticion->datos));
