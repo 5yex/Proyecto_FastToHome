@@ -40,8 +40,6 @@ public class UsuarioDao {
         JsonObject ob = gestion.consultaSeleccion(new Peticion("getHash", user.getJSON()));
         user.setPassword(ob.get("password").getAsString());
         user.setId(ob.get("id").getAsInt());
-        
-        
         return user;
 
     }
