@@ -168,7 +168,7 @@ public class login extends javax.swing.JFrame implements util.Constantes {
 
             }
         }else{
-            JOptionPane.showMessageDialog(this, "Debes rellenar ambos campos correctamente","Error",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Debes rellenar ambos campos correctamente","Error", JOptionPane.ERROR_MESSAGE);
         }
 
     }
