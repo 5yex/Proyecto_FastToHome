@@ -138,7 +138,7 @@ public class login extends javax.swing.JFrame implements util.Constantes{
         String tFieldPass = String.valueOf(passwordField.getPassword());
         
         if(validaciones.validar(tFieldEmail,PATRON_EMAIL) && validaciones.validar(tFieldPass,PATRON_PASS_USUARIO))
-        pass = String.valueOf(passwordField.getPassword());
+        
         user = new Usuario();
         user.setEmail(emailField.getText());
         user = UsuarioDao.getHash(user);
