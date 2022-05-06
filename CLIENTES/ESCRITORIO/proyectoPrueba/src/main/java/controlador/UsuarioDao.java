@@ -37,10 +37,11 @@ public class UsuarioDao {
 
     public static Usuario getHash(Usuario user) {
 
-        JsonObject ob = gestion.consultaSeleccion(new Peticion("user_login", user.getJSON()));
+        JsonObject ob = gestion.consultaSeleccion(new Peticion("getHash", user.getJSON()));
+        user.setPassword(respuesta.get("password").getAsString());
         
         
-        
+        return user;
 
     }
 
