@@ -149,7 +149,7 @@ public class login extends javax.swing.JFrame implements util.Constantes{
             String rol = user.getRol();
             switch (rol) {
                 case roles.cliente.name():
-                    
+               
                     break;
                 default:
                     throw new AssertionError();
