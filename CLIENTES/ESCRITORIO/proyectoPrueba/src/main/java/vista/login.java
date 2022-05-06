@@ -134,7 +134,7 @@ public class login extends javax.swing.JFrame implements util.Constantes{
 
     private void comprobarLogin() {
         
-        pass = new String(passwordField.getPassword());
+        pass = String.valueOf(passwordField.getPassword());
         user = new Usuario();
         user.setEmail(emailField.getText());
         user = UsuarioDao.getHash(user);
