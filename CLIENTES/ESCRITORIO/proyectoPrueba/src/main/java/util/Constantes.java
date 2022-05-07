@@ -51,7 +51,7 @@ public interface Constantes {
     final public String PATRON_ANIO = "^(2020|" + ANIO_ACTUAL + ")$";
     final public String PATRON_PRECIO_KILO = "^0\\.(?!0+$)\\d{1,2}$";
     final public String PATRON_DNI = "(([x-z]|[X-Z]{1})([-]?)(\\d{7})([-]?)([a-z]|[A-Z]{1}))|((\\d{8})([-]?)([a-z]|[A-Z]{1}))";
-    final public String PATRON_NOMBRES = "[A-Za-z ]{2,30}";
+    final public String PATRON_NOMBRES = "^(([A-ZÁÉÍÓÚÑ]{1}[a-záéíóúüñ]*)(\\s)?)((((((((de)|(del)|(la)|(las)|(los))\\s)?)?){1,2})(([A-ZÁÉÍÑÓ]{1}[a-záéíñóúü\\.]*)(\\s([A-ZÁÉÍÑÓ]{1}[a-záéíñóúü\\.]*))?){1})?)$";
     final public String PATRON_EDAD = "^(1[8-9]|[2-9][0-9])$";
     final public String PATRON_KILOS = "^\\d*(\\.\\d{1})?\\d{0,1}$";
     final public String PATRON_FINCA = "^([a-zA-Z ]{3,30})$";
