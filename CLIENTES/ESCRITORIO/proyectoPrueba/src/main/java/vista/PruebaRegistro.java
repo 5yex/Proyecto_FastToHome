@@ -8,7 +8,8 @@ import com.donoso.proyectoprueba.principal;
 import controlador.UsuarioDao;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
-
+import util.Constantes;
+import util.validaciones;
 /**
  *
  * @author jmcbg
