@@ -13,7 +13,7 @@ import org.mindrot.jbcrypt.BCrypt;
  *
  * @author jmcbg
  */
-public class PruebaRegistro extends javax.swing.JFrame {
+public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
 
     private Usuario newUsuario = new Usuario();
 
@@ -65,6 +65,12 @@ public class PruebaRegistro extends javax.swing.JFrame {
         registerConfirm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registerConfirmActionPerformed(evt);
+            }
+        });
+
+        nombreField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                nombreFieldFocusLost(evt);
             }
         });
 
@@ -156,6 +162,10 @@ public class PruebaRegistro extends javax.swing.JFrame {
         registrarUsuario();
 
     }//GEN-LAST:event_registerConfirmActionPerformed
+
+    private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
+        if(nombreField.getText() == 0 && !validacionesnombreField.getText())
+    }//GEN-LAST:event_nombreFieldFocusLost
 
     private void registrarUsuario() {
         newUsuario.setNombre(nombreField.getText());
