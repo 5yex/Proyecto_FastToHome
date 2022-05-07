@@ -41,6 +41,8 @@ public class validaciones implements Constantes {
         
         resto = parteNumerica % 23;
         
+        System.out.println(arrayLetras[resto]);
+        
         return parteLetra == arrayLetras[resto];
     }
 
