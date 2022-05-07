@@ -8,8 +8,7 @@ import controlador.UsuarioDao;
 import javax.swing.JOptionPane;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
-import static util.Constantes.MENSAJE_NOMBRE_INFO;
-import static util.Constantes.PATRON_NOMBRES;
+import util.Constantes;
 import util.validaciones;
 
 /**
