@@ -29,25 +29,29 @@ public class validaciones implements Constantes {
 
         return false;
     }
-    
-    public static boolean validacionDNI(String dni){
-        if(dni.length() == 9){
-        int parteNumerica = Integer.parseInt(dni.substring(0,8));
-        System.out.println(parteNumerica);
-        int resto = 0;
-        String parteLetra = dni.substring(8);
-        System.out.println(parteLetra);
-        
-        String[] arrayLetras = {"T","R","W","A","G","M","Y","F","P","X","B","N","J","Z","S","Q","V","H","L","C","K","E"};
-        
-        resto = parteNumerica % 23;
-        
-        System.out.println(arrayLetras[resto]);
-        
-        return (parteLetra.compareTo(arrayLetras[resto]) == 0);
+
+    public static boolean validacionDNI(String dni) {
+        if (dni.length() == 9) {
+            try {
+            int parteNumerica = Integer.parseInt(dni.substring(0, 8));
+            System.out.println(parteNumerica);
+            int resto = 0;
+            String parteLetra = dni.substring(8);
+            System.out.println(parteLetra);
+
+            String[] arrayLetras = {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"};
+
+            resto = parteNumerica % 23;
+
+            System.out.println(arrayLetras[resto]);
+
+            return (parteLetra.compareTo(arrayLetras[resto]) == 0);
+            } catch (StringIndexOutOfBoundsException e) {
+                return false;
+            }
         }
         return false;
-    
+
     }
 
 }
