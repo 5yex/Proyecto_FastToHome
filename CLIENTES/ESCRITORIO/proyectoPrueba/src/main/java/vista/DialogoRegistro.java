@@ -210,6 +210,9 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
                 validaciones.validar(apellidosField.getText(),PATRON_APELLIDOS) &&
                 validaciones.validacionDNI(dniField.getText()) &&
                 validaciones.validar(tlfField.getText(), PATRON_TELEFONO) &&
+                validaciones.validar(emailField.getText(),PATRON_EMAIL) &&
+                validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO) &&
+                (String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0 && validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO))
                 ){
         registrarUsuario();
         }
