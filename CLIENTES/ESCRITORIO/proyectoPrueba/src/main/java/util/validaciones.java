@@ -30,9 +30,15 @@ public class validaciones implements Constantes {
     }
     
     public static boolean validacionDNI(String dni){
-        int parteNumerica = Integer.parseInt(dni.substring(0,8));
+        int parteNumerica = Integer.parseInt(dni.substring(0,7));
         int resto = 0;
-        String parteLetra = dni.substring(8, 8)
+        String parteLetra = dni.substring(8, 8);
+        
+        String[] arrayLetras = {"T","R","W","A","G","M","Y","F","P","X","B","N","J","Z","S","Q","V","H","L","C","K","E"};
+        
+        resto = parteNumerica % 23;
+        
+        return parte == arrayLetras[resto];
     }
 
 }
