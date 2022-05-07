@@ -31,6 +31,7 @@ public class validaciones implements Constantes {
     }
     
     public static boolean validacionDNI(String dni){
+        if(dni.length() == 9){
         int parteNumerica = Integer.parseInt(dni.substring(0,8));
         System.out.println(parteNumerica);
         int resto = 0;
@@ -44,6 +45,9 @@ public class validaciones implements Constantes {
         System.out.println(arrayLetras[resto]);
         
         return (parteLetra.compareTo(arrayLetras[resto]) == 0);
+        }
+        return false;
+    
     }
 
 }
