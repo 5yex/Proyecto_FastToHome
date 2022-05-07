@@ -224,7 +224,7 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
     private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
         if(!validaciones.validar(nombreField.getText(),PATRON_NOMBRES)){
             //JOptionPane.showMessageDialog(this, MENSAJE_NOMBRE_INFO, "Error", JOptionPane.ERROR_MESSAGE);
-            nombreField.setFont(Color.RED)
+            nombreField.setFont(Color.RED);
             nombreField.setText(MENSAJE_NOMBRE_INFO);
         }
     }//GEN-LAST:event_nombreFieldFocusLost
