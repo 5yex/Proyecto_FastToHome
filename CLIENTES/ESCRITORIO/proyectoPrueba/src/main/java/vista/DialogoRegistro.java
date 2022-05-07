@@ -5,14 +5,18 @@
 package vista;
 
 import controlador.UsuarioDao;
+import javax.swing.JOptionPane;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
+import static util.Constantes.MENSAJE_NOMBRE_INFO;
+import static util.Constantes.PATRON_NOMBRES;
+import util.validaciones;
 
 /**
  *
  * @author Jesus
  */
-public class DialogoRegistro extends javax.swing.JDialog {
+public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
     
     private Usuario newUsuario = new Usuario();
 
@@ -58,17 +62,59 @@ public class DialogoRegistro extends javax.swing.JDialog {
 
         nombreTXT.setText("NOMBRE");
 
+        nombreField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                nombreFieldFocusLost(evt);
+            }
+        });
+
         apellidosTXT.setText("APELLIDOS");
+
+        apellidosField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                apellidosFieldFocusLost(evt);
+            }
+        });
 
         dniTXT.setText("DNI");
 
+        dniField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                dniFieldFocusLost(evt);
+            }
+        });
+
         tlfTXT.setText("TELÉFONO");
+
+        tlfField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                tlfFieldFocusLost(evt);
+            }
+        });
 
         emailTXT.setText("CORREO ELECTRÓNICO");
 
+        emailField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                emailFieldFocusLost(evt);
+            }
+        });
+
         passwordTxt.setText("CONTRASEÑA");
 
+        passwordField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passwordFieldFocusLost(evt);
+            }
+        });
+
         passwordConfirmTxt.setText("CONFIRMAR CONTRASEÑA");
+
+        passwordConfirmField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passwordConfirmFieldFocusLost(evt);
+            }
+        });
 
         registerConfirm.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Green"));
         registerConfirm.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
@@ -162,6 +208,36 @@ public class DialogoRegistro extends javax.swing.JDialog {
     private void registerConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerConfirmActionPerformed
         registrarUsuario();
     }//GEN-LAST:event_registerConfirmActionPerformed
+
+    private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
+        if(!validaciones.validar(nombreField.getText(),PATRON_NOMBRES)){
+            JOptionPane.showMessageDialog(this, MENSAJE_NOMBRE_INFO, "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_nombreFieldFocusLost
+
+    private void apellidosFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_apellidosFieldFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_apellidosFieldFocusLost
+
+    private void dniFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dniFieldFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dniFieldFocusLost
+
+    private void tlfFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tlfFieldFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tlfFieldFocusLost
+
+    private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailFieldFocusLost
+
+    private void passwordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFieldFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordFieldFocusLost
+
+    private void passwordConfirmFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmFieldFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordConfirmFieldFocusLost
 
     /**
      * @param args the command line arguments

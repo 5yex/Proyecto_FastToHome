@@ -123,6 +123,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="nombreField">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="nombreFieldFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="apellidosTXT">
           <Properties>
@@ -130,6 +133,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="apellidosField">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="apellidosFieldFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="dniTXT">
           <Properties>
@@ -137,6 +143,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="dniField">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="dniFieldFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="tlfTXT">
           <Properties>
@@ -144,6 +153,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tlfField">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="tlfFieldFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="emailTXT">
           <Properties>
@@ -151,6 +163,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="emailField">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="emailFieldFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="passwordTxt">
           <Properties>
@@ -158,6 +173,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="passwordField">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="passwordFieldFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="passwordConfirmTxt">
           <Properties>
@@ -165,6 +183,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="passwordConfirmField">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="passwordConfirmFieldFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="registerConfirm">
           <Properties>
