@@ -38,7 +38,7 @@ public class validaciones implements Constantes {
         
         resto = parteNumerica % 23;
         
-        return parte == arrayLetras[resto];
+        return parteLetra == arrayLetras[resto];
     }
 
 }
