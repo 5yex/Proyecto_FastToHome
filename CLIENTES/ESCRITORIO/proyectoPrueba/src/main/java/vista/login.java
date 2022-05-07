@@ -124,7 +124,7 @@ public class login extends javax.swing.JFrame implements util.Constantes {
 
     private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
         //new PruebaRegistro().setVisible(true);
-        new DialogoRegistro(null, true);
+        new DialogoRegistro(this, true).setVisible(true);
     }//GEN-LAST:event_buttonLoginActionPerformed
 
     private void buttonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogin1ActionPerformed
