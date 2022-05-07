@@ -43,7 +43,7 @@ public class validaciones implements Constantes {
         
         System.out.println(arrayLetras[resto]);
         
-        return parteLetra == arrayLetras[resto];
+        return (parteLetra.compareTo(arrayLetras[resto]) == 0);
     }
 
 }
