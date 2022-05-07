@@ -214,7 +214,9 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
                 validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO) &&
                 (String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0 && validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO))
                 ){
-        registrarUsuario();
+            registrarUsuario();
+        }else{
+            JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, URL, HEIGHT);
         }
     }//GEN-LAST:event_registerConfirmActionPerformed
 
