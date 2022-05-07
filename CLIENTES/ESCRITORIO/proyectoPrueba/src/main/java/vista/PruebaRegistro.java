@@ -86,6 +86,12 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
             }
         });
 
+        tlfField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                tlfFieldFocusLost(evt);
+            }
+        });
+
         apellidosTXT.setText("APELLIDOS");
 
         dniTXT.setText("DNI");
@@ -195,12 +201,16 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
         }
     }//GEN-LAST:event_dniFieldFocusLost
 
+    private void tlfFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tlfFieldFocusLost
+        if(!validaciones.validar(pasa, PATRON_DNI))
+    }//GEN-LAST:event_tlfFieldFocusLost
+
     private void registrarUsuario() {
         newUsuario.setNombre(nombreField.getText());
         newUsuario.setDni(dniField.getText());
         newUsuario.setTlf(tlfField.getText());
         newUsuario.setEmail(emailField.getText());
-        newUsuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
+        newUsuario.setPassword(BCrypt.hashpw(String.valueOf(passwordField.getPassword()), BCrypt.gensalt(10)));
         newUsuario.setRol("cliente");
         System.out.println(newUsuario.getJSON());
         
