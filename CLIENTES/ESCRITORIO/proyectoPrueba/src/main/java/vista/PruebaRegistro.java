@@ -202,7 +202,7 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
     }//GEN-LAST:event_dniFieldFocusLost
 
     private void tlfFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tlfFieldFocusLost
-        if(!validaciones.validar(pasa, PATRON_DNI))
+        if(!validaciones.validar(tlfField.getText(), PATRON_TELEFONO)
     }//GEN-LAST:event_tlfFieldFocusLost
 
     private void registrarUsuario() {
