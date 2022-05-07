@@ -106,6 +106,12 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
 
         tlfTXT.setText("TELÉFONO");
 
+        emailField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                emailFieldFocusLost(evt);
+            }
+        });
+
         emailTXT.setText("CORREO ELECTRÓNICO");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -206,6 +212,12 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
             JOptionPane.showMessageDialog(this, MENSAJE_TELEFONO_INFO, "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_tlfFieldFocusLost
+
+    private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
+        if(validaciones.validar(emailField.getText(),PATRON_EMAIL)){
+            JOptionPane.showMessageDialog(null, MENSAJE_EMAIL_INFO,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_emailFieldFocusLost
 
     private void registrarUsuario() {
         newUsuario.setNombre(nombreField.getText());
