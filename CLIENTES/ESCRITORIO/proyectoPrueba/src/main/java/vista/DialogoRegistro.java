@@ -63,6 +63,9 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
         nombreTXT.setText("NOMBRE");
 
         nombreField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                nombreFieldFocusGained(evt);
+            }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 nombreFieldFocusLost(evt);
             }
@@ -264,6 +267,11 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
             JOptionPane.showMessageDialog(null, MENSAJE_CONFIRMA_PASS,"Error",JOptionPane.ERROR_MESSAGE);
         }*/
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
+
+    private void nombreFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusGained
+        // TODO add your handling code here:
+        nombreField.setForeground(Color.WHITE);
+    }//GEN-LAST:event_nombreFieldFocusGained
     
 
     /**
