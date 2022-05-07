@@ -7,6 +7,8 @@ package vista;
 import controlador.UsuarioDao;
 import java.awt.Color;
 import javax.swing.JOptionPane;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
 import util.Constantes;
