@@ -232,14 +232,14 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
     }//GEN-LAST:event_emailFieldFocusLost
 
     private void passwordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFieldFocusLost
-        if(validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO)){
+        if(!validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO)){
             JOptionPane.showMessageDialog(null, MENSAJE_PASS_INFO,"Error",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_passwordFieldFocusLost
 
     private void passwordConfirmFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmFieldFocusLost
-        if(String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword()))){
-            JOptionPane.showMessageDialog(null, MENSAJE_PASS_INFO,"Error",JOptionPane.ERROR_MESSAGE);
+        if(String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) != 0 && !validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO)){
+            JOptionPane.showMessageDialog(null, "El campo de contraseña y confirmar contraseña deben ser iguales","Error",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
 
