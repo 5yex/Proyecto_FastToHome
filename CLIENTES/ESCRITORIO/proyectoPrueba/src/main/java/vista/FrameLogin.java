@@ -143,9 +143,10 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
             Usuario user = new Usuario(tFieldEmail);
             
             user = UsuarioDao.getHash(user);
+            if(user != null){
             String passHash = user.getPassword();
             passCorrecto = BCrypt.checkpw(tFieldPass, passHash);
-
+            }
             if (passCorrecto) {
                 System.out.println("vista.login.comprobarLogin()  -   LOGEADO");
                 user = UsuarioDao.obtenerDatosUsuario(user);
