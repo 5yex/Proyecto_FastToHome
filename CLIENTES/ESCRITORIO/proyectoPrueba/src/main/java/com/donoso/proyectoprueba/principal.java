@@ -15,14 +15,14 @@ import modelo.Categoria;
 import modelo.Peticion;
 import modelo.Producto;
 import modelo.Usuario;
-import vista.login;
+import vista.FrameLogin;
 
 /**
  *
  * @author jmcbg
  */
 public class principal {
-public static login lg;
+public static FrameLogin lg;
     public static void main(String[] args) throws IOException, UnsupportedLookAndFeelException {
 
         // Usuario user = new Usuario("11");
@@ -45,7 +45,7 @@ public static login lg;
         //System.out.println(UsuarioDao.obtenerIdCliente(user));
         
         UIManager.setLookAndFeel(new FlatDarkLaf());
-        lg = new login();
+        lg = new FrameLogin();
         lg.setVisible(true);
 
     }

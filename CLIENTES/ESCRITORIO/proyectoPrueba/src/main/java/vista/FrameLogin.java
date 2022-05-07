@@ -17,11 +17,11 @@ import util.validaciones;
  *
  * @author jmcbg
  */
-public class login extends javax.swing.JFrame implements util.Constantes {
+public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     /**
      * Creates new form tests
      */
-    public login() {
+    public FrameLogin() {
         initComponents();
     }
 
@@ -184,7 +184,7 @@ public class login extends javax.swing.JFrame implements util.Constantes {
         } catch (UnsupportedLookAndFeelException ex) {
 
         }
-        new login().setVisible(true);
+        new FrameLogin().setVisible(true);
 //        if (conex.testConexion()) {
 //            new Login().setVisible(true);
 //        } else {
