@@ -34,7 +34,7 @@ public interface Constantes {
     final public String MENSAJE_PASS_INFO = "La contraseña debe tener al entre 8 y 20 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.";
     final public String MENSAJE_ANIO_CAMPANIA = "\nDame el año de la campaña (Mayor o igual a 2020 y maximo " + ANIO_ACTUAL + "): ";
     final public String MENSAJE_PRECIO_KILO = "Precio de la aceituna por kilo (pj:0.58 o 0.3): ";
-    final public String MENSAJE_DNI = "Introduce el dni de la persona (8 numeros y 1 letra): ";
+    final public String MENSAJE_DNI = "Introduzca un dni válido (8 numeros y 1 letra): ";
     final public String MENSAJE_NOMBRE_INFO = "Introduzca un nombre con formato valido: \n Primera letra en mayuscula al menos.";
     final public String MENSAJE_APELLIDO_INFO = "Introduzca un apellido con formato valido: \n Primera letra en mayuscula al menos.\n Tambien admite apellidos compuestos con:\n de, del, la, las, los";
     final public String MENSAJE_EDAD = "Edad (mayor o igual a 18 menor que 99): ";
