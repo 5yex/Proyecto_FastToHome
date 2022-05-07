@@ -216,7 +216,7 @@ public class DialogoRegistro extends javax.swing.JDialog {
         
         
         UsuarioDao.nuevoUsuario(newUsuario);
-        cerrar();
+        this.dispose();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
