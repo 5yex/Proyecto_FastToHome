@@ -53,7 +53,7 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
         emailTXT = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Inicio Sesión");
+        setTitle("Registro de Usuario");
         setAlwaysOnTop(true);
         setFocusable(false);
         setResizable(false);
