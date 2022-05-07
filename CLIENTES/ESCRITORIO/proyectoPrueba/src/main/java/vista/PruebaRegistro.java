@@ -92,6 +92,12 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
 
         passwordConfirmTxt.setText("CONFIRMAR CONTRASEÑA");
 
+        dniField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                dniFieldFocusLost(evt);
+            }
+        });
+
         tlfTXT.setText("TELÉFONO");
 
         emailTXT.setText("CORREO ELECTRÓNICO");
@@ -182,6 +188,12 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
             JOptionPane.showMessageDialog(this, MENSAJE_APELLIDO_INFO, "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_apellidosFieldFocusLost
+
+    private void dniFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dniFieldFocusLost
+        if(!validaciones.validacionDNI(dniField.getText())){
+            JOptionPane.showMessageDialog(this, MENSAJE_DNI, "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_dniFieldFocusLost
 
     private void registrarUsuario() {
         newUsuario.setNombre(nombreField.getText());
