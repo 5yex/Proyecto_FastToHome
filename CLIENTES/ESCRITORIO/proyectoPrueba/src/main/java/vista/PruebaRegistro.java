@@ -6,6 +6,7 @@ package vista;
 
 import com.donoso.proyectoprueba.principal;
 import controlador.UsuarioDao;
+import javax.swing.JOptionPane;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
 import util.Constantes;
@@ -166,6 +167,7 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
 
     private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
         if(nombreField.getText().length() == 0 && !validaciones.validar(nombreField.getText(),PATRON_NOMBRES)){
+            JOptionPane.showMessageDialog(this, MENSAJE_NOMBRE_INFO, URL, HEIGHT);
         }
     }//GEN-LAST:event_nombreFieldFocusLost
 
