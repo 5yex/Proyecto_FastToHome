@@ -205,7 +205,11 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
     }// </editor-fold>//GEN-END:initComponents
 
     private void registerConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerConfirmActionPerformed
+        
+        if(validaciones.validar(nombreField.getText(),PATRON_NOMBRES) &&
+                ){
         registrarUsuario();
+        }
     }//GEN-LAST:event_registerConfirmActionPerformed
 
     private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
@@ -215,27 +219,39 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
     }//GEN-LAST:event_nombreFieldFocusLost
 
     private void apellidosFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_apellidosFieldFocusLost
-        // TODO add your handling code here:
+        if(!validaciones.validar(apellidosField.getText(),PATRON_APELLIDOS)){
+            JOptionPane.showMessageDialog(this, MENSAJE_APELLIDO_INFO, "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_apellidosFieldFocusLost
 
     private void dniFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dniFieldFocusLost
-        // TODO add your handling code here:
+        if(!validaciones.validacionDNI(dniField.getText())){
+            JOptionPane.showMessageDialog(this, MENSAJE_DNI, "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_dniFieldFocusLost
 
     private void tlfFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tlfFieldFocusLost
-        // TODO add your handling code here:
+        if(!validaciones.validar(tlfField.getText(), PATRON_TELEFONO)){
+            JOptionPane.showMessageDialog(this, MENSAJE_TELEFONO_INFO, "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_tlfFieldFocusLost
 
     private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
-        // TODO add your handling code here:
+        if(!validaciones.validar(emailField.getText(),PATRON_EMAIL)){
+            JOptionPane.showMessageDialog(null, MENSAJE_EMAIL_INFO,"Error",JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_emailFieldFocusLost
 
     private void passwordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFieldFocusLost
-        // TODO add your handling code here:
+        if(!validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO)){
+            JOptionPane.showMessageDialog(null, MENSAJE_PASS_INFO,"Error",JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_passwordFieldFocusLost
 
     private void passwordConfirmFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmFieldFocusLost
-        // TODO add your handling code here:
+        if(String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) != 0 && !validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO)){
+            JOptionPane.showMessageDialog(null, "El campo de contraseña y confirmar contraseña deben ser iguales","Error",JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
 
     /**
