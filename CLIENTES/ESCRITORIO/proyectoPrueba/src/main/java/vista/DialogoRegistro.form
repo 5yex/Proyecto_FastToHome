@@ -23,13 +23,164 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="44" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="tlfTXT" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="dniField" alignment="1" max="32767" attributes="0"/>
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Component id="dniTXT" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
+                              <Component id="apellidosTXT" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="passwordTxt" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
+                                  <Component id="apellidosField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="nombreTXT" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
+                                  <Component id="passwordField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tlfField" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="nombreField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="passwordConfirmField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="passwordConfirmTxt" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
+                                  <Component id="emailTXT" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
+                                  <Component id="emailField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="registerConfirm" alignment="0" min="-2" pref="406" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Component id="titleText" min="-2" pref="422" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="titleText" min="-2" pref="77" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="nombreTXT" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="nombreField" min="-2" pref="33" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="apellidosTXT" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="apellidosField" min="-2" pref="33" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="dniTXT" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="dniField" min="-2" pref="33" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="tlfTXT" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="tlfField" min="-2" pref="33" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="emailTXT" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="emailField" min="-2" pref="33" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="passwordTxt" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="passwordField" min="-2" pref="33" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="passwordConfirmTxt" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="passwordConfirmField" min="-2" pref="33" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="registerConfirm" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace pref="25" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="titleText">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="36" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="REGISTRO DE USUARIO"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="nombreTXT">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="NOMBRE"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="nombreField">
+        </Component>
+        <Component class="javax.swing.JLabel" name="apellidosTXT">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="APELLIDOS"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="apellidosField">
+        </Component>
+        <Component class="javax.swing.JLabel" name="dniTXT">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="DNI"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="dniField">
+        </Component>
+        <Component class="javax.swing.JLabel" name="tlfTXT">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="TEL&#xc9;FONO"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tlfField">
+        </Component>
+        <Component class="javax.swing.JLabel" name="emailTXT">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="CORREO ELECTR&#xd3;NICO"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="emailField">
+        </Component>
+        <Component class="javax.swing.JLabel" name="passwordTxt">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="CONTRASE&#xd1;A"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="passwordField">
+        </Component>
+        <Component class="javax.swing.JLabel" name="passwordConfirmTxt">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="CONFIRMAR CONTRASE&#xd1;A"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="passwordConfirmField">
+        </Component>
+        <Component class="javax.swing.JButton" name="registerConfirm">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="54" green="9c" id="Actions.Green" palette="3" red="49" type="palette"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="3"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="CONFIRMAR REGISTRO"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="registerConfirmActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
 </Form>
