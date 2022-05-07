@@ -45,6 +45,7 @@ public interface Constantes {
     final public String MENSAJE_COD_PESADA = "Dame el codigo de la pesada: ";
     final public String MENSAJE_COD_PRECIO = "Dame el codigo del precio: ";
     final public String MENSAJE_EMAIL_INFO = "Introduzca un email con formato válido: \n (user@email.es, user@gmail.com, etc)";
+    final public String MENSAJE_TELEFONO_INFO = "Introduzca un telefono con formato válido: \n Que empiece por 6, 7 o 9 y seguido de 8 números";
 
     //PATRONES
     final public String PATRON_CLAVE_USUARIO = "[a-zA-Z0-9-_]{4,20}";
