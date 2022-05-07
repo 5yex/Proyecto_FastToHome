@@ -170,7 +170,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                 }
 
             }else{
-                //JOptionPane.showMessageDialog(this, "El usuario no existe","Advertencia", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "El usuario no existe","Advertencia", JOptionPane.INFORMATION_MESSAGE);
             }
         }else{
             JOptionPane.showMessageDialog(this, "Ambos campos deben estar rellenos para iniciar sesion","Error", JOptionPane.ERROR_MESSAGE);
