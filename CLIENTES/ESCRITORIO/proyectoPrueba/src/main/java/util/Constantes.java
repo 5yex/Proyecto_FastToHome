@@ -35,7 +35,7 @@ public interface Constantes {
     final public String MENSAJE_ANIO_CAMPANIA = "\nDame el año de la campaña (Mayor o igual a 2020 y maximo " + ANIO_ACTUAL + "): ";
     final public String MENSAJE_PRECIO_KILO = "Precio de la aceituna por kilo (pj:0.58 o 0.3): ";
     final public String MENSAJE_DNI = "Introduce el dni de la persona (8 numeros y 1 letra): ";
-    final public String MENSAJE_NOMBRE = "Introduzca un nombre con formato valido: \n Solo nombre mayúsculas y minusculas mayor de 2 caracteres";
+    final public String MENSAJE_NOMBRE_INFO = "Introduzca un nombre con formato valido: \n Solo nombre mayúsculas y minusculas mayor de 2 caracteres";
     final public String MENSAJE_EDAD = "Edad (mayor o igual a 18 menor que 99): ";
     final public String MENSAJE_KILOS = "Kilos recogidos (numero con 2 decimales): ";
     final public String MENSAJE_FINCA = "Dame el nombre de la finca: ";
