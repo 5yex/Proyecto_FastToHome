@@ -60,6 +60,8 @@ public interface Constantes {
     final public String PATRON_FECHA = "\\d{4}\\-(0?ERR[1-9]|1[012])\\-(0?[012][0-9]|3[01])";
     final public String PATRON_IDENTIFICADOR = "^\\d+$";
     final public String PATRON_EMAIL = "/\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b/gi";
+    final public String PATRON_TELEFONO = "(\\+34|0034|34)?[ -]*(6|7|9)[ -]*([0-9][ -]*){8}";
+    
     
     //VARIABLES FIJAS (CONSTANTES)
     final public String CLIENTE = "cliente";
