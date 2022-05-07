@@ -258,9 +258,10 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
 
     private void passwordConfirmFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmFieldFocusLost
         if(String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) != 0 && !validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO)){
-            JOptionPane.showMessageDialog(null, "El campo de contraseña y confirmar contraseña deben ser iguales","Error",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, MENSAJE_CONFIRMA_PASS,"Error",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
+    
 
     /**
      * @param args the command line arguments

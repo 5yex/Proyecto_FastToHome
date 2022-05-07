@@ -47,7 +47,8 @@ public interface Constantes {
     final public String MENSAJE_EMAIL_INFO = "Introduzca un email con formato válido. \n Ejemplos:(user@email.es, user@gmail.com, etc)";
     final public String MENSAJE_TELEFONO_INFO = "Introduzca un telefono con formato válido: \n Que empiece por 6, 7 o 9 y seguido de 8 números";
     final public String MENSAJE_ERROR_RELLENO_DATOS = "Se ha producido un error al rellenar los datos, siga las intrucciones";
-
+    final public String MENSAJE_CONFIRMA_PASS = "El campo de contraseña y confirmar contraseña deben ser iguales";
+    
     //PATRONES
     final public String PATRON_CLAVE_USUARIO = "[a-zA-Z0-9-_]{4,20}";
     final public String PATRON_PASS_USUARIO = "^(?=\\w*\\d)(?=\\w*[A-Z])(?=\\w*[a-z])\\S{8,20}$";
