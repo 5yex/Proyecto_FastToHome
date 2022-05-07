@@ -165,7 +165,8 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
     }//GEN-LAST:event_registerConfirmActionPerformed
 
     private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
-        if(nombreField.getText() == 0 && !validacionesnombreField.getText())
+        if(nombreField.getText().length() == 0 && !validaciones.validar(nombreField.getText(),PATRON_NOMBRES)){
+        }
     }//GEN-LAST:event_nombreFieldFocusLost
 
     private void registrarUsuario() {
