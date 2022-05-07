@@ -80,6 +80,12 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
 
         passwordTxt.setText("CONTRASEÑA");
 
+        passwordField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passwordFieldFocusLost(evt);
+            }
+        });
+
         apellidosField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 apellidosFieldFocusLost(evt);
@@ -218,6 +224,10 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
             JOptionPane.showMessageDialog(null, MENSAJE_EMAIL_INFO,"Error",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_emailFieldFocusLost
+
+    private void passwordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFieldFocusLost
+        
+    }//GEN-LAST:event_passwordFieldFocusLost
 
     private void registrarUsuario() {
         newUsuario.setNombre(nombreField.getText());
