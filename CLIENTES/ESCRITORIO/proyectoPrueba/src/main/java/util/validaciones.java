@@ -4,6 +4,7 @@
  */
 package util;
 
+import java.time.Clock;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -31,6 +32,7 @@ public class validaciones implements Constantes {
     
     public static boolean validacionDNI(String dni){
         int parteNumerica = Integer.parseInt(dni.substring(0,7));
+        System.out.println(parteNumerica);
         int resto = 0;
         String parteLetra = dni.substring(8, 8);
         
