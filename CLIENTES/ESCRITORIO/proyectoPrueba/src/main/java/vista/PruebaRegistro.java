@@ -203,7 +203,7 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
 
     private void tlfFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tlfFieldFocusLost
         if(!validaciones.validar(tlfField.getText(), PATRON_TELEFONO)){
-            
+            JOptionPane.showMessageDialog(this, MENSAJE_TELEFONO_INFO, "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_tlfFieldFocusLost
 
