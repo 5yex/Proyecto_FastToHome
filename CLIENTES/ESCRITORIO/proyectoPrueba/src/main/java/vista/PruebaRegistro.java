@@ -86,6 +86,12 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
             }
         });
 
+        passwordConfirmField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passwordConfirmFieldFocusLost(evt);
+            }
+        });
+
         apellidosField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 apellidosFieldFocusLost(evt);
@@ -230,6 +236,12 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
             JOptionPane.showMessageDialog(null, MENSAJE_PASS_INFO,"Error",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_passwordFieldFocusLost
+
+    private void passwordConfirmFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmFieldFocusLost
+        if(String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword()))){
+            JOptionPane.showMessageDialog(null, MENSAJE_PASS_INFO,"Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_passwordConfirmFieldFocusLost
 
     private void registrarUsuario() {
         newUsuario.setNombre(nombreField.getText());

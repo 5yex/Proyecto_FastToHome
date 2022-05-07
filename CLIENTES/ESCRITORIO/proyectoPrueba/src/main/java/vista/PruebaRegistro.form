@@ -141,6 +141,9 @@
       </Events>
     </Component>
     <Component class="javax.swing.JPasswordField" name="passwordConfirmField">
+      <Events>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="passwordConfirmFieldFocusLost"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="apellidosField">
       <Events>
