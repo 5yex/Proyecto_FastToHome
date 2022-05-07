@@ -5,6 +5,7 @@
 package vista;
 
 import controlador.UsuarioDao;
+import java.awt.Color;
 import javax.swing.JOptionPane;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
@@ -221,9 +222,11 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
     }//GEN-LAST:event_registerConfirmActionPerformed
 
     private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
-        /*if(!validaciones.validar(nombreField.getText(),PATRON_NOMBRES)){
-            JOptionPane.showMessageDialog(this, MENSAJE_NOMBRE_INFO, "Error", JOptionPane.ERROR_MESSAGE);
-        }*/
+        if(!validaciones.validar(nombreField.getText(),PATRON_NOMBRES)){
+            //JOptionPane.showMessageDialog(this, MENSAJE_NOMBRE_INFO, "Error", JOptionPane.ERROR_MESSAGE);
+            nombreField.setFont(Color.RED)
+            nombreField.setText(MENSAJE_NOMBRE_INFO);
+        }
     }//GEN-LAST:event_nombreFieldFocusLost
 
     private void apellidosFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_apellidosFieldFocusLost
@@ -251,15 +254,15 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
     }//GEN-LAST:event_emailFieldFocusLost
 
     private void passwordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFieldFocusLost
-        if(!validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO)){
+        /*if(!validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO)){
             JOptionPane.showMessageDialog(null, MENSAJE_PASS_INFO,"Error",JOptionPane.ERROR_MESSAGE);
-        }
+        }*/
     }//GEN-LAST:event_passwordFieldFocusLost
 
     private void passwordConfirmFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmFieldFocusLost
-        if(String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) != 0 && !validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO)){
+        /*if(String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) != 0 && !validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO)){
             JOptionPane.showMessageDialog(null, MENSAJE_CONFIRMA_PASS,"Error",JOptionPane.ERROR_MESSAGE);
-        }
+        }*/
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
     
 
