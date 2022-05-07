@@ -35,7 +35,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         passwordTxt = new javax.swing.JLabel();
         emailTxt = new javax.swing.JLabel();
         emailField = new javax.swing.JTextField();
-        buttonLogin = new javax.swing.JButton();
+        buttonRegistron = new javax.swing.JButton();
         titleText = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,12 +55,12 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
 
         emailTxt.setText("CORREO ELECTRÓNICO");
 
-        buttonLogin.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
-        buttonLogin.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        buttonLogin.setText("REGISTRO");
-        buttonLogin.addActionListener(new java.awt.event.ActionListener() {
+        buttonRegistron.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
+        buttonRegistron.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        buttonRegistron.setText("REGISTRO");
+        buttonRegistron.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonLoginActionPerformed(evt);
+                buttonRegistronActionPerformed(evt);
             }
         });
 
@@ -82,7 +82,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                         .addGap(8, 8, 8)
                         .addComponent(titleText))
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(buttonRegistron, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(buttonLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(56, Short.MAX_VALUE))
@@ -102,7 +102,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                 .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonRegistron, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(43, Short.MAX_VALUE))
         );
@@ -122,10 +122,10 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
+    private void buttonRegistronActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRegistronActionPerformed
         //new PruebaRegistro().setVisible(true);
         new DialogoRegistro(this, true).setVisible(true);
-    }//GEN-LAST:event_buttonLoginActionPerformed
+    }//GEN-LAST:event_buttonRegistronActionPerformed
 
     private void buttonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogin1ActionPerformed
         comprobarLogin();
@@ -197,8 +197,8 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonLogin;
     private javax.swing.JButton buttonLogin1;
+    private javax.swing.JButton buttonRegistron;
     private javax.swing.JTextField emailField;
     private javax.swing.JLabel emailTxt;
     private javax.swing.JPanel panelPrincipal;
