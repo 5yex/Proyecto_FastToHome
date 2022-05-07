@@ -35,6 +35,7 @@ public class validaciones implements Constantes {
         System.out.println(parteNumerica);
         int resto = 0;
         String parteLetra = dni.substring(8, 8);
+        System.out.println(parteLetra);
         
         String[] arrayLetras = {"T","R","W","A","G","M","Y","F","P","X","B","N","J","Z","S","Q","V","H","L","C","K","E"};
         
