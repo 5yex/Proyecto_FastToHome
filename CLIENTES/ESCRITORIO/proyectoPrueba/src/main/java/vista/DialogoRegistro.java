@@ -207,6 +207,9 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
     private void registerConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerConfirmActionPerformed
         
         if(validaciones.validar(nombreField.getText(),PATRON_NOMBRES) &&
+                validaciones.validar(apellidosField.getText(),PATRON_APELLIDOS) &&
+                validaciones.validacionDNI(dniField.getText()) &&
+                validaciones.validar(tlfField.getText(), PATRON_TELEFONO) &&
                 ){
         registrarUsuario();
         }
