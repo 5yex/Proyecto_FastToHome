@@ -136,7 +136,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         String tFieldEmail = emailField.getText();
         String tFieldPass = String.valueOf(passwordField.getPassword());
 
-        if (tFieldEmail.length() > 0 && tFieldPass.length() > 0) {
+        if (validaciones.validar(tFieldEmail, PATRON_EMAIL) && validaciones.validar(tFieldPass, PATRON_PASS_USUARIO)) {
             
             boolean passCorrecto = false;
             
