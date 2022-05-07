@@ -221,15 +221,15 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
     }//GEN-LAST:event_registerConfirmActionPerformed
 
     private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
-        if(!validaciones.validar(nombreField.getText(),PATRON_NOMBRES)){
+        /*if(!validaciones.validar(nombreField.getText(),PATRON_NOMBRES)){
             JOptionPane.showMessageDialog(this, MENSAJE_NOMBRE_INFO, "Error", JOptionPane.ERROR_MESSAGE);
-        }
+        }*/
     }//GEN-LAST:event_nombreFieldFocusLost
 
     private void apellidosFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_apellidosFieldFocusLost
-        if(!validaciones.validar(apellidosField.getText(),PATRON_APELLIDOS)){
+        /*if(!validaciones.validar(apellidosField.getText(),PATRON_APELLIDOS)){
             JOptionPane.showMessageDialog(this, MENSAJE_APELLIDO_INFO, "Error", JOptionPane.ERROR_MESSAGE);
-        }
+        }*/
     }//GEN-LAST:event_apellidosFieldFocusLost
 
     private void dniFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dniFieldFocusLost
