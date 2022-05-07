@@ -80,9 +80,9 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
 
         passwordTxt.setText("CONTRASEÑA");
 
-        apellidosField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                apellidosFieldActionPerformed(evt);
+        apellidosField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                apellidosFieldFocusLost(evt);
             }
         });
 
@@ -177,9 +177,11 @@ public class PruebaRegistro extends javax.swing.JFrame implements Constantes{
         }
     }//GEN-LAST:event_nombreFieldFocusLost
 
-    private void apellidosFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apellidosFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_apellidosFieldActionPerformed
+    private void apellidosFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_apellidosFieldFocusLost
+        if(!validaciones.validar(nombreField.getText(),PATRON_APELLIDOS)){
+            JOptionPane.showMessageDialog(this, MENSAJE_APELLIDO_INFO, "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_apellidosFieldFocusLost
 
     private void registrarUsuario() {
         newUsuario.setNombre(nombreField.getText());
