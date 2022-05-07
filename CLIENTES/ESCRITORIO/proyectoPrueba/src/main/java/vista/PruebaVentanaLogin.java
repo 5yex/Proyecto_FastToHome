@@ -154,10 +154,6 @@ public class PruebaVentanaLogin extends javax.swing.JFrame implements Constantes
     private void comprobarLogin() {
         Usuario userTmp = new Usuario();
         
-        if(validaciones.validar(emailField.getText(),PATRON_EMAIL)){
-            JOptionPane.showMessageDialog(null, "Introduce un email valido","Advertencia",JOptionPane.ERROR_MESSAGE);
-        }
-        
         /*userTmp.setDni(emailField.getText());
 
         boolean correctPass = false;
