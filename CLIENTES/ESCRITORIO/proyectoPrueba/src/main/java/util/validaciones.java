@@ -28,5 +28,11 @@ public class validaciones implements Constantes {
 
         return false;
     }
+    
+    public static boolean validacionDNI(String dni){
+        int parteNumerica = Integer.parseInt(dni.substring(0,8));
+        int resto = 0;
+        String parteLetra = dni.substring(8, 8)
+    }
 
 }
