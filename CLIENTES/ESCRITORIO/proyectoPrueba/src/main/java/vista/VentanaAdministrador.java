@@ -35,7 +35,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         panelAdministrador = new javax.swing.JPanel();
         labelNombreAdmin = new javax.swing.JLabel();
         labelBienvenido = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        labelInfo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -54,8 +54,8 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         labelBienvenido.setText("Bienvenido administrador:");
         labelBienvenido.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("En la barra superior encontraras las distintas opciones que puedes realizar");
+        labelInfo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelInfo.setText("En la barra superior encontraras las distintas opciones que puedes realizar");
 
         javax.swing.GroupLayout panelAdministradorLayout = new javax.swing.GroupLayout(panelAdministrador);
         panelAdministrador.setLayout(panelAdministradorLayout);
@@ -71,7 +71,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
                         .addComponent(labelNombreAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelAdministradorLayout.createSequentialGroup()
                         .addGap(34, 34, 34)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(labelInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
         panelAdministradorLayout.setVerticalGroup(
@@ -82,7 +82,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(labelNombreAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
@@ -131,11 +131,11 @@ public class VentanaAdministrador extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JLabel labelBienvenido;
+    private javax.swing.JLabel labelInfo;
     private javax.swing.JLabel labelNombreAdmin;
     private javax.swing.JPanel panelAdministrador;
     // End of variables declaration//GEN-END:variables
