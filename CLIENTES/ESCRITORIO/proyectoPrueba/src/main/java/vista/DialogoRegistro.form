@@ -98,7 +98,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="infoEmail" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="registerConfirm" alignment="0" min="-2" pref="461" max="-2" attributes="0"/>
+                              <Component id="registerConfirm" alignment="0" min="-2" pref="507" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -187,9 +187,9 @@
                           <Component id="infoConfirmPass" min="-2" pref="11" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                  <EmptySpace pref="30" max="32767" attributes="0"/>
                   <Component id="registerConfirm" min="-2" pref="32" max="-2" attributes="0"/>
-                  <EmptySpace pref="13" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
