@@ -51,7 +51,6 @@ public class VentanaAdministrador extends javax.swing.JFrame {
 
         labelNombreAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         labelNombreAdmin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelNombreAdmin.setText("asd");
         labelNombreAdmin.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         labelBienvenido.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
