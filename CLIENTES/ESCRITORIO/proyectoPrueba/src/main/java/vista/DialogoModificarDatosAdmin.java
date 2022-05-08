@@ -25,7 +25,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     /**
      * Creates new form DialogoRegistro
      */
-    public DialogoModificarDatosAdmin(java.awt.Frame parent, boolean modal) {
+    public DialogoModificarDatosAdmin(java.awt.Frame parent, boolean modal, Usuario user) {
         super(parent, modal);
         initComponents();
     }
