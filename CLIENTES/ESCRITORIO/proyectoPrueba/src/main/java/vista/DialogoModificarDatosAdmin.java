@@ -118,7 +118,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
             }
         });
 
-        passwordTxt.setText("CONTRASEÑA");
+        passwordTxt.setText("NUEVA CONTRASEÑA");
 
         passwordField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
@@ -136,7 +136,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
 
         botonActualizar.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Green"));
         botonActualizar.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        botonActualizar.setText("CONFIRMAR REGISTRO");
+        botonActualizar.setText("ACTUALIZAR DATOS");
         botonActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonActualizarActionPerformed(evt);
@@ -258,7 +258,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
                     .addGroup(PanelRegistroLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(infoConfirmPass, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );

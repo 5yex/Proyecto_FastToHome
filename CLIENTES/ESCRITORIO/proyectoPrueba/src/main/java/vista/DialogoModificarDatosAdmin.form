@@ -185,7 +185,7 @@
                           <Component id="infoConfirmPass" min="-2" pref="11" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="30" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="botonActualizar" min="-2" pref="32" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
@@ -256,7 +256,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="passwordTxt">
           <Properties>
-            <Property name="text" type="java.lang.String" value="CONTRASE&#xd1;A"/>
+            <Property name="text" type="java.lang.String" value="NUEVA CONTRASE&#xd1;A"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="passwordField">
@@ -282,7 +282,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="3"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="CONFIRMAR REGISTRO"/>
+            <Property name="text" type="java.lang.String" value="ACTUALIZAR DATOS"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonActualizarActionPerformed"/>
