@@ -48,6 +48,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
         setMinimumSize(new java.awt.Dimension(600, 400));
+        setResizable(false);
 
         labelNombreAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         labelNombreAdmin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -77,7 +78,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
                     .addGroup(panelAdministradorLayout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(labelInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         panelAdministradorLayout.setVerticalGroup(
             panelAdministradorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,7 +89,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
                 .addComponent(labelNombreAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(labelInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         menuCuenta.setText("Mi Cuenta");
