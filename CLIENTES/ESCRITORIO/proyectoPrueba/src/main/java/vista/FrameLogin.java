@@ -159,7 +159,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                         break;
                     case ADMIN:
                         this.setVisible(false);
-                         //new administrador(user).setVisible(true);    
+                        //new administrador(user).setVisible(true);    
                         break;
                     case MERCADER:
                         this.setVisible(false);
