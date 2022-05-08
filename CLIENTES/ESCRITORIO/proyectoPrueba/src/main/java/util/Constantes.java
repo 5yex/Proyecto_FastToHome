@@ -35,7 +35,7 @@ public interface Constantes {
     final public String MENSAJE_ANIO_CAMPANIA = "\nDame el año de la campaña (Mayor o igual a 2020 y maximo " + ANIO_ACTUAL + "): ";
     final public String MENSAJE_PRECIO_KILO = "Precio de la aceituna por kilo (pj:0.58 o 0.3): ";
     final public String MENSAJE_DNI_INFO = "Introduzca un dni válido (8 numeros y 1 letra): ";
-    final public String MENSAJE_NOMBRE_INFO = "Formato inválido: \n Primera letra en mayuscula al menos.";
+    final public String MENSAJE_NOMBRE_INFO = "Formato inválido: \n Primera letra en mayuscula resto misnúscula.";
     final public String MENSAJE_APELLIDO_INFO = "Introduzca un apellido con formato valido: \n Primera letra en mayuscula al menos.\n Tambien admite apellidos compuestos con:\n de, del, la, las, los";
     final public String MENSAJE_EDAD = "Edad (mayor o igual a 18 menor que 99): ";
     final public String MENSAJE_KILOS = "Kilos recogidos (numero con 2 decimales): ";
