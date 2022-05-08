@@ -86,10 +86,10 @@ public class VentanaAdministrador extends javax.swing.JFrame {
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
-        jMenu1.setText("File");
+        jMenu1.setText("Cuenta");
         barraSuperior.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText("Operaciones");
         barraSuperior.add(jMenu2);
 
         setJMenuBar(barraSuperior);
