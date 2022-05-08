@@ -40,7 +40,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         labelInfo = new javax.swing.JLabel();
         barraSuperior = new javax.swing.JMenuBar();
         menuCuenta = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        menuOperaciones = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
@@ -91,8 +91,8 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         menuCuenta.setText("Cuenta");
         barraSuperior.add(menuCuenta);
 
-        jMenu2.setText("Operaciones");
-        barraSuperior.add(jMenu2);
+        menuOperaciones.setText("Operaciones");
+        barraSuperior.add(menuOperaciones);
 
         setJMenuBar(barraSuperior);
 
@@ -131,11 +131,11 @@ public class VentanaAdministrador extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar barraSuperior;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JLabel labelBienvenido;
     private javax.swing.JLabel labelInfo;
     private javax.swing.JLabel labelNombreAdmin;
     private javax.swing.JMenu menuCuenta;
+    private javax.swing.JMenu menuOperaciones;
     private javax.swing.JPanel panelAdministrador;
     // End of variables declaration//GEN-END:variables
 }

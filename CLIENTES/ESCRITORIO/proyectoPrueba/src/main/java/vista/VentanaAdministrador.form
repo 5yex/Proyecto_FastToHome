@@ -9,7 +9,7 @@
             <Property name="text" type="java.lang.String" value="Cuenta"/>
           </Properties>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu2">
+        <Menu class="javax.swing.JMenu" name="menuOperaciones">
           <Properties>
             <Property name="text" type="java.lang.String" value="Operaciones"/>
           </Properties>
