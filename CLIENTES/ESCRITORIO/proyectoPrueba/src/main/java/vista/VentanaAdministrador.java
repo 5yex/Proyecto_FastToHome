@@ -21,8 +21,9 @@ public class VentanaAdministrador extends javax.swing.JFrame {
      * Creates new form VentanaPrincipal
      */
     public VentanaAdministrador(Usuario user) {
-        initComponents();
         administrador = user;
+        initComponents();
+        
     }
 
     /**
