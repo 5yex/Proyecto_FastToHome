@@ -14,8 +14,10 @@ import modelo.Usuario;
  * @author jmcbg
  */
 public class VentanaAdministrador extends javax.swing.JFrame {
+
     Usuario user;
     Negocio negocio;
+
     /**
      * Creates new form VentanaPrincipal
      */
@@ -109,15 +111,14 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    
     public static void main(String args[]) {
         try {
             javax.swing.UIManager.setLookAndFeel(new FlatDarkLaf());
-           
+
         } catch (UnsupportedLookAndFeelException ex) {
 
         }
-        Usuario user = new Usuario(99,"Pruebas", "54332653Y", "pruebas@pruebas", "123456789", "mercader", 0, "0");
+        Usuario user = new Usuario(99, "Pruebas", "54332653Y", "pruebas@pruebas", "123456789", "mercader", 0, "0");
         new VentanaAdministrador(user).setVisible(true);
 //        if (conex.testConexion()) {
 //            new Login().setVisible(true);
@@ -126,10 +127,8 @@ public class VentanaAdministrador extends javax.swing.JFrame {
 //            System.exit(0);
 //        }
     }
-    
-    
-    
-    
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar barraSuperior;
     private javax.swing.JMenu jMenu2;
