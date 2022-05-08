@@ -386,7 +386,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                DialogoModificarDatosAdmin dialog = new DialogoModificarDatosAdmin(new javax.swing.JFrame(), true);
+                DialogoModificarDatosAdmin dialog = new DialogoModificarDatosAdmin(new javax.swing.JFrame(), true, admin);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
