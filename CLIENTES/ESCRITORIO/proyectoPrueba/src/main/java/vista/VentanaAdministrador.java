@@ -36,7 +36,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         labelNombreAdmin = new javax.swing.JLabel();
         labelBienvenido = new javax.swing.JLabel();
         labelInfo = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
+        barraSuperior = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
@@ -87,12 +87,12 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         );
 
         jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
+        barraSuperior.add(jMenu1);
 
         jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        barraSuperior.add(jMenu2);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(barraSuperior);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -131,9 +131,9 @@ public class VentanaAdministrador extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuBar barraSuperior;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JLabel labelBienvenido;
     private javax.swing.JLabel labelInfo;
     private javax.swing.JLabel labelNombreAdmin;
