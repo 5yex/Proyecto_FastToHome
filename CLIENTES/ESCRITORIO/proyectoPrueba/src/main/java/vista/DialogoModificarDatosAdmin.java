@@ -29,6 +29,11 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         super(parent, modal);
         initComponents();
     }
+    
+    public DialogoModificarDatosAdmin(java.awt.Frame parent, boolean modal, Usuario admin) {
+        super(parent, modal);
+        initComponents();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
