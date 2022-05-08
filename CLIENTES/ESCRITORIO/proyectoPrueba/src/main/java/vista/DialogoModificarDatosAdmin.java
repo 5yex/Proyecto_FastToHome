@@ -405,6 +405,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     }
     
     private void modificarDatosAdmin() {
+        admin.getId();
         admin.setNombre(nombreField.getText());
         admin.setDni(dniField.getText());
         admin.setTlf(tlfField.getText());
