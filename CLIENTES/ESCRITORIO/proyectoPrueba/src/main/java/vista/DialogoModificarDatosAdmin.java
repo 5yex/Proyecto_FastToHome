@@ -55,7 +55,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         passwordField = new javax.swing.JPasswordField();
         passwordConfirmTxt = new javax.swing.JLabel();
         passwordConfirmField = new javax.swing.JPasswordField();
-        registerConfirm = new javax.swing.JButton();
+        botonActualizar = new javax.swing.JButton();
         infoNombre = new javax.swing.JLabel();
         infoApellido = new javax.swing.JLabel();
         infoDNI = new javax.swing.JLabel();
@@ -134,12 +134,12 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
             }
         });
 
-        registerConfirm.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Green"));
-        registerConfirm.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        registerConfirm.setText("CONFIRMAR REGISTRO");
-        registerConfirm.addActionListener(new java.awt.event.ActionListener() {
+        botonActualizar.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Green"));
+        botonActualizar.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        botonActualizar.setText("CONFIRMAR REGISTRO");
+        botonActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                registerConfirmActionPerformed(evt);
+                botonActualizarActionPerformed(evt);
             }
         });
 
@@ -192,7 +192,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
                                     .addComponent(emailTXT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(infoEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(registerConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 507, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(botonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 507, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PanelRegistroLayout.createSequentialGroup()
                         .addGap(50, 50, 50)
                         .addComponent(titleText, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -235,7 +235,6 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRegistroLayout.createSequentialGroup()
                         .addComponent(infoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(emailTXT)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -243,7 +242,6 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRegistroLayout.createSequentialGroup()
                         .addComponent(infoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(passwordTxt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -261,7 +259,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
                         .addGap(20, 20, 20)
                         .addComponent(infoConfirmPass, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(registerConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
 
@@ -281,7 +279,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void registerConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerConfirmActionPerformed
+    private void botonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarActionPerformed
         
         if(validaciones.validar(nombreField.getText(),PATRON_NOMBRES) &&
                 validaciones.validar(apellidosField.getText(),PATRON_APELLIDOS) &&
@@ -295,7 +293,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         }else{
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, URL, HEIGHT);
         }
-    }//GEN-LAST:event_registerConfirmActionPerformed
+    }//GEN-LAST:event_botonActualizarActionPerformed
 
     private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
         if(!validaciones.validar(nombreField.getText(),PATRON_NOMBRES)){
@@ -418,6 +416,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     private javax.swing.JPanel PanelRegistro;
     private javax.swing.JTextField apellidosField;
     private javax.swing.JLabel apellidosTXT;
+    private javax.swing.JButton botonActualizar;
     private javax.swing.JTextField dniField;
     private javax.swing.JLabel dniTXT;
     private javax.swing.JTextField emailField;
@@ -435,7 +434,6 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     private javax.swing.JLabel passwordConfirmTxt;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JLabel passwordTxt;
-    private javax.swing.JButton registerConfirm;
     private javax.swing.JLabel titleText;
     private javax.swing.JTextField tlfField;
     private javax.swing.JLabel tlfTXT;
