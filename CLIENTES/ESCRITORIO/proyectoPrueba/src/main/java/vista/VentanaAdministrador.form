@@ -4,7 +4,7 @@
   <NonVisualComponents>
     <Menu class="javax.swing.JMenuBar" name="barraSuperior">
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="jMenu1">
+        <Menu class="javax.swing.JMenu" name="menuCuenta">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cuenta"/>
           </Properties>
