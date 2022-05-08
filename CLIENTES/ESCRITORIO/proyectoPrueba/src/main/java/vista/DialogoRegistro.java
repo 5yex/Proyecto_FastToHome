@@ -306,10 +306,10 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
 
     private void tlfFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tlfFieldFocusLost
         if(!validaciones.validar(tlfField.getText(), PATRON_TELEFONO)){
-            infoDNI.setForeground(Color.RED);
-            infoDNI.setText(MENSAJE_TELEFONO_INFO);
+            infoTelefono.setForeground(Color.RED);
+            infoTelefono.setText(MENSAJE_TELEFONO_INFO);
         }else{
-            infoDNI.setText("");
+            infoTelefono.setText("");
         }
     }//GEN-LAST:event_tlfFieldFocusLost
 
