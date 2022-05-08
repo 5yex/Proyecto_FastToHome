@@ -30,7 +30,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         initComponents();
     }
     
-    public DialogoModificarDatosAdmin(java.awt.Frame parent, boolean modal, Usuario admin) {
+    public DialogoModificarDatosAdmin(java.awt.Frame parent, boolean modal, Usuario administrador) {
         super(parent, modal);
         initComponents();
     }
