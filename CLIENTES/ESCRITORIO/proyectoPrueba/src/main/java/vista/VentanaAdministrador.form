@@ -6,8 +6,15 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="menuCuenta">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Cuenta"/>
+            <Property name="text" type="java.lang.String" value="Mi Cuenta"/>
           </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Modificar datos"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="menuOperaciones">
           <Properties>
