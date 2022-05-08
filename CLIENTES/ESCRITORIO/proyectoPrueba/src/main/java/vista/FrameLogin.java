@@ -163,7 +163,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                         break;
                     case MERCADER:
                         this.setVisible(false);
-                        new mercader(user).setVisible(true);
+                        new VentanaMercader(user).setVisible(true);
                         break;
                     default:
                         throw new AssertionError();

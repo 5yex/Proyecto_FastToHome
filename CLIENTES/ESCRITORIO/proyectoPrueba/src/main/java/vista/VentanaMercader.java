@@ -13,13 +13,13 @@ import modelo.Usuario;
  *
  * @author jmcbg
  */
-public class mercader extends javax.swing.JFrame {
+public class VentanaMercader extends javax.swing.JFrame {
     Usuario mercader;
     Negocio negocio;
     /**
      * Creates new form VentanaPrincipal
      */
-    public mercader(Usuario user) {
+    public VentanaMercader(Usuario user) {
         initComponents();
         mercader = user;
     }
@@ -91,7 +91,7 @@ public class mercader extends javax.swing.JFrame {
 
         }
         Usuario user = new Usuario(99,"Pruebas", "54332653Y", "pruebas@pruebas", "123456789", "mercader", 0, "0");
-        new mercader(user).setVisible(true);
+        new VentanaMercader(user).setVisible(true);
 //        if (conex.testConexion()) {
 //            new Login().setVisible(true);
 //        } else {
