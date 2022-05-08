@@ -16,7 +16,6 @@ import modelo.Usuario;
 public class VentanaAdministrador extends javax.swing.JFrame {
 
     Usuario user;
-    Negocio negocio;
 
     /**
      * Creates new form VentanaPrincipal
