@@ -57,7 +57,7 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
         passwordConfirmField = new javax.swing.JPasswordField();
         registerConfirm = new javax.swing.JButton();
         infoNombre = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        infoApellido = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -145,7 +145,7 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
 
         infoNombre.setText("jLabel1");
 
-        jLabel2.setText("jLabel1");
+        infoApellido.setText("jLabel1");
 
         jLabel3.setText("jLabel1");
 
@@ -190,7 +190,7 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
                             .addComponent(apellidosField, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(apellidosTXT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(infoApellido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(PanelRegistroLayout.createSequentialGroup()
                         .addComponent(dniField, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -227,7 +227,7 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(apellidosField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                    .addComponent(infoApellido))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(dniTXT)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -400,8 +400,8 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
     private javax.swing.JLabel dniTXT;
     private javax.swing.JTextField emailField;
     private javax.swing.JLabel emailTXT;
+    private javax.swing.JLabel infoApellido;
     private javax.swing.JLabel infoNombre;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
