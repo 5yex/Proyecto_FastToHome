@@ -314,9 +314,12 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
     }//GEN-LAST:event_tlfFieldFocusLost
 
     private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
-        /*if(!validaciones.validar(emailField.getText(),PATRON_EMAIL)){
-            JOptionPane.showMessageDialog(null, MENSAJE_EMAIL_INFO,"Error",JOptionPane.ERROR_MESSAGE);
-        }*/
+        if(!validaciones.validar(emailField.getText(),PATRON_EMAIL)){
+            infoEmail.setForeground(Color.RED);
+            infoEmail.setText(MENSAJE_EMAIL_INFO);
+        }else{
+            infoEmail.setText("");
+        }
     }//GEN-LAST:event_emailFieldFocusLost
 
     private void passwordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFieldFocusLost
