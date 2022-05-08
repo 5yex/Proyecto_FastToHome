@@ -96,6 +96,11 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         menuCuenta.setText("Mi Cuenta");
 
         modificarMenuItem.setText("Modificar Datos");
+        modificarMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificarMenuItemActionPerformed(evt);
+            }
+        });
         menuCuenta.add(modificarMenuItem);
 
         barraSuperior.add(menuCuenta);
@@ -126,6 +131,10 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void modificarMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarMenuItemActionPerformed
+        
+    }//GEN-LAST:event_modificarMenuItemActionPerformed
 
     public static void main(String args[]) {
         try {
