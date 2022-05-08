@@ -41,7 +41,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         labelInfo = new javax.swing.JLabel();
         barraSuperior = new javax.swing.JMenuBar();
         menuCuenta = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        modificarMenuItem = new javax.swing.JMenuItem();
         menuOperaciones = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -95,8 +95,8 @@ public class VentanaAdministrador extends javax.swing.JFrame {
 
         menuCuenta.setText("Mi Cuenta");
 
-        jMenuItem1.setText("Modificar Datos");
-        menuCuenta.add(jMenuItem1);
+        modificarMenuItem.setText("Modificar Datos");
+        menuCuenta.add(modificarMenuItem);
 
         barraSuperior.add(menuCuenta);
 
@@ -147,7 +147,6 @@ public class VentanaAdministrador extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar barraSuperior;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JLabel labelBienvenido;
@@ -155,6 +154,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
     private javax.swing.JLabel labelNombreAdmin;
     private javax.swing.JMenu menuCuenta;
     private javax.swing.JMenu menuOperaciones;
+    private javax.swing.JMenuItem modificarMenuItem;
     private javax.swing.JPanel panelAdministrador;
     // End of variables declaration//GEN-END:variables
 }
