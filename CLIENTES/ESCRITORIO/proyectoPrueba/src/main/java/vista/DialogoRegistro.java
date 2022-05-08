@@ -298,9 +298,9 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
     private void dniFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dniFieldFocusLost
         if(!validaciones.validacionDNI(dniField.getText())){
             infoDNI.setForeground(Color.RED);
-            infoDNI.setText(MENSAJE_DNI);
+            infoDNI.setText(MENSAJE_DNI_INFO);
         }else{
-            infoApellido.setText("");
+            infoDNI.setText("");
         }
     }//GEN-LAST:event_dniFieldFocusLost
 
