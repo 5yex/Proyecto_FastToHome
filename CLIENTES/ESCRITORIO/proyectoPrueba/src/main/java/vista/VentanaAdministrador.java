@@ -133,7 +133,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
 
         }
         Usuario user = new Usuario(99, "Pruebas", "54332653Y", "pruebas@pruebas", "123456789", "mercader", 0, "0");
-        new VentanaAdministrador(user).setVisible(true);
+        //new VentanaAdministrador(user).setVisible(true);
 //        if (conex.testConexion()) {
 //            new Login().setVisible(true);
 //        } else {
