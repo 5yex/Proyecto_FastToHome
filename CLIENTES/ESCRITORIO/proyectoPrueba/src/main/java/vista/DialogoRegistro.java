@@ -296,9 +296,12 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
     }//GEN-LAST:event_apellidosFieldFocusLost
 
     private void dniFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dniFieldFocusLost
-        /*if(!validaciones.validacionDNI(dniField.getText())){
-            JOptionPane.showMessageDialog(this, MENSAJE_DNI, "Error", JOptionPane.ERROR_MESSAGE);
-        }*/
+        if(!validaciones.validacionDNI(dniField.getText())){
+            infoDNI.setForeground(Color.RED);
+            infoDNI.setText(MENSAJE_DNI);
+        }else{
+            infoApellido.setText("");
+        }
     }//GEN-LAST:event_dniFieldFocusLost
 
     private void tlfFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tlfFieldFocusLost
