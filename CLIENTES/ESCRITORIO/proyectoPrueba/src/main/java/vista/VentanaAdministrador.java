@@ -48,6 +48,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(600, 400));
         setResizable(false);
+        setSize(new java.awt.Dimension(451, 192));
 
         labelNombreAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         labelNombreAdmin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -120,8 +121,6 @@ public class VentanaAdministrador extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelAdministrador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-
-        getAccessibleContext().setAccessibleName("");
 
         pack();
         setLocationRelativeTo(null);
