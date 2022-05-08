@@ -74,7 +74,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
 
         titleText.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         titleText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleText.setText("REGISTRO DE USUARIO");
+        titleText.setText("ACTUALIZAR DATOS");
 
         nombreTXT.setText("NOMBRE");
 
