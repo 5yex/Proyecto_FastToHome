@@ -21,7 +21,6 @@ public class mercader extends javax.swing.JFrame {
      */
     public mercader(Usuario user) {
         initComponents();
-        user = user;
     }
 
     /**
