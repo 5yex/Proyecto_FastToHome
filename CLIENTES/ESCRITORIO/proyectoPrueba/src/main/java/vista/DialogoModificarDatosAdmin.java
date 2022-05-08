@@ -71,6 +71,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         infoConfirmPass = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Ventana Actualizacion de Datos de Administrador");
 
         titleText.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         titleText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
