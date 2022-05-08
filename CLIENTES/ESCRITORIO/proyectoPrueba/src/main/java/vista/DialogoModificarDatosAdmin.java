@@ -289,7 +289,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
                 validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO) &&
                 String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0
                 ){
-            registrarUsuario();
+            modificarDatosAdmin();
         }else{
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, URL, HEIGHT);
         }
@@ -398,7 +398,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         });
     }
     
-    private void registrarUsuario() {
+    private void modificarDatosAdmin() {
         newUsuario.setNombre(nombreField.getText());
         newUsuario.setDni(dniField.getText());
         newUsuario.setTlf(tlfField.getText());
