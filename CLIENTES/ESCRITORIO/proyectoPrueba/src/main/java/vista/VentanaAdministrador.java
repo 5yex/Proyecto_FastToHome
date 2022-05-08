@@ -15,13 +15,14 @@ import modelo.Usuario;
  */
 public class VentanaAdministrador extends javax.swing.JFrame {
 
-    Usuario user;
+    Usuario administrador;
 
     /**
      * Creates new form VentanaPrincipal
      */
     public VentanaAdministrador(Usuario user) {
         initComponents();
+        administrador = user;
     }
 
     /**
