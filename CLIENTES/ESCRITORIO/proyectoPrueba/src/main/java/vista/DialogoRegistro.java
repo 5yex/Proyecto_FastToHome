@@ -332,9 +332,12 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
     }//GEN-LAST:event_passwordFieldFocusLost
 
     private void passwordConfirmFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmFieldFocusLost
-        /*if(String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) != 0 && !validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO)){
-            JOptionPane.showMessageDialog(null, MENSAJE_CONFIRMA_PASS,"Error",JOptionPane.ERROR_MESSAGE);
-        }*/
+        if(String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) != 0 && !validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO)){
+            infoConfirmPass.setForeground(Color.RED);
+            infoConfirmPass.setText(MENSAJE_PASS_INFO);
+        }else{
+            infoConfirmPass.setText("");
+        }
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
 
     private void nombreFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusGained
