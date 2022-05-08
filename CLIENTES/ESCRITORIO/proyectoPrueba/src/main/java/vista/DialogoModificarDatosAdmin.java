@@ -408,7 +408,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         System.out.println(newUsuario.getJSON());
         
         
-        UsuarioDao.nuevoUsuario(newUsuario);
+        //UsuarioDao.nuevoUsuario(newUsuario);
         this.dispose();
     }
 
