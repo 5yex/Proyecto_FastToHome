@@ -92,7 +92,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="passwordConfirmField" min="-2" pref="138" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel7" max="32767" attributes="0"/>
+                          <Component id="infoConfirmPass" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="28" max="32767" attributes="0"/>
@@ -156,7 +156,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="passwordConfirmField" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="infoConfirmPass" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Component id="registerConfirm" min="-2" pref="32" max="-2" attributes="0"/>
@@ -291,7 +291,7 @@
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="infoConfirmPass">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
