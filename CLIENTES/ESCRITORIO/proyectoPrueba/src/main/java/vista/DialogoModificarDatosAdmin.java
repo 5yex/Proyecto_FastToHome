@@ -20,7 +20,7 @@ import util.validaciones;
  */
 public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements Constantes{
     
-    private Usuario newUsuario = new Usuario();
+    private Usuario admin = new Usuario();
 
     /**
      * Creates new form DialogoRegistro
@@ -399,13 +399,13 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     }
     
     private void modificarDatosAdmin() {
-        newUsuario.setNombre(nombreField.getText());
-        newUsuario.setDni(dniField.getText());
-        newUsuario.setTlf(tlfField.getText());
-        newUsuario.setEmail(emailField.getText());
-        newUsuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
-        newUsuario.setRol("admin");
-        System.out.println(newUsuario.getJSON());
+        admin.setNombre(nombreField.getText());
+        admin.setDni(dniField.getText());
+        admin.setTlf(tlfField.getText());
+        admin.setEmail(emailField.getText());
+        admin.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
+        admin.setRol("admin");
+        System.out.println(admin.getJSON());
         
         
         //UsuarioDao.nuevoUsuario(newUsuario);
