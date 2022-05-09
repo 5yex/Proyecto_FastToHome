@@ -22,6 +22,14 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
 
     private Usuario admin = new Usuario();
 
+    public Usuario getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(Usuario admin) {
+        this.admin = admin;
+    }
+
     /**
      * Creates new form DialogoRegistro
      */
