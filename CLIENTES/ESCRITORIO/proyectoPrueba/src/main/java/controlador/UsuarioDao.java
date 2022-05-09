@@ -67,7 +67,7 @@ public class UsuarioDao {
         return user;
     }
     
-    public static void actualizarUsuario(Usuario user){
+    public static boolean actualizarUsuario(Usuario user){
         return gestion.hacerConsulta(new Peticion("actualizar_usuario", user.getJSON()));
     }
 
