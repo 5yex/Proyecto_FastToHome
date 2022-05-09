@@ -163,7 +163,7 @@ function actualizarUsuario($datos) {
         $usuario->setRol($datos->rol);
         $usuario->setPassword($datos->password);
 
-        if ($usuario->agregar()) {
+        if ($usuario->actualizarUsuario()) {
             mandarRespuesta(false, 'Se ha realizado la insercion de un usuario');
         } else {
             mandarRespuesta(true, 'Error en el usuario');
