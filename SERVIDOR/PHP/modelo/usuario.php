@@ -186,7 +186,7 @@ class usuario extends conexion {
         $email = $this->getEmail();
         $tlf = $this->getTlf();
         $rol = $this->getRol();
-        $id_direccion = $this->getId_direccion();
+        //$id_direccion = $this->getId_direccion();
         $password = $this->getPassword();
 
         $sentencia->bindParam(":nom", $nombre);
@@ -194,7 +194,7 @@ class usuario extends conexion {
         $sentencia->bindParam(":email", $email);
         $sentencia->bindParam(":tlf", $tlf);
         $sentencia->bindParam(":rol", $rol);
-        $sentencia->bindParam(":dir", $id_direccion);
+        //$sentencia->bindParam(":dir", $id_direccion);
         $sentencia->bindParam(":pass", $password);
 
         // $sentencia->bindParam(":fot", $this->getFoto() );
@@ -202,7 +202,6 @@ class usuario extends conexion {
 
         if ($resultado != 1) {
             //ocurrio un error al insertar
-            printf('aaa');
             return FALSE;
         }
 
