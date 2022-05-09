@@ -26,11 +26,11 @@ class usuario extends conexion {
     public function getNombre() {
         return $this->nombre;
     }
-    
+
     public function getApellidos() {
         return $this->apellidos;
     }
-    
+
     public function getDni() {
         return $this->dni;
     }
@@ -62,12 +62,12 @@ class usuario extends conexion {
     public function setNombre($nombre): void {
         $this->nombre = $nombre;
     }
-    
+
     public function setApellidos($apellidos): void {
         $this->apellidos = $apellidos;
     }
 
-        public function setDni($dni): void {
+    public function setDni($dni): void {
         $this->dni = $dni;
     }
 
@@ -182,11 +182,11 @@ class usuario extends conexion {
         $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
-    
+
     public function actualizarUsuario() {
-        
+
         $sql = "UPDATE usuarios SET ";
-        
+
         $sentencia = $this->dblink->prepare($sql);
 
         // $stmt->bindParam(':name', $userName);
@@ -217,4 +217,5 @@ class usuario extends conexion {
         //Insertó correctamente
         return TRUE;
     }
+
 }
