@@ -173,5 +173,41 @@ class usuario extends conexion {
         $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
+    
+    public function actualizarUsuario() {
+        
+        $sql = "";
+        
+        $sentencia = $this->dblink->prepare($sql);
 
+        // $stmt->bindParam(':name', $userName);
+        $nombre = $this->getNombre();
+        $dni = $this->getDni();
+        $email = $this->getEmail();
+        $tlf = $this->getTlf();
+        $rol = $this->getRol();
+        $id_direccion = $this->getId_direccion();
+        $password = $this->getPassword();
+
+        $sentencia->bindParam(":nom", $nombre);
+        $sentencia->bindParam(":dni", $dni);
+        $sentencia->bindParam(":email", $email);
+        $sentencia->bindParam(":tlf", $tlf);
+        $sentencia->bindParam(":rol", $rol);
+        $sentencia->bindParam(":dir", $id_direccion);
+        $sentencia->bindParam(":pass", $password);
+
+        // $sentencia->bindParam(":fot", $this->getFoto() );
+        $resultado = $sentencia->execute();
+
+        if ($resultado != 1) {
+            //ocurrio un error al insertar
+            printf('aaa');
+            return FALSE;
+        }
+
+        //Insertó correctamente
+        return TRUE;
+    }
+    }
 }
