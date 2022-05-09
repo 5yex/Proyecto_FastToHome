@@ -28,6 +28,8 @@ if (empty($_POST["DATA"])) {
             getHash(json_decode($peticion->datos));
             break;
         case 'actualizar_usuario';
+            //actualizarUsuario(json_decode($peticion->datos));
+            break;
             
         default;
             mandarRespuesta(true, 'comando no  reconocido');
