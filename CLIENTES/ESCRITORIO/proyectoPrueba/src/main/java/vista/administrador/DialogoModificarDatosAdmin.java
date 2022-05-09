@@ -47,26 +47,14 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
 
         PanelRegistro = new javax.swing.JPanel();
         titleText = new javax.swing.JLabel();
-        nombreTXT = new javax.swing.JLabel();
-        nombreField = new javax.swing.JTextField();
-        apellidosTXT = new javax.swing.JLabel();
-        apellidosField = new javax.swing.JTextField();
-        dniTXT = new javax.swing.JLabel();
-        dniField = new javax.swing.JTextField();
         tlfTXT = new javax.swing.JLabel();
         tlfField = new javax.swing.JTextField();
-        emailTXT = new javax.swing.JLabel();
-        emailField = new javax.swing.JTextField();
         passwordTxt = new javax.swing.JLabel();
         passwordField = new javax.swing.JPasswordField();
         passwordConfirmTxt = new javax.swing.JLabel();
         passwordConfirmField = new javax.swing.JPasswordField();
         botonActualizar = new javax.swing.JButton();
-        infoNombre = new javax.swing.JLabel();
-        infoApellido = new javax.swing.JLabel();
-        infoDNI = new javax.swing.JLabel();
         infoTelefono = new javax.swing.JLabel();
-        infoEmail = new javax.swing.JLabel();
         infoPass = new javax.swing.JLabel();
         infoConfirmPass = new javax.swing.JLabel();
 
@@ -77,51 +65,11 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         titleText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleText.setText("ACTUALIZAR DATOS");
 
-        nombreTXT.setText("NOMBRE");
-
-        nombreField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                nombreFieldFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                nombreFieldFocusLost(evt);
-            }
-        });
-        nombreField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nombreFieldActionPerformed(evt);
-            }
-        });
-
-        apellidosTXT.setText("APELLIDOS");
-
-        apellidosField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                apellidosFieldFocusLost(evt);
-            }
-        });
-
-        dniTXT.setText("DNI");
-
-        dniField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                dniFieldFocusLost(evt);
-            }
-        });
-
         tlfTXT.setText("TELÉFONO");
 
         tlfField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 tlfFieldFocusLost(evt);
-            }
-        });
-
-        emailTXT.setText("CORREO ELECTRÓNICO");
-
-        emailField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                emailFieldFocusLost(evt);
             }
         });
 
@@ -162,46 +110,24 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
                     .addGroup(PanelRegistroLayout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(passwordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(PanelRegistroLayout.createSequentialGroup()
+                                .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(tlfField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tlfTXT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(infoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(dniTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(passwordConfirmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(PanelRegistroLayout.createSequentialGroup()
-                                    .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(infoPass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGroup(PanelRegistroLayout.createSequentialGroup()
                                     .addComponent(passwordConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(infoConfirmPass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(botonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 507, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(passwordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(PanelRegistroLayout.createSequentialGroup()
-                                    .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(nombreTXT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(nombreField, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE))
+                                    .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(infoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(PanelRegistroLayout.createSequentialGroup()
-                                    .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(apellidosField, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(apellidosTXT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(infoApellido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(PanelRegistroLayout.createSequentialGroup()
-                                    .addComponent(dniField, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(infoDNI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(PanelRegistroLayout.createSequentialGroup()
-                                    .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(tlfField, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(tlfTXT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(infoTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(PanelRegistroLayout.createSequentialGroup()
-                                    .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(infoEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addComponent(botonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 507, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(emailTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(infoPass, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE))))))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
         PanelRegistroLayout.setVerticalGroup(
@@ -210,62 +136,27 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
                 .addContainerGap()
                 .addComponent(titleText, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nombreTXT)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nombreField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(PanelRegistroLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(infoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(apellidosTXT)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(apellidosField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(PanelRegistroLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(infoApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(dniTXT)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(dniField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(PanelRegistroLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(infoDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(tlfTXT)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tlfField, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                    .addComponent(infoTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(passwordTxt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(infoPass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(passwordField, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(passwordConfirmTxt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelRegistroLayout.createSequentialGroup()
-                        .addComponent(tlfField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(emailTXT))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRegistroLayout.createSequentialGroup()
-                        .addComponent(infoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(PanelRegistroLayout.createSequentialGroup()
-                        .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(passwordTxt)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(PanelRegistroLayout.createSequentialGroup()
-                        .addComponent(infoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(infoPass, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)))
-                .addGap(12, 12, 12)
-                .addComponent(passwordConfirmTxt)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(passwordConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(passwordConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(24, 24, 24)
+                        .addComponent(botonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(infoConfirmPass, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -276,9 +167,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(PanelRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 597, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(PanelRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -287,71 +176,17 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     private void botonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarActionPerformed
 
         if (validaciones.validar(nombreField.getText(), PATRON_NOMBRES)
-                && validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)
-                && validaciones.validacionDNI(dniField.getText())
-                && validaciones.validar(tlfField.getText(), PATRON_TELEFONO)
-                && validaciones.validar(emailField.getText(), PATRON_EMAIL)
-                && validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
-                && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0) {
+            && validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)
+            && validaciones.validacionDNI(dniField.getText())
+            && validaciones.validar(tlfField.getText(), PATRON_TELEFONO)
+            && validaciones.validar(emailField.getText(), PATRON_EMAIL)
+            && validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
+            && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0) {
             modificarDatosAdmin();
         } else {
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, URL, HEIGHT);
         }
     }//GEN-LAST:event_botonActualizarActionPerformed
-
-    private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
-        if (!validaciones.validar(nombreField.getText(), PATRON_NOMBRES)) {
-            infoNombre.setForeground(Color.RED);
-            infoNombre.setText(MENSAJE_NOMBRE_INFO);
-        } else {
-            infoNombre.setText("");
-        }
-    }//GEN-LAST:event_nombreFieldFocusLost
-
-    private void apellidosFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_apellidosFieldFocusLost
-        if (!validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)) {
-            infoApellido.setForeground(Color.RED);
-            infoApellido.setText(MENSAJE_APELLIDO_INFO);
-        } else {
-            infoApellido.setText("");
-        }
-    }//GEN-LAST:event_apellidosFieldFocusLost
-
-    private void dniFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dniFieldFocusLost
-        if (!validaciones.validacionDNI(dniField.getText())) {
-            infoDNI.setForeground(Color.RED);
-            infoDNI.setText(MENSAJE_DNI_INFO);
-        } else {
-            infoDNI.setText("");
-        }
-    }//GEN-LAST:event_dniFieldFocusLost
-
-    private void tlfFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tlfFieldFocusLost
-        if (!validaciones.validar(tlfField.getText(), PATRON_TELEFONO)) {
-            infoTelefono.setForeground(Color.RED);
-            infoTelefono.setText(MENSAJE_TELEFONO_INFO);
-        } else {
-            infoTelefono.setText("");
-        }
-    }//GEN-LAST:event_tlfFieldFocusLost
-
-    private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
-        if (!validaciones.validar(emailField.getText(), PATRON_EMAIL)) {
-            infoEmail.setForeground(Color.RED);
-            infoEmail.setText(MENSAJE_EMAIL_INFO);
-        } else {
-            infoEmail.setText("");
-        }
-    }//GEN-LAST:event_emailFieldFocusLost
-
-    private void passwordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFieldFocusLost
-        if (!validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)) {
-            infoPass.setForeground(Color.RED);
-            infoPass.setText(MENSAJE_PASS_INFO);
-        } else {
-            infoPass.setText("");
-        }
-    }//GEN-LAST:event_passwordFieldFocusLost
 
     private void passwordConfirmFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmFieldFocusLost
         if (String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) != 0 || !validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)) {
@@ -362,13 +197,23 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         }
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
 
-    private void nombreFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombreFieldFocusGained
+    private void passwordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFieldFocusLost
+        if (!validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)) {
+            infoPass.setForeground(Color.RED);
+            infoPass.setText(MENSAJE_PASS_INFO);
+        } else {
+            infoPass.setText("");
+        }
+    }//GEN-LAST:event_passwordFieldFocusLost
 
-    private void nombreFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombreFieldActionPerformed
+    private void tlfFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tlfFieldFocusLost
+        if (!validaciones.validar(tlfField.getText(), PATRON_TELEFONO)) {
+            infoTelefono.setForeground(Color.RED);
+            infoTelefono.setText(MENSAJE_TELEFONO_INFO);
+        } else {
+            infoTelefono.setText("");
+        }
+    }//GEN-LAST:event_tlfFieldFocusLost
 
     /**
      * @param args the command line arguments
@@ -417,22 +262,10 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelRegistro;
-    private javax.swing.JTextField apellidosField;
-    private javax.swing.JLabel apellidosTXT;
     private javax.swing.JButton botonActualizar;
-    private javax.swing.JTextField dniField;
-    private javax.swing.JLabel dniTXT;
-    private javax.swing.JTextField emailField;
-    private javax.swing.JLabel emailTXT;
-    private javax.swing.JLabel infoApellido;
     private javax.swing.JLabel infoConfirmPass;
-    private javax.swing.JLabel infoDNI;
-    private javax.swing.JLabel infoEmail;
-    private javax.swing.JLabel infoNombre;
     private javax.swing.JLabel infoPass;
     private javax.swing.JLabel infoTelefono;
-    private javax.swing.JTextField nombreField;
-    private javax.swing.JLabel nombreTXT;
     private javax.swing.JPasswordField passwordConfirmField;
     private javax.swing.JLabel passwordConfirmTxt;
     private javax.swing.JPasswordField passwordField;
