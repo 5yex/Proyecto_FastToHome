@@ -193,6 +193,7 @@ class usuario extends conexion {
 
         // $stmt->bindParam(':name', $userName);
         $nombre = $this->getNombre();
+        $apellidos = $this->getApellidos();
         $dni = $this->getDni();
         $email = $this->getEmail();
         $tlf = $this->getTlf();
@@ -201,6 +202,7 @@ class usuario extends conexion {
         $password = $this->getPassword();
 
         $sentencia->bindParam(":nom", $nombre);
+        $sentencia->bindParam(":ape",$apellidos);
         $sentencia->bindParam(":dni", $dni);
         $sentencia->bindParam(":email", $email);
         $sentencia->bindParam(":tlf", $tlf);
