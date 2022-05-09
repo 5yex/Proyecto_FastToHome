@@ -187,7 +187,7 @@ class usuario extends conexion {
 
     public function actualizarUsuario() {
 
-        $sql = "UPDATE usuarios SET ";
+        $sql = "UPDATE usuarios SET Nombre = :nom, apellidos = :ape, Dni = :dni, Email = :email, tlf = :tlf, Rol = :rol, password = :pass";
 
         $sentencia = $this->dblink->prepare($sql);
 
