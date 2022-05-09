@@ -175,11 +175,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
 
     private void botonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarActionPerformed
 
-        if (validaciones.validar(nombreField.getText(), PATRON_NOMBRES)
-            && validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)
-            && validaciones.validacionDNI(dniField.getText())
-            && validaciones.validar(tlfField.getText(), PATRON_TELEFONO)
-            && validaciones.validar(emailField.getText(), PATRON_EMAIL)
+        if (validaciones.validar(tlfField.getText(), PATRON_TELEFONO)
             && validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
             && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0) {
             modificarDatosAdmin();
