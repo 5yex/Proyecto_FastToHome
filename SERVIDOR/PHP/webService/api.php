@@ -150,6 +150,29 @@ function getHash($datos) {
     }
 }
 
+function actualizarUsuario($datos) {
+    require_once '../modelo/usuario.php';
+    try {
+        $usuario = new usuario();
+        $usuario->setNombre($datos->nombre);
+        $usuario->setApellidos($datos->$apellidos);
+        $usuario->setDni($datos->dni);
+        $usuario->setEmail($datos->email);
+        $usuario->setId_direccion($datos->id_direccion);
+        $usuario->setTlf($datos->tlf);
+        $usuario->setRol($datos->rol);
+        $usuario->setPassword($datos->password);
+
+        if ($usuario->agregar()) {
+            mandarRespuesta(false, 'Se ha realizado la insercion de un usuario');
+        } else {
+            mandarRespuesta(true, 'Error en el usuario');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
 function getUsuario($datos) {
     require_once '../modelo/usuario.php';
     try {
