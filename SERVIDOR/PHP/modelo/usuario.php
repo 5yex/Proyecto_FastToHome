@@ -108,7 +108,7 @@ class usuario extends conexion {
         $password = $this->getPassword();
 
         $sentencia->bindParam(":nom", $nombre);
-        $sentencia->bindParam(":ape")
+        $sentencia->bindParam(":ape",$apellidos);
         $sentencia->bindParam(":dni", $dni);
         $sentencia->bindParam(":email", $email);
         $sentencia->bindParam(":tlf", $tlf);
