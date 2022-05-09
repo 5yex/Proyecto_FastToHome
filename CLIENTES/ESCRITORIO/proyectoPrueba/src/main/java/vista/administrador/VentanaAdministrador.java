@@ -134,6 +134,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
 
     private void modificarMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarMenuItemActionPerformed
         new DialogoModificarDatosAdmin(this, true, administrador).setVisible(true);
+        
     }//GEN-LAST:event_modificarMenuItemActionPerformed
 
     public static void main(String args[]) {
