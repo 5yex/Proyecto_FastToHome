@@ -164,9 +164,9 @@ function actualizarUsuario($datos) {
         $usuario->setPassword($datos->password);
 
         if ($usuario->actualizarUsuario()) {
-            mandarRespuesta(false, 'Se ha realizado la insercion de un usuario');
+            mandarRespuesta(false, 'Se ha realizado la actualizacion de un usuario');
         } else {
-            mandarRespuesta(true, 'Error en el usuario');
+            mandarRespuesta(true, 'Error al actualizar el usuario');
         }
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
