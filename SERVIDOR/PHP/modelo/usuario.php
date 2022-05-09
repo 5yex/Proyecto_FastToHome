@@ -99,6 +99,7 @@ class usuario extends conexion {
 
         // $stmt->bindParam(':name', $userName);
         $nombre = $this->getNombre();
+        $apellidos = $this->getApellidos();
         $dni = $this->getDni();
         $email = $this->getEmail();
         $tlf = $this->getTlf();
