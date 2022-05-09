@@ -73,6 +73,14 @@ public class Usuario {
         this.nombre = nombre;
     }
 
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
     public String getDni() {
         return dni;
     }
