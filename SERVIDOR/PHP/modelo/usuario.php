@@ -26,7 +26,11 @@ class usuario extends conexion {
     public function getNombre() {
         return $this->nombre;
     }
-
+    
+    public function getApellidos() {
+        return $this->apellidos;
+    }
+    
     public function getDni() {
         return $this->dni;
     }
@@ -58,8 +62,12 @@ class usuario extends conexion {
     public function setNombre($nombre): void {
         $this->nombre = $nombre;
     }
+    
+    public function setApellidos($apellidos): void {
+        $this->apellidos = $apellidos;
+    }
 
-    public function setDni($dni): void {
+        public function setDni($dni): void {
         $this->dni = $dni;
     }
 
