@@ -5,6 +5,7 @@
 package vista.administrador;
 
 import com.formdev.flatlaf.FlatDarkLaf;
+import controlador.UsuarioDao;
 import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Negocio;
 import modelo.Usuario;
@@ -138,7 +139,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
     }//GEN-LAST:event_modificarMenuItemActionPerformed
 
     private void actualizarVentana(){
-    
+    administrador = UsuarioDao.obtenerDatosUsuario(administrador);
     labelNombreAdmin.setName(administrador.getNombre());
     
     }
