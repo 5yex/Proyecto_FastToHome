@@ -429,6 +429,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
             this.dispose();
         }else{
             JOptionPane.showMessageDialog(this, "No se pudo actualizar el administrador", "Error al actualizar", JOptionPane.ERROR_MESSAGE);
+            admin = adminCopia;
         }
     }
 
