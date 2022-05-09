@@ -4,6 +4,7 @@
  */
 package vista;
 
+import vista.administrador.VentanaAdministrador;
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatIntelliJLaf;
 import controlador.UsuarioDao;
@@ -12,12 +13,14 @@ import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
 import util.validaciones;
+import vista.mercader.VentanaMercader;
 
 /**
  *
  * @author jmcbg
  */
 public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
+
     /**
      * Creates new form tests
      */
@@ -137,44 +140,45 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         String tFieldPass = String.valueOf(passwordField.getPassword());
 
         if (tFieldEmail.length() > 0 && tFieldPass.length() > 0) {
-            
+
             boolean passCorrecto = false;
-            
+
             Usuario user = new Usuario(tFieldEmail);
-            
+
             user = UsuarioDao.getHash(user);
-            if(user != null){
+            if (user != null) {
                 String passHash = user.getPassword();
                 passCorrecto = BCrypt.checkpw(tFieldPass, passHash);
-            }
-            if (passCorrecto) {
-                System.out.println("vista.login.comprobarLogin()  -   LOGEADO");
-                user = UsuarioDao.obtenerDatosUsuario(user);
-                String rol = user.getRol();
+                if (passCorrecto) {
+                    System.out.println("vista.login.comprobarLogin()  -   LOGEADO");
+                    user = UsuarioDao.obtenerDatosUsuario(user);
+                    String rol = user.getRol();
+                    switch (rol) {
+                        case CLIENTE:
+                            JOptionPane.showMessageDialog(this, "No está disponible una aplicación de escritorio para los clientes.\n"
+                                    + "Si quieres registrar tu negocio y acceder como mercader solicítalo a los adminsitradores.\n"
+                                    + "Si eres un nuevo administrador y no puedes entrar espera a un administrador te registre como tal.", "Advertencia.", JOptionPane.INFORMATION_MESSAGE);
+                            break;
+                        case ADMIN:
+                            this.setVisible(false);
+                            new VentanaAdministrador(user).setVisible(true);
+                            break;
+                        case MERCADER:
+                            this.setVisible(false);
+                            new VentanaMercader(user).setVisible(true);
+                            break;
+                        default:
+                            throw new AssertionError();
+                    }
 
-                switch (rol) {
-                    case CLIENTE:
-                        JOptionPane.showMessageDialog(this, "No está disponible una aplicación de escritorio para los clientes.\n"
-                                + "Si quieres registrar tu negocio y acceder como mercader solicítalo a los adminsitradores.\n"
-                                + "Si eres un nuevo administrador y no puedes entrar espera a un administrador te registre como tal.", "Advertencia.", JOptionPane.INFORMATION_MESSAGE);
-                        break;
-                    case ADMIN:
-                        this.setVisible(false);
-                        new VentanaAdministrador(user).setVisible(true);    
-                        break;
-                    case MERCADER:
-                        this.setVisible(false);
-                        new VentanaMercader(user).setVisible(true);
-                        break;
-                    default:
-                        throw new AssertionError();
+                } else {
+                    JOptionPane.showMessageDialog(this, "La contraseña introducida no es correcta", "Advertencia", JOptionPane.INFORMATION_MESSAGE);
                 }
-
-            }else{
-                JOptionPane.showMessageDialog(this, "El usuario introducido no existe","Advertencia", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "El usuario introducido no existe", "Advertencia", JOptionPane.INFORMATION_MESSAGE);
             }
-        }else{
-            JOptionPane.showMessageDialog(this, "Ambos campos deben estar rellenos para iniciar sesion","Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "Ambos campos deben estar rellenos para iniciar sesion", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
     }

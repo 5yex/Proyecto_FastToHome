@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package vista;
+package vista.administrador;
 
 import com.formdev.flatlaf.FlatDarkLaf;
 import controlador.UsuarioDao;
@@ -18,8 +18,8 @@ import util.validaciones;
  *
  * @author Jesus
  */
-public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements Constantes{
-    
+public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements Constantes {
+
     private Usuario admin = new Usuario();
 
     /**
@@ -29,7 +29,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         super(parent, modal);
         initComponents();
     }
-    
+
     public DialogoModificarDatosAdmin(java.awt.Frame parent, boolean modal, Usuario administrador) {
         super(parent, modal);
         admin = administrador;
@@ -285,80 +285,79 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarActionPerformed
-        
-        if(validaciones.validar(nombreField.getText(),PATRON_NOMBRES) &&
-                validaciones.validar(apellidosField.getText(),PATRON_APELLIDOS) &&
-                validaciones.validacionDNI(dniField.getText()) &&
-                validaciones.validar(tlfField.getText(), PATRON_TELEFONO) &&
-                validaciones.validar(emailField.getText(),PATRON_EMAIL) &&
-                validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO) &&
-                String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0
-                ){
+
+        if (validaciones.validar(nombreField.getText(), PATRON_NOMBRES)
+                && validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)
+                && validaciones.validacionDNI(dniField.getText())
+                && validaciones.validar(tlfField.getText(), PATRON_TELEFONO)
+                && validaciones.validar(emailField.getText(), PATRON_EMAIL)
+                && validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
+                && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0) {
             modificarDatosAdmin();
-        }else{
+        } else {
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, URL, HEIGHT);
         }
     }//GEN-LAST:event_botonActualizarActionPerformed
 
     private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
-        if(!validaciones.validar(nombreField.getText(),PATRON_NOMBRES)){
+        if (!validaciones.validar(nombreField.getText(), PATRON_NOMBRES)) {
             infoNombre.setForeground(Color.RED);
             infoNombre.setText(MENSAJE_NOMBRE_INFO);
-        }else{
+        } else {
             infoNombre.setText("");
         }
     }//GEN-LAST:event_nombreFieldFocusLost
 
     private void apellidosFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_apellidosFieldFocusLost
-        if(!validaciones.validar(apellidosField.getText(),PATRON_APELLIDOS)){
+        if (!validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)) {
             infoApellido.setForeground(Color.RED);
             infoApellido.setText(MENSAJE_APELLIDO_INFO);
-        }else{
+        } else {
             infoApellido.setText("");
         }
     }//GEN-LAST:event_apellidosFieldFocusLost
 
     private void dniFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dniFieldFocusLost
-        if(!validaciones.validacionDNI(dniField.getText())){
+        if (!validaciones.validacionDNI(dniField.getText())) {
             infoDNI.setForeground(Color.RED);
             infoDNI.setText(MENSAJE_DNI_INFO);
-        }else{
+        } else {
             infoDNI.setText("");
         }
     }//GEN-LAST:event_dniFieldFocusLost
 
     private void tlfFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tlfFieldFocusLost
-        if(!validaciones.validar(tlfField.getText(), PATRON_TELEFONO)){
+        if (!validaciones.validar(tlfField.getText(), PATRON_TELEFONO)) {
             infoTelefono.setForeground(Color.RED);
             infoTelefono.setText(MENSAJE_TELEFONO_INFO);
-        }else{
+        } else {
             infoTelefono.setText("");
         }
     }//GEN-LAST:event_tlfFieldFocusLost
 
     private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
-        if(!validaciones.validar(emailField.getText(),PATRON_EMAIL)){
+        if (!validaciones.validar(emailField.getText(), PATRON_EMAIL)) {
             infoEmail.setForeground(Color.RED);
             infoEmail.setText(MENSAJE_EMAIL_INFO);
-        }else{
+        } else {
             infoEmail.setText("");
         }
     }//GEN-LAST:event_emailFieldFocusLost
 
     private void passwordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFieldFocusLost
-        if(!validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO)){
+        if (!validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)) {
             infoPass.setForeground(Color.RED);
             infoPass.setText(MENSAJE_PASS_INFO);
-        }else{
+        } else {
             infoPass.setText("");
         }
     }//GEN-LAST:event_passwordFieldFocusLost
 
     private void passwordConfirmFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmFieldFocusLost
-        if(String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) != 0 || !validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO)){
+        if (String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) != 0 || !validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)) {
             infoConfirmPass.setForeground(Color.RED);
             infoConfirmPass.setText(MENSAJE_CONFIRMA_PASS);
-        }else{
+        } else {
             infoConfirmPass.setText("");
         }
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
@@ -370,7 +369,6 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     private void nombreFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nombreFieldActionPerformed
-    
 
     /**
      * @param args the command line arguments
@@ -402,7 +400,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
             }
         });
     }
-    
+
     private void modificarDatosAdmin() {
         admin.getId();
         admin.setNombre(nombreField.getText());
@@ -412,8 +410,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         admin.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
         admin.setRol("admin");
         System.out.println(admin.getJSON());
-        
-        
+
         //UsuarioDao.actualizarDatosAdmin(admin);
         this.dispose();
     }
