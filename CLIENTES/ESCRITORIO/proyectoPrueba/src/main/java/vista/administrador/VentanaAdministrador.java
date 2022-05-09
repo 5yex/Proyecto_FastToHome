@@ -52,7 +52,6 @@ public class VentanaAdministrador extends javax.swing.JFrame {
 
         labelNombreAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         labelNombreAdmin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelNombreAdmin.setText(administrador.getNombre());
         labelNombreAdmin.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         labelBienvenido.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
@@ -137,6 +136,12 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         
     }//GEN-LAST:event_modificarMenuItemActionPerformed
 
+    private void actualizarVentana(){
+    
+    labelNombreAdmin.setName(administrador.getNombre());
+    
+    }
+    
     public static void main(String args[]) {
         try {
             javax.swing.UIManager.setLookAndFeel(new FlatDarkLaf());
