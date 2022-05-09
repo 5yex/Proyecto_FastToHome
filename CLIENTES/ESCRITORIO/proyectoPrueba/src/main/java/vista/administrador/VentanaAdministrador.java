@@ -23,6 +23,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
     public VentanaAdministrador(Usuario user) {
         administrador = user;
         initComponents();
+        actualizarVentana();
         
     }
 
