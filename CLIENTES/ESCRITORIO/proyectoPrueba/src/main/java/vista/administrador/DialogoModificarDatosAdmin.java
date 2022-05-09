@@ -413,6 +413,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     private void modificarDatosAdmin() {
         
         boolean modificado = false;
+        Usuario adminCopia = admin;
         
         admin.setNombre(nombreField.getText());
         admin.setApellidos(apellidosField.getText());
@@ -423,8 +424,12 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         System.out.println(admin.getJSON());
         
         
-        UsuarioDao.actualizarUsuario(admin);
-        this.dispose();
+        modificado = UsuarioDao.actualizarUsuario(admin);
+        if(modificado){
+            this.dispose();
+        }else{
+            JOptionPane.showMessageDialog(this, "No se pudo actualizar el administrador", "Error al actualizar", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
