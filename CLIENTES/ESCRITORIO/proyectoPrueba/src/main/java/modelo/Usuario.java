@@ -14,6 +14,7 @@ public class Usuario {
 
     private int id;
     private String nombre;
+    private String apellidos;
     private String dni;
     private String email;
     private String tlf;
@@ -24,9 +25,10 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(int id, String nombre, String dni, String email, String tlf, String rol, int id_direccion, String password) {
+    public Usuario(int id, String nombre, String apellidos, String dni, String email, String tlf, String rol, int id_direccion, String password) {
         this.id = id;
         this.nombre = nombre;
+        this.apellidos = apellidos;
         this.dni = dni;
         this.email = email;
         this.tlf = tlf;
@@ -35,8 +37,9 @@ public class Usuario {
         this.password = password;
     }
 
-    public Usuario(String nombre, String dni, String email, String tlf, String rol, int id_direccion, String password) {
+    public Usuario(String nombre, String apellidos, String dni, String email, String tlf, String rol, int id_direccion, String password) {
         this.nombre = nombre;
+        this.apellidos = apellidos;
         this.dni = dni;
         this.email = email;
         this.tlf = tlf;
