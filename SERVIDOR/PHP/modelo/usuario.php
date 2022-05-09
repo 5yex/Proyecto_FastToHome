@@ -11,6 +11,7 @@ class usuario extends conexion {
 
     private $id;
     private $nombre;
+    private $apellidos;
     private $dni;
     private $email;
     private $tlf;
