@@ -209,5 +209,4 @@ class usuario extends conexion {
         //Insertó correctamente
         return TRUE;
     }
-    }
 }
