@@ -5,6 +5,7 @@
 package controlador;
 
 import com.google.gson.JsonObject;
+import java.util.ArrayList;
 import modelo.Peticion;
 import modelo.Usuario;
 
@@ -71,6 +72,11 @@ public class UsuarioDao {
     
     public static boolean actualizarUsuario(Usuario user){
         return gestion.hacerConsulta(new Peticion("actualizar_usuario", user.getJSON()));
+    }
+    
+    public static ArrayList<Usuario> seleccionUsuarios(Usuario user){
+        
+        gestion.consultaSeleccion(new Peticion("actualizar_usuario", user.getJSON()));
     }
 
 }
