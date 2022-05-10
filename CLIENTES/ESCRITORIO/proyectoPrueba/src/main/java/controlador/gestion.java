@@ -4,6 +4,7 @@
  */
 package controlador;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import org.apache.http.Header;
@@ -113,7 +114,7 @@ public class gestion {
         }
     }
     
-    public static JsonObject consultaSeleccion(Peticion peticion) {
+    public static JsonArray consultaSeleccion(Peticion peticion) {
         String json = null;
         try {
             CloseableHttpClient client = HttpClients.createDefault();
@@ -147,7 +148,7 @@ public class gestion {
                     String errorMsg = jsonObject.get("datos").getAsString();
                     throw new Exception(errorMsg);
                 } else {
-                    return jsonObject.get("datos").getAsJsonArray().get(0).getAsJsonObject();
+                    return jsonObject.get("datos").getAsJsonArray();
                 }
             }
             return null;
