@@ -6,6 +6,8 @@ if (empty($_POST["DATA"])) {
     $peticion = json_decode($_POST["DATA"]);
 
     switch ($peticion->comando) {
+        case 'obtener_usuarios';
+            break;
         case 'getUsuario';
             getUsuario(json_decode($peticion->datos));
             break;
