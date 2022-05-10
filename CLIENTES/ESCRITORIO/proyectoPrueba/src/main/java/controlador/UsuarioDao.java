@@ -80,6 +80,11 @@ public class UsuarioDao {
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios", user.getJSON()));
         
         ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
+        
+        for (int i = 0; i < jsonArray.size(); i++) {
+            listaUsuario.add(jsonArray.get(i).get)
+        }
+        
     }
 
 }
