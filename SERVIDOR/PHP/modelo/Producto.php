@@ -93,5 +93,11 @@ class Producto extends Conexion{
         //Insertó correctamente
         return TRUE;
     }
+    
+    public function productosDeUnNegocio($param) {
+        $sql = "SELECT * FROM producto WHERE id_negocio = :id_neg";
+        
+        
+    }
 
 }
