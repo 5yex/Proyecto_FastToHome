@@ -76,7 +76,7 @@ public class UsuarioDao {
     
     public static ArrayList<Usuario> seleccionUsuarios(Usuario user){
         
-        gestion.consultaSeleccion(new Peticion("actualizar_usuario", user.getJSON()));
+        gestion.consultaSeleccion(new Peticion("obtener_usuarios", user.getJSON()));
     }
 
 }
