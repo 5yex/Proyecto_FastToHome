@@ -7,6 +7,7 @@ if (empty($_POST["DATA"])) {
 
     switch ($peticion->comando) {
         case 'obtener_usuarios';
+            
             break;
         case 'getUsuario';
             getUsuario(json_decode($peticion->datos));
@@ -182,6 +183,22 @@ function getUsuario($datos) {
         $cliente->setId($datos->id);
         $cliente->setPassword($datos->password);
         $respuesta = $cliente->usuarioCompleto();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
+function obtenerTodosLosUsuarios(){
+    require_once '../modelo/usuario.php';
+    
+    try {
+        $cliente = new usuario();
+        $respuesta = $cliente->todosLosUsuarios();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
