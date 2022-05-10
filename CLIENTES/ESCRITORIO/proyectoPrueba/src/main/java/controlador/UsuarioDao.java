@@ -56,7 +56,10 @@ public class UsuarioDao {
         user.setDni(respuesta.get("Dni").getAsString());
         user.setEmail(respuesta.get("Email").getAsString());
         user.setId(respuesta.get("id").getAsInt());
-        user.setId_direccion(respuesta.get("direccion_id").getAsInt());
+        if(!respuesta.get("direccion_id").isJsonNull()){
+                user.setId_direccion(respuesta.get("direccion_id").getAsInt());
+
+        }
         user.setNombre(respuesta.get("Nombre").getAsString());
         user.setPassword(respuesta.get("password").getAsString());
         user.setRol(respuesta.get("Rol").getAsString());
