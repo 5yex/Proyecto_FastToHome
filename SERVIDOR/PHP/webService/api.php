@@ -193,7 +193,7 @@ function getUsuario($datos) {
     }
 }
 
-function obtenerTodosLosUsuarios(){
+function obtenerTodosLosUsuarios($datos){
     require_once '../modelo/usuario.php';
     
     try {
