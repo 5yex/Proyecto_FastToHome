@@ -98,7 +98,7 @@ public class UsuarioDao {
             listaUsuarios.add(user);
 
         }
-        return null;
+        return listaUsuarios;
 
     }
 
