@@ -58,36 +58,48 @@ public class UsuarioDao {
         user.setDni(respuesta.get("Dni").getAsString());
         user.setEmail(respuesta.get("Email").getAsString());
         user.setId(respuesta.get("id").getAsInt());
-        if(!respuesta.get("direccion_id").isJsonNull()){
-                user.setId_direccion(respuesta.get("direccion_id").getAsInt());
+        if (!respuesta.get("direccion_id").isJsonNull()) {
+            user.setId_direccion(respuesta.get("direccion_id").getAsInt());
         }
         user.setNombre(respuesta.get("Nombre").getAsString());
         user.setPassword(respuesta.get("password").getAsString());
         user.setRol(respuesta.get("Rol").getAsString());
         user.setTlf(respuesta.get("tlf").getAsString());
-        
-        System.out.println("controlador.UsuarioDao.obtenerDatosUsuario()   "+ user.toString());
-        
+
+        System.out.println("controlador.UsuarioDao.obtenerDatosUsuario()   " + user.toString());
+
         return user;
     }
-    
-    public static boolean actualizarUsuario(Usuario user){
+
+    public static boolean actualizarUsuario(Usuario user) {
         return gestion.hacerConsulta(new Peticion("actualizar_usuario", user.getJSON()));
     }
-    
-    public static ArrayList<Usuario> seleccionUsuarios(Usuario user){
-        
+
+    public static ArrayList<Usuario> seleccionUsuarios(Usuario user) {
+
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios", user.getJSON()));
-        
+
         ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
-        
+
         for (int i = 0; i < jsonArray.size(); i++) {
             JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
+
+            user.setDni(usuarioJson.get("Dni").getAsString());
+            user.setEmail(usuarioJson.get("Email").getAsString());
+            user.setId(usuarioJson.get("id").getAsInt());
+            if (!usuarioJson.get("direccion_id").isJsonNull()) {
+                user.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
+            }
+            user.setNombre(usuarioJson.get("Nombre").getAsString());
+            user.setPassword(usuarioJson.get("password").getAsString());
+            user.setRol(usuarioJson.get("Rol").getAsString());
+            user.setTlf(usuarioJson.get("tlf").getAsString());
             
-            
+            listaUsuarios.add(user);
+
         }
         return null;
-        
+
     }
 
 }
