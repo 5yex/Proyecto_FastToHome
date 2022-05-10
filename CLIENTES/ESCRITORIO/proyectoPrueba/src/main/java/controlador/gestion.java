@@ -68,7 +68,7 @@ public class gestion {
      * @return json object con las filas que se han pedido en la consulta y sus
      * atributos
      */
-    public static JsonObject consultaSeleccion(Peticion peticion) {
+    public static JsonObject consultaSeleccionUnico(Peticion peticion) {
         String json = null;
         try {
             CloseableHttpClient client = HttpClients.createDefault();

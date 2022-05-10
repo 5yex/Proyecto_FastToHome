@@ -27,7 +27,7 @@ public class UsuarioDao {
         //hacemos una petición con el comando que deberá realizar el php, y los datos en json    
         Peticion peticion = new Peticion("obtener_id_cliente", json);
         //mandamos la peticion como consulta selección para obtener valores
-        JsonObject respuesta = gestion.consultaSeleccion(peticion);
+        JsonObject respuesta = gestion.consultaSeleccionUnico(peticion);
         //de la respuesta, obtenemos el id
         String idCliente = respuesta.get("id").getAsString();
 
@@ -36,7 +36,7 @@ public class UsuarioDao {
     }
 
     public static Usuario getHash(Usuario user) {
-        JsonObject ob = gestion.consultaSeleccion(new Peticion("getHash", user.getJSON()));
+        JsonObject ob = gestion.consultaSeleccionUnico(new Peticion("getHash", user.getJSON()));
         if (ob != null) {
             user.setPassword(ob.get("password").getAsString());
             user.setId(ob.get("id").getAsInt());
@@ -51,7 +51,7 @@ public class UsuarioDao {
         //hacemos una petición con el comando que deberá realizar el php, y los datos en json    
         Peticion peticion = new Peticion("getUsuario", json);
         //mandamos la peticion como consulta selección para obtener valores
-        JsonObject respuesta = gestion.consultaSeleccion(peticion);
+        JsonObject respuesta = gestion.consultaSeleccionUnico(peticion);
         //de la respuesta, obtenemos el id    
         user.setDni(respuesta.get("Dni").getAsString());
         user.setEmail(respuesta.get("Email").getAsString());
