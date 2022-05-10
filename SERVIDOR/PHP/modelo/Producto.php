@@ -102,9 +102,6 @@ class Producto extends Conexion{
         $id_negocio = $this->getId_negocio();
         $sentencia->bindParam(":id_neg", $id_negocio);
 
-        $pass = $this->getPassword();
-        $sentencia->bindParam(":pass", $pass);
-
         $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
