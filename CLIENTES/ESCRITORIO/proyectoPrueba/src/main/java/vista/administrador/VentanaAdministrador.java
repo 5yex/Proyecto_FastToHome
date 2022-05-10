@@ -25,7 +25,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         administrador = user;
         initComponents();
         actualizarVentana();
-        
+
     }
 
     /**
@@ -136,22 +136,22 @@ public class VentanaAdministrador extends javax.swing.JFrame {
     private void modificarMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarMenuItemActionPerformed
         DialogoModificarDatosAdmin dmod = new DialogoModificarDatosAdmin(this, true, administrador);
         dmod.setVisible(true);
-        
-        if(!dmod.isVisible()){
-        System.out.println("hola se actualizo el admin");
-        administrador = dmod.getAdmin();
-        actualizarVentana();
+
+        if (!dmod.isVisible()) {
+            System.out.println("hola se actualizo el admin");
+            administrador = dmod.getAdmin();
+            actualizarVentana();
         }
-        
+
     }//GEN-LAST:event_modificarMenuItemActionPerformed
 
-    private void actualizarVentana(){
-    administrador = UsuarioDao.obtenerDatosUsuario(administrador);
-    labelNombreAdmin.setText(administrador.getNombre());
-    //this.revalidate();
-    //this.repaint();
+    private void actualizarVentana() {
+        administrador = UsuarioDao.obtenerDatosUsuario(administrador);
+        labelNombreAdmin.setText(administrador.getNombre());
+        //this.revalidate();
+        //this.repaint();
     }
-    
+
     public static void main(String args[]) {
         try {
             javax.swing.UIManager.setLookAndFeel(new FlatDarkLaf());
@@ -159,7 +159,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         } catch (UnsupportedLookAndFeelException ex) {
 
         }
-        Usuario user = new Usuario(99, "Pruebas","Hernandez", "54332653Y", "pruebas@pruebas", "123456789", "mercader", 0, "0");
+        Usuario user = new Usuario(99, "Pruebas", "Hernandez", "54332653Y", "pruebas@pruebas", "123456789", "mercader", 0, "0");
         new VentanaAdministrador(user).setVisible(true);
 //        if (conex.testConexion()) {
 //            new Login().setVisible(true);
