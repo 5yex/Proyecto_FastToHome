@@ -414,7 +414,7 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
         if(UsuarioDao.nuevoUsuario(newUsuario)){
             this.dispose();
         }else{
-            
+            JOptionPane.showMessageDialog(this, "No se pudo registrar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
         }
     }
 
