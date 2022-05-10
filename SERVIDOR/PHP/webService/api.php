@@ -155,7 +155,7 @@ function actualizarUsuario($datos) {
     try {
         $usuario = new usuario();
         $usuario->setNombre($datos->nombre);
-        $usuario->setApellidos($datos->$apellidos);
+        $usuario->setApellidos($datos->apellidos);
         $usuario->setDni($datos->dni);
         $usuario->setEmail($datos->email);
         //$usuario->setId_direccion($datos->id_direccion);
