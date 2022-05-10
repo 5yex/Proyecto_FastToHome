@@ -4,6 +4,7 @@
  */
 package controlador;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import java.util.ArrayList;
 import modelo.Peticion;
@@ -76,7 +77,7 @@ public class UsuarioDao {
     
     public static ArrayList<Usuario> seleccionUsuarios(Usuario user){
         
-        gestion.consultaSeleccion(new Peticion("obtener_usuarios", user.getJSON()));
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios", user.getJSON()));
     }
 
 }
