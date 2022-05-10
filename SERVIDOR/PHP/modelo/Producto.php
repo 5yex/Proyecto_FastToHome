@@ -100,7 +100,7 @@ class Producto extends Conexion{
         $sentencia = $this->dblink->prepare($sql);
 
         $id_negocio = $this->getId_negocio();
-        $sentencia->bindParam(":id", $id);
+        $sentencia->bindParam(":id_neg", $id_negocio);
 
         $pass = $this->getPassword();
         $sentencia->bindParam(":pass", $pass);
