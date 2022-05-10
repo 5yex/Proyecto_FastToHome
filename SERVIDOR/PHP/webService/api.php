@@ -45,7 +45,7 @@ function nuevoUsuario($datos) {
         $usuario->setApellidos($datos->apellidos);
         $usuario->setDni($datos->dni);
         $usuario->setEmail($datos->email);
-        $usuario->setId_direccion($datos->id_direccion);
+        //$usuario->setId_direccion($datos->id_direccion);
         $usuario->setTlf($datos->tlf);
         $usuario->setRol($datos->rol);
         $usuario->setPassword($datos->password);
