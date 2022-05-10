@@ -402,7 +402,7 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
     
     private void registrarUsuario() {
         newUsuario.setNombre(nombreField.getText());
-        newUsuario.setApellido(apellidosField.getText());
+        newUsuario.setApellidos(apellidosField.getText());
         newUsuario.setDni(dniField.getText());
         newUsuario.setTlf(tlfField.getText());
         newUsuario.setEmail(emailField.getText());
