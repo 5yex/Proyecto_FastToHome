@@ -100,7 +100,7 @@ class Producto extends Conexion{
         $sentencia = $this->dblink->prepare($sql);
 
         $id_negocio = $this->getId_negocio();
-        $sentencia->bindParam(":id_neg, $id);
+        $sentencia->bindParam(":id_neg, $id_negocio);
 
         $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
