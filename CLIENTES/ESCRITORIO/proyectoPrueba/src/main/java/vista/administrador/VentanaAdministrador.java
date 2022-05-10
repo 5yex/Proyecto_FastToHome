@@ -137,7 +137,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         DialogoModificarDatosAdmin dmod = new DialogoModificarDatosAdmin(this, true, administrador);
         dmod.setVisible(true);
         
-        if(!dmod.isActive()){
+        if(!dmod.isVisible()){
         administrador = dmod.getAdmin();
         actualizarVentana();
         }
