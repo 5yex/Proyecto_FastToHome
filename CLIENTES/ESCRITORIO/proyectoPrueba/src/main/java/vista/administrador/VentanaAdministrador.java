@@ -136,8 +136,11 @@ public class VentanaAdministrador extends javax.swing.JFrame {
     private void modificarMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarMenuItemActionPerformed
         DialogoModificarDatosAdmin dmod = new DialogoModificarDatosAdmin(this, true, administrador);
         dmod.setVisible(true);
+        
+        if(!dmod.isActive()){
         administrador = dmod.getAdmin();
         actualizarVentana();
+        }
         
     }//GEN-LAST:event_modificarMenuItemActionPerformed
 
