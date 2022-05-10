@@ -411,8 +411,11 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
         System.out.println(newUsuario.getJSON());
         
         
-        UsuarioDao.nuevoUsuario(newUsuario);
-        this.dispose();
+        if(UsuarioDao.nuevoUsuario(newUsuario)){
+            this.dispose();
+        }else{
+            
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
