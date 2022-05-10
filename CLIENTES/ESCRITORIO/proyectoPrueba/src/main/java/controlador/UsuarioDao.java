@@ -58,7 +58,6 @@ public class UsuarioDao {
         user.setId(respuesta.get("id").getAsInt());
         if(!respuesta.get("direccion_id").isJsonNull()){
                 user.setId_direccion(respuesta.get("direccion_id").getAsInt());
-
         }
         user.setNombre(respuesta.get("Nombre").getAsString());
         user.setPassword(respuesta.get("password").getAsString());
