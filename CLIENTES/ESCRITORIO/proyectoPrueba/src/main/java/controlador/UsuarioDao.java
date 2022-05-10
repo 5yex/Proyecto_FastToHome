@@ -78,6 +78,8 @@ public class UsuarioDao {
     public static ArrayList<Usuario> seleccionUsuarios(Usuario user){
         
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios", user.getJSON()));
+        
+        ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
     }
 
 }
