@@ -4,13 +4,9 @@
  */
 package vista.mercader;
 
-import vista.*;
-import com.formdev.flatlaf.FlatDarkLaf;
 import java.awt.FlowLayout;
-import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Negocio;
 import modelo.Usuario;
-import util.WrapLayout;
 
 /**
  *
