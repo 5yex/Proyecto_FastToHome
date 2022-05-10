@@ -83,6 +83,8 @@ public class UsuarioDao {
         
         for (int i = 0; i < jsonArray.size(); i++) {
             JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
+            
+            
         }
         return null;
         
