@@ -138,6 +138,7 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         dmod.setVisible(true);
         
         //if(!dmod.isVisible()){
+        System.out.println("hola se actualizo el admin");
         administrador = dmod.getAdmin();
         actualizarVentana();
         //}
