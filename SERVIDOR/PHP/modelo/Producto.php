@@ -97,7 +97,13 @@ class Producto extends Conexion{
     public function productosDeUnNegocio($param) {
         $sql = "SELECT * FROM producto WHERE id_negocio = :id_neg";
         
-        
+        $sentencia = $this->dblink->prepare($sql);
+
+        $id_negocio = $this->getId_negocio();
+        $sentencia->bindParam(":id_neg, $id);
+
+        $sentencia->execute();
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
 
 }
