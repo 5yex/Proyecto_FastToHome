@@ -148,8 +148,8 @@ public class VentanaAdministrador extends javax.swing.JFrame {
     private void actualizarVentana(){
     administrador = UsuarioDao.obtenerDatosUsuario(administrador);
     labelNombreAdmin.setText(administrador.getNombre());
-    this.revalidate();
-    this.repaint();
+    //this.revalidate();
+    //this.repaint();
     }
     
     public static void main(String args[]) {
