@@ -44,6 +44,6 @@ public class ProductoDao {
             listaUsuarios.add(user);*/
 
         }
-        return listaUsuarios;
+        return listaProducto;
     }
 }
