@@ -131,9 +131,9 @@ function obtenerProductosNegocio($datos){
         $producto->setId_negocio($datos->id_negocio);
 
         if ($producto->productosDeUnNegocio()) {
-            mandarRespuesta(false, 'Se ha realizado la insercion de un producto');
+            mandarRespuesta(false, 'Se han obtenido los productos de un negocio');
         } else {
-            mandarRespuesta(true, 'Error en la inserccion del producto');
+            mandarRespuesta(true, 'Error en la obtencion de los productos del negocio');
         }
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
