@@ -129,9 +129,9 @@ function obtenerProductosNegocio($datos){
     try {
         $producto = new Producto();
         $producto->setId_negocio($datos->id_negocio);
-
-        if ($producto->productosDeUnNegocio()) {
-            mandarRespuesta(false, 'Se han obtenido los productos de un negocio');
+        $respuesta = $producto->productosDeUnNegocio();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error en la obtencion de los productos del negocio');
         }
