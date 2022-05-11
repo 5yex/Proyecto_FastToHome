@@ -28,7 +28,7 @@ if (empty($_POST["DATA"])) {
             obtenerIdNegocio(json_decode($peticion->datos));
             break;
         case 'obtener_productos_negocio';
-            
+            obtenerProductosNegocio($peticion->datos);
             break;
         case 'getHash';
             getHash(json_decode($peticion->datos));
