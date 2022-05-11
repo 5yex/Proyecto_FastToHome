@@ -125,7 +125,19 @@ function obtenerIdNegocio($datos) {
 }
 
 function obtenerProductosNegocio($datos){
-    
+    require_once '../modelo/Producto.php';
+    try {
+        $producto = new Producto();
+        $producto->setId_negocio($datos->id_negocio);
+
+        if ($producto->agregar()) {
+            mandarRespuesta(false, 'Se ha realizado la insercion de un producto');
+        } else {
+            mandarRespuesta(true, 'Error en la inserccion del producto');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
 }
 
 function obtenerIdCliente($datos) {
