@@ -27,6 +27,9 @@ if (empty($_POST["DATA"])) {
         case 'get_id_negocio';
             obtenerIdNegocio(json_decode($peticion->datos));
             break;
+        case 'obtener_productos_negocio';
+            
+            break;
         case 'getHash';
             getHash(json_decode($peticion->datos));
             break;
@@ -119,6 +122,10 @@ function obtenerIdNegocio($datos) {
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
+}
+
+function obtenerProductosNegocio($datos){
+    
 }
 
 function obtenerIdCliente($datos) {
