@@ -30,6 +30,10 @@ public class Producto {
         this.stock = stock;
     }
 
+    public Producto(int id_negocio) {
+        this.id_negocio = id_negocio;
+    }
+
     public int getId_producto() {
         return id_producto;
     }
