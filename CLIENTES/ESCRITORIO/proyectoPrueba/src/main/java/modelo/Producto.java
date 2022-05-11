@@ -29,8 +29,6 @@ public class Producto {
         this.descripcion = descripcion;
         this.stock = stock;
     }
-    
-    
 
     public int getId_producto() {
         return id_producto;
