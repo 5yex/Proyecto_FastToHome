@@ -130,7 +130,7 @@ function obtenerProductosNegocio($datos){
         $producto = new Producto();
         $producto->setId_negocio($datos->id_negocio);
 
-        if ($producto->agregar()) {
+        if ($producto->productosDeUnNegocio()) {
             mandarRespuesta(false, 'Se ha realizado la insercion de un producto');
         } else {
             mandarRespuesta(true, 'Error en la inserccion del producto');
