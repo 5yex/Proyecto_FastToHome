@@ -94,7 +94,7 @@ class Producto extends Conexion{
         return TRUE;
     }
     
-    public function productosDeUnNegocio($param) {
+    public function productosDeUnNegocio() {
         $sql = "SELECT * FROM producto WHERE id_negocio = :id_neg";
         
         $sentencia = $this->dblink->prepare($sql);
