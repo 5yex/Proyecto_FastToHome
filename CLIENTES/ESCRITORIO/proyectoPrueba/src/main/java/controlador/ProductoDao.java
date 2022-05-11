@@ -7,6 +7,7 @@
 package controlador;
 
 import java.util.ArrayList;
+import modelo.Negocio;
 import modelo.Peticion;
 import modelo.Producto;
 
@@ -19,7 +20,7 @@ public class ProductoDao {
         return gestion.hacerConsulta(new Peticion("nuevo_producto", product.getJSON()));
     }
     
-    public ArrayList <Producto> selecciónProductosNegocio(Producto product){
+    public ArrayList <Producto> selecciónProductosNegocio(Negocio negocio){
         
     }
 }
