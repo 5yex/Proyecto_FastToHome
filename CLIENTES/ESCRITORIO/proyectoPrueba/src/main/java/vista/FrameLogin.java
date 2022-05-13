@@ -45,7 +45,6 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         setTitle("Inicio Sesión");
         setResizable(false);
 
-        buttonLogin1.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Blue"));
         buttonLogin1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         buttonLogin1.setText("ENTRAR");
         buttonLogin1.addActionListener(new java.awt.event.ActionListener() {
@@ -58,7 +57,6 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
 
         emailTxt.setText("CORREO ELECTRÓNICO");
 
-        buttonRegistro.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
         buttonRegistro.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         buttonRegistro.setText("REGISTRO");
         buttonRegistro.addActionListener(new java.awt.event.ActionListener() {
@@ -82,13 +80,11 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                     .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(passwordField)
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(titleText))
-                    .addGroup(panelPrincipalLayout.createSequentialGroup()
                         .addComponent(buttonRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(buttonLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(56, Short.MAX_VALUE))
+                        .addComponent(buttonLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(titleText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
