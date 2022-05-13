@@ -45,7 +45,9 @@ public class VentanaMercader extends javax.swing.JFrame {
         setTitle("Ventana Mercader");
         setMinimumSize(new java.awt.Dimension(600, 400));
 
+        jTabbedPane1.setBackground(new java.awt.Color(255, 204, 204));
         jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        jTabbedPane1.setOpaque(true);
         jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTabbedPane1MouseClicked(evt);
