@@ -11,6 +11,8 @@ import static controlador.gestion.hacerConsulta;
 import java.io.IOException;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import mdlaf.MaterialLookAndFeel;
+import mdlaf.themes.MaterialOceanicTheme;
 import modelo.Categoria;
 import modelo.Peticion;
 import modelo.Producto;
@@ -44,7 +46,7 @@ public static FrameLogin lg;
         //System.out.println(hacerConsulta(new Peticion("nuevo_producto", producto.getJSON())));
         //System.out.println(UsuarioDao.obtenerIdCliente(user));
         
-        UIManager.setLookAndFeel(new FlatDarkLaf());
+        UIManager.setLookAndFeel(new MaterialLookAndFeel(new MaterialOceanicTheme()));
         lg = new FrameLogin();
         lg.setVisible(true);
 
