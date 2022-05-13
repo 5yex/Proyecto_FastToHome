@@ -12,6 +12,7 @@ import java.io.IOException;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import mdlaf.MaterialLookAndFeel;
+import mdlaf.themes.JMarsDarkTheme;
 import mdlaf.themes.MaterialLiteTheme;
 import mdlaf.themes.MaterialOceanicTheme;
 import mdlaf.themes.MaterialTheme;
@@ -48,7 +49,7 @@ public static FrameLogin lg;
         //System.out.println(hacerConsulta(new Peticion("nuevo_producto", producto.getJSON())));
         //System.out.println(UsuarioDao.obtenerIdCliente(user));
         
-        UIManager.setLookAndFeel(new MaterialLookAndFeel(new MaterialLiteTheme()));
+        UIManager.setLookAndFeel(new MaterialLookAndFeel(new JMarsDarkTheme()));
         lg = new FrameLogin();
         lg.setVisible(true);
 
