@@ -51,11 +51,11 @@ public static FrameLogin lg;
         //System.out.println(hacerConsulta(new Peticion("nuevo_producto", producto.getJSON())));
         //System.out.println(UsuarioDao.obtenerIdCliente(user));
         
-        UIManager.setLookAndFeel(new FlatIntelliJLaf());
+        UIManager.setLookAndFeel(new FlatDarkLaf());
         lg = new FrameLogin();
         lg.setVisible(true);
         
-        System.out.println(BCrypt.hashpw("test", BCrypt.gensalt(10)));
+       
 
     }
 
