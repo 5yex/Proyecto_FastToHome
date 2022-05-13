@@ -45,6 +45,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         setTitle("Ventana Mercader");
         setMinimumSize(new java.awt.Dimension(600, 400));
 
+        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
         jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTabbedPane1MouseClicked(evt);
@@ -59,7 +60,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         );
         panelBaseLayout.setVerticalGroup(
             panelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 396, Short.MAX_VALUE)
+            .addGap(0, 419, Short.MAX_VALUE)
         );
 
         jScrollPane1.setViewportView(panelBase);
