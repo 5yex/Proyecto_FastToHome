@@ -7,7 +7,7 @@
             //$usuario = "root";
            // $clave = "";
             
-            $servidor = "mysql:host=79.116.28.56;dbname=pf";
+            $servidor = "mysql:host=serviexx.duckdns.org;dbname=pf";
             $usuario = "proyecto";
             $clave = "123456";
             
