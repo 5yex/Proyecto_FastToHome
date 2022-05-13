@@ -48,7 +48,6 @@
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="passwordTxt" min="-2" pref="139" max="-2" attributes="0"/>
                       <Component id="emailField" max="32767" attributes="0"/>
-                      <Component id="emailTxt" min="-2" pref="139" max="-2" attributes="0"/>
                       <Component id="passwordField" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="buttonRegistro" min="-2" pref="138" max="-2" attributes="0"/>
@@ -56,6 +55,7 @@
                           <Component id="buttonLogin1" min="-2" pref="139" max="-2" attributes="0"/>
                       </Group>
                       <Component id="titleText" alignment="0" max="32767" attributes="0"/>
+                      <Component id="emailTxt" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="65" max="32767" attributes="0"/>
               </Group>
