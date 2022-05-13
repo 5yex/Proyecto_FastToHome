@@ -21,6 +21,7 @@ import modelo.Categoria;
 import modelo.Peticion;
 import modelo.Producto;
 import modelo.Usuario;
+import org.mindrot.jbcrypt.BCrypt;
 import vista.FrameLogin;
 
 /**
@@ -53,6 +54,8 @@ public static FrameLogin lg;
         UIManager.setLookAndFeel(new FlatIntelliJLaf());
         lg = new FrameLogin();
         lg.setVisible(true);
+        
+        BCrypt.hashpw("test", BCrypt.gensalt(10));
 
     }
 
