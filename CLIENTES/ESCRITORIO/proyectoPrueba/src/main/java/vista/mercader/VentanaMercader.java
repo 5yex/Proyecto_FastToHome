@@ -43,15 +43,17 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
+        setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         setMinimumSize(new java.awt.Dimension(600, 400));
 
-        jTabbedPane1.setBackground(new java.awt.Color(255, 204, 204));
         jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
         jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTabbedPane1MouseClicked(evt);
             }
         });
+
+        jScrollPane1.setBorder(null);
 
         javax.swing.GroupLayout panelBaseLayout = new javax.swing.GroupLayout(panelBase);
         panelBase.setLayout(panelBaseLayout);
@@ -61,12 +63,14 @@ public class VentanaMercader extends javax.swing.JFrame {
         );
         panelBaseLayout.setVerticalGroup(
             panelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 419, Short.MAX_VALUE)
+            .addGap(0, 421, Short.MAX_VALUE)
         );
 
         jScrollPane1.setViewportView(panelBase);
 
         jTabbedPane1.addTab("INICIO", jScrollPane1);
+
+        jScrollPane2.setBorder(null);
         jTabbedPane1.addTab("PRODUCTOS", jScrollPane2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
