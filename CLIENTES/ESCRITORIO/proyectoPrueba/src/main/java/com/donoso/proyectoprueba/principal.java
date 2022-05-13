@@ -50,7 +50,7 @@ public static FrameLogin lg;
         //System.out.println(hacerConsulta(new Peticion("nuevo_producto", producto.getJSON())));
         //System.out.println(UsuarioDao.obtenerIdCliente(user));
         
-        UIManager.setLookAndFeel(new FlatIntelliJLaf()));
+        UIManager.setLookAndFeel(new FlatIntelliJLaf());
         lg = new FrameLogin();
         lg.setVisible(true);
 
