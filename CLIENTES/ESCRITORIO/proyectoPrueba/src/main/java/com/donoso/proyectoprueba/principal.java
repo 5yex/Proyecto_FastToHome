@@ -55,7 +55,7 @@ public static FrameLogin lg;
         lg = new FrameLogin();
         lg.setVisible(true);
         
-        BCrypt.hashpw("test", BCrypt.gensalt(10));
+        System.out.println(BCrypt.hashpw("test", BCrypt.gensalt(10)));
 
     }
 
