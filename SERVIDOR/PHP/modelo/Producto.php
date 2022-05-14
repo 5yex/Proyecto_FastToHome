@@ -136,6 +136,19 @@ class Producto extends Conexion{
     
     public function borrarProducto(){
         $sql= "DELETE FROM producto WHERE id = :id_prod";
+        $sentencia = $this->dblink->prepare($sql);
+        
+        $id = $this->getId_producto();
+      
+        $sentencia->bindParam(":id_prod", $id);
+        
+        // $sentencia->bindParam(":fot", $this->getFoto() );
+        $resultado = $sentencia->execute();
+
+        if ($resultado != 1) {
+            //ocurrio un error al insertar
+            printf('aaa');
+            return FALSE;
     }
 
 }
