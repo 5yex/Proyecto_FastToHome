@@ -86,7 +86,7 @@ public class UsuarioDao {
 
             user.setDni(usuarioJson.get("Dni").getAsString());
             user.setEmail(usuarioJson.get("Email").getAsString());
-            //user.setId(usuarioJson.get("id").getAsInt());
+            user.setId(usuarioJson.get("id").getAsInt());
             if (!usuarioJson.get("direccion_id").isJsonNull()) {
                 user.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
             }
