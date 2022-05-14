@@ -186,7 +186,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         Negocio negocio;
         this.setVisible(false);
         
-        negocio = NegocioDao.negocioDeMercader(user);
+        negocio = NegocioDao.negocioDeMercader(user)
         
         
         new VentanaMercader(user).setVisible(true);
