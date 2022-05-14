@@ -121,7 +121,9 @@ public class VentanaMercader extends javax.swing.JFrame {
         if (panelSeleccionado != index) {
             switch (index) {
                 case 0:
-                   
+                    panelBase.repaint();
+                    panelBase.revalidate();
+                    panelBase.setLayout(new util.WrapLayout(CENTER_ALIGNMENT));
                     break;
             }
 
