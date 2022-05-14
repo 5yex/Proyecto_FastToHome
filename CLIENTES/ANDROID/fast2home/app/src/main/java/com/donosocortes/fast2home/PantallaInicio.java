@@ -16,7 +16,9 @@ public class PantallaInicio extends AppCompatActivity {
     }
 
     public void pantallaLogin(View view){
-        
+        Intent i = new Intent(this, PantallaLogin.class );
+        startActivity(i);
+
     }
 
 }
