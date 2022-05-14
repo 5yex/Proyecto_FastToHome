@@ -19,29 +19,6 @@ public class Direccion {
     public Direccion() {
     }
 
-    public Direccion(int id_direccion, String calle, int numero, String ciudad, String provincia, int codigo_postal, String otros, int coordenads) {
-        this.id_direccion = id_direccion;
-        this.calle = calle;
-        this.numero = numero;
-        this.ciudad = ciudad;
-        this.provincia = provincia;
-        this.codigo_postal = codigo_postal;
-        this.otros = otros;
-        this.coordenads = coordenads;
-    }
-
-    public Direccion(String calle, int numero, String ciudad, String provincia, int codigo_postal, String otros, int coordenads) {
-        this.calle = calle;
-        this.numero = numero;
-        this.ciudad = ciudad;
-        this.provincia = provincia;
-        this.codigo_postal = codigo_postal;
-        this.otros = otros;
-        this.coordenads = coordenads;
-    }
-    
-    
-
     public int getId_direccion() {
         return id_direccion;
     }
@@ -50,36 +27,12 @@ public class Direccion {
         this.id_direccion = id_direccion;
     }
 
-    public String getCalle() {
-        return calle;
+    public String getDireccion() {
+        return Direccion;
     }
 
-    public void setCalle(String calle) {
-        this.calle = calle;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-    public String getCiudad() {
-        return ciudad;
-    }
-
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
-    }
-
-    public int getCodigo_postal() {
-        return codigo_postal;
-    }
-
-    public void setCodigo_postal(int codigo_postal) {
-        this.codigo_postal = codigo_postal;
+    public void setDireccion(String Direccion) {
+        this.Direccion = Direccion;
     }
 
     public String getOtros() {
@@ -90,24 +43,19 @@ public class Direccion {
         this.otros = otros;
     }
 
-    public int getCoordenads() {
+    public String getCoordenads() {
         return coordenads;
     }
 
-    public void setCoordenads(int coordenads) {
+    public void setCoordenads(String coordenads) {
         this.coordenads = coordenads;
     }
 
-    public String getProvincia() {
-        return provincia;
+    public Direccion(int id_direccion, String Direccion, String otros, String coordenads) {
+        this.id_direccion = id_direccion;
+        this.Direccion = Direccion;
+        this.otros = otros;
+        this.coordenads = coordenads;
     }
 
-    public void setProvincia(String provincia) {
-        this.provincia = provincia;
-    }
-   
-   public String getJSON(){
-       return new Gson().toJson(this);
-    }
-    
 }
