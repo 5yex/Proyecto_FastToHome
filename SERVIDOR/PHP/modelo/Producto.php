@@ -131,6 +131,11 @@ class Producto extends Conexion{
             printf('aaa');
             return FALSE;
         }
+       
+    }
+    
+    public function borrarProducto(){
+        $sql= "DELETE FROM producto WHERE id = :id_prod";
     }
 
 }
