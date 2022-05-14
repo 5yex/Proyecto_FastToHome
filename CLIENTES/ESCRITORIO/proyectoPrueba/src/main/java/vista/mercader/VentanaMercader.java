@@ -17,6 +17,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     Usuario mercader;
     Negocio negocio;
     int panelSeleccionado = -99;
+    boolean registroPendiente = true;
 
     /**
      * Creates new form VentanaPrincipal
@@ -112,7 +113,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         if(panelSeleccionado != index){
              switch (index) {
                 case 0:
-                    pruebaRegistroNegocio(this);
+                    pruebaRegistroNegocio();
                     break;
             }
              
@@ -125,7 +126,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     public void pruebaRegistroNegocio() {
         panelBase.removeAll();
         panelBase.setLayout(new util.WrapLayout(FlowLayout.CENTER, 30, 30));
-        panelBase.add(new panelRegistroNegocio());
+        panelBase.add(new panelRegistroNegocio(this));
         panelBase.revalidate();
         panelBase.repaint();
     }
