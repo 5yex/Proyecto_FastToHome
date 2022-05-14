@@ -190,7 +190,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         if(negocio == null){
           new VentanaMercader(user).setVisible(true);
         }else{
-        
+          new registroNegocio(user).setVisible(true);
         }
         
         
