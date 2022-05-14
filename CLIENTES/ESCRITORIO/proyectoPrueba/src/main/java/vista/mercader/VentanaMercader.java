@@ -130,14 +130,7 @@ public class VentanaMercader extends javax.swing.JFrame {
 
     }
 
-    public void introducirRegistroNegocio() {
-        panelBase.removeAll();
-        panelBase.setLayout(new util.WrapLayout(FlowLayout.CENTER, 30, 30));
-        panelBase.add(new panelRegistroNegocio(this));
-        panelBase.revalidate();
-        panelBase.repaint();
-    }
-
+  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
