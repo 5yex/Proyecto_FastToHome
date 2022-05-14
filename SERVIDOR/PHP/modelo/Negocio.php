@@ -106,6 +106,22 @@ class Negocio extends Conexion {
         
         
     }
+    
+    
+    public function obtenerNegocioDeMercader(){
+        $sql = "SELECT id FROM negocio WHERE Nombre = :nom";
+        
+        $sentencia = $this->dblink->prepare($sql);
+        
+        $nombre = $this->getNombre();
+        
+        $sentencia->bindParam(":nom", $nombre);
+        
+        $sentencia->execute();            
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+        
+        
+    }
 
     public function modificar() {
         $sql = "UPDATE negocio set id_direccion = :dir, id_mercader = :mer, Nombre = :nom, Descripcion = :des where id = :id_neg";
