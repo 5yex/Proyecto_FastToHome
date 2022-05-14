@@ -13,12 +13,8 @@ import com.google.gson.Gson;
 public class Direccion {
    private int id_direccion;
    private String Direccion;
-   private int numero;
-   private String ciudad;
-   private String provincia;
-   private int codigo_postal;
    private String otros;
-   private int coordenads;
+   private String coordenads;
 
     public Direccion() {
     }
