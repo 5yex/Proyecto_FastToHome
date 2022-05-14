@@ -110,17 +110,18 @@ public class VentanaMercader extends javax.swing.JFrame {
 
     private void panelCambio() {
         int index = jTabbedPane1.getSelectedIndex();
-        if(panelSeleccionado != index){
-             switch (index) {
+        if (panelSeleccionado != index) {
+            switch (index) {
                 case 0:
-                    pruebaRegistroNegocio();
+                    if (registroPendiente) {
+                        pruebaRegistroNegocio();
+                    }
                     break;
             }
-             
-             
-             panelSeleccionado = index;
+
+            panelSeleccionado = index;
         }
-       
+
     }
 
     public void pruebaRegistroNegocio() {
