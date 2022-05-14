@@ -1,5 +1,6 @@
 package controlador;
 
+import com.google.gson.JsonObject;
 import modelo.Negocio;
 import modelo.Peticion;
 
@@ -14,8 +15,8 @@ import modelo.Peticion;
  */
 public class NegocioDao {
     
-     public boolean mercaderTieneNegocio(Negocio negocio){
-        return gestion.consultaSeleccionUnico(new Peticion("mercader_de_usuario", negocio.getJSON(==);
+     public JsonObject negocioDeMercader(Negocio negocio){
+        return gestion.consultaSeleccionUnico(new Peticion("mercader_de_usuario", negocio.getJSON()));
     }
     
     
