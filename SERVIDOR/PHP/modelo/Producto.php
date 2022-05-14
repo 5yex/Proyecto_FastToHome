@@ -106,8 +106,31 @@ class Producto extends Conexion{
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
     
-    public void actualizarProducto(){
+    public function actualizarProducto(){
+        $sql = "UPDATE IGNORE producto SET Nombre = :nom, Precio = :pre, Descripcion = :descr, Stock = :stock";
+        $sentencia = $this->dblink->prepare($sql);
         
+        
+        $nombre = $this->getNombre();
+        $precio = $this->getPrecio();
+        $descripcion = $this->getDescripcion();
+        $stock = $this->getStock();
+        
+        $sentencia->bindParam(":nom", $nombre);
+        $sentencia->bindParam(":pre", $precio);
+        $sentencia->bindParam(":descr", $descripcion);
+        $sentencia->bindParam(":stock", $stock);
+        
+        
+
+        // $sentencia->bindParam(":fot", $this->getFoto() );
+        $resultado = $sentencia->execute();
+
+        if ($resultado != 1) {
+            //ocurrio un error al insertar
+            printf('aaa');
+            return FALSE;
+        }
     }
 
 }
