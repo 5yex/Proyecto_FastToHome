@@ -8,12 +8,12 @@ package vista;
  *
  * @author jmcbg
  */
-public class VentanaRegistroNegocio extends javax.swing.JFrame {
+public class registroNegocio extends javax.swing.JFrame {
 
     /**
      * Creates new form VentanaRegistroNegocio
      */
-    public VentanaRegistroNegocio() {
+    public registroNegocio() {
         initComponents();
     }
 

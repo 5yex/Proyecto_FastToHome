@@ -4,7 +4,7 @@
  */
 package vista.mercader;
 
-import vista.VentanaRegistroNegocio;
+import vista.registroNegocio;
 import controlador.NegocioDao;
 import java.awt.FlowLayout;
 import modelo.Negocio;
@@ -19,7 +19,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     private Usuario mercader;
     private  Negocio negocio;
     private int panelSeleccionado = -99;
-    private VentanaRegistroNegocio rnegocio= new VentanaRegistroNegocio();
+    private registroNegocio rnegocio= new registroNegocio();
 
    
 
