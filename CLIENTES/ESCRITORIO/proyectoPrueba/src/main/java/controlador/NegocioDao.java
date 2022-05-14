@@ -19,8 +19,9 @@ public class NegocioDao {
         Negocio negocio = new Negocio();
         JsonObject respuesta = gestion.consultaSeleccionUnico(new Peticion("mercader_de_usuario", user.getJSON()));
 
-        respuesta.get("id_direccion").getAsInt();
-        
+        negocio.setId_direccion(respuesta.get("id_direccion").getAsInt());
+        respuesta.get("$id_categoria").getAsInt();
+        respuesta.get("$id_mercader").getAsInt();
         
         
         return negocio;
