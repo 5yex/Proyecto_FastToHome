@@ -12,7 +12,7 @@ import com.google.gson.Gson;
  */
 public class Direccion {
    private int id_direccion;
-   private String calle;
+   private String Direccion;
    private int numero;
    private String ciudad;
    private String provincia;
