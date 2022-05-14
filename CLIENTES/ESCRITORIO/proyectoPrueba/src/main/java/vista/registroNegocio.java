@@ -13,7 +13,7 @@ public class registroNegocio extends javax.swing.JFrame {
     /**
      * Creates new form VentanaRegistroNegocio
      */
-    public registroNegocio() {
+    public registroNegocio(Usuario user) {
         initComponents();
     }
 
