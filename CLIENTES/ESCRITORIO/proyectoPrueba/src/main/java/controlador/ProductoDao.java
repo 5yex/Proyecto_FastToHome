@@ -9,7 +9,6 @@ package controlador;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import java.util.ArrayList;
-import modelo.Negocio;
 import modelo.Peticion;
 import modelo.Producto;
 
