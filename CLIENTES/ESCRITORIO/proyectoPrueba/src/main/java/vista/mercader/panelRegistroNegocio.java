@@ -9,12 +9,13 @@ package vista.mercader;
  * @author jmcbg
  */
 public class panelRegistroNegocio extends javax.swing.JPanel {
-
+private VentanaMercader vm;
     /**
      * Creates new form RegistroNegocio
      */
     public panelRegistroNegocio(VentanaMercader vm) {
         initComponents();
+        vm = vm;
     }
 
     /**
@@ -133,7 +134,7 @@ public class panelRegistroNegocio extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
 
