@@ -36,7 +36,9 @@ if (empty($_POST["DATA"])) {
         case 'actualizar_usuario';
             actualizarUsuario(json_decode($peticion->datos));
             break;
-            
+        case 'mercader_de_usuario';
+            obtenerNegocioDeMercader(json_decode($peticion->datos));
+            break;
         default;
             mandarRespuesta(true, 'comando no  reconocido');
             break;
@@ -129,8 +131,8 @@ function obtenerNegocioDeMercader($datos) {
     require_once '../modelo/Negocio.php';
     try {
         $negocio = new Negocio();
-        $negocio->setNombre($datos->nombre);
-        $respuesta = $negocio->obtenerIdNegocio();
+        $negocio->setId_mercader($datos->id_mercader);
+        $respuesta = $negocio->obtenerNegocioDeMercader();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
