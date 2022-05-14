@@ -109,13 +109,13 @@ class Negocio extends Conexion {
     
     
     public function obtenerNegocioDeMercader(){
-        $sql = "SELECT id FROM negocio WHERE Nombre = :nom";
+        $sql = "SELECT * FROM negocio WHERE id_mercader = :id";
         
         $sentencia = $this->dblink->prepare($sql);
         
         $nombre = $this->getNombre();
         
-        $sentencia->bindParam(":nom", $nombre);
+        $sentencia->bindParam(":id", $id_mercader);
         
         $sentencia->execute();            
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
