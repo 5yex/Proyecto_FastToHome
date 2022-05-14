@@ -114,7 +114,7 @@ public class VentanaMercader extends javax.swing.JFrame {
             switch (index) {
                 case 0:
                     if (registroPendiente) {
-                        pruebaRegistroNegocio();
+                        introducirRegistroNegocio();
                     }
                     break;
             }
@@ -124,7 +124,7 @@ public class VentanaMercader extends javax.swing.JFrame {
 
     }
 
-    public void pruebaRegistroNegocio() {
+    public void introducirRegistroNegocio() {
         panelBase.removeAll();
         panelBase.setLayout(new util.WrapLayout(FlowLayout.CENTER, 30, 30));
         panelBase.add(new panelRegistroNegocio(this));
