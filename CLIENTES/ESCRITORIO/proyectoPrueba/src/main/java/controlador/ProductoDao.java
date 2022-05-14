@@ -30,7 +30,7 @@ public class ProductoDao {
         for (int i = 0; i < jsonArray.size(); i++) {
             JsonObject productoJson = jsonArray.get(i).getAsJsonObject();
             
-            product.setId_producto(productoJson.get("id").getAsIn);
+            product.setId_producto(productoJson.get("id").getAsInt());
             product.setNombre(productoJson.get("Nombre").getAsString());
             product.setPrecio(productoJson.get("Precio").getAsDouble());
             product.setDescripcion(productoJson.get("Descripcion").getAsString());
