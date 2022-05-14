@@ -17,6 +17,14 @@ public class VentanaMercader extends javax.swing.JFrame {
     Usuario mercader;
     Negocio negocio;
     int panelSeleccionado = -99;
+
+    public boolean isRegistroPendiente() {
+        return registroPendiente;
+    }
+
+    public void setRegistroPendiente(boolean registroPendiente) {
+        this.registroPendiente = registroPendiente;
+    }
     boolean registroPendiente = true;
 
     /**
@@ -48,7 +56,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         setMinimumSize(new java.awt.Dimension(600, 400));
 
-        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
+        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
         jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTabbedPane1MouseClicked(evt);
