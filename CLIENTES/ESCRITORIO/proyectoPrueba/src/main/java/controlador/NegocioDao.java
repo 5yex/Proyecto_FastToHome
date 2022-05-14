@@ -23,10 +23,8 @@ public class NegocioDao {
         negocio.setId_categoria(respuesta.get("$id_categoria").getAsInt());    
         negocio.setId_mercader(respuesta.get("$id_mercader").getAsInt());
         negocio.setNombre(respuesta.get("$nombre").getAsString());
-                negocio.setDescripcion(respuesta.get("$descripcion").getAsString());
+        negocio.setDescripcion(respuesta.get("$descripcion").getAsString());
 
-        
-        
         return negocio;
     }
 
