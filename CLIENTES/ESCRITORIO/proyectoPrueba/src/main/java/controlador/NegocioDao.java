@@ -16,9 +16,13 @@ import modelo.Usuario;
 public class NegocioDao {
 
     public static Negocio negocioDeMercader(Usuario user) {
-        Negocio negocio;
+        Negocio negocio = new Negocio();
         JsonObject respuesta = gestion.consultaSeleccionUnico(new Peticion("mercader_de_usuario", user.getJSON()));
 
+        respuesta.get("id_direccion").getAsInt();
+        
+        
+        
         return negocio;
     }
 
