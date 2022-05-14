@@ -41,6 +41,7 @@ public class VentanaRegistroNegocio extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         titleText.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         titleText.setText("REGISTRAR NEGOCIO:");

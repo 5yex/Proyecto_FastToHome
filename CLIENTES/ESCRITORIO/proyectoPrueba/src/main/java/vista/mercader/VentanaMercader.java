@@ -15,10 +15,10 @@ import modelo.Usuario;
  */
 public class VentanaMercader extends javax.swing.JFrame {
 
-    Usuario mercader;
-    Negocio negocio;
-    int panelSeleccionado = -99;
-    VentanaRegistroNegocio rnegocio= new VentanaRegistroNegocio();
+    private Usuario mercader;
+   private  Negocio negocio;
+    private int panelSeleccionado = -99;
+    private VentanaRegistroNegocio rnegocio= new VentanaRegistroNegocio();
 
    
 

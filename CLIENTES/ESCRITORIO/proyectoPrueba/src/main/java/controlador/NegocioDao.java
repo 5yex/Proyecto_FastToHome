@@ -11,4 +11,7 @@ package controlador;
  */
 public class NegocioDao {
     
+    
+    
+    
 }
