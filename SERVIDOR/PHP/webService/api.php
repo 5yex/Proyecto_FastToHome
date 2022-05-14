@@ -124,6 +124,23 @@ function obtenerIdNegocio($datos) {
     }
 }
 
+
+function obtenerNegocioDeMercader($datos) {
+    require_once '../modelo/Negocio.php';
+    try {
+        $negocio = new Negocio();
+        $negocio->setNombre($datos->nombre);
+        $respuesta = $negocio->obtenerIdNegocio();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'El mercader no tiene negocio');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
 function obtenerProductosNegocio($datos){
     require_once '../modelo/Producto.php';
     try {
