@@ -15,7 +15,7 @@ import modelo.Peticion;
 public class NegocioDao {
     
      public boolean nuevoProducto(Negocio negocio){
-        return gestion.hacerConsulta(new Peticion("nuevo_producto", negocio.getJSON()));
+        return gestion.hacerConsulta(new Peticion("mercader_de_usuario", negocio.getJSON()));
     }
     
     
