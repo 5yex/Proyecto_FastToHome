@@ -13,12 +13,8 @@ public class panelRegistroNegocio extends javax.swing.JPanel {
     /**
      * Creates new form RegistroNegocio
      */
-    public panelRegistroNegocio() {
+    public panelRegistroNegocio(VentanaMercader vm) {
         initComponents();
-    }
-
-    panelRegistroNegocio(VentanaMercader aThis) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**
