@@ -16,7 +16,7 @@ import modelo.Usuario;
  */
 public class NegocioDao {
     
-     public static JsonObject negocioDeMercader(Usuario user){
+     public static negocio negocioDeMercader(Usuario user){
         return gestion.consultaSeleccionUnico(new Peticion("mercader_de_usuario", user.getJSON()));
     }
     
