@@ -131,7 +131,7 @@ function obtenerNegocioDeMercader($datos) {
     require_once '../modelo/Negocio.php';
     try {
         $negocio = new Negocio();
-        $negocio->setId_mercader(47);
+        $negocio->setId_mercader($datos->id);
         $respuesta = $negocio->obtenerNegocioDeMercader();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
