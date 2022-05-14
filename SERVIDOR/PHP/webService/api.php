@@ -9,7 +9,7 @@ if (empty($_POST["DATA"])) {
         case 'obtener_usuarios';
             obtenerTodosLosUsuarios(json_decode($peticion->datos));
             break;
-        case 'obtener_usuarios_clientes'
+        case 'obtener_usuarios_clientes';
             obtenerUsuariosClientes(json_decode($peticion->datos));
             break;
         case 'getUsuario';
