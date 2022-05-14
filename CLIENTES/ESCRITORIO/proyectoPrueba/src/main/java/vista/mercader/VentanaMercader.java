@@ -20,14 +20,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     int panelSeleccionado = -99;
     VentanaRegistroNegocio rnegocio= new VentanaRegistroNegocio();
 
-    public boolean isRegistroPendiente() {
-        return registroPendiente;
-    }
-
-    public void setRegistroPendiente(boolean registroPendiente) {
-        this.registroPendiente = registroPendiente;
-    }
-    boolean registroPendiente = true;
+   
 
     /**
      * Creates new form VentanaPrincipal
