@@ -18,14 +18,14 @@ import util.validaciones;
  *
  * @author Jesus
  */
-public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
+public class registrarUsuario extends javax.swing.JDialog implements Constantes{
     
     private Usuario newUsuario = new Usuario();
 
     /**
      * Creates new form DialogoRegistro
      */
-    public DialogoRegistro(java.awt.Frame parent, boolean modal) {
+    public registrarUsuario(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -388,7 +388,7 @@ public class DialogoRegistro extends javax.swing.JDialog implements Constantes{
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                DialogoRegistro dialog = new DialogoRegistro(new javax.swing.JFrame(), true);
+                registrarUsuario dialog = new registrarUsuario(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
