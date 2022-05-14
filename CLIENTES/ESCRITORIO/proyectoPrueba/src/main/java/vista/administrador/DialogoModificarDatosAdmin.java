@@ -41,6 +41,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     public DialogoModificarDatosAdmin(java.awt.Frame parent, boolean modal, Usuario administrador) {
         super(parent, modal);
         admin = administrador;
+        //establecerCamposIniciales();
         initComponents();
     }
 
