@@ -14,6 +14,9 @@
         android:theme="@style/Theme.FASTTOHOME"
         tools:targetApi="31">
         <activity
+            android:name=".PantallaRegistro"
+            android:exported="false" />
+        <activity
             android:name=".PantallaLogin"
             android:exported="false" />
         <activity
