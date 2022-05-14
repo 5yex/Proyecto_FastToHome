@@ -162,8 +162,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                             new VentanaAdministrador(user).setVisible(true);
                             break;
                         case MERCADER:
-                            this.setVisible(false);
-                            new VentanaMercader(user).setVisible(true);
+                            ventanaMercader(user);
                             break;
                         default:
                             throw new AssertionError();
@@ -179,6 +178,15 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
             JOptionPane.showMessageDialog(this, "Ambos campos deben estar rellenos para iniciar sesion", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
+    }
+
+    private void ventanaMercader(Usuario user) {
+        
+        
+        
+        
+        this.setVisible(false);
+        new VentanaMercader(user).setVisible(true);
     }
 
     /**
