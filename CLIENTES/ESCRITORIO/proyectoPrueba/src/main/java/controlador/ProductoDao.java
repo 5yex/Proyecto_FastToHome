@@ -25,25 +25,19 @@ public class ProductoDao {
     public ArrayList <Producto> selecciónProductosNegocio(Producto product){
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios", product.getJSON()));
 
-        ArrayList<Producto> listaProducto = new ArrayList<Producto>();
+        ArrayList<Producto> listaProductos = new ArrayList<Producto>();
 
         for (int i = 0; i < jsonArray.size(); i++) {
-            JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
+            JsonObject productoJson = jsonArray.get(i).getAsJsonObject();
 
-            /*user.setDni(usuarioJson.get("Dni").getAsString());
-            user.setEmail(usuarioJson.get("Email").getAsString());
-            user.setId(usuarioJson.get("id").getAsInt());
-            if (!usuarioJson.get("direccion_id").isJsonNull()) {
-                user.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
-            }
-            user.setNombre(usuarioJson.get("Nombre").getAsString());
-            user.setPassword(usuarioJson.get("password").getAsString());
-            user.setRol(usuarioJson.get("Rol").getAsString());
-            user.setTlf(usuarioJson.get("tlf").getAsString());
+            product.setNombre(productoJson.get("Nombre").getAsString());
+            product.setPrecio(productoJson.get("Precio").getAsDouble());
+            product.setDescripcion(productoJson.get("Descripcion").getAsString());
+            product.setStock(productoJson.get("Stock").getAsInt());
             
-            listaUsuarios.add(user);*/
+            listaProductos.add(product);
 
         }
-        return listaProducto;
+        return listaProductos;
     }
 }
