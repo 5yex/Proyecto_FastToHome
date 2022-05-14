@@ -11,6 +11,7 @@ import controlador.NegocioDao;
 import controlador.UsuarioDao;
 import javax.swing.JOptionPane;
 import javax.swing.UnsupportedLookAndFeelException;
+import modelo.Negocio;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
 import util.validaciones;
