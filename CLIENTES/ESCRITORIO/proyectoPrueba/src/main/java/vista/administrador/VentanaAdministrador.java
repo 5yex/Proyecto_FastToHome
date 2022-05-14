@@ -161,12 +161,6 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         }
         Usuario user = new Usuario(99, "Pruebas", "Hernandez", "54332653Y", "pruebas@pruebas", "123456789", "mercader", 0, "0");
         new VentanaAdministrador(user).setVisible(true);
-//        if (conex.testConexion()) {
-//            new Login().setVisible(true);
-//        } else {
-//            showMessageDialog(null, "ERROR DE CONEXION CON EL SERVIDOR", "LOGIN", JOptionPane.ERROR_MESSAGE);
-//            System.exit(0);
-//        }
     }
 
 
