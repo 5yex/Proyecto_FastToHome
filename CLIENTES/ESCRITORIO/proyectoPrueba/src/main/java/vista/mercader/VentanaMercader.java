@@ -123,7 +123,7 @@ public class VentanaMercader extends javax.swing.JFrame {
                 case 0:
                     panelBase.repaint();
                     panelBase.revalidate();
-                    panelBase.setLayout(new util.WrapLayout(CENTER_ALIGNMENT));
+                    panelBase.setLayout(new util.WrapLayout());
                     break;
             }
 
