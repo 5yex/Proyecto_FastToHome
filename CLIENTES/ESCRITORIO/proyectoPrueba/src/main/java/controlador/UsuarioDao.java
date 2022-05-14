@@ -106,7 +106,7 @@ public class UsuarioDao {
         
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios", user.getJSON()));
 
-        ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
+        ArrayList<Usuario> listaClientes = new ArrayList<Usuario>();
 
         for (int i = 0; i < jsonArray.size(); i++) {
             JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
@@ -119,13 +119,13 @@ public class UsuarioDao {
             }
             user.setNombre(usuarioJson.get("Nombre").getAsString());
             user.setPassword(usuarioJson.get("password").getAsString());
-            user.setRol(usuarioJson.get("Rol").getAsString());
+            //user.setRol(usuarioJson.get("Rol").getAsString());
             user.setTlf(usuarioJson.get("tlf").getAsString());
             
-            listaUsuarios.add(user);
+            listaClientes.add(user);
 
         }
-        return listaUsuarios;
+        return listaClientes;
     }
 
 }
