@@ -7,6 +7,7 @@ package vista;
 import vista.administrador.VentanaAdministrador;
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatIntelliJLaf;
+import controlador.NegocioDao;
 import controlador.UsuarioDao;
 import javax.swing.JOptionPane;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -180,12 +181,12 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
 
     }
 
-    private void ventanaMercader(Usuario user) {
-        
-        
-        
-        
+    private void ventanaMercader(Usuario user){     
         this.setVisible(false);
+        
+        Negocio negocio = NegocioDao.
+        
+        
         new VentanaMercader(user).setVisible(true);
     }
 
