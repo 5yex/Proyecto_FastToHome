@@ -149,6 +149,7 @@ class Producto extends Conexion{
             //ocurrio un error al insertar
             printf('aaa');
             return FALSE;
+        }
     }
 
 }
