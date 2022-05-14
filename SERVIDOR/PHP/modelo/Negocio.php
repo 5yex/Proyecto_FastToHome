@@ -118,9 +118,7 @@ class Negocio extends Conexion {
         $sentencia->bindParam(":id", $id_mercader);
         
         $sentencia->execute();            
-        return $sentencia->fetchAll(PDO::FETCH_OBJ);
-        
-        
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);        
     }
 
     public function modificar() {
