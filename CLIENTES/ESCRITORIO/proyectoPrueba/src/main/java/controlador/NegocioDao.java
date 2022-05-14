@@ -3,6 +3,7 @@ package controlador;
 import com.google.gson.JsonObject;
 import modelo.Negocio;
 import modelo.Peticion;
+import modelo.Usuario;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
