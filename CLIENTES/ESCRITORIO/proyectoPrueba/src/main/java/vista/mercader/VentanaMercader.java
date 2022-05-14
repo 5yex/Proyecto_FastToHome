@@ -48,7 +48,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         setMinimumSize(new java.awt.Dimension(600, 400));
 
-        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
         jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTabbedPane1MouseClicked(evt);
@@ -61,7 +61,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelBase.setLayout(panelBaseLayout);
         panelBaseLayout.setHorizontalGroup(
             panelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 654, Short.MAX_VALUE)
+            .addGap(0, 738, Short.MAX_VALUE)
         );
         panelBaseLayout.setVerticalGroup(
             panelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -78,7 +78,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelProductosBase.setLayout(panelProductosBaseLayout);
         panelProductosBaseLayout.setHorizontalGroup(
             panelProductosBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 654, Short.MAX_VALUE)
+            .addGap(0, 738, Short.MAX_VALUE)
         );
         panelProductosBaseLayout.setVerticalGroup(
             panelProductosBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
