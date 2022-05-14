@@ -6,6 +6,7 @@ package com.donoso.proyectoprueba;
 
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatIntelliJLaf;
+import com.formdev.flatlaf.FlatLightLaf;
 import controlador.UsuarioDao;
 import controlador.gestion;
 import static controlador.gestion.hacerConsulta;
@@ -51,7 +52,7 @@ public static FrameLogin lg;
         //System.out.println(hacerConsulta(new Peticion("nuevo_producto", producto.getJSON())));
         //System.out.println(UsuarioDao.obtenerIdCliente(user));
         
-        UIManager.setLookAndFeel(new FlatDarkLaf());
+        UIManager.setLookAndFeel(new FlatLightLaf());
         lg = new FrameLogin();
         lg.setVisible(true);
         
