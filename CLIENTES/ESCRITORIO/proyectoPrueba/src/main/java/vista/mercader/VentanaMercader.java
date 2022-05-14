@@ -17,6 +17,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     Usuario mercader;
     Negocio negocio;
     int panelSeleccionado = -99;
+    VentanaRegistroNegocio rnegocio= new VentanaRegistroNegocio();
 
     public boolean isRegistroPendiente() {
         return registroPendiente;
@@ -73,7 +74,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         );
         panelBaseLayout.setVerticalGroup(
             panelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 421, Short.MAX_VALUE)
+            .addGap(0, 441, Short.MAX_VALUE)
         );
 
         jScrollPane1.setViewportView(panelBase);
