@@ -121,9 +121,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         if (panelSeleccionado != index) {
             switch (index) {
                 case 0:
-                    if (registroPendiente) {
-                        introducirRegistroNegocio();
-                    }
+                   
                     break;
             }
 
