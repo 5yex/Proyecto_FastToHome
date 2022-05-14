@@ -105,5 +105,9 @@ class Producto extends Conexion{
         $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
+    
+    public void actualizarProducto(){
+        
+    }
 
 }
