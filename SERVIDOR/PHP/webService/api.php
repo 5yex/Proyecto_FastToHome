@@ -9,6 +9,9 @@ if (empty($_POST["DATA"])) {
         case 'obtener_usuarios';
             obtenerTodosLosUsuarios(json_decode($peticion->datos));
             break;
+        case 'obtener_usuarios_clientes'
+            obtenerUsuariosClientes(json_decode($peticion->datos));
+            break;
         case 'getUsuario';
             getUsuario(json_decode($peticion->datos));
             break;
@@ -247,8 +250,26 @@ function obtenerTodosLosUsuarios($datos){
     }
 }
 
+function obtenerUsuariosClientes($datos){
+    require_once '../modelo/usuario.php';
+    
+    try {
+        $cliente = new usuario();
+        $respuesta = $cliente->todosUsuariosClientes();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
 function mandarRespuesta($error, $datos) {
     require_once '../modelo/Respuesta.php';
     $respuesta = new Respuesta($error, $datos);
     echo json_encode($respuesta);
 }
+
+
