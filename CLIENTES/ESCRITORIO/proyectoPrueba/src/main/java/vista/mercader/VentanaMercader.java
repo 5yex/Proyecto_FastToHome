@@ -4,6 +4,7 @@
  */
 package vista.mercader;
 
+import controlador.NegocioDao;
 import java.awt.FlowLayout;
 import modelo.Negocio;
 import modelo.Usuario;
@@ -34,7 +35,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     public VentanaMercader(Usuario user) {
         initComponents();
         mercader = user;
-        panelCambio();
+        
     }
 
     /**
@@ -46,100 +47,63 @@ public class VentanaMercader extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        panelBase = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        panelProductosBase = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
         setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         setMinimumSize(new java.awt.Dimension(600, 400));
 
-        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
-        jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTabbedPane1MouseClicked(evt);
-            }
-        });
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setText("BIENVENIDO");
 
-        jScrollPane1.setBorder(null);
-
-        javax.swing.GroupLayout panelBaseLayout = new javax.swing.GroupLayout(panelBase);
-        panelBase.setLayout(panelBaseLayout);
-        panelBaseLayout.setHorizontalGroup(
-            panelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 738, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(171, 171, 171)
+                .addComponent(jLabel1)
+                .addContainerGap(210, Short.MAX_VALUE))
         );
-        panelBaseLayout.setVerticalGroup(
-            panelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 441, Short.MAX_VALUE)
-        );
-
-        jScrollPane1.setViewportView(panelBase);
-
-        jTabbedPane1.addTab("INICIO", jScrollPane1);
-
-        jScrollPane2.setBorder(null);
-
-        javax.swing.GroupLayout panelProductosBaseLayout = new javax.swing.GroupLayout(panelProductosBase);
-        panelProductosBase.setLayout(panelProductosBaseLayout);
-        panelProductosBaseLayout.setHorizontalGroup(
-            panelProductosBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 738, Short.MAX_VALUE)
-        );
-        panelProductosBaseLayout.setVerticalGroup(
-            panelProductosBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 598, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(85, 85, 85)
+                .addComponent(jLabel1)
+                .addContainerGap(378, Short.MAX_VALUE))
         );
 
-        jScrollPane2.setViewportView(panelProductosBase);
+        jMenuBar1.add(jMenu2);
 
-        jTabbedPane1.addTab("PRODUCTOS", jScrollPane2);
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
-        panelCambio();
-    }//GEN-LAST:event_jTabbedPane1MouseClicked
-
-    public void panelCambio() {
-        int index = jTabbedPane1.getSelectedIndex();
-        if (panelSeleccionado != index) {
-            switch (index) {
-                case 0:
-                    panelBase.repaint();
-                    panelBase.revalidate();
-                    panelBase.setLayout(new util.WrapLayout());
-                    break;
-            }
-
-            panelSeleccionado = index;
-        }
-
-    }
-
+ 
+   
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JPanel panelBase;
-    private javax.swing.JPanel panelProductosBase;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
