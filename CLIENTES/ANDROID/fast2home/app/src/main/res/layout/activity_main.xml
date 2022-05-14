@@ -23,7 +23,7 @@
         android:layout_marginTop="15dp"
         android:backgroundTint="#FF5722"
         android:onClick="pantallaLogin"
-        android:text="VAMOS A ENTRAR !!"
+        android:text="VAMOS PARA DENTRO!!"
         android:textSize="24sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
