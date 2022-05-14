@@ -122,7 +122,7 @@ public class VentanaMercader extends javax.swing.JFrame {
        
     }
 
-    public void pruebaRegistroNegocio(VentanaMercader aThis) {
+    public void pruebaRegistroNegocio() {
         panelBase.removeAll();
         panelBase.setLayout(new util.WrapLayout(FlowLayout.CENTER, 30, 30));
         panelBase.add(new panelRegistroNegocio());
