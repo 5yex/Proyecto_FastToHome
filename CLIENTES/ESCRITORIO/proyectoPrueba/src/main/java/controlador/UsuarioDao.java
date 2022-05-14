@@ -101,5 +101,31 @@ public class UsuarioDao {
         return listaUsuarios;
 
     }
+    
+    public static ArrayList<Usuario> obtenerDatosClientes(Usuario user){
+        
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios", user.getJSON()));
+
+        ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
+
+        for (int i = 0; i < jsonArray.size(); i++) {
+            JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
+
+            user.setDni(usuarioJson.get("Dni").getAsString());
+            user.setEmail(usuarioJson.get("Email").getAsString());
+            user.setId(usuarioJson.get("id").getAsInt());
+            if (!usuarioJson.get("direccion_id").isJsonNull()) {
+                user.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
+            }
+            user.setNombre(usuarioJson.get("Nombre").getAsString());
+            user.setPassword(usuarioJson.get("password").getAsString());
+            user.setRol(usuarioJson.get("Rol").getAsString());
+            user.setTlf(usuarioJson.get("tlf").getAsString());
+            
+            listaUsuarios.add(user);
+
+        }
+        return listaUsuarios;
+    }
 
 }
