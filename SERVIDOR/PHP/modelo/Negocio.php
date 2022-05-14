@@ -115,7 +115,7 @@ class Negocio extends Conexion {
         
         $nombre = $this->getNombre();
         
-        $sentencia->bindParam(":id", $id_mercader);
+        $sentencia->bindParam(":id", $id);
         
         $sentencia->execute();            
         return $sentencia->fetchAll(PDO::FETCH_OBJ);        
