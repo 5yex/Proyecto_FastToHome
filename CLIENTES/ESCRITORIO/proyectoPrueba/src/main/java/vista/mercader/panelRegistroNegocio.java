@@ -8,12 +8,12 @@ package vista.mercader;
  *
  * @author jmcbg
  */
-public class RegistroNegocio extends javax.swing.JPanel {
+public class panelRegistroNegocio extends javax.swing.JPanel {
 
     /**
      * Creates new form RegistroNegocio
      */
-    public RegistroNegocio() {
+    public panelRegistroNegocio() {
         initComponents();
     }
 
