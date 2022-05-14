@@ -7,13 +7,9 @@ import android.widget.Button;
 
 public class PantallaInicio extends AppCompatActivity {
 
-    Button botonEntrar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        botonEntrar = (Button) findViewById(R.id.botonEntrar);
     }
 }
