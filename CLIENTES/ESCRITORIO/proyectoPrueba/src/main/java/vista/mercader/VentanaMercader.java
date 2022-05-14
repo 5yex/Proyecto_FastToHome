@@ -116,7 +116,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelCambio();
     }//GEN-LAST:event_jTabbedPane1MouseClicked
 
-    private void panelCambio() {
+    public void panelCambio() {
         int index = jTabbedPane1.getSelectedIndex();
         if (panelSeleccionado != index) {
             switch (index) {
