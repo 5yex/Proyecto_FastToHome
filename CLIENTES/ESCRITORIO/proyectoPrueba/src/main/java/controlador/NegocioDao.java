@@ -20,10 +20,12 @@ public class NegocioDao {
         JsonObject respuesta = gestion.consultaSeleccionUnico(new Peticion("mercader_de_usuario", user.getJSON()));
 
         negocio.setId_direccion(respuesta.get("id_direccion").getAsInt());
-        negocio.setId_categoria(respuesta.get("$id_categoria").getAsInt());
-      
-        
+        negocio.setId_categoria(respuesta.get("$id_categoria").getAsInt());    
         negocio.setId_mercader(respuesta.get("$id_mercader").getAsInt());
+        negocio.setNombre(respuesta.get("$nombre").getAsString());
+        
+        
+        
         return negocio;
     }
 
