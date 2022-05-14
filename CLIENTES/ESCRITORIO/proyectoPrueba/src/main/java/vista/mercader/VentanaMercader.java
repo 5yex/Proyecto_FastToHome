@@ -40,6 +40,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         panelBase = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
+        panelProductosBase = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
@@ -71,6 +72,20 @@ public class VentanaMercader extends javax.swing.JFrame {
         jTabbedPane1.addTab("INICIO", jScrollPane1);
 
         jScrollPane2.setBorder(null);
+
+        javax.swing.GroupLayout panelProductosBaseLayout = new javax.swing.GroupLayout(panelProductosBase);
+        panelProductosBase.setLayout(panelProductosBaseLayout);
+        panelProductosBaseLayout.setHorizontalGroup(
+            panelProductosBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 654, Short.MAX_VALUE)
+        );
+        panelProductosBaseLayout.setVerticalGroup(
+            panelProductosBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 421, Short.MAX_VALUE)
+        );
+
+        jScrollPane2.setViewportView(panelProductosBase);
+
         jTabbedPane1.addTab("PRODUCTOS", jScrollPane2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -95,10 +110,9 @@ public class VentanaMercader extends javax.swing.JFrame {
     private void panelCambio() {
         int index = jTabbedPane1.getSelectedIndex();
         if(panelSeleccionado != index){
-             System.out.println("vista.mercader.VentanaMercader.jTabbedPane1MouseClicked()     PANEL SELECCIONADO:  " + index);
              switch (index) {
                 case 0:
-                    pruebaRegistroNegocio();
+                    pruebaRegistroNegocio(this);
                     break;
             }
              
@@ -122,5 +136,6 @@ public class VentanaMercader extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JPanel panelBase;
+    private javax.swing.JPanel panelProductosBase;
     // End of variables declaration//GEN-END:variables
 }
