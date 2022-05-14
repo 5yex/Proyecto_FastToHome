@@ -4,12 +4,14 @@
  */
 package vista;
 
+import modelo.Usuario;
+
 /**
  *
  * @author jmcbg
  */
 public class registroNegocio extends javax.swing.JFrame {
-
+    private Usuario user;
     /**
      * Creates new form VentanaRegistroNegocio
      */
