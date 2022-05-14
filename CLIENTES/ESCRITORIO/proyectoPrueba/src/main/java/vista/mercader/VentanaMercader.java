@@ -4,6 +4,7 @@
  */
 package vista.mercader;
 
+import vista.VentanaRegistroNegocio;
 import controlador.NegocioDao;
 import java.awt.FlowLayout;
 import modelo.Negocio;
