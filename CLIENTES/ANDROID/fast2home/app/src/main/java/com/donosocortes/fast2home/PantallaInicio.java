@@ -15,9 +15,4 @@ public class PantallaInicio extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void patallaLogin(View view) {
-        Intent i = new Intent(this, PantallaLogin.class );
-        startActivity(i);
-    }
-
 }
