@@ -65,8 +65,6 @@ public class registroNegocio extends javax.swing.JFrame {
 
         botonPedirImagen.setText("Subir logo del negocio");
 
-        comboCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel3.setText("CATEGORÍA");
 
         botonCompletarRegistro.setText("COMPLETAR REGISTRO");
