@@ -39,6 +39,9 @@ if (empty($_POST["DATA"])) {
         case 'nueva_direccion';
             nuevaDireccion(json_decode($peticion->datos));
             break;
+        case 'obtener_direccion';
+            obtenerDireccion(json_decode($peticion->datos));
+            break;
         //Casos negocio
         case 'nuevo_negocio';
             nuevoNegocio(json_decode($peticion->datos));
@@ -126,6 +129,22 @@ function nuevaDireccion($datos) {
         $direccion->setCodigo_postal($datos->codigo_postal);
         $direccion->setOtros($datos->otros);
         $direccion->setCoordenadas($datos->coordenadas);
+
+        if ($direccion->agregar()) {
+            mandarRespuesta(false, 'Se ha realizado la insercion de una direccion');
+        } else {
+            mandarRespuesta(true, 'Error en la inserccion de la direccion');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
+function obtenerDireccion($datos){
+    require_once '../modelo/Direccion.php';
+    try {
+        $direccion = new Direccion();
+        $direccion->setId_direccion($datos->id_direccion);
 
         if ($direccion->agregar()) {
             mandarRespuesta(false, 'Se ha realizado la insercion de una direccion');
