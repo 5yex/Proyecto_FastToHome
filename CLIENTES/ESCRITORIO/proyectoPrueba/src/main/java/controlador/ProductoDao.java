@@ -9,6 +9,7 @@ package controlador;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import java.util.ArrayList;
+import modelo.Negocio;
 import modelo.Peticion;
 import modelo.Producto;
 
@@ -21,23 +22,23 @@ public class ProductoDao {
         return gestion.hacerConsulta(new Peticion("nuevo_producto", product.getJSON()));
     }
     
-    public ArrayList <Producto> selecciónProductosNegocio(Producto negocio){
+    public ArrayList <Producto> selecciónProductosNegocio(Negocio negocio){
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios", negocio.getJSON()));
         
-        Producto producto;
+        Producto producto = new Producto();
         
         ArrayList<Producto> listaProductos = new ArrayList<Producto>();
 
         for (int i = 0; i < jsonArray.size(); i++) {
             JsonObject productoJson = jsonArray.get(i).getAsJsonObject();
             
-            negocio.setId_producto(productoJson.get("id").getAsInt());
-            negocio.setNombre(productoJson.get("Nombre").getAsString());
-            negocio.setPrecio(productoJson.get("Precio").getAsDouble());
-            negocio.setDescripcion(productoJson.get("Descripcion").getAsString());
-            negocio.setStock(productoJson.get("Stock").getAsInt());
+            producto.setId_producto(productoJson.get("id").getAsInt());
+            producto.setNombre(productoJson.get("Nombre").getAsString());
+            producto.setPrecio(productoJson.get("Precio").getAsDouble());
+            producto.setDescripcion(productoJson.get("Descripcion").getAsString());
+            producto.setStock(productoJson.get("Stock").getAsInt());
             
-            listaProductos.add(negocio);
+            listaProductos.add(producto);
 
         }
         return listaProductos;
