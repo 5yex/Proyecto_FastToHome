@@ -42,7 +42,8 @@ public class VentanaMercader extends javax.swing.JFrame {
         contenido = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
@@ -65,12 +66,15 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         jMenu1.setText("INFORMACIÓN");
         jMenu1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-
-        jRadioButtonMenuItem1.setSelected(true);
-        jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
-        jMenu1.add(jRadioButtonMenuItem1);
-
         jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("INFORMACIÓN");
+        jMenu2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("INFORMACIÓN");
+        jMenu3.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
 
@@ -96,7 +100,8 @@ public class VentanaMercader extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel contenido;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     // End of variables declaration//GEN-END:variables
 }
