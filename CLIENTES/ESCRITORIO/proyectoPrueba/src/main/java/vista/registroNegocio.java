@@ -4,6 +4,7 @@
  */
 package vista;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import modelo.Categoria;
@@ -48,6 +49,8 @@ public class registroNegocio extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         botonCompletarRegistro = new javax.swing.JButton();
         botonPedirDireccion = new javax.swing.JButton();
+        error = new javax.swing.JLabel();
+        jFileChooser1 = new javax.swing.JFileChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -76,6 +79,10 @@ public class registroNegocio extends javax.swing.JFrame {
             }
         });
 
+        error.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.background"));
+        error.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
+        error.setText(" ");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -83,6 +90,7 @@ public class registroNegocio extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(error, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(varNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -99,7 +107,10 @@ public class registroNegocio extends javax.swing.JFrame {
                         .addComponent(botonPedirImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(botonPedirDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 12, Short.MAX_VALUE)
+                .addComponent(jFileChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,9 +133,13 @@ public class registroNegocio extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonPedirImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botonPedirDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(67, 67, 67)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(error, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botonCompletarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jFileChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -149,7 +164,6 @@ public class registroNegocio extends javax.swing.JFrame {
     private boolean nuevoNegocio(Usuario user) {
         try {
             String categoria = comboCategoria.getSelectedItem().toString();
-                    
 //            String calle = varCalle.getText();
 //            String ciudad = varCiudad.getText();
 //
@@ -162,13 +176,13 @@ public class registroNegocio extends javax.swing.JFrame {
 //                direccion.setNumero(num);
 //            }
 //
-//        } catch (NumberFormatException ex) {
-//            error.setText("Rellena correctamente los campos numéricos");
-//            return false;
-//        } catch (IOException ex) {
-//            error.setText(ex.getMessage());
-//            return false;
-//        }
+        } catch (NumberFormatException ex) {
+            error.setText("Rellena correctamente los campos numéricos");
+            return false;
+        } catch (Exception ex) {
+            error.setText(ex.getMessage());
+            return false;
+        }
         return true;
     }
 
@@ -185,6 +199,8 @@ public class registroNegocio extends javax.swing.JFrame {
     private javax.swing.JButton botonPedirDireccion;
     private javax.swing.JButton botonPedirImagen;
     private javax.swing.JComboBox<String> comboCategoria;
+    private javax.swing.JLabel error;
+    private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
