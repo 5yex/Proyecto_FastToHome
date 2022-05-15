@@ -160,6 +160,7 @@ public class registroNegocio extends javax.swing.JFrame {
         try {
             String categoria = comboCategoria.getSelectedItem().toString();
             String nombre = varNombre.getText();
+            String descripcion = textAreaDescripcion.getText();
 //            String calle = varCalle.getText();
 //            String ciudad = varCiudad.getText();
 //
