@@ -138,4 +138,17 @@ class Pedido extends Conexion{
         //Insertó correctamente
         return TRUE;
     }
+    
+    public function obtenerPedidosNegocio(){
+        $sql = "SELECT * FROM pedidos WHERE id_negocio = :id_neg";
+        
+        $sentencia = $this->dblink->prepare($sql);
+
+        $id_negocio = $this->getId_negocio();
+        $sentencia->bindParam(":id_neg", $id_negocio);
+
+        $sentencia->execute();
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+        
+    }
 }
