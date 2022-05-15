@@ -4,10 +4,17 @@
  */
 package controlador;
 
+import modelo.Direccion;
+import modelo.Peticion;
+
 /**
  *
  * @author Jesus
  */
 public class DireccionDao {
+    
+    public static boolean nuevoUsuario(Direccion direccion) {
+        return gestion.hacerConsulta(new Peticion("nuevo_usuario", direccion.getJSON()));
+    }
     
 }
