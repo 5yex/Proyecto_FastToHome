@@ -61,7 +61,7 @@ if (empty($_POST["DATA"])) {
             nuevaCategoria(json_decode($peticion->datos));
             break;
         case 'obtener_categorias';
-            obtenerCategorias(json_decode($datos->datos));
+            obtenerCategorias();
             break;
         case 'obtener_id_categoria';
             obtenerCategoriaPorNombre(json_decode($datos->datos));
