@@ -28,9 +28,9 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
     /**
      * Creates new form dialogoNuevoDepartamento
      */
-    public dialogoNuevaDirección(java.awt.Frame parent, boolean modal, Direccion bd) {
+    public dialogoNuevaDirección(java.awt.Frame parent, boolean modal, Direccion direccion) {
         super(parent, modal);
-        this.bd = bd;
+        this.bd = direccion;
         initComponents();
         //cargarSelectorDeps(new DepartamentoDAO().mostrarDepartamentos(bd));
     }
