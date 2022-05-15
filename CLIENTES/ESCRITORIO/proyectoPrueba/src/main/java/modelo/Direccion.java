@@ -18,7 +18,7 @@ public class Direccion {
    private String ciudad;
    private String otros;
    private int codigo_postal;
-   private int coordenads;
+   private int coordenadas;
 
     public Direccion(int id_direccion, String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenads) {
         this.id_direccion = id_direccion;
@@ -27,7 +27,7 @@ public class Direccion {
         this.ciudad = ciudad;
         this.otros = otros;
         this.codigo_postal = codigo_postal;
-        this.coordenads = coordenads;
+        this.coordenadas = coordenads;
     }
 
     public Direccion(String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenads) {
@@ -36,7 +36,7 @@ public class Direccion {
         this.ciudad = ciudad;
         this.otros = otros;
         this.codigo_postal = codigo_postal;
-        this.coordenads = coordenads;
+        this.coordenadas = coordenads;
     }
 
     public Direccion() {
@@ -92,11 +92,11 @@ public class Direccion {
     }
 
     public int getCoordenads() {
-        return coordenads;
+        return coordenadas;
     }
 
     public void setCoordenads(int coordenads) {
-        this.coordenads = coordenads;
+        this.coordenadas = coordenads;
     }
    
    public String getJSON(){
