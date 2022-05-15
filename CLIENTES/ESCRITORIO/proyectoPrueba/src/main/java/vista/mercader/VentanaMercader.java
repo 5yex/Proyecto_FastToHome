@@ -53,7 +53,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         contenido.setLayout(contenidoLayout);
         contenidoLayout.setHorizontalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 714, Short.MAX_VALUE)
+            .addGap(0, 770, Short.MAX_VALUE)
         );
         contenidoLayout.setVerticalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
