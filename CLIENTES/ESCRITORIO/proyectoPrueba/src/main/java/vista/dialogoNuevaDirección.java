@@ -162,9 +162,9 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
     }//GEN-LAST:event_cancelarActionPerformed
 
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
-//        if (insertarEmpleados()) {
-//            this.dispose();
-//        }
+       if (rellenarDireccion()) {
+           this.dispose();
+       }
     }//GEN-LAST:event_aceptarActionPerformed
 
     private void varNumeroTXTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_varNumeroTXTActionPerformed
