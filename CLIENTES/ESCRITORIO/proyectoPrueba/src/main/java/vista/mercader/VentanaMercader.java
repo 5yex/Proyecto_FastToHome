@@ -74,11 +74,11 @@ public class VentanaMercader extends javax.swing.JFrame {
         });
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("INFORMACIÓN");
+        jMenu2.setText("PRODUCTOS");
         jMenu2.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setText("INFORMACIÓN");
+        jMenu3.setText("OPCIONES");
         jMenu3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jMenuBar1.add(jMenu3);
 

@@ -25,7 +25,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="INFORMACI&#xd3;N"/>
+            <Property name="text" type="java.lang.String" value="PRODUCTOS"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="3"/>
             </Property>
@@ -33,7 +33,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu3">
           <Properties>
-            <Property name="text" type="java.lang.String" value="INFORMACI&#xd3;N"/>
+            <Property name="text" type="java.lang.String" value="OPCIONES"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="3"/>
             </Property>
