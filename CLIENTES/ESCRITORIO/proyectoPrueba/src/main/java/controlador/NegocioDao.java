@@ -17,7 +17,7 @@ public class NegocioDao {
 
     public static Negocio negocioDeMercader(Usuario user) {
         Negocio negocio = new Negocio();
-        JsonObject respuesta = gestion.consultaSeleccionUnico(new Peticion("mercader_de_usuario", user.getJSON()));
+        JsonObject respuesta = gestion.consultaSeleccionUnico(new Peticion("negocio_de_mercader", user.getJSON()));
 
         if(respuesta == null){
             return null;
