@@ -172,7 +172,7 @@ public class registroNegocio extends javax.swing.JFrame {
                 negocio.setDescripcion(descripcion);
                 negocio.setId_categoria(1);
                 
-                NegocioDao.nuevoNegocio(negocio);
+                return NegocioDao.nuevoNegocio(negocio);
                 
             }
         } catch (NumberFormatException ex) {
@@ -182,7 +182,6 @@ public class registroNegocio extends javax.swing.JFrame {
             error.setText(ex.getMessage());
             return false;
         }
-        return true;
     }
     
 
