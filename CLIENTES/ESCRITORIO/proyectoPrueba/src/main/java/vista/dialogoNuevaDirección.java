@@ -184,7 +184,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
             varNumeroTXT.setText(String.valueOf(direccion.getNumero()));
             varCP.setText(String.valueOf(direccion.getCodigo_postal()));
             varCalle.setText(direccion.getCalle());
-            varCiudad.setText(direccion.setCiudad(ciudad));
+            varCiudad.setText(direccion.getCiudad());
         }
     }
     
