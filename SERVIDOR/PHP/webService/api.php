@@ -142,7 +142,8 @@ function nuevoNegocio($datos){
         $negocio->setId_mercader($datos->id_mercader);
         $negocio->setNombre($datos->nombre);
         $negocio->setDescripcion($datos->descripcion);
-        $negocio->setId_categoria($datos->id_direccion);
+        $negocio->setId_direccion($datos->id_direccion);
+        $negocio->setId_imagen($datos->id_imagen);
         
 
         if ($direccion->agregar()) {
