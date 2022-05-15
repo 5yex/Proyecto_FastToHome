@@ -8,7 +8,7 @@ if (empty($_POST["DATA"])) {
     switch ($peticion->comando) {
         //Casos de usarios
         case 'obtener_usuarios';
-            obtenerTodosLosUsuarios(json_decode($peticion->datos));
+            obtenerTodosLosUsuarios();
             break;
         case 'obtener_usuarios_clientes';
             obtenerUsuariosClientes(json_decode($peticion->datos));
@@ -280,7 +280,7 @@ function getUsuario($datos) {
     }
 }
 
-function obtenerTodosLosUsuarios($datos){
+function obtenerTodosLosUsuarios(){
     require_once '../modelo/usuario.php';
     
     try {
