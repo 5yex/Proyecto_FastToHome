@@ -180,7 +180,9 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
     }//GEN-LAST:event_varCPActionPerformed
 
     public void rellenarDialogo(){
-        if(direccion)
+        if(direccion != null){
+            varNumeroTXT.setText(direccion.getNumero());
+        }
     }
     
     private boolean rellenarDireccion() {
