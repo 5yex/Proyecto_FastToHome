@@ -180,6 +180,7 @@ public class registroNegocio extends javax.swing.JFrame {
             String categoria = comboCategoria.getSelectedItem().toString();
             String nombre = varNombre.getText();
             String descripcion = textAreaDescripcion.getText();
+            int direccionid = nDireccion.getId_direccion();
 
             if (descripcion.length() == 0 | nombre.length() == 0) {
                 throw new IOException("Rellena todos los campos");
