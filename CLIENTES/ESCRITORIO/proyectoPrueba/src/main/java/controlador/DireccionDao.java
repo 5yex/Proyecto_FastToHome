@@ -13,7 +13,7 @@ import modelo.Peticion;
  */
 public class DireccionDao {
     
-    public static boolean nuevoUsuario(Direccion direccion) {
+    public static boolean nuevaDireccion(Direccion direccion) {
         return gestion.hacerConsulta(new Peticion("nueva_direccion", direccion.getJSON()));
     }
     

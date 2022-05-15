@@ -192,7 +192,7 @@ public class registroNegocio extends javax.swing.JFrame {
                 negocio.setId_categoria(1);
 
                 if(NegocioDao.nuevoNegocio(negocio)){
-                    DireccionDao.nuevoUsuario(nDireccion)
+                    DireccionDao.nuevaDireccion(nDireccion)
                 };
 
             }
