@@ -110,6 +110,8 @@ class Direccion extends Conexion{
         return TRUE;
     }
     
-    
+    public function obtenerDireccionPorId(){
+        
+    }
     
 }
