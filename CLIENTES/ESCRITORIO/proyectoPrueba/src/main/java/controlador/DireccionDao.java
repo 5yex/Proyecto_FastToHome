@@ -24,9 +24,11 @@ public class DireccionDao {
 
         String json = negocio.getJSON();
         //hacemos una petición con el comando que deberá realizar el php, y los datos en json    
-        Peticion peticion = new Peticion("getUsuario", json);
+        Peticion peticion = new Peticion("obtener_direccion", json);
         //mandamos la peticion como consulta selección para obtener valores
         JsonObject respuesta = gestion.consultaSeleccionUnico(peticion);
+        
+        
     }
 
 }
