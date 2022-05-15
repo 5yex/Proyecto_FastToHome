@@ -22,15 +22,18 @@ import modelo.Direccion;
  */
 public class dialogoNuevaDirección extends javax.swing.JDialog {
 
-    Direccion direct;
+    Direccion direccion;
     //List<Departamento> departamentos = new ArrayList<Departamento>();
 
     /**
      * Creates new form dialogoNuevoDepartamento
+     * @param parent
+     * @param modal
+     * @param direccion
      */
     public dialogoNuevaDirección(java.awt.Frame parent, boolean modal, Direccion direccion) {
         super(parent, modal);
-        this.direct = direccion;
+        this.direccion = direccion;
         initComponents();
         rellenarDialogo();
         //cargarSelectorDeps(new DepartamentoDAO().mostrarDepartamentos(bd));
@@ -177,7 +180,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
     }//GEN-LAST:event_varCPActionPerformed
 
     public void rellenarDialogo(){
-        if()
+        if(direccion)
     }
     
     private boolean rellenarDireccion() {
@@ -190,10 +193,10 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
             if (calle.length() == 0 | ciudad.length() == 0) {
                 throw new IOException("Rellena todos los campos");
             } else {
-                direct.setCalle(calle);
-                direct.setCiudad(ciudad);
-                direct.setCodigo_postal(cp);
-                direct.setNumero(num);
+                direccion.setCalle(calle);
+                direccion.setCiudad(ciudad);
+                direccion.setCodigo_postal(cp);
+                direccion.setNumero(num);
             }
 
         } catch (NumberFormatException ex) {
