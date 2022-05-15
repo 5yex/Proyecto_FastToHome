@@ -269,7 +269,7 @@ function obtenerUsuariosClientes($datos){
     }
 }
 
-function obtenerPedidosNegocio($datos){
+function obtenerPedidosNegocioPagados($datos){
     require_once '../modelo/Pedido.php';
     
     try{
