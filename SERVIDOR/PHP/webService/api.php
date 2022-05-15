@@ -332,9 +332,9 @@ function nuevaCategoria($datos){
         $categoria->setNombre($datos->nombre);
 
         if ($categoria->agregar()) {
-            mandarRespuesta(false, 'Se ha realizado la insercion de una direccion');
+            mandarRespuesta(false, 'Se ha realizado la insercion de una categoria');
         } else {
-            mandarRespuesta(true, 'Error en la inserccion de la direccion');
+            mandarRespuesta(true, 'Error en la inserccion de la categoria');
         }
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
