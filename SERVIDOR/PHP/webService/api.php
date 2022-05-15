@@ -309,7 +309,7 @@ function mandarRespuesta($error, $datos) {
 
 
 function obtenerCategorias(){
-    require_once '../modelo/usuario.php';
+    require_once '../modelo/Categoria.php';
     
     try {
         $cliente = new usuario();
