@@ -4,6 +4,7 @@
  */
 package vista;
 
+import controlador.NegocioDao;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,7 @@ public class registroNegocio extends javax.swing.JFrame {
     private Direccion nDireccion = new Direccion();
     /**
      * Creates new form VentanaRegistroNegocio
+     * @param user
      */
     public registroNegocio(Usuario user) {
         initComponents();
@@ -162,7 +164,6 @@ public class registroNegocio extends javax.swing.JFrame {
             String nombre = varNombre.getText();
             String descripcion = textAreaDescripcion.getText();
 
-
             if (descripcion.length() == 0 | nombre.length() == 0) {
                 throw new IOException("Rellena todos los campos");
             } else {
@@ -170,6 +171,9 @@ public class registroNegocio extends javax.swing.JFrame {
                 negocio.setNombre(nombre);
                 negocio.setDescripcion(descripcion);
                 negocio.setId_categoria(1);
+                
+                NegocioDao.nuevoNegocio(negocio);
+                
             }
         } catch (NumberFormatException ex) {
             error.setText("Rellena correctamente los campos numéricos");
@@ -180,6 +184,7 @@ public class registroNegocio extends javax.swing.JFrame {
         }
         return true;
     }
+    
 
     
     private void cargarComboCategorías(ArrayList<Categoria> listaCategorias) {
