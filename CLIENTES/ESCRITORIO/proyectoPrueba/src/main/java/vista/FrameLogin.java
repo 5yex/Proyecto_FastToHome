@@ -4,6 +4,7 @@
  */
 package vista;
 
+import vista.mercader.VentanaMercader;
 import vista.administrador.VentanaAdministrador;
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatIntelliJLaf;
