@@ -41,8 +41,8 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     public DialogoModificarDatosAdmin(java.awt.Frame parent, boolean modal, Usuario administrador) {
         super(parent, modal);
         admin = administrador;
-        //establecerCamposIniciales();
         initComponents();
+        establecerCamposIniciales(admin);
     }
 
     /**
@@ -458,4 +458,12 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     private javax.swing.JTextField tlfField;
     private javax.swing.JLabel tlfTXT;
     // End of variables declaration//GEN-END:variables
+
+    private void establecerCamposIniciales(Usuario admin) {
+        infoNombre.setText(admin.getNombre());
+        infoApellido.setText(admin.getApellidos());
+        infoTelefono.setText(admin.getTlf());
+        infoDNI.setText(admin.getDni());
+        infoEmail.setText(admin.getEmail());
+    }
 }
