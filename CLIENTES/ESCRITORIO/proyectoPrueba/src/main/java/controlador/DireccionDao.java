@@ -8,6 +8,7 @@ import com.google.gson.JsonObject;
 import modelo.Direccion;
 import modelo.Negocio;
 import modelo.Peticion;
+import modelo.Usuario;
 
 /**
  *
