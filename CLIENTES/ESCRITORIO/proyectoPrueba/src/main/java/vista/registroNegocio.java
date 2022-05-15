@@ -143,6 +143,7 @@ public class registroNegocio extends javax.swing.JFrame {
 
     private void botonPedirDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirDireccionActionPerformed
        nDireccion = new dialogoNuevaDirección(this, rootPaneCheckingEnabled, nDireccion).mostrar();
+       nDireccion.toString();
     }//GEN-LAST:event_botonPedirDireccionActionPerformed
 
     
