@@ -48,7 +48,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         setMinimumSize(new java.awt.Dimension(600, 400));
 
-        jMenuBar1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuBar1.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
