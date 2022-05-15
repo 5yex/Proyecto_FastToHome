@@ -63,7 +63,9 @@ public class VentanaMercader extends javax.swing.JFrame {
         jMenuBar1.setBackground(new java.awt.Color(255, 102, 0));
         jMenuBar1.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
 
-        jMenu1.setText("INFORMACIÓN");
+        jMenu1.setBackground(new java.awt.Color(255, 102, 0));
+        jMenu1.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu1.setText("INFO");
         jMenu1.setDoubleBuffered(true);
         jMenu1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -73,6 +75,8 @@ public class VentanaMercader extends javax.swing.JFrame {
         });
         jMenuBar1.add(jMenu1);
 
+        jMenu2.setBackground(new java.awt.Color(255, 102, 0));
+        jMenu2.setForeground(new java.awt.Color(255, 255, 255));
         jMenu2.setText("PRODUCTOS");
         jMenu2.setDoubleBuffered(true);
         jMenu2.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
@@ -83,6 +87,8 @@ public class VentanaMercader extends javax.swing.JFrame {
         });
         jMenuBar1.add(jMenu2);
 
+        jMenu3.setBackground(new java.awt.Color(255, 102, 0));
+        jMenu3.setForeground(new java.awt.Color(255, 255, 255));
         jMenu3.setText("OPCIONES");
         jMenu3.setDoubleBuffered(true);
         jMenu3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
