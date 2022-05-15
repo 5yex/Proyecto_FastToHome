@@ -5,6 +5,7 @@
 package controlador;
 
 import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import java.util.ArrayList;
 import modelo.Categoria;
 import modelo.Peticion;
