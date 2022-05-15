@@ -274,7 +274,23 @@ function obtenerPedidosNegocioPagados($datos){
     
     try{
         $pedido = new Pedido();
-        $respuesta = $pedido->obtenerPedidosNegocioDelDia();
+        $respuesta = $pedido->obtenerPedidosNegocioPagado();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
+        }        
+    }catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
+function obtenerPedidosNegocioEnPreparacion($datos){
+    require_once '../modelo/Pedido.php';
+    
+    try{
+        $pedido = new Pedido();
+        $respuesta = $pedido->obtenerPedidosNegocioPagado();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
