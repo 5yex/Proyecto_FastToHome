@@ -4,7 +4,6 @@ package vista;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -27,6 +26,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
 
     /**
      * Creates new form dialogoNuevoDepartamento
+     *
      * @param parent
      * @param modal
      * @param direccion
@@ -184,9 +184,9 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
     }//GEN-LAST:event_cancelarActionPerformed
 
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
-       if (rellenarDireccion(direccion)) {
-           this.dispose();
-       }
+        if (rellenarDireccion(direccion)) {
+            this.dispose();
+        }
     }//GEN-LAST:event_aceptarActionPerformed
 
     private void varNumeroTXTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_varNumeroTXTActionPerformed
@@ -197,18 +197,17 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_varCPActionPerformed
 
-    public void rellenarDialogo(){
-        if(direccion != null){
-            varNumeroTXT.setText(String.valueOf(direccion.getNumero()));
-            varCP.setText(String.valueOf(direccion.getCodigo_postal()));
-            varCalle.setText(direccion.getCalle());
-            varCiudad.setText(direccion.getCiudad());
-        }
+    public void rellenarDialogo() {
+
+        varNumeroTXT.setText(String.valueOf(direccion.getNumero()));
+        varCP.setText(String.valueOf(direccion.getCodigo_postal()));
+        varCalle.setText(direccion.getCalle());
+        varCiudad.setText(direccion.getCiudad());
+
     }
-    
+
     private boolean rellenarDireccion(Direccion direccion) {
         try {
-            direccion = new Direccion();
             int num = Integer.valueOf(varNumeroTXT.getText());
             int cp = Integer.valueOf(varCP.getText());
             String calle = varCalle.getText();
