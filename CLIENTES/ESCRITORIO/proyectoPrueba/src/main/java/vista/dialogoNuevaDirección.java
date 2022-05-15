@@ -185,7 +185,10 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
             if (calle.length() == 0 | ciudad.length() == 0) {
                 throw new IOException("Rellena todos los campos");
             } else {
-                
+                direct.setCalle(calle);
+                direct.setCiudad(ciudad);
+                direct.setCodigo_postal(cp);
+                direct.getNumero(num);
             }
 
         } catch (NumberFormatException ex) {
