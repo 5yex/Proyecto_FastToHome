@@ -21,8 +21,8 @@ public class CategoriaDao {
     }
     
     public static ArrayList<Categoria> obtenerCategorias(){
-        
-        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_categorias", null));
+        Categoria categoria;
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_categorias", categoria.getJSON()));
 
         ArrayList<Categoria> listaCategorias = new ArrayList<Categoria>();
 
