@@ -146,6 +146,16 @@ public class registroNegocio extends javax.swing.JFrame {
     }//GEN-LAST:event_botonPedirDireccionActionPerformed
 
     
+    
+//    private void cargarSelectorDeps(Objects<Departamento> listaDepartamentos) {
+//        selectorDeps.addItem(" ");
+//        List<String> depsStrings = new ArrayList<String>();
+//        for (Departamento departamento : listaDepartamentos) {
+//            departamentos.add(departamento);
+//            selectorDeps.addItem(departamento.toString());
+//        }
+//    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonCompletarRegistro;
