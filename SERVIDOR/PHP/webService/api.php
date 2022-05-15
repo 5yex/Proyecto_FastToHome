@@ -63,6 +63,9 @@ if (empty($_POST["DATA"])) {
         case 'obtener_categorias';
             obtenerCategorias(json_decode($datos->datos));
             break;
+        case 'obtener_id_categoria';
+            obtenerCategoriaPorNombre(json_decode->datos));
+            break;
         //Mandar Repuesta
         default;
             mandarRespuesta(true, 'comando no  reconocido');
@@ -383,4 +386,20 @@ function obtenerCategorias($datos){
         mandarRespuesta(true, $ex->getMessage());
     }
 
+}
+
+function obtenerCategoriaPorNombre($datos){
+    require_once '../modelo/Categoria.php';
+    try {
+        $categoria = new Categoria();
+        $categoria
+        $respuesta = $categoria->obtenerIdCategoria();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
 }
