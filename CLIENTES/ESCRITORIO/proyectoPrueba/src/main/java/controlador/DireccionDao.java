@@ -38,5 +38,25 @@ public class DireccionDao {
         return direccion;
         
     }
+    
+    public static Direccion obtenerDireccionUsuario(Usuario usuario) {
+        Direccion direccion = new Direccion();
+
+        String json = usuario.getJSON();
+        //hacemos una petición con el comando que deberá realizar el php, y los datos en json    
+        Peticion peticion = new Peticion("obtener_direccion", json);
+        //mandamos la peticion como consulta selección para obtener valores
+        JsonObject respuesta = gestion.consultaSeleccionUnico(peticion);
+        
+        direccion.setCalle(respuesta.get("Calle").getAsString());
+        direccion.setNumero(respuesta.get("Numero").getAsInt());
+        direccion.setCiudad(respuesta.get("Ciudad").getAsString());
+        direccion.setCodigo_postal(respuesta.get("CP").getAsInt());
+        direccion.setOtros(respuesta.get("Otros").getAsString());
+        direccion.setCoordenadas(respuesta.get("Coordenadas").getAsInt());
+        
+        return direccion;
+        
+    }
 
 }
