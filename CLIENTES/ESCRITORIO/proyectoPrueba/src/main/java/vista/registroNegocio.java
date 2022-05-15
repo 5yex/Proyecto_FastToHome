@@ -180,7 +180,7 @@ public class registroNegocio extends javax.swing.JFrame {
             String categoria = comboCategoria.getSelectedItem().toString();
             String nombre = varNombre.getText();
             String descripcion = textAreaDescripcion.getText();
-            int direccionid = nDireccion.getId_direccion();
+            
 
             if (descripcion.length() == 0 | nombre.length() == 0) {
                 throw new IOException("Rellena todos los campos");
@@ -190,7 +190,9 @@ public class registroNegocio extends javax.swing.JFrame {
                 negocio.setDescripcion(descripcion);
                 negocio.setId_categoria(1);
 
-                return NegocioDao.nuevoNegocio(negocio);
+                if(NegocioDao.nuevoNegocio(negocio)){
+                    
+                };
 
             }
         } catch (NumberFormatException ex) {
@@ -200,6 +202,7 @@ public class registroNegocio extends javax.swing.JFrame {
             error.setText(ex.getMessage());
             return false;
         }
+        return true;
     }
 
     private void cargarComboCategorías(ArrayList<Categoria> listaCategorias) {
