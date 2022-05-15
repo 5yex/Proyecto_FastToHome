@@ -32,6 +32,9 @@ if (empty($_POST["DATA"])) {
         case 'nuevo_producto';
             nuevoProducto(json_decode($peticion->datos));
             break;
+        case 'obtener_productos_negocio';
+            obtenerProductosNegocio($peticion->datos);
+            break;
         //Casos dirección
         case 'nueva_direccion';
             nuevaDireccion(json_decode($peticion->datos));
@@ -40,18 +43,17 @@ if (empty($_POST["DATA"])) {
         case 'get_id_negocio';
             obtenerIdNegocio(json_decode($peticion->datos));
             break;
-        case 'obtener_productos_negocio';
-            obtenerProductosNegocio($peticion->datos);
-            break;
         case 'negocio_de_mercader';
             obtenerNegocioDeMercader(json_decode($peticion->datos));
             break;
+        //Casos de pedidos
         case 'obtener_pedidos_pagados';
             obtenerPedidosNegocioPagados(json_decode($peticion->datos));
             break;
         case 'obtener_pedidos_en_preparacion';
             obtenerPedidosNegocioEnPreparacion(json_decode($peticion->datos));
             break;
+        //Casos de Categoria
         case 'obtener_categorias';
             obtenerCategorias(json_decode($datos->datos));
             break;
