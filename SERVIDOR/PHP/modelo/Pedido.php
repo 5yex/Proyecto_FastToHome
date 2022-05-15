@@ -139,8 +139,8 @@ class Pedido extends Conexion{
         return TRUE;
     }
     
-    public function obtenerPedidosNegocioDelDia(){
-        $sql = "SELECT * FROM pedidos WHERE id_negocio = :id_neg AND DATE(fecha_hora) = CURDATE()";
+    public function obtenerPedidosNegocioPagado(){
+        $sql = "SELECT * FROM pedidos WHERE id_negocio = :id_neg AND DATE(fecha_hora) = CURDATE() AND estado LIKE 'pagado'";
         
         $sentencia = $this->dblink->prepare($sql);
 
@@ -150,5 +150,17 @@ class Pedido extends Conexion{
         $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
         
+    }
+    
+    public function obtenerPedidosNegocioEnPreparacion(){
+        $sql = "SELECT * FROM pedidos WHERE id_negocio = :id_neg AND DATE(fecha_hora) = CURDATE() AND estado LIKE 'en_preparacion'";
+        
+        $sentencia = $this->dblink->prepare($sql);
+
+        $id_negocio = $this->getId_negocio();
+        $sentencia->bindParam(":id_neg", $id_negocio);
+
+        $sentencia->execute();
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
 }
