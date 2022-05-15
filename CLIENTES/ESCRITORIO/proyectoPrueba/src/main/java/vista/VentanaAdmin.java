@@ -4,7 +4,6 @@
  */
 package vista;
 
-import vista.registroNegocio;
 import controlador.NegocioDao;
 import java.awt.FlowLayout;
 import javax.swing.JMenu;
@@ -17,8 +16,7 @@ import modelo.Usuario;
  */
 public class VentanaAdmin extends javax.swing.JFrame {
 
-    private Usuario mercader;
-    private  Negocio negocio;
+    private Usuario usuario;
 
    
 
@@ -27,7 +25,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
      */
     public VentanaAdmin(Usuario user) {
         initComponents();
-        mercader = user;
+        usuario = user;
         
     }
 
