@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author 5yex
  */
-public class dialogoNuevoEmpleado extends javax.swing.JDialog {
+public class dialogoNuevaDirección extends javax.swing.JDialog {
 
     String bd;
     //List<Departamento> departamentos = new ArrayList<Departamento>();
@@ -27,7 +27,7 @@ public class dialogoNuevoEmpleado extends javax.swing.JDialog {
     /**
      * Creates new form dialogoNuevoDepartamento
      */
-    public dialogoNuevoEmpleado(java.awt.Frame parent, boolean modal, String bd) {
+    public dialogoNuevaDirección(java.awt.Frame parent, boolean modal, String bd) {
         super(parent, modal);
         this.bd = bd;
         initComponents();
