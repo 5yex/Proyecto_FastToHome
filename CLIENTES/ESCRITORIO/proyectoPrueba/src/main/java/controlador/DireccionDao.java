@@ -5,6 +5,7 @@
 package controlador;
 
 import modelo.Direccion;
+import modelo.Negocio;
 import modelo.Peticion;
 
 /**
@@ -17,6 +18,10 @@ public class DireccionDao {
         return gestion.hacerConsulta(new Peticion("nueva_direccion", direccion.getJSON()));
     }
     
-    
+    public static Direccion obtenerDatosDireccionNegocio(Negocio negocio) {
+       Direccion direccion = new Direccion();
+       
+       
+    }
     
 }
