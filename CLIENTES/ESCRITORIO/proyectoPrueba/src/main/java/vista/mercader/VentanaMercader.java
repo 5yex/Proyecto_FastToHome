@@ -7,6 +7,7 @@ package vista.mercader;
 import vista.registroNegocio;
 import controlador.NegocioDao;
 import java.awt.FlowLayout;
+import javax.swing.JMenu;
 import modelo.Negocio;
 import modelo.Usuario;
 
@@ -58,22 +59,27 @@ public class VentanaMercader extends javax.swing.JFrame {
         );
         contenidoLayout.setVerticalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+            .addGap(0, 399, Short.MAX_VALUE)
         );
 
         jMenuBar1.setBackground(new java.awt.Color(255, 102, 0));
         jMenuBar1.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
 
         jMenu1.setText("INFORMACIÓN");
-        jMenu1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jMenu1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                deselección(evt);
+            }
+        });
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("INFORMACIÓN");
-        jMenu2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jMenu2.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("INFORMACIÓN");
-        jMenu3.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jMenu3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
@@ -92,6 +98,11 @@ public class VentanaMercader extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void deselección(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deselección
+       JMenu jm = (JMenu) evt.getComponent();
+       jm.setSelected(false);
+    }//GEN-LAST:event_deselección
 
  
    

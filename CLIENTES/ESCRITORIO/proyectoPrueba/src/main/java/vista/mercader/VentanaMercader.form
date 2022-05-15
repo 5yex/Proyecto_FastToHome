@@ -16,15 +16,18 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="INFORMACI&#xd3;N"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="18" style="3"/>
+              <Font name="Segoe UI" size="14" style="3"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="deselecci&#xf3;n"/>
+          </Events>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
             <Property name="text" type="java.lang.String" value="INFORMACI&#xd3;N"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="18" style="3"/>
+              <Font name="Segoe UI" size="14" style="3"/>
             </Property>
           </Properties>
         </Menu>
@@ -32,7 +35,7 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="INFORMACI&#xd3;N"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="18" style="3"/>
+              <Font name="Segoe UI" size="14" style="3"/>
             </Property>
           </Properties>
         </Menu>
@@ -89,7 +92,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="394" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="399" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
