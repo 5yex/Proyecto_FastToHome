@@ -134,6 +134,27 @@ function nuevaDireccion($datos) {
     }
 }
 
+function nuevoNegocio($datos){
+    require_once '../modelo/Negocio.php';
+    try {
+        $negocio = new Negocio();
+        $negocio->setId_categoria($datos->id_categoria);
+        $negocio->setId_mercader($datos->id_mercader);
+        $negocio->setNombre($datos->nombre);
+        $negocio->setDescripcion($datos->descripcion);
+        $negocio->setId_categoria($datos->id_direccion);
+        
+
+        if ($direccion->agregar()) {
+            mandarRespuesta(false, 'Se ha realizado la insercion de un negocio');
+        } else {
+            mandarRespuesta(true, 'Error en la inserccion de un negocio');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
 function obtenerIdNegocio($datos) {
     require_once '../modelo/Negocio.php';
     try {
