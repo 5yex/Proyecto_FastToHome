@@ -322,8 +322,10 @@ function mandarRespuesta($error, $datos) {
     echo json_encode($respuesta);
 }
 
+function nuevaCategoria
 
-function obtenerCategorias(){
+
+function obtenerCategorias($datos){
     require_once '../modelo/Categoria.php';
     
     try {
