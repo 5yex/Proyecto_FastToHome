@@ -8,6 +8,6 @@ package controlador;
  *
  * @author Jesus
  */
-public class PedidoDao {
+public class PedidoDao{
     
 }
