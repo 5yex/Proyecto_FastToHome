@@ -5,6 +5,7 @@
 package vista;
 
 import java.util.ArrayList;
+import java.util.List;
 import modelo.Categoria;
 import modelo.Direccion;
 import modelo.Negocio;
@@ -173,12 +174,10 @@ public class registroNegocio extends javax.swing.JFrame {
 //    }
 
     
-    private void cargarComboCategorías(ArrayList()<Categoria> listaCategorías) {
-        selectorDeps.addItem(" ");
-        List<String> depsStrings = new ArrayList<String>();
-        for (Departamento departamento : listaDepartamentos) {
-            departamentos.add(departamento);
-            selectorDeps.addItem(departamento.toString());
+    private void cargarComboCategorías(ArrayList<Categoria> listaCategorias) {
+        for (Categoria listaCategoria : listaCategorias) {
+        }
+            
         }
     }
 
