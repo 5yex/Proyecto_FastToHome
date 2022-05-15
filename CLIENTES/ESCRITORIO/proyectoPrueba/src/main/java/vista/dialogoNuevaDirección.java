@@ -203,7 +203,6 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
         varCP.setText(String.valueOf(direccion.getCodigo_postal()));
         varCalle.setText(direccion.getCalle());
         varCiudad.setText(direccion.getCiudad());
-
     }
 
     private boolean rellenarDireccion(Direccion direccion) {
