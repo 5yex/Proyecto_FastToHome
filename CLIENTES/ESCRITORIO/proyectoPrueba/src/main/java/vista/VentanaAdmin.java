@@ -40,6 +40,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
         botonesMenu = new javax.swing.ButtonGroup();
         contenido = new javax.swing.JPanel();
+        labelBienvenido = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         botonInfo = new javax.swing.JMenu();
         botonProductos = new javax.swing.JMenu();
@@ -49,15 +50,26 @@ public class VentanaAdmin extends javax.swing.JFrame {
         setTitle("Ventana Mercader");
         setResizable(false);
 
+        labelBienvenido.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        labelBienvenido.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelBienvenido.setText("Bienvenido administrador:");
+        labelBienvenido.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+
         javax.swing.GroupLayout contenidoLayout = new javax.swing.GroupLayout(contenido);
         contenido.setLayout(contenidoLayout);
         contenidoLayout.setHorizontalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 770, Short.MAX_VALUE)
+            .addGroup(contenidoLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(labelBienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         contenidoLayout.setVerticalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 511, Short.MAX_VALUE)
+            .addGroup(contenidoLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(labelBienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(342, Short.MAX_VALUE))
         );
 
         jMenuBar1.setBackground(new java.awt.Color(255, 102, 0));
@@ -77,7 +89,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
         botonProductos.setBackground(new java.awt.Color(255, 102, 0));
         botonProductos.setForeground(new java.awt.Color(255, 255, 255));
-        botonProductos.setText("PRODUCTOS");
+        botonProductos.setText("USUARIOS");
         botonesMenu.add(botonProductos);
         botonProductos.setDoubleBuffered(true);
         botonProductos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -88,7 +100,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         });
         jMenuBar1.add(botonProductos);
 
-        botonOpciones.setText("OPCIONES");
+        botonOpciones.setText("NEGOCIOS");
         botonesMenu.add(botonOpciones);
         botonOpciones.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         botonOpciones.setDoubleBuffered(true);
@@ -133,5 +145,6 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private javax.swing.ButtonGroup botonesMenu;
     private javax.swing.JPanel contenido;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JLabel labelBienvenido;
     // End of variables declaration//GEN-END:variables
 }
