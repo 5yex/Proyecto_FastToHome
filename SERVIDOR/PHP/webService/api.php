@@ -48,6 +48,9 @@ if (empty($_POST["DATA"])) {
         case 'obtener_pedidos_en_preparacion';
             obtenerPedidosNegocioEnPreparacion(json_decode($peticion->datos));
             break;
+        case 'obtener_categorias';
+            obtenerCategorias(json_decode($datos->datos));
+            break;
         default;
             mandarRespuesta(true, 'comando no  reconocido');
             break;
