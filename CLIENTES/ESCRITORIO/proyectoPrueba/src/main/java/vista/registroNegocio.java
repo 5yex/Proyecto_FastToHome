@@ -21,8 +21,7 @@ public class registroNegocio extends javax.swing.JFrame {
      */
     public registroNegocio(Usuario user) {
         initComponents();
-        User=user;
-        negocio = new Negocio();
+        this.User=user;
     }
 
     /**
