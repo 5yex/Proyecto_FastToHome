@@ -13,6 +13,7 @@ import java.util.logging.Logger;
 import javax.swing.ComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.table.DefaultTableModel;
+import modelo.Direccion;
 
 
 /**
@@ -21,13 +22,13 @@ import javax.swing.table.DefaultTableModel;
  */
 public class dialogoNuevaDirección extends javax.swing.JDialog {
 
-    String bd;
+    Direccion bd;
     //List<Departamento> departamentos = new ArrayList<Departamento>();
 
     /**
      * Creates new form dialogoNuevoDepartamento
      */
-    public dialogoNuevaDirección(java.awt.Frame parent, boolean modal, String bd) {
+    public dialogoNuevaDirección(java.awt.Frame parent, boolean modal, Direccion bd) {
         super(parent, modal);
         this.bd = bd;
         initComponents();
