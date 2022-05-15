@@ -126,8 +126,8 @@ class Negocio extends Conexion {
 
         $sentencia = $this->dblink->prepare($sql);
         $id_direccion = $this->getId_direccion();
-        $propietario = $this->getPropietario();
-        $precio = $this->getPrecio();
+        $id_mercader = $this->getId_mercader();
+        $nombre = $this->getNombre();
 
         // $stmt->bindParam(':name', $userName);
         $sentencia->bindParam(":marca", $marca);
