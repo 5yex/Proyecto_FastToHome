@@ -147,9 +147,9 @@ public class registroNegocio extends javax.swing.JFrame {
     }//GEN-LAST:event_botonPedirDireccionActionPerformed
 
     private boolean nuevoNegocio(Usuario user) {
-//        try {
-//            
-//                    
+        try {
+            String categoria = comboCategoria.getSelectedItem().toString();
+                    
 //            String calle = varCalle.getText();
 //            String ciudad = varCiudad.getText();
 //
@@ -169,10 +169,9 @@ public class registroNegocio extends javax.swing.JFrame {
 //            error.setText(ex.getMessage());
 //            return false;
 //        }
-//        return true;
-//    }
-return false;
+        return true;
     }
+
     
     public void cargarComboCategorías(ArrayList<Categoria> listaCategorias) {
         for (Categoria listaCategoria : listaCategorias) {
