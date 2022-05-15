@@ -55,10 +55,6 @@ public class dialogoNuevoEmpleado extends javax.swing.JDialog {
         error = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         salario = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        comision = new javax.swing.JTextField();
-        selectorDeps = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("NEODATIS - INSERTAR DEPARTAMENTO");
@@ -84,37 +80,21 @@ public class dialogoNuevoEmpleado extends javax.swing.JDialog {
             }
         });
 
-        jLabel1.setText("Código:");
+        jLabel1.setText("Número:");
 
-        jLabel2.setText("Apellido:");
+        jLabel2.setText("Calle:");
 
-        jLabel3.setText("Oficio:");
+        jLabel3.setText("Ciudad:");
 
         error.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.background"));
         error.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
         error.setText(" ");
 
-        jLabel4.setText("Salario:");
+        jLabel4.setText("CP:");
 
         salario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salarioActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setText("Comisión:");
-
-        jLabel6.setText("Depart.");
-
-        comision.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comisionActionPerformed(evt);
-            }
-        });
-
-        selectorDeps.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                selectorDepsActionPerformed(evt);
             }
         });
 
@@ -126,31 +106,27 @@ public class dialogoNuevoEmpleado extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(error, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
+                        .addComponent(error, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cancelar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(aceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
                             .addComponent(jLabel4)
                             .addComponent(jLabel1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(12, 12, 12)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(codigo, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                            .addComponent(salario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                            .addComponent(comision, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
+                            .addComponent(salario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel6))
+                            .addComponent(jLabel3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(apellido)
-                            .addComponent(oficio)
-                            .addComponent(selectorDeps, 0, 172, Short.MAX_VALUE))))
+                            .addComponent(apellido, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                            .addComponent(oficio))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -168,12 +144,6 @@ public class dialogoNuevoEmpleado extends javax.swing.JDialog {
                     .addComponent(jLabel3)
                     .addComponent(jLabel4)
                     .addComponent(salario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(comision, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(selectorDeps, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(aceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -192,9 +162,9 @@ public class dialogoNuevoEmpleado extends javax.swing.JDialog {
     }//GEN-LAST:event_cancelarActionPerformed
 
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
-        if (insertarEmpleados()) {
-            this.dispose();
-        }
+//        if (insertarEmpleados()) {
+//            this.dispose();
+//        }
     }//GEN-LAST:event_aceptarActionPerformed
 
     private void codigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codigoActionPerformed
@@ -204,14 +174,6 @@ public class dialogoNuevoEmpleado extends javax.swing.JDialog {
     private void salarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_salarioActionPerformed
-
-    private void comisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comisionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_comisionActionPerformed
-
-    private void selectorDepsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectorDepsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_selectorDepsActionPerformed
 
 //    public boolean insertarEmpleados() {
 //        try {
@@ -248,17 +210,13 @@ public class dialogoNuevoEmpleado extends javax.swing.JDialog {
     private javax.swing.JTextField apellido;
     private javax.swing.JButton cancelar;
     private javax.swing.JTextField codigo;
-    private javax.swing.JTextField comision;
     private javax.swing.JLabel error;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField oficio;
     private javax.swing.JTextField salario;
-    private javax.swing.JComboBox<String> selectorDeps;
     // End of variables declaration//GEN-END:variables
 
 //    private void cargarSelectorDeps(Objects<Departamento> listaDepartamentos) {
