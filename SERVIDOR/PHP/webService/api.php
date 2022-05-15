@@ -57,6 +57,7 @@ if (empty($_POST["DATA"])) {
         case 'obtener_categorias';
             obtenerCategorias(json_decode($datos->datos));
             break;
+        //Mandar Repuesta
         default;
             mandarRespuesta(true, 'comando no  reconocido');
             break;
