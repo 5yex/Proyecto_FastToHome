@@ -80,14 +80,13 @@ class Direccion extends Conexion{
     }
 
     public function agregar(){
-        $sql = "INSERT INTO direccion (Calle, Numero, Ciudad, Provincia, CP, Otros, Coordenadas) VALUES (:calle, :num, :ciu, :prov, :cp, :otros, :coor)";
+        $sql = "INSERT INTO direccion (Calle, Numero, Ciudad, CP, Otros, Coordenadas) VALUES (:calle, :num, :ciu, :cp, :otros, :coor)";
         
         $sentencia = $this->dblink->prepare($sql);
         
         $calle = $this->getCalle();
         $numero = $this->getNumero();
         $ciudad = $this->getCiudad();
-        $provincia = $this->getProvincia();
         $codigo_postal = $this->getCodigo_postal();
         $otros = $this->getOtros();
         $coordenadas = $this->getCoordenadas();
@@ -95,7 +94,6 @@ class Direccion extends Conexion{
         $sentencia->bindParam(":calle", $calle);
         $sentencia->bindParam(":num", $numero);
         $sentencia->bindParam(":ciu", $ciudad);
-        $sentencia->bindParam(":prov", $provincia);
         $sentencia->bindParam(":cp", $codigo_postal);
         $sentencia->bindParam(":otros", $otros);
         $sentencia->bindParam(":coor", $coordenadas);
