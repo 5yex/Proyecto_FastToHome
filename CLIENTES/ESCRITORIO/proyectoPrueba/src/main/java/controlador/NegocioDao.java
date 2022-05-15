@@ -15,8 +15,8 @@ import modelo.Usuario;
  */
 public class NegocioDao {
     
-    public static boolean nuevoNegocio(Usuario user) {
-        return gestion.hacerConsulta(new Peticion("nuevo_usuario", user.getJSON()));
+    public static boolean nuevoNegocio(Negocio negocio) {
+        return gestion.hacerConsulta(new Peticion("nuevo_negocio", user.getJSON()));
     }
 
     public static Negocio negocioDeMercader(Usuario user) {
