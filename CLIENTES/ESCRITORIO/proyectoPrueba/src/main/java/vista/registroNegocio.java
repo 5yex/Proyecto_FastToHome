@@ -161,22 +161,18 @@ public class registroNegocio extends javax.swing.JFrame {
             String categoria = comboCategoria.getSelectedItem().toString();
             String nombre = varNombre.getText();
             String descripcion = textAreaDescripcion.getText();
-//            String calle = varCalle.getText();
-//            String ciudad = varCiudad.getText();
-//
-//            if (calle.length() == 0 | ciudad.length() == 0) {
-//                throw new IOException("Rellena todos los campos");
-//            } else {
-//                direccion.setCalle(calle);
-//                direccion.setCiudad(ciudad);
-//                direccion.setCodigo_postal(cp);
-//                direccion.setNumero(num);
-//            }
-//
+
+
+            if (nombre.length() == 0 | nombre.length() == 0) {
+                throw new IOException("Rellena todos los campos");
+            } else {
+                
+            }
+
         } catch (NumberFormatException ex) {
             error.setText("Rellena correctamente los campos numéricos");
             return false;
-        } catch (Exception ex) {
+        } catch (IOException ex) {
             error.setText(ex.getMessage());
             return false;
         }
