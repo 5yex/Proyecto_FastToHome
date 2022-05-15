@@ -95,5 +95,7 @@ public class Direccion {
         this.coordenads = coordenads;
     }
    
-   
+   public String getJSON(){
+       return new Gson().toJson(this);
+    }
 }
