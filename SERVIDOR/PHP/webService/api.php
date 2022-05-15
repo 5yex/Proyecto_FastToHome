@@ -54,6 +54,9 @@ if (empty($_POST["DATA"])) {
             obtenerPedidosNegocioEnPreparacion(json_decode($peticion->datos));
             break;
         //Casos de Categoria
+        case 'nueva_categoria';
+            nuevaCategoria(json_decode($peticion->datos));
+            break;
         case 'obtener_categorias';
             obtenerCategorias(json_decode($datos->datos));
             break;
