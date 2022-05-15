@@ -17,17 +17,28 @@ public class Negocio {
     private int id_mercader;
     private String nombre;
     private String descripcion;
+    private int id_img;
 
     public Negocio() {
     }
 
-    public Negocio(int id_negocio, int id_direccion, int id_categoria, int id_mercader, String nombre, String descripcion) {
+    public Negocio(int id_negocio, int id_direccion, int id_categoria, int id_mercader, String nombre, String descripcion, int id_img) {
         this.id_negocio = id_negocio;
         this.id_direccion = id_direccion;
         this.id_categoria = id_categoria;
         this.id_mercader = id_mercader;
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.id_img = id_img;
+    }
+
+    public Negocio(int id_direccion, int id_categoria, int id_mercader, String nombre, String descripcion, int id_img) {
+        this.id_direccion = id_direccion;
+        this.id_categoria = id_categoria;
+        this.id_mercader = id_mercader;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.id_img = id_img;
     }
 
     public Negocio(int id_direccion, int id_categoria, int id_mercader, String nombre, String descripcion) {
@@ -36,6 +47,12 @@ public class Negocio {
         this.id_mercader = id_mercader;
         this.nombre = nombre;
         this.descripcion = descripcion;
+    }
+    
+    
+    
+    public Negocio(int id_negocio) {
+        this.id_negocio = id_negocio;
     }
 
     public int getId_negocio() {
@@ -85,6 +102,16 @@ public class Negocio {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    public int getId_img() {
+        return id_img;
+    }
+
+    public void setId_img(int id_img) {
+        this.id_img = id_img;
+    }
+    
+    
     
     public String getJSON(){
        return new Gson().toJson(this);
