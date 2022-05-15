@@ -40,6 +40,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         contenido = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -87,9 +88,9 @@ public class VentanaMercader extends javax.swing.JFrame {
         });
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setBackground(new java.awt.Color(255, 102, 0));
-        jMenu3.setForeground(new java.awt.Color(255, 255, 255));
         jMenu3.setText("OPCIONES");
+        buttonGroup1.add(jMenu3);
+        jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenu3.setDoubleBuffered(true);
         jMenu3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -126,6 +127,7 @@ public class VentanaMercader extends javax.swing.JFrame {
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JPanel contenido;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
