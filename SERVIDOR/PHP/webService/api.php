@@ -392,7 +392,7 @@ function obtenerCategoriaPorNombre($datos){
     require_once '../modelo/Categoria.php';
     try {
         $categoria = new Categoria();
-        $categoria
+        $categoria->setNombre($datos->nombre);
         $respuesta = $categoria->obtenerIdCategoria();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
