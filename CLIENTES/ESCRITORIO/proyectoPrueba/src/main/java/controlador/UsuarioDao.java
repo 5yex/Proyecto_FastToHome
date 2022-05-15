@@ -105,9 +105,9 @@ public class UsuarioDao {
 
     }
     
-    public static ArrayList<Usuario> obtenerDatosClientes(Usuario user){
+    public static ArrayList<Usuario> obtenerDatosClientes(){
         
-        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios_clientes", user.getJSON()));
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios_clientes", null));
 
         ArrayList<Usuario> listaClientes = new ArrayList<Usuario>();
 
