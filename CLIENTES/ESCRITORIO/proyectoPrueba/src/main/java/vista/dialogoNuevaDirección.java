@@ -22,7 +22,7 @@ import modelo.Direccion;
  */
 public class dialogoNuevaDirección extends javax.swing.JDialog {
 
-    Direccion bd;
+    Direccion direct;
     //List<Departamento> departamentos = new ArrayList<Departamento>();
 
     /**
@@ -30,7 +30,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
      */
     public dialogoNuevaDirección(java.awt.Frame parent, boolean modal, Direccion direccion) {
         super(parent, modal);
-        this.bd = direccion;
+        this.direct = direccion;
         initComponents();
         //cargarSelectorDeps(new DepartamentoDAO().mostrarDepartamentos(bd));
     }
