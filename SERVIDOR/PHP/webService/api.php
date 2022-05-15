@@ -308,3 +308,18 @@ function mandarRespuesta($error, $datos) {
 }
 
 
+function obtenerCategorias($datos){
+    require_once '../modelo/usuario.php';
+    
+    try {
+        $cliente = new usuario();
+        $respuesta = $cliente->todosLosUsuarios();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+
