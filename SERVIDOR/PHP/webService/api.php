@@ -25,12 +25,15 @@ if (empty($_POST["DATA"])) {
         case 'getHash';
             getHash(json_decode($peticion->datos));
             break;
+        //Casos de producto
         case 'nuevo_producto';
             nuevoProducto(json_decode($peticion->datos));
             break;
+        //Casos dirección
         case 'nueva_direccion';
             nuevaDireccion(json_decode($peticion->datos));
             break;
+        //Casos negocio
         case 'get_id_negocio';
             obtenerIdNegocio(json_decode($peticion->datos));
             break;
@@ -40,7 +43,7 @@ if (empty($_POST["DATA"])) {
         case 'actualizar_usuario';
             actualizarUsuario(json_decode($peticion->datos));
             break;
-        case 'mercader_de_usuario';
+        case 'negocio_de_mercader';
             obtenerNegocioDeMercader(json_decode($peticion->datos));
             break;
         case 'obtener_pedidos_pagados';
