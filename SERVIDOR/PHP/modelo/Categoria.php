@@ -54,8 +54,6 @@ class Categoria extends Conexion{
     public function obtenerCategorias(){
         $sql = "SELECT * FROM categoria_negocio";
         $sentencia = $this->dblink->prepare($sql);
-        $nombre = $this->getNombre();
-        $sentencia->bindParam(":nom", $nombre);
         $sentencia->execute();            
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }  
