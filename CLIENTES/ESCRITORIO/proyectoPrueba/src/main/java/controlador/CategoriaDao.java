@@ -27,20 +27,12 @@ public class CategoriaDao {
         ArrayList<Categoria> listaCategorias = new ArrayList<Categoria>();
 
         for (int i = 0; i < jsonArray.size(); i++) {
-            JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
+            JsonObject categoriaJson = jsonArray.get(i).getAsJsonObject();
 
-            user.setDni(usuarioJson.get("Dni").getAsString());
-            user.setEmail(usuarioJson.get("Email").getAsString());
-            user.setId(usuarioJson.get("id").getAsInt());
-            if (!usuarioJson.get("direccion_id").isJsonNull()) {
-                user.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
-            }
-            user.setNombre(usuarioJson.get("Nombre").getAsString());
-            user.setPassword(usuarioJson.get("password").getAsString());
-            //user.setRol(usuarioJson.get("Rol").getAsString());
-            user.setTlf(usuarioJson.get("tlf").getAsString());
+            categoria.setId(categoriaJson.get("id").getAsInt());
+            categoria.setNombre(categoriaJson.get("Email").getAsString());
             
-            listaCategorias.add(user);
+            listaCategorias.add(categoria);
 
         }
         return listaCategorias;
