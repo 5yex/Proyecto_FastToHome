@@ -19,7 +19,7 @@ public class DireccionDao {
         return gestion.hacerConsulta(new Peticion("nueva_direccion", direccion.getJSON()));
     }
 
-    public static Direccion obtenerDatosDireccionNegocio(Negocio negocio) {
+    public static Direccion obtenerDireccionNegocio(Negocio negocio) {
         Direccion direccion = new Direccion();
 
         String json = negocio.getJSON();
