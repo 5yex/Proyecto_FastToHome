@@ -371,7 +371,7 @@ function nuevaCategoria($datos){
 }
 
 
-function obtenerCategorias($datos){
+function obtenerCategorias(){
     require_once '../modelo/Categoria.php';
     
     try {
