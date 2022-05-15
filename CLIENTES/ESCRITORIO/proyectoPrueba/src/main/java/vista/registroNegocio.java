@@ -12,22 +12,26 @@ import modelo.Categoria;
 import modelo.Direccion;
 import modelo.Negocio;
 import modelo.Usuario;
+import vista.mercader.VentanaMercader;
 
 /**
  *
  * @author jmcbg
  */
 public class registroNegocio extends javax.swing.JFrame {
+
     private Usuario User;
     private Direccion nDireccion = new Direccion();
+
     /**
      * Creates new form VentanaRegistroNegocio
+     *
      * @param user
      */
     public registroNegocio(Usuario user) {
         initComponents();
         cargarComboCategorías(controlador.CategoriaDao.obtenerCategorias());
-        this.User=user;
+        this.User = user;
     }
 
     /**
@@ -72,6 +76,11 @@ public class registroNegocio extends javax.swing.JFrame {
         jLabel3.setText("CATEGORÍA");
 
         botonCompletarRegistro.setText("COMPLETAR REGISTRO");
+        botonCompletarRegistro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCompletarRegistroActionPerformed(evt);
+            }
+        });
 
         botonPedirDireccion.setText("Añadir dirección del negocio");
         botonPedirDireccion.addActionListener(new java.awt.event.ActionListener() {
@@ -155,8 +164,17 @@ public class registroNegocio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonPedirDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirDireccionActionPerformed
-       new dialogoNuevaDirección(this, rootPaneCheckingEnabled, nDireccion).setVisible(true);
+        new dialogoNuevaDirección(this, rootPaneCheckingEnabled, nDireccion).setVisible(true);
     }//GEN-LAST:event_botonPedirDireccionActionPerformed
+
+    private void botonCompletarRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCompletarRegistroActionPerformed
+        nuevoNegocio(User);
+        if (nuevoNegocio(User)) {
+            new VentanaMercader(User).setVisible(true);
+
+            this.dispose();
+        }
+    }//GEN-LAST:event_botonCompletarRegistroActionPerformed
 
     private boolean nuevoNegocio(Usuario user) {
         try {
@@ -171,9 +189,9 @@ public class registroNegocio extends javax.swing.JFrame {
                 negocio.setNombre(nombre);
                 negocio.setDescripcion(descripcion);
                 negocio.setId_categoria(1);
-                
+
                 return NegocioDao.nuevoNegocio(negocio);
-                
+
             }
         } catch (NumberFormatException ex) {
             error.setText("Rellena correctamente los campos numéricos");
@@ -183,12 +201,10 @@ public class registroNegocio extends javax.swing.JFrame {
             return false;
         }
     }
-    
 
-    
     private void cargarComboCategorías(ArrayList<Categoria> listaCategorias) {
         for (Categoria listaCategoria : listaCategorias) {
-        comboCategoria.addItem(listaCategoria.getNombre());
+            comboCategoria.addItem(listaCategoria.getNombre());
         }
     }
 
