@@ -175,7 +175,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_varCPActionPerformed
 
-    public boolean insertarEmpleados() {
+    public boolean rellenarDireccion() {
         try {
             int num = Integer.valueOf(varNumeroTXT.getText());
             int cp = Integer.valueOf(varCP.getText());
