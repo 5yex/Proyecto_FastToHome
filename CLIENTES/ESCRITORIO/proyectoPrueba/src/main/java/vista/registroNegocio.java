@@ -173,7 +173,7 @@ public class registroNegocio extends javax.swing.JFrame {
 //        }
 //        return true;
 //    }
-
+    }
     
     public void cargarComboCategorias() {
 //        for (Categoria listaCategoria : listaCategorias) {
