@@ -114,7 +114,6 @@ function nuevaDireccion($datos) {
         $direccion->setCalle($datos->calle);
         $direccion->setNumero($datos->numero);
         $direccion->setCiudad($datos->ciudad);
-        $direccion->setProvincia($datos->provincia);
         $direccion->setCodigo_postal($datos->codigo_postal);
         $direccion->setOtros($datos->otros);
         $direccion->setCoordenadas($datos->coordenadas);
