@@ -44,7 +44,6 @@ public class VentanaMercader extends javax.swing.JFrame {
         contenido = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         botonInfo = new javax.swing.JMenu();
-        botonOpciones1 = new javax.swing.JMenu();
         botonProductos = new javax.swing.JMenu();
         botonOpciones = new javax.swing.JMenu();
 
@@ -60,14 +59,14 @@ public class VentanaMercader extends javax.swing.JFrame {
         );
         contenidoLayout.setVerticalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 507, Short.MAX_VALUE)
+            .addGap(0, 511, Short.MAX_VALUE)
         );
 
         jMenuBar1.setBackground(new java.awt.Color(255, 102, 0));
 
         botonInfo.setBackground(new java.awt.Color(255, 102, 0));
         botonInfo.setForeground(new java.awt.Color(255, 255, 255));
-        botonInfo.setText("INFO");
+        botonInfo.setText("INICIO");
         botonesMenu.add(botonInfo);
         botonInfo.setDoubleBuffered(true);
         botonInfo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -77,19 +76,6 @@ public class VentanaMercader extends javax.swing.JFrame {
             }
         });
         jMenuBar1.add(botonInfo);
-
-        botonOpciones1.setText("PEDIDOS");
-        botonesMenu.add(botonOpciones1);
-        botonOpciones1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        botonOpciones1.setDoubleBuffered(true);
-        botonOpciones1.setFocusCycleRoot(true);
-        botonOpciones1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        botonOpciones1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                botonOpciones1deselección(evt);
-            }
-        });
-        jMenuBar1.add(botonOpciones1);
 
         botonProductos.setBackground(new java.awt.Color(255, 102, 0));
         botonProductos.setForeground(new java.awt.Color(255, 255, 255));
@@ -138,10 +124,6 @@ public class VentanaMercader extends javax.swing.JFrame {
        jm.setSelected(false);
     }//GEN-LAST:event_deselección
 
-    private void botonOpciones1deselección(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonOpciones1deselección
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botonOpciones1deselección
-
  
    
   
@@ -149,7 +131,6 @@ public class VentanaMercader extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu botonInfo;
     private javax.swing.JMenu botonOpciones;
-    private javax.swing.JMenu botonOpciones1;
     private javax.swing.JMenu botonProductos;
     private javax.swing.ButtonGroup botonesMenu;
     private javax.swing.JPanel contenido;
