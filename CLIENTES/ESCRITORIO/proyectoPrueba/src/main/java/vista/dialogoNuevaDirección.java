@@ -249,11 +249,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
     private javax.swing.JTextField varNumeroTXT;
     // End of variables declaration//GEN-END:variables
 
-    public Direccion mostrar() {
-        this.setVisible(true);
-        return direccion;
-    }
-
+  
 //    private void cargarSelectorDeps(Objects<Departamento> listaDepartamentos) {
 //        selectorDeps.addItem(" ");
 //        List<String> depsStrings = new ArrayList<String>();
