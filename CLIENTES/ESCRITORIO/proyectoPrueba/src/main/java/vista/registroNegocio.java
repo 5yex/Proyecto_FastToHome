@@ -4,6 +4,7 @@
  */
 package vista;
 
+import controlador.DireccionDao;
 import controlador.NegocioDao;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -191,7 +192,7 @@ public class registroNegocio extends javax.swing.JFrame {
                 negocio.setId_categoria(1);
 
                 if(NegocioDao.nuevoNegocio(negocio)){
-                    
+                    DireccionDao.nuevoUsuario(nDireccion)
                 };
 
             }
