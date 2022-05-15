@@ -322,7 +322,25 @@ function mandarRespuesta($error, $datos) {
     echo json_encode($respuesta);
 }
 
-function nuevaCategoria
+
+
+
+function nuevaCategoria($datos){
+    require_once '../modelo/Categoria.php';
+    try {
+        $categoria = new Categoria();
+        $categoria->setNombre($datos->nombre);
+
+        if ($categoria->agregar()) {
+            mandarRespuesta(false, 'Se ha realizado la insercion de una direccion');
+        } else {
+            mandarRespuesta(true, 'Error en la inserccion de la direccion');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+    
+}
 
 
 function obtenerCategorias($datos){
