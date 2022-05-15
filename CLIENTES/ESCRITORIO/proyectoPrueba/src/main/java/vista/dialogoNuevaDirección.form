@@ -29,9 +29,9 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="error" pref="174" max="32767" attributes="0"/>
+                      <Component id="error" pref="194" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="cancelar" min="-2" max="-2" attributes="0"/>
+                      <Component id="cancelar" min="-2" pref="88" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="aceptar" min="-2" pref="90" max="-2" attributes="0"/>
                   </Group>
@@ -41,18 +41,18 @@
                           <Component id="laberNumero" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="varNumeroTXT" pref="0" max="32767" attributes="0"/>
-                          <Component id="varCP" alignment="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="varNumeroTXT" pref="89" max="32767" attributes="0"/>
+                          <Component id="varCP" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="labelCalle" min="-2" max="-2" attributes="0"/>
                           <Component id="labelCiudad" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelCalle" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="varCalle" pref="172" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="varCalle" max="32767" attributes="0"/>
                           <Component id="varCiudad" max="32767" attributes="0"/>
                       </Group>
                   </Group>
