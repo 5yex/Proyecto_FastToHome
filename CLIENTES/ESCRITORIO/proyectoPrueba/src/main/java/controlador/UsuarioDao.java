@@ -77,12 +77,13 @@ public class UsuarioDao {
 
     public static ArrayList<Usuario> seleccionUsuarios() {
         
-        Usuario user = new Usuario();
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios", null));
 
         ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
 
         for (int i = 0; i < jsonArray.size(); i++) {
+            Usuario user = new Usuario();
+            
             JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
 
             user.setDni(usuarioJson.get("Dni").getAsString());
