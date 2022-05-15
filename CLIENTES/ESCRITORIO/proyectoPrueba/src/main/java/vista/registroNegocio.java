@@ -23,7 +23,7 @@ public class registroNegocio extends javax.swing.JFrame {
      */
     public registroNegocio(Usuario user) {
         initComponents();
-        cargarComboCategorías(controlador.CategoriaDao.obtenerCategorias(categoria));
+        cargarComboCategorías(controlador.CategoriaDao.obtenerCategorias());
         this.User=user;
     }
 
