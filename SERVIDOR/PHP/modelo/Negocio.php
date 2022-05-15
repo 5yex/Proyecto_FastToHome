@@ -15,6 +15,7 @@ class Negocio extends Conexion {
     private $id_mercader;
     private $nombre;
     private $descripcion;
+    private $id_imagen;
 
     public function getId_negocio() {
         return $this->id_negocio;
@@ -63,8 +64,16 @@ class Negocio extends Conexion {
     public function setDescripcion($descripcion): void {
         $this->descripcion = $descripcion;
     }
+    
+    public function getId_imagen() {
+        return $this->id_imagen;
+    }
 
-    public function agregar() {
+    public function setId_imagen($id_imagen): void {
+        $this->id_imagen = $id_imagen;
+    }
+
+        public function agregar() {
         $sql = "INSERT INTO negocio (id_categoria, id_direccion, id_mercader, Nombre, Descripcion, imagenes_id) VALUES (:cat, :dir, :mer, :nom, :des, :id_img)";
 
         $sentencia = $this->dblink->prepare($sql);
@@ -74,12 +83,14 @@ class Negocio extends Conexion {
         $id_mercader = $this->getId_mercader();
         $nombre = $this->getNombre();
         $descripcion = $this->getDescripcion();
+        $imagen = $this->getId_imagen();
 
         $sentencia->bindParam(":cat", $id_categoria);
         $sentencia->bindParam(":dir", $id_direccion);
         $sentencia->bindParam(":mer", $id_mercader);
         $sentencia->bindParam(":nom", $nombre);
         $sentencia->bindParam(":des", $descripcion);
+        $sentencia->bindParam(":id_img", $imagen);
 
         $resultado = $sentencia->execute();
 
