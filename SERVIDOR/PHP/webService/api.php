@@ -42,8 +42,11 @@ if (empty($_POST["DATA"])) {
         case 'mercader_de_usuario';
             obtenerNegocioDeMercader(json_decode($peticion->datos));
             break;
-        case 'obtener_pedidos_negocio';
-            obtenerPedidosNegocio(json_decode($peticion->datos));
+        case 'obtener_pedidos_pagados';
+            obtenerPedidosNegocioPagados(json_decode($peticion->datos));
+            break;
+        case 'obtener_pedidos_en_preparacion';
+            obtenerPedidosNegocioEnPreparacion(json_decode($peticion->datos));
             break;
         default;
             mandarRespuesta(true, 'comando no  reconocido');
