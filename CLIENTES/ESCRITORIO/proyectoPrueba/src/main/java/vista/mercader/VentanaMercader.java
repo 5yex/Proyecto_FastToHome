@@ -40,15 +40,17 @@ public class VentanaMercader extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        botonesMenu = new javax.swing.ButtonGroup();
         contenido = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
+        botonInfo = new javax.swing.JMenu();
+        botonOpciones1 = new javax.swing.JMenu();
+        botonProductos = new javax.swing.JMenu();
+        botonOpciones = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
+        setResizable(false);
 
         javax.swing.GroupLayout contenidoLayout = new javax.swing.GroupLayout(contenido);
         contenido.setLayout(contenidoLayout);
@@ -58,47 +60,61 @@ public class VentanaMercader extends javax.swing.JFrame {
         );
         contenidoLayout.setVerticalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 399, Short.MAX_VALUE)
+            .addGap(0, 507, Short.MAX_VALUE)
         );
 
         jMenuBar1.setBackground(new java.awt.Color(255, 102, 0));
-        jMenuBar1.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
 
-        jMenu1.setBackground(new java.awt.Color(255, 102, 0));
-        jMenu1.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu1.setText("INFO");
-        jMenu1.setDoubleBuffered(true);
-        jMenu1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+        botonInfo.setBackground(new java.awt.Color(255, 102, 0));
+        botonInfo.setForeground(new java.awt.Color(255, 255, 255));
+        botonInfo.setText("INFO");
+        botonesMenu.add(botonInfo);
+        botonInfo.setDoubleBuffered(true);
+        botonInfo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botonInfo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 deselección(evt);
             }
         });
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(botonInfo);
 
-        jMenu2.setBackground(new java.awt.Color(255, 102, 0));
-        jMenu2.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu2.setText("PRODUCTOS");
-        jMenu2.setDoubleBuffered(true);
-        jMenu2.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+        botonOpciones1.setText("PEDIDOS");
+        botonesMenu.add(botonOpciones1);
+        botonOpciones1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        botonOpciones1.setDoubleBuffered(true);
+        botonOpciones1.setFocusCycleRoot(true);
+        botonOpciones1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        botonOpciones1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                botonOpciones1deselección(evt);
+            }
+        });
+        jMenuBar1.add(botonOpciones1);
+
+        botonProductos.setBackground(new java.awt.Color(255, 102, 0));
+        botonProductos.setForeground(new java.awt.Color(255, 255, 255));
+        botonProductos.setText("PRODUCTOS");
+        botonesMenu.add(botonProductos);
+        botonProductos.setDoubleBuffered(true);
+        botonProductos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botonProductos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 deselección(evt);
             }
         });
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(botonProductos);
 
-        jMenu3.setText("OPCIONES");
-        buttonGroup1.add(jMenu3);
-        jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jMenu3.setDoubleBuffered(true);
-        jMenu3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+        botonOpciones.setText("OPCIONES");
+        botonesMenu.add(botonOpciones);
+        botonOpciones.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        botonOpciones.setDoubleBuffered(true);
+        botonOpciones.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botonOpciones.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 deselección(evt);
             }
         });
-        jMenuBar1.add(jMenu3);
+        jMenuBar1.add(botonOpciones);
 
         setJMenuBar(jMenuBar1);
 
@@ -122,16 +138,21 @@ public class VentanaMercader extends javax.swing.JFrame {
        jm.setSelected(false);
     }//GEN-LAST:event_deselección
 
+    private void botonOpciones1deselección(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonOpciones1deselección
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonOpciones1deselección
+
  
    
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JMenu botonInfo;
+    private javax.swing.JMenu botonOpciones;
+    private javax.swing.JMenu botonOpciones1;
+    private javax.swing.JMenu botonProductos;
+    private javax.swing.ButtonGroup botonesMenu;
     private javax.swing.JPanel contenido;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }
