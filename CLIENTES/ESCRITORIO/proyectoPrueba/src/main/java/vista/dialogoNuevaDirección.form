@@ -37,23 +37,23 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelCP" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="laberNumero" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="codigo" pref="0" max="32767" attributes="0"/>
-                          <Component id="salario" alignment="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="varNumeroTXT" pref="0" max="32767" attributes="0"/>
+                          <Component id="varCP" alignment="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelCalle" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelCiudad" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="apellido" pref="172" max="32767" attributes="0"/>
-                          <Component id="oficio" max="32767" attributes="0"/>
+                          <Component id="varCalle" pref="172" max="32767" attributes="0"/>
+                          <Component id="varCiudad" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -66,17 +66,17 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="apellido" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="codigo" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="varCalle" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="varNumeroTXT" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="laberNumero" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelCalle" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="oficio" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="salario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="varCiudad" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelCiudad" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelCP" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="varCP" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -106,26 +106,26 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aceptarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="codigo">
+    <Component class="javax.swing.JTextField" name="varNumeroTXT">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="codigoActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="varNumeroTXTActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="apellido">
+    <Component class="javax.swing.JTextField" name="varCalle">
     </Component>
-    <Component class="javax.swing.JTextField" name="oficio">
+    <Component class="javax.swing.JTextField" name="varCiudad">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="laberNumero">
       <Properties>
         <Property name="text" type="java.lang.String" value="N&#xfa;mero:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="labelCalle">
       <Properties>
         <Property name="text" type="java.lang.String" value="Calle:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="labelCiudad">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ciudad:"/>
       </Properties>
@@ -141,14 +141,14 @@
         <Property name="text" type="java.lang.String" value=" "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="LabelCP">
       <Properties>
         <Property name="text" type="java.lang.String" value="CP:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="salario">
+    <Component class="javax.swing.JTextField" name="varCP">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="salarioActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="varCPActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
