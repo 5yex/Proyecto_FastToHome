@@ -51,6 +51,15 @@ class Categoria extends Conexion{
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }  
     
+    public function obtenerCategorias(){
+        $sql = "SELECT * FROM categoria_negocio";
+        $sentencia = $this->dblink->prepare($sql);
+        $nombre = $this->getNombre();
+        $sentencia->bindParam(":nom", $nombre);
+        $sentencia->execute();            
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }  
+    
     public function borrarCategoria(){
         $sql = "DELETE FROM categoria_negocio WHERE Nombre = :nom";
         
