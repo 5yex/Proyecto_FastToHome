@@ -171,7 +171,6 @@ public class registroNegocio extends javax.swing.JFrame {
         nuevoNegocio(User);
         if (nuevoNegocio(User)) {
             new VentanaMercader(User).setVisible(true);
-
             this.dispose();
         }
     }//GEN-LAST:event_botonCompletarRegistroActionPerformed
