@@ -32,6 +32,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
         super(parent, modal);
         this.direct = direccion;
         initComponents();
+        rellenarDialogo();
         //cargarSelectorDeps(new DepartamentoDAO().mostrarDepartamentos(bd));
     }
 
@@ -176,7 +177,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
     }//GEN-LAST:event_varCPActionPerformed
 
     public void rellenarDialogo(){
-    
+        if()
     }
     
     private boolean rellenarDireccion() {
