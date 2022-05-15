@@ -21,12 +21,13 @@ public class CategoriaDao {
     }
     
     public static ArrayList<Categoria> obtenerCategorias(){
-        Categoria categoria = new Categoria();
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_categorias", categoria.getJSON()));
 
         ArrayList<Categoria> listaCategorias = new ArrayList<Categoria>();
 
         for (int i = 0; i < jsonArray.size(); i++) {
+                    Categoria categoria = new Categoria();
+
             JsonObject categoriaJson = jsonArray.get(i).getAsJsonObject();
 
             categoria.setId(categoriaJson.get("id").getAsInt());
