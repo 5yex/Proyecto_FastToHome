@@ -184,7 +184,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
     }//GEN-LAST:event_cancelarActionPerformed
 
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
-       if (rellenarDireccion()) {
+       if (rellenarDireccion(direccion)) {
            this.dispose();
        }
     }//GEN-LAST:event_aceptarActionPerformed
