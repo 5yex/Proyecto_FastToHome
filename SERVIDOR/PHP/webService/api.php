@@ -308,7 +308,7 @@ function mandarRespuesta($error, $datos) {
 }
 
 
-function obtenerCategorias($datos){
+function obtenerCategorias(){
     require_once '../modelo/usuario.php';
     
     try {
