@@ -146,10 +146,11 @@ function obtenerDireccion($datos){
         $direccion = new Direccion();
         $direccion->setId_direccion($datos->id_direccion);
 
-        if ($direccion->agregar()) {
-            mandarRespuesta(false, 'Se ha realizado la insercion de una direccion');
+        $respuesta = $direccion->obtenerDireccionPorId();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
         } else {
-            mandarRespuesta(true, 'Error en la inserccion de la direccion');
+            mandarRespuesta(true, 'Error en obtener el id del negocio');
         }
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
