@@ -33,7 +33,10 @@ public class NegocioDao {
         negocio.setId_mercader(respuesta.get("id_mercader").getAsInt());
         negocio.setNombre(respuesta.get("Nombre").getAsString());
         negocio.setDescripcion(respuesta.get("Descripcion").getAsString());
-        negocio.setId_img(respuesta.get("imagenes_id").getAsInt());
+        
+        if (!respuesta.get("imagenes_id").isJsonNull()) {
+             negocio.setId_img(respuesta.get("imagenes_id").getAsInt());
+        }
 
         return negocio;
     }
