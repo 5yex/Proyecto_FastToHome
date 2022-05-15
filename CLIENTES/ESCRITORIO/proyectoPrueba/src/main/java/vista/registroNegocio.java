@@ -166,9 +166,11 @@ public class registroNegocio extends javax.swing.JFrame {
             if (descripcion.length() == 0 | nombre.length() == 0) {
                 throw new IOException("Rellena todos los campos");
             } else {
-                
+                Negocio negocio = new Negocio();
+                negocio.setNombre(nombre);
+                negocio.setDescripcion(descripcion);
+                negocio.setId_categoria(1);
             }
-
         } catch (NumberFormatException ex) {
             error.setText("Rellena correctamente los campos numéricos");
             return false;
