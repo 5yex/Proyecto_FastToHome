@@ -20,23 +20,23 @@ public class Direccion {
    private int codigo_postal;
    private int coordenadas;
 
-    public Direccion(int id_direccion, String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenads) {
+    public Direccion(int id_direccion, String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenadas) {
         this.id_direccion = id_direccion;
         this.calle = calle;
         this.numero = numero;
         this.ciudad = ciudad;
         this.otros = otros;
         this.codigo_postal = codigo_postal;
-        this.coordenadas = coordenads;
+        this.coordenadas = coordenadas;
     }
 
-    public Direccion(String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenads) {
+    public Direccion(String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenadas) {
         this.calle = calle;
         this.numero = numero;
         this.ciudad = ciudad;
         this.otros = otros;
         this.codigo_postal = codigo_postal;
-        this.coordenadas = coordenads;
+        this.coordenadas = coordenadas;
     }
 
     public Direccion() {
@@ -91,12 +91,12 @@ public class Direccion {
         this.codigo_postal = codigo_postal;
     }
 
-    public int getCoordenads() {
+    public int getCoordenadas() {
         return coordenadas;
     }
 
-    public void setCoordenads(int coordenads) {
-        this.coordenadas = coordenads;
+    public void setCoordenadas(int coordenadas) {
+        this.coordenadas = coordenadas;
     }
    
    public String getJSON(){
