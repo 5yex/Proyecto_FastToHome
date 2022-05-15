@@ -175,7 +175,7 @@ public class registroNegocio extends javax.swing.JFrame {
 //    }
 
     
-    private void cargarComboCategorías(ArrayList<Categoria> listaCategorias) {
+    public void cargarComboCategorías(ArrayList<Categoria> listaCategorias) {
         for (Categoria listaCategoria : listaCategorias) {
         comboCategoria.addItem(listaCategoria.getNombre());
             
