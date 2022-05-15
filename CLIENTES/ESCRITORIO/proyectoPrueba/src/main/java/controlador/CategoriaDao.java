@@ -20,9 +20,9 @@ public class CategoriaDao {
         return gestion.hacerConsulta(new Peticion("nueva_categoria", categoria.getJSON()));
     }
     
-    public static ArrayList<Categoria> obtenerCategorias(Categoria categoria){
+    public static ArrayList<Categoria> obtenerCategorias(){
         
-        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_categorias", categoria.getJSON()));
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_categorias", null));
 
         ArrayList<Categoria> listaCategorias = new ArrayList<Categoria>();
 
