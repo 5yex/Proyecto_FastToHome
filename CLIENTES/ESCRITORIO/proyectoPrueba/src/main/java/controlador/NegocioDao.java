@@ -31,6 +31,7 @@ public class NegocioDao {
         negocio.setId_mercader(respuesta.get("id_mercader").getAsInt());
         negocio.setNombre(respuesta.get("Nombre").getAsString());
         negocio.setDescripcion(respuesta.get("Descripcion").getAsString());
+        negocio.setId_img(respuesta.getAsByte("imagenes_id").getAsInt());
 
         return negocio;
     }
