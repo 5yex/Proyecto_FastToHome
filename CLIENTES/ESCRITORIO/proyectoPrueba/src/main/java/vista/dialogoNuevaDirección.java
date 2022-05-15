@@ -208,6 +208,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
     
     private boolean rellenarDireccion() {
         try {
+            direccion = new Direccion();
             int num = Integer.valueOf(varNumeroTXT.getText());
             int cp = Integer.valueOf(varCP.getText());
             String calle = varCalle.getText();
