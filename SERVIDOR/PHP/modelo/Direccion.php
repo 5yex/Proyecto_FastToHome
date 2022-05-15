@@ -111,7 +111,15 @@ class Direccion extends Conexion{
     }
     
     public function obtenerDireccionPorId(){
+        $sql = "SELECT * FROM direccion WHERE id = :id_dir";
         
+        $sentencia = $this->dblink->prepare($sql);
+
+        $id_direccion = $this->getId_direccion();
+        $sentencia->bindParam(":id_dir", $id_direccion);
+
+        $sentencia->execute();
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
     
 }
