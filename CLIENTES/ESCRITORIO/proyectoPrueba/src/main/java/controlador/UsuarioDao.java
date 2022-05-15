@@ -86,7 +86,7 @@ public class UsuarioDao {
             
             JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
             
-            user.setId(usuarioJson.get("id").getAsString());
+            user.setId(usuarioJson.get("id").getAsInt());
             user.setDni(usuarioJson.get("Dni").getAsString());
             user.setEmail(usuarioJson.get("Email").getAsString());
             user.setId(usuarioJson.get("id").getAsInt());
