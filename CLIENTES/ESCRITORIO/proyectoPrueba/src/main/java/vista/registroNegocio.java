@@ -15,7 +15,7 @@ import modelo.Usuario;
 public class registroNegocio extends javax.swing.JFrame {
     private Usuario User;
     private Negocio negocio;
-    private Direccion nDireccion = null;
+    private Direccion nDireccion;
     /**
      * Creates new form VentanaRegistroNegocio
      */
@@ -142,7 +142,7 @@ public class registroNegocio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonPedirDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirDireccionActionPerformed
-        new dialogoNuevaDirección(this, rootPaneCheckingEnabled, nDireccion).setVisible(true);
+       nDireccion = new dialogoNuevaDirección(this, rootPaneCheckingEnabled, nDireccion).mostrar();
     }//GEN-LAST:event_botonPedirDireccionActionPerformed
 
     
