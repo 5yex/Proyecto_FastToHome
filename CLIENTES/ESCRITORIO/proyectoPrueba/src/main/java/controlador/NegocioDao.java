@@ -16,7 +16,7 @@ import modelo.Usuario;
 public class NegocioDao {
     
     public static boolean nuevoNegocio(Negocio negocio) {
-        return gestion.hacerConsulta(new Peticion("nuevo_negocio", user.getJSON()));
+        return gestion.hacerConsulta(new Peticion("nuevo_negocio", negocio.getJSON()));
     }
 
     public static Negocio negocioDeMercader(Usuario user) {
