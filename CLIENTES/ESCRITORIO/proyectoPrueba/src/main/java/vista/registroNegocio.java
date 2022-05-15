@@ -14,7 +14,7 @@ import modelo.Usuario;
  */
 public class registroNegocio extends javax.swing.JFrame {
     private Usuario User;
-    private Negocio negocio;
+    private Negocio negocio = new Negocio();
     private Direccion nDireccion = new Direccion();
     /**
      * Creates new form VentanaRegistroNegocio
