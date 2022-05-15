@@ -4,6 +4,8 @@
  */
 package vista;
 
+import java.util.ArrayList;
+import modelo.Categoria;
 import modelo.Direccion;
 import modelo.Negocio;
 import modelo.Usuario;
@@ -14,7 +16,6 @@ import modelo.Usuario;
  */
 public class registroNegocio extends javax.swing.JFrame {
     private Usuario User;
-    private Negocio negocio;
     private Direccion nDireccion = new Direccion();
     /**
      * Creates new form VentanaRegistroNegocio
@@ -80,7 +81,7 @@ public class registroNegocio extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(64, 64, 64)
+                .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,23 +98,23 @@ public class registroNegocio extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(botonPedirImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(botonPedirDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(65, Short.MAX_VALUE))
+                        .addComponent(botonPedirDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(26, 26, 26)
                 .addComponent(titleText)
-                .addGap(34, 34, 34)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3))
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(varNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(comboCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -123,7 +124,7 @@ public class registroNegocio extends javax.swing.JFrame {
                     .addComponent(botonPedirDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(67, 67, 67)
                 .addComponent(botonCompletarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -145,16 +146,41 @@ public class registroNegocio extends javax.swing.JFrame {
        new dialogoNuevaDirección(this, rootPaneCheckingEnabled, nDireccion).setVisible(true);
     }//GEN-LAST:event_botonPedirDireccionActionPerformed
 
-    
-    
-//    private void cargarSelectorDeps(Objects<Departamento> listaDepartamentos) {
-//        selectorDeps.addItem(" ");
-//        List<String> depsStrings = new ArrayList<String>();
-//        for (Departamento departamento : listaDepartamentos) {
-//            departamentos.add(departamento);
-//            selectorDeps.addItem(departamento.toString());
+    private boolean nuevoNegocio(Usuario user) {
+//        try {
+//            
+//                    
+//            String calle = varCalle.getText();
+//            String ciudad = varCiudad.getText();
+//
+//            if (calle.length() == 0 | ciudad.length() == 0) {
+//                throw new IOException("Rellena todos los campos");
+//            } else {
+//                direccion.setCalle(calle);
+//                direccion.setCiudad(ciudad);
+//                direccion.setCodigo_postal(cp);
+//                direccion.setNumero(num);
+//            }
+//
+//        } catch (NumberFormatException ex) {
+//            error.setText("Rellena correctamente los campos numéricos");
+//            return false;
+//        } catch (IOException ex) {
+//            error.setText(ex.getMessage());
+//            return false;
 //        }
+//        return true;
 //    }
+
+    
+    private void cargarComboCategorías(ArrayList()<Categoria> listaCategorías) {
+        selectorDeps.addItem(" ");
+        List<String> depsStrings = new ArrayList<String>();
+        for (Departamento departamento : listaDepartamentos) {
+            departamentos.add(departamento);
+            selectorDeps.addItem(departamento.toString());
+        }
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
