@@ -290,7 +290,7 @@ function obtenerPedidosNegocioEnPreparacion($datos){
     
     try{
         $pedido = new Pedido();
-        $respuesta = $pedido->obtenerPedidosNegocioPagado();
+        $respuesta = $pedido->obtenerPedidosNegocioEnPreparacion();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
