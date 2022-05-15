@@ -15,7 +15,6 @@ import modelo.Negocio;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
 import util.validaciones;
-import vista.mercader.VentanaMercader;
 
 /**
  *
