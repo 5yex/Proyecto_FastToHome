@@ -40,6 +40,9 @@ if (empty($_POST["DATA"])) {
             nuevaDireccion(json_decode($peticion->datos));
             break;
         //Casos negocio
+        case 'nuevo_negocio';
+            nuevoNegocio(json_decode($peticion->datos));
+            break;
         case 'get_id_negocio';
             obtenerIdNegocio(json_decode($peticion->datos));
             break;
