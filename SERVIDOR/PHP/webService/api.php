@@ -274,7 +274,7 @@ function obtenerPedidosNegocio($datos){
     
     try{
         $pedido = new Pedido();
-        $respuesta = $pedido->obtenerPedidosNegocio();
+        $respuesta = $pedido->obtenerPedidosNegocioDelDia();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {

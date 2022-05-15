@@ -139,7 +139,7 @@ class Pedido extends Conexion{
         return TRUE;
     }
     
-    public function obtenerPedidosNegocio(){
+    public function obtenerPedidosNegocioDelDia(){
         $sql = "SELECT * FROM pedidos WHERE id_negocio = :id_neg AND DATE(fecha_hora) = CURDATE()";
         
         $sentencia = $this->dblink->prepare($sql);
