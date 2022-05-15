@@ -131,6 +131,8 @@ class Producto extends Conexion{
             printf('aaa');
             return FALSE;
         }
+        
+        return TRUE;
        
     }
     
@@ -150,6 +152,8 @@ class Producto extends Conexion{
             printf('aaa');
             return FALSE;
         }
+        
+        return TRUE;
     }
 
 }
