@@ -28,6 +28,14 @@ public class DireccionDao {
         //mandamos la peticion como consulta selección para obtener valores
         JsonObject respuesta = gestion.consultaSeleccionUnico(peticion);
         
+        direccion.setCalle(respuesta.get("Calle").getAsString());
+        direccion.setNumero(respuesta.get("Numero").getAsInt());
+        direccion.setCiudad(respuesta.get("Ciudad").getAsString());
+        direccion.setCodigo_postal(respuesta.get("CP").getAsInt());
+        direccion.setOtros(respuesta.get("Otros").getAsString());
+        direccion.setCordenadas(respuesta.get("Coordenadas").getAsInt());
+        
+        return direccion;
         
     }
 
