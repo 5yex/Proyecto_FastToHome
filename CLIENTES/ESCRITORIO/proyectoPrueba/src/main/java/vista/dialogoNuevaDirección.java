@@ -206,7 +206,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
         }
     }
     
-    private boolean rellenarDireccion() {
+    private boolean rellenarDireccion(Direccion direccion) {
         try {
             direccion = new Direccion();
             int num = Integer.valueOf(varNumeroTXT.getText());
