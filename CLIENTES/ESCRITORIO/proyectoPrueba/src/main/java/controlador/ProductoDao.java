@@ -21,21 +21,21 @@ public class ProductoDao {
         return gestion.hacerConsulta(new Peticion("nuevo_producto", product.getJSON()));
     }
     
-    public ArrayList <Producto> selecciónProductosNegocio(Producto negocio){
-        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios", negocio.getJSON()));
+    public ArrayList <Producto> selecciónProductosNegocio(Producto product){
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios", product.getJSON()));
 
         ArrayList<Producto> listaProductos = new ArrayList<Producto>();
 
         for (int i = 0; i < jsonArray.size(); i++) {
             JsonObject productoJson = jsonArray.get(i).getAsJsonObject();
             
-            negocio.setId_producto(productoJson.get("id").getAsInt());
-            negocio.setNombre(productoJson.get("Nombre").getAsString());
-            negocio.setPrecio(productoJson.get("Precio").getAsDouble());
-            negocio.setDescripcion(productoJson.get("Descripcion").getAsString());
-            negocio.setStock(productoJson.get("Stock").getAsInt());
+            product.setId_producto(productoJson.get("id").getAsInt());
+            product.setNombre(productoJson.get("Nombre").getAsString());
+            product.setPrecio(productoJson.get("Precio").getAsDouble());
+            product.setDescripcion(productoJson.get("Descripcion").getAsString());
+            product.setStock(productoJson.get("Stock").getAsInt());
             
-            listaProductos.add(negocio);
+            listaProductos.add(product);
 
         }
         return listaProductos;
