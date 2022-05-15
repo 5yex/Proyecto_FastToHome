@@ -18,8 +18,8 @@ import modelo.Producto;
  * @author Jesus
  */
 public class ProductoDao {
-    public boolean nuevoProducto(Negocio negocio){
-        return gestion.hacerConsulta(new Peticion("nuevo_producto", negocio.getJSON()));
+    public boolean nuevoProducto(Producto product){
+        return gestion.hacerConsulta(new Peticion("nuevo_producto", product.getJSON()));
     }
     
     public ArrayList <Producto> selecciónProductosNegocio(Negocio negocio){
