@@ -315,8 +315,8 @@ function obtenerCategorias(){
     require_once '../modelo/Categoria.php';
     
     try {
-        $cliente = new usuario();
-        $respuesta = $cliente->todosLosUsuarios();
+        $categoria = new Categoria();
+        $respuesta = $categoria->obtenerCategorias();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
