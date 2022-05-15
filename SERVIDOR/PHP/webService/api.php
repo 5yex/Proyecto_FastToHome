@@ -323,3 +323,4 @@ function obtenerCategorias($datos){
         mandarRespuesta(true, $ex->getMessage());
     }
 
+}
