@@ -150,7 +150,7 @@ function obtenerDireccion($datos){
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
-            mandarRespuesta(true, 'Error en obtener el id del negocio');
+            mandarRespuesta(true, 'Error en obtener la dirección');
         }
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
