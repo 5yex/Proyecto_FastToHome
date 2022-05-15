@@ -128,12 +128,13 @@ class Negocio extends Conexion {
         $id_direccion = $this->getId_direccion();
         $id_mercader = $this->getId_mercader();
         $nombre = $this->getNombre();
-
-        // $stmt->bindParam(':name', $userName);
-        $sentencia->bindParam(":marca", $marca);
-        $sentencia->bindParam(":pre", $precio);
-        $sentencia->bindParam(":prop", $propietario);
-        // $sentencia->bindParam(":fot", $this->getFoto() );
+        $descripcion = $this->getDescripcion();
+        
+        $sentencia->bindParam(":dir", $id_direccion);
+        $sentencia->bindParam(":mer", $id_mercader);
+        $sentencia->bindParam(":nom", $nombre);
+        $sentencia->bindParam(":des", $descripcion);
+        
         $resultado = $sentencia->execute();
 
         if ($resultado != 1) {
