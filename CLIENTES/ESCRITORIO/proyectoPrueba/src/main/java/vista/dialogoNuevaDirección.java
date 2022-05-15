@@ -181,7 +181,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
 
     public void rellenarDialogo(){
         if(direccion != null){
-            varNumeroTXT.setText(direccion.getNumero());
+            varNumeroTXT.setText(String.valueOf(direccion.getNumero()));
         }
     }
     
