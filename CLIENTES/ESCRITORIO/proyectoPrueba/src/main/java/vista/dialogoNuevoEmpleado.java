@@ -13,11 +13,7 @@ import java.util.logging.Logger;
 import javax.swing.ComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.table.DefaultTableModel;
-import mvc.modelo.Departamento;
-import mvc.controlador.DepartamentoDAO;
-import mvc.controlador.EmpleadoDAO;
-import mvc.modelo.Empleado;
-import org.neodatis.odb.Objects;
+
 
 /**
  *
@@ -26,7 +22,7 @@ import org.neodatis.odb.Objects;
 public class dialogoNuevoEmpleado extends javax.swing.JDialog {
 
     String bd;
-    List<Departamento> departamentos = new ArrayList<Departamento>();
+    //List<Departamento> departamentos = new ArrayList<Departamento>();
 
     /**
      * Creates new form dialogoNuevoDepartamento
@@ -35,7 +31,7 @@ public class dialogoNuevoEmpleado extends javax.swing.JDialog {
         super(parent, modal);
         this.bd = bd;
         initComponents();
-        cargarSelectorDeps(new DepartamentoDAO().mostrarDepartamentos(bd));
+        //cargarSelectorDeps(new DepartamentoDAO().mostrarDepartamentos(bd));
     }
     
 
@@ -217,34 +213,34 @@ public class dialogoNuevoEmpleado extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_selectorDepsActionPerformed
 
-    public boolean insertarEmpleados() {
-        try {
-            int cod = Integer.valueOf(codigo.getText());
-            int sal = Integer.valueOf(salario.getText());
-            int com = Integer.valueOf(comision.getText());
-            String apell = apellido.getText();
-            String ofici = oficio.getText();
-            Departamento depart = null;
-            int nDep = selectorDeps.getSelectedIndex();
-
-            if (apell.length() == 0 | ofici.length() == 0) {
-                throw new IOException("Rellena todos los campos");
-            } else {
-                new EmpleadoDAO().insertarEmpleado(bd, new Empleado(cod, apell.toUpperCase(), ofici, new Date(), sal, com, depart));
-                if (selectorDeps.getSelectedIndex() != 0) {
-                    new EmpleadoDAO().asignarDepartamento(bd, cod, departamentos.get(nDep - 1).getDeptNo());
-                };
-            }
-
-        } catch (NumberFormatException ex) {
-            error.setText("Introduce un número");
-            return false;
-        } catch (IOException ex) {
-            error.setText(ex.getMessage());
-            return false;
-        }
-        return true;
-    }
+//    public boolean insertarEmpleados() {
+//        try {
+//            int cod = Integer.valueOf(codigo.getText());
+//            int sal = Integer.valueOf(salario.getText());
+//            int com = Integer.valueOf(comision.getText());
+//            String apell = apellido.getText();
+//            String ofici = oficio.getText();
+//            Departamento depart = null;
+//            int nDep = selectorDeps.getSelectedIndex();
+//
+//            if (apell.length() == 0 | ofici.length() == 0) {
+//                throw new IOException("Rellena todos los campos");
+//            } else {
+//                new EmpleadoDAO().insertarEmpleado(bd, new Empleado(cod, apell.toUpperCase(), ofici, new Date(), sal, com, depart));
+//                if (selectorDeps.getSelectedIndex() != 0) {
+//                    new EmpleadoDAO().asignarDepartamento(bd, cod, departamentos.get(nDep - 1).getDeptNo());
+//                };
+//            }
+//
+//        } catch (NumberFormatException ex) {
+//            error.setText("Introduce un número");
+//            return false;
+//        } catch (IOException ex) {
+//            error.setText(ex.getMessage());
+//            return false;
+//        }
+//        return true;
+//    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -265,12 +261,12 @@ public class dialogoNuevoEmpleado extends javax.swing.JDialog {
     private javax.swing.JComboBox<String> selectorDeps;
     // End of variables declaration//GEN-END:variables
 
-    private void cargarSelectorDeps(Objects<Departamento> listaDepartamentos) {
-        selectorDeps.addItem(" ");
-        List<String> depsStrings = new ArrayList<String>();
-        for (Departamento departamento : listaDepartamentos) {
-            departamentos.add(departamento);
-            selectorDeps.addItem(departamento.toString());
-        }
-    }
+//    private void cargarSelectorDeps(Objects<Departamento> listaDepartamentos) {
+//        selectorDeps.addItem(" ");
+//        List<String> depsStrings = new ArrayList<String>();
+//        for (Departamento departamento : listaDepartamentos) {
+//            departamentos.add(departamento);
+//            selectorDeps.addItem(departamento.toString());
+//        }
+//    }
 }
