@@ -179,7 +179,6 @@ return false;
     public void cargarComboCategorías(ArrayList<Categoria> listaCategorias) {
         for (Categoria listaCategoria : listaCategorias) {
         comboCategoria.addItem(listaCategoria.getNombre());
-            
         }
     }
 
