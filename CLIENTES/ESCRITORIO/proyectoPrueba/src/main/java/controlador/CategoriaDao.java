@@ -22,7 +22,7 @@ public class CategoriaDao {
     
     public static ArrayList<Categoria> obtenerCategorias(){
         Categoria categoria;
-        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_categorias", null)));
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_categorias", categoria.getJSON()));
 
         ArrayList<Categoria> listaCategorias = new ArrayList<Categoria>();
 
@@ -30,7 +30,7 @@ public class CategoriaDao {
             JsonObject categoriaJson = jsonArray.get(i).getAsJsonObject();
 
             categoria.setId(categoriaJson.get("id").getAsInt());
-            categoria.setNombre(categoriaJson.get("Email").getAsString());
+            categoria.setNombre(categoriaJson.get("Nombre").getAsString());
             
             listaCategorias.add(categoria);
 
