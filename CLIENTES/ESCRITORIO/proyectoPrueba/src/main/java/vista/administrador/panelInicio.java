@@ -19,7 +19,7 @@ public class panelInicio extends javax.swing.JPanel {
     }
     
     private void mostarDatos(){
-        
+        varAdminTXT.setName(userActual.getNombre());
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
