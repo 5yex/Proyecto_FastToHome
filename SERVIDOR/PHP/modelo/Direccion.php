@@ -114,25 +114,20 @@ class Direccion extends Conexion{
     
     public function agregarConId(){
         $sql = "INSERT INTO direccion (Calle, Numero, Ciudad, CP, Otros, Coordenadas) VALUES (:calle, :num, :ciu, :cp, :otros, :coor)";
-        
         $sentencia = $this->dblink->prepare($sql);
-        
         $calle = $this->getCalle();
         $numero = $this->getNumero();
         $ciudad = $this->getCiudad();
         $codigo_postal = $this->getCodigo_postal();
         $otros = $this->getOtros();
         $coordenadas = $this->getCoordenadas();
-        
         $sentencia->bindParam(":calle", $calle);
         $sentencia->bindParam(":num", $numero);
         $sentencia->bindParam(":ciu", $ciudad);
         $sentencia->bindParam(":cp", $codigo_postal);
         $sentencia->bindParam(":otros", $otros);
         $sentencia->bindParam(":coor", $coordenadas);
-        
         $resultado = $sentencia->execute();
-        
         if ($resultado != 1) {
             $sql = "SELECT LAST_INSERT_ID(id) FROM direccion ORDER BY id DESC LIMIT 1";
             $sentencia = $this->dblink->prepare($sql);
