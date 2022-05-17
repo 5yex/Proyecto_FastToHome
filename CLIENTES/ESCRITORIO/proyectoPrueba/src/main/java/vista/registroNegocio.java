@@ -190,6 +190,7 @@ public class registroNegocio extends javax.swing.JFrame {
                 negocio.setNombre(nombre);
                 negocio.setDescripcion(descripcion);
                 negocio.setId_categoria(1);
+                negocio.setId_img(1);
 
                 if(NegocioDao.nuevoNegocio(negocio)){
                     DireccionDao.nuevaDireccion(nDireccion);
