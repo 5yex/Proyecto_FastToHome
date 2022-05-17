@@ -38,8 +38,8 @@ public class CategoriaDao {
         return listaCategorias;
     }
     
-    public static int ObtenerIdPorNombre(String nombreCategoria){
-         gestion.consultaSeleccionUnico(new Peticion("obtener_id_categoria", null));
+    public static int ObtenerIdPorNombre(Categoria categoria){
+         return gestion.consultaSeleccionUnico(new Peticion("obtener_id_categoria", categoria.getJSON())).getAsInt();
     }
     
 }
