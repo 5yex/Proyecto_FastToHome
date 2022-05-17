@@ -70,7 +70,7 @@ if (empty($_POST["DATA"])) {
             obtenerCategorias();
             break;
         case 'obtener_id_categoria';
-            obtenerCategoriaPorNombre(json_decode($datos->datos));
+            obtenerCategoriaPorNombre(json_decode($peticion->datos));
             break;
         //Mandar Repuesta
         default;
