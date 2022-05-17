@@ -22,7 +22,7 @@ public class DireccionDao {
     
     
      public static int nuevaDireccionDevuelveId(Direccion direccion) {
-        return gestion.hacerConsulta(new Peticion("nueva_direccion", direccion.getJSON()));
+        return gestion.hacerConsulta(new Peticion("nueva_direccion_devuelve_id", direccion.getJSON()));
     }
 
 
