@@ -21,6 +21,14 @@ public class Direccion {
    private int coordenadas;
    private int id_imagen;
 
+    public int getId_imagen() {
+        return id_imagen;
+    }
+
+    public void setId_imagen(int id_imagen) {
+        this.id_imagen = id_imagen;
+    }
+
     public Direccion(int id_direccion, String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenadas) {
         this.id_direccion = id_direccion;
         this.calle = calle;
