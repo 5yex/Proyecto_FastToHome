@@ -136,14 +136,11 @@ function nuevaDireccionDevuelveId($datos) {
 
         $respuesta = $direccion->agregarConId();
         
-         if ($respuesta) {
+        if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
-        }
-        
-        
-        
+        } 
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
