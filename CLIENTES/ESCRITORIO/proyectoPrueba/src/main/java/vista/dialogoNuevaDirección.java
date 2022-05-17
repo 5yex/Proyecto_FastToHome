@@ -219,6 +219,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
                 direccion.setCiudad(ciudad);
                 direccion.setCodigo_postal(cp);
                 direccion.setNumero(num);
+                direccion.setOtros("");
             }
 
         } catch (NumberFormatException ex) {
