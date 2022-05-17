@@ -19,6 +19,7 @@ public class Direccion {
    private String otros;
    private int codigo_postal;
    private int coordenadas;
+   private int id_imagen;
 
     public Direccion(int id_direccion, String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenadas) {
         this.id_direccion = id_direccion;
