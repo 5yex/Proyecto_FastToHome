@@ -24,6 +24,8 @@ public class registroNegocio extends javax.swing.JFrame {
 
     private Usuario User;
     private Direccion nDireccion = new Direccion();
+    private 
+    
 
     /**
      * Creates new form VentanaRegistroNegocio
@@ -32,8 +34,8 @@ public class registroNegocio extends javax.swing.JFrame {
      */
     public registroNegocio(Usuario user) {
         initComponents();
-        cargarComboCategorías(controlador.CategoriaDao.obtenerCategorias());
         this.User = user;
+        cargaInicial();
     }
 
     /**
@@ -176,9 +178,20 @@ public class registroNegocio extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_botonCompletarRegistroActionPerformed
 
+    private void cargaInicial(){
+        cargarComboCategorías(controlador.CategoriaDao.obtenerCategorias());
+
+    };
+    
+    private void cargarComboCategorías(ArrayList<Categoria> listaCategorias) {
+        for (Categoria listaCategoria : listaCategorias) {
+            comboCategoria.addItem(listaCategoria.getNombre());
+        }
+    }
+    
     private boolean nuevoNegocio(Usuario user) {
         try {
-            int categoria = CategoriaDao.ObtenerIdPorNombre(comboCategoria.getSelectedItem().toString());
+            int categoria = CategoriaDao.ObtenerIdPorNombre((String)comboCategoria.getSelectedItem());
             String nombre = varNombre.getText();
             String descripcion = textAreaDescripcion.getText();
             
@@ -203,11 +216,7 @@ public class registroNegocio extends javax.swing.JFrame {
         return true;
     }
 
-    private void cargarComboCategorías(ArrayList<Categoria> listaCategorias) {
-        for (Categoria listaCategoria : listaCategorias) {
-            comboCategoria.addItem(listaCategoria.getNombre());
-        }
-    }
+    
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
