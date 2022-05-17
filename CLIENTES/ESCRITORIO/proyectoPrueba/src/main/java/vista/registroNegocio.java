@@ -181,8 +181,7 @@ public class registroNegocio extends javax.swing.JFrame {
             String nombre = varNombre.getText();
             String descripcion = textAreaDescripcion.getText();
             
-
-            if (descripcion.length() == 0 | nombre.length() == 0) {
+             if (descripcion.length() == 0 | nombre.length() == 0) {
                 throw new IOException("Rellena todos los campos");
             } else {
                 Negocio negocio = new Negocio();
@@ -192,11 +191,6 @@ public class registroNegocio extends javax.swing.JFrame {
                 negocio.setId_img(1);
                 negocio.setId_mercader(user.getId());
                 negocio.setId_direccion(1);
-
-                if(NegocioDao.nuevoNegocio(negocio)){
-                    DireccionDao.nuevaDireccion(nDireccion);
-                };
-
             }
         } catch (NumberFormatException ex) {
             error.setText("Rellena correctamente los campos numéricos");
