@@ -168,7 +168,6 @@ function nuevoNegocio($datos){
         $negocio->setId_direccion($datos->id_direccion);
         $negocio->setId_imagen($datos->id_imagen);
         
-
         if ($negocio->agregar()) {
             mandarRespuesta(false, 'Se ha realizado la insercion de un negocio');
         } else {
