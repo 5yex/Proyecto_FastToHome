@@ -39,6 +39,9 @@ if (empty($_POST["DATA"])) {
         case 'nueva_direccion';
             nuevaDireccion(json_decode($peticion->datos));
             break;
+         case 'nueva_direccion_devuelve_id';
+            nuevaDireccionDevuelveId(json_decode($peticion->datos));
+            break;
         case 'obtener_direccion';
             obtenerDireccion(json_decode($peticion->datos));
             break;
@@ -118,6 +121,34 @@ function nuevoProducto($datos) {
         mandarRespuesta(true, $ex->getMessage());
     }
 }
+
+
+function nuevaDireccionDevuelveId($datos) {
+    require_once '../modelo/Direccion.php';
+    try {
+        $direccion = new Direccion();
+        $direccion->setCalle($datos->calle);
+        $direccion->setNumero($datos->numero);
+        $direccion->setCiudad($datos->ciudad);
+        $direccion->setCodigo_postal($datos->codigo_postal);
+        $direccion->setOtros($datos->otros);
+        $direccion->setCoordenadas($datos->coordenadas);
+
+        $respuesta = $direccion->agregarConId();
+        
+         if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
+        }
+        
+        
+        
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
 
 function nuevaDireccion($datos) {
     require_once '../modelo/Direccion.php';
