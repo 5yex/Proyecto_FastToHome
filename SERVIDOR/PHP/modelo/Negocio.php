@@ -86,7 +86,7 @@ class Negocio extends Conexion {
         $id_imagen = $this->getId_imagen();
         
         if($id_imagen == 0){
-            $id_imagen ="null";
+            $id_imagen =null;
         }
 
         $sentencia->bindParam(":cat", $id_categoria);
