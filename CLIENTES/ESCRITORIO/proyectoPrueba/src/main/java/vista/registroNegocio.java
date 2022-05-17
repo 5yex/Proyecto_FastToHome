@@ -211,7 +211,7 @@ public class registroNegocio extends javax.swing.JFrame {
                 negocio.setId_mercader(user.getId());
                // negocio.setId_direccion(1);
                
-                 System.out.println(nDireccion.getJSON());
+                
                
                
             }

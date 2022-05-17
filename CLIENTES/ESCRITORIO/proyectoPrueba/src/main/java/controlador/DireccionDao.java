@@ -19,6 +19,12 @@ public class DireccionDao {
     public static boolean nuevaDireccion(Direccion direccion) {
         return gestion.hacerConsulta(new Peticion("nueva_direccion", direccion.getJSON()));
     }
+    
+    
+     public static int nuevaDireccionDevuelveId(Direccion direccion) {
+        return gestion.hacerConsulta(new Peticion("nueva_direccion", direccion.getJSON()));
+    }
+
 
     public static Direccion obtenerDireccionNegocio(Negocio negocio) {
         Direccion direccion = new Direccion();
