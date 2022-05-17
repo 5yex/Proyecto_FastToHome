@@ -39,7 +39,7 @@ public class CategoriaDao {
     }
     
     public static int ObtenerIdPorNombre(Categoria categoria){
-         return gestion.consultaSeleccionUnico(new Peticion("obtener_id_categoria", categoria.getJSON())).getAsInt();
+         return gestion.consultaSeleccionUnico(new Peticion("obtener_id_categoria", categoria.getJSON())).get("id_categoria").getAsInt();
     }
     
 }
