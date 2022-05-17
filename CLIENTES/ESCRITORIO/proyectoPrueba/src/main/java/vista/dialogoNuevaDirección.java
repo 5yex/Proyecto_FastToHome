@@ -211,6 +211,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
             int cp = Integer.valueOf(varCP.getText());
             String calle = varCalle.getText();
             String ciudad = varCiudad.getText();
+            String otros = varOtros.getText();
 
             if (calle.length() == 0 | ciudad.length() == 0) {
                 throw new IOException("Rellena todos los campos");
@@ -219,7 +220,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
                 direccion.setCiudad(ciudad);
                 direccion.setCodigo_postal(cp);
                 direccion.setNumero(num);
-                direccion.setOtros(varOtros.getText());
+                direccion.setOtros(otros);
             }
 
         } catch (NumberFormatException ex) {
