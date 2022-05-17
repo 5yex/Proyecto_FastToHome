@@ -37,4 +37,9 @@ public class CategoriaDao {
         }
         return listaCategorias;
     }
+    
+    public static int ObtenerIdPorNombre(String nombreCategoria){
+         gestion.consultaSeleccionUnico(new Peticion("obtener_id_categoria", null));
+    }
+    
 }
