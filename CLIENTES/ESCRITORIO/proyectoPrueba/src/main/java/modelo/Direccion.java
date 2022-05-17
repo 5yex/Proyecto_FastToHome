@@ -11,15 +11,15 @@ import com.google.gson.Gson;
  * @author jmcbg
  */
 public class Direccion {
-    
-   private int id_direccion;
-   private String calle;
-   private int numero;
-   private String ciudad;
-   private String otros;
-   private int codigo_postal;
-   private int coordenadas;
-   private int id_imagen;
+
+    private int id_direccion;
+    private String calle;
+    private int numero;
+    private String ciudad;
+    private String otros;
+    private int codigo_postal;
+    private int coordenadas;
+    private int id_imagen;
 
     public int getId_imagen() {
         return id_imagen;
@@ -49,7 +49,7 @@ public class Direccion {
     }
 
     public Direccion() {
-        
+
     }
 
     public int getId_direccion() {
@@ -107,8 +107,8 @@ public class Direccion {
     public void setCoordenadas(int coordenadas) {
         this.coordenadas = coordenadas;
     }
-   
-   public String getJSON(){
-       return new Gson().toJson(this);
+
+    public String getJSON() {
+        return new Gson().toJson(this);
     }
 }
