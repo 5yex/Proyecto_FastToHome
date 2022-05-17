@@ -61,7 +61,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
         varCP = new javax.swing.JTextField();
         labelCiudad1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        varOtros = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("NEODATIS - INSERTAR DEPARTAMENTO");
@@ -107,10 +107,10 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
 
         labelCiudad1.setText("Otros Datos:");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setPreferredSize(new java.awt.Dimension(232, 70));
-        jScrollPane1.setViewportView(jTextArea1);
+        varOtros.setColumns(20);
+        varOtros.setRows(5);
+        varOtros.setPreferredSize(new java.awt.Dimension(232, 70));
+        jScrollPane1.setViewportView(varOtros);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -219,7 +219,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
                 direccion.setCiudad(ciudad);
                 direccion.setCodigo_postal(cp);
                 direccion.setNumero(num);
-                direccion.setOtros("");
+                direccion.setOtros(varOtros.getText());
             }
 
         } catch (NumberFormatException ex) {
@@ -239,7 +239,6 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
     private javax.swing.JButton cancelar;
     private javax.swing.JLabel error;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel labelCalle;
     private javax.swing.JLabel labelCiudad;
     private javax.swing.JLabel labelCiudad1;
@@ -248,6 +247,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
     private javax.swing.JTextField varCalle;
     private javax.swing.JTextField varCiudad;
     private javax.swing.JTextField varNumeroTXT;
+    private javax.swing.JTextArea varOtros;
     // End of variables declaration//GEN-END:variables
 
   
