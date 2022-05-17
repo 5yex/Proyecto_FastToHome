@@ -99,22 +99,17 @@ class Direccion extends Conexion{
         $sentencia->bindParam(":coor", $coordenadas);
         
         $resultado = $sentencia->execute();
-        
-        
-
+ 
         if ($resultado != 1) {
-            //ocurrio un error al insertar
-            printf('aaa');
             return FALSE;
         }
-
         //Insertó correctamente
         return TRUE;
     }
     
     public function agregarConId(){
         $resultado = $this->agregar();
-        if ($resultado != 1) {
+        if ($resultado) {
             $sql = "SELECT LAST_INSERT_ID(id) FROM direccion ORDER BY id DESC LIMIT 1";
             $sentencia = $this->dblink->prepare($sql);
             $resultado = $sentencia->execute();
