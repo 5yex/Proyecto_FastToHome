@@ -84,6 +84,10 @@ class Negocio extends Conexion {
         $nombre = $this->getNombre();
         $descripcion = $this->getDescripcion();
         $id_imagen = $this->getId_imagen();
+        
+        if($id_imagen == 0){
+            $id_imagen ="null";
+        }
 
         $sentencia->bindParam(":cat", $id_categoria);
         $sentencia->bindParam(":dir", $id_direccion);
