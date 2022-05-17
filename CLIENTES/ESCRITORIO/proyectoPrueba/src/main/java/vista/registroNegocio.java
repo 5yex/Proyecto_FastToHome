@@ -193,7 +193,7 @@ public class registroNegocio extends javax.swing.JFrame {
     
     private boolean nuevoNegocio(Usuario user) {
         try {
-            int categoria = CategoriaDao.ObtenerIdPorNombre((String)comboCategoria.getSelectedItem());
+            int categoria = CategoriaDao.ObtenerIdPorNombre(new Categoria().setNombre(comboCategoria.getSelectedItem()));
             String nombre = varNombre.getText();
             String descripcion = textAreaDescripcion.getText();
             
