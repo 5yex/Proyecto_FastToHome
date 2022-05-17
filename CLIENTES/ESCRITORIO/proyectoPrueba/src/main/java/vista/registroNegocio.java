@@ -4,6 +4,7 @@
  */
 package vista;
 
+import controlador.CategoriaDao;
 import controlador.DireccionDao;
 import controlador.NegocioDao;
 import java.io.IOException;
@@ -177,7 +178,7 @@ public class registroNegocio extends javax.swing.JFrame {
 
     private boolean nuevoNegocio(Usuario user) {
         try {
-            String categoria = comboCategoria.getSelectedItem().toString();
+            int categoria = CategoriaDao.ObtenerIdPorNombre(comboCategoria.getSelectedItem().toString());
             String nombre = varNombre.getText();
             String descripcion = textAreaDescripcion.getText();
             
