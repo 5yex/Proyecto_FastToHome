@@ -24,7 +24,7 @@ public class registroNegocio extends javax.swing.JFrame {
 
     private Usuario User;
     private Direccion nDireccion = new Direccion();
-    private 
+    private ArrayList<Categoria> listaCategorias;
     
 
     /**
@@ -179,7 +179,9 @@ public class registroNegocio extends javax.swing.JFrame {
     }//GEN-LAST:event_botonCompletarRegistroActionPerformed
 
     private void cargaInicial(){
-        cargarComboCategorías(controlador.CategoriaDao.obtenerCategorias());
+        listaCategorias = controlador.CategoriaDao.obtenerCategorias();
+               
+        cargarComboCategorías(listaCategorias);
 
     };
     
