@@ -73,7 +73,7 @@ class Negocio extends Conexion {
         $this->id_imagen = $id_imagen;
     }
 
-        public function agregar() {
+    public function agregar() {
         $sql = "INSERT INTO negocio (id_categoria, direccion_id, id_mercader, Nombre, Descripcion, imagenes_id) VALUES (:cat, :dir, :mer, :nom, :des, :id_img)";
 
         $sentencia = $this->dblink->prepare($sql);
