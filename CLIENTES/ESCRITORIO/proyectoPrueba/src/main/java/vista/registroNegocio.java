@@ -190,10 +190,14 @@ public class registroNegocio extends javax.swing.JFrame {
             comboCategoria.addItem(listaCategoria.getNombre());
         }
     }
+  
     
     private boolean nuevoNegocio(Usuario user) {
         try {
-            int categoria = CategoriaDao.ObtenerIdPorNombre(new Categoria().setNombre(comboCategoria.getSelectedItem()));
+            Categoria categoria = new Categoria();
+            categoria.setNombre(comboCategoria.getSelectedItem().toString());
+            int id_categoria = CategoriaDao.ObtenerIdPorNombre(categoria);
+            
             String nombre = varNombre.getText();
             String descripcion = textAreaDescripcion.getText();
             
@@ -203,10 +207,13 @@ public class registroNegocio extends javax.swing.JFrame {
                 Negocio negocio = new Negocio();
                 negocio.setNombre(nombre);
                 negocio.setDescripcion(descripcion);
-                negocio.setId_categoria(1);
-                negocio.setId_img(1);
+                negocio.setId_categoria(id_categoria);
                 negocio.setId_mercader(user.getId());
-                negocio.setId_direccion(1);
+               // negocio.setId_direccion(1);
+               
+                 System.out.println(nDireccion.getJSON());
+               
+               
             }
         } catch (NumberFormatException ex) {
             error.setText("Rellena correctamente los campos numéricos");
