@@ -201,7 +201,7 @@ public class registroNegocio extends javax.swing.JFrame {
                 String nombre = varNombre.getText();
                 String descripcion = textAreaDescripcion.getText();
 
-                if (descripcion.length() == 0 | nombre.length() == 0) {
+                if (descripcion.length() == 0 | nombre.length() == 0 | descripcion.length() == 0) {
                     throw new IOException("Rellena todos los campos");
                 }
                 
