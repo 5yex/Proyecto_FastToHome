@@ -152,17 +152,6 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         //this.repaint();
     }
 
-    public static void main(String args[]) {
-        try {
-            javax.swing.UIManager.setLookAndFeel(new FlatDarkLaf());
-
-        } catch (UnsupportedLookAndFeelException ex) {
-
-        }
-        Usuario user = new Usuario(99, "Pruebas", "Hernandez", "54332653Y", "pruebas@pruebas", "123456789", "mercader", 0, "0");
-        new VentanaAdministrador(user).setVisible(true);
-    }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar barraSuperior;
