@@ -179,13 +179,9 @@ public class registroNegocio extends javax.swing.JFrame {
 
     private void cargaInicial() {
         listaCategorias = controlador.CategoriaDao.obtenerCategorias();
-
         cargarComboCategorias(listaCategorias);
-
     }
 
-    ;
-    
     private void cargarComboCategorias(ArrayList<Categoria> listaCategorias) {
         for (Categoria listaCategoria : listaCategorias) {
             comboCategoria.addItem(listaCategoria.getNombre());
@@ -196,7 +192,7 @@ public class registroNegocio extends javax.swing.JFrame {
         try {
 
             int id_direccion = DireccionDao.nuevaDireccionDevuelveId(nDireccion);
-            
+
             if (id_direccion != -1) {
                 Categoria categoria = new Categoria();
                 categoria.setNombre(comboCategoria.getSelectedItem().toString());
@@ -207,15 +203,16 @@ public class registroNegocio extends javax.swing.JFrame {
 
                 if (descripcion.length() == 0 | nombre.length() == 0) {
                     throw new IOException("Rellena todos los campos");
-                } else {
-                    Negocio negocio = new Negocio();
-                    negocio.setNombre(nombre);
-                    negocio.setDescripcion(descripcion);
-                    negocio.setId_categoria(id_categoria);
-                    negocio.setId_mercader(user.getId());
-                    negocio.setId_direccion(id_direccion);
-                    return NegocioDao.nuevoNegocio(negocio);
                 }
+                
+                Negocio negocio = new Negocio();
+                negocio.setNombre(nombre);
+                negocio.setDescripcion(descripcion);
+                negocio.setId_categoria(id_categoria);
+                negocio.setId_mercader(user.getId());
+                negocio.setId_direccion(id_direccion);
+                return NegocioDao.nuevoNegocio(negocio);
+
             }
         } catch (NumberFormatException ex) {
             error.setText("Rellena correctamente los campos numéricos");
