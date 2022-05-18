@@ -179,15 +179,12 @@ public class registroNegocio extends javax.swing.JFrame {
 
     private void cargaInicial() {
         listaCategorias = controlador.CategoriaDao.obtenerCategorias();
-        cargarComboCategorias(listaCategorias);
-    }
-
-    private void cargarComboCategorias(ArrayList<Categoria> listaCategorias) {
         for (Categoria listaCategoria : listaCategorias) {
             comboCategoria.addItem(listaCategoria.getNombre());
         }
     }
 
+    
     private boolean nuevoNegocio(Usuario user) {
         try {
 
