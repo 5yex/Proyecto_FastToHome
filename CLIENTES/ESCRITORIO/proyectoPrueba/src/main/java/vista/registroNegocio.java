@@ -10,6 +10,7 @@ import controlador.NegocioDao;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import modelo.Categoria;
 import modelo.Direccion;
 import modelo.Negocio;
@@ -182,6 +183,7 @@ public class registroNegocio extends javax.swing.JFrame {
         for (Categoria listaCategoria : listaCategorias) {
             comboCategoria.addItem(listaCategoria.getNombre());
         }
+        JOptionPane.showMessageDialog(null, User.getNombre() + " Bienvenido al equipo de mercaderes! \n A continuación podrás configurar tu negocio");
     }
 
     
