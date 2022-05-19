@@ -15,8 +15,9 @@ public class panelNuevoProducto extends javax.swing.JPanel {
     /**
      * Creates new form producto
      */
-    public panelNuevoProducto() {
+    public panelNuevoProducto(Producto prod) {
         initComponents();
+        producto = prod;
         mostrarDatos();
     }
 
