@@ -18,7 +18,6 @@ public class panelProducto extends javax.swing.JPanel {
     public panelProducto(Producto prod) {
         initComponents();
         producto = prod;
-        mostrarDatos();
     }
 
     /**
