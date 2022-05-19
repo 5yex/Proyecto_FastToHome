@@ -10,12 +10,12 @@ import modelo.Producto;
  *
  * @author jmcbg
  */
-public class panelProductoNuevoi extends javax.swing.JPanel {
+public class panelProductoNuevo extends javax.swing.JPanel {
 
     /**
      * Creates new form producto
      */
-    public panelProductoNuevoi() {
+    public panelProductoNuevo() {
         initComponents();
 
     }
