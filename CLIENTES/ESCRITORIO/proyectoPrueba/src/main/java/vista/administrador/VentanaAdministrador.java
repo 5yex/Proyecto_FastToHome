@@ -94,7 +94,11 @@ public class VentanaAdministrador extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        menuCuenta.setText("Mi Cuenta");
+        barraSuperior.setBackground(new java.awt.Color(255, 102, 51));
+
+        menuCuenta.setForeground(new java.awt.Color(255, 255, 255));
+        menuCuenta.setText("MI CUENTA");
+        menuCuenta.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         modificarMenuItem.setText("Modificar Datos");
         modificarMenuItem.addActionListener(new java.awt.event.ActionListener() {
@@ -106,7 +110,8 @@ public class VentanaAdministrador extends javax.swing.JFrame {
 
         barraSuperior.add(menuCuenta);
 
-        menuOperaciones.setText("Operaciones");
+        menuOperaciones.setText("OPERACIONES");
+        menuOperaciones.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         jMenuItem2.setText("Nuevo Mercader");
         menuOperaciones.add(jMenuItem2);
