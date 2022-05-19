@@ -104,6 +104,6 @@ public class panelProducto extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void mostrarDatos() {
-        producto.getNombre()
+        nombreProducto.setText(producto.getNombre());
     }
 }
