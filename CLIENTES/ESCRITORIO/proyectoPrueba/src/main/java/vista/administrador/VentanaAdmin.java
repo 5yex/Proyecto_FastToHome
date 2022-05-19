@@ -9,6 +9,7 @@ import controlador.UsuarioDao;
 import java.awt.FlowLayout;
 import java.util.ArrayList;
 import javax.swing.JMenu;
+import javax.swing.table.DefaultTableModel;
 import modelo.Negocio;
 import modelo.Usuario;
 
@@ -180,11 +181,6 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void radioClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioClientesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_radioClientesActionPerformed
-
- 
-   
-  
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu botonInfo;
     private javax.swing.JMenu botonOpciones;
@@ -203,4 +199,27 @@ public class VentanaAdmin extends javax.swing.JFrame {
       ArrayList<Usuario>  users =  UsuarioDao.seleccionUsuarios();
         
     }
+    
+    
+     public void recargarTablaUsuarios(ArrayList<Usuario> listaEmpleados) {
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
+                null,
+                new String[]{
+                    "Número", "Apellido", "Departamento", "Director", "Fecha Alta", "Oficio", "Salario", "Comision"
+                }
+        ) {
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return false;
+            }
+        });
+        //tabla.getColumnModel().getColumn(0).setMaxWidth(60);
+       // tabla.getColumnModel().getColumn(2).setMinWidth(100);
+        tabla.setAutoCreateRowSorter(true);
+        for (Empleado empleado : listaEmpleados) {
+            DefaultTableModel model = (DefaultTableModel) tabla.getModel();
+            model.addRow(empleado.getRow());
+        }
+    }
+    
+    
 }
