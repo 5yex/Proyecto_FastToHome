@@ -78,6 +78,9 @@ public class VentanaMercader extends javax.swing.JFrame {
         botonInfo.setDoubleBuffered(true);
         botonInfo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         botonInfo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonInfoMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 deselección(evt);
             }
@@ -138,6 +141,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         mostrarProductos();
     }//GEN-LAST:event_botonProductosMouseClicked
 
+    private void botonInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonInfoMouseClicked
+        mostrarPanelInicio();
+    }//GEN-LAST:event_botonInfoMouseClicked
+
     private void mostrarProductos() {
         contenido.removeAll();
 
@@ -155,8 +162,7 @@ public class VentanaMercader extends javax.swing.JFrame {
      private void mostrarPanelInicio() {
         contenido.removeAll();
 
-
-        contenido.add(panelInicioM);
+        contenido.add(new panelInicioM(negocio));
 
         contenido.revalidate();
         contenido.repaint();
