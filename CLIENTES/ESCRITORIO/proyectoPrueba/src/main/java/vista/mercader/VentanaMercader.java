@@ -45,16 +45,13 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         botonesMenu = new javax.swing.ButtonGroup();
         jPopupMenu1 = new javax.swing.JPopupMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
         jScrollPane1 = new javax.swing.JScrollPane();
         contenido = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         botonInfo = new javax.swing.JMenu();
         botonProductos = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         botonOpciones = new javax.swing.JMenu();
-
-        jMenuItem1.setText("jMenuItem1");
-        jPopupMenu1.add(jMenuItem1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
@@ -109,6 +106,10 @@ public class VentanaMercader extends javax.swing.JFrame {
                 deselección(evt);
             }
         });
+
+        jMenuItem1.setText("jMenuItem1");
+        botonProductos.add(jMenuItem1);
+
         jMenuBar1.add(botonProductos);
 
         botonOpciones.setText("PEDIDOS");
@@ -133,7 +134,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
