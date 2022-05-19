@@ -4,25 +4,10 @@
  */
 package com.donoso.proyectoprueba;
 
-import com.formdev.flatlaf.FlatDarkLaf;
-import com.formdev.flatlaf.FlatIntelliJLaf;
 import com.formdev.flatlaf.FlatLightLaf;
-import controlador.UsuarioDao;
-import controlador.gestion;
-import static controlador.gestion.hacerConsulta;
 import java.io.IOException;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import mdlaf.MaterialLookAndFeel;
-import mdlaf.themes.JMarsDarkTheme;
-import mdlaf.themes.MaterialLiteTheme;
-import mdlaf.themes.MaterialOceanicTheme;
-import mdlaf.themes.MaterialTheme;
-import modelo.Categoria;
-import modelo.Peticion;
-import modelo.Producto;
-import modelo.Usuario;
-import org.mindrot.jbcrypt.BCrypt;
 import vista.FrameLogin;
 
 /**
