@@ -45,6 +45,8 @@ if (empty($_POST["DATA"])) {
         case 'obtener_direccion';
             obtenerDireccion(json_decode($peticion->datos));
             break;
+        case 'actualizar_direccion';
+            modificarDireccion(json_decode($peticion->datos));
         //Casos negocio
         case 'nuevo_negocio';
             nuevoNegocio(json_decode($peticion->datos));
@@ -179,6 +181,28 @@ function obtenerDireccion($datos){
             mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error en obtener la dirección');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
+function modificarDireccion($datos){
+    require_once '../modelo/Direccion.php';
+    try {
+        $direccion = new Direccion();
+        $direccion->setId_direccion($datos->id_direccion);
+        $direccion->setCalle($datos->calle);
+        $direccion->setNumero($datos->numero);
+        $direccion->setCiudad($datos->ciudad);
+        $direccion->setCodigo_postal($datos->codigo_postal);
+        $direccion->setOtros($datos->otros);
+        $direccion->setCoordenadas($datos->coordenadas);
+
+        if ($direccion->actualizarDireccion()) {
+            mandarRespuesta(false, 'Se ha realizado actualización de una dirección');
+        } else {
+            mandarRespuesta(true, 'Error en la actualización de la dirección');
         }
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
