@@ -130,4 +130,8 @@ class Direccion extends Conexion{
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
     
+    public function actualizarDireccion(){
+        $sql = "UPDATE direccion SET Calle = :calle, Numero = :num, Ciudad = :ciu, CP = :cp, Otros = :otros, Coordenadas = :coor WHERE id = :id_dir"
+    }
+    
 }
