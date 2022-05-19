@@ -7,6 +7,7 @@ package vista.mercader;
 import vista.registroNegocio;
 import controlador.NegocioDao;
 import controlador.ProductoDao;
+import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.util.ArrayList;
 import javax.swing.JMenu;
@@ -165,7 +166,9 @@ public class VentanaMercader extends javax.swing.JFrame {
         this.setResizable(false);
         this.setSize(620, 417);
         contenido.removeAll();
-
+        
+        contenido.setLayout(new BorderLayout());
+        
         contenido.add(new panelInicioM(negocio));
 
         contenido.revalidate();
