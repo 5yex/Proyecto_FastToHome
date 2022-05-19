@@ -201,7 +201,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
     
     
-     public void recargarTablaUsuarios(ArrayList<Usuario> listaUsuarios) {
+     public void recargarTablaUsuarios(ArrayList<Usuario> listaEmpleados) {
         tabla.setModel(new javax.swing.table.DefaultTableModel(
                 null,
                 new String[]{
@@ -215,7 +215,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         //tabla.getColumnModel().getColumn(0).setMaxWidth(60);
        // tabla.getColumnModel().getColumn(2).setMinWidth(100);
         tabla.setAutoCreateRowSorter(true);
-        for (Empleado empleado : listaUsuarios) {
+        for (Empleado empleado : listaEmpleados) {
             DefaultTableModel model = (DefaultTableModel) tabla.getModel();
             model.addRow(empleado.getRow());
         }
