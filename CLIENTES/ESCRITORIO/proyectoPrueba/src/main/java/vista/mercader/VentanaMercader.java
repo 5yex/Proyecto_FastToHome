@@ -44,14 +44,17 @@ public class VentanaMercader extends javax.swing.JFrame {
     private void initComponents() {
 
         botonesMenu = new javax.swing.ButtonGroup();
-        jPopupMenu1 = new javax.swing.JPopupMenu();
+        popupProductos = new javax.swing.JPopupMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jScrollPane1 = new javax.swing.JScrollPane();
         contenido = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         botonInfo = new javax.swing.JMenu();
         botonProductos = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
         botonOpciones = new javax.swing.JMenu();
+
+        jMenuItem1.setText("NUEVO PRODUCTO");
+        popupProductos.add(jMenuItem1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
@@ -59,7 +62,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         jScrollPane1.setDoubleBuffered(true);
 
-        contenido.setComponentPopupMenu(jPopupMenu1);
+        contenido.setComponentPopupMenu(popupProductos);
 
         javax.swing.GroupLayout contenidoLayout = new javax.swing.GroupLayout(contenido);
         contenido.setLayout(contenidoLayout);
@@ -106,10 +109,6 @@ public class VentanaMercader extends javax.swing.JFrame {
                 deselección(evt);
             }
         });
-
-        jMenuItem1.setText("jMenuItem1");
-        botonProductos.add(jMenuItem1);
-
         jMenuBar1.add(botonProductos);
 
         botonOpciones.setText("PEDIDOS");
@@ -165,6 +164,7 @@ public class VentanaMercader extends javax.swing.JFrame {
             contenido.add(new panelProducto(producto));
         }
 
+        contenido.setComponentPopupMenu(popupProductos);
         contenido.revalidate();
         contenido.repaint();
     }
@@ -191,7 +191,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     private javax.swing.JPanel contenido;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPopupMenu popupProductos;
     // End of variables declaration//GEN-END:variables
 }
