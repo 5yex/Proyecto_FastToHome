@@ -88,7 +88,7 @@ public class panelProducto extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonEliminarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarProductoActionPerformed
-        // TODO add your handling code here:
+       eliminarProducto();
     }//GEN-LAST:event_botonEliminarProductoActionPerformed
 
     private void botonEditarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarProductoActionPerformed
