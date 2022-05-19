@@ -197,7 +197,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
     private void cargarDatos() {
       ArrayList<Usuario>  users =  UsuarioDao.seleccionUsuarios();
-        
+      recargarTablaUsuarios(users);  
     }
     
     
