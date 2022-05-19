@@ -5,6 +5,7 @@
 package vista.administrador;
 
 import controlador.NegocioDao;
+import controlador.UsuarioDao;
 import java.awt.FlowLayout;
 import javax.swing.JMenu;
 import modelo.Negocio;
@@ -26,7 +27,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     public VentanaAdmin(Usuario user) {
         usuario = user;
         initComponents();
-        
+        cargarDatos();
     }
 
     /**
@@ -39,7 +40,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void initComponents() {
 
         botonesMenu = new javax.swing.ButtonGroup();
+        filtros = new javax.swing.ButtonGroup();
         contenido = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabla = new javax.swing.JTable();
+        radioTodos = new javax.swing.JRadioButton();
+        radioClientes = new javax.swing.JRadioButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         botonInfo = new javax.swing.JMenu();
         botonProductos = new javax.swing.JMenu();
@@ -49,15 +55,58 @@ public class VentanaAdmin extends javax.swing.JFrame {
         setTitle("Ventana Mercader");
         setResizable(false);
 
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        tabla.setShowGrid(false);
+        jScrollPane1.setViewportView(tabla);
+
+        filtros.add(radioTodos);
+        radioTodos.setSelected(true);
+        radioTodos.setText("Todos");
+        radioTodos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioTodosActionPerformed(evt);
+            }
+        });
+
+        filtros.add(radioClientes);
+        radioClientes.setText("Clientes");
+        radioClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioClientesActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout contenidoLayout = new javax.swing.GroupLayout(contenido);
         contenido.setLayout(contenidoLayout);
         contenidoLayout.setHorizontalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addComponent(jScrollPane1)
+            .addGroup(contenidoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(radioTodos, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(radioClientes, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
+                .addGap(524, 524, 524))
         );
         contenidoLayout.setVerticalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 427, Short.MAX_VALUE)
+            .addGroup(contenidoLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(radioTodos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(radioClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(8, 8, 8))
         );
 
         jMenuBar1.setBackground(new java.awt.Color(255, 102, 0));
@@ -122,6 +171,14 @@ public class VentanaAdmin extends javax.swing.JFrame {
        jm.setSelected(false);
     }//GEN-LAST:event_deselección
 
+    private void radioTodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioTodosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radioTodosActionPerformed
+
+    private void radioClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioClientesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radioClientesActionPerformed
+
  
    
   
@@ -132,6 +189,16 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private javax.swing.JMenu botonProductos;
     private javax.swing.ButtonGroup botonesMenu;
     private javax.swing.JPanel contenido;
+    private javax.swing.ButtonGroup filtros;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JRadioButton radioClientes;
+    private javax.swing.JRadioButton radioTodos;
+    private javax.swing.JTable tabla;
     // End of variables declaration//GEN-END:variables
+
+    private void cargarDatos() {
+      ArrayList<Usuario> =  UsuarioDao.seleccionUsuarios();
+        
+    }
 }
