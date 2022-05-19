@@ -201,7 +201,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
     
     
-     public void recargarTablaUsuarios(ArrayList<Usuario> listaUsuarios) {
+    public void recargarTablaUsuarios(ArrayList<Usuario> listaUsuarios) {
         tabla.setModel(new javax.swing.table.DefaultTableModel(
                 null,
                 new String[]{
