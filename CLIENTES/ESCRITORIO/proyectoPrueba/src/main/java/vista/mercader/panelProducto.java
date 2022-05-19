@@ -68,12 +68,5 @@ public class panelProducto extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 
-    private void mostrarDatos() {
-        nombreProducto.setText(producto.getNombre());
-        
-    }
-
-    private void eliminarProducto() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
 }
