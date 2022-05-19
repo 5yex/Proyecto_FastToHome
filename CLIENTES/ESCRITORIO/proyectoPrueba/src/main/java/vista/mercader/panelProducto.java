@@ -107,4 +107,8 @@ public class panelProducto extends javax.swing.JPanel {
         nombreProducto.setText(producto.getNombre());
         
     }
+
+    private void eliminarProducto() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
