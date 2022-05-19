@@ -140,7 +140,7 @@ public class Usuario {
     }
 
     public Object[] getRow() {
-                return new Object[]{empNo, apellido, dept, dir, new SimpleDateFormat("dd/MM/yyyy").format(fechaAlt), oficio, salario, comision};
+                return new Object[]{ null};
 
     }
 
