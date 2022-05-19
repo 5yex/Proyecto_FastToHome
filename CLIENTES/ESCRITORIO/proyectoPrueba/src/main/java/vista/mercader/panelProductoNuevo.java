@@ -17,7 +17,6 @@ public class panelProductoNuevo extends javax.swing.JPanel {
      */
     public panelProductoNuevo() {
         initComponents();
-        producto = prod;
     }
 
     /**
