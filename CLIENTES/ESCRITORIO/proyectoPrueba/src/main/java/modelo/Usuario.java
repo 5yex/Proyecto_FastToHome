@@ -5,6 +5,7 @@
 package modelo;
 
 import com.google.gson.Gson;
+import java.util.Vector;
 
 /**
  *
@@ -135,6 +136,10 @@ public class Usuario {
     }
      public String getJSON(){
        return new Gson().toJson(this);
+    }
+
+    public Vector<?> getRow() {
+        
     }
 
 }
