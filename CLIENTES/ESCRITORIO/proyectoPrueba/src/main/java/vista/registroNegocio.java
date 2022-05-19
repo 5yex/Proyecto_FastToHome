@@ -186,9 +186,16 @@ public class registroNegocio extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, User.getNombre() + " Bienvenido al equipo de mercaderes! \n A continuación podrás configurar tu negocio");
     }
 
-    
     private boolean nuevoNegocio(Usuario user) {
+
         try {
+
+            String nombre = varNombre.getText();
+            String descripcion = textAreaDescripcion.getText();
+
+            if (descripcion.length() == 0 | nombre.length() == 0 | descripcion.length() == 0) {
+                throw new IOException("Rellena todos los campos");
+            }
 
             int id_direccion = DireccionDao.nuevaDireccionDevuelveId(nDireccion);
 
@@ -197,13 +204,6 @@ public class registroNegocio extends javax.swing.JFrame {
                 categoria.setNombre(comboCategoria.getSelectedItem().toString());
                 int id_categoria = CategoriaDao.ObtenerIdPorNombre(categoria);
 
-                String nombre = varNombre.getText();
-                String descripcion = textAreaDescripcion.getText();
-
-                if (descripcion.length() == 0 | nombre.length() == 0 | descripcion.length() == 0) {
-                    throw new IOException("Rellena todos los campos");
-                }
-                
                 Negocio negocio = new Negocio();
                 negocio.setNombre(nombre);
                 negocio.setDescripcion(descripcion);
