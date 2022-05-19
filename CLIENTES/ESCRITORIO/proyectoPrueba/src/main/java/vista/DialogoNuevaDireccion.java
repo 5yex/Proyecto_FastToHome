@@ -40,6 +40,12 @@ public class DialogoNuevaDireccion extends javax.swing.JDialog {
         //cargarSelectorDeps(new DepartamentoDAO().mostrarDepartamentos(bd));
     }
     
+    /**
+     * Contructor cuyo padre es un Dialogo
+     * @param parentDialog
+     * @param modal
+     * @param direccion 
+     */
     public DialogoNuevaDireccion(JDialog parentDialog, boolean modal, Direccion direccion){
         super(parentDialog, modal);
         this.direccion = direccion;
