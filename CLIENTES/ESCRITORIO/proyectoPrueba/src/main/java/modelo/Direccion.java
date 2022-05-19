@@ -47,8 +47,10 @@ public class Direccion {
         this.codigo_postal = codigo_postal;
         this.coordenadas = coordenadas;
     }
-    
-    
+
+    public Direccion(int id_direccion) {
+        this.id_direccion = id_direccion;
+    }
 
     public Direccion() {
 
