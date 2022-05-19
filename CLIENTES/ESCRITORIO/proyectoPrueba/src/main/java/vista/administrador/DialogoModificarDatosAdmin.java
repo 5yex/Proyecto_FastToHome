@@ -24,6 +24,7 @@ import vista.DialogoNuevaDireccion;
 public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements Constantes {
 
     private Usuario admin = new Usuario();
+    Direccion direccionAdmin = new Direccion();
 
     public Usuario getAdmin() {
         return admin;
