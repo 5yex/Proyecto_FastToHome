@@ -6,10 +6,14 @@ package vista.mercader;
 
 import vista.registroNegocio;
 import controlador.NegocioDao;
+import controlador.ProductoDao;
 import java.awt.FlowLayout;
+import java.util.ArrayList;
 import javax.swing.JMenu;
 import modelo.Negocio;
+import modelo.Producto;
 import modelo.Usuario;
+import util.WrapLayout;
 
 /**
  *
@@ -18,9 +22,7 @@ import modelo.Usuario;
 public class VentanaMercader extends javax.swing.JFrame {
 
     private Usuario mercader;
-    private  Negocio negocio;
-
-   
+    private Negocio negocio;
 
     /**
      * Creates new form VentanaPrincipal
@@ -28,7 +30,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     public VentanaMercader(Usuario user) {
         initComponents();
         mercader = user;
-        
+        negocio = NegocioDao.negocioDeMercader(user);
     }
 
     /**
@@ -41,6 +43,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     private void initComponents() {
 
         botonesMenu = new javax.swing.ButtonGroup();
+        jScrollPane1 = new javax.swing.JScrollPane();
         contenido = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         botonInfo = new javax.swing.JMenu();
@@ -49,18 +52,22 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
-        setResizable(false);
+
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        jScrollPane1.setDoubleBuffered(true);
 
         javax.swing.GroupLayout contenidoLayout = new javax.swing.GroupLayout(contenido);
         contenido.setLayout(contenidoLayout);
         contenidoLayout.setHorizontalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGap(0, 612, Short.MAX_VALUE)
         );
         contenidoLayout.setVerticalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 427, Short.MAX_VALUE)
+            .addGap(0, 437, Short.MAX_VALUE)
         );
+
+        jScrollPane1.setViewportView(contenido);
 
         jMenuBar1.setBackground(new java.awt.Color(255, 102, 0));
 
@@ -84,13 +91,16 @@ public class VentanaMercader extends javax.swing.JFrame {
         botonProductos.setDoubleBuffered(true);
         botonProductos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         botonProductos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonProductosMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 deselección(evt);
             }
         });
         jMenuBar1.add(botonProductos);
 
-        botonOpciones.setText("OPCIONES");
+        botonOpciones.setText("PEDIDOS");
         botonesMenu.add(botonOpciones);
         botonOpciones.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         botonOpciones.setDoubleBuffered(true);
@@ -108,11 +118,11 @@ public class VentanaMercader extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jScrollPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jScrollPane1)
         );
 
         pack();
@@ -120,13 +130,28 @@ public class VentanaMercader extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void deselección(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deselección
-       JMenu jm = (JMenu) evt.getComponent();
-       jm.setSelected(false);
+        JMenu jm = (JMenu) evt.getComponent();
+        jm.setSelected(false);
     }//GEN-LAST:event_deselección
 
- 
-   
-  
+    private void botonProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonProductosMouseClicked
+        mostrarProductos();
+    }//GEN-LAST:event_botonProductosMouseClicked
+
+    private void mostrarProductos() {
+        contenido.removeAll();
+
+        contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
+
+        ArrayList<Producto> productos = ProductoDao.selecciónProductosNegocio(negocio);
+        for (Producto producto : productos) {
+            contenido.add(new panelProducto(producto));
+        }
+
+        contenido.revalidate();
+        contenido.repaint();
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu botonInfo;
@@ -135,5 +160,6 @@ public class VentanaMercader extends javax.swing.JFrame {
     private javax.swing.ButtonGroup botonesMenu;
     private javax.swing.JPanel contenido;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

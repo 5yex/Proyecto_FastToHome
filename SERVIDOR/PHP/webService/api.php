@@ -33,7 +33,7 @@ if (empty($_POST["DATA"])) {
             nuevoProducto(json_decode($peticion->datos));
             break;
         case 'obtener_productos_negocio';
-            obtenerProductosNegocio($peticion->datos);
+            obtenerProductosNegocio(json_decode($peticion->datos));
             break;
         //Casos dirección
         case 'nueva_direccion';
@@ -241,9 +241,14 @@ function obtenerNegocioDeMercader($datos) {
 
 function obtenerProductosNegocio($datos){
     require_once '../modelo/Producto.php';
+    require_once '../modelo/Negocio.php';
+
     try {
         $producto = new Producto();
-        $producto->setId_negocio($datos->id_negocio);
+        //HAY QUE ARREGLARLO
+        
+        $id = $datos->id_negocio;
+        $producto->setId_negocio($id);
         $respuesta = $producto->productosDeUnNegocio();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);

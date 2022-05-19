@@ -26,6 +26,7 @@ public class NegocioDao {
         if (respuesta == null) {
             return null;
         }
+        negocio.setId_negocio(respuesta.get("id").getAsInt());
         if (!respuesta.get("direccion_id").isJsonNull()) {
             user.setId_direccion(respuesta.get("direccion_id").getAsInt());
         }

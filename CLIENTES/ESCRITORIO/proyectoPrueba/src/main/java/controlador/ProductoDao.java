@@ -18,23 +18,20 @@ import modelo.Producto;
  * @author Jesus
  */
 public class ProductoDao {
-    public boolean nuevoProducto(Producto product){
+    public static boolean nuevoProducto(Producto product){
         return gestion.hacerConsulta(new Peticion("nuevo_producto", product.getJSON()));
     }
     
-    public ArrayList <Producto> selecciónProductosNegocio(Negocio negocio){
-        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios", negocio.getJSON()));
-        
-        Producto producto = new Producto();
-        
-        ArrayList<Producto> listaProductos = new ArrayList<Producto>();
-
+    public static ArrayList <Producto> selecciónProductosNegocio(Negocio negocio){
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_productos_negocio", negocio.getJSON()));
+        ArrayList<Producto> listaProductos = new ArrayList<>();
+        System.out.println("controlador.ProductoDao.selecciónProductosNegocio()     NUMERO PRODCUTOS: "+ listaProductos.size());
         for (int i = 0; i < jsonArray.size(); i++) {
             JsonObject productoJson = jsonArray.get(i).getAsJsonObject();
-            
+            Producto producto = new Producto();
             producto.setId_producto(productoJson.get("id").getAsInt());
             producto.setNombre(productoJson.get("Nombre").getAsString());
-            producto.setPrecio(productoJson.get("Precio").getAsDouble());
+            producto.setPrecio(Double.valueOf(productoJson.get("Precio").getAsString()));
             producto.setDescripcion(productoJson.get("Descripcion").getAsString());
             producto.setStock(productoJson.get("Stock").getAsInt());
             
