@@ -18,6 +18,13 @@ public class panelInicio extends javax.swing.JPanel {
     public panelInicio(Negocio negocio) {
         initComponents();
         this.negocio = negocio;
+        cargaInicial();
+    }
+    
+    
+    private void cargaInicial() {
+        DescripcionNegocio.setText(negocio.getDescripcion());
+        nombreNegocio.setText(negocio.getNombre());
     }
 
     /**
@@ -29,18 +36,18 @@ public class panelInicio extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        nombreNegocio = new javax.swing.JLabel();
+        DescripcionNegocio = new javax.swing.JLabel();
+        img = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(612, 437));
 
-        jLabel1.setText("Nombre negocio");
+        nombreNegocio.setText("Nombre negocio");
 
-        jLabel2.setText("Descripcion Negocio");
-        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        DescripcionNegocio.setText("Descripcion Negocio");
+        DescripcionNegocio.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel3.setText("Imagen negocio");
+        img.setText("Imagen negocio");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -49,28 +56,30 @@ public class panelInicio extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nombreNegocio)
+                    .addComponent(DescripcionNegocio, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(img, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(278, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(58, 58, 58)
-                .addComponent(jLabel1)
+                .addComponent(nombreNegocio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
+                .addComponent(DescripcionNegocio, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(img, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(75, 75, 75))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel DescripcionNegocio;
+    private javax.swing.JLabel img;
+    private javax.swing.JLabel nombreNegocio;
     // End of variables declaration//GEN-END:variables
+
+    
 }
