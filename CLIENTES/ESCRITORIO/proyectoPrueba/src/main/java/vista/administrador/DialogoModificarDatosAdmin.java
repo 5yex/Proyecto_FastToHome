@@ -9,10 +9,12 @@ import controlador.UsuarioDao;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.UnsupportedLookAndFeelException;
+import modelo.Direccion;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
 import util.Constantes;
 import util.validaciones;
+import vista.dialogoNuevaDirección;
 
 /**
  *
@@ -165,7 +167,8 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
             }
         });
 
-        botonModificarDireccion.setText("jButton1");
+        botonModificarDireccion.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botonModificarDireccion.setText("MODIFICAR DATOS DIRECCIÓN");
         botonModificarDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonModificarDireccionActionPerformed(evt);
@@ -392,7 +395,8 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     }//GEN-LAST:event_passwordConfirmFieldActionPerformed
 
     private void botonModificarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDireccionActionPerformed
-        // TODO add your handling code here:
+        Direccion direccionAdmin = new Direccion(admin.getId_direccion());
+        dialogoNuevaDireccion dialogoDireccion  = new dialogoNuevaDirección();
     }//GEN-LAST:event_botonModificarDireccionActionPerformed
 
 
