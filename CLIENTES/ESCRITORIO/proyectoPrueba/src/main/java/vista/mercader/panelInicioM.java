@@ -10,12 +10,12 @@ import modelo.Negocio;
  *
  * @author jmcbg
  */
-public class panelInicio extends javax.swing.JPanel {
+public class panelInicioM extends javax.swing.JPanel {
     private Negocio negocio;
     /**
      * Creates new form panelInicio
      */
-    public panelInicio(Negocio negocio) {
+    public panelInicioM(Negocio negocio) {
         initComponents();
         this.negocio = negocio;
         cargaInicial();
