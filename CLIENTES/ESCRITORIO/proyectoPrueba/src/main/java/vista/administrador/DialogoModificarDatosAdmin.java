@@ -397,7 +397,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     }//GEN-LAST:event_passwordConfirmFieldActionPerformed
 
     private void botonModificarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDireccionActionPerformed
-        Direccion direccionAdmin = DireccionDao.obtenerDireccionUsuario(admin);
+        direccionAdmin = DireccionDao.obtenerDireccionUsuario(admin);
         DialogoNuevaDireccion dialogoDireccion  = new DialogoNuevaDireccion(this, true, direccionAdmin);
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonModificarDireccionActionPerformed
