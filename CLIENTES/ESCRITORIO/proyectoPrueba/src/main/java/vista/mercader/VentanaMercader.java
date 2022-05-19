@@ -151,6 +151,18 @@ public class VentanaMercader extends javax.swing.JFrame {
         contenido.revalidate();
         contenido.repaint();
     }
+    
+     private void mostrarPanelInicio() {
+        contenido.removeAll();
+
+
+        contenido.add(panelInicio);
+
+        contenido.revalidate();
+        contenido.repaint();
+    }
+    
+    
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
