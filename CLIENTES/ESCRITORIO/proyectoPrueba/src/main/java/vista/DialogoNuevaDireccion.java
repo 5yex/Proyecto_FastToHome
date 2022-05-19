@@ -12,6 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ComboBoxModel;
 import javax.swing.JComboBox;
+import javax.swing.JDialog;
 import javax.swing.table.DefaultTableModel;
 import modelo.Direccion;
 
@@ -37,6 +38,13 @@ public class DialogoNuevaDireccion extends javax.swing.JDialog {
         initComponents();
         rellenarDialogo();
         //cargarSelectorDeps(new DepartamentoDAO().mostrarDepartamentos(bd));
+    }
+    
+    public DialogoNuevaDireccion(JDialog parentDialog, boolean modal, Direccion direccion){
+        super(parentDialog, modal);
+        this.direccion = direccion;
+        initComponents();
+        rellenarDialogo();
     }
 
     /**
