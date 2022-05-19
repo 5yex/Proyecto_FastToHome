@@ -4,6 +4,7 @@
  */
 package vista.mercader;
 
+import com.formdev.flatlaf.ui.FlatButtonBorder;
 import modelo.Producto;
 
 /**
@@ -104,7 +105,7 @@ public class panelProducto extends javax.swing.JPanel {
 
     private void mostrarDatos() {
         nombreProducto.setText(producto.getNombre());
-        
+        this.setBorder(new FlatButtonBorder());
     }
 
     private void eliminarProducto() {
