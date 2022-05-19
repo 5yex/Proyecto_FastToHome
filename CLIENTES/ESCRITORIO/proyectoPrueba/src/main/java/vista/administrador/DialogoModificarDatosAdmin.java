@@ -78,7 +78,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         infoPass = new javax.swing.JLabel();
         infoConfirmPass = new javax.swing.JLabel();
         botonActualizar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        botonModificarDireccion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Ventana Actualizacion de Datos de Administrador");
@@ -165,10 +165,10 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
             }
         });
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botonModificarDireccion.setText("jButton1");
+        botonModificarDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botonModificarDireccionActionPerformed(evt);
             }
         });
 
@@ -226,7 +226,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
                                         .addComponent(infoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(emailTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(PanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(botonModificarDireccion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(botonActualizar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 507, Short.MAX_VALUE)))
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -279,7 +279,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
                     .addComponent(passwordConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(infoConfirmPass, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonModificarDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15))
@@ -391,9 +391,9 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordConfirmFieldActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void botonModificarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDireccionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_botonModificarDireccionActionPerformed
 
 
 
@@ -423,6 +423,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     private javax.swing.JTextField apellidosField;
     private javax.swing.JLabel apellidosTXT;
     private javax.swing.JButton botonActualizar;
+    private javax.swing.JButton botonModificarDireccion;
     private javax.swing.JTextField dniField;
     private javax.swing.JLabel dniTXT;
     private javax.swing.JTextField emailField;
@@ -434,7 +435,6 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     private javax.swing.JLabel infoNombre;
     private javax.swing.JLabel infoPass;
     private javax.swing.JLabel infoTelefono;
-    private javax.swing.JButton jButton1;
     private javax.swing.JTextField nombreField;
     private javax.swing.JLabel nombreTXT;
     private javax.swing.JPasswordField passwordConfirmField;

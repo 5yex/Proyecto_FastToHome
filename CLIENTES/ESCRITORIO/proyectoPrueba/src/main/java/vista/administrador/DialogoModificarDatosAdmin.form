@@ -104,7 +104,7 @@
                                       </Group>
                                       <Component id="emailTXT" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
                                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="botonModificarDireccion" alignment="0" max="32767" attributes="0"/>
                                           <Component id="botonActualizar" alignment="0" pref="507" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -173,7 +173,7 @@
                       <Component id="infoConfirmPass" alignment="0" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" pref="28" max="-2" attributes="0"/>
+                  <Component id="botonModificarDireccion" min="-2" pref="28" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="botonActualizar" min="-2" pref="32" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
@@ -292,12 +292,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonActualizarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="botonModificarDireccion">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton1"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonModificarDireccionActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
