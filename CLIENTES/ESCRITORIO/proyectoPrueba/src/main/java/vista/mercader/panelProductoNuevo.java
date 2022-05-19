@@ -15,10 +15,9 @@ public class panelProductoNuevo extends javax.swing.JPanel {
     /**
      * Creates new form producto
      */
-    public panelProductoNuevo(Producto prod) {
+    public panelProductoNuevo() {
         initComponents();
         producto = prod;
-        mostrarDatos();
     }
 
     /**
@@ -68,5 +67,4 @@ public class panelProductoNuevo extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 
-   
 }
