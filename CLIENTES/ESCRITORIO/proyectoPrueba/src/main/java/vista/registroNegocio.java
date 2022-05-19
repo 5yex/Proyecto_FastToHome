@@ -168,7 +168,7 @@ public class registroNegocio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonPedirDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirDireccionActionPerformed
-        new dialogoNuevaDirección(this, rootPaneCheckingEnabled, nDireccion).setVisible(true);
+        new DialogoNuevaDireccion(this, rootPaneCheckingEnabled, nDireccion).setVisible(true);
     }//GEN-LAST:event_botonPedirDireccionActionPerformed
 
     private void botonCompletarRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCompletarRegistroActionPerformed
