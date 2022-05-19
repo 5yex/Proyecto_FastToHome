@@ -65,5 +65,9 @@ public class DireccionDao {
         return direccion;
         
     }
+    
+    public static boolean actualizarDireccion(Direccion direccion){
+        return gestion.hacerConsulta(new Peticion("actualizar_direccion"), direccion.getJSON());
+    }
 
 }
