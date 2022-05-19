@@ -7,6 +7,7 @@ package vista.administrador;
 import controlador.NegocioDao;
 import controlador.UsuarioDao;
 import java.awt.FlowLayout;
+import java.util.ArrayList;
 import javax.swing.JMenu;
 import modelo.Negocio;
 import modelo.Usuario;
@@ -55,6 +56,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         setTitle("Ventana Mercader");
         setResizable(false);
 
+        tabla.setAutoCreateRowSorter(true);
         tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -198,7 +200,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void cargarDatos() {
-      ArrayList<Usuario> =  UsuarioDao.seleccionUsuarios();
+      ArrayList<Usuario>  users =  UsuarioDao.seleccionUsuarios();
         
     }
 }
