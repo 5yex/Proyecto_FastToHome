@@ -74,7 +74,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
             }
         });
 
-        aceptar.setText("INSERTAR");
+        aceptar.setText("CONFIRMAR");
         aceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aceptarActionPerformed(evt);
@@ -140,7 +140,7 @@ public class dialogoNuevaDirección extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(aceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(aceptar))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(labelCiudad1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
