@@ -156,7 +156,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         contenido.removeAll();
 
 
-        contenido.add(panelInicio);
+        contenido.add(panelInicioM);
 
         contenido.revalidate();
         contenido.repaint();
