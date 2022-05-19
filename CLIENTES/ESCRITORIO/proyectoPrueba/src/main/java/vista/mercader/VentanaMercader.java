@@ -146,7 +146,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_botonInfoMouseClicked
 
     private void mostrarProductos() {
-                this.setResizable(true);
+        this.setResizable(true);
 
         contenido.removeAll();
 
