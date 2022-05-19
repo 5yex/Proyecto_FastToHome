@@ -17,7 +17,7 @@ import modelo.Usuario;
  *
  * @author jmcbg
  */
-public class VentanaAdmin extends javax.swing.JFrame {
+public class VentanaAdminPrueba extends javax.swing.JFrame {
 
     private Usuario usuario;
 
@@ -26,7 +26,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     /**
      * Creates new form VentanaPrincipal
      */
-    public VentanaAdmin(Usuario user) {
+    public VentanaAdminPrueba(Usuario user) {
         usuario = user;
         initComponents();
         cargarDatos();
