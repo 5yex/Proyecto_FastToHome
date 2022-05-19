@@ -5,6 +5,7 @@
 package modelo;
 
 import com.google.gson.Gson;
+import java.text.SimpleDateFormat;
 import java.util.Vector;
 
 /**
@@ -138,8 +139,9 @@ public class Usuario {
        return new Gson().toJson(this);
     }
 
-    public Vector<?> getRow() {
-        
+    public Object[] getRow() {
+                return new Object[]{empNo, apellido, dept, dir, new SimpleDateFormat("dd/MM/yyyy").format(fechaAlt), oficio, salario, comision};
+
     }
 
 }
