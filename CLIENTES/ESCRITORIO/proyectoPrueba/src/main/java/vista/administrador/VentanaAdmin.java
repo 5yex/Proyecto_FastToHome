@@ -201,13 +201,14 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
     
     
-     public void recargarTablaUsuarios(ArrayList<Usuario> listaEmpleados) {
+     public void recargarTablaUsuarios(ArrayList<Usuario> listaUsuarios) {
         tabla.setModel(new javax.swing.table.DefaultTableModel(
                 null,
                 new String[]{
                     "Número", "Apellido", "Departamento", "Director", "Fecha Alta", "Oficio", "Salario", "Comision"
                 }
         ) {
+            @Override
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return false;
             }
@@ -215,9 +216,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
         //tabla.getColumnModel().getColumn(0).setMaxWidth(60);
        // tabla.getColumnModel().getColumn(2).setMinWidth(100);
         tabla.setAutoCreateRowSorter(true);
-        for (Empleado empleado : listaEmpleados) {
+        for (Usuario user : listaUsuarios) {
             DefaultTableModel model = (DefaultTableModel) tabla.getModel();
-            model.addRow(empleado.getRow());
+            model.addRow(user.getRow());
         }
     }
     
