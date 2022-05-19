@@ -47,6 +47,8 @@ public class Direccion {
         this.codigo_postal = codigo_postal;
         this.coordenadas = coordenadas;
     }
+    
+    
 
     public Direccion() {
 
