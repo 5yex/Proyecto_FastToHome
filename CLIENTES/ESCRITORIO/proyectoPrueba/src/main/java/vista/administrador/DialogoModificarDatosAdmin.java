@@ -315,7 +315,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
             && validaciones.validar(emailField.getText(), PATRON_EMAIL)
             && validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
             && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0
-                && ) {
+            && DireccionDao.actualizarDireccion(direccionAdmin)) {
             modificarDatosAdmin();
         } else {
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, URL, HEIGHT);
