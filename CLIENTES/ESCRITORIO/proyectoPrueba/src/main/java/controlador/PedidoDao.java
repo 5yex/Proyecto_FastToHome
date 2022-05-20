@@ -5,7 +5,9 @@
 package controlador;
 
 import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import java.util.ArrayList;
+import modelo.Pedido;
 import modelo.Peticion;
 
 /**
@@ -18,28 +20,24 @@ public class PedidoDao{
         
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios", null));
 
-        ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
+        ArrayList<Pedido> listaPedidosPagados = new ArrayList<Pedido>();
 
         for (int i = 0; i < jsonArray.size(); i++) {
-            Usuario user = new Usuario();
+            Pedido pedido = new Pedido();
             
-            JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
+            JsonObject pedidoJson = jsonArray.get(i).getAsJsonObject();
             
-            user.setId(usuarioJson.get("id").getAsInt());
-            user.setDni(usuarioJson.get("Dni").getAsString());
-            user.setEmail(usuarioJson.get("Email").getAsString());
-            user.setId(usuarioJson.get("id").getAsInt());
-            if (!usuarioJson.get("direccion_id").isJsonNull()) {
-                user.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
-            }
-            user.setNombre(usuarioJson.get("Nombre").getAsString());
-            user.setPassword(usuarioJson.get("password").getAsString());
-            user.setRol(usuarioJson.get("Rol").getAsString());
-            user.setTlf(usuarioJson.get("tlf").getAsString());
+            pedido.setId_pedido(pedidoJson.get("id").getAsInt());
+            pedido.setId_usuario(pedidoJson.get("id_usuario").getAsInt());
+            //pedido.setFecha_hora(pedidoJson.get("fecha_hora").getAsString());
+            pedido.setEstado(pedidoJson.get("estado").getAsString());
+            pedido.setTotal(pedidoJson.get("total").getAsDouble());
+            pedido.setTransporte(pedidoJson.get("transporte").getAsString());
             
-            listaUsuarios.add(user);
+            
+            listaPedidosPagados.add(pedido);
 
         }
-        return listaUsuarios;
-    
+        return listaPedidosPagados;
+    }
 }
