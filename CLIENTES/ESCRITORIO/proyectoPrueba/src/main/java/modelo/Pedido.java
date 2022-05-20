@@ -82,11 +82,11 @@ public class Pedido {
         this.total = total;
     }
 
-    public int getTransporte() {
+    public String getTransporte() {
         return transporte;
     }
 
-    public void setTransporte(int transporte) {
+    public void setTransporte(String transporte) {
         this.transporte = transporte;
     }
     
