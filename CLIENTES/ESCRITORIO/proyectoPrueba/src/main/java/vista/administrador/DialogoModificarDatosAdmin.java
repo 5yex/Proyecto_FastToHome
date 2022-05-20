@@ -15,7 +15,7 @@ import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
 import util.Constantes;
 import util.validaciones;
-import vista.DialogoNuevaDireccion;
+import vista.DialogoDireccion;
 
 /**
  *
@@ -399,7 +399,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
 
     private void botonModificarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDireccionActionPerformed
         direccionAdmin = DireccionDao.obtenerDireccionUsuario(admin);
-        DialogoNuevaDireccion dialogoDireccion  = new DialogoNuevaDireccion(this, true, direccionAdmin);
+        DialogoDireccion dialogoDireccion  = new DialogoDireccion(this, true, direccionAdmin);
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonModificarDireccionActionPerformed
 

@@ -20,7 +20,7 @@ import modelo.Direccion;
  *
  * @author 5yex
  */
-public class DialogoNuevaDireccion extends javax.swing.JDialog {
+public class DialogoDireccion extends javax.swing.JDialog {
 
     Direccion direccion;
     //List<Departamento> departamentos = new ArrayList<Departamento>();
@@ -32,7 +32,7 @@ public class DialogoNuevaDireccion extends javax.swing.JDialog {
      * @param modal
      * @param direccion
      */
-    public DialogoNuevaDireccion(java.awt.Frame parent, boolean modal, Direccion direccion) {
+    public DialogoDireccion(java.awt.Frame parent, boolean modal, Direccion direccion) {
         super(parent, modal);
         this.direccion = direccion;
         initComponents();
@@ -46,7 +46,7 @@ public class DialogoNuevaDireccion extends javax.swing.JDialog {
      * @param modal
      * @param direccion 
      */
-    public DialogoNuevaDireccion(JDialog parentDialog, boolean modal, Direccion direccion){
+    public DialogoDireccion(JDialog parentDialog, boolean modal, Direccion direccion){
         super(parentDialog, modal);
         this.direccion = direccion;
         initComponents();
