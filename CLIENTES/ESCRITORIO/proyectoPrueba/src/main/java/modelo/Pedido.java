@@ -17,13 +17,13 @@ public class Pedido {
     private int id_negocio;
     private Date fecha_hora;
     private String estado;
-    private int total;
+    private double total;
     private String transporte;
 
     public Pedido() {
     }
 
-    public Pedido(int id_usuario, int id_negocio, Date fecha_hora, String estado, int total, String transporte) {
+    public Pedido(int id_usuario, int id_negocio, Date fecha_hora, String estado, double total, String transporte) {
         this.id_usuario = id_usuario;
         this.id_negocio = id_negocio;
         this.fecha_hora = fecha_hora;
