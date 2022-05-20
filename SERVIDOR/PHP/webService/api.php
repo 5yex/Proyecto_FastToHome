@@ -393,6 +393,7 @@ function obtenerPedidosNegocioPagados(){
     
     try{
         $pedido = new Pedido();
+        $pedido->setId_negocio($datos->id_negocio);
         $respuesta = $pedido->obtenerPedidosNegocioPagado();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
