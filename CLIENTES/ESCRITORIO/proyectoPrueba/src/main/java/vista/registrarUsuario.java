@@ -5,6 +5,7 @@
 package vista;
 
 import com.formdev.flatlaf.FlatDarkLaf;
+import controlador.DireccionDao;
 import controlador.UsuarioDao;
 import java.awt.Color;
 import javax.swing.JOptionPane;
@@ -373,6 +374,9 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes{
  
     
     private void registrarUsuario() {
+        
+        int id_direccion = DireccionDao.nuevaDireccionDevuelveId(direccionUsuario);
+        if()
         newUsuario.setNombre(nombreField.getText());
         newUsuario.setApellidos(apellidosField.getText());
         newUsuario.setDni(dniField.getText());
