@@ -20,8 +20,8 @@ import util.validaciones;
  *
  * @author Jesus
  */
-public class registrarUsuario extends javax.swing.JDialog implements Constantes{
-    
+public class registrarUsuario extends javax.swing.JDialog implements Constantes {
+
     private Usuario newUsuario = new Usuario();
     Direccion direccionUsuario = new Direccion();
 
@@ -285,80 +285,79 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes{
     }// </editor-fold>//GEN-END:initComponents
 
     private void registerConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerConfirmActionPerformed
-        
-        if(validaciones.validar(nombreField.getText(),PATRON_NOMBRES) &&
-                validaciones.validar(apellidosField.getText(),PATRON_APELLIDOS) &&
-                validaciones.validacionDNI(dniField.getText()) &&
-                validaciones.validar(tlfField.getText(), PATRON_TELEFONO) &&
-                validaciones.validar(emailField.getText(),PATRON_EMAIL) &&
-                validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO) &&
-                String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0
-                ){
+
+        if (validaciones.validar(nombreField.getText(), PATRON_NOMBRES)
+                && validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)
+                && validaciones.validacionDNI(dniField.getText())
+                && validaciones.validar(tlfField.getText(), PATRON_TELEFONO)
+                && validaciones.validar(emailField.getText(), PATRON_EMAIL)
+                && validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
+                && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0) {
             registrarUsuario();
-        }else{
+        } else {
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, URL, HEIGHT);
         }
     }//GEN-LAST:event_registerConfirmActionPerformed
 
     private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
-        if(!validaciones.validar(nombreField.getText(),PATRON_NOMBRES)){
+        if (!validaciones.validar(nombreField.getText(), PATRON_NOMBRES)) {
             infoNombre.setForeground(Color.RED);
             infoNombre.setText(MENSAJE_NOMBRE_INFO);
-        }else{
+        } else {
             infoNombre.setText("");
         }
     }//GEN-LAST:event_nombreFieldFocusLost
 
     private void apellidosFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_apellidosFieldFocusLost
-        if(!validaciones.validar(apellidosField.getText(),PATRON_APELLIDOS)){
+        if (!validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)) {
             infoApellido.setForeground(Color.RED);
             infoApellido.setText(MENSAJE_APELLIDO_INFO);
-        }else{
+        } else {
             infoApellido.setText("");
         }
     }//GEN-LAST:event_apellidosFieldFocusLost
 
     private void dniFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dniFieldFocusLost
-        if(!validaciones.validacionDNI(dniField.getText())){
+        if (!validaciones.validacionDNI(dniField.getText())) {
             infoDNI.setForeground(Color.RED);
             infoDNI.setText(MENSAJE_DNI_INFO);
-        }else{
+        } else {
             infoDNI.setText("");
         }
     }//GEN-LAST:event_dniFieldFocusLost
 
     private void tlfFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tlfFieldFocusLost
-        if(!validaciones.validar(tlfField.getText(), PATRON_TELEFONO)){
+        if (!validaciones.validar(tlfField.getText(), PATRON_TELEFONO)) {
             infoTelefono.setForeground(Color.RED);
             infoTelefono.setText(MENSAJE_TELEFONO_INFO);
-        }else{
+        } else {
             infoTelefono.setText("");
         }
     }//GEN-LAST:event_tlfFieldFocusLost
 
     private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
-        if(!validaciones.validar(emailField.getText(),PATRON_EMAIL)){
+        if (!validaciones.validar(emailField.getText(), PATRON_EMAIL)) {
             infoEmail.setForeground(Color.RED);
             infoEmail.setText(MENSAJE_EMAIL_INFO);
-        }else{
+        } else {
             infoEmail.setText("");
         }
     }//GEN-LAST:event_emailFieldFocusLost
 
     private void passwordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFieldFocusLost
-        if(!validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO)){
+        if (!validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)) {
             infoPass.setForeground(Color.RED);
             infoPass.setText(MENSAJE_PASS_INFO);
-        }else{
+        } else {
             infoPass.setText("");
         }
     }//GEN-LAST:event_passwordFieldFocusLost
 
     private void passwordConfirmFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmFieldFocusLost
-        if(String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) != 0 || !validaciones.validar(String.valueOf(passwordField.getPassword()),PATRON_PASS_USUARIO)){
+        if (String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) != 0 || !validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)) {
             infoConfirmPass.setForeground(Color.RED);
             infoConfirmPass.setText(MENSAJE_CONFIRMA_PASS);
-        }else{
+        } else {
             infoConfirmPass.setText("");
         }
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
@@ -376,33 +375,29 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes{
     }//GEN-LAST:event_passwordFieldActionPerformed
 
     private void botonIntroducirDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIntroducirDireccionActionPerformed
-        DialogoDireccion dialogoDireccion  = new DialogoDireccion(this, true, direccionUsuario);
+        DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionUsuario);
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonIntroducirDireccionActionPerformed
-    
 
- 
-    
     private void registrarUsuario() {
-        
+
         int id_direccion = DireccionDao.nuevaDireccionDevuelveId(direccionUsuario);
-        if(id_direccion != -1){
-        newUsuario.setNombre(nombreField.getText());
-        newUsuario.setApellidos(apellidosField.getText());
-        newUsuario.setDni(dniField.getText());
-        newUsuario.setTlf(tlfField.getText());
-        newUsuario.setEmail(emailField.getText());
-        newUsuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
-        newUsuario.setRol("cliente");
-        System.out.println(newUsuario.getJSON());
-        
-        
-        if(UsuarioDao.nuevoUsuario(newUsuario)){
-            this.dispose();
-        }else{
-            JOptionPane.showMessageDialog(this, "No se pudo registrar el usuario con esos datos", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
-        }
-        }else{
+        if (id_direccion != -1) {
+            newUsuario.setNombre(nombreField.getText());
+            newUsuario.setApellidos(apellidosField.getText());
+            newUsuario.setDni(dniField.getText());
+            newUsuario.setTlf(tlfField.getText());
+            newUsuario.setEmail(emailField.getText());
+            newUsuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
+            newUsuario.setRol("cliente");
+            System.out.println(newUsuario.getJSON());
+
+            if (UsuarioDao.nuevoUsuario(newUsuario)) {
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(this, "No se pudo registrar el usuario con esos datos", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
             JOptionPane.showMessageDialog(this, "Error, no insertó una direccion correcta por lo que no se procedió a crear el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
         }
     }
