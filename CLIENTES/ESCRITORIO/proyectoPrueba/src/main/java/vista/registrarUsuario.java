@@ -155,6 +155,11 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes{
 
         botonIntroducirDireccion.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         botonIntroducirDireccion.setText("INTRODUCIR DIRECCION");
+        botonIntroducirDireccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonIntroducirDireccionActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PanelRegistroLayout = new javax.swing.GroupLayout(PanelRegistro);
         PanelRegistro.setLayout(PanelRegistroLayout);
@@ -369,6 +374,11 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes{
     private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordFieldActionPerformed
+
+    private void botonIntroducirDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIntroducirDireccionActionPerformed
+        DialogoDireccion dialogoDireccion  = new DialogoDireccion(this, true, direccionUsuario);
+        dialogoDireccion.setVisible(true);
+    }//GEN-LAST:event_botonIntroducirDireccionActionPerformed
     
 
  
