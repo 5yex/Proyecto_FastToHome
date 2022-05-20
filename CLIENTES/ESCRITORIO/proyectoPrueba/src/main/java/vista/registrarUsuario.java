@@ -63,7 +63,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes{
         infoEmail = new javax.swing.JLabel();
         infoPass = new javax.swing.JLabel();
         infoConfirmPass = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        botonIntroducirDireccion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -150,8 +150,8 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes{
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setText("INTRODUCIR DIRECCION");
+        botonIntroducirDireccion.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botonIntroducirDireccion.setText("INTRODUCIR DIRECCION");
 
         javax.swing.GroupLayout PanelRegistroLayout = new javax.swing.GroupLayout(PanelRegistro);
         PanelRegistro.setLayout(PanelRegistroLayout);
@@ -201,7 +201,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes{
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(infoPass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addComponent(registerConfirm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(botonIntroducirDireccion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRegistroLayout.createSequentialGroup()
                 .addContainerGap(58, Short.MAX_VALUE)
@@ -256,7 +256,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes{
                     .addComponent(infoConfirmPass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(passwordConfirmField, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonIntroducirDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(registerConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(15, Short.MAX_VALUE))
@@ -392,6 +392,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes{
     private javax.swing.JPanel PanelRegistro;
     private javax.swing.JTextField apellidosField;
     private javax.swing.JLabel apellidosTXT;
+    private javax.swing.JButton botonIntroducirDireccion;
     private javax.swing.JTextField dniField;
     private javax.swing.JLabel dniTXT;
     private javax.swing.JTextField emailField;
@@ -403,7 +404,6 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes{
     private javax.swing.JLabel infoNombre;
     private javax.swing.JLabel infoPass;
     private javax.swing.JLabel infoTelefono;
-    private javax.swing.JButton jButton1;
     private javax.swing.JTextField nombreField;
     private javax.swing.JLabel nombreTXT;
     private javax.swing.JPasswordField passwordConfirmField;
