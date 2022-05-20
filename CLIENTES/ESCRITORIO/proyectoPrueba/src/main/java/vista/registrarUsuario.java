@@ -9,6 +9,7 @@ import controlador.UsuarioDao;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.UnsupportedLookAndFeelException;
+import modelo.Direccion;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
 import util.Constantes;
@@ -21,6 +22,7 @@ import util.validaciones;
 public class registrarUsuario extends javax.swing.JDialog implements Constantes{
     
     private Usuario newUsuario = new Usuario();
+    Direccion direccionUsuario = new Direccion();
 
     /**
      * Creates new form DialogoRegistro
