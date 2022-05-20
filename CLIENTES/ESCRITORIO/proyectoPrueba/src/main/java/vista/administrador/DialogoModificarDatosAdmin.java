@@ -314,7 +314,8 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
             && validaciones.validar(tlfField.getText(), PATRON_TELEFONO)
             && validaciones.validar(emailField.getText(), PATRON_EMAIL)
             && validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
-            && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0) {
+            && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0
+                && ) {
             modificarDatosAdmin();
         } else {
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, URL, HEIGHT);
@@ -417,7 +418,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         System.out.println(admin.getJSON());
         
         
-        if(UsuarioDao.actualizarUsuario(admin) && DireccionDao.actualizarDireccion(direccionAdmin)){
+        if(UsuarioDao.actualizarUsuario(admin)){
             this.dispose();
         }else{
             JOptionPane.showMessageDialog(this, "No se pudo actualizar el administrador", "Error al actualizar", JOptionPane.ERROR_MESSAGE);
