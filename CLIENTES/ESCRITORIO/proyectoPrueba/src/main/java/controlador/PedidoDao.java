@@ -45,7 +45,7 @@ public class PedidoDao{
         
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_pedidos_en_preparacion", null));
 
-        ArrayList<Pedido> listaPedidosPagados = new ArrayList<Pedido>();
+        ArrayList<Pedido> listaPedidosEnPreparacion = new ArrayList<Pedido>();
 
         for (int i = 0; i < jsonArray.size(); i++) {
             Pedido pedido = new Pedido();
@@ -60,9 +60,9 @@ public class PedidoDao{
             pedido.setTransporte(pedidoJson.get("transporte").getAsString());
             
             
-            listaPedidosPagados.add(pedido);
+            listaPedidosEnPreparacion.add(pedido);
 
         }
-        return listaPedidosPagados;
+        return listaPedidosEnPreparacion;
     }
 }
