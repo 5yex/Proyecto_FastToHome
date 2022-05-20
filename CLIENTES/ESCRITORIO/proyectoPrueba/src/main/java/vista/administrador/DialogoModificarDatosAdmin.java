@@ -417,7 +417,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         System.out.println(admin.getJSON());
         
         
-        if(UsuarioDao.actualizarUsuario(admin) && DireccionDao.actualizarDireccion(direccionAdmin)){
+        if(UsuarioDao.actualizarUsuario(admin)){
             this.dispose();
         }else{
             JOptionPane.showMessageDialog(this, "No se pudo actualizar el administrador", "Error al actualizar", JOptionPane.ERROR_MESSAGE);
