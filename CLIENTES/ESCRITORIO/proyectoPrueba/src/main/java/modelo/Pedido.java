@@ -23,6 +23,16 @@ public class Pedido {
     public Pedido() {
     }
 
+    public Pedido(int id_pedido, int id_usuario, int id_negocio, Date fecha_hora, String estado, double total, String transporte) {
+        this.id_pedido = id_pedido;
+        this.id_usuario = id_usuario;
+        this.id_negocio = id_negocio;
+        this.fecha_hora = fecha_hora;
+        this.estado = estado;
+        this.total = total;
+        this.transporte = transporte;
+    }
+
     public Pedido(int id_usuario, int id_negocio, Date fecha_hora, String estado, double total, String transporte) {
         this.id_usuario = id_usuario;
         this.id_negocio = id_negocio;
@@ -31,7 +41,6 @@ public class Pedido {
         this.total = total;
         this.transporte = transporte;
     }
-    
     
 
     public int getId_pedido() {
