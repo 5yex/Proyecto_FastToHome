@@ -410,6 +410,7 @@ function obtenerPedidosNegocioEnPreparacion(){
     
     try{
         $pedido = new Pedido();
+        $pedido->setId_negocio($datos->id_negocio);
         $respuesta = $pedido->obtenerPedidosNegocioEnPreparacion();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
