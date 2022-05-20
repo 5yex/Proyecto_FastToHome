@@ -388,7 +388,7 @@ function obtenerUsuariosClientes(){
     }
 }
 
-function obtenerPedidosNegocioPagados(){
+function obtenerPedidosNegocioPagados($datos){
     require_once '../modelo/Pedido.php';
     
     try{
@@ -405,7 +405,7 @@ function obtenerPedidosNegocioPagados(){
     }
 }
 
-function obtenerPedidosNegocioEnPreparacion(){
+function obtenerPedidosNegocioEnPreparacion($datos){
     require_once '../modelo/Pedido.php';
     
     try{
