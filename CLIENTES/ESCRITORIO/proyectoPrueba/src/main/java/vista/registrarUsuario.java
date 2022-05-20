@@ -386,7 +386,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes{
     private void registrarUsuario() {
         
         int id_direccion = DireccionDao.nuevaDireccionDevuelveId(direccionUsuario);
-        if()
+        if(id_direccion != -1){
         newUsuario.setNombre(nombreField.getText());
         newUsuario.setApellidos(apellidosField.getText());
         newUsuario.setDni(dniField.getText());
@@ -400,7 +400,10 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes{
         if(UsuarioDao.nuevoUsuario(newUsuario)){
             this.dispose();
         }else{
-            JOptionPane.showMessageDialog(this, "No se pudo registrar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "No se pudo registrar el usuario con esos datos", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
+        }
+        }else{
+            JOptionPane.showMessageDialog(this, "Error, no insertó una direccion correcta por lo que no se procedió a crear el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
         }
     }
 
