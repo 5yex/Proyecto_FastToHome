@@ -9,6 +9,11 @@ import com.formdev.flatlaf.ui.FlatButtonBorder;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.imageio.stream.FileImageInputStream;
 import javax.imageio.stream.FileImageOutputStream;
@@ -107,22 +112,34 @@ public class DialogoImagen extends javax.swing.JDialog {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        JFileChooser jf = new JFileChooser();
-        jf.setDialogTitle("Seleccionar Imagen");
-        jf.setFileFilter(new FileNameExtensionFilter("Imagenes PNG", "png"));
-        int seleccion = jf.showOpenDialog(this);
-        if (seleccion == JFileChooser.APPROVE_OPTION) {
-            imagenSeleccionada = jf.getSelectedFile();
-            jLabel1.setIcon(new ImageIcon(new ImageIcon(imagenSeleccionada.getPath()).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
+        FileInputStream imageInFile = null;
+        try {
+            
+            JFileChooser jf = new JFileChooser();
+            jf.setDialogTitle("Seleccionar Imagen");
+            jf.setFileFilter(new FileNameExtensionFilter("Imagenes PNG", "png"));
+            int seleccion = jf.showOpenDialog(this);
+            if (seleccion == JFileChooser.APPROVE_OPTION) {
+                imagenSeleccionada = jf.getSelectedFile();
+                jLabel1.setIcon(new ImageIcon(new ImageIcon(imagenSeleccionada.getPath()).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
+            }   Imagen img = new Imagen();
+            imageInFile = new FileInputStream(imagenSeleccionada);
+            byte imageData[] = new byte[(int) imagenSeleccionada.length()];
+            imageInFile.read(imageData);
+            img.setImagen(imageData);
+            System.out.println(img.getJSON());
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(DialogoImagen.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(DialogoImagen.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                imageInFile.close();
+            } catch (IOException ex) {
+                Logger.getLogger(DialogoImagen.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
-        Imagen img = new Imagen();
-        FileInputStream imageInFile = new FileInputStream(imagenSeleccionada);
-        byte imageData[] = new byte[(int) imagenSeleccionada.length()];
-        imageInFile.read(imageData);
-        
-        img.setImagen();
-        
-        System.out.println(img.getJSON());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
