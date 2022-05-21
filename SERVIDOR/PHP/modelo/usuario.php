@@ -240,5 +240,13 @@ class usuario extends conexion {
         //Insertó correctamente
         return TRUE;
     }
+    
+    public function asignarRolMerdader() {
+        
+    }
+    
+    public function asignarRolAdministrador() {
+        
+    }
 
 }
