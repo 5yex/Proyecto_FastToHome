@@ -42,7 +42,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPopupMenu1 = new javax.swing.JPopupMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        itemMercader = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         panelTableado = new javax.swing.JTabbedPane();
         panelInicioAdmin = new javax.swing.JPanel();
@@ -53,13 +53,13 @@ public class VentanaAdmin extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         tablaClientes = new javax.swing.JTable();
 
-        jMenuItem1.setText("jMenuItem1");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        itemMercader.setText("jMenuItem1");
+        itemMercader.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                itemMercaderActionPerformed(evt);
             }
         });
-        jPopupMenu1.add(jMenuItem1);
+        jPopupMenu1.add(itemMercader);
 
         jMenuItem2.setText("jMenuItem2");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -179,9 +179,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_botonModificarDatosAdminActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void itemMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMercaderActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_itemMercaderActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
@@ -237,7 +237,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonModificarDatosAdmin;
-    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem itemMercader;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane2;
