@@ -126,13 +126,14 @@ public class DialogoImagen extends javax.swing.JDialog {
                 imagenSeleccionada = jf.getSelectedFile();
                 jLabel1.setIcon(new ImageIcon(new ImageIcon(imagenSeleccionada.getPath()).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
             }   Imagen img = new Imagen();
-            imageInFile = new FileInputStream(imagenSeleccionada);
-            byte imageData[] = new byte[(int) imagenSeleccionada.length()];
-            imageInFile.read(imageData);
-            img.setImagen(imageData);
-            System.out.println(img.getJSON());
+           
+       
             byte[] imageBytes = IOUtils.toByteArray(new FileInputStream(imagenSeleccionada));
             String base64 = Base64.getEncoder().encodeToString(imageBytes);
+                        System.out.println(base64);
+
+            
+            
         } catch (FileNotFoundException ex) {
             Logger.getLogger(DialogoImagen.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
