@@ -7,7 +7,7 @@ package vista;
 import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.JFileChooser;
 import javax.swing.UIManager;
-import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
