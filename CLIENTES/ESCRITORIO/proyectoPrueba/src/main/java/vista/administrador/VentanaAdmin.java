@@ -185,21 +185,21 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void itemMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMercaderActionPerformed
         //hacerMecader
         int filaSeleccionada = tablaClientes.getSelectedRow();
-        if(UsuarioDao.asignarRolMercader(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))){
+        if (UsuarioDao.asignarRolMercader(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
             recargarTablaClientes(UsuarioDao.obtenerDatosClientes());
-        }else{
-            JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como mercader a este usuario", "Error",JOptionPane.ERROR_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como mercader a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
         }
-        
+
     }//GEN-LAST:event_itemMercaderActionPerformed
 
     private void itemAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAdministradorActionPerformed
         //hacerAdmin
         int filaSeleccionada = tablaClientes.getSelectedRow();
-        if(UsuarioDao.asignarRolAdministrador(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))){
-        recargarTablaClientes(UsuarioDao.obtenerDatosClientes());
-        }else{
-            
+        if (UsuarioDao.asignarRolAdministrador(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
+            recargarTablaClientes(UsuarioDao.obtenerDatosClientes());
+        } else {
+            JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como administrador a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_itemAdministradorActionPerformed
 
@@ -207,7 +207,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         administrador = UsuarioDao.obtenerDatosUsuario(administrador);
         labelNombreAdmin.setText(administrador.getNombre());
     }
-    
+
     public void recargarTablaClientes(ArrayList<Usuario> listaClientes) {
         arrayListClientes = listaClientes;
         tablaClientes.setModel(new javax.swing.table.DefaultTableModel(
@@ -228,7 +228,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
             model.addRow(cliente.getRow());
         }
     }
-    
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -251,7 +251,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         /* Create and display the dialog */
         new VentanaAdmin(null).setVisible(true);
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonModificarDatosAdmin;
     private javax.swing.JMenuItem itemAdministrador;
@@ -265,6 +265,5 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private javax.swing.JTabbedPane panelTableado;
     private javax.swing.JTable tablaClientes;
     // End of variables declaration//GEN-END:variables
-    
-    
+
 }
