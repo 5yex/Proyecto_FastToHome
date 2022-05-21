@@ -206,7 +206,7 @@ class usuario extends conexion {
 
     public function actualizarUsuario() {
 
-        $sql = "UPDATE IGNORE usuarios SET Nombre = :nom, apellidos = :ape, Dni = :dni, Email = :email, tlf = :tlf, Rol = :rol, password = :pass";
+        $sql = "UPDATE IGNORE usuarios SET Nombre = :nom, apellidos = :ape, Dni = :dni, Email = :email, tlf = :tlf, Rol = :rol, password = :pass WHERE id = :id_user";
 
         $sentencia = $this->dblink->prepare($sql);
 
@@ -217,7 +217,7 @@ class usuario extends conexion {
         $email = $this->getEmail();
         $tlf = $this->getTlf();
         $rol = $this->getRol();
-        //$id_direccion = $this->getId_direccion();
+        $id = $this->getId();
         $password = $this->getPassword();
 
         $sentencia->bindParam(":nom", $nombre);
@@ -226,7 +226,7 @@ class usuario extends conexion {
         $sentencia->bindParam(":email", $email);
         $sentencia->bindParam(":tlf", $tlf);
         $sentencia->bindParam(":rol", $rol);
-        //$sentencia->bindParam(":dir", $id_direccion);
+        $sentencia->bindParam(":id", $id);
         $sentencia->bindParam(":pass", $password);
 
         // $sentencia->bindParam(":fot", $this->getFoto() );
