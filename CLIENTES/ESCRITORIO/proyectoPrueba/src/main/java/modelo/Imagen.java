@@ -4,12 +4,14 @@
  */
 package modelo;
 
+import java.io.File;
+
 /**
  *
  * @author jmcbg
  */
 public class Imagen {
     int id;
-    String url;
+    File imagen;
     
 }
