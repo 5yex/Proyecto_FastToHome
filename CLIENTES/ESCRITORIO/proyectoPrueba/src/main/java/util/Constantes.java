@@ -45,7 +45,7 @@ public interface Constantes {
     final public String MENSAJE_COD_PESADA = "Dame el codigo de la pesada: ";
     final public String MENSAJE_COD_PRECIO = "Dame el codigo del precio: ";
     final public String MENSAJE_EMAIL_INFO = "Email inválido";
-    final public String MENSAJE_TELEFONO_INFO = "Formato inválido: Empieza por 6, 7 o 9 y seguido de 8 números";
+    final public String MENSAJE_TELEFONO_INFO = "Teléfono inválido";
     final public String MENSAJE_ERROR_RELLENO_DATOS = "Se ha producido un error al rellenar los datos, siga las intrucciones";
     final public String MENSAJE_CONFIRMA_PASS = "El campo de contraseña y confirmar contraseña deben ser iguales";
     
