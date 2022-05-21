@@ -37,13 +37,7 @@ public class Imagen {
     }
 
     public String getJSON() {
-        try {
-            new Base64().encode(imagen);
-        } catch (EncoderException ex) {
-            Logger.getLogger(Imagen.class.getName()).log(Level.SEVERE, null, ex);
-        }
-                    return new Gson().toJson(this);
-
+        return new Gson().toJson(this);
     }
 
 }
