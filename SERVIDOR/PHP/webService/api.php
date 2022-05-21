@@ -28,6 +28,12 @@ if (empty($_POST["DATA"])) {
         case 'actualizar_usuario';
             actualizarUsuario(json_decode($peticion->datos));
             break;
+        case 'asignar_rol_admin';
+            asignarRolAdministrador(json_decode($peticion->datos));
+            break;
+        case 'asignar_rol_mercader';
+            asignarRolMercader(josn_decode($peticion->datos));
+            break;
         //Casos de producto
         case 'nuevo_producto';
             nuevoProducto(json_decode($peticion->datos));
