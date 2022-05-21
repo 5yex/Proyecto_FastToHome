@@ -5,9 +5,12 @@
 package modelo;
 
 import com.google.gson.Gson;
+import java.awt.Image;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.stream.FileImageInputStream;
 import org.apache.commons.codec.EncoderException;
 import org.apache.commons.codec.binary.Base64;
 
@@ -18,7 +21,7 @@ import org.apache.commons.codec.binary.Base64;
 public class Imagen {
 
     private int id;
-    private String imagenB64;
+    private Image imagen;
 
     public int getId() {
         return id;
@@ -28,13 +31,15 @@ public class Imagen {
         this.id = id;
     }
 
-    public File getImagen() {
+    public Image getImagen() {
         return imagen;
     }
 
-    public void setImagen(File imagen) {
+    public void setImagen(Image imagen) {
         this.imagen = imagen;
     }
+
+    
 
     public String getJSON() {
         return new Gson().toJson(this);
