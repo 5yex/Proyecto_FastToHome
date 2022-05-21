@@ -5,5 +5,5 @@ $img = "<img src= 'data:image;base64, $imgData' />";
 print($img);
 
 
-move_uploaded_file(base64_decode($imgData), "subidas/".$fichero["name"]);
+move_uploaded_file(base64_decode($imgData), "subidas/prueba.png");
 
