@@ -5,8 +5,10 @@
 package vista;
 
 import com.formdev.flatlaf.FlatLightLaf;
+import java.io.File;
 import javax.swing.JFileChooser;
 import javax.swing.UIManager;
+import javax.swing.filechooser.FileFilter;
 
 /**
  *
@@ -77,6 +79,17 @@ public class DialogoImagen extends javax.swing.JDialog {
      
             JFileChooser jf = new JFileChooser();
             jf.setDialogTitle("Seleccionar Imagen");
+            jf.setFileFilter(new FileFilter() {
+                @Override
+                public boolean accept(File f) {
+                    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+                }
+
+                @Override
+                public String getDescription() {
+                    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+                }
+            });
        
     }//GEN-LAST:event_jButton1ActionPerformed
 
