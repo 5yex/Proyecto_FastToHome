@@ -47,7 +47,7 @@ public interface Constantes {
     final public String MENSAJE_EMAIL_INFO = "Email inválido";
     final public String MENSAJE_TELEFONO_INFO = "Teléfono inválido";
     final public String MENSAJE_ERROR_RELLENO_DATOS = "Se ha producido un error al rellenar los datos, siga las intrucciones";
-    final public String MENSAJE_CONFIRMA_PASS = "El campo de contraseña y confirmar contraseña deben ser iguales";
+    final public String MENSAJE_CONFIRMA_PASS = "La contraseña es diferente";
     
     //PATRONES
     final public String PATRON_CLAVE_USUARIO = "[a-zA-Z0-9-_]{4,20}";
