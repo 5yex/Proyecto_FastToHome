@@ -11,7 +11,9 @@ import java.io.File;
  * @author jmcbg
  */
 public class Imagen {
-    int id;
+   private int id;
     File imagen;
+    
+    
     
 }
