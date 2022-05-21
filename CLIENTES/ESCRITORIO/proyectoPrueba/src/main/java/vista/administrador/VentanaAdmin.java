@@ -188,7 +188,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         if(UsuarioDao.asignarRolMercader(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))){
             recargarTablaClientes(UsuarioDao.obtenerDatosClientes());
         }else{
-            JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como mercader a este cliente", "Error",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como mercader a este usuario", "Error",JOptionPane.ERROR_MESSAGE);
         }
         
     }//GEN-LAST:event_itemMercaderActionPerformed
@@ -196,8 +196,11 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void itemAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAdministradorActionPerformed
         //hacerAdmin
         int filaSeleccionada = tablaClientes.getSelectedRow();
-        UsuarioDao.asignarRolAdministrador(new Usuario(arrayListClientes.get(filaSeleccionada).getId()));
+        if(UsuarioDao.asignarRolAdministrador(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))){
         recargarTablaClientes(UsuarioDao.obtenerDatosClientes());
+        }else{
+            
+        }
     }//GEN-LAST:event_itemAdministradorActionPerformed
 
     private void actualizarVentana() {
