@@ -9,5 +9,7 @@ package modelo;
  * @author jmcbg
  */
 public class Imagen {
+    int id;
+    String url;
     
 }

@@ -9,7 +9,10 @@ import com.formdev.flatlaf.ui.FlatButtonBorder;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.UIManager;
@@ -109,8 +112,12 @@ public class DialogoImagen extends javax.swing.JDialog {
         jf.setFileFilter(new FileNameExtensionFilter("Imagenes PNG", "png"));
         int seleccion = jf.showSaveDialog(this);
         if (seleccion == JFileChooser.APPROVE_OPTION) {
-            imagenSeleccionada = jf.getSelectedFile();
-            jLabel1.setIcon(new ImageIcon(new ImageIcon(/*imagenSeleccionada.getPath()*/ new URL("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freejpg.com.ar%2Fimage-900%2F1d%2F1de8%2FF100007892-chispas.jpg&f=1&nofb=1")).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
+            try {
+                imagenSeleccionada = jf.getSelectedFile();
+                jLabel1.setIcon(new ImageIcon(new ImageIcon(/*imagenSeleccionada.getPath()*/ new URL("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freejpg.com.ar%2Fimage-900%2F1d%2F1de8%2FF100007892-chispas.jpg&f=1&nofb=1")).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
+            } catch (MalformedURLException ex) {
+                Logger.getLogger(DialogoImagen.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
