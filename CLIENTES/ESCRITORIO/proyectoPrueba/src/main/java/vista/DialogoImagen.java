@@ -15,7 +15,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  * @author jmcbg
  */
 public class DialogoImagen extends javax.swing.JDialog {
-    File imagenSeleccionada;
+    private File imagenSeleccionada;
     /**
      * Creates new form DialogoImagen
      */
