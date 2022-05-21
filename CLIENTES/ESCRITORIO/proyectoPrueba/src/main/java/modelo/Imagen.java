@@ -13,7 +13,24 @@ import java.io.File;
 public class Imagen {
    private int id;
    private File imagen;
-    
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public File getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(File imagen) {
+        this.imagen = imagen;
+    }
+   
+   
     
     
 }
