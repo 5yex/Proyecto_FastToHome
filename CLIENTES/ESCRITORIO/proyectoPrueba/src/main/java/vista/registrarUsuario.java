@@ -383,8 +383,8 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
     }//GEN-LAST:event_botonIntroducirDireccionActionPerformed
 
     private void registrarUsuario() {
-
-        int id_direccion = DireccionDao.nuevaDireccionDevuelveId(direccionUsuario);
+        
+        direccionUsuario.setId_direccion(DireccionDao.nuevaDireccionDevuelveId(direccionUsuario));
         if (id_direccion != -1) {
             newUsuario.setNombre(nombreField.getText());
             newUsuario.setApellidos(apellidosField.getText());
