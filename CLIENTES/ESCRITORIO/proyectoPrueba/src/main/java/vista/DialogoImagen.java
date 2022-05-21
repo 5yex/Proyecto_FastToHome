@@ -13,6 +13,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.UIManager;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import modelo.Imagen;
 
 /**
  *
@@ -111,6 +112,10 @@ public class DialogoImagen extends javax.swing.JDialog {
             imagenSeleccionada = jf.getSelectedFile();
             jLabel1.setIcon(new ImageIcon(new ImageIcon(imagenSeleccionada.getPath()).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
         }
+        Imagen img = new Imagen();
+        img.setImagen(imagenSeleccionada);
+        
+        System.out.println(img.getJSON());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
