@@ -52,7 +52,7 @@ public class DialogoImagen extends javax.swing.JDialog {
             }
         });
 
-        jLabel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Imagen Seleccionada"));
+        jLabel1.setBorder(new FlatButtonBorder());
 
         jButton2.setText("ACEPTAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
