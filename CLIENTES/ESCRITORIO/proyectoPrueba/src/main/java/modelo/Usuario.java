@@ -140,7 +140,7 @@ public class Usuario {
     }
 
     public Object[] getRow() {
-                return new Object[]{dni, email, nombre, tlf};
+                return new Object[]{id, dni, email, nombre, tlf};
 
     }
 
