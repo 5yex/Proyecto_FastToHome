@@ -76,6 +76,8 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
         titleText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleText.setText("REGISTRO DE USUARIO.");
 
+        infoNombre.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+
         nombreTXT.setText("Nombre:");
 
         nombreField.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -92,6 +94,8 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             }
         });
 
+        infoApellido.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+
         apellidosTXT.setText("Apellidos:");
 
         apellidosField.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -99,6 +103,8 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
                 apellidosFieldFocusLost(evt);
             }
         });
+
+        infoDNI.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
 
         dniTXT.setText("Dni:");
 
@@ -108,6 +114,8 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             }
         });
 
+        infoTelefono.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+
         tlfTXT.setText("Teléfono:");
 
         tlfField.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -115,6 +123,8 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
                 tlfFieldFocusLost(evt);
             }
         });
+
+        infoEmail.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
 
         emailTXT.setText("Correo electrónico:");
 
@@ -160,6 +170,10 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
                 botonIntroducirDireccionActionPerformed(evt);
             }
         });
+
+        infoPass.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+
+        infoConfirmPass.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

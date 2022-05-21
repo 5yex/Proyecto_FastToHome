@@ -166,6 +166,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="infoNombre">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="10" style="1"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="nombreTXT">
       <Properties>
@@ -180,6 +185,11 @@
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="infoApellido">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="10" style="1"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="apellidosTXT">
       <Properties>
@@ -192,6 +202,11 @@
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="infoDNI">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="10" style="1"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="dniTXT">
       <Properties>
@@ -204,6 +219,11 @@
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="infoTelefono">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="10" style="1"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="tlfTXT">
       <Properties>
@@ -216,6 +236,11 @@
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="infoEmail">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="10" style="1"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="emailTXT">
       <Properties>
@@ -271,8 +296,18 @@
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="infoPass">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="10" style="1"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="infoConfirmPass">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="10" style="1"/>
+        </Property>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
