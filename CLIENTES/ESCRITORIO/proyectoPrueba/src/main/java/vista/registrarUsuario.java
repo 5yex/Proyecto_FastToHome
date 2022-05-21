@@ -384,8 +384,8 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
 
     private void registrarUsuario() {
         
-        direccionUsuario.setId_direccion(DireccionDao.nuevaDireccionDevuelveId(direccionUsuario));
-        if (direccionUsuario.getId_direccion() != -1) {
+        int id_direccion = DireccionDao.nuevaDireccionDevuelveId(direccionUsuario);
+        if (id_direccion != -1) {
             newUsuario.setNombre(nombreField.getText());
             newUsuario.setApellidos(apellidosField.getText());
             newUsuario.setDni(dniField.getText());
