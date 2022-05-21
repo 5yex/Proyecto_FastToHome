@@ -9,6 +9,9 @@ import com.formdev.flatlaf.ui.FlatButtonBorder;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import javax.imageio.ImageIO;
+import javax.imageio.stream.FileImageInputStream;
+import javax.imageio.stream.FileImageOutputStream;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.UIManager;
@@ -113,8 +116,11 @@ public class DialogoImagen extends javax.swing.JDialog {
             jLabel1.setIcon(new ImageIcon(new ImageIcon(imagenSeleccionada.getPath()).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
         }
         Imagen img = new Imagen();
+        FileInputStream imageInFile = new FileInputStream(imagenSeleccionada);
+        byte imageData[] = new byte[(int) imagenSeleccionada.length()];
+        imageInFile.read(imageData);
         
-        img.setImagen(imagenSeleccionada.getPath().getBytes());
+        img.setImagen();
         
         System.out.println(img.getJSON());
     }//GEN-LAST:event_jButton1ActionPerformed
