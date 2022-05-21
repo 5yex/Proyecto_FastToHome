@@ -340,7 +340,20 @@ function actualizarUsuario($datos) {
 }
 
 function asignarRolMercader($datos){
-    
+    require_once '../modelo/usuario.php';
+    try {
+        $usuario = new usuario();
+        
+        $usuario->setId($datos->id);
+        
+        if ($usuario->asignarRolMerdader()) {
+            mandarRespuesta(false, 'Se ha asignado el rol de mercader a un cliente');
+        } else {
+            mandarRespuesta(true, 'Error al actualizar el usuario');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
 }
 
 function asignarRolAdministrador($datos){
