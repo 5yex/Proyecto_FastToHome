@@ -5,6 +5,7 @@
 package vista;
 
 import com.formdev.flatlaf.FlatLightLaf;
+import com.formdev.flatlaf.ui.FlatButtonBorder;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
