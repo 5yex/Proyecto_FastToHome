@@ -30,7 +30,7 @@ public interface Constantes {
     final public String ERROR_CALCULO_PRECIO = "No se ha podido calcular el dinero total ganado";
 
     //MENSAJES DE INFORMACIÓN
-    final public String MENSAJE_CLAVE_USUARIO = "Clave de usuario (Entre 4 y 20 caracteres ): ";
+    final public String MENSAJE_CLAVE_USUARIO = "Inváido de 4 a 20 caracteres: ";
     final public String MENSAJE_PASS_INFO = "Mas de 8 caracteres, 1 mayuscula, 1 minuscula, 1 numero.";
     final public String MENSAJE_ANIO_CAMPANIA = "\nDame el año de la campaña (Mayor o igual a 2020 y maximo " + ANIO_ACTUAL + "): ";
     final public String MENSAJE_PRECIO_KILO = "Precio de la aceituna por kilo (pj:0.58 o 0.3): ";
@@ -44,7 +44,7 @@ public interface Constantes {
     final public String MENSAJE_ID_RECOLECTOR = "Dame el id del recolector: ";
     final public String MENSAJE_COD_PESADA = "Dame el codigo de la pesada: ";
     final public String MENSAJE_COD_PRECIO = "Dame el codigo del precio: ";
-    final public String MENSAJE_EMAIL_INFO = "Formato inválido. Ejemplos:(user@email.es, user@gmail.com, etc)";
+    final public String MENSAJE_EMAIL_INFO = "Email inválido";
     final public String MENSAJE_TELEFONO_INFO = "Formato inválido: Empieza por 6, 7 o 9 y seguido de 8 números";
     final public String MENSAJE_ERROR_RELLENO_DATOS = "Se ha producido un error al rellenar los datos, siga las intrucciones";
     final public String MENSAJE_CONFIRMA_PASS = "El campo de contraseña y confirmar contraseña deben ser iguales";
