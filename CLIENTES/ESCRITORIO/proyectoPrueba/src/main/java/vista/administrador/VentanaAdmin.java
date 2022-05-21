@@ -188,7 +188,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         if(UsuarioDao.asignarRolMercader(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))){
             recargarTablaClientes(UsuarioDao.obtenerDatosClientes());
         }else{
-            JOptionPane.showMessageDialog(this, "", "Error al asignar mercader",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como mercader a este cliente", "Error",JOptionPane.ERROR_MESSAGE);
         }
         
     }//GEN-LAST:event_itemMercaderActionPerformed
