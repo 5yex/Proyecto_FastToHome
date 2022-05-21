@@ -108,7 +108,7 @@ public class DialogoImagen extends javax.swing.JDialog {
         int seleccion = jf.showSaveDialog(this);
         if (seleccion == JFileChooser.APPROVE_OPTION) {
             imagenSeleccionada = jf.getSelectedFile();
-            jLabel1.setIcon(new ImageIcon(imagenSeleccionada.getPath()));
+            jLabel1.setIcon(new ImageIcon(new ImageIcon(imagenSeleccionada.getPath()).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
