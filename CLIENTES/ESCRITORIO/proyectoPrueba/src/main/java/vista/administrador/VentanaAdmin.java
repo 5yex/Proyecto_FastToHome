@@ -53,7 +53,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         tablaClientes = new javax.swing.JTable();
 
-        itemMercader.setText("jMenuItem1");
+        itemMercader.setText("Hacer mercader a este usuario");
         itemMercader.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 itemMercaderActionPerformed(evt);
@@ -61,7 +61,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         });
         jPopupMenu1.add(itemMercader);
 
-        itemAdministrador.setText("jMenuItem2");
+        itemAdministrador.setText("Dar permisos de administración");
         itemAdministrador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 itemAdministradorActionPerformed(evt);
