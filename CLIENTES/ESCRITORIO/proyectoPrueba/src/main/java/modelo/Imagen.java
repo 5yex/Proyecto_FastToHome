@@ -4,6 +4,7 @@
  */
 package modelo;
 
+import com.google.gson.Gson;
 import java.io.File;
 
 /**
@@ -30,7 +31,9 @@ public class Imagen {
         this.imagen = imagen;
     }
    
-   
+    public String getJSON(){
+       return new Gson().toJson(this);
+    }
     
     
 }
