@@ -21,7 +21,7 @@ import org.apache.commons.codec.binary.Base64;
 public class Imagen {
 
     private int id;
-    private Image imagen;
+    private byte[] imagen;
 
     public int getId() {
         return id;
@@ -31,14 +31,15 @@ public class Imagen {
         this.id = id;
     }
 
-    public Image getImagen() {
+    public byte[] getImagen() {
         return imagen;
     }
 
-    public void setImagen(Image imagen) {
+    public void setImagen(byte[] imagen) {
         this.imagen = imagen;
     }
 
+   
     
 
     public String getJSON() {
