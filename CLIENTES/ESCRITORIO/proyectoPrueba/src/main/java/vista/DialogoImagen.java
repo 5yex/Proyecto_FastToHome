@@ -104,7 +104,7 @@ public class DialogoImagen extends javax.swing.JDialog {
         jf.setFileFilter(new FileNameExtensionFilter("Imagenes JPG", "jpg"));
         int seleccion = jf.showSaveDialog(this);
         if (seleccion == JFileChooser.APPROVE_OPTION) {
-            
+            imagenSeleccionada = jf.getSelectedFile();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
