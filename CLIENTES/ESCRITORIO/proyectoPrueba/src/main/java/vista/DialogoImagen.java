@@ -114,7 +114,7 @@ public class DialogoImagen extends javax.swing.JDialog {
         if (seleccion == JFileChooser.APPROVE_OPTION) {
             try {
                 imagenSeleccionada = jf.getSelectedFile();
-                jLabel1.setIcon(new ImageIcon(new ImageIcon(/*imagenSeleccionada.getPath()*/ new URL("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freejpg.com.ar%2Fimage-900%2F1d%2F1de8%2FF100007892-chispas.jpg&f=1&nofb=1")).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
+                jLabel1.setIcon(new ImageIcon(new ImageIcon(imagenSeleccionada.getPath)).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
             } catch (MalformedURLException ex) {
                 Logger.getLogger(DialogoImagen.class.getName()).log(Level.SEVERE, null, ex);
             }
