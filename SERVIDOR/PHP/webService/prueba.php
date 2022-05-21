@@ -26,3 +26,6 @@ function saveBase64ImagePng($base64Image, $imageDir)
 
 
 }
+
+
+saveBase64ImagePng($imgData, "/imagenes");
