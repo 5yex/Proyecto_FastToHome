@@ -181,6 +181,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
     private void itemMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMercaderActionPerformed
         //hacerMecader
+        UsuarioDao.asignarRolMercader()
     }//GEN-LAST:event_itemMercaderActionPerformed
 
     private void itemAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAdministradorActionPerformed
