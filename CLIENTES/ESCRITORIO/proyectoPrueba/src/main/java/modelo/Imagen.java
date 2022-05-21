@@ -6,6 +6,10 @@ package modelo;
 
 import com.google.gson.Gson;
 import java.io.File;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.apache.commons.codec.EncoderException;
+import org.apache.commons.codec.binary.Base64;
 
 /**
  *
@@ -14,7 +18,7 @@ import java.io.File;
 public class Imagen {
 
     private int id;
-    private File imagen;
+    private String imagenB64;
 
     public int getId() {
         return id;
@@ -33,8 +37,13 @@ public class Imagen {
     }
 
     public String getJSON() {
-        
-        return new Gson().toJson(this);
+        try {
+            new Base64().encode(imagen);
+        } catch (EncoderException ex) {
+            Logger.getLogger(Imagen.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                    return new Gson().toJson(this);
+
     }
 
 }
