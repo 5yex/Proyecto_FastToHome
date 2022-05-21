@@ -4,14 +4,17 @@
  */
 package vista.administrador;
 
+import com.formdev.flatlaf.FlatLightLaf;
 import controlador.NegocioDao;
 import controlador.UsuarioDao;
 import java.awt.FlowLayout;
 import java.util.ArrayList;
 import javax.swing.JMenu;
+import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 import modelo.Negocio;
 import modelo.Usuario;
+import vista.DialogoImagen;
 
 /**
  *
@@ -39,6 +42,8 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPopupMenu1 = new javax.swing.JPopupMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         panelTableado = new javax.swing.JTabbedPane();
         panelInicioAdmin = new javax.swing.JPanel();
         labelBienvenido = new javax.swing.JLabel();
@@ -47,6 +52,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
         panelTablaClientes = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tablaClientes = new javax.swing.JTable();
+
+        jMenuItem1.setText("jMenuItem1");
+        jPopupMenu1.add(jMenuItem1);
+
+        jMenuItem2.setText("jMenuItem2");
+        jPopupMenu1.add(jMenuItem2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
@@ -183,8 +194,33 @@ public class VentanaAdmin extends javax.swing.JFrame {
         }
     }
     
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    UIManager.setLookAndFeel(new FlatLightLaf());
+
+                    break;
+                }
+            }
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(DialogoImagen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the dialog */
+        new VentanaAdmin(null).setVisible(true);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonModificarDatosAdmin;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel labelBienvenido;
