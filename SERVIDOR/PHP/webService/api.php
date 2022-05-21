@@ -363,7 +363,7 @@ function asignarRolAdministrador($datos){
         
         $usuario->setId($datos->id);
         
-        if ($usuario->asignarRolMerdader()) {
+        if ($usuario->asignarRolAdministrador()) {
             mandarRespuesta(false, 'Se ha asignado el rol de administrador a un cliente');
         } else {
             mandarRespuesta(true, 'Error al asignar el rol de administrador');
