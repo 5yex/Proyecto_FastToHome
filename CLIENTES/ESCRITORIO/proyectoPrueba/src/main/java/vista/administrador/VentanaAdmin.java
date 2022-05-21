@@ -10,6 +10,7 @@ import controlador.UsuarioDao;
 import java.awt.FlowLayout;
 import java.util.ArrayList;
 import javax.swing.JMenu;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 import modelo.Negocio;
@@ -184,8 +185,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void itemMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMercaderActionPerformed
         //hacerMecader
         int filaSeleccionada = tablaClientes.getSelectedRow();
-        UsuarioDao.asignarRolMercader(new Usuario(arrayListClientes.get(filaSeleccionada).getId()));
-        recargarTablaClientes(UsuarioDao.obtenerDatosClientes());
+        if(UsuarioDao.asignarRolMercader(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))){
+            recargarTablaClientes(UsuarioDao.obtenerDatosClientes());
+        }else{
+            JOptionPane.showMessageDialog(this, "", "Error al asignar mercader",JOptionPane.ERROR_MESSAGE);
+        }
+        
     }//GEN-LAST:event_itemMercaderActionPerformed
 
     private void itemAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAdministradorActionPerformed
