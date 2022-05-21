@@ -9,10 +9,6 @@ import com.formdev.flatlaf.ui.FlatButtonBorder;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.UIManager;
@@ -112,12 +108,8 @@ public class DialogoImagen extends javax.swing.JDialog {
         jf.setFileFilter(new FileNameExtensionFilter("Imagenes PNG", "png"));
         int seleccion = jf.showSaveDialog(this);
         if (seleccion == JFileChooser.APPROVE_OPTION) {
-            try {
-                imagenSeleccionada = jf.getSelectedFile();
-                jLabel1.setIcon(new ImageIcon(new ImageIcon(imagenSeleccionada.getPath)).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
-            } catch (MalformedURLException ex) {
-                Logger.getLogger(DialogoImagen.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            imagenSeleccionada = jf.getSelectedFile();
+            jLabel1.setIcon(new ImageIcon(new ImageIcon(imagenSeleccionada.getPath()).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
