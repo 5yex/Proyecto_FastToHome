@@ -70,6 +70,9 @@ if (empty($_POST["DATA"])) {
         case 'obtener_pedidos_en_preparacion';
             obtenerPedidosNegocioEnPreparacion(json_decode($peticion->datos));
             break;
+        case 'obtener_todos_pedidos';
+            obtenerTodosPedidosNegocios(json_decode($peticion->datos));
+            break;
         //Casos de Categoria
         case 'nueva_categoria';
             nuevaCategoria(json_decode($peticion->datos));
@@ -452,6 +455,23 @@ function obtenerPedidosNegocioEnPreparacion($datos){
         $pedido = new Pedido();
         $pedido->setId_negocio($datos->id_negocio);
         $respuesta = $pedido->obtenerPedidosNegocioEnPreparacion();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
+        }        
+    }catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
+function obtenerTodosPedidosNegocios($datos){
+    require_once '../modelo/Pedido.php';
+    
+    try{
+        $pedido = new Pedido();
+        $pedido->setId_negocio($datos->id_negocio);
+        $respuesta = $pedido->obtenerTodosPedidosNegocio();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
