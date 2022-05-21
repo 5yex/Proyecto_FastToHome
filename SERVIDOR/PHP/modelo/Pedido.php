@@ -163,4 +163,16 @@ class Pedido extends Conexion{
         $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
+    
+    public function obtenerTodosPedidosNegocio(){
+        $sql = "SELECT * FROM pedidos WHERE id_negocio = :id_neg AND DATE(fecha_hora) = CURDATE()";
+        
+        $sentencia = $this->dblink->prepare($sql);
+
+        $id_negocio = $this->getId_negocio();
+        $sentencia->bindParam(":id_neg", $id_negocio);
+
+        $sentencia->execute();
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }
 }
