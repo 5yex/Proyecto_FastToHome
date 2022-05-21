@@ -180,11 +180,11 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_botonModificarDatosAdminActionPerformed
 
     private void itemMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMercaderActionPerformed
-        // TODO add your handling code here:
+        //hacerMecader
     }//GEN-LAST:event_itemMercaderActionPerformed
 
     private void itemAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAdministradorActionPerformed
-        // TODO add your handling code here:
+        //hacerAdmin
     }//GEN-LAST:event_itemAdministradorActionPerformed
 
     private void actualizarVentana() {
