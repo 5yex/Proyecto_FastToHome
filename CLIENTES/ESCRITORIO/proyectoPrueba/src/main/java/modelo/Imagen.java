@@ -12,8 +12,9 @@ import java.io.File;
  * @author jmcbg
  */
 public class Imagen {
-   private int id;
-   private File imagen;
+
+    private int id;
+    private File imagen;
 
     public int getId() {
         return id;
@@ -30,10 +31,9 @@ public class Imagen {
     public void setImagen(File imagen) {
         this.imagen = imagen;
     }
-   
-    public String getJSON(){
-       return new Gson().toJson(this);
+
+    public String getJSON() {
+        return new Gson().toJson(this);
     }
-    
-    
+
 }
