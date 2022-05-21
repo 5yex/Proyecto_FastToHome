@@ -12,6 +12,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URL;
+import java.util.Base64;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
@@ -22,6 +24,7 @@ import javax.swing.JFileChooser;
 import javax.swing.UIManager;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import modelo.Imagen;
+import org.apache.commons.io.IOUtils;
 
 /**
  *
@@ -128,7 +131,8 @@ public class DialogoImagen extends javax.swing.JDialog {
             imageInFile.read(imageData);
             img.setImagen(imageData);
             System.out.println(img.getJSON());
-            
+            byte[] imageBytes = IOUtils.toByteArray(new FileInputStream(imagenSeleccionada));
+            String base64 = Base64.getEncoder().encodeToString(imageBytes);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(DialogoImagen.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
