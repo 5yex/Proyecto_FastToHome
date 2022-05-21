@@ -12,7 +12,7 @@ import java.io.File;
  */
 public class Imagen {
    private int id;
-    File imagen;
+   private File imagen;
     
     
     
