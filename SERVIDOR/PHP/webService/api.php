@@ -339,6 +339,14 @@ function actualizarUsuario($datos) {
     }
 }
 
+function asignarRolMercader($datos){
+    
+}
+
+function asignarRolAdministrador($datos){
+    
+}
+
 function getUsuario($datos) {
     require_once '../modelo/usuario.php';
     try {
