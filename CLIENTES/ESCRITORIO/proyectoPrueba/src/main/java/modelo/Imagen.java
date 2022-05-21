@@ -38,10 +38,8 @@ public class Imagen {
     public void setImagen(byte[] imagen) {
         this.imagen = imagen;
     }
-
-   
+ 
     
-
     public String getJSON() {
         return new Gson().toJson(this);
     }
