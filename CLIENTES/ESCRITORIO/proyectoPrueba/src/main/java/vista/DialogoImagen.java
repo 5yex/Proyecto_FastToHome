@@ -114,7 +114,7 @@ public class DialogoImagen extends javax.swing.JDialog {
         }
         Imagen img = new Imagen();
         
-        img.setImagen(new ImageIcon(imagenSeleccionada.getPath().getBytes()));
+        img.setImagen(imagenSeleccionada.getPath().getBytes());
         
         System.out.println(img.getJSON());
     }//GEN-LAST:event_jButton1ActionPerformed
