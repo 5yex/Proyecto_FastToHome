@@ -74,6 +74,14 @@ public class UsuarioDao {
     public static boolean actualizarUsuario(Usuario user) {
         return gestion.hacerConsulta(new Peticion("actualizar_usuario", user.getJSON()));
     }
+    
+    public static boolean asignarRolMercader(Usuario user) {
+        return gestion.hacerConsulta(new Peticion("actualizar_usuario", user.getJSON()));
+    }
+    
+    public static boolean asignarRolAdministrador(Usuario user) {
+        return gestion.hacerConsulta(new Peticion("actualizar_usuario", user.getJSON()));
+    }
 
     public static ArrayList<Usuario> seleccionUsuarios() {
         
