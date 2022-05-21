@@ -19,17 +19,14 @@ import modelo.Usuario;
  */
 public class VentanaAdmin extends javax.swing.JFrame {
 
-    private Usuario usuario;
-
-   
+    private Usuario administrador;
 
     /**
      * Creates new form VentanaPrincipal
      */
     public VentanaAdmin(Usuario user) {
-        usuario = user;
+        administrador = user;
         initComponents();
-        cargarDatos();
     }
 
     /**
@@ -43,22 +40,68 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
         botonesMenu = new javax.swing.ButtonGroup();
         filtros = new javax.swing.ButtonGroup();
-        contenido = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tabla = new javax.swing.JTable();
-        radioTodos = new javax.swing.JRadioButton();
-        radioClientes = new javax.swing.JRadioButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        botonInfo = new javax.swing.JMenu();
-        botonProductos = new javax.swing.JMenu();
-        botonOpciones = new javax.swing.JMenu();
+        panelTableado = new javax.swing.JTabbedPane();
+        panelInicioAdmin = new javax.swing.JPanel();
+        labelBienvenido = new javax.swing.JLabel();
+        labelNombreAdmin = new javax.swing.JLabel();
+        botonModificarDatosAdmin = new javax.swing.JButton();
+        panelTablaClientes = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tablaClientes = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
         setResizable(false);
 
-        tabla.setAutoCreateRowSorter(true);
-        tabla.setModel(new javax.swing.table.DefaultTableModel(
+        panelTableado.setBackground(new java.awt.Color(255, 102, 0));
+        panelTableado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+
+        labelBienvenido.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        labelBienvenido.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        labelBienvenido.setText("Bienvenido administrador:");
+        labelBienvenido.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+
+        labelNombreAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        labelNombreAdmin.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+
+        botonModificarDatosAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botonModificarDatosAdmin.setText("MODIFICAR DATOS CUENTA");
+        botonModificarDatosAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonModificarDatosAdminActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelInicioAdminLayout = new javax.swing.GroupLayout(panelInicioAdmin);
+        panelInicioAdmin.setLayout(panelInicioAdminLayout);
+        panelInicioAdminLayout.setHorizontalGroup(
+            panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelInicioAdminLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(labelBienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labelNombreAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(36, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioAdminLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonModificarDatosAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
+        );
+        panelInicioAdminLayout.setVerticalGroup(
+            panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelInicioAdminLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelBienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelNombreAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 213, Short.MAX_VALUE)
+                .addComponent(botonModificarDatosAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
+        );
+
+        panelTableado.addTab("INICIO", panelInicioAdmin);
+
+        tablaClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -69,158 +112,89 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tabla.setShowGrid(false);
-        jScrollPane1.setViewportView(tabla);
+        jScrollPane2.setViewportView(tablaClientes);
 
-        filtros.add(radioTodos);
-        radioTodos.setSelected(true);
-        radioTodos.setText("Todos");
-        radioTodos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radioTodosActionPerformed(evt);
-            }
-        });
-
-        filtros.add(radioClientes);
-        radioClientes.setText("Clientes");
-        radioClientes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radioClientesActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout contenidoLayout = new javax.swing.GroupLayout(contenido);
-        contenido.setLayout(contenidoLayout);
-        contenidoLayout.setHorizontalGroup(
-            contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
-            .addGroup(contenidoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(radioTodos, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(radioClientes, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
-                .addGap(524, 524, 524))
+        javax.swing.GroupLayout panelTablaClientesLayout = new javax.swing.GroupLayout(panelTablaClientes);
+        panelTablaClientes.setLayout(panelTablaClientesLayout);
+        panelTablaClientesLayout.setHorizontalGroup(
+            panelTablaClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTablaClientesLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 608, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
-        contenidoLayout.setVerticalGroup(
-            contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contenidoLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(radioTodos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(radioClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(8, 8, 8))
+        panelTablaClientesLayout.setVerticalGroup(
+            panelTablaClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTablaClientesLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
-        jMenuBar1.setBackground(new java.awt.Color(255, 102, 0));
-
-        botonInfo.setBackground(new java.awt.Color(255, 102, 0));
-        botonInfo.setForeground(new java.awt.Color(255, 255, 255));
-        botonInfo.setText("INICIO");
-        botonesMenu.add(botonInfo);
-        botonInfo.setDoubleBuffered(true);
-        botonInfo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        botonInfo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                deselección(evt);
-            }
-        });
-        jMenuBar1.add(botonInfo);
-
-        botonProductos.setBackground(new java.awt.Color(255, 102, 0));
-        botonProductos.setForeground(new java.awt.Color(255, 255, 255));
-        botonProductos.setText("USUARIOS");
-        botonesMenu.add(botonProductos);
-        botonProductos.setDoubleBuffered(true);
-        botonProductos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        botonProductos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                deselección(evt);
-            }
-        });
-        jMenuBar1.add(botonProductos);
-
-        botonOpciones.setText("NEGOCIOS");
-        botonesMenu.add(botonOpciones);
-        botonOpciones.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        botonOpciones.setDoubleBuffered(true);
-        botonOpciones.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        botonOpciones.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                deselección(evt);
-            }
-        });
-        jMenuBar1.add(botonOpciones);
-
-        setJMenuBar(jMenuBar1);
+        panelTableado.addTab("CLIENTES", panelTablaClientes);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelTableado)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelTableado)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void deselección(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deselección
-       JMenu jm = (JMenu) evt.getComponent();
-       jm.setSelected(false);
-    }//GEN-LAST:event_deselección
+    private void botonModificarDatosAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDatosAdminActionPerformed
+        DialogoModificarDatosAdmin dmod = new DialogoModificarDatosAdmin(this, true, administrador);
+        dmod.setVisible(true);
 
-    private void radioTodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioTodosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_radioTodosActionPerformed
+        if (!dmod.isVisible()) {
+            administrador = dmod.getAdmin();
+            actualizarVentana();
+        }
+    }//GEN-LAST:event_botonModificarDatosAdminActionPerformed
 
-    private void radioClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioClientesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_radioClientesActionPerformed
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu botonInfo;
-    private javax.swing.JMenu botonOpciones;
-    private javax.swing.JMenu botonProductos;
-    private javax.swing.ButtonGroup botonesMenu;
-    private javax.swing.JPanel contenido;
-    private javax.swing.ButtonGroup filtros;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JRadioButton radioClientes;
-    private javax.swing.JRadioButton radioTodos;
-    private javax.swing.JTable tabla;
-    // End of variables declaration//GEN-END:variables
-
-    private void cargarDatos() {
-      ArrayList<Usuario>  users =  UsuarioDao.seleccionUsuarios();
-      recargarTablaUsuarios(users);  
+    private void actualizarVentana() {
+        administrador = UsuarioDao.obtenerDatosUsuario(administrador);
+        labelNombreAdmin.setText(administrador.getNombre());
     }
     
-    
-    public void recargarTablaUsuarios(ArrayList<Usuario> listaUsuarios) {
-        tabla.setModel(new javax.swing.table.DefaultTableModel(
+    public void recargarTablaClientes(ArrayList<Usuario> listaClientes) {
+        tablaClientes.setModel(new javax.swing.table.DefaultTableModel(
                 null,
                 new String[]{
-                    "Número", "Apellido", "Departamento", "Director", "Fecha Alta", "Oficio", "Salario", "Comision"
+                    "DNI", "EMAIL", "NOMBRE", "TELÉFONO"
                 }
         ) {
-            @Override
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return false;
             }
         });
-        //tabla.getColumnModel().getColumn(0).setMaxWidth(60);
-       // tabla.getColumnModel().getColumn(2).setMinWidth(100);
-        tabla.setAutoCreateRowSorter(true);
-        for (Usuario user : listaUsuarios) {
-            DefaultTableModel model = (DefaultTableModel) tabla.getModel();
-            model.addRow(user.getRow());
+        tablaClientes.getColumnModel().getColumn(0).setMaxWidth(60);
+        tablaClientes.getColumnModel().getColumn(2).setMinWidth(100);
+        tablaClientes.setAutoCreateRowSorter(true);
+        for (Usuario cliente : listaClientes) {
+            DefaultTableModel model = (DefaultTableModel) tablaClientes.getModel();
+            model.addRow(cliente.getRow());
         }
     }
+    
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonModificarDatosAdmin;
+    private javax.swing.ButtonGroup botonesMenu;
+    private javax.swing.ButtonGroup filtros;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel labelBienvenido;
+    private javax.swing.JLabel labelNombreAdmin;
+    private javax.swing.JPanel panelInicioAdmin;
+    private javax.swing.JPanel panelTablaClientes;
+    private javax.swing.JTabbedPane panelTableado;
+    private javax.swing.JTable tablaClientes;
+    // End of variables declaration//GEN-END:variables
     
     
 }

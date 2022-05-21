@@ -45,10 +45,11 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         menuCuenta = new javax.swing.JMenu();
         modificarMenuItem = new javax.swing.JMenuItem();
         menuOperaciones = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        opcionNuevoMercader = new javax.swing.JMenuItem();
+        opcionNuevoAdministrador = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Ventana Administrador");
         setResizable(false);
         setSize(new java.awt.Dimension(451, 192));
 
@@ -113,11 +114,21 @@ public class VentanaAdministrador extends javax.swing.JFrame {
         menuOperaciones.setText("OPERACIONES");
         menuOperaciones.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        jMenuItem2.setText("Nuevo Mercader");
-        menuOperaciones.add(jMenuItem2);
+        opcionNuevoMercader.setText("Nuevo Mercader");
+        opcionNuevoMercader.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opcionNuevoMercaderActionPerformed(evt);
+            }
+        });
+        menuOperaciones.add(opcionNuevoMercader);
 
-        jMenuItem3.setText("Nuevo Administrador");
-        menuOperaciones.add(jMenuItem3);
+        opcionNuevoAdministrador.setText("Nuevo Administrador");
+        opcionNuevoAdministrador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opcionNuevoAdministradorActionPerformed(evt);
+            }
+        });
+        menuOperaciones.add(opcionNuevoAdministrador);
 
         barraSuperior.add(menuOperaciones);
 
@@ -150,6 +161,14 @@ public class VentanaAdministrador extends javax.swing.JFrame {
 
     }//GEN-LAST:event_modificarMenuItemActionPerformed
 
+    private void opcionNuevoMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcionNuevoMercaderActionPerformed
+
+    }//GEN-LAST:event_opcionNuevoMercaderActionPerformed
+
+    private void opcionNuevoAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcionNuevoAdministradorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_opcionNuevoAdministradorActionPerformed
+
     private void actualizarVentana() {
         administrador = UsuarioDao.obtenerDatosUsuario(administrador);
         labelNombreAdmin.setText(administrador.getNombre());
@@ -160,14 +179,14 @@ public class VentanaAdministrador extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar barraSuperior;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JLabel labelBienvenido;
     private javax.swing.JLabel labelInfo;
     private javax.swing.JLabel labelNombreAdmin;
     private javax.swing.JMenu menuCuenta;
     private javax.swing.JMenu menuOperaciones;
     private javax.swing.JMenuItem modificarMenuItem;
+    private javax.swing.JMenuItem opcionNuevoAdministrador;
+    private javax.swing.JMenuItem opcionNuevoMercader;
     private javax.swing.JPanel panelAdministrador;
     // End of variables declaration//GEN-END:variables
 }
