@@ -30,6 +30,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     public VentanaAdmin(Usuario user) {
         administrador = user;
         initComponents();
+        recargarTablaClientes(UsuarioDao.obtenerDatosClientes());
     }
 
     /**
