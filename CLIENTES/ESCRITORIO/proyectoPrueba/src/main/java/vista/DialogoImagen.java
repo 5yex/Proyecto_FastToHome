@@ -78,7 +78,7 @@ public class DialogoImagen extends javax.swing.JDialog {
      
             JFileChooser jf = new JFileChooser();
             jf.setDialogTitle("Seleccionar Imagen");
-            jf.setFileFilter(new FileNameExtensionFilter("Imagenes", "jpg", ""));
+            jf.setFileFilter(new FileNameExtensionFilter("Imagenes", "jpg"));
        
     }//GEN-LAST:event_jButton1ActionPerformed
 
