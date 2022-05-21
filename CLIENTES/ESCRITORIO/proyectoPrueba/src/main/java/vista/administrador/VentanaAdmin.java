@@ -196,7 +196,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         tablaClientes.setModel(new javax.swing.table.DefaultTableModel(
                 null,
                 new String[]{
-                    "DNI", "EMAIL", "NOMBRE", "TELÉFONO"
+                    "ID", "DNI", "EMAIL", "NOMBRE", "TELÉFONO"
                 }
         ) {
             public boolean isCellEditable(int rowIndex, int columnIndex) {
