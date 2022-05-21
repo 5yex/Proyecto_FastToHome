@@ -33,6 +33,7 @@ public class Imagen {
     }
 
     public String getJSON() {
+        
         return new Gson().toJson(this);
     }
 
