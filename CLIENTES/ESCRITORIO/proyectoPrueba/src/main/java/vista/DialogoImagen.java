@@ -5,7 +5,10 @@
 package vista;
 
 import com.formdev.flatlaf.FlatLightLaf;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.UIManager;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -105,6 +108,7 @@ public class DialogoImagen extends javax.swing.JDialog {
         int seleccion = jf.showSaveDialog(this);
         if (seleccion == JFileChooser.APPROVE_OPTION) {
             imagenSeleccionada = jf.getSelectedFile();
+            jLabel1.setIcon(new ImageIcon(imagenSeleccionada.getPath()));
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
