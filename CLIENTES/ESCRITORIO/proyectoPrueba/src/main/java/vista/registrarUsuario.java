@@ -390,9 +390,11 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             newUsuario.setEmail(emailField.getText());
             newUsuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
             newUsuario.setRol("cliente");
+            newUsuario.setId_direccion(id_direccion);
             System.out.println(newUsuario.getJSON());
 
             if (UsuarioDao.nuevoUsuario(newUsuario)) {
+                
                 this.dispose();
             } else {
                 JOptionPane.showMessageDialog(this, "No se pudo registrar el usuario con esos datos", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
