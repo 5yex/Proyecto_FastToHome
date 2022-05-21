@@ -190,6 +190,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
     private void itemAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAdministradorActionPerformed
         //hacerAdmin
+        int filaSeleccionada = tablaClientes.getSelectedRow();
+        UsuarioDao.asignarRolAdministrador(new Usuario(arrayListClientes.get(filaSeleccionada).getId()));
+        recargarTablaClientes(UsuarioDao.obtenerDatosClientes());
     }//GEN-LAST:event_itemAdministradorActionPerformed
 
     private void actualizarVentana() {
