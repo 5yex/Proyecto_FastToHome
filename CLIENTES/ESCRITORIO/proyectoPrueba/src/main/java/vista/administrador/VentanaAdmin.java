@@ -23,6 +23,7 @@ import vista.DialogoImagen;
 public class VentanaAdmin extends javax.swing.JFrame {
 
     private Usuario administrador;
+    private ArrayList<Usuario> arrayListClientes;
 
     /**
      * Creates new form VentanaPrincipal
@@ -182,6 +183,8 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
     private void itemMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMercaderActionPerformed
         //hacerMecader
+        int filaSeleccionada = tablaClientes.getSelectedRow();
+        UsuarioDao.actualizarUsuario(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))
     }//GEN-LAST:event_itemMercaderActionPerformed
 
     private void itemAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAdministradorActionPerformed
@@ -194,6 +197,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
     
     public void recargarTablaClientes(ArrayList<Usuario> listaClientes) {
+        arrayListClientes = listaClientes;
         tablaClientes.setModel(new javax.swing.table.DefaultTableModel(
                 null,
                 new String[]{
