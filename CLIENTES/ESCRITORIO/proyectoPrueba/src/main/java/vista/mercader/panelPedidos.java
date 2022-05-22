@@ -22,6 +22,51 @@ public class panelPedidos extends javax.swing.JPanel {
     }
     
     public void recargarTablas(ArrayList<Pedido> listaPedidos){
+        
+        tablaPagados.setModel(new javax.swing.table.DefaultTableModel(
+                null,
+                new String[]{
+                    "ID", "DNI", "EMAIL", "NOMBRE", "TELÉFONO"
+                }
+        ) {
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return false;
+            }
+        });
+        
+        tablaEnPreparacion.setModel(new javax.swing.table.DefaultTableModel(
+                null,
+                new String[]{
+                    "ID", "DNI", "EMAIL", "NOMBRE", "TELÉFONO"
+                }
+        ) {
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return false;
+            }
+        });
+        
+        tablaEnviados.setModel(new javax.swing.table.DefaultTableModel(
+                null,
+                new String[]{
+                    "ID", "DNI", "EMAIL", "NOMBRE", "TELÉFONO"
+                }
+        ) {
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return false;
+            }
+        });
+        
+        tablaRecibidos.setModel(new javax.swing.table.DefaultTableModel(
+                null,
+                new String[]{
+                    "ID", "DNI", "EMAIL", "NOMBRE", "TELÉFONO"
+                }
+        ) {
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return false;
+            }
+        });
+        
         for (Pedido pedido: listaPedidos){
             DefaultTableModel model;
             switch (pedido.getEstado()) {
