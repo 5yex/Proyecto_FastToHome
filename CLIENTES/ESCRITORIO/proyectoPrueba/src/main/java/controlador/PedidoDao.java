@@ -6,6 +6,7 @@ package controlador;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import modelo.Pedido;
 import modelo.Peticion;
@@ -15,6 +16,8 @@ import modelo.Peticion;
  * @author Jesus
  */
 public class PedidoDao{
+    
+    SimpleDateFormat dateParser = new SimpleDateFormat("MM/dd/yy HH:mm:ss");
     
     public static ArrayList<Pedido> seleccionPedidosPagados() {
         
@@ -79,7 +82,7 @@ public class PedidoDao{
             
             pedido.setId_pedido(pedidoJson.get("id").getAsInt());
             pedido.setId_usuario(pedidoJson.get("id_usuario").getAsInt());
-            //pedido.setFecha_hora(pedidoJson.get("fecha_hora").getAsString());
+            pedido.setFecha_hora(pedidoJson.get("fecha_hora").getAsString());
             pedido.setEstado(pedidoJson.get("estado").getAsString());
             pedido.setTotal(pedidoJson.get("total").getAsDouble());
             pedido.setTransporte(pedidoJson.get("transporte").getAsString());
