@@ -25,7 +25,7 @@ public class panelPedidos extends javax.swing.JPanel {
     
     public panelPedidos(Negocio negocio){
         initComponents();
-        recargarTablas(PedidoDao.seleccionTdoosPedidos());
+        recargarTablas(PedidoDao.seleccionTodosPedidos());
     }
     
     public void recargarTablas(ArrayList<Pedido> listaPedidos){

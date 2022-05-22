@@ -66,7 +66,7 @@ public class PedidoDao{
         return listaPedidosEnPreparacion;
     }
     
-    public static ArrayList<Pedido> seleccionTdoosPedidos() {
+    public static ArrayList<Pedido> seleccionTodosPedidos() {
         
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_todos_pedidos", null));
 
