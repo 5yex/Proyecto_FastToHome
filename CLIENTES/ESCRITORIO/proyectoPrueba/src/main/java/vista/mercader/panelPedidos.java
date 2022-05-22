@@ -4,6 +4,9 @@
  */
 package vista.mercader;
 
+import java.util.ArrayList;
+import modelo.Pedido;
+
 /**
  *
  * @author Jesus
@@ -15,6 +18,27 @@ public class panelPedidos extends javax.swing.JPanel {
      */
     public panelPedidos() {
         initComponents();
+    }
+    
+    public void recargarTablas(ArrayList<Pedido> listaPedidos){
+        for (Pedido pedido: listaPedidos){
+            switch (pedido.getEstado()) {
+                case 'pagado':
+                    
+                    break;
+                case 'en_preparacion':
+                    
+                    break;
+                case 'enviado':
+                    
+                    break;
+                case 'recibido':
+                    
+                    break;
+                default:
+                    throw new AssertionError();
+            }
+        }
     }
 
     /**
