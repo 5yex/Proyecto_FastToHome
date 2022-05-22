@@ -6,8 +6,11 @@ package controlador;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import modelo.Pedido;
 import modelo.Peticion;
 
@@ -16,8 +19,6 @@ import modelo.Peticion;
  * @author Jesus
  */
 public class PedidoDao{
-    
-    SimpleDateFormat dateParser = new SimpleDateFormat("MM/dd/yy HH:mm:ss");
     
     public static ArrayList<Pedido> seleccionPedidosPagados() {
         
@@ -45,6 +46,7 @@ public class PedidoDao{
     }
     
     public static ArrayList<Pedido> seleccionPedidosEnPreparacion() {
+        SimpleDateFormat dateParser = new SimpleDateFormat("MM/dd/yy HH:mm:ss");
         
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_pedidos_en_preparacion", null));
 
@@ -82,7 +84,12 @@ public class PedidoDao{
             
             pedido.setId_pedido(pedidoJson.get("id").getAsInt());
             pedido.setId_usuario(pedidoJson.get("id_usuario").getAsInt());
-            pedido.setFecha_hora(pedidoJson.get("fecha_hora").getAsString());
+            String fechaActual = pedidoJson.get("fecha_hora").getAsString();
+            try {
+                pedido.setFecha_hora(dateParser.parse(fechaActual));
+            } catch (ParseException ex) {
+                Logger.getLogger(PedidoDao.class.getName()).log(Level.SEVERE, null, ex);
+            }
             pedido.setEstado(pedidoJson.get("estado").getAsString());
             pedido.setTotal(pedidoJson.get("total").getAsDouble());
             pedido.setTransporte(pedidoJson.get("transporte").getAsString());
