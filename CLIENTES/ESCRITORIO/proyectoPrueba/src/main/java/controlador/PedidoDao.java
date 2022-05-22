@@ -65,4 +65,29 @@ public class PedidoDao{
         }
         return listaPedidosEnPreparacion;
     }
+    
+    public static ArrayList<Pedido> seleccionTdoosPedidos() {
+        
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_todos_pedidos", null));
+
+        ArrayList<Pedido> listaPedidosEnPreparacion = new ArrayList<Pedido>();
+
+        for (int i = 0; i < jsonArray.size(); i++) {
+            Pedido pedido = new Pedido();
+            
+            JsonObject pedidoJson = jsonArray.get(i).getAsJsonObject();
+            
+            pedido.setId_pedido(pedidoJson.get("id").getAsInt());
+            pedido.setId_usuario(pedidoJson.get("id_usuario").getAsInt());
+            //pedido.setFecha_hora(pedidoJson.get("fecha_hora").getAsString());
+            pedido.setEstado(pedidoJson.get("estado").getAsString());
+            pedido.setTotal(pedidoJson.get("total").getAsDouble());
+            pedido.setTransporte(pedidoJson.get("transporte").getAsString());
+            
+            
+            listaPedidosEnPreparacion.add(pedido);
+
+        }
+        return listaPedidosEnPreparacion;
+    }
 }
