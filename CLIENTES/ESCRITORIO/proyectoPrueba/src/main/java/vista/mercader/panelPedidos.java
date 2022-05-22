@@ -36,7 +36,7 @@ public class panelPedidos extends javax.swing.JPanel {
         panelEnviados = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
-        jPanel4 = new javax.swing.JPanel();
+        panelRecibidos = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable4 = new javax.swing.JTable();
 
@@ -149,24 +149,24 @@ public class panelPedidos extends javax.swing.JPanel {
         ));
         jScrollPane4.setViewportView(jTable4);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelRecibidosLayout = new javax.swing.GroupLayout(panelRecibidos);
+        panelRecibidos.setLayout(panelRecibidosLayout);
+        panelRecibidosLayout.setHorizontalGroup(
+            panelRecibidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRecibidosLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(24, Short.MAX_VALUE))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        panelRecibidosLayout.setVerticalGroup(
+            panelRecibidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRecibidosLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("RECIBIDOS", jPanel4);
+        jTabbedPane1.addTab("RECIBIDOS", panelRecibidos);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -182,7 +182,6 @@ public class panelPedidos extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -195,5 +194,6 @@ public class panelPedidos extends javax.swing.JPanel {
     private javax.swing.JPanel panelEnPreparacion;
     private javax.swing.JPanel panelEnviados;
     private javax.swing.JPanel panelPagados;
+    private javax.swing.JPanel panelRecibidos;
     // End of variables declaration//GEN-END:variables
 }
