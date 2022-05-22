@@ -6,6 +6,7 @@ package vista.mercader;
 
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
+import modelo.Negocio;
 import modelo.Pedido;
 
 /**
@@ -19,6 +20,11 @@ public class panelPedidos extends javax.swing.JPanel {
      */
     public panelPedidos() {
         initComponents();
+    }
+    
+    public panelPedidos(Negocio negocio){
+        initComponents();
+        recargarTablas();
     }
     
     public void recargarTablas(ArrayList<Pedido> listaPedidos){
