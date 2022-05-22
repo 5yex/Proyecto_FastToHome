@@ -4,6 +4,7 @@
  */
 package vista.mercader;
 
+import controlador.PedidoDao;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import modelo.Negocio;
@@ -24,7 +25,7 @@ public class panelPedidos extends javax.swing.JPanel {
     
     public panelPedidos(Negocio negocio){
         initComponents();
-        recargarTablas();
+        recargarTablas(PedidoDao.seleccionTdoosPedidos());
     }
     
     public void recargarTablas(ArrayList<Pedido> listaPedidos){
