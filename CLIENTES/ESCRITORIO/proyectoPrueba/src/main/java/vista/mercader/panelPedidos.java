@@ -28,7 +28,7 @@ public class panelPedidos extends javax.swing.JPanel {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         panelPagados = new javax.swing.JPanel();
-        jscrollPane1 = new javax.swing.JScrollPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
         tablaPagados = new javax.swing.JTable();
         panelEnPreparacion = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -51,7 +51,7 @@ public class panelPedidos extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jscrollPane1.setViewportView(tablaPagados);
+        jScrollPane1.setViewportView(tablaPagados);
 
         javax.swing.GroupLayout panelPagadosLayout = new javax.swing.GroupLayout(panelPagados);
         panelPagados.setLayout(panelPagadosLayout);
@@ -59,14 +59,14 @@ public class panelPedidos extends javax.swing.JPanel {
             panelPagadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPagadosLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jscrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(24, Short.MAX_VALUE))
         );
         panelPagadosLayout.setVerticalGroup(
             panelPagadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPagadosLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jscrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
@@ -182,11 +182,11 @@ public class panelPedidos extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JScrollPane jscrollPane1;
     private javax.swing.JPanel panelEnPreparacion;
     private javax.swing.JPanel panelEnviados;
     private javax.swing.JPanel panelPagados;
