@@ -5,6 +5,7 @@
 package vista.mercader;
 
 import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
 import modelo.Pedido;
 
 /**
@@ -24,7 +25,8 @@ public class panelPedidos extends javax.swing.JPanel {
         for (Pedido pedido: listaPedidos){
             switch (pedido.getEstado()) {
                 case "pagado":
-                    
+                    DefaultTableModel model = (DefaultTableModel) tablaClientes.getModel();
+                    model.addRow(cliente.getRow());
                     break;
                 case "en_preparacion":
                     
