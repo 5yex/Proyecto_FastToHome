@@ -104,6 +104,6 @@ public class Pedido {
     }
     
     public Object[] getRow() {
-        return new Object[]{id_pedido, id_usuario, transporte, total, fecha_hora};
+        return new Object[]{id_pedido, id_usuario, transporte, total, fecha_hora, estado};
     }
 }
