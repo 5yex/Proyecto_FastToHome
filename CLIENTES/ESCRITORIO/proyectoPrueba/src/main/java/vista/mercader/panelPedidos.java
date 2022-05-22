@@ -23,16 +23,16 @@ public class panelPedidos extends javax.swing.JPanel {
     public void recargarTablas(ArrayList<Pedido> listaPedidos){
         for (Pedido pedido: listaPedidos){
             switch (pedido.getEstado()) {
-                case 'pagado':
+                case "pagado":
                     
                     break;
-                case 'en_preparacion':
+                case "en_preparacion":
                     
                     break;
-                case 'enviado':
+                case "enviado":
                     
                     break;
-                case 'recibido':
+                case "recibido":
                     
                     break;
                 default:
