@@ -26,7 +26,7 @@ public class panelPedidos extends javax.swing.JPanel {
         tablaPagados.setModel(new javax.swing.table.DefaultTableModel(
                 null,
                 new String[]{
-                    "ID", "DNI", "EMAIL", "NOMBRE", "TELÉFONO"
+                    "ID_PEDIDO", "ID_USUARIO", "TRANSPORTE", "TOTAL", "FECHA_HORA", "ESTADO"
                 }
         ) {
             public boolean isCellEditable(int rowIndex, int columnIndex) {
