@@ -23,7 +23,7 @@ public class panelPedidos extends javax.swing.JPanel {
     
     public void recargarTablas(ArrayList<Pedido> listaPedidos){
         for (Pedido pedido: listaPedidos){
-            DefaultTableModel model = new DefaultTableModel();
+            DefaultTableModel model;
             switch (pedido.getEstado()) {
                 case "pagado":
                     model = (DefaultTableModel) tablaPagados.getModel();
