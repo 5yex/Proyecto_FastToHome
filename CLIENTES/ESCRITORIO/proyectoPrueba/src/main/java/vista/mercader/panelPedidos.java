@@ -23,13 +23,13 @@ public class panelPedidos extends javax.swing.JPanel {
     
     public void recargarTablas(ArrayList<Pedido> listaPedidos){
         for (Pedido pedido: listaPedidos){
+            DefaultTableModel model = new DefaultTableModel();
             switch (pedido.getEstado()) {
                 case "pagado":
-                    DefaultTableModel model = (DefaultTableModel) tablaClientes.getModel();
-                    model.addRow(cliente.getRow());
+                    model = (DefaultTableModel) tablaPagados.getModel();
                     break;
                 case "en_preparacion":
-                    
+                    model = (DefaultTableModel) tablaEnPreparacion.getModel();
                     break;
                 case "enviando":
                     
@@ -38,8 +38,10 @@ public class panelPedidos extends javax.swing.JPanel {
                     
                     break;
                 default:
-                    throw new AssertionError();
+                    System.out.print("error");
             }
+            model.addRow(pedido.getRow());
+
         }
     }
 
