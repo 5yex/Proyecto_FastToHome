@@ -46,7 +46,6 @@ public class PedidoDao{
     }
     
     public static ArrayList<Pedido> seleccionPedidosEnPreparacion() {
-        SimpleDateFormat dateParser = new SimpleDateFormat("MM/dd/yy HH:mm:ss");
         
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_pedidos_en_preparacion", null));
 
@@ -72,6 +71,7 @@ public class PedidoDao{
     }
     
     public static ArrayList<Pedido> seleccionTodosPedidos() {
+        SimpleDateFormat dateParser = new SimpleDateFormat("MM/dd/yy HH:mm:ss");
         
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_todos_pedidos", null));
 
@@ -85,11 +85,13 @@ public class PedidoDao{
             pedido.setId_pedido(pedidoJson.get("id").getAsInt());
             pedido.setId_usuario(pedidoJson.get("id_usuario").getAsInt());
             String fechaActual = pedidoJson.get("fecha_hora").getAsString();
+            
             try {
                 pedido.setFecha_hora(dateParser.parse(fechaActual));
             } catch (ParseException ex) {
                 Logger.getLogger(PedidoDao.class.getName()).log(Level.SEVERE, null, ex);
             }
+            
             pedido.setEstado(pedidoJson.get("estado").getAsString());
             pedido.setTotal(pedidoJson.get("total").getAsDouble());
             pedido.setTransporte(pedidoJson.get("transporte").getAsString());
