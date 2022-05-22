@@ -27,20 +27,24 @@ public class panelPedidos extends javax.swing.JPanel {
             switch (pedido.getEstado()) {
                 case "pagado":
                     model = (DefaultTableModel) tablaPagados.getModel();
+                    model.addRow(pedido.getRow());
                     break;
                 case "en_preparacion":
                     model = (DefaultTableModel) tablaEnPreparacion.getModel();
+                    model.addRow(pedido.getRow());
                     break;
                 case "enviando":
-                    
+                    model = (DefaultTableModel) tablaEnviados.getModel();
+                    model.addRow(pedido.getRow());
                     break;
                 case "recibido":
-                    
+                    model = (DefaultTableModel) tablaRecibidos.getModel();
+                    model.addRow(pedido.getRow());
                     break;
                 default:
                     System.out.print("error");
             }
-            model.addRow(pedido.getRow());
+            
 
         }
     }
