@@ -28,7 +28,7 @@ public class panelPedidos extends javax.swing.JPanel {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        seccionPagados = new javax.swing.JScrollPane();
+        jscrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -51,7 +51,7 @@ public class panelPedidos extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        seccionPagados.setViewportView(jTable1);
+        jscrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -59,14 +59,14 @@ public class panelPedidos extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(seccionPagados, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jscrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(seccionPagados, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jscrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
@@ -194,6 +194,6 @@ public class panelPedidos extends javax.swing.JPanel {
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
-    private javax.swing.JScrollPane seccionPagados;
+    private javax.swing.JScrollPane jscrollPane1;
     // End of variables declaration//GEN-END:variables
 }

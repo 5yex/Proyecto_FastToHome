@@ -44,7 +44,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                      <Component id="seccionPagados" min="-2" pref="481" max="-2" attributes="0"/>
+                      <Component id="jscrollPane1" min="-2" pref="481" max="-2" attributes="0"/>
                       <EmptySpace pref="24" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -53,14 +53,14 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                      <Component id="seccionPagados" min="-2" pref="294" max="-2" attributes="0"/>
+                      <Component id="jscrollPane1" min="-2" pref="294" max="-2" attributes="0"/>
                       <EmptySpace pref="32" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JScrollPane" name="seccionPagados">
+            <Container class="javax.swing.JScrollPane" name="jscrollPane1">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
