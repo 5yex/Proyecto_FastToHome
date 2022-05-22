@@ -220,8 +220,8 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 return false;
             }
         });
-        tablaClientes.getColumnModel().getColumn(0).setMaxWidth(60);
-        tablaClientes.getColumnModel().getColumn(2).setMinWidth(100);
+        //tablaClientes.getColumnModel().getColumn(0).setMaxWidth(60);
+        //tablaClientes.getColumnModel().getColumn(2).setMinWidth(100);
         tablaClientes.setAutoCreateRowSorter(true);
         for (Usuario cliente : listaClientes) {
             DefaultTableModel model = (DefaultTableModel) tablaClientes.getModel();
