@@ -32,7 +32,7 @@ public class panelPedidos extends javax.swing.JPanel {
         tablaPagados = new javax.swing.JTable();
         panelEnPreparacion = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tablaEnPreparacion = new javax.swing.JTable();
         panelEnviados = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
@@ -72,7 +72,7 @@ public class panelPedidos extends javax.swing.JPanel {
 
         jTabbedPane1.addTab("PAGADOS", panelPagados);
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tablaEnPreparacion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -83,7 +83,7 @@ public class panelPedidos extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(tablaEnPreparacion);
 
         javax.swing.GroupLayout panelEnPreparacionLayout = new javax.swing.GroupLayout(panelEnPreparacion);
         panelEnPreparacion.setLayout(panelEnPreparacionLayout);
@@ -186,7 +186,6 @@ public class panelPedidos extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
     private javax.swing.JScrollPane jscrollPane1;
@@ -194,6 +193,7 @@ public class panelPedidos extends javax.swing.JPanel {
     private javax.swing.JPanel panelEnviados;
     private javax.swing.JPanel panelPagados;
     private javax.swing.JPanel panelRecibidos;
+    private javax.swing.JTable tablaEnPreparacion;
     private javax.swing.JTable tablaPagados;
     // End of variables declaration//GEN-END:variables
 }
