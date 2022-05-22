@@ -29,7 +29,7 @@ public class panelPedidos extends javax.swing.JPanel {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         panelPagados = new javax.swing.JPanel();
         jscrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablaPagados = new javax.swing.JTable();
         panelEnPreparacion = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -40,7 +40,7 @@ public class panelPedidos extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable4 = new javax.swing.JTable();
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaPagados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -51,7 +51,7 @@ public class panelPedidos extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jscrollPane1.setViewportView(jTable1);
+        jscrollPane1.setViewportView(tablaPagados);
 
         javax.swing.GroupLayout panelPagadosLayout = new javax.swing.GroupLayout(panelPagados);
         panelPagados.setLayout(panelPagadosLayout);
@@ -186,7 +186,6 @@ public class panelPedidos extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
@@ -195,5 +194,6 @@ public class panelPedidos extends javax.swing.JPanel {
     private javax.swing.JPanel panelEnviados;
     private javax.swing.JPanel panelPagados;
     private javax.swing.JPanel panelRecibidos;
+    private javax.swing.JTable tablaPagados;
     // End of variables declaration//GEN-END:variables
 }
