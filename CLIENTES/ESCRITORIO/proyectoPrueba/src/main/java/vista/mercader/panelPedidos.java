@@ -37,7 +37,7 @@ public class panelPedidos extends javax.swing.JPanel {
         tablaEnPreparacion.setModel(new javax.swing.table.DefaultTableModel(
                 null,
                 new String[]{
-                    "ID", "DNI", "EMAIL", "NOMBRE", "TELÉFONO"
+                    "ID_PEDIDO", "ID_USUARIO", "TRANSPORTE", "TOTAL", "FECHA_HORA", "ESTADO"
                 }
         ) {
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -48,7 +48,7 @@ public class panelPedidos extends javax.swing.JPanel {
         tablaEnviados.setModel(new javax.swing.table.DefaultTableModel(
                 null,
                 new String[]{
-                    "ID", "DNI", "EMAIL", "NOMBRE", "TELÉFONO"
+                    "ID_PEDIDO", "ID_USUARIO", "TRANSPORTE", "TOTAL", "FECHA_HORA", "ESTADO"
                 }
         ) {
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -59,7 +59,7 @@ public class panelPedidos extends javax.swing.JPanel {
         tablaRecibidos.setModel(new javax.swing.table.DefaultTableModel(
                 null,
                 new String[]{
-                    "ID", "DNI", "EMAIL", "NOMBRE", "TELÉFONO"
+                    "ID_PEDIDO", "ID_USUARIO", "TRANSPORTE", "TOTAL", "FECHA_HORA", "ESTADO"
                 }
         ) {
             public boolean isCellEditable(int rowIndex, int columnIndex) {
