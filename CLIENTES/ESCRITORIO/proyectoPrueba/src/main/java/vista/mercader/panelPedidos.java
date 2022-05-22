@@ -29,7 +29,7 @@ public class panelPedidos extends javax.swing.JPanel {
                 case "en_preparacion":
                     
                     break;
-                case "enviado":
+                case "enviando":
                     
                     break;
                 case "recibido":
