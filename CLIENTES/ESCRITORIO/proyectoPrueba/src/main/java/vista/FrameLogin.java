@@ -5,7 +5,6 @@
 package vista;
 
 import vista.mercader.VentanaMercader;
-import vista.administrador.VentanaAdministrador;
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatIntelliJLaf;
 import controlador.NegocioDao;
@@ -16,6 +15,7 @@ import modelo.Negocio;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
 import util.validaciones;
+import vista.administrador.VentanaAdmin;
 
 /**
  *
