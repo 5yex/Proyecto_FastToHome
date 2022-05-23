@@ -141,6 +141,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Subir logo del negocio"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonPedirImagenActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="comboCategoria">
           <AuxValues>
