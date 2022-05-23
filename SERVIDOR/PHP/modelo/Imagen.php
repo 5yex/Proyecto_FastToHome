@@ -60,7 +60,7 @@ class Imagen extends Conexion {
             return TRUE;
         }
         
-        return false
+        return false;
     }
 
     public function agregarConId() {
