@@ -5,6 +5,7 @@
 package vista.mercader;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
+import modelo.Pedido;
 import modelo.Producto;
 
 /**
@@ -12,13 +13,13 @@ import modelo.Producto;
  * @author jmcbg
  */
 public class panelPedido extends javax.swing.JPanel {
-    private Producto producto;
+    private Pedido pedido;
     /**
      * Creates new form producto
      */
-    public panelPedido(Producto prod) {
+    public panelPedido(Pedido pedido) {
         initComponents();
-        producto = prod;
+        pedido = pedido;
         mostrarDatos();
     }
 
