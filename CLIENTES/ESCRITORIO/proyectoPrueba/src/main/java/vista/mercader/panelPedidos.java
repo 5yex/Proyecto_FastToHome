@@ -111,6 +111,9 @@ public class panelPedidos extends javax.swing.JPanel {
     private void initComponents() {
 
         popUpPagados = new javax.swing.JPopupMenu();
+        itemPasarAEmpreparacion = new javax.swing.JMenuItem();
+        popUpEnPreparacion = new javax.swing.JPopupMenu();
+        itemEnviar = new javax.swing.JMenuItem();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         panelPagados = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -124,6 +127,22 @@ public class panelPedidos extends javax.swing.JPanel {
         panelRecibidos = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tablaRecibidos = new javax.swing.JTable();
+
+        itemPasarAEmpreparacion.setText("Preparar Pedido");
+        itemPasarAEmpreparacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemPasarAEmpreparacionActionPerformed(evt);
+            }
+        });
+        popUpPagados.add(itemPasarAEmpreparacion);
+
+        itemEnviar.setText("Enviar Productos");
+        itemEnviar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemEnviarActionPerformed(evt);
+            }
+        });
+        popUpEnPreparacion.add(itemEnviar);
 
         tablaPagados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -169,6 +188,7 @@ public class panelPedidos extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tablaEnPreparacion.setComponentPopupMenu(popUpEnPreparacion);
         jScrollPane2.setViewportView(tablaEnPreparacion);
 
         javax.swing.GroupLayout panelEnPreparacionLayout = new javax.swing.GroupLayout(panelEnPreparacion);
@@ -266,8 +286,18 @@ public class panelPedidos extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void itemPasarAEmpreparacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemPasarAEmpreparacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemPasarAEmpreparacionActionPerformed
+
+    private void itemEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEnviarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemEnviarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem itemEnviar;
+    private javax.swing.JMenuItem itemPasarAEmpreparacion;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -277,6 +307,7 @@ public class panelPedidos extends javax.swing.JPanel {
     private javax.swing.JPanel panelEnviados;
     private javax.swing.JPanel panelPagados;
     private javax.swing.JPanel panelRecibidos;
+    private javax.swing.JPopupMenu popUpEnPreparacion;
     private javax.swing.JPopupMenu popUpPagados;
     private javax.swing.JTable tablaEnPreparacion;
     private javax.swing.JTable tablaEnviados;
