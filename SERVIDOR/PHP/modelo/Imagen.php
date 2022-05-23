@@ -39,7 +39,7 @@ class Imagen extends Conexion{
         
         $sentencia = $this->dblink->prepare($sql);
         
-        $url = $this->get;
+        $url = $this->getUrl_imagen();
        
         $sentencia->bindParam(":calle", $calle);
         $sentencia->bindParam(":num", $numero);
