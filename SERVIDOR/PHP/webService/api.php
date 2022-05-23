@@ -501,9 +501,9 @@ function actualizarEstadoPedido($datos){
         $pedido->setEstado($datos->estado);
         
         if ($pedido->obtenerPedidosNegocioEnPreparacion()) {
-            mandarRespuesta(false, $respuesta);
+            mandarRespuesta(false, "Se actualizó el estado del pedido");
         } else {
-            mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
+            mandarRespuesta(true, 'Error en la actualización del estado del pedido');
         }        
     }catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
