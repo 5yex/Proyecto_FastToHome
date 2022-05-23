@@ -558,7 +558,7 @@ function nuevaImagen($datos){
         if ($imagen->agregar()) {
             mandarRespuesta(false, 'Se ha realizado la insercion de una imagen');
         } else {
-            mandarRespuesta(true, 'Error en la inserccion de la categoria');
+            mandarRespuesta(true, 'Error en la inserccion de la imagen');
         }
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
