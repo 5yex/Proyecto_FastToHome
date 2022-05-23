@@ -104,5 +104,6 @@ public class PedidoDao{
     }
     
     public boolean actualizarEstadoPedido(Pedido pedido){
+        return gestion.hacerConsulta(new Peticion("actualizar_estado_pedido", pedido.getJSON()));
     }
 }
