@@ -102,4 +102,7 @@ public class PedidoDao{
         }
         return listaPedidosEnPreparacion;
     }
+    
+    public boolean actualizarEstadoPedido(Pedido pedido){
+    }
 }
