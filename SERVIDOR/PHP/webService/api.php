@@ -492,6 +492,24 @@ function obtenerTodosPedidosNegocios($datos){
     }
 }
 
+function actualizarEstadoPedido($datos){
+    require_once '../modelo/Pedido.php';
+    
+    try{
+        $pedido = new Pedido();
+        $pedido->setId_negocio($datos->id_negocio);
+        $pedido->setEstado($datos->estado);
+        $respuesta = $pedido->obtenerPedidosNegocioEnPreparacion();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
+        }        
+    }catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
 function mandarRespuesta($error, $datos) {
     require_once '../modelo/Respuesta.php';
     $respuesta = new Respuesta($error, $datos);
