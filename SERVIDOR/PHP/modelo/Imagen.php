@@ -9,20 +9,38 @@ class Imagen extends Conexion{
     private $id_imagen;
     private $url_imagen;
     private $b64_imagen;
-    
+    public function getId_imagen() {
+        return $this->id_imagen;
+    }
 
+    public function getUrl_imagen() {
+        return $this->url_imagen;
+    }
+
+    public function getB64_imagen() {
+        return $this->b64_imagen;
+    }
+
+    public function setId_imagen($id_imagen): void {
+        $this->id_imagen = $id_imagen;
+    }
+
+    public function setUrl_imagen($url_imagen): void {
+        $this->url_imagen = $url_imagen;
+    }
+
+    public function setB64_imagen($b64_imagen): void {
+        $this->b64_imagen = $b64_imagen;
+    }
+
+    
     public function agregar(){
-        $sql = "INSERT INTO direccion (Calle, Numero, Ciudad, CP, Otros, Coordenadas) VALUES (:calle, :num, :ciu, :cp, :otros, :coor)";
+        $sql = "INSERT INTO imagenes (url) VALUES (:url)";
         
         $sentencia = $this->dblink->prepare($sql);
         
-        $calle = $this->getCalle();
-        $numero = $this->getNumero();
-        $ciudad = $this->getCiudad();
-        $codigo_postal = $this->getCodigo_postal();
-        $otros = $this->getOtros();
-        $coordenadas = $this->getCoordenadas();
-        
+        $url = $this->get;
+       
         $sentencia->bindParam(":calle", $calle);
         $sentencia->bindParam(":num", $numero);
         $sentencia->bindParam(":ciu", $ciudad);
