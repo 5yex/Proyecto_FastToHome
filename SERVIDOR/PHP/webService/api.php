@@ -558,11 +558,14 @@ function nuevaImagen($datos){
         $imagen = new Imagen();
         $imagen->setB64_imagen($datos->b64_imagen);
         $imagen->setUrl_imagen($datos->url_imagen);
-        $respuesta = $imagen->agregarConId() {
-            mandarRespuesta(false, 'Se ha realizado la insercion de una imagen');
+        $respuesta = $imagen->agregarConId();
+        
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
         } else {
-            mandarRespuesta(true, 'Error en la inserccion de la imagen');
-        }
+            mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
+        } 
+        
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
