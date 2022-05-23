@@ -13,4 +13,4 @@ file_put_contents( "imagenes/20:57:11.774401800.png", base64_decode($imgData));
 //
 //$img = "<img src= 'data:image;base64, $imgData' />";
 
-print($img);
+//print($img);
