@@ -554,9 +554,9 @@ function nuevaImagen($datos){
     try {
         $imagen = new Imagen();
         $imagen->setB64_imagen($datos->b64_imagen);
-
+        $imagen->setUrl_imagen($datos->url_imagen);
         if ($imagen->agregar()) {
-            mandarRespuesta(false, 'Se ha realizado la insercion de una categoria');
+            mandarRespuesta(false, 'Se ha realizado la insercion de una imagen');
         } else {
             mandarRespuesta(true, 'Error en la inserccion de la categoria');
         }
