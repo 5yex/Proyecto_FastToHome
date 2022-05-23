@@ -6,6 +6,7 @@ package controlador;
 
 import java.util.Date;
 import modelo.Categoria;
+import modelo.Direccion;
 import modelo.Imagen;
 import modelo.Peticion;
 
@@ -17,5 +18,10 @@ public class ImagenDao {
     public static boolean nuevaImagen(Imagen imagen) {
         imagen.setUrl_imagen("imagenes/"+new Date(System.currentTimeMillis())+".png");
         return gestion.hacerConsulta(new Peticion("nueva_imagen", imagen.getJSON()));
+    }
+    
+    public static int nuevaImagenDevuelveId(Imagen imagen) {
+         imagen.setUrl_imagen("imagenes/"+new Date(System.currentTimeMillis())+".png");
+        return gestion.consultaSeleccionUnico(new Peticion("nueva_imagen", imagen.getJSON())).get("last_id").getAsInt();
     }
 }
