@@ -130,7 +130,6 @@ public class DialogoImagen extends javax.swing.JDialog {
        
             byte[] imageBytes = IOUtils.toByteArray(new FileInputStream(imagenSeleccionada));
             String base64 = Base64.getEncoder().encodeToString(imageBytes);
-                        System.out.println(base64);
 
             
             
