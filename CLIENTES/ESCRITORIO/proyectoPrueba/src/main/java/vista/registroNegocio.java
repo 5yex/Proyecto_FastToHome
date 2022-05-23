@@ -13,6 +13,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import modelo.Categoria;
 import modelo.Direccion;
+import modelo.Imagen;
 import modelo.Negocio;
 import modelo.Usuario;
 import vista.mercader.VentanaMercader;
@@ -25,6 +26,7 @@ public class registroNegocio extends javax.swing.JFrame {
 
     private Usuario User;
     private Direccion nDireccion = new Direccion();
+    private Imagen nImg = new Imagen();
     private ArrayList<Categoria> listaCategorias;
 
     /**
