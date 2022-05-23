@@ -5,5 +5,5 @@ $img = "<img src= 'data:image;base64, $imgData' />";
 print($img);
 
 
-file_put_contents( "prueba.png", base64_decode($imgData));
+file_put_contents( "imagenes/prueba.png", base64_decode($imgData));
 
