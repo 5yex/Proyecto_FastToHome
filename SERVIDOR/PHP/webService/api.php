@@ -499,8 +499,8 @@ function actualizarEstadoPedido($datos){
         $pedido = new Pedido();
         $pedido->setId_negocio($datos->id_negocio);
         $pedido->setEstado($datos->estado);
-        $respuesta = $pedido->obtenerPedidosNegocioEnPreparacion();
-        if ($respuesta) {
+        
+        if ($pedido->obtenerPedidosNegocioEnPreparacion()) {
             mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
