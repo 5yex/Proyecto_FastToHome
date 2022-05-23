@@ -21,7 +21,8 @@ import org.apache.commons.codec.binary.Base64;
 public class Imagen {
 
     private int id;
-    private String imagenB64;
+    private String b64_imagen;
+    private String url_imagen;
 
     public int getId() {
         return id;
