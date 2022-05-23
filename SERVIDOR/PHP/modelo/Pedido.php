@@ -140,7 +140,7 @@ class Pedido extends Conexion{
     }
     
     public function obtenerPedidosNegocioPagado(){
-        $sql = "SELECT * FROM pedidos WHERE id_negocio = :id_neg AND DATE(fecha_hora) = CURDATE() AND estado LIKE 'pagado'";
+        $sql = "SELECT * FROM pedido WHERE id_negocio = :id_neg AND DATE(fecha_hora) = CURDATE() AND estado LIKE 'pagado'";
         
         $sentencia = $this->dblink->prepare($sql);
 
@@ -153,7 +153,7 @@ class Pedido extends Conexion{
     }
     
     public function obtenerPedidosNegocioEnPreparacion(){
-        $sql = "SELECT * FROM pedidos WHERE id_negocio = :id_neg AND DATE(fecha_hora) = CURDATE() AND estado LIKE 'en_preparacion'";
+        $sql = "SELECT * FROM pedido WHERE id_negocio = :id_neg AND DATE(fecha_hora) = CURDATE() AND estado LIKE 'en_preparacion'";
         
         $sentencia = $this->dblink->prepare($sql);
 
@@ -165,7 +165,7 @@ class Pedido extends Conexion{
     }
     
     public function obtenerTodosPedidosNegocio(){
-        $sql = "SELECT * FROM pedidos WHERE id_negocio = :id_neg AND DATE(fecha_hora) = CURDATE()";
+        $sql = "SELECT * FROM pedido WHERE id_negocio = :id_neg AND DATE(fecha_hora) = CURDATE()";
         
         $sentencia = $this->dblink->prepare($sql);
 
