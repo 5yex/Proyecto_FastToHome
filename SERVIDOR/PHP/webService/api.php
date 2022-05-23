@@ -558,11 +558,34 @@ function nuevaImagen($datos){
         $imagen = new Imagen();
         $imagen->setB64_imagen($datos->b64_imagen);
         $imagen->setUrl_imagen($datos->url_imagen);
-        if ($imagen->agregar()) {
+        $respuesta = $imagen->agregarConId() {
             mandarRespuesta(false, 'Se ha realizado la insercion de una imagen');
         } else {
             mandarRespuesta(true, 'Error en la inserccion de la imagen');
         }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
+function nuevaDireccionDevuelveId($datos) {
+    require_once '../modelo/Direccion.php';
+    try {
+        $direccion = new Direccion();
+        $direccion->setCalle($datos->calle);
+        $direccion->setNumero($datos->numero);
+        $direccion->setCiudad($datos->ciudad);
+        $direccion->setCodigo_postal($datos->codigo_postal);
+        $direccion->setOtros($datos->otros);
+        $direccion->setCoordenadas($datos->coordenadas);
+
+        $respuesta = $direccion->agregarConId();
+        
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
+        } 
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
