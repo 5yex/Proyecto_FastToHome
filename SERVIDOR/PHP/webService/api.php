@@ -73,6 +73,9 @@ if (empty($_POST["DATA"])) {
         case 'obtener_todos_pedidos';
             obtenerTodosPedidosNegocios(json_decode($peticion->datos));
             break;
+        case 'actualizar_estado_pedido';
+            actualizarEstadoPedido(json_decode($peticion->datos));
+            break;
         //Casos de Categoria
         case 'nueva_categoria';
             nuevaCategoria(json_decode($peticion->datos));
