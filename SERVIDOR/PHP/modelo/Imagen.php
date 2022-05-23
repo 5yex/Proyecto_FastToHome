@@ -63,13 +63,13 @@ class Imagen extends Conexion{
         return -1;
     }
     
-    public function obtenerDireccionPorId(){
-        $sql = "SELECT * FROM direccion WHERE id = :id_dir";
+    public function obtenerImagenPorId(){
+        $sql = "SELECT * FROM imegenes WHERE id = :id";
         
         $sentencia = $this->dblink->prepare($sql);
 
-        $id_direccion = $this->getId_direccion();
-        $sentencia->bindParam(":id_dir", $id_direccion);
+        $id = $this->getId_imagen();
+        $sentencia->bindParam(":id", $id);
 
         $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
