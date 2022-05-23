@@ -16,12 +16,12 @@ import modelo.Peticion;
  */
 public class ImagenDao {
     public static boolean nuevaImagen(Imagen imagen) {
-        imagen.setUrl_imagen("imagenes/"+new Date(System.currentTimeMillis())+".png");
+        imagen.setUrl_imagen("imagenes/"+new Date(System.currentTimeMillis()).toString()+".png");
         return gestion.hacerConsulta(new Peticion("nueva_imagen", imagen.getJSON()));
     }
     
     public static int nuevaImagenDevuelveId(Imagen imagen) {
-         imagen.setUrl_imagen("imagenes/"+new Date(System.currentTimeMillis())+".png");
+         imagen.setUrl_imagen("imagenes/"+new Date(System.currentTimeMillis()).toString()+".png");
         return gestion.consultaSeleccionUnico(new Peticion("nueva_imagen", imagen.getJSON())).get("last_id").getAsInt();
     }
 }
