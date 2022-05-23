@@ -103,7 +103,7 @@ public class PedidoDao{
         return listaPedidosEnPreparacion;
     }
     
-    public boolean actualizarEstadoPedido(Pedido pedido){
+    public static boolean actualizarEstadoPedido(Pedido pedido){
         return gestion.hacerConsulta(new Peticion("actualizar_estado_pedido", pedido.getJSON()));
     }
 }
