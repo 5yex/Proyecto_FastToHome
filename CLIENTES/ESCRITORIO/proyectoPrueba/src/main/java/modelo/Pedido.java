@@ -106,4 +106,12 @@ public class Pedido {
     public Object[] getRow() {
         return new Object[]{id_pedido, id_usuario, transporte, total, fecha_hora, estado};
     }
+
+    @Override
+    public String toString() {
+        return "Pedido{" + "id_pedido=" + id_pedido + ", id_usuario=" + id_usuario + ", id_negocio=" + id_negocio + ", fecha_hora=" + fecha_hora + ", estado=" + estado + ", total=" + total + ", transporte=" + transporte + '}';
+    }
+    
+    
+    
 }
