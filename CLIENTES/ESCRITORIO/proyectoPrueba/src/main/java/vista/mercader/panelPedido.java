@@ -19,7 +19,7 @@ public class panelPedido extends javax.swing.JPanel {
      */
     public panelPedido(Pedido pedido) {
         initComponents();
-        pedido = pedido;
+        this.pedido = pedido;
         mostrarDatos();
     }
 
