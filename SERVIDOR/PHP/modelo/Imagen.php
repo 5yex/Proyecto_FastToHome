@@ -59,7 +59,6 @@ class Imagen extends Conexion {
             //Insertó correctamente
             return TRUE;
         }
-        
         return false;
     }
 
