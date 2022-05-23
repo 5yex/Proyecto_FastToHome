@@ -550,5 +550,17 @@ function obtenerCategoriaPorNombre($datos){
 }
 
 function nuevaImagen($datos){
-    
+    require_once '../modelo/Imagen.php';
+    try {
+        $imagen = new Categoria();
+        $imagen->setNombre($datos->nombre);
+
+        if ($imagen->agregar()) {
+            mandarRespuesta(false, 'Se ha realizado la insercion de una categoria');
+        } else {
+            mandarRespuesta(true, 'Error en la inserccion de la categoria');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
 }
