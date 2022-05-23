@@ -548,3 +548,7 @@ function obtenerCategoriaPorNombre($datos){
         mandarRespuesta(true, $ex->getMessage());
     }
 }
+
+function nuevaImagen($datos){
+    
+}
