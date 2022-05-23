@@ -110,6 +110,7 @@ public class panelPedidos extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu1 = new javax.swing.JPopupMenu();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         panelPagados = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -135,6 +136,7 @@ public class panelPedidos extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tablaPagados.setComponentPopupMenu(jPopupMenu1);
         jScrollPane1.setViewportView(tablaPagados);
 
         javax.swing.GroupLayout panelPagadosLayout = new javax.swing.GroupLayout(panelPagados);
@@ -266,6 +268,7 @@ public class panelPedidos extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
