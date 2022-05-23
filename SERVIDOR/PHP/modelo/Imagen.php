@@ -34,7 +34,9 @@ class Imagen extends Conexion{
     }
 
     
-    
+    public function persistirImagen(){
+        file_put_contents($this->url_imagen, base64_decode($this->b64_imagen));
+    }
     
     
     public function agregar(){
