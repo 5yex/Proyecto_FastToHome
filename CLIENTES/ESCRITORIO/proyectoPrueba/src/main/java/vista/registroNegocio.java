@@ -201,6 +201,7 @@ public class registroNegocio extends javax.swing.JFrame {
             }
 
             int id_direccion = DireccionDao.nuevaDireccionDevuelveId(nDireccion);
+            
             int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
             
             if (id_direccion != -1) {
