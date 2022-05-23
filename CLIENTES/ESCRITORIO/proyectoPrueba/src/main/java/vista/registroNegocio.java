@@ -6,6 +6,7 @@ package vista;
 
 import controlador.CategoriaDao;
 import controlador.DireccionDao;
+import controlador.ImagenDao;
 import controlador.NegocioDao;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -200,7 +201,7 @@ public class registroNegocio extends javax.swing.JFrame {
             }
 
             int id_direccion = DireccionDao.nuevaDireccionDevuelveId(nDireccion);
-
+            int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
             if (id_direccion != -1) {
                 Categoria categoria = new Categoria();
                 categoria.setNombre(comboCategoria.getSelectedItem().toString());
