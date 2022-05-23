@@ -41,12 +41,7 @@ class Imagen extends Conexion{
         
         $url = $this->getUrl_imagen();
        
-        $sentencia->bindParam(":calle", $calle);
-        $sentencia->bindParam(":num", $numero);
-        $sentencia->bindParam(":ciu", $ciudad);
-        $sentencia->bindParam(":cp", $codigo_postal);
-        $sentencia->bindParam(":otros", $otros);
-        $sentencia->bindParam(":coor", $coordenadas);
+        $sentencia->bindParam(":url", $url);
         
         $resultado = $sentencia->execute();
  
