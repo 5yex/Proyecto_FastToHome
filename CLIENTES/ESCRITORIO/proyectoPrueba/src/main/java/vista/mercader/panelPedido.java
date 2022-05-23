@@ -32,13 +32,13 @@ public class panelPedido extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        nombreProducto = new javax.swing.JLabel();
+        EstadoPedido = new javax.swing.JLabel();
         imgProducto = new javax.swing.JLabel();
         botonEliminarProducto = new javax.swing.JButton();
         botonEditarProducto = new javax.swing.JButton();
 
-        nombreProducto.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        nombreProducto.setText("TITULO PRODUCTO");
+        EstadoPedido.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        EstadoPedido.setText("TITULO PRODUCTO");
 
         imgProducto.setBackground(new java.awt.Color(204, 204, 255));
         imgProducto.setText("IMAGEN PRODUCTO");
@@ -65,7 +65,7 @@ public class panelPedido extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(nombreProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(EstadoPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(imgProducto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(botonEliminarProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -77,7 +77,7 @@ public class panelPedido extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(nombreProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EstadoPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(imgProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -98,14 +98,14 @@ public class panelPedido extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel EstadoPedido;
     private javax.swing.JButton botonEditarProducto;
     private javax.swing.JButton botonEliminarProducto;
     private javax.swing.JLabel imgProducto;
-    private javax.swing.JLabel nombreProducto;
     // End of variables declaration//GEN-END:variables
 
     private void mostrarDatos() {
-        nombreProducto.setText(pedido.getEstado());
+        EstadoPedido.setText(pedido.getEstado());
         this.setBorder(new FlatButtonBorder());
     }
 
