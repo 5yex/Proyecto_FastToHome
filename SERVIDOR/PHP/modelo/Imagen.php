@@ -34,7 +34,13 @@ class Imagen extends Conexion{
     }
 
     
+    
+    
+    
     public function agregar(){
+        
+        
+        
         $sql = "INSERT INTO imagenes (url) VALUES (:url)";
         
         $sentencia = $this->dblink->prepare($sql);
