@@ -72,7 +72,7 @@ public class PedidoDao{
     }
     
     public static ArrayList<Pedido> seleccionTodosPedidos(Negocio negocio) {
-        SimpleDateFormat dateParser = new SimpleDateFormat("MM/dd/yy HH:mm:ss");
+        SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
         
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_todos_pedidos", negocio.getJSON()));
 
