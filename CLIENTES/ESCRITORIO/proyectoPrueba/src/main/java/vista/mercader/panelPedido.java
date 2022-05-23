@@ -112,7 +112,7 @@ public class panelPedido extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void mostrarDatos() {
-        
+        pedido.toString();
         transporte.setText(pedido.getTransporte());
         this.setBorder(new FlatButtonBorder());
     }
