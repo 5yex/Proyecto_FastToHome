@@ -1,14 +1,17 @@
 <?php
+
 require_once '../controlador/conexion.php';
 
 /**
  * 
  * 
  */
-class Imagen extends Conexion{
+class Imagen extends Conexion {
+
     private $id_imagen;
     private $url_imagen;
     private $b64_imagen;
+
     public function getId_imagen() {
         return $this->id_imagen;
     }
@@ -33,34 +36,34 @@ class Imagen extends Conexion{
         $this->b64_imagen = $b64_imagen;
     }
 
-    
-    public function persistirImagen(){
-        file_put_contents($this->url_imagen, base64_decode($this->b64_imagen));
+    public function persistirImagen() {
+        
     }
-    
-    
-    public function agregar(){
-        
-        
-        
-        $sql = "INSERT INTO imagenes (url) VALUES (:url)";
-        
-        $sentencia = $this->dblink->prepare($sql);
-        
-        $url = $this->getUrl_imagen();
-       
-        $sentencia->bindParam(":url", $url);
-        
-        $resultado = $sentencia->execute();
- 
-        if ($resultado != 1) {
-            return FALSE;
+
+    public function agregar() {
+
+        if (file_put_contents($this->url_imagen, base64_decode($this->b64_imagen)) !== false) {
+            $sql = "INSERT INTO imagenes (url) VALUES (:url)";
+
+            $sentencia = $this->dblink->prepare($sql);
+
+            $url = $this->getUrl_imagen();
+
+            $sentencia->bindParam(":url", $url);
+
+            $resultado = $sentencia->execute();
+
+            if ($resultado != 1) {
+                return FALSE;
+            }
+            //Insertó correctamente
+            return TRUE;
         }
-        //Insertó correctamente
-        return TRUE;
+        
+        return false
     }
-    
-    public function agregarConId(){
+
+    public function agregarConId() {
         $resultado = $this->agregar();
         if ($resultado) {
             $sql = "SELECT LAST_INSERT_ID(id) as 'last_id' FROM imagenes ORDER BY id DESC LIMIT 1";
@@ -70,10 +73,10 @@ class Imagen extends Conexion{
         }
         return -1;
     }
-    
-    public function obtenerImagenPorId(){
+
+    public function obtenerImagenPorId() {
         $sql = "SELECT * FROM imagenes WHERE id = :id";
-        
+
         $sentencia = $this->dblink->prepare($sql);
 
         $id = $this->getId_imagen();
@@ -82,7 +85,7 @@ class Imagen extends Conexion{
         $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
-    
+
 //    public function actualizarDireccion(){
 //        $sql = "UPDATE direccion SET Calle = :calle, Numero = :num, Ciudad = :ciu, CP = :cp, Otros = :otros, Coordenadas = :coor WHERE id = :id_dir";
 //        
@@ -112,5 +115,4 @@ class Imagen extends Conexion{
 //        //Insertó correctamente
 //        return TRUE;
 //    }
-    
 }
