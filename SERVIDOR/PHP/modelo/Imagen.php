@@ -55,7 +55,7 @@ class Imagen extends Conexion{
     public function agregarConId(){
         $resultado = $this->agregar();
         if ($resultado) {
-            $sql = "SELECT LAST_INSERT_ID(id) as 'last_id' FROM direccion ORDER BY id DESC LIMIT 1";
+            $sql = "SELECT LAST_INSERT_ID(id) as 'last_id' FROM imagenes ORDER BY id DESC LIMIT 1";
             $sentencia = $this->dblink->prepare($sql);
             $resultado = $sentencia->execute();
             return $sentencia->fetchAll(PDO::FETCH_OBJ);
