@@ -17,8 +17,7 @@ import modelo.Peticion;
  */
 public class ImagenDao {
     public static boolean nuevaImagen(Imagen imagen) {
-        
-        imagen.setUrl_imagen("imagenes/"+new Date(System.currentTimeMillis()).toString()+".png");
+        imagen.setUrl_imagen("imagenes/"+new Date().getTime()+".png");
         return gestion.hacerConsulta(new Peticion("nueva_imagen", imagen.getJSON()));
     }
     
