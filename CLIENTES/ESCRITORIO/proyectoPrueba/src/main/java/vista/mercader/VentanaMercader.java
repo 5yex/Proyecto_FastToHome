@@ -6,12 +6,14 @@ package vista.mercader;
 
 import vista.registroNegocio;
 import controlador.NegocioDao;
+import controlador.PedidoDao;
 import controlador.ProductoDao;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.util.ArrayList;
 import javax.swing.JMenu;
 import modelo.Negocio;
+import modelo.Pedido;
 import modelo.Producto;
 import modelo.Usuario;
 import util.WrapLayout;
@@ -192,7 +194,24 @@ public class VentanaMercader extends javax.swing.JFrame {
         contenido.repaint();
     }
     
-    
+    private void mostrarPedididos() {
+        
+        contenido.removeAll();
+
+        contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
+
+        
+        ArrayList<Pedido> pedidos = PedidoDao.seleccionTodosPedidos(negocio);
+        for (Pedido pedido : pedidos) {
+            contenido.add(new panelPedido(pedido));
+        }
+
+        contenido.setComponentPopupMenu(popupProductos);
+        contenido.revalidate();
+        contenido.repaint();
+        
+        
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -206,4 +225,6 @@ public class VentanaMercader extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPopupMenu popupProductos;
     // End of variables declaration//GEN-END:variables
+
+    
 }
