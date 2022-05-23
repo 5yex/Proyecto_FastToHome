@@ -138,13 +138,7 @@ public class DialogoImagen extends javax.swing.JDialog {
             Logger.getLogger(DialogoImagen.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(DialogoImagen.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                imageInFile.close();
-            } catch (IOException ex) {
-                Logger.getLogger(DialogoImagen.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
+        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
