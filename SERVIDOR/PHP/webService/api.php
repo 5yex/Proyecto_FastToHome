@@ -552,8 +552,8 @@ function obtenerCategoriaPorNombre($datos){
 function nuevaImagen($datos){
     require_once '../modelo/Imagen.php';
     try {
-        $imagen = new Categoria();
-        $imagen->setNombre($datos->nombre);
+        $imagen = new Imagen();
+        $imagen->setB64_imagen($datos->b64_imagen);
 
         if ($imagen->agregar()) {
             mandarRespuesta(false, 'Se ha realizado la insercion de una categoria');
