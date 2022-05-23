@@ -25,7 +25,7 @@ public class panelPedidos extends javax.swing.JPanel {
     
     public panelPedidos(Negocio negocio){
         initComponents();
-        recargarTablas(PedidoDao.seleccionTodosPedidos());
+        recargarTablas(PedidoDao.seleccionTodosPedidos(negocio));
     }
     
     public void recargarTablas(ArrayList<Pedido> listaPedidos){
@@ -287,11 +287,12 @@ public class panelPedidos extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void itemPasarAEmpreparacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemPasarAEmpreparacionActionPerformed
-        
+        if(PedidoDao.actualizarEstadoPedido(new Pedido()))
+        recargarTablas(PedidoDao.seleccionTodosPedidos());
     }//GEN-LAST:event_itemPasarAEmpreparacionActionPerformed
 
     private void itemEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEnviarActionPerformed
-        
+        recargarTablas(PedidoDao.seleccionTodosPedidos());
     }//GEN-LAST:event_itemEnviarActionPerformed
 
 
