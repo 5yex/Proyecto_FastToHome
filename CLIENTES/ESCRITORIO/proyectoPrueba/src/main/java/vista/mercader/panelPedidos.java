@@ -287,11 +287,11 @@ public class panelPedidos extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void itemPasarAEmpreparacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemPasarAEmpreparacionActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_itemPasarAEmpreparacionActionPerformed
 
     private void itemEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEnviarActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_itemEnviarActionPerformed
 
 
