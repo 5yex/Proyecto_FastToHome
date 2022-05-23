@@ -83,6 +83,13 @@ if (empty($_POST["DATA"])) {
         case 'obtener_id_categoria';
             obtenerCategoriaPorNombre(json_decode($peticion->datos));
             break;
+        
+        //imagenes
+         case 'nueva_imagen';
+            nuevaImagen(json_decode($peticion->datos));
+            break;
+        
+        
         //Mandar Repuesta
         default;
             mandarRespuesta(true, 'comando no  reconocido');
