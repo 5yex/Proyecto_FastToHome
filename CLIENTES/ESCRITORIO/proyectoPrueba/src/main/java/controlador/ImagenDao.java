@@ -4,6 +4,7 @@
  */
 package controlador;
 
+import java.time.LocalDate;
 import java.util.Date;
 import modelo.Categoria;
 import modelo.Direccion;
@@ -21,7 +22,8 @@ public class ImagenDao {
     }
     
     public static int nuevaImagenDevuelveId(Imagen imagen) {
-        imagen.setUrl_imagen("imagenes/"+new Date(System.currentTimeMillis()).toString()+".png");
+       
+        imagen.setUrl_imagen("imagenes/"+java.time.LocalTime.now()+".png");
         return gestion.consultaSeleccionUnico(new Peticion("nueva_imagen", imagen.getJSON())).get("last_id").getAsInt();
     }
 }
