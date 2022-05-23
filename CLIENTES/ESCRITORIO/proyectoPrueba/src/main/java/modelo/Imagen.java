@@ -32,13 +32,23 @@ public class Imagen {
         this.id = id;
     }
 
-    public String getImagenB64() {
-        return imagenB64;
+    public String getB64_imagen() {
+        return b64_imagen;
     }
 
-    public void setImagenB64(String imagenB64) {
-        this.imagenB64 = imagenB64;
+    public void setB64_imagen(String b64_imagen) {
+        this.b64_imagen = b64_imagen;
     }
+
+    public String getUrl_imagen() {
+        return url_imagen;
+    }
+
+    public void setUrl_imagen(String url_imagen) {
+        this.url_imagen = url_imagen;
+    }
+
+  
 
   
  
