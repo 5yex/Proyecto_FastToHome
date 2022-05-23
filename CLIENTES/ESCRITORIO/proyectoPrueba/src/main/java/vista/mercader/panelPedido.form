@@ -18,16 +18,18 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Component id="EstadoPedido" pref="0" max="32767" attributes="0"/>
-                  <Component id="imgProducto" alignment="0" max="32767" attributes="0"/>
-                  <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="EstadoPedido" min="-2" pref="180" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
                       <Component id="botonEliminarProducto" min="-2" pref="65" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="botonEditarProducto" min="-2" pref="72" max="-2" attributes="0"/>
+                      <EmptySpace pref="296" max="32767" attributes="0"/>
+                      <Component id="pasarEstado" min="-2" pref="122" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -36,14 +38,12 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="EstadoPedido" min="-2" pref="50" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="imgProducto" min="-2" pref="136" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="botonEliminarProducto" pref="34" max="32767" attributes="0"/>
-                  <Component id="botonEditarProducto" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="botonEliminarProducto" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="pasarEstado" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -54,16 +54,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="TITULO PRODUCTO"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="imgProducto">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="cc" red="cc" type="rgb"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="IMAGEN PRODUCTO"/>
-        <Property name="opaque" type="boolean" value="true"/>
+        <Property name="text" type="java.lang.String" value="ESTADO PEDIDO"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="botonEliminarProducto">
@@ -74,12 +65,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonEliminarProductoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="botonEditarProducto">
+    <Component class="javax.swing.JButton" name="pasarEstado">
       <Properties>
-        <Property name="text" type="java.lang.String" value="EDIT"/>
+        <Property name="text" type="java.lang.String" value="PASAR ESTADO"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonEditarProductoActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pasarEstadoActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

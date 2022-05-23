@@ -33,16 +33,11 @@ public class panelPedido extends javax.swing.JPanel {
     private void initComponents() {
 
         EstadoPedido = new javax.swing.JLabel();
-        imgProducto = new javax.swing.JLabel();
         botonEliminarProducto = new javax.swing.JButton();
-        botonEditarProducto = new javax.swing.JButton();
+        pasarEstado = new javax.swing.JButton();
 
         EstadoPedido.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        EstadoPedido.setText("TITULO PRODUCTO");
-
-        imgProducto.setBackground(new java.awt.Color(204, 204, 255));
-        imgProducto.setText("IMAGEN PRODUCTO");
-        imgProducto.setOpaque(true);
+        EstadoPedido.setText("ESTADO PEDIDO");
 
         botonEliminarProducto.setText("DEL");
         botonEliminarProducto.addActionListener(new java.awt.event.ActionListener() {
@@ -51,10 +46,10 @@ public class panelPedido extends javax.swing.JPanel {
             }
         });
 
-        botonEditarProducto.setText("EDIT");
-        botonEditarProducto.addActionListener(new java.awt.event.ActionListener() {
+        pasarEstado.setText("PASAR ESTADO");
+        pasarEstado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonEditarProductoActionPerformed(evt);
+                pasarEstadoActionPerformed(evt);
             }
         });
 
@@ -64,27 +59,26 @@ public class panelPedido extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(EstadoPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(imgProducto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(EstadoPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(botonEliminarProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botonEditarProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 296, Short.MAX_VALUE)
+                        .addComponent(pasarEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(EstadoPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(imgProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(botonEliminarProducto, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                    .addComponent(botonEditarProducto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGap(148, 148, 148)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonEliminarProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pasarEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -92,19 +86,19 @@ public class panelPedido extends javax.swing.JPanel {
        eliminarProducto();
     }//GEN-LAST:event_botonEliminarProductoActionPerformed
 
-    private void botonEditarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarProductoActionPerformed
+    private void pasarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasarEstadoActionPerformed
        nuevoProducto();
-    }//GEN-LAST:event_botonEditarProductoActionPerformed
+    }//GEN-LAST:event_pasarEstadoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel EstadoPedido;
-    private javax.swing.JButton botonEditarProducto;
     private javax.swing.JButton botonEliminarProducto;
-    private javax.swing.JLabel imgProducto;
+    private javax.swing.JButton pasarEstado;
     // End of variables declaration//GEN-END:variables
 
     private void mostrarDatos() {
+        
         EstadoPedido.setText(pedido.getEstado());
         this.setBorder(new FlatButtonBorder());
     }
