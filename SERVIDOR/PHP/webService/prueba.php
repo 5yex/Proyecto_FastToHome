@@ -5,7 +5,7 @@ $img = "<img src= 'data:image;base64, $imgData' />";
 print($img);
 
 
-file_put_contents( "imagenes/20:57:11.774401800.png", base64_decode($imgData));
+file_put_contents( "imagenes/205711774401800.png", base64_decode($imgData));
 
 
 //$imgData = base64_encode(file_get_contents( "imagenes/prueba.png"));
