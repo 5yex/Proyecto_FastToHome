@@ -204,7 +204,7 @@ public class registroNegocio extends javax.swing.JFrame {
             
             int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
             
-            if (id_direccion != -1) {
+            if (id_direccion != -1 && id_direccion != -1) {
                 Categoria categoria = new Categoria();
                 categoria.setNombre(comboCategoria.getSelectedItem().toString());
                 int id_categoria = CategoriaDao.ObtenerIdPorNombre(categoria);
