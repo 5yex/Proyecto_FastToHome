@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import modelo.Negocio;
 import modelo.Pedido;
 import modelo.Peticion;
 
@@ -70,10 +71,10 @@ public class PedidoDao{
         return listaPedidosEnPreparacion;
     }
     
-    public static ArrayList<Pedido> seleccionTodosPedidos() {
+    public static ArrayList<Pedido> seleccionTodosPedidos(Negocio negocio) {
         SimpleDateFormat dateParser = new SimpleDateFormat("MM/dd/yy HH:mm:ss");
         
-        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_todos_pedidos", null));
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_todos_pedidos", negocio.getJSON()));
 
         ArrayList<Pedido> listaPedidosEnPreparacion = new ArrayList<Pedido>();
 
