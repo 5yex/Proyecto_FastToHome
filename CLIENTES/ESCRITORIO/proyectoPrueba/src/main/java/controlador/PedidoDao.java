@@ -78,6 +78,7 @@ public class PedidoDao{
 
         ArrayList<Pedido> listaPedidosEnPreparacion = new ArrayList<Pedido>();
 
+        if(listaPedidosEnPreparacion != null){
         for (int i = 0; i < jsonArray.size(); i++) {
             Pedido pedido = new Pedido();
             
@@ -102,6 +103,8 @@ public class PedidoDao{
 
         }
         return listaPedidosEnPreparacion;
+        }
+        return null;
     }
     
     public static boolean actualizarEstadoPedido(Pedido pedido){
