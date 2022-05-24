@@ -126,7 +126,7 @@ public class panelPedido extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void pasarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasarEstadoActionPerformed
-       
+        
     }//GEN-LAST:event_pasarEstadoActionPerformed
 
 
@@ -147,6 +147,25 @@ public class panelPedido extends javax.swing.JPanel {
         numPedido.setText(pedido.getTransporte());
         tipoTransporte.setText(pedido.getTransporte());
         estadoActualPedido.setText(pedido.getEstado());
+        
+        switch(pedido.getEstado()){
+            case "pendiente_pago":
+                pasarEstado.setEnabled(false);
+                break;
+            case "pagado":
+                pasarEstado.setEnabled(true);
+                break;
+            case "en_preparacion":
+                pasarEstado.setEnabled(true);
+                break;
+            case "enviando":
+                pasarEstado.setEnabled(false);
+                break;
+            case "recibido":
+                pasarEstado.setEnabled(false);
+                break;
+                
+        }
         
         this.setBorder(new FlatButtonBorder());
     }
