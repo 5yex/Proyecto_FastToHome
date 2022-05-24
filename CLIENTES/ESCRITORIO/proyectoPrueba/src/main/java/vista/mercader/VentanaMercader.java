@@ -31,7 +31,7 @@ public class VentanaMercader extends javax.swing.JFrame {
 
     private Usuario mercader;
     private Negocio negocio;
-    private boolean actualizarPedidos();
+    private boolean actualizarPedidos = false;
 //    private final ActionListener actualizarProductos = new ActionListener() {
 //        @Override
 //        public void actionPerformed(ActionEvent e) {
