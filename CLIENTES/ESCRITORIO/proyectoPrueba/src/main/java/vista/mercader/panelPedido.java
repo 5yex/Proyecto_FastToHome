@@ -137,7 +137,6 @@ public class panelPedido extends javax.swing.JPanel {
 
     private void pasarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasarEstadoActionPerformed
         PedidoDao.actualizarEstadoPedido(pedido);
-        System.out.println("vista.mercader.panelPedido.pasarEstadoActionPerformed()");
         mostrarDatos();
     }//GEN-LAST:event_pasarEstadoActionPerformed
 
