@@ -18,6 +18,16 @@ public class Producto {
     private double precio;
     private String descripcion;
     private int stock;
+    private int id_img;
+
+    public int getId_img() {
+        return id_img;
+    }
+
+    public void setId_img(int id_img) {
+        this.id_img = id_img;
+    }
+
 
     public Producto() {
     }
