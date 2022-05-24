@@ -231,6 +231,7 @@ public class VentanaMercader extends javax.swing.JFrame {
                     }
                 }
             });
+            hiloUpdate.start();
         }
         
         if (hiloUpdate != null && hiloUpdate.isInterrupted()) {
