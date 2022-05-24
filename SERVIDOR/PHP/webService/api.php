@@ -90,8 +90,7 @@ if (empty($_POST["DATA"])) {
             break;
         case 'obtener_id_categoria';
             obtenerCategoriaPorNombre(json_decode($peticion->datos));
-            break;
-        
+            break;     
         //imagenes
          case 'nueva_imagen';
             nuevaImagen(json_decode($peticion->datos));
