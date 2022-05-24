@@ -160,9 +160,9 @@ function actualizarProducto($datos){
         $producto->setId_imagen($datos->id_imagen);
 
         if ($producto->agregar()) {
-            mandarRespuesta(false, 'Se ha realizado la insercion de un producto');
+            mandarRespuesta(false, 'Se ha realizado la actualización de un producto');
         } else {
-            mandarRespuesta(true, 'Error en la inserccion del producto');
+            mandarRespuesta(true, 'Error en la actualización del producto');
         }
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
