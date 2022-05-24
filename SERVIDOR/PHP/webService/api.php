@@ -634,7 +634,7 @@ function nuevaImagen($datos){
     }
 }
 
-function obtenerImagenPorId(){
+function obtenerImagenPorId($datos){
     require_once '../modelo/Imagen.php';
     try {
         $imagen = new Imagen();
