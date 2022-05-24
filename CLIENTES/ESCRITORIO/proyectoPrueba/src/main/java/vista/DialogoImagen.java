@@ -122,6 +122,7 @@ public class DialogoImagen extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+           
             JFileChooser jf = new JFileChooser();
             jf.setDialogTitle("Seleccionar Imagen");
             jf.setFileFilter(new FileNameExtensionFilter("Imagenes PNG", "png"));
@@ -130,7 +131,8 @@ public class DialogoImagen extends javax.swing.JDialog {
                 imagenSeleccionada = jf.getSelectedFile();
                 jLabel1.setIcon(new ImageIcon(new ImageIcon(imagenSeleccionada.getPath()).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
             }            
-            b64_imagen = imagenesUtil.imagenABase64(imagenSeleccionada);   
+            b64_imagen = imagenesUtil.imagenABase64(imagenSeleccionada); 
+            jButton2.setEnabled(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
