@@ -638,7 +638,7 @@ function obtenerImagenPorId(){
     require_once '../modelo/Imagen.php';
     try {
         $imagen = new Imagen();
-        $direccion->setId_direccion($datos->id_direccion);
+        $imagen->setId_imagen($datos->id);
 
         $respuesta = $direccion->obtenerDireccionPorId();
         if ($respuesta) {
