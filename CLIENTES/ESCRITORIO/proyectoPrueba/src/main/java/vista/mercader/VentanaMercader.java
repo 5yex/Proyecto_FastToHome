@@ -55,10 +55,6 @@ public class VentanaMercader extends javax.swing.JFrame {
                     mostrarPedidos();
                     Thread.sleep(1000);
                 }
-                if(selección == "mostrarProductos"){
-                    mostrarPedidos();
-                    Thread.sleep(5000);
-                }
             } catch (InterruptedException ex) {
             }
         }
