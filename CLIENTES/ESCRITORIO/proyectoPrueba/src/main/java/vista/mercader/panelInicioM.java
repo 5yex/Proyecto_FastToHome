@@ -4,6 +4,7 @@
  */
 package vista.mercader;
 
+import controlador.ImagenDao;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import modelo.Negocio;
@@ -27,7 +28,8 @@ public class panelInicioM extends javax.swing.JPanel {
     private void cargaInicial() {
         DescripcionNegocio.setText(negocio.getDescripcion());
         nombreNegocio.setText(negocio.getNombre());
-        img.setIcon(new ImageIcon(new ImageIcon(imagenSeleccionada.getPath()).getImage().getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_DEFAULT)));
+        imagen imagen = new 
+        img.setIcon(new ImageIcon(ImagenDao.obtenerImagenPorId(new im).getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_DEFAULT)));
     }
 
     /**
