@@ -52,8 +52,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         public void run() {
             try {
                 Thread.sleep(1000);
-                
-                
+
             } catch (InterruptedException ex) {
             }
         }
@@ -221,24 +220,25 @@ public class VentanaMercader extends javax.swing.JFrame {
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 0, 0));
 
         contenido.add(new panelInicioM(negocio));
-        contenido.setComponentPopupMenu(null);
-
         contenido.revalidate();
         contenido.repaint();
     }
 
     private void mostrarPedidos() {
+        ActionListener actualizarPedidos = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.err.println("MOSTRANDO LOS PEDIDOS");
+                mostrarPedidos();
+            }
+        };
         selección = "mostrarPedidos";
         contenido.removeAll();
-
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
-
         ArrayList<Pedido> pedidos = PedidoDao.seleccionTodosPedidos(negocio);
         for (Pedido pedido : pedidos) {
-            contenido.add(new panelPedido(pedido, actualizarPedidos));
+            contenido.add(new panelPedido(pedido,actualizarPedidos));
         }
-
-        contenido.setComponentPopupMenu(popupProductos);
         contenido.revalidate();
         contenido.repaint();
 
