@@ -51,9 +51,9 @@ public class VentanaMercader extends javax.swing.JFrame {
         @Override
         public void run() {
             try {
-                if(selección == "mostrarPedidos"){
+
                     mostrarPedidos();
-                }
+
                 System.out.println(".run() PEDIDOS ACTUALIZADOS");
                 Thread.sleep(1000);
             } catch (InterruptedException ex) {
