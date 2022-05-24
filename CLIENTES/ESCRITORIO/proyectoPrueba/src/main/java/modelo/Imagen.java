@@ -24,6 +24,10 @@ public class Imagen {
     private String b64_imagen;
     private String url_imagen;
 
+    public Imagen(int id) {
+        this.id = id;
+    }
+
     public int getId() {
         return id;
     }
