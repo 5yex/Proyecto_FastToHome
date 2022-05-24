@@ -545,7 +545,7 @@ function actualizarEstadoPedido($datos){
         $pedido->setId_negocio($datos->id_negocio);
         $pedido->setEstado($datos->estado);
         
-        if ($pedido->obtenerPedidosNegocioEnPreparacion()) {
+        if ($pedido->actualizacionEstadoPedido()) {
             mandarRespuesta(false, "Se actualizó el estado del pedido");
         } else {
             mandarRespuesta(true, 'Error en la actualización del estado del pedido');
