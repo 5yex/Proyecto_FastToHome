@@ -34,7 +34,7 @@ import util.imagenesUtil;
 public class DialogoImagen extends javax.swing.JDialog {
 
     private File imagenSeleccionada;
-    private Imagen imagenNueva = new Imagen();
+    private String b64_imagen;
     private Imagen imagen;
 
     /**
@@ -130,11 +130,11 @@ public class DialogoImagen extends javax.swing.JDialog {
                 imagenSeleccionada = jf.getSelectedFile();
                 jLabel1.setIcon(new ImageIcon(new ImageIcon(imagenSeleccionada.getPath()).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
             }            
-            imagenNueva.setB64_imagen(imagenesUtil.imagenABase64(imagenSeleccionada));   
+            b64_imagen = setB64_imagen(imagenesUtil.imagenABase64(imagenSeleccionada));   
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        imagen = imagenNueva;
+        imagen.setB64_imagen(b64_imagen);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
