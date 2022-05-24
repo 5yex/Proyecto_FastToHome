@@ -99,11 +99,10 @@ public class PedidoDao {
                 listaPedidosEnPreparacion.add(pedido);
 
             }
-            return listaPedidosEnPreparacion;
-        } else {
+            } else {
             System.out.println("no hay ningun pedido");
         }
-        return null;
+            return listaPedidosEnPreparacion;
     }
 
     public static boolean actualizarEstadoPedido(Pedido pedido) {
