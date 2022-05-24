@@ -33,7 +33,7 @@ public class panelInicioM extends javax.swing.JPanel {
         DescripcionNegocio.setText(negocio.getDescripcion());
         nombreNegocio.setText(negocio.getNombre());
         ImageIcon image = imagenesUtil.base64AImagen(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())));
-        img.setIcon(new ImageIcon(image.getImage().getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_DEFAULT)));
+        img.setIcon(new ImageIcon(image.getImage().getScaledInstance(img.getPreferredSize().width, img.getPreferredSize().height, Image.SCALE_DEFAULT)));
     }
 
     /**
