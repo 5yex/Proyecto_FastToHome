@@ -200,6 +200,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
 
     private void mostrarPanelInicio() {
+        pararActualizacionPedidos()
         actualizarPedidos = false;
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 0, 0));
