@@ -75,8 +75,11 @@ class Imagen extends Conexion {
         $sentencia = $this->dblink->prepare($sql);
         $id = $this->getId_imagen();
         $sentencia->bindParam(":id", $id);
-
         $sentencia->execute();
+        $url = $sentencia->execute();
+        
+        
+        
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
 
