@@ -197,18 +197,14 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_botonOpcionesMouseClicked
 
     private void mostrarProductos() {
-
+        selección = "mostrarProductos";
         contenido.removeAll();
-
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
-
         contenido.add(new panelProductoNuevo());
-
         ArrayList<Producto> productos = ProductoDao.selecciónProductosNegocio(negocio);
         for (Producto producto : productos) {
             contenido.add(new panelProducto(producto));
         }
-
         contenido.setComponentPopupMenu(popupProductos);
         contenido.revalidate();
         contenido.repaint();
