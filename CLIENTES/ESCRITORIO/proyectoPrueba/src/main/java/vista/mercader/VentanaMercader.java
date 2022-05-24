@@ -53,7 +53,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         mercader = user;
         negocio = NegocioDao.negocioDeMercader(user);
         mostrarPanelInicio();
-
+        
     }
 
     /**
@@ -185,6 +185,8 @@ public class VentanaMercader extends javax.swing.JFrame {
     
     
     private void mostrarProductos() {
+        
+        
         
         contenido.removeAll();
 
