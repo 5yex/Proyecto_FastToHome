@@ -95,7 +95,9 @@ if (empty($_POST["DATA"])) {
         case 'nueva_imagen';
             nuevaImagen(json_decode($peticion->datos));
             break;
-        
+        case 'obtener_imagen_id';
+            obtenerImagenPorId(json_decode($peticion->datos));
+            break;
         
         //Mandar Repuesta
         default;
