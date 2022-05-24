@@ -29,5 +29,6 @@ public class ImagenDao {
     
     public static ImageIcon obtenerImagenPorId(Imagen imagen) {
         String imgB64 = gestion.consultaSeleccionUnico(new Peticion("obtener_imagen_id", imagen.getJSON())).get("last_id").getAsString();
+        
     }
 }

@@ -32,14 +32,14 @@ import org.apache.commons.io.IOUtils;
  */
 public class DialogoImagen extends javax.swing.JDialog {
     private File imagenSeleccionada;
-    private Imagen imagen;
+    private Imagen imagenNueva;
     /**
      * Creates new form DialogoImagen
      */
     public DialogoImagen(java.awt.Frame parent, boolean modal, Imagen imagen) {
         super(parent, modal);
         initComponents();
-        this.imagen = imagen;
+        this.imagenNueva = imagen;
     }
 
     /**
@@ -129,7 +129,7 @@ public class DialogoImagen extends javax.swing.JDialog {
             }   Imagen img = new Imagen();
             byte[] imageBytes = IOUtils.toByteArray(new FileInputStream(imagenSeleccionada));
             String base64 = Base64.getEncoder().encodeToString(imageBytes);
-            imagen.setB64_imagen(base64);
+            imagenNueva.setB64_imagen(base64);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(DialogoImagen.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
@@ -138,7 +138,7 @@ public class DialogoImagen extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
