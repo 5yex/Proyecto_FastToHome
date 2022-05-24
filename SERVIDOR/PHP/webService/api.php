@@ -159,10 +159,26 @@ function actualizarProducto($datos){
         $producto->setStock($datos->stock);
         $producto->setId_imagen($datos->id_imagen);
 
-        if ($producto->agregar()) {
+        if ($producto->actualizarProducto()) {
             mandarRespuesta(false, 'Se ha realizado la actualización de un producto');
         } else {
             mandarRespuesta(true, 'Error en la actualización del producto');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
+function borrarProducto($datos){
+    require_once '../modelo/Producto.php';
+    try {
+        $producto = new Producto();
+        $producto->setId_producto($datos->id_producto);
+
+        if ($producto->borrarProducto()) {
+            mandarRespuesta(false, 'Se ha realizado borrado el producto');
+        } else {
+            mandarRespuesta(true, 'Error en el borrado del producto');
         }
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
