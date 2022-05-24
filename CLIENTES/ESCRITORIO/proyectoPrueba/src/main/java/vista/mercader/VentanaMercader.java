@@ -15,6 +15,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JLabel;
 import javax.swing.JMenu;
 import modelo.Negocio;
 import modelo.Pedido;
@@ -250,9 +251,15 @@ public class VentanaMercader extends javax.swing.JFrame {
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
         ArrayList<Pedido> pedidos = PedidoDao.seleccionTodosPedidos(negocio);
-        for (Pedido pedido : pedidos) {
+        if(pedidos != null){
+            for (Pedido pedido : pedidos) {
             contenido.add(new panelPedido(pedido, actualizarPedidos));
         }
+        }else{
+            contenido.add(new JLabel("NO HAY PEDIDOS"));
+        }
+        
+        
         contenido.revalidate();
         contenido.repaint();
 
