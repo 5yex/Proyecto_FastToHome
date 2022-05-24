@@ -225,7 +225,6 @@ public class registroNegocio extends javax.swing.JFrame {
                 negocio.setId_direccion(id_direccion);
                 negocio.setId_img(id_imagen);
                 return NegocioDao.nuevoNegocio(negocio);
-
             }
         } catch (NumberFormatException ex) {
             error.setText("Rellena correctamente los campos numéricos");

@@ -72,9 +72,7 @@ class Imagen extends Conexion {
 
     public function obtenerImagenPorId() {
         $sql = "SELECT url FROM imagenes WHERE id = :id";
-
         $sentencia = $this->dblink->prepare($sql);
-
         $id = $this->getId_imagen();
         $sentencia->bindParam(":id", $id);
 
