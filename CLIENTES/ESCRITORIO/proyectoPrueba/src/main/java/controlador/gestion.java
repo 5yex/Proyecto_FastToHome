@@ -160,7 +160,7 @@ public class gestion {
     }
     
     
-    public static JsonArray consultaSeleccionImagen(Peticion peticion) {
+    public static String consultaSeleccionImagen(Peticion peticion) {
         String json = null;
         try {
             CloseableHttpClient client = HttpClients.createDefault();
@@ -194,7 +194,7 @@ public class gestion {
                     String errorMsg = jsonObject.get("datos").getAsString();
                     throw new Exception(errorMsg);
                 } else {
-                    return jsonObject.get("datos").getAsJsonArray();
+                    return jsonObject.get("datos").getAsString();
                 }
             }
             return null;
