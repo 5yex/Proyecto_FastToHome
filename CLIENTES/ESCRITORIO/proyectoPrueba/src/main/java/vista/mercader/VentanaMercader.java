@@ -35,7 +35,7 @@ public class VentanaMercader extends javax.swing.JFrame {
             mostrarProductos();
         }
     };
-    
+
     private final ActionListener actualizarPedidos = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -44,6 +44,21 @@ public class VentanaMercader extends javax.swing.JFrame {
         }
     };
 
+    Thread hiloUpdate = new Thread(new Runnable() {
+        public void run() {
+//        try {
+//            while(ejecutar){
+//               metodoallamar();
+//               Thread.sleep(10000);
+//            }
+//
+//        } catch (InterruptedException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+
+        }
+    });
 
     /**
      * Creates new form VentanaPrincipal
@@ -53,7 +68,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         mercader = user;
         negocio = NegocioDao.negocioDeMercader(user);
         mostrarPanelInicio();
-        
+
     }
 
     /**
@@ -182,18 +197,14 @@ public class VentanaMercader extends javax.swing.JFrame {
         mostrarPedidos();
     }//GEN-LAST:event_botonOpcionesMouseClicked
 
-    
-    
     private void mostrarProductos() {
-        
-        
-        
+
         contenido.removeAll();
 
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
 
         contenido.add(new panelProductoNuevo());
-        
+
         ArrayList<Producto> productos = ProductoDao.selecciónProductosNegocio(negocio);
         for (Producto producto : productos) {
             contenido.add(new panelProducto(producto));
@@ -203,25 +214,24 @@ public class VentanaMercader extends javax.swing.JFrame {
         contenido.revalidate();
         contenido.repaint();
     }
-    
-     private void mostrarPanelInicio() {
+
+    private void mostrarPanelInicio() {
         contenido.removeAll();
-        
+
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 0, 0));
-        
+
         contenido.add(new panelInicioM(negocio));
         contenido.setComponentPopupMenu(null);
 
         contenido.revalidate();
         contenido.repaint();
     }
-    
+
     private void mostrarPedidos() {
         contenido.removeAll();
 
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
 
-        
         ArrayList<Pedido> pedidos = PedidoDao.seleccionTodosPedidos(negocio);
         for (Pedido pedido : pedidos) {
             contenido.add(new panelPedido(pedido, actualizarPedidos));
@@ -230,8 +240,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         contenido.setComponentPopupMenu(popupProductos);
         contenido.revalidate();
         contenido.repaint();
-        
-        
+
     }
 
 
@@ -247,5 +256,4 @@ public class VentanaMercader extends javax.swing.JFrame {
     private javax.swing.JPopupMenu popupProductos;
     // End of variables declaration//GEN-END:variables
 
-    
 }
