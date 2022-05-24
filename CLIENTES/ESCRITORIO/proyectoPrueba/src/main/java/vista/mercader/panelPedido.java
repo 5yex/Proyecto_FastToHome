@@ -34,7 +34,7 @@ public class panelPedido extends javax.swing.JPanel {
 
         transporte = new javax.swing.JLabel();
         pasarEstado = new javax.swing.JButton();
-        EstadoPedido1 = new javax.swing.JLabel();
+        estadoPedido = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
         idPedido = new javax.swing.JLabel();
@@ -49,8 +49,8 @@ public class panelPedido extends javax.swing.JPanel {
             }
         });
 
-        EstadoPedido1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        EstadoPedido1.setText("ESTADO PEDIDO");
+        estadoPedido.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        estadoPedido.setText("ESTADO PEDIDO");
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -78,7 +78,7 @@ public class panelPedido extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(transporte, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                        .addComponent(EstadoPedido1)))
+                        .addComponent(estadoPedido)))
                 .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
@@ -86,7 +86,7 @@ public class panelPedido extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(EstadoPedido1)
+                    .addComponent(estadoPedido)
                     .addComponent(transporte)
                     .addComponent(idPedido))
                 .addGap(34, 34, 34)
@@ -103,7 +103,7 @@ public class panelPedido extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel EstadoPedido1;
+    private javax.swing.JLabel estadoPedido;
     private javax.swing.JLabel idPedido;
     private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
