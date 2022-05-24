@@ -643,7 +643,7 @@ function obtenerImagenPorId($datos){
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
-            mandarRespuesta(true, 'Error en obtener la dirección');
+            mandarRespuesta(true, 'Error en obtener la Imagen');
         }
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
