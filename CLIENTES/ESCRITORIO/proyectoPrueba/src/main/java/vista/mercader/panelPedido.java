@@ -37,7 +37,7 @@ public class panelPedido extends javax.swing.JPanel {
         tituloEstadoPedido = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
-        idPedido = new javax.swing.JLabel();
+        tituloIdPedido = new javax.swing.JLabel();
         numPedido = new javax.swing.JLabel();
         tipoTransporte = new javax.swing.JLabel();
         estadoActualPedido = new javax.swing.JLabel();
@@ -62,8 +62,8 @@ public class panelPedido extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jList1);
 
-        idPedido.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        idPedido.setText("ID PEDIDO:");
+        tituloIdPedido.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tituloIdPedido.setText("ID PEDIDO:");
 
         numPedido.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         numPedido.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -95,7 +95,7 @@ public class panelPedido extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(idPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tituloIdPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(transporte, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
@@ -109,7 +109,7 @@ public class panelPedido extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tituloEstadoPedido)
                     .addComponent(transporte)
-                    .addComponent(idPedido))
+                    .addComponent(tituloIdPedido))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -134,13 +134,13 @@ public class panelPedido extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel estadoActualPedido;
-    private javax.swing.JLabel idPedido;
     private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel numPedido;
     private javax.swing.JButton pasarEstado;
     private javax.swing.JLabel tipoTransporte;
     private javax.swing.JLabel tituloEstadoPedido;
+    private javax.swing.JLabel tituloIdPedido;
     private javax.swing.JLabel transporte;
     // End of variables declaration//GEN-END:variables
 
