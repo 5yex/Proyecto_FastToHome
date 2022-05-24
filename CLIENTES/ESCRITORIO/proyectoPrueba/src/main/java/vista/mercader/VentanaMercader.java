@@ -199,7 +199,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
 
     private void mostrarPanelInicio() {
-        hiloUpdate.interrupt();
+        interrumpirHilo();
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 0, 0));
         contenido.add(new panelInicioM(negocio));
@@ -207,20 +207,27 @@ public class VentanaMercader extends javax.swing.JFrame {
         contenido.repaint();
     }
 
+    private void interrumpirHilo() {
+        if (hiloUpdate != null) {
+            hiloUpdate.interrupt();
+        }
+
+    }
+
     private void crearHiloActualizacionDeProductos() {
-            hiloUpdate = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                            mostrarPedidos();
-                            Thread.sleep(1000);
-                        System.out.println(".run() PEDIDOS ACTUALIZADOS");
-                    } catch (InterruptedException ex) {
-                        ex.printStackTrace();
-                    }
+        hiloUpdate = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    mostrarPedidos();
+                    Thread.sleep(1000);
+                    System.out.println(".run() PEDIDOS ACTUALIZADOS");
+                } catch (InterruptedException ex) {
+                    ex.printStackTrace();
                 }
-            });
-            hiloUpdate.start();
+            }
+        });
+        hiloUpdate.start();
     }
 
     private void mostrarPedidos() {
