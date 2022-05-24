@@ -13,6 +13,8 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JMenu;
 import modelo.Negocio;
 import modelo.Pedido;
@@ -29,25 +31,31 @@ public class VentanaMercader extends javax.swing.JFrame {
 
     private Usuario mercader;
     private Negocio negocio;
-    private final ActionListener actualizarProductos = new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            mostrarProductos();
-        }
-    };
-
-    private final ActionListener actualizarPedidos = new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            System.err.println("MOSTRANDO LOS PEDIDOS");
-            mostrarPedidos();
-        }
-    };
+    private String selección;
+//    private final ActionListener actualizarProductos = new ActionListener() {
+//        @Override
+//        public void actionPerformed(ActionEvent e) {
+//            mostrarProductos();
+//        }
+//    };
+//
+//    private final ActionListener actualizarPedidos = new ActionListener() {
+//        @Override
+//        public void actionPerformed(ActionEvent e) {
+//            System.err.println("MOSTRANDO LOS PEDIDOS");
+//            mostrarPedidos();
+//        }
+//    };
 
     Thread hiloUpdate = new Thread(new Runnable() {
+        @Override
         public void run() {
-
-
+            try {
+                Thread.sleep(1000);
+                
+                
+            } catch (InterruptedException ex) {
+            }
         }
     });
 
@@ -59,7 +67,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         mercader = user;
         negocio = NegocioDao.negocioDeMercader(user);
         mostrarPanelInicio();
-        hiloUpdate.run();
+        hiloUpdate.start();
 
     }
 
