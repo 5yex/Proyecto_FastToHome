@@ -157,7 +157,7 @@ public class panelPedido extends javax.swing.JPanel {
         pasarEstado.addActionListener(actualizarPedido);
         
         pedido.toString();
-        numPedido.setText(pedido.getTransporte());
+        numPedido.setText(pedido.getId_pedido());
         tipoTransporte.setText(pedido.getTransporte());
         estadoActualPedido.setText(pedido.getEstado());
         
