@@ -25,6 +25,7 @@ import javax.swing.UIManager;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import modelo.Imagen;
 import org.apache.commons.io.IOUtils;
+import util.imagenesUtil;
 
 /**
  *
@@ -119,7 +120,6 @@ public class DialogoImagen extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        try {
             JFileChooser jf = new JFileChooser();
             jf.setDialogTitle("Seleccionar Imagen");
             jf.setFileFilter(new FileNameExtensionFilter("Imagenes PNG", "png"));
@@ -127,15 +127,8 @@ public class DialogoImagen extends javax.swing.JDialog {
             if (seleccion == JFileChooser.APPROVE_OPTION) {
                 imagenSeleccionada = jf.getSelectedFile();
                 jLabel1.setIcon(new ImageIcon(new ImageIcon(imagenSeleccionada.getPath()).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
-            }
-            byte[] imageBytes = IOUtils.toByteArray(new FileInputStream(imagenSeleccionada));
-            String base64 = Base64.getEncoder().encodeToString(imageBytes);
-            imagenNueva.setB64_imagen(base64);
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(DialogoImagen.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(DialogoImagen.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            }            
+            imagenNueva.setB64_imagen(imagenesUtil.imagenABase64(imagenSeleccionada));   
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
