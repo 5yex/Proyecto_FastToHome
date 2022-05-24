@@ -71,7 +71,9 @@ public class DialogoImagen extends javax.swing.JDialog {
             }
         });
 
+        jLabel1.setBackground(new java.awt.Color(219, 219, 255));
         jLabel1.setBorder(new FlatButtonBorder());
+        jLabel1.setOpaque(true);
 
         jButton2.setText("ACEPTAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
