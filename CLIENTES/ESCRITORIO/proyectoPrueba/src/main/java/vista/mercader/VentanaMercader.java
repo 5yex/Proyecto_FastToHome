@@ -18,6 +18,7 @@ import modelo.Negocio;
 import modelo.Pedido;
 import modelo.Producto;
 import modelo.Usuario;
+import org.apache.http.impl.conn.SystemDefaultRoutePlanner;
 import util.WrapLayout;
 
 /**
@@ -38,6 +39,8 @@ public class VentanaMercader extends javax.swing.JFrame {
     private final ActionListener actualizarPedidos = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
+            System.err.println("MOSTRANDO LOS PEDIDOS");
+            
             mostrarPedidos();
         }
     };
