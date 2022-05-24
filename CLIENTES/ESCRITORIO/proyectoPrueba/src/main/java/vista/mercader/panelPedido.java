@@ -137,10 +137,11 @@ public class panelPedido extends javax.swing.JPanel {
 
     private void pasarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasarEstadoActionPerformed
         if(PedidoDao.actualizarEstadoPedido(pedido)){
-        mostrarDatos();
         }else{
             System.out.println("nO SE PUEDE VISUALIZAR EL NUEVO ESTADO");
         }
+                mostrarDatos();
+
     }//GEN-LAST:event_pasarEstadoActionPerformed
 
 
