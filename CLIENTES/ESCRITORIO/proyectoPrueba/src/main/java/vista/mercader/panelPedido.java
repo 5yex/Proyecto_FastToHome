@@ -20,12 +20,7 @@ public class panelPedido extends javax.swing.JPanel {
     /**
      * Creates new form producto
      */
-    public panelPedido(Pedido pedido) {
-        initComponents();
-        this.pedido = pedido;
-        mostrarDatos();
-    }
-    
+
     public panelPedido(Pedido pedido, ActionListener actualizarPedido) {
         initComponents();
         this.pedido = pedido;
