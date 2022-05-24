@@ -31,7 +31,6 @@ public class VentanaMercader extends javax.swing.JFrame {
 
     private Usuario mercader;
     private Negocio negocio;
-    private boolean actualizarPedidos = false;
 //    private final ActionListener actualizarProductos = new ActionListener() {
 //        @Override
 //        public void actionPerformed(ActionEvent e) {
@@ -186,7 +185,6 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_botonOpcionesMouseClicked
 
     private void mostrarProductos() {
-        actualizarPedidos = false;
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
         contenido.add(new panelProductoNuevo());
@@ -200,7 +198,6 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
 
     private void mostrarPanelInicio() {
-        actualizarPedidos = false;
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 0, 0));
         contenido.add(new panelInicioM(negocio));
@@ -213,10 +210,8 @@ public class VentanaMercader extends javax.swing.JFrame {
                 @Override
                 public void run() {
                     try {
-                        while (actualizarPedidos) {
                             mostrarPedidos();
                             Thread.sleep(1000);
-                        }
                         System.out.println(".run() PEDIDOS ACTUALIZADOS");
                     } catch (InterruptedException ex) {
                         ex.printStackTrace();
@@ -227,7 +222,6 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
 
     private void mostrarPedidos() {
-        actualizarPedidos = true;
         ActionListener actualizarPedidos = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
