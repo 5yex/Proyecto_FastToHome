@@ -154,6 +154,8 @@ public class panelPedido extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void mostrarDatos() {
+        pasarEstado.setAction(actualizarPedido);
+        
         pedido.toString();
         numPedido.setText(pedido.getTransporte());
         tipoTransporte.setText(pedido.getTransporte());
