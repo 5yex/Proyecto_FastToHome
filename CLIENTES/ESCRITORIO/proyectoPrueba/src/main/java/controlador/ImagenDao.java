@@ -25,4 +25,9 @@ public class ImagenDao {
         imagen.setUrl_imagen("imagenes/"+new Date().getTime()+".png");
         return gestion.consultaSeleccionUnico(new Peticion("nueva_imagen", imagen.getJSON())).get("last_id").getAsInt();
     }
+    
+    public static int obtenerImagenPorId(Imagen imagen) {
+        imagen.setUrl_imagen("imagenes/"+new Date().getTime()+".png");
+        return gestion.consultaSeleccionUnico(new Peticion("nueva_imagen", imagen.getJSON())).get("last_id").getAsInt();
+    }
 }
