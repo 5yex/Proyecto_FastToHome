@@ -4,8 +4,12 @@
  */
 package controlador;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import modelo.Categoria;
 import modelo.Direccion;
@@ -27,8 +31,8 @@ public class ImagenDao {
         return gestion.consultaSeleccionUnico(new Peticion("nueva_imagen", imagen.getJSON())).get("last_id").getAsInt();
     }
     
-    public static ImageIcon obtenerImagenPorId(Imagen imagen) {
-        String imgB64 = gestion.consultaSeleccionUnico(new Peticion("obtener_imagen_id", imagen.getJSON())).get("last_id").getAsString();
-        
+    public static String obtenerImagenPorId(Imagen imagen) {
+       return gestion.consultaSeleccionUnico(new Peticion("obtener_imagen_id", imagen.getJSON())).get("last_id").getAsString();
+            //File imgTmp = File.createTempFile("img"+new Date().getTime(), ".png");
     }
 }
