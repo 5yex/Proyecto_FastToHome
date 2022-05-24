@@ -53,7 +53,6 @@ class Imagen extends Conexion {
             if ($resultado != 1) {
                 return FALSE;
             }
-            //Insertó correctamente
             return TRUE;
         }
         return false;
