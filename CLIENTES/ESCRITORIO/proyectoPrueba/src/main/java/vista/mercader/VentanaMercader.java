@@ -252,7 +252,6 @@ public class VentanaMercader extends javax.swing.JFrame {
         for (Pedido pedido : pedidos) {
             contenido.add(new panelPedido(pedido, actualizarPedidos));
         }
-        contenido.revalidate();
         contenido.updateUI();
 
     }
