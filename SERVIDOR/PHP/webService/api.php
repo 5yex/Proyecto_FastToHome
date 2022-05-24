@@ -542,7 +542,7 @@ function actualizarEstadoPedido($datos){
     
     try{
         $pedido = new Pedido();
-        $pedido->setId_negocio($datos->id_negocio);
+        $pedido->setId_pedido($datos->id_pedido);
         $pedido->setEstado($datos->estado);
         
         if ($pedido->actualizacionEstadoPedido()) {
