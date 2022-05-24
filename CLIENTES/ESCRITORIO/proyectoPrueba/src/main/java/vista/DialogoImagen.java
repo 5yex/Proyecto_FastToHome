@@ -31,8 +31,9 @@ import org.apache.commons.io.IOUtils;
  * @author jmcbg
  */
 public class DialogoImagen extends javax.swing.JDialog {
+
     private File imagenSeleccionada;
-    private Imagen imagenNueva;
+    private Imagen imagenNueva = new Imagen();
     private Imagen imagen;
 
     /**
@@ -128,7 +129,7 @@ public class DialogoImagen extends javax.swing.JDialog {
             if (seleccion == JFileChooser.APPROVE_OPTION) {
                 imagenSeleccionada = jf.getSelectedFile();
                 jLabel1.setIcon(new ImageIcon(new ImageIcon(imagenSeleccionada.getPath()).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
-            }   Imagen img = new Imagen();
+            }
             byte[] imageBytes = IOUtils.toByteArray(new FileInputStream(imagenSeleccionada));
             String base64 = Base64.getEncoder().encodeToString(imageBytes);
             imagenNueva.setB64_imagen(base64);
@@ -136,18 +137,17 @@ public class DialogoImagen extends javax.swing.JDialog {
             Logger.getLogger(DialogoImagen.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(DialogoImagen.class.getName()).log(Level.SEVERE, null, ex);
-        } 
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
+        imagen = imagenNueva;
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
