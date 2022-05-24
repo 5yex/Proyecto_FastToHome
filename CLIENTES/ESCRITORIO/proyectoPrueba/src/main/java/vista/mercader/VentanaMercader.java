@@ -38,7 +38,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     private ActionListener actualizarPedidos = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            mostrarPedididos();
+            mostrarPedidos();
         }
     };
 
@@ -176,7 +176,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_botonInfoMouseClicked
 
     private void botonOpcionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonOpcionesMouseClicked
-        mostrarPedididos();
+        mostrarPedidos();
     }//GEN-LAST:event_botonOpcionesMouseClicked
 
     
@@ -211,7 +211,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         contenido.repaint();
     }
     
-    private void mostrarPedididos() {
+    private void mostrarPedidos() {
         
         contenido.removeAll();
 
