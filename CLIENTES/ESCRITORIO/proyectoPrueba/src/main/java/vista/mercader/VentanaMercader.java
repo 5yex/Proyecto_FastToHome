@@ -46,16 +46,7 @@ public class VentanaMercader extends javax.swing.JFrame {
 
     Thread hiloUpdate = new Thread(new Runnable() {
         public void run() {
-//        try {
-//            while(ejecutar){
-//               metodoallamar();
-//               Thread.sleep(10000);
-//            }
-//
-//        } catch (InterruptedException e) {
-//            // TODO Auto-generated catch block
-//            e.printStackTrace();
-//        }
+
 
         }
     });
@@ -68,6 +59,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         mercader = user;
         negocio = NegocioDao.negocioDeMercader(user);
         mostrarPanelInicio();
+        hiloUpdate.run();
 
     }
 
