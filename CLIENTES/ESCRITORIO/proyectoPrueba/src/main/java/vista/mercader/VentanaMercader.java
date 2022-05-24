@@ -193,6 +193,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         for (Producto producto : productos) {
             contenido.add(new panelProducto(producto));
         }
+        //no se
         contenido.setComponentPopupMenu(popupProductos);
         contenido.revalidate();
         contenido.repaint();
