@@ -16,6 +16,7 @@ import modelo.Producto;
  */
 public class panelPedido extends javax.swing.JPanel {
     private Pedido pedido;
+    private ActionListener actualizarPedido;
     /**
      * Creates new form producto
      */
@@ -28,6 +29,7 @@ public class panelPedido extends javax.swing.JPanel {
     public panelPedido(Pedido pedido, ActionListener actualizarPedido) {
         initComponents();
         this.pedido = pedido;
+        this.actualizarPedido = actualizarPedido;
         mostrarDatos();
     }
 
