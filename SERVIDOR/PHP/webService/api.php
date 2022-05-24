@@ -44,6 +44,8 @@ if (empty($_POST["DATA"])) {
         case 'actualizar_producto';
             actualizarProducto(json_decode($peticion->datos));
             break;
+        case 'borrar_producto';
+            borrarProducto(json_decode($peticion->datos));
         //Casos dirección
         case 'nueva_direccion';
             nuevaDireccion(json_decode($peticion->datos));
@@ -91,7 +93,7 @@ if (empty($_POST["DATA"])) {
             break;
         
         //imagenes
-        case 'nueva_imagen';
+         case 'nueva_imagen';
             nuevaImagen(json_decode($peticion->datos));
             break;
         
