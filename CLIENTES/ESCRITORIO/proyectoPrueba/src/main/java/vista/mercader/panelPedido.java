@@ -98,7 +98,7 @@ public class panelPedido extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void pasarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasarEstadoActionPerformed
-       nuevoProducto();
+       //nuevoProducto();
     }//GEN-LAST:event_pasarEstadoActionPerformed
 
 
@@ -115,14 +115,5 @@ public class panelPedido extends javax.swing.JPanel {
         pedido.toString();
         transporte.setText(pedido.getTransporte());
         this.setBorder(new FlatButtonBorder());
-    }
-
-    private void eliminarProducto() {
-        
-    }
-
-    private void nuevoProducto() {
-      
-        
     }
 }
