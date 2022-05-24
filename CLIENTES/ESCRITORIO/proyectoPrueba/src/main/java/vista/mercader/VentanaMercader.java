@@ -31,7 +31,7 @@ public class VentanaMercader extends javax.swing.JFrame {
 
     private Usuario mercader;
     private Negocio negocio;
-    private String selección;
+    private boolean actualizarPedidos();
 //    private final ActionListener actualizarProductos = new ActionListener() {
 //        @Override
 //        public void actionPerformed(ActionEvent e) {
@@ -50,14 +50,15 @@ public class VentanaMercader extends javax.swing.JFrame {
     Thread hiloUpdate = new Thread(new Runnable() {
         @Override
         public void run() {
-//            try {
-
+            try {
+                while()
                     mostrarPedidos();
 
                 System.out.println(".run() PEDIDOS ACTUALIZADOS");
-//            } catch (InterruptedException ex) {
-//                ex.printStackTrace();
-//            }
+                Thread.sleep(1000);
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
         }
     });
 
