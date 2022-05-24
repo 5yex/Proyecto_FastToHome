@@ -40,10 +40,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             System.err.println("MOSTRANDO LOS PEDIDOS");
-            
             mostrarPedidos();
         }
     };
+
 
     /**
      * Creates new form VentanaPrincipal
