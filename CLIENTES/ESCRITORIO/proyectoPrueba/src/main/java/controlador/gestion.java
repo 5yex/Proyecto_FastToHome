@@ -113,8 +113,51 @@ public class gestion {
             return null;
         }
     }
-   
     
+    public static JsonArray consultaSeleccion(Peticion peticion) {
+        String json = null;
+        try {
+            CloseableHttpClient client = HttpClients.createDefault();
+            HttpPost httpPost = new HttpPost("http://localhost/Php/webService/api.php");
+
+            List<NameValuePair> params = new ArrayList<>();
+
+            //prueba
+            System.out.println("controlador.gestion.hacerConsulta() ---- PETICION ENVIADO: " + peticion.getJSON());
+
+            params.add(new BasicNameValuePair("DATA", peticion.getJSON()));
+
+            httpPost.setEntity(new UrlEncodedFormEntity(params));
+
+            CloseableHttpResponse response = client.execute(httpPost);
+
+            HttpEntity entity = response.getEntity();
+            Header headers = entity.getContentType();
+
+            if (entity != null) {
+
+                String htmlTxt = EntityUtils.toString(entity);
+
+                System.out.println("controlador.gestion.hacerConsulta() ---- RECEPCIÓN: " + htmlTxt);
+
+                JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
+
+                boolean hayError = jsonObject.get("error").getAsBoolean();
+
+                if (hayError) {
+                    String errorMsg = jsonObject.get("datos").getAsString();
+                    throw new Exception(errorMsg);
+                } else {
+                    return jsonObject.get("datos").getAsJsonArray();
+                }
+            }
+            return null;
+
+        } catch (Exception ex) {
+            //JOptionPane.showMessageDialog(null, ex.getMessage());
+            return null;
+        }
+    }
     
     public static String consultaSeleccionImagen(Peticion peticion) {
         String json = null;
