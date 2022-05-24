@@ -52,7 +52,9 @@ public class VentanaMercader extends javax.swing.JFrame {
         public void run() {
             try {
                 Thread.sleep(1000);
-
+                if(selección == "mostrarPedidos"){
+                    mostrarPedidos();
+                }
             } catch (InterruptedException ex) {
             }
         }
@@ -67,7 +69,6 @@ public class VentanaMercader extends javax.swing.JFrame {
         negocio = NegocioDao.negocioDeMercader(user);
         mostrarPanelInicio();
         hiloUpdate.start();
-
     }
 
     /**
