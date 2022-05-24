@@ -221,9 +221,11 @@ public class VentanaMercader extends javax.swing.JFrame {
             @Override
             public void run() {
                 try {
-                    mostrarPedidos();
-                    Thread.sleep(1000);
-                    System.out.println(".run() PEDIDOS ACTUALIZADOS");
+                    while (true) {
+                        mostrarPedidos();
+                        Thread.sleep(1000);
+                        System.out.println(".run() PEDIDOS ACTUALIZADOS");
+                    }
                 } catch (InterruptedException ex) {
                     ex.printStackTrace();
                 }
