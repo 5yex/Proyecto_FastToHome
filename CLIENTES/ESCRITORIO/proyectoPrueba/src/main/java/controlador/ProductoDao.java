@@ -43,5 +43,13 @@ public class ProductoDao {
         }
         return listaProductos;
     }
+    
+    public static boolean actualizarProducto(Producto product){
+        return gestion.hacerConsulta(new Peticion("actualizar_producto", product.getJSON()));
+    }
+    
+    public static boolean borrarProducto(Producto product){
+        return gestion.hacerConsulta(new Peticion("borrar_producto", product.getJSON()));
+    }
 
 }
