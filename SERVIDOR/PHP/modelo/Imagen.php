@@ -38,18 +38,12 @@ class Imagen extends Conexion {
 
  
     public function agregar() {
-
         if (file_put_contents($this->url_imagen, base64_decode($this->b64_imagen)) !== false) {
             $sql = "INSERT INTO imagenes (url) VALUES (:url)";
-
             $sentencia = $this->dblink->prepare($sql);
-
             $url = $this->getUrl_imagen();
-
             $sentencia->bindParam(":url", $url);
-
             $resultado = $sentencia->execute();
-
             if ($resultado != 1) {
                 return FALSE;
             }
