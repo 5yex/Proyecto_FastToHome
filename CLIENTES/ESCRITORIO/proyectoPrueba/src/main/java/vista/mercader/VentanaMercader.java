@@ -223,6 +223,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
 
     private void mostrarPedidos() {
+        actualizarPedidos = true;
         ActionListener actualizarPedidos = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -230,7 +231,6 @@ public class VentanaMercader extends javax.swing.JFrame {
                 mostrarPedidos();
             }
         };
-        selección = "mostrarPedidos";
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
         ArrayList<Pedido> pedidos = PedidoDao.seleccionTodosPedidos(negocio);
