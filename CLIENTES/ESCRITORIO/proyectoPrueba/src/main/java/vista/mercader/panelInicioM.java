@@ -9,6 +9,7 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import modelo.Imagen;
 import modelo.Negocio;
+import util.imagenesUtil;
 
 /**
  *
@@ -29,7 +30,8 @@ public class panelInicioM extends javax.swing.JPanel {
     private void cargaInicial() {
         DescripcionNegocio.setText(negocio.getDescripcion());
         nombreNegocio.setText(negocio.getNombre());
-        img.setIcon(new ImageIcon(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())).getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_DEFAULT)));
+        ImageIcon image = imagenesUtil.base64AImagen(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())));
+        img.setIcon(new ImageIcon(.getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_DEFAULT)));
     }
 
     /**
