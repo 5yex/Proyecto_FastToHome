@@ -241,6 +241,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
 
     private void mostrarPedidos() {
+        crearReactivarHiloActualizacionDeProductos();
         actualizarPedidos = true;
         ActionListener actualizarPedidos = new ActionListener() {
             @Override
