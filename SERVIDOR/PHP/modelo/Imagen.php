@@ -36,7 +36,6 @@ class Imagen extends Conexion {
         $this->b64_imagen = $b64_imagen;
     }
 
- 
     public function agregar() {
         if (file_put_contents($this->url_imagen, base64_decode($this->b64_imagen)) !== false) {
             $sql = "INSERT INTO imagenes (url) VALUES (:url)";
@@ -71,8 +70,8 @@ class Imagen extends Conexion {
         $sentencia->execute();
         $resultado = $sentencia->fetchAll(PDO::FETCH_OBJ);
         $url = $resultado[0]->url;
-        $this->setB64_imagen((base64_encode(file_get_contents($url)));
-        return $imgB64;
+        $this->setB64_imagen(base64_encode(file_get_contents($url)));
+        return $this;
     }
 
 //    public function actualizarDireccion(){
