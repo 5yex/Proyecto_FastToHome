@@ -12,6 +12,7 @@ class Producto extends Conexion{
     private $precio;
     private $descripcion;
     private $stock;
+    private $id_imagen;
     
     public function getId_producto() {
         return $this->id_producto;
@@ -60,6 +61,8 @@ class Producto extends Conexion{
     public function setStock($stock): void {
         $this->stock = $stock;
     }
+    
+    
 
     public function agregar() {
         //$sql = "insert into articulos(codigo, descripcion, precio) values(:cod, :des, :pre);";
@@ -107,7 +110,7 @@ class Producto extends Conexion{
     }
     
     public function actualizarProducto(){
-        $sql = "UPDATE IGNORE producto SET Nombre = :nom, Precio = :pre, Descripcion = :descr, Stock = :stock";
+        $sql = "UPDATE IGNORE producto SET Nombre = :nom, Precio = :pre, Descripcion = :descr, Stock = :stock, imagenes_id = :id_img";
         $sentencia = $this->dblink->prepare($sql);
         
         
@@ -115,6 +118,7 @@ class Producto extends Conexion{
         $precio = $this->getPrecio();
         $descripcion = $this->getDescripcion();
         $stock = $this->getStock();
+        $i
         
         $sentencia->bindParam(":nom", $nombre);
         $sentencia->bindParam(":pre", $precio);
