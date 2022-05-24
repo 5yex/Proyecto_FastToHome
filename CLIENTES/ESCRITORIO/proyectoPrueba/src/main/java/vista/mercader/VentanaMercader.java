@@ -10,6 +10,8 @@ import controlador.PedidoDao;
 import controlador.ProductoDao;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.JMenu;
 import modelo.Negocio;
@@ -26,6 +28,12 @@ public class VentanaMercader extends javax.swing.JFrame {
 
     private Usuario mercader;
     private Negocio negocio;
+    private ActionListener actualizarProductos = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            mostrarProductos();
+        }
+    };
 
     /**
      * Creates new form VentanaPrincipal
@@ -164,8 +172,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         mostrarPedididos();
     }//GEN-LAST:event_botonOpcionesMouseClicked
 
+    
+    
     private void mostrarProductos() {
-
+        
         contenido.removeAll();
 
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
