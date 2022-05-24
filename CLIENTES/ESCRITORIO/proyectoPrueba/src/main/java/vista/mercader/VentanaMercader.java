@@ -55,7 +55,6 @@ public class VentanaMercader extends javax.swing.JFrame {
                     mostrarPedidos();
 
                 System.out.println(".run() PEDIDOS ACTUALIZADOS");
-                Thread.sleep(1000);
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }
