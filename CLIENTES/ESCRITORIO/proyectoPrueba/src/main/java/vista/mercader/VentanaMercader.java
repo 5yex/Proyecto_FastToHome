@@ -217,7 +217,8 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
 
     private void crearHiloActualizacionDeProductos() {
-        hiloUpdate = new Thread(new Runnable() {
+        if(hiloUpdate == null){
+            hiloUpdate = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
@@ -232,6 +233,7 @@ public class VentanaMercader extends javax.swing.JFrame {
             }
         });
         hiloUpdate.start();
+        }
     }
 
     private void mostrarPedidos() {
