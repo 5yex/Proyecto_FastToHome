@@ -190,10 +190,14 @@ public class VentanaMercader extends javax.swing.JFrame {
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
         contenido.add(new panelProductoNuevo());
+
         ArrayList<Producto> productos = ProductoDao.selecciónProductosNegocio(negocio);
-        for (Producto producto : productos) {
-            contenido.add(new panelProducto(producto));
+        if (productos != null) {
+            for (Producto producto : productos) {
+                contenido.add(new panelProducto(producto));
+            }
         }
+
         //no se
         contenido.setComponentPopupMenu(popupProductos);
         contenido.revalidate();
@@ -218,24 +222,24 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
 
     private void crearHiloActualizacionDeProductos() {
-        if(hiloUpdate == null){
+        if (hiloUpdate == null) {
             hiloUpdate = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    while (true) {
-                        mostrarPedidos();
-                        Thread.sleep(1000);
-                        System.out.println(".run() PEDIDOS ACTUALIZADOS");
+                @Override
+                public void run() {
+                    try {
+                        while (true) {
+                            mostrarPedidos();
+                            Thread.sleep(1000);
+                            System.out.println(".run() PEDIDOS ACTUALIZADOS");
+                        }
+                    } catch (InterruptedException ex) {
+                        ex.printStackTrace();
                     }
-                } catch (InterruptedException ex) {
-                    ex.printStackTrace();
                 }
-            }
-        });
-        hiloUpdate.start();
+            });
+            hiloUpdate.start();
         }
-        
+
     }
 
     private void mostrarPedidos() {
@@ -251,15 +255,14 @@ public class VentanaMercader extends javax.swing.JFrame {
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
         ArrayList<Pedido> pedidos = PedidoDao.seleccionTodosPedidos(negocio);
-        if(pedidos != null){
+        if (pedidos != null) {
             for (Pedido pedido : pedidos) {
-            contenido.add(new panelPedido(pedido, actualizarPedidos));
-        }
-        }else{
+                contenido.add(new panelPedido(pedido, actualizarPedidos));
+            }
+        } else {
             contenido.add(new JLabel("NO HAY PEDIDOS"));
         }
-        
-        
+
         contenido.revalidate();
         contenido.repaint();
 
