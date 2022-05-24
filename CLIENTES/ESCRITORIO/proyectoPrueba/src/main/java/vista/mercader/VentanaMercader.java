@@ -209,21 +209,33 @@ public class VentanaMercader extends javax.swing.JFrame {
         contenido.repaint();
     }
 
-    private void pararActualizacionPedidos(){
-        if(hiloUpdate != null && !hiloUpdate.isInterrupted()){
+    private void pararActualizacionPedidos() {
+        if (hiloUpdate != null && !hiloUpdate.isInterrupted()) {
             hiloUpdate.interrupt();
         }
     }
-    
-    private void crearReactivarHiloActualizacionDeProductos(){
-        if(hiloUpdate != null && hiloUpdate.isInterrupted()){
+
+    private void crearReactivarHiloActualizacionDeProductos() {
+        if (hiloUpdate != null && hiloUpdate.isInterrupted()) {
             hiloUpdate.start();
-        }else{
-        
+        } else {
+            hiloUpdate = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        while (actualizarPedidos) {
+                            mostrarPedidos();
+                            Thread.sleep(1000);
+                        }
+                        System.out.println(".run() PEDIDOS ACTUALIZADOS");
+                    } catch (InterruptedException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            });
         }
     }
-    
-    
+
     private void mostrarPedidos() {
         actualizarPedidos = true;
         ActionListener actualizarPedidos = new ActionListener() {
