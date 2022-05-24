@@ -5,6 +5,7 @@
 package vista.mercader;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
+import controlador.PedidoDao;
 import modelo.Pedido;
 import modelo.Producto;
 
@@ -126,7 +127,8 @@ public class panelPedido extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void pasarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasarEstadoActionPerformed
-        
+        PedidoDao.actualizarEstadoPedido(pedido);
+        mostrarDatos();
     }//GEN-LAST:event_pasarEstadoActionPerformed
 
 
