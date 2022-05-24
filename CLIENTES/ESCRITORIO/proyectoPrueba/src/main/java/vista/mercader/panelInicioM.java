@@ -29,7 +29,6 @@ public class panelInicioM extends javax.swing.JPanel {
     private void cargaInicial() {
         DescripcionNegocio.setText(negocio.getDescripcion());
         nombreNegocio.setText(negocio.getNombre());
-        
         img.setIcon(new ImageIcon(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())).getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_DEFAULT)));
     }
 
