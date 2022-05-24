@@ -36,10 +36,7 @@ class Imagen extends Conexion {
         $this->b64_imagen = $b64_imagen;
     }
 
-    public function persistirImagen() {
-        
-    }
-
+ 
     public function agregar() {
 
         if (file_put_contents($this->url_imagen, base64_decode($this->b64_imagen)) !== false) {
