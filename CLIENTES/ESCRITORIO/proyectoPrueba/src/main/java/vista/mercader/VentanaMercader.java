@@ -215,10 +215,9 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
 
     private void mostrarPanelInicio() {
+        selección = "panelInicio";
         contenido.removeAll();
-
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 0, 0));
-
         contenido.add(new panelInicioM(negocio));
         contenido.revalidate();
         contenido.repaint();
