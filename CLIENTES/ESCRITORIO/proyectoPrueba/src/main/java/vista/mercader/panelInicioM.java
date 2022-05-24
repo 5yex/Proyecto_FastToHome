@@ -4,6 +4,7 @@
  */
 package vista.mercader;
 
+import com.formdev.flatlaf.ui.FlatButtonBorder;
 import controlador.ImagenDao;
 import java.awt.Image;
 import javax.swing.ImageIcon;
@@ -28,6 +29,7 @@ public class panelInicioM extends javax.swing.JPanel {
     
     
     private void cargaInicial() {
+        img.setBorder(new FlatButtonBorder());
         DescripcionNegocio.setText(negocio.getDescripcion());
         nombreNegocio.setText(negocio.getNombre());
         ImageIcon image = imagenesUtil.base64AImagen(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())));
