@@ -62,11 +62,18 @@ class Producto extends Conexion{
         $this->stock = $stock;
     }
     
-    
+    public function getId_imagen() {
+        return $this->id_imagen;
+    }
 
+    public function setId_imagen($id_imagen): void {
+        $this->id_imagen = $id_imagen;
+    }
+
+    
     public function agregar() {
         //$sql = "insert into articulos(codigo, descripcion, precio) values(:cod, :des, :pre);";
-        $sql = "INSERT INTO producto (id_negocio, Nombre, Precio, Descripcion, Stock) VALUES (:neg, :nom, :pre, :descr, :stock)";
+        $sql = "INSERT INTO producto (id_negocio, Nombre, Precio, Descripcion, Stock, imagenes_id) VALUES (:neg, :nom, :pre, :descr, :stock)";
         $sentencia = $this->dblink->prepare($sql);
         
         $id_negocio = $this->getId_negocio();
@@ -118,12 +125,13 @@ class Producto extends Conexion{
         $precio = $this->getPrecio();
         $descripcion = $this->getDescripcion();
         $stock = $this->getStock();
-        $i
+        $id_imagen = $this->getId_imagen();
         
         $sentencia->bindParam(":nom", $nombre);
         $sentencia->bindParam(":pre", $precio);
         $sentencia->bindParam(":descr", $descripcion);
         $sentencia->bindParam(":stock", $stock);
+        $sentencia->bindParam(":id_img",$id_imagen);
         
         
 
