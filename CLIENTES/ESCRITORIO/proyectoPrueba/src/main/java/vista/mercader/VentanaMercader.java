@@ -212,7 +212,6 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
     
     private void mostrarPedidos() {
-        System.out.println("vista.mercader.VentanaMercader.mostrarPedidos()");
         contenido.removeAll();
 
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
