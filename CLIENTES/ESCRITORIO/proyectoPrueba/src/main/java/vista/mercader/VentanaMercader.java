@@ -216,8 +216,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         }
     }
 
-    private void crearReactivarHiloActualizacionDeProductos() {
-        
+    private void crearHiloActualizacionDeProductos() {
         if (hiloUpdate == null) {
             hiloUpdate = new Thread(new Runnable() {
                 @Override
@@ -235,15 +234,9 @@ public class VentanaMercader extends javax.swing.JFrame {
             });
             hiloUpdate.start();
         }
-        
-        if (hiloUpdate != null && hiloUpdate.isInterrupted()) {
-            hiloUpdate.start();
-        }
-
     }
 
     private void mostrarPedidos() {
-        crearReactivarHiloActualizacionDeProductos();
         actualizarPedidos = true;
         ActionListener actualizarPedidos = new ActionListener() {
             @Override
