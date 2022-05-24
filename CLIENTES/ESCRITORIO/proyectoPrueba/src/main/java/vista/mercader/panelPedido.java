@@ -147,6 +147,7 @@ public class panelPedido extends javax.swing.JPanel {
     private void mostrarDatos() {
         pedido.toString();
         estadoActualPedido.setText(pedido.getEstado());
+        pedido.setEstado(estadoActualPedido.getText());
         tipoTransporte.setText(pedido.getTransporte());
         this.setBorder(new FlatButtonBorder());
     }
