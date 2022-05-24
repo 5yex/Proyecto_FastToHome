@@ -34,7 +34,7 @@ public class panelPedido extends javax.swing.JPanel {
 
         transporte = new javax.swing.JLabel();
         pasarEstado = new javax.swing.JButton();
-        estadoPedido = new javax.swing.JLabel();
+        tituloEstadoPedido = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
         idPedido = new javax.swing.JLabel();
@@ -52,8 +52,8 @@ public class panelPedido extends javax.swing.JPanel {
             }
         });
 
-        estadoPedido.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        estadoPedido.setText("ESTADO PEDIDO:");
+        tituloEstadoPedido.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tituloEstadoPedido.setText("ESTADO PEDIDO:");
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -99,7 +99,7 @@ public class panelPedido extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(transporte, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                        .addComponent(estadoPedido)))
+                        .addComponent(tituloEstadoPedido)))
                 .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
@@ -107,7 +107,7 @@ public class panelPedido extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(estadoPedido)
+                    .addComponent(tituloEstadoPedido)
                     .addComponent(transporte)
                     .addComponent(idPedido))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -134,19 +134,19 @@ public class panelPedido extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel estadoActualPedido;
-    private javax.swing.JLabel estadoPedido;
     private javax.swing.JLabel idPedido;
     private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel numPedido;
     private javax.swing.JButton pasarEstado;
     private javax.swing.JLabel tipoTransporte;
+    private javax.swing.JLabel tituloEstadoPedido;
     private javax.swing.JLabel transporte;
     // End of variables declaration//GEN-END:variables
 
     private void mostrarDatos() {
         pedido.toString();
-        estadoPedido.setText(pedido.getEstado());
+        tituloEstadoPedido.setText(pedido.getEstado());
         transporte.setText(pedido.getTransporte());
         this.setBorder(new FlatButtonBorder());
     }
