@@ -60,7 +60,6 @@
     </Component>
     <Component class="javax.swing.JLabel" name="img">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Imagen negocio"/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[190, 190]"/>
         </Property>

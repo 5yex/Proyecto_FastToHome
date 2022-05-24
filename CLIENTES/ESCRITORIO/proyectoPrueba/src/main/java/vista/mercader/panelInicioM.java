@@ -56,7 +56,6 @@ public class panelInicioM extends javax.swing.JPanel {
         DescripcionNegocio.setText("Descripcion Negocio");
         DescripcionNegocio.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        img.setText("Imagen negocio");
         img.setPreferredSize(new java.awt.Dimension(190, 190));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
