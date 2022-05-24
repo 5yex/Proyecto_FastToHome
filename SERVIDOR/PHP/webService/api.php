@@ -148,7 +148,25 @@ function nuevoProducto($datos) {
 }
 
 function actualizarProducto($datos){
-    
+    require_once '../modelo/Producto.php';
+    try {
+        $producto = new Producto();
+        $producto->setId_producto($datos->id_producto);
+        $producto->setId_negocio($datos->id_negocio);
+        $producto->setNombre($datos->nombre);
+        $producto->setPrecio($datos->precio);
+        $producto->setDescripcion($datos->descripcion);
+        $producto->setStock($datos->stock);
+        $producto->setId_imagen($datos->id_imagen);
+
+        if ($producto->agregar()) {
+            mandarRespuesta(false, 'Se ha realizado la insercion de un producto');
+        } else {
+            mandarRespuesta(true, 'Error en la inserccion del producto');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
 }
 
 
