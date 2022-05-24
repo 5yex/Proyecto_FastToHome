@@ -17,7 +17,9 @@ import util.imagenesUtil;
  * @author jmcbg
  */
 public class panelInicioM extends javax.swing.JPanel {
+
     private Negocio negocio;
+
     /**
      * Creates new form panelInicio
      */
@@ -26,14 +28,20 @@ public class panelInicioM extends javax.swing.JPanel {
         this.negocio = negocio;
         cargaInicial();
     }
-    
-    
+
     private void cargaInicial() {
         img.setBorder(new FlatButtonBorder());
         DescripcionNegocio.setText(negocio.getDescripcion());
         nombreNegocio.setText(negocio.getNombre());
-        ImageIcon image = imagenesUtil.base64AImagen(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())));
-        img.setIcon(new ImageIcon(image.getImage().getScaledInstance(img.getPreferredSize().width, img.getPreferredSize().height, Image.SCALE_DEFAULT)));
+
+        try {
+            ImageIcon image = imagenesUtil.base64AImagen(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())));
+            img.setIcon(new ImageIcon(image.getImage().getScaledInstance(img.getPreferredSize().width, img.getPreferredSize().height, Image.SCALE_DEFAULT)));
+        } catch (Exception e) {
+            System.out.println("no tienes icono");
+            img.setText("NO TIENES IMAGEN");
+        }
+
     }
 
     /**
@@ -98,5 +106,4 @@ public class panelInicioM extends javax.swing.JPanel {
     private javax.swing.JLabel nombreNegocio;
     // End of variables declaration//GEN-END:variables
 
-    
 }
