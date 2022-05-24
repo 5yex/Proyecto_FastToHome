@@ -76,9 +76,9 @@ class Imagen extends Conexion {
         $id = $this->getId_imagen();
         $sentencia->bindParam(":id", $id);
         $sentencia->execute();
-        $url = $sentencia->execute();
-        
-        
+        $url = $sentencia->execute();    
+        $imgB64 = base64_encode(file_get_contents($url));
+
         
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
