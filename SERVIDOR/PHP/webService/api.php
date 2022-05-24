@@ -92,7 +92,7 @@ if (empty($_POST["DATA"])) {
             obtenerCategoriaPorNombre(json_decode($peticion->datos));
             break;     
         //imagenes
-         case 'nueva_imagen';
+        case 'nueva_imagen';
             nuevaImagen(json_decode($peticion->datos));
             break;
         
