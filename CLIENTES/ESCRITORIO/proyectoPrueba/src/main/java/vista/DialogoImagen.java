@@ -33,13 +33,15 @@ import org.apache.commons.io.IOUtils;
 public class DialogoImagen extends javax.swing.JDialog {
     private File imagenSeleccionada;
     private Imagen imagenNueva;
+    private Imagen imagen;
+
     /**
      * Creates new form DialogoImagen
      */
     public DialogoImagen(java.awt.Frame parent, boolean modal, Imagen imagen) {
         super(parent, modal);
         initComponents();
-        this.imagenNueva = imagen;
+        this.imagen = imagen;
     }
 
     /**
