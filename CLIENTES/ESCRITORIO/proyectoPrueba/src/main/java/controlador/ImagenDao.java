@@ -32,7 +32,7 @@ public class ImagenDao {
     }
     
     public static String obtenerImagenPorId(Imagen imagen) {
-       return gestion.consultaSeleccionUnico(new Peticion("obtener_imagen_id", imagen.getJSON())).getAsString();
+       return gestion.consultaSeleccionImagen(new Peticion("obtener_imagen_id", imagen.getJSON())).getAsString();
             //File imgTmp = File.createTempFile("img"+new Date().getTime(), ".png");
     }
 }
