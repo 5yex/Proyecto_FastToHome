@@ -56,6 +56,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         mercader = user;
         negocio = NegocioDao.negocioDeMercader(user);
         mostrarPanelInicio();
+        crearHiloActualizacionDeProductos();
     }
 
     /**
