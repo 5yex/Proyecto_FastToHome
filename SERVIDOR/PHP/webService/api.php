@@ -91,7 +91,7 @@ if (empty($_POST["DATA"])) {
             break;
         
         //imagenes
-         case 'nueva_imagen';
+        case 'nueva_imagen';
             nuevaImagen(json_decode($peticion->datos));
             break;
         
