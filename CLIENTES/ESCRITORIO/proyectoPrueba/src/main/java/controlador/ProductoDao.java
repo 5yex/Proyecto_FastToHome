@@ -25,30 +25,32 @@ public class ProductoDao {
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_productos_negocio", negocio.getJSON()));
         ArrayList<Producto> listaProductos = new ArrayList<>();
         System.out.println("controlador.ProductoDao.selecciónProductosNegocio()     NUMERO PRODCUTOS: " + listaProductos.size());
-        for (int i = 0; i < jsonArray.size(); i++) {
-            JsonObject productoJson = jsonArray.get(i).getAsJsonObject();
-            Producto producto = new Producto();
-            producto.setId_producto(productoJson.get("id").getAsInt());
-            producto.setNombre(productoJson.get("Nombre").getAsString());
-            producto.setPrecio(Double.valueOf(productoJson.get("Precio").getAsString()));
-            producto.setDescripcion(productoJson.get("Descripcion").getAsString());
-            producto.setStock(productoJson.get("Stock").getAsInt());
+        if (jsonArray != null) {
+            for (int i = 0; i < jsonArray.size(); i++) {
+                JsonObject productoJson = jsonArray.get(i).getAsJsonObject();
+                Producto producto = new Producto();
+                producto.setId_producto(productoJson.get("id").getAsInt());
+                producto.setNombre(productoJson.get("Nombre").getAsString());
+                producto.setPrecio(Double.valueOf(productoJson.get("Precio").getAsString()));
+                producto.setDescripcion(productoJson.get("Descripcion").getAsString());
+                producto.setStock(productoJson.get("Stock").getAsInt());
 
-            if (!productoJson.get("imagenes_id").isJsonNull()) {
-                producto.setId_img(productoJson.get("imagenes_id").getAsInt());
+                if (!productoJson.get("imagenes_id").isJsonNull()) {
+                    producto.setId_img(productoJson.get("imagenes_id").getAsInt());
+                }
+
+                listaProductos.add(producto);
+
             }
-
-            listaProductos.add(producto);
-
         }
         return listaProductos;
     }
-    
-    public static boolean actualizarProducto(Producto product){
+
+    public static boolean actualizarProducto(Producto product) {
         return gestion.hacerConsulta(new Peticion("actualizar_producto", product.getJSON()));
     }
-    
-    public static boolean borrarProducto(Producto product){
+
+    public static boolean borrarProducto(Producto product) {
         return gestion.hacerConsulta(new Peticion("borrar_producto", product.getJSON()));
     }
 
