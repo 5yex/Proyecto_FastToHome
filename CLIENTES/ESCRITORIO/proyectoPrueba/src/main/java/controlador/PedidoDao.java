@@ -103,6 +103,8 @@ public class PedidoDao{
 
         }
         return listaPedidosEnPreparacion;
+        }else{
+            System.out.println("no hay ningun pedido");
         }
         return null;
     }
