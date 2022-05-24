@@ -73,7 +73,7 @@ class Producto extends Conexion{
     
     public function agregar() {
         //$sql = "insert into articulos(codigo, descripcion, precio) values(:cod, :des, :pre);";
-        $sql = "INSERT INTO producto (id_negocio, Nombre, Precio, Descripcion, Stock, imagenes_id) VALUES (:neg, :nom, :pre, :descr, :stock)";
+        $sql = "INSERT INTO producto (id_negocio, Nombre, Precio, Descripcion, Stock, imagenes_id) VALUES (:neg, :nom, :pre, :descr, :stock, :id_img)";
         $sentencia = $this->dblink->prepare($sql);
         
         $id_negocio = $this->getId_negocio();
@@ -81,6 +81,7 @@ class Producto extends Conexion{
         $precio = $this->getPrecio();
         $descripcion = $this->getDescripcion();
         $stock = $this->getStock();
+        $id_imagen = $this->getId_imagen();
         
         // $stmt->bindParam(':name', $userName);
         $sentencia->bindParam(":neg", $id_negocio);
@@ -88,6 +89,7 @@ class Producto extends Conexion{
         $sentencia->bindParam(":pre", $precio);
         $sentencia->bindParam(":descr", $descripcion);
         $sentencia->bindParam(":stock", $stock);
+        $sentencia->bindParam(":id_img", $id_imagen);
         
         
 
