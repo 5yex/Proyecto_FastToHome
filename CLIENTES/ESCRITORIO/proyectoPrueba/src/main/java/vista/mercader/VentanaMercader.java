@@ -220,7 +220,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         
         ArrayList<Pedido> pedidos = PedidoDao.seleccionTodosPedidos(negocio);
         for (Pedido pedido : pedidos) {
-            contenido.add(new panelPedido(pedido));
+            contenido.add(new panelPedido(pedido, actualizarPedido));
         }
 
         contenido.setComponentPopupMenu(popupProductos);
