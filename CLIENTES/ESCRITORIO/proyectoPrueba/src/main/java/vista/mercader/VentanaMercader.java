@@ -50,14 +50,14 @@ public class VentanaMercader extends javax.swing.JFrame {
     Thread hiloUpdate = new Thread(new Runnable() {
         @Override
         public void run() {
-            try {
+//            try {
 
                     mostrarPedidos();
 
                 System.out.println(".run() PEDIDOS ACTUALIZADOS");
-            } catch (InterruptedException ex) {
-                ex.printStackTrace();
-            }
+//            } catch (InterruptedException ex) {
+//                ex.printStackTrace();
+//            }
         }
     });
 
