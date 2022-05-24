@@ -7,6 +7,7 @@ package util;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Base64;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,6 +23,8 @@ public class encoderDecoderImagenes {
             byte[] imageBytes = IOUtils.toByteArray(new FileInputStream(imagenFile));
             return Base64.getEncoder().encodeToString(imageBytes);
         } catch (FileNotFoundException ex) {
+            Logger.getLogger(encoderDecoderImagenes.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
             Logger.getLogger(encoderDecoderImagenes.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
