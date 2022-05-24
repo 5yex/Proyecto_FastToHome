@@ -119,10 +119,10 @@ class Producto extends Conexion{
     }
     
     public function actualizarProducto(){
-        $sql = "UPDATE IGNORE producto SET Nombre = :nom, Precio = :pre, Descripcion = :descr, Stock = :stock, imagenes_id = :id_img";
+        $sql = "UPDATE IGNORE producto SET Nombre = :nom, Precio = :pre, Descripcion = :descr, Stock = :stock, imagenes_id = :id_img WHERE id = :id_prod";
         $sentencia = $this->dblink->prepare($sql);
         
-        
+        $id_producto = $this->getId_producto();
         $nombre = $this->getNombre();
         $precio = $this->getPrecio();
         $descripcion = $this->getDescripcion();
