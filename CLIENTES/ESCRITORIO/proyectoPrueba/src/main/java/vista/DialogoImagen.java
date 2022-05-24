@@ -34,7 +34,7 @@ import util.imagenesUtil;
 public class DialogoImagen extends javax.swing.JDialog {
 
     private File imagenSeleccionada;
-    private String b64_imagen;
+    private String b64_imagen ="";
     private Imagen imagen;
 
     /**
