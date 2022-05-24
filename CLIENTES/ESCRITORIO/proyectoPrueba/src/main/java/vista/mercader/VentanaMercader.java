@@ -47,20 +47,7 @@ public class VentanaMercader extends javax.swing.JFrame {
 //        }
 //    };
 
-    Thread hiloUpdate = new Thread(new Runnable() {
-        @Override
-        public void run() {
-            try {
-                while()
-                    mostrarPedidos();
-
-                System.out.println(".run() PEDIDOS ACTUALIZADOS");
-                Thread.sleep(1000);
-            } catch (InterruptedException ex) {
-                ex.printStackTrace();
-            }
-        }
-    });
+    Thread hiloUpdate;
 
     /**
      * Creates new form VentanaPrincipal
@@ -200,7 +187,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_botonOpcionesMouseClicked
 
     private void mostrarProductos() {
-        selección = "mostrarProductos";
+        actualizarPedidos = false;
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
         contenido.add(new panelProductoNuevo());
@@ -214,7 +201,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
 
     private void mostrarPanelInicio() {
-        selección = "panelInicio";
+        actualizarPedidos = false;
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 0, 0));
         contenido.add(new panelInicioM(negocio));
@@ -235,7 +222,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
         ArrayList<Pedido> pedidos = PedidoDao.seleccionTodosPedidos(negocio);
         for (Pedido pedido : pedidos) {
-            contenido.add(new panelPedido(pedido,actualizarPedidos));
+            contenido.add(new panelPedido(pedido, actualizarPedidos));
         }
         contenido.revalidate();
         contenido.repaint();
