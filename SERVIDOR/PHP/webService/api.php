@@ -639,8 +639,7 @@ function obtenerImagenPorId(){
     try {
         $imagen = new Imagen();
         $imagen->setId_imagen($datos->id);
-
-        $respuesta = $direccion->obtenerDireccionPorId();
+        $respuesta = $imagen->obtenerImagenPorId();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
