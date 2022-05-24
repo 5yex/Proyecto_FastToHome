@@ -136,8 +136,11 @@ public class panelPedido extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void pasarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasarEstadoActionPerformed
-        PedidoDao.actualizarEstadoPedido(pedido);
+        if(PedidoDao.actualizarEstadoPedido(pedido)){
         mostrarDatos();
+        }else{
+            System.out.println("nO SE PUEDE VISUALIZAR EL NUEVO ESTADO");
+        }
     }//GEN-LAST:event_pasarEstadoActionPerformed
 
 
