@@ -70,7 +70,6 @@ class Imagen extends Conexion {
         $sentencia->execute();
         $resultado = $sentencia->fetchAll(PDO::FETCH_OBJ);
         $url = $resultado[0]->url;
-        
         $objeto = new Imagen();
         $objeto->setB64_imagen(base64_encode(file_get_contents($url)));
         return $objeto;
