@@ -34,6 +34,13 @@ public class VentanaMercader extends javax.swing.JFrame {
             mostrarProductos();
         }
     };
+    
+    private ActionListener actualizarPedidos = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            mostrarPedididos();
+        }
+    };
 
     /**
      * Creates new form VentanaPrincipal
