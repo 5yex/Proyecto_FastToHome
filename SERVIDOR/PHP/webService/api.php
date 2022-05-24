@@ -634,3 +634,22 @@ function nuevaImagen($datos){
     }
 }
 
+function obtenerImagenPorId(){
+    require_once '../modelo/Imagen.php';
+    try {
+        $imagen = new Imagen();
+        $direccion->setId_direccion($datos->id_direccion);
+
+        $respuesta = $direccion->obtenerDireccionPorId();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error en obtener la dirección');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+    
+    
+}
+
