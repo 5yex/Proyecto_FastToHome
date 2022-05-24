@@ -34,7 +34,7 @@ public class imagenesUtil {
         return null;
     }
 
-    public ImageIcon base64AImagen(String imagenBase64) {
+    public static ImageIcon base64AImagen(String imagenBase64) {
         byte[] decodedBytes = Base64.getDecoder().decode(imagenBase64);
         return new ImageIcon(decodedBytes);
     }
