@@ -36,7 +36,6 @@ android {
         exclude 'META-INF/ASL2.0'
 
     }
-    useLibrary 'org.apache.http.legacy'
 }
 
 
