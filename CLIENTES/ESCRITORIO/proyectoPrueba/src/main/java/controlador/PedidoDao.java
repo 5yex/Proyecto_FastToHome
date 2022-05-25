@@ -108,4 +108,8 @@ public class PedidoDao {
     public static boolean actualizarEstadoPedido(Pedido pedido) {
         return gestion.hacerConsulta(new Peticion("actualizar_estado_pedido", pedido.getJSON()));
     }
+    
+    public static Pedido obtenerPedido(Pedido pedido){
+        return gestion.consultaSeleccionUnico(new Peticion("obtener_pedido", pedido.getJSON()));
+    }
 }
