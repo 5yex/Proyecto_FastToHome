@@ -8,7 +8,10 @@ import com.formdev.flatlaf.FlatLightLaf;
 import controlador.NegocioDao;
 import controlador.UsuarioDao;
 import java.awt.FlowLayout;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
+import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
@@ -257,11 +260,21 @@ public class VentanaAdmin extends javax.swing.JFrame {
     
     public void confirmarCierre(){
         try{
-            
+            this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+            addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent e){
+                    confirmarSalida();
+                }
+            });
+            this.setVisible(true);
         }catch(Exception e){
+            e.printStackTrace();
             
         }
         
+    }
+    
+    public void confirmarSalida(){
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
