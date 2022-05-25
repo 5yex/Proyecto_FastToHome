@@ -257,7 +257,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         ArrayList<Pedido> pedidos = PedidoDao.seleccionTodosPedidos(negocio);
         if (pedidos != null) {
             for (Pedido pedido : pedidos) {
-                contenido.add(new panelPedido(pedido, ));
+                contenido.add(new panelPedido(pedido, botonPedidos));
             }
         } else {
             contenido.add(new JLabel("NO HAY PEDIDOS"));
