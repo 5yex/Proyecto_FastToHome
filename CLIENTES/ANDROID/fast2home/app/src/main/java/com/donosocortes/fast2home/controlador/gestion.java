@@ -4,6 +4,8 @@
  */
 package com.donosocortes.fast2home.controlador;
 
+import androidx.annotation.NonNull;
+
 import com.donosocortes.fast2home.modelo.Peticion;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -118,7 +120,9 @@ public class gestion {
             return null;
         }
     }
-    
+
+  
+
     public static JsonArray consultaSeleccion(Peticion peticion) {
         String json = null;
         try {
