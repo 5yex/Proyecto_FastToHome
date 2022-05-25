@@ -89,7 +89,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         labelBienvenido.setText("Bienvenido administrador:");
         labelBienvenido.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
 
-        labelNombreAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        labelNombreAdmin.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         labelNombreAdmin.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         botonModificarDatosAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -212,7 +212,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
     private void actualizarVentana() {
         administrador = UsuarioDao.obtenerDatosUsuario(administrador);
-        labelNombreAdmin.setText(administrador.getNombre() + administrador.getApellidos());
+        labelNombreAdmin.setText(administrador.getNombre() + "  " + administrador.getApellidos());
     }
 
     public void recargarTablaClientes(ArrayList<Usuario> listaClientes) {
