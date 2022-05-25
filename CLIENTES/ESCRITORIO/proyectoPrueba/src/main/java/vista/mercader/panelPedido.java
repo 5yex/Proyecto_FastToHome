@@ -7,6 +7,7 @@ package vista.mercader;
 import com.formdev.flatlaf.ui.FlatButtonBorder;
 import controlador.PedidoDao;
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 import modelo.Pedido;
 import modelo.Producto;
 
@@ -17,6 +18,7 @@ import modelo.Producto;
 public class panelPedido extends javax.swing.JPanel {
     private Pedido pedido;
     private ActionListener actualizarPedido;
+    private JButton botonPedidos;
     /**
      * Creates new form producto
      */
@@ -25,6 +27,13 @@ public class panelPedido extends javax.swing.JPanel {
         initComponents();
         this.pedido = pedido;
         this.actualizarPedido = actualizarPedido;
+        mostrarDatos();
+    }
+    
+    public panelPedido(Pedido pedido, JButton botonPedidos){
+        initComponents();
+        this.pedido = pedido;
+        this.botonPedidos = botonPedidos;
         mostrarDatos();
     }
 
@@ -135,7 +144,7 @@ public class panelPedido extends javax.swing.JPanel {
         }else{
             System.out.println("nO SE PUEDE VISUALIZAR EL NUEVO ESTADO");
         }
-                mostrarDatos();
+        mostrarDatos();
 
     }//GEN-LAST:event_pasarEstadoActionPerformed
 
