@@ -38,6 +38,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         initComponents();
         actualizarVentana();
         recargarTablaClientes(UsuarioDao.obtenerDatosClientes());
+        confirmarCierre();
     }
 
     /**
