@@ -246,6 +246,8 @@ class usuario extends conexion {
         
         $sentencia = $this->dblink->prepare($sql);
         
+        $id = $this->getId();
+        
         $sentencia->bindParam(":id_user", $id);
         
         $resultado = $sentencia->execute();
