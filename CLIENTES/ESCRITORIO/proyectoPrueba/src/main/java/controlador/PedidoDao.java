@@ -99,17 +99,17 @@ public class PedidoDao {
                 listaPedidosEnPreparacion.add(pedido);
 
             }
-            } else {
+        } else {
             System.out.println("no hay ningun pedido");
         }
-            return listaPedidosEnPreparacion;
+        return listaPedidosEnPreparacion;
     }
 
     public static boolean actualizarEstadoPedido(Pedido pedido) {
         return gestion.hacerConsulta(new Peticion("actualizar_estado_pedido", pedido.getJSON()));
     }
-    
-    public static Pedido obtenerPedido(Pedido pedido){
+
+    public static Pedido obtenerPedido(Pedido pedido) {
         SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
         String json = pedido.getJSON();
         //hacemos una petición con el comando que deberá realizar el php, y los datos en json    
@@ -118,21 +118,19 @@ public class PedidoDao {
         JsonObject pedidoJson = gestion.consultaSeleccionUnico(peticion);
         //de la respuesta, obtenemos el id    
         pedido.setId_pedido(pedidoJson.get("id").getAsInt());
-                pedido.setId_usuario(pedidoJson.get("id_usuario").getAsInt());
-                String fechaActual = pedidoJson.get("fecha_hora").getAsString();
+        pedido.setId_usuario(pedidoJson.get("id_usuario").getAsInt());
+        String fechaActual = pedidoJson.get("fecha_hora").getAsString();
 
-                try {
-                    pedido.setFecha_hora(dateParser.parse(fechaActual));
-                } catch (ParseException ex) {
-                    Logger.getLogger(PedidoDao.class.getName()).log(Level.SEVERE, null, ex);
-                }
+        try {
+            pedido.setFecha_hora(dateParser.parse(fechaActual));
+        } catch (ParseException ex) {
+            Logger.getLogger(PedidoDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
-                pedido.setEstado(pedidoJson.get("estado").getAsString());
-                pedido.setTotal(pedidoJson.get("total").getAsDouble());
-                pedido.setTransporte(pedidoJson.get("transporte").getAsString());
+        pedido.setEstado(pedidoJson.get("estado").getAsString());
+        pedido.setTotal(pedidoJson.get("total").getAsDouble());
+        pedido.setTransporte(pedidoJson.get("transporte").getAsString());
 
-        System.out.println("controlador.UsuarioDao.obtenerDatosUsuario()   " + user.toString());
-
-        return user;
+        return pedido;
     }
 }
