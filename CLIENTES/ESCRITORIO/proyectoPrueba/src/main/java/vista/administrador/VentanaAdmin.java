@@ -21,7 +21,7 @@ import vista.DialogoImagen;
  *
  * @author jmcbg
  */
-public class VentanaAdmin extends javax.swing.JDialog {
+public class VentanaAdmin extends javax.swing.JFrame {
 
     private Usuario administrador;
     private ArrayList<Usuario> arrayListClientes;
