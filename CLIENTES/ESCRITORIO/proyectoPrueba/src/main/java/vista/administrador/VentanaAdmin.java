@@ -190,6 +190,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como mercader a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
         }
+        
+        this.revalidate();
+        this.repaint();
 
     }//GEN-LAST:event_itemMercaderActionPerformed
 
