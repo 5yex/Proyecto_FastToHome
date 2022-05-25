@@ -53,19 +53,19 @@ public class UsuarioDao {
         //hacemos una petición con el comando que deberá realizar el php, y los datos en json    
         Peticion peticion = new Peticion("getUsuario", json);
         //mandamos la peticion como consulta selección para obtener valores
-        JsonObject jsonUsuario = gestion.consultaSeleccionUnico(peticion);
+        JsonObject usuarioJson = gestion.consultaSeleccionUnico(peticion);
         //de la respuesta, obtenemos el id    
-        user.setDni(jsonUsuario.get("Dni").getAsString());
-        user.setEmail(jsonUsuario.get("Email").getAsString());
-        user.setId(jsonUsuario.get("id").getAsInt());
-        if (!jsonUsuario.get("direccion_id").isJsonNull()) {
-            user.setId_direccion(jsonUsuario.get("direccion_id").getAsInt());
+        user.setDni(usuarioJson.get("Dni").getAsString());
+        user.setEmail(usuarioJson.get("Email").getAsString());
+        user.setId(usuarioJson.get("id").getAsInt());
+        if (!usuarioJson.get("direccion_id").isJsonNull()) {
+            user.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
         }
-        user.setNombre(jsonUsuario.get("Nombre").getAsString());
-        user.setApellidos(jsonUsuario.get("apellidos").getAsString());
-        user.setPassword(jsonUsuario.get("password").getAsString());
-        user.setRol(jsonUsuario.get("Rol").getAsString());
-        user.setTlf(jsonUsuario.get("tlf").getAsString());
+        user.setNombre(usuarioJson.get("Nombre").getAsString());
+        user.setApellidos(usuarioJson.get("apellidos").getAsString());
+        user.setPassword(usuarioJson.get("password").getAsString());
+        user.setRol(usuarioJson.get("Rol").getAsString());
+        user.setTlf(usuarioJson.get("tlf").getAsString());
 
         System.out.println("controlador.UsuarioDao.obtenerDatosUsuario()   " + user.toString());
 
