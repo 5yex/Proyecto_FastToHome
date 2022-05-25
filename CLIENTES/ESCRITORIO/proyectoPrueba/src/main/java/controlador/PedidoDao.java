@@ -113,7 +113,7 @@ public class PedidoDao {
         SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
         String json = pedido.getJSON();
         //hacemos una petición con el comando que deberá realizar el php, y los datos en json    
-        Peticion peticion = new Peticion("obtener_pedido", json);
+        Peticion peticion = new Peticion("obtener_pedido_unico", json);
         //mandamos la peticion como consulta selección para obtener valores
         JsonObject pedidoJson = gestion.consultaSeleccionUnico(peticion);
         //de la respuesta, obtenemos el id    
