@@ -264,7 +264,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
     
     public void confirmarSalida(){
-        int valor = JOptionPane.showConfirmDialog(this,"¿Esta seguro de que quiere avandonar esta ventana?", "Advertencia", JOptionPane.YES_NO_OPTION);
+        int valor = JOptionPane.showConfirmDialog(this,"¿Esta seguro de que quiere abandonar esta ventana?", "Advertencia", JOptionPane.YES_NO_OPTION);
         if(valor == JOptionPane.YES_OPTION){
             
             JOptionPane.showMessageDialog(null, "Volverá a la ventana de Logueo", "Hasta luego!", JOptionPane.INFORMATION_MESSAGE);
