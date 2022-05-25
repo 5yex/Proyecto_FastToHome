@@ -128,7 +128,7 @@
         android:inputType="textPersonName"
         android:text="Name"
         tools:layout_editor_absoluteX="191dp"
-        tools:layout_editor_absoluteY="120dp" />
+        tools:layout_editor_absoluteY="113dp" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
