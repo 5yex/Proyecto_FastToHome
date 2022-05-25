@@ -166,7 +166,8 @@ public class gestion {
         String json = null;
         try {
             CloseableHttpClient client = HttpClients.createDefault();
-            HttpPost httpPost = new HttpPost("http://localhost/Php/webService/api.php");
+            //HttpPost httpPost = new HttpPost("http://localhost/Php/webService/api.php");
+            HttpPost httpPost = new HttpPost("http://10.0.2.2/Php/webService/api.php");
 
             List<NameValuePair> params = new ArrayList<>();
 
