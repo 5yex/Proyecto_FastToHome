@@ -69,6 +69,9 @@ if (empty($_POST["DATA"])) {
             obtenerNegocioDeMercader(json_decode($peticion->datos));
             break;
         //Casos de pedidos
+        case 'obtener_pedido_unico';
+            obtenerPedidoUnico(json_decode($peticion->datos));
+            break;
         case 'obtener_pedidos_pagados';
             obtenerPedidosNegocioPagados(json_decode($peticion->datos));
             break;
@@ -482,6 +485,23 @@ function obtenerUsuariosClientes(){
             mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
         }
     } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
+function obtenerPedidoUnico($datos){
+    require_once '../modelo/Pedido.php';
+    
+    try{
+        $pedido = new Pedido();
+        $pedido->setId_pedido($datos->id_pedido);
+        $respuesta = $pedido->obtenerPedidosNegocioPagado();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
+        }        
+    }catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
 }
