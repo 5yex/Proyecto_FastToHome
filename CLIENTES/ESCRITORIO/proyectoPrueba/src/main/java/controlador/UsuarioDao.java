@@ -62,6 +62,7 @@ public class UsuarioDao {
             user.setId_direccion(respuesta.get("direccion_id").getAsInt());
         }
         user.setNombre(respuesta.get("Nombre").getAsString());
+        user.setApellidos(respuesta.get("apellidos").getAsString());
         user.setPassword(respuesta.get("password").getAsString());
         user.setRol(respuesta.get("Rol").getAsString());
         user.setTlf(respuesta.get("tlf").getAsString());
