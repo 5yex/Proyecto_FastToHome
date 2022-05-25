@@ -16,7 +16,14 @@ public class PantallaLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_login);
         List<Usuario> lista = UsuarioDao.seleccionUsuarios();
-        System.out.println(lista.size());
+
+        Runnable runnable = new Runnable(){
+            public void run() {
+                System.out.println(lista.size());
+            }
+        };
+        runnable.run();
+
     }
 
 
