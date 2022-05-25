@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.donosocortes.fast2home.controlador.UsuarioDao;
+
 public class PantallaLogin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_login);
+        UsuarioDao.seleccionUsuarios();
     }
 }
