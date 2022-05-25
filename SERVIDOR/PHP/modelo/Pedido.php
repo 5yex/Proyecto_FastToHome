@@ -152,6 +152,18 @@ class Pedido extends Conexion{
         
     }
     
+    public function obtenerPedido(){
+        $sql = "SELECT * FROM pedido WHERE id = :id_pedido";
+        
+        $sentencia = $this->dblink->prepare($sql);
+
+        $id_pedido = $this->getId_pedido();
+        $sentencia->bindParam(":id_pedido", $id_pedido);
+
+        $sentencia->execute();
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }
+    
     public function obtenerPedidosNegocioEnPreparacion(){
         $sql = "SELECT * FROM pedido WHERE id_negocio = :id_neg AND DATE(fecha_hora) = CURDATE() AND estado LIKE 'en_preparacion'";
         
