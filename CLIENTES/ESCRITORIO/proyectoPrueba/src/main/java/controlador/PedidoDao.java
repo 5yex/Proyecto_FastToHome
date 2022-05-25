@@ -110,6 +110,7 @@ public class PedidoDao {
     }
     
     public static Pedido obtenerPedido(Pedido pedido){
+        SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
         String json = pedido.getJSON();
         //hacemos una petición con el comando que deberá realizar el php, y los datos en json    
         Peticion peticion = new Peticion("obtener_pedido", json);
