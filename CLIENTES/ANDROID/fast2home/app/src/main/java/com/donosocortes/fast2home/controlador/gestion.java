@@ -1,6 +1,8 @@
 package com.donosocortes.fast2home.controlador;
 
 import com.donosocortes.fast2home.modelo.Peticion;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
