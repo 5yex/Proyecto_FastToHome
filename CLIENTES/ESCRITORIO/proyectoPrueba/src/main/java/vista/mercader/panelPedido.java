@@ -37,6 +37,11 @@ public class panelPedido extends javax.swing.JPanel {
         this.botonPedidos = botonPedidos;
         mostrarDatos();
     }
+    
+    public panelPedido(Pedido pedido){
+        initComponents();
+        this.pedido = pedido;
+        mostrarDatos();}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -142,7 +147,6 @@ public class panelPedido extends javax.swing.JPanel {
 
     private void pasarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasarEstadoActionPerformed
         if(PedidoDao.actualizarEstadoPedido(pedido)){
-            botonPedidos.doClick();
             mostrarDatos();
         }else{
             System.out.println("nO SE PUEDE VISUALIZAR EL NUEVO ESTADO");
