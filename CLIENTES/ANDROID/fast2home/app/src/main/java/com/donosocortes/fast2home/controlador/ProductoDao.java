@@ -4,12 +4,13 @@
  */
 package com.donosocortes.fast2home.controlador;
 
+import com.donosocortes.fast2home.modelo.Negocio;
+import com.donosocortes.fast2home.modelo.Peticion;
+import com.donosocortes.fast2home.modelo.Producto;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import java.util.ArrayList;
-import modelo.Negocio;
-import modelo.Peticion;
-import modelo.Producto;
+
 
 /**
  *
