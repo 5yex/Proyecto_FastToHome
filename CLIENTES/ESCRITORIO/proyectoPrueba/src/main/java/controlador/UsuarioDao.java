@@ -103,6 +103,7 @@ public class UsuarioDao {
                 user.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
             }
             user.setNombre(usuarioJson.get("Nombre").getAsString());
+            user.setApellidos(respuesta.get("apellidos").getAsString());
             user.setPassword(usuarioJson.get("password").getAsString());
             user.setRol(usuarioJson.get("Rol").getAsString());
             user.setTlf(usuarioJson.get("tlf").getAsString());
