@@ -8,6 +8,7 @@ import com.formdev.flatlaf.ui.FlatButtonBorder;
 import controlador.PedidoDao;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JMenu;
 import modelo.Pedido;
 import modelo.Producto;
 
@@ -18,7 +19,7 @@ import modelo.Producto;
 public class panelPedido extends javax.swing.JPanel {
     private Pedido pedido;
     private ActionListener actualizarPedido;
-    private JButton botonPedidos;
+    private JMenu botonPedidos;
     /**
      * Creates new form producto
      */
@@ -30,7 +31,7 @@ public class panelPedido extends javax.swing.JPanel {
         mostrarDatos();
     }
     
-    public panelPedido(Pedido pedido, JButton botonPedidos){
+    public panelPedido(Pedido pedido, JMenu botonPedidos){
         initComponents();
         this.pedido = pedido;
         this.botonPedidos = botonPedidos;
