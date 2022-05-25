@@ -495,7 +495,7 @@ function obtenerPedidoUnico($datos){
     try{
         $pedido = new Pedido();
         $pedido->setId_pedido($datos->id_pedido);
-        $respuesta = $pedido->obtenerPedidosNegocioPagado();
+        $respuesta = $pedido->obtenerPedido();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
