@@ -5,12 +5,10 @@
 package com.donosocortes.fast2home.modelo;
 
 import com.google.gson.Gson;
-import java.awt.Image;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.imageio.stream.FileImageInputStream;
 import org.apache.commons.codec.EncoderException;
 import org.apache.commons.codec.binary.Base64;
 
