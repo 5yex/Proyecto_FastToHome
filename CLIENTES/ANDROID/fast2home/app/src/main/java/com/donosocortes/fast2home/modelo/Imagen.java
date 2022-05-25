@@ -9,8 +9,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.apache.commons.codec.EncoderException;
-import org.apache.commons.codec.binary.Base64;
+
 
 /**
  *
