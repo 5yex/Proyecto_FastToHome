@@ -163,17 +163,6 @@ public class gestion {
             }
             return null;
 
-            class DemoTask extends AsyncTask<Void, Void, Void> {
-
-                protected void doInBackground(Void... arg0) {
-                    //Your implementation
-                }
-
-                protected void onPostExecute(Void result) {
-                    // TODO: do something with the feed
-                }
-            }
-
         } catch (Exception ex) {
             //JOptionPane.showMessageDialog(null, ex.getMessage());
             ex.printStackTrace();

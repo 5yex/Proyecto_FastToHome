@@ -18,4 +18,17 @@ public class PantallaLogin extends AppCompatActivity {
         List<Usuario> lista = UsuarioDao.seleccionUsuarios();
         System.out.println(lista.size());
     }
+
+    private class Consulta extends AsyncTask<URL, Integer, Long> {
+        protected Long doInBackground(URL... urls) {
+
+        }
+
+        protected void onProgressUpdate(Integer... progress) {
+        }
+
+        protected void onPostExecute(Long result) {
+        }
+    }
+
 }
