@@ -139,12 +139,9 @@ public class gestion {
 
             httpPost.setEntity(new UrlEncodedFormEntity(params));
 
-            Runnable runnable = new Runnable(){
-                public void run() {
-                    //some code here
-                }
-            };
-            runnable.run();
+
+
+            
 
             CloseableHttpResponse response = client.execute(httpPost);
 
