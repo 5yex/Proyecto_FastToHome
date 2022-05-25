@@ -196,7 +196,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void itemAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAdministradorActionPerformed
         //hacerAdmin
         int filaSeleccionada = tablaClientes.getSelectedRow();
-        if (UsuarioDao.asignarRolAdministrador(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
+        if (UsuarioDao.asignarRolAdministrador(new Usuario(arrayListClientes.get(filaSeleccionada - 1).getId()))) {
             recargarTablaClientes(UsuarioDao.obtenerDatosClientes());
         } else {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como administrador a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
