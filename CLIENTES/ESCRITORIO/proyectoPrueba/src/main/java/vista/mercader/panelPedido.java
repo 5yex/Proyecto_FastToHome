@@ -37,12 +37,6 @@ public class panelPedido extends javax.swing.JPanel {
         this.botonPedidos = botonPedidos;
         mostrarDatos();
     }
-    
-    public panelPedido(Pedido pedido){
-        initComponents();
-        this.pedido = pedido;
-        mostrarDatos();
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
