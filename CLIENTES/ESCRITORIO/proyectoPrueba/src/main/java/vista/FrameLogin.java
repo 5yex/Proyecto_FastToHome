@@ -160,7 +160,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                                     + "Si eres un nuevo administrador y no puedes entrar espera a un administrador te registre como tal.", "Advertencia.", JOptionPane.INFORMATION_MESSAGE);
                             break;
                         case ADMIN:
-                            this.setVisible(false);
+                            this.setEnabled(false);
                             VentanaAdmin ventanaAdmin = new VentanaAdmin(user);
                             ventanaAdmin.setVisible(true);
                             break;
