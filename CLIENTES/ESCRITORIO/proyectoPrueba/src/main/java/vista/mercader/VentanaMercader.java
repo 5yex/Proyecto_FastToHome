@@ -191,7 +191,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_botonPedidosMouseClicked
 
     private void mostrarProductos() {
-        interrumpirHilo();
+        //interrumpirHilo();
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
         contenido.add(new panelProductoNuevo());
@@ -210,7 +210,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
 
     private void mostrarPanelInicio() {
-        interrumpirHilo();
+        //interrumpirHilo();
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 0, 0));
         contenido.add(new panelInicioM(negocio));
