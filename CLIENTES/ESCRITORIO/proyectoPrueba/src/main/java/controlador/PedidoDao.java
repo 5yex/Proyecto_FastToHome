@@ -112,7 +112,7 @@ public class PedidoDao {
     public static Pedido obtenerPedido(Pedido pedido){
         String json = pedido.getJSON();
         //hacemos una petición con el comando que deberá realizar el php, y los datos en json    
-        Peticion peticion = new Peticion("getUsuario", json);
+        Peticion peticion = new Peticion("obtener_pedido", json);
         //mandamos la peticion como consulta selección para obtener valores
         JsonObject pedidoJson = gestion.consultaSeleccionUnico(peticion);
         //de la respuesta, obtenemos el id    
