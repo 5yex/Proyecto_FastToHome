@@ -4,7 +4,7 @@
  */
 package com.donosocortes.fast2home.controlador;
 
-import androidx.annotation.NonNull;
+import android.os.AsyncTask;
 
 import com.donosocortes.fast2home.modelo.Peticion;
 import com.google.gson.JsonArray;
@@ -121,7 +121,7 @@ public class gestion {
         }
     }
 
-  
+
 
     public static JsonArray consultaSeleccion(Peticion peticion) {
         String json = null;
@@ -162,6 +162,17 @@ public class gestion {
                 }
             }
             return null;
+
+            class DemoTask extends AsyncTask<Void, Void, Void> {
+
+                protected void doInBackground(Void... arg0) {
+                    //Your implementation
+                }
+
+                protected void onPostExecute(Void result) {
+                    // TODO: do something with the feed
+                }
+            }
 
         } catch (Exception ex) {
             //JOptionPane.showMessageDialog(null, ex.getMessage());
