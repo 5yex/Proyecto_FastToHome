@@ -14,6 +14,7 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import java.util.ArrayList;
@@ -30,7 +31,8 @@ public class gestion {
     public static boolean hacerConsulta(Peticion peticion) {
         String json = null;
         try {
-            CloseableHttpClient client = HttpClients.createC;
+            HttpClientBuilder client = HttpClients.custom();
+            client.ss
             HttpPost httpPost = new HttpPost("http://10.0.2.2/Php/webService/api.php");
             //HttpPost httpPost = new HttpPost("http://localhost/Php/webService/api.php");
 
