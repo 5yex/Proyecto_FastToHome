@@ -110,6 +110,28 @@ public class PedidoDao {
     }
     
     public static Pedido obtenerPedido(Pedido pedido){
-        return gestion.consultaSeleccionUnico(new Peticion("obtener_pedido", pedido.getJSON()));
+        String json = pedido.getJSON();
+        //hacemos una petición con el comando que deberá realizar el php, y los datos en json    
+        Peticion peticion = new Peticion("getUsuario", json);
+        //mandamos la peticion como consulta selección para obtener valores
+        JsonObject pedidoJson = gestion.consultaSeleccionUnico(peticion);
+        //de la respuesta, obtenemos el id    
+        pedido.setId_pedido(pedidoJson.get("id").getAsInt());
+                pedido.setId_usuario(pedidoJson.get("id_usuario").getAsInt());
+                String fechaActual = pedidoJson.get("fecha_hora").getAsString();
+
+                try {
+                    pedido.setFecha_hora(dateParser.parse(fechaActual));
+                } catch (ParseException ex) {
+                    Logger.getLogger(PedidoDao.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+                pedido.setEstado(pedidoJson.get("estado").getAsString());
+                pedido.setTotal(pedidoJson.get("total").getAsDouble());
+                pedido.setTransporte(pedidoJson.get("transporte").getAsString());
+
+        System.out.println("controlador.UsuarioDao.obtenerDatosUsuario()   " + user.toString());
+
+        return user;
     }
 }
