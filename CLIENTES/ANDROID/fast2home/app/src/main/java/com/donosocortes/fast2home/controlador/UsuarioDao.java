@@ -17,6 +17,7 @@ import java.util.ArrayList;
  */
 public class UsuarioDao {
 
+
     public static boolean nuevoUsuario(Usuario user) {
         return gestion.hacerConsulta(new Peticion("nuevo_usuario", user.getJSON()));
     }
