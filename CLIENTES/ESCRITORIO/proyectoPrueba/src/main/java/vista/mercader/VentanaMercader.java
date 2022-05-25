@@ -58,9 +58,9 @@ public class VentanaMercader extends javax.swing.JFrame {
      * Creates new form VentanaPrincipal
      */
     public VentanaMercader(Usuario user) {
+        this.mercader = user;
+        this.negocio = NegocioDao.negocioDeMercader(user);
         initComponents();
-        mercader = user;
-        negocio = NegocioDao.negocioDeMercader(user);
         mostrarPanelInicio();
     }
 
