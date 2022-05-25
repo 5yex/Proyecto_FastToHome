@@ -281,6 +281,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         if(valor == JOptionPane.YES_OPTION){
             
             JOptionPane.showMessageDialog(null, "Volverá a la ventana de Logueo", "Hasta luego!", JOptionPane.INFORMATION_MESSAGE);
+            this.dispose();
             new FrameLogin().setVisible(true);
         }
         
