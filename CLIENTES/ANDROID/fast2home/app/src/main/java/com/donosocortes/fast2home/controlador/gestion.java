@@ -31,8 +31,10 @@ public class gestion {
     public static boolean hacerConsulta(Peticion peticion) {
         String json = null;
         try {
-            HttpClientBuilder client = HttpClients.custom();
-            client.ss
+            HttpClientBuilder clientF = HttpClients.custom();
+            clientF.useSystemProperties();
+
+            CloseableHttpClient client = clientF.build();
             HttpPost httpPost = new HttpPost("http://10.0.2.2/Php/webService/api.php");
             //HttpPost httpPost = new HttpPost("http://localhost/Php/webService/api.php");
 
