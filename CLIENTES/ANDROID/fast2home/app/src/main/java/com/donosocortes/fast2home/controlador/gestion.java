@@ -141,8 +141,7 @@ public class gestion {
 
 
 
-            s
-
+          
             CloseableHttpResponse response = client.execute(httpPost);
 
             HttpEntity entity = response.getEntity();
