@@ -246,32 +246,6 @@ public class VentanaMercader extends javax.swing.JFrame {
         }
 
     }
-    
-    public void confirmarCierre(){
-        try{
-            this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-            addWindowListener(new WindowAdapter() {
-                public void windowClosing(WindowEvent e){
-                    confirmarSalida();
-                }
-            });
-            this.setVisible(true);
-        }catch(Exception e){
-            e.printStackTrace();
-            
-        }
-        
-    }
-    
-    public void confirmarSalida(){
-        int valor = JOptionPane.showConfirmDialog(this,"¿Esta seguro de que quiere abandonar esta ventana?", "Advertencia", JOptionPane.YES_NO_OPTION);
-        if(valor == JOptionPane.YES_OPTION){
-            
-            JOptionPane.showMessageDialog(null, "Volverá a la ventana de Logueo", "Hasta luego!", JOptionPane.INFORMATION_MESSAGE);
-            new FrameLogin().setVisible(true);
-        }
-        
-    }
 
     private void mostrarPedidos() {
         //crearHiloActualizacionDeProductos();
