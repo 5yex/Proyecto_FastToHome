@@ -12,17 +12,22 @@ import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
+import javax.swing.JOptionPane;
 import modelo.Negocio;
 import modelo.Pedido;
 import modelo.Producto;
 import modelo.Usuario;
 import org.apache.http.impl.conn.SystemDefaultRoutePlanner;
 import util.WrapLayout;
+import vista.FrameLogin;
 
 /**
  *
@@ -240,6 +245,32 @@ public class VentanaMercader extends javax.swing.JFrame {
             hiloUpdate.start();
         }
 
+    }
+    
+    public void confirmarCierre(){
+        try{
+            this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+            addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent e){
+                    confirmarSalida();
+                }
+            });
+            this.setVisible(true);
+        }catch(Exception e){
+            e.printStackTrace();
+            
+        }
+        
+    }
+    
+    public void confirmarSalida(){
+        int valor = JOptionPane.showConfirmDialog(this,"¿Esta seguro de que quiere avandonar esta ventana?", "Advertencia", JOptionPane.YES_NO_OPTION);
+        if(valor == JOptionPane.YES_OPTION){
+            
+            JOptionPane.showMessageDialog(null, "Volverá a la ventana de Logueo", "Hasta luego!", JOptionPane.INFORMATION_MESSAGE);
+            new FrameLogin().setVisible(true);
+        }
+        
     }
 
     private void mostrarPedidos() {
