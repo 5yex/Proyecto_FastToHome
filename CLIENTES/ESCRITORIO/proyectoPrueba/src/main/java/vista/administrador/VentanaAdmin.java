@@ -208,7 +208,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
     private void actualizarVentana() {
         administrador = UsuarioDao.obtenerDatosUsuario(administrador);
-        labelNombreAdmin.setText(administrador.getNombre());
+        labelNombreAdmin.setText(administrador.getNombre() + administrador.getApellidos());
     }
 
     public void recargarTablaClientes(ArrayList<Usuario> listaClientes) {
