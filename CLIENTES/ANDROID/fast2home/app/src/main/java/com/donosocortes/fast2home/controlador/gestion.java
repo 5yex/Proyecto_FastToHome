@@ -32,7 +32,7 @@ public class gestion {
         String json = null;
         try {
             HttpClientBuilder clientF = HttpClients.custom();
-           
+
 
             CloseableHttpClient client = clientF.build();
             HttpPost httpPost = new HttpPost("http://10.0.2.2/Php/webService/api.php");
