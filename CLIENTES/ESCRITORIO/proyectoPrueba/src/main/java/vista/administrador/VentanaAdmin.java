@@ -254,6 +254,15 @@ public class VentanaAdmin extends javax.swing.JFrame {
         /* Create and display the dialog */
         new VentanaAdmin(null).setVisible(true);
     }
+    
+    public void confirmarCierre(){
+        try{
+            
+        }catch(Exception e){
+            
+        }
+        
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonModificarDatosAdmin;
