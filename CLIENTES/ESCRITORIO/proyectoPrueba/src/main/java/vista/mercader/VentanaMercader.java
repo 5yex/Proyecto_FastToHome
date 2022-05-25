@@ -76,7 +76,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         botonInfo = new javax.swing.JMenu();
         botonProductos = new javax.swing.JMenu();
-        botonOpciones = new javax.swing.JMenu();
+        botonPedidos = new javax.swing.JMenu();
 
         jMenuItem1.setText("NUEVO PRODUCTO");
         popupProductos.add(jMenuItem1);
@@ -136,20 +136,20 @@ public class VentanaMercader extends javax.swing.JFrame {
         });
         jMenuBar1.add(botonProductos);
 
-        botonOpciones.setText("PEDIDOS");
-        botonesMenu.add(botonOpciones);
-        botonOpciones.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        botonOpciones.setDoubleBuffered(true);
-        botonOpciones.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        botonOpciones.addMouseListener(new java.awt.event.MouseAdapter() {
+        botonPedidos.setText("PEDIDOS");
+        botonesMenu.add(botonPedidos);
+        botonPedidos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        botonPedidos.setDoubleBuffered(true);
+        botonPedidos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botonPedidos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botonOpcionesMouseClicked(evt);
+                botonPedidosMouseClicked(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 deselección(evt);
             }
         });
-        jMenuBar1.add(botonOpciones);
+        jMenuBar1.add(botonPedidos);
 
         setJMenuBar(jMenuBar1);
 
@@ -181,9 +181,9 @@ public class VentanaMercader extends javax.swing.JFrame {
         mostrarPanelInicio();
     }//GEN-LAST:event_botonInfoMouseClicked
 
-    private void botonOpcionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonOpcionesMouseClicked
+    private void botonPedidosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonPedidosMouseClicked
         mostrarPedidos();
-    }//GEN-LAST:event_botonOpcionesMouseClicked
+    }//GEN-LAST:event_botonPedidosMouseClicked
 
     private void mostrarProductos() {
         interrumpirHilo();
@@ -243,21 +243,21 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
 
     private void mostrarPedidos() {
-        crearHiloActualizacionDeProductos();
+        /*crearHiloActualizacionDeProductos();
         ActionListener actualizarPedidos = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.err.println("MOSTRANDO LOS PEDIDOS");
                 mostrarPedidos();
             }
-        };
+        };*/
         jScrollPane1.setIgnoreRepaint(true);
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
         ArrayList<Pedido> pedidos = PedidoDao.seleccionTodosPedidos(negocio);
         if (pedidos != null) {
             for (Pedido pedido : pedidos) {
-                contenido.add(new panelPedido(pedido, actualizarPedidos));
+                contenido.add(new panelPedido(pedido, ));
             }
         } else {
             contenido.add(new JLabel("NO HAY PEDIDOS"));
@@ -271,7 +271,7 @@ public class VentanaMercader extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu botonInfo;
-    private javax.swing.JMenu botonOpciones;
+    private javax.swing.JMenu botonPedidos;
     private javax.swing.JMenu botonProductos;
     private javax.swing.ButtonGroup botonesMenu;
     private javax.swing.JPanel contenido;
