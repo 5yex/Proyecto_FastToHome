@@ -32,7 +32,7 @@ if (empty($_POST["DATA"])) {
             asignarRolAdministrador(json_decode($peticion->datos));
             break;
         case 'asignar_rol_mercader';
-            asignarRolMercader(josn_decode($peticion->datos));
+            asignarRolMercader(json_decode($peticion->datos));
             break;
         //Casos de producto
         case 'nuevo_producto';
