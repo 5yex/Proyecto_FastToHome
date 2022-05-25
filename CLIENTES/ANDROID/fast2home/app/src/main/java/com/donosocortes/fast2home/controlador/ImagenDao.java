@@ -2,7 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package controlador;
+package com.donosocortes.fast2home.controlador;
+
+import com.donosocortes.fast2home.modelo.Imagen;
+import com.donosocortes.fast2home.modelo.Peticion;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,11 +13,8 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.ImageIcon;
-import modelo.Categoria;
-import modelo.Direccion;
-import modelo.Imagen;
-import modelo.Peticion;
+
+
 
 /**
  *

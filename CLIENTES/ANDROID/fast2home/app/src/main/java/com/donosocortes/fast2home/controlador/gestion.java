@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package controlador;
+package com.donosocortes.fast2home.controlador;
 
+import com.donosocortes.fast2home.modelo.Peticion;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -17,7 +18,6 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import java.util.ArrayList;
 import java.util.List;
-import modelo.Peticion;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
