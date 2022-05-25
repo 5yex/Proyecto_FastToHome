@@ -146,7 +146,7 @@ public class panelPedido extends javax.swing.JPanel {
         }else{
             System.out.println("nO SE PUEDE VISUALIZAR EL NUEVO ESTADO");
         }
-        mostrarDatos();
+        //mostrarDatos();
 
     }//GEN-LAST:event_pasarEstadoActionPerformed
 
