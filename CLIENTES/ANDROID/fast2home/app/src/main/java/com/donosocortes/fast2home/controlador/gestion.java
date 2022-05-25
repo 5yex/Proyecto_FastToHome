@@ -161,6 +161,7 @@ public class gestion {
 
         } catch (Exception ex) {
             //JOptionPane.showMessageDialog(null, ex.getMessage());
+            ex.printStackTrace();
             return null;
         }
     }
