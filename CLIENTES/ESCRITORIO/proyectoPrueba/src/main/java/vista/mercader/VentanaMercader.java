@@ -274,14 +274,14 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
 
     private void mostrarPedidos() {
-        /*crearHiloActualizacionDeProductos();
+        //crearHiloActualizacionDeProductos();
         ActionListener actualizarPedidos = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.err.println("MOSTRANDO LOS PEDIDOS");
                 mostrarPedidos();
             }
-        };*/
+        };
         jScrollPane1.setIgnoreRepaint(true);
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
