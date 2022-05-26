@@ -4,16 +4,16 @@
  */
 package util;
 
+import java.awt.Image;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Base64;
-import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import org.apache.commons.io.IOUtils;
 
 /**
@@ -39,4 +39,17 @@ public class imagenesUtil {
         return new ImageIcon(decodedBytes);
     }
 
+    public static void imagenAjlabel(String imgBase64, JLabel label){
+        try {
+            ImageIcon image = imagenesUtil.base64AImagen(imgBase64);
+            label.setIcon(new ImageIcon(image.getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_DEFAULT)));
+        } catch (Exception e) {
+            label.setIcon(new ImageIcon(new ImageIcon("recursos/noIcon.png").getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_DEFAULT)));
+
+            System.out.println("no tienes icono");
+
+        }
+    }
+    
+    
 }

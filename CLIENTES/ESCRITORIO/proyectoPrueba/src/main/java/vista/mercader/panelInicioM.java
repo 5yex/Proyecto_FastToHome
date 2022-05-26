@@ -33,14 +33,8 @@ public class panelInicioM extends javax.swing.JPanel {
         img.setBorder(new FlatButtonBorder());
         DescripcionNegocio.setText(negocio.getDescripcion());
         nombreNegocio.setText(negocio.getNombre());
-
-        try {
-            ImageIcon image = imagenesUtil.base64AImagen(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())));
-            img.setIcon(new ImageIcon(image.getImage().getScaledInstance(img.getPreferredSize().width, img.getPreferredSize().height, Image.SCALE_DEFAULT)));
-        } catch (Exception e) {
-            System.out.println("no tienes icono");
-            img.setText("NO TIENES IMAGEN");
-        }
+        img.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/recursos/noIcon.png")).getImage().getScaledInstance(img.getPreferredSize().width, img.getPreferredSize().height, Image.SCALE_DEFAULT)));
+        imagenesUtil.imagenAjlabel(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())), img);
 
     }
 
@@ -95,8 +89,6 @@ public class panelInicioM extends javax.swing.JPanel {
                     .addComponent(img, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(98, Short.MAX_VALUE))
         );
-
-        img.getAccessibleContext().setAccessibleName("");
     }// </editor-fold>//GEN-END:initComponents
 
 
