@@ -297,8 +297,14 @@ public class VentanaAdmin extends javax.swing.JFrame {
         tabla.setAutoCreateRowSorter(true);
         DefaultTableModel model = (DefaultTableModel) tabla.getModel();
         if(filtroNombre!= null | !filtroNombre.isBlank()){
-        
-        
+            for (Usuario cliente : listaClientes) {
+                String nombreApellido = cliente.getNombre() +" "+cliente.getApellidos();
+                if()
+                
+                
+                
+                model.addRow(cliente.getRow());
+            }
         }else{
             for (Usuario cliente : listaClientes) {
                 model.addRow(cliente.getRow());
