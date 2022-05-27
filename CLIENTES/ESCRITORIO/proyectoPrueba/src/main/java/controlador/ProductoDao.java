@@ -27,8 +27,8 @@ public class ProductoDao {
 
     
     
-    public static ArrayList<Producto> selecciónProductos(Negocio negocio,String consulta) {
-        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion(consulta, negocio.getJSON()));
+    public static ArrayList<Producto> selecciónProductosNegocio(Negocio negocio) {
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_productos_negocio", negocio.getJSON()));
         ArrayList<Producto> listaProductos = new ArrayList<>();
         System.out.println("controlador.ProductoDao.selecciónProductosNegocio()     NUMERO PRODUCTOS: " + listaProductos.size());
         if (jsonArray != null) {
