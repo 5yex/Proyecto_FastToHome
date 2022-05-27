@@ -252,6 +252,11 @@ public class VentanaAdmin extends javax.swing.JFrame {
         });
 
         recargarMercaderes.setText("RECARGAR");
+        recargarMercaderes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                recargarMercaderesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelTablaMercaderesLayout = new javax.swing.GroupLayout(panelTablaMercaderes);
         panelTablaMercaderes.setLayout(panelTablaMercaderesLayout);
@@ -338,6 +343,10 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void checkBusquedaMercaderesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaMercaderesActionPerformed
         recargarTablaMercaderes();
     }//GEN-LAST:event_checkBusquedaMercaderesActionPerformed
+
+    private void recargarMercaderesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarMercaderesActionPerformed
+        recargarTablaMercaderes();
+    }//GEN-LAST:event_recargarMercaderesActionPerformed
 
     private void actualizarVentana() {
         administrador = UsuarioDao.obtenerDatosUsuario(administrador);
