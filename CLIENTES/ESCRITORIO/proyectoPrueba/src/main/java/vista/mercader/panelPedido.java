@@ -19,19 +19,13 @@ import modelo.Producto;
 public class panelPedido extends javax.swing.JPanel {
     private Pedido pedido;
     private ActionListener actualizarPedido;
-    private JMenu botonPedidos;
+    private JButton botonPedidos;
     /**
      * Creates new form producto
      */
 
-    public panelPedido(Pedido pedido, ActionListener actualizarPedido) {
-        initComponents();
-        this.pedido = pedido;
-        this.actualizarPedido = actualizarPedido;
-        mostrarDatos();
-    }
-    
-    public panelPedido(Pedido pedido, JMenu botonPedidos){
+
+    public panelPedido(Pedido pedido, JButton botonPedidos){
         initComponents();
         this.pedido = pedido;
         this.botonPedidos = botonPedidos;
@@ -149,6 +143,7 @@ public class panelPedido extends javax.swing.JPanel {
         if(PedidoDao.actualizarEstadoPedido(pedido)){
             pedido = PedidoDao.obtenerPedido(pedido);
             mostrarDatos();
+            botonPedidos.doClick();
         }/*else{
             System.out.println("O SE PUEDE VISUALIZAR EL NUEVO ESTADO");
         }*/
