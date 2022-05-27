@@ -40,6 +40,8 @@ if (empty($_POST["DATA"])) {
         case 'asignar_rol_mercader';
             asignarRolMercader(json_decode($peticion->datos));
             break;
+        
+        
         //Casos de producto
         case 'nuevo_producto';
             nuevoProducto(json_decode($peticion->datos));
@@ -52,6 +54,8 @@ if (empty($_POST["DATA"])) {
             break;
         case 'borrar_producto';
             borrarProducto(json_decode($peticion->datos));
+            
+            
         //Casos dirección
         case 'nueva_direccion';
             nuevaDireccion(json_decode($peticion->datos));
@@ -64,6 +68,8 @@ if (empty($_POST["DATA"])) {
             break;
         case 'actualizar_direccion';
             modificarDireccion(json_decode($peticion->datos));
+            
+            
         //Casos negocio
         case 'nuevo_negocio';
             nuevoNegocio(json_decode($peticion->datos));
@@ -74,6 +80,8 @@ if (empty($_POST["DATA"])) {
         case 'negocio_de_mercader';
             obtenerNegocioDeMercader(json_decode($peticion->datos));
             break;
+        
+        
         //Casos de pedidos
         case 'obtener_pedido_unico';
             obtenerPedidoUnico(json_decode($peticion->datos));
@@ -90,6 +98,8 @@ if (empty($_POST["DATA"])) {
         case 'actualizar_estado_pedido';
             actualizarEstadoPedido(json_decode($peticion->datos));
             break;
+        
+        
         //Casos de Categoria
         case 'nueva_categoria';
             nuevaCategoria(json_decode($peticion->datos));
@@ -100,6 +110,8 @@ if (empty($_POST["DATA"])) {
         case 'obtener_id_categoria';
             obtenerCategoriaPorNombre(json_decode($peticion->datos));
             break;     
+        
+        
         //imagenes
         case 'nueva_imagen';
             nuevaImagen(json_decode($peticion->datos));
