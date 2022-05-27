@@ -116,7 +116,7 @@ public class UsuarioDao {
     }
     
     public static ArrayList<Usuario> obtenerDatosClientes(){
-        return seleccionUsuarios("");
+        return seleccionUsuarios("obtener_usuarios_clientes");
     }
     
     
