@@ -475,7 +475,13 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_itemAdminAClienteActionPerformed
 
     private void itemMercaderAClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMercaderAClienteActionPerformed
-        // TODO add your handling code here:
+         //degradar
+        int filaSeleccionada = tablaMercaderes.getSelectedRow();
+        if (UsuarioDao.asignarRolCliente(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
+            recargarTablaAdmins();
+        } else {
+            JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como administrador a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_itemMercaderAClienteActionPerformed
 
     private void panelTableadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMousePressed
