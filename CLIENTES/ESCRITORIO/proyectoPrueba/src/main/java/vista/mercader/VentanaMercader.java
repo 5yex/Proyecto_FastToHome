@@ -200,7 +200,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         ArrayList<Producto> productos = ProductoDao.selecciónProductosNegocio(negocio);
         if (productos != null) {
             for (Producto producto : productos) {
-                contenido.add(new panelProducto(producto,contenido));
+                contenido.add(new panelProducto(producto));
             }
         }
 
