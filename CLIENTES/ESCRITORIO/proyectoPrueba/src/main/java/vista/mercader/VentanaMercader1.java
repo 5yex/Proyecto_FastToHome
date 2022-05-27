@@ -275,7 +275,7 @@ public class VentanaMercader1 extends javax.swing.JFrame {
                 public void run() {
                     try {
                         while (true) {
-                            mostrarPedidos();
+                            //mostrarPedidos();
                             Thread.sleep(1000);
                             System.out.println(".run() PEDIDOS ACTUALIZADOS");
                         }
