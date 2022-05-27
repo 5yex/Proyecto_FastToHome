@@ -408,8 +408,8 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
                 JOptionPane.showMessageDialog(this, "Error, no insertó una direccion correcta por lo que no se procedió a crear el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
             }
 
-        }else {
-                JOptionPane.showMessageDialog(this, "Tienes que introducir una direccion", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "Tienes que introducir una direccion", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
         }
 
     }
