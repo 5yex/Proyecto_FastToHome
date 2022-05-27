@@ -239,7 +239,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
             }
 
         } catch (NumberFormatException ex) {
-            error.setText("Rellena correctamente los campos numéricos");
+            error.setText("Campos Numérico Incorrectos");
             return false;
         } catch (IOException ex) {
             error.setText(ex.getMessage());
