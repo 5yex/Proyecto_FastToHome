@@ -156,21 +156,28 @@ public class VentanaAdmin extends javax.swing.JFrame {
         busquedaClientes.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
-                recargarTablaClientes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+                if(checkBusquedaClientes)recargarTablaClientes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-                recargarTablaClientes();
+                if(checkBusquedaClientes)recargarTablaClientes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+                ();
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-                recargarTablaClientes();
+                if(checkBusquedaClientes)recargarTablaClientes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+                ();
             }
         });
 
         checkBusquedaClientes.setText("Búsqueda por nombre:");
+        checkBusquedaClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBusquedaClientesActionPerformed(evt);
+            }
+        });
 
         recargarClientes.setText("RECARGAR");
 
@@ -288,6 +295,10 @@ public class VentanaAdmin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como administrador a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_itemAdministradorActionPerformed
+
+    private void checkBusquedaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaClientesActionPerformed
+        busquedaClientes();
+    }//GEN-LAST:event_checkBusquedaClientesActionPerformed
 
     private void actualizarVentana() {
         administrador = UsuarioDao.obtenerDatosUsuario(administrador);
