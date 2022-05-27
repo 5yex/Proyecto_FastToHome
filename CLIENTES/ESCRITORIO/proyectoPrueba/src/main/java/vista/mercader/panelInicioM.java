@@ -30,9 +30,9 @@ public class panelInicioM extends javax.swing.JPanel {
     }
 
     private void cargaInicial() {
-        img.setBorder(new FlatButtonBorder());
         DescripcionNegocio.setText(negocio.getDescripcion());
-        nombreNegocio.setText(negocio.getNombre());     
+        nombreNegocio.setText(negocio.getNombre());   
+        img.setBorder(new FlatButtonBorder());
         imagenesUtil.imagenAjlabel(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())), img);
 
     }
