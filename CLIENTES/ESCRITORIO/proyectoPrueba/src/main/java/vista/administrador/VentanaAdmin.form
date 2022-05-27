@@ -355,8 +355,8 @@
         <Container class="javax.swing.JPanel" name="panelTablaAdmins">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="ADMININSTRADORES">
-                <Property name="tabTitle" type="java.lang.String" value="ADMININSTRADORES"/>
+              <JTabbedPaneConstraints tabName="ADMINISTRADORES">
+                <Property name="tabTitle" type="java.lang.String" value="ADMINISTRADORES"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>

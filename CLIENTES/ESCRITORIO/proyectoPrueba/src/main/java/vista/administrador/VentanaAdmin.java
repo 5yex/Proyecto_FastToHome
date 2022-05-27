@@ -47,8 +47,6 @@ public class VentanaAdmin extends javax.swing.JFrame {
         recargarTablaClientes();
         recargarTablaMercaderes();
         recargarTablaAdmins();
-
-
     }
 
     /**
@@ -395,7 +393,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        panelTableado.addTab("ADMININSTRADORES", panelTablaAdmins);
+        panelTableado.addTab("ADMINISTRADORES", panelTablaAdmins);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

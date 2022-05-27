@@ -40,6 +40,9 @@ if (empty($_POST["DATA"])) {
         case 'asignar_rol_mercader';
             asignarRolMercader(json_decode($peticion->datos));
             break;
+        case 'asignar_rol_cliente';
+            asignarRolCliente(json_decode($peticion->datos));
+            break;
         
         
         //Casos de producto
@@ -433,6 +436,21 @@ function asignarRolMercader($datos){
         
         if ($usuario->asignarRolMerdader()) {
             mandarRespuesta(false, 'Se ha asignado el rol de mercader a un cliente');
+        } else {
+            mandarRespuesta(true, 'Error al asignar el rol de mercader');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
+function asignarRolCliente($datos){
+    require_once '../modelo/usuario.php';
+    try {
+        $usuario = new usuario();
+        $usuario->setId($datos->id);
+        if ($usuario->asignarRolCliente()) {
+            mandarRespuesta(false, 'Se ha asignado el rol de CLiente a un a un usuario de mayor rango');
         } else {
             mandarRespuesta(true, 'Error al asignar el rol de mercader');
         }
