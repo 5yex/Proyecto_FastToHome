@@ -384,7 +384,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
     }//GEN-LAST:event_botonIntroducirDireccionActionPerformed
 
     private void registrarUsuario() {
-
+        if (direccionUsuario.isValida()) {
             int id_direccion = DireccionDao.nuevaDireccionDevuelveId(direccionUsuario);
             if (id_direccion != -1) {
                 newUsuario.setNombre(nombreField.getText());
@@ -407,6 +407,9 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             } else {
                 JOptionPane.showMessageDialog(this, "Error, no insertó una direccion correcta por lo que no se procedió a crear el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
             }
+
+        }
+
     }
 
     private void validarCampos() {
