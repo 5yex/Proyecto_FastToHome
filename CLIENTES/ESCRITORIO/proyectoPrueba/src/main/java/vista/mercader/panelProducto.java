@@ -32,13 +32,7 @@ public class panelProducto extends javax.swing.JPanel {
         mostrarDatos();
     }
 
-    public panelProducto(Producto producto, JPanel panelProductos, JMenu bt) {
-        initComponents();
-        this.producto = producto;
-        this.panelProductos = panelProductos;
-        mostrarDatos();
-    }
-
+   
      
 
     /**
