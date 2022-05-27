@@ -61,6 +61,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
         panelTablaClientes = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tablaClientes = new javax.swing.JTable();
+        panelTablaAdministradores = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tablaAdministradores = new javax.swing.JTable();
 
         itemMercader.setText("Hacer mercader a este usuario");
         itemMercader.addActionListener(new java.awt.event.ActionListener() {
@@ -157,6 +160,35 @@ public class VentanaAdmin extends javax.swing.JFrame {
         );
 
         panelTableado.addTab("CLIENTES", panelTablaClientes);
+
+        tablaAdministradores.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        tablaAdministradores.setComponentPopupMenu(jPopupMenu1);
+        jScrollPane3.setViewportView(tablaAdministradores);
+
+        javax.swing.GroupLayout panelTablaAdministradoresLayout = new javax.swing.GroupLayout(panelTablaAdministradores);
+        panelTablaAdministradores.setLayout(panelTablaAdministradoresLayout);
+        panelTablaAdministradoresLayout.setHorizontalGroup(
+            panelTablaAdministradoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 669, Short.MAX_VALUE)
+        );
+        panelTablaAdministradoresLayout.setVerticalGroup(
+            panelTablaAdministradoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTablaAdministradoresLayout.createSequentialGroup()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 30, Short.MAX_VALUE))
+        );
+
+        panelTableado.addTab("CLIENTES", panelTablaAdministradores);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -290,11 +322,14 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemMercader;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel labelBienvenido;
     private javax.swing.JLabel labelNombreAdmin;
     private javax.swing.JPanel panelInicioAdmin;
+    private javax.swing.JPanel panelTablaAdministradores;
     private javax.swing.JPanel panelTablaClientes;
     private javax.swing.JTabbedPane panelTableado;
+    private javax.swing.JTable tablaAdministradores;
     private javax.swing.JTable tablaClientes;
     // End of variables declaration//GEN-END:variables
 
