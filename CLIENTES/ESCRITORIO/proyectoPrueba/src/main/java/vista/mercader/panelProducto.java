@@ -21,16 +21,24 @@ public class panelProducto extends javax.swing.JPanel {
     private Producto producto;
     private Negocio negocio;
     private JPanel panelProductos;
+    private JFrame frameProductos;
     /**
      * Creates new form producto
      */
     public panelProducto(Producto prod) {
         initComponents();
-        producto = prod;
+        this.producto = prod;
         mostrarDatos();
     }
-    
-    
+
+    public panelProducto(Producto producto, JFrame frameProductos) {
+        initComponents();
+        this.producto = producto;
+        this.frameProductos = frameProductos;
+        mostrarDatos();
+    }
+
+        
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -99,6 +107,7 @@ public class panelProducto extends javax.swing.JPanel {
 
     private void botonEliminarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarProductoActionPerformed
        eliminarProducto();
+       VentanaMercader.mostrarProductos();
     }//GEN-LAST:event_botonEliminarProductoActionPerformed
 
     private void botonEditarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarProductoActionPerformed
@@ -123,7 +132,6 @@ public class panelProducto extends javax.swing.JPanel {
         if (valor == JOptionPane.YES_OPTION) {
             ProductoDao.borrarProducto(producto);
             JOptionPane.showMessageDialog(null, "Se eliminó el producto.", "Producto eliminado", JOptionPane.INFORMATION_MESSAGE);
-            this.removeAll();
         }
     }
 
