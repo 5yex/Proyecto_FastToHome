@@ -495,10 +495,11 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
 
     public void recargarTablaMercaderes() {
+        arrayListMercaderes = UsuarioDao.seleccionUsuariosMercader();
         if (checkBusquedaMercaderes.isSelected()) {
-            recargarTabla(UsuarioDao.seleccionUsuariosMercader(), tablaMercaderes, busquedaMercaderes.getText());
+            recargarTabla(arrayListMercaderes, tablaMercaderes, busquedaMercaderes.getText());
         } else {
-            recargarTabla(UsuarioDao.seleccionUsuariosMercader(), tablaMercaderes, null);
+            recargarTabla(arrayListMercaderes, tablaMercaderes, null);
         }
     }
 
