@@ -228,8 +228,8 @@ public class registroNegocio extends javax.swing.JFrame {
                         return NegocioDao.nuevoNegocio(negocio);
                     }
                 } else {
-                error.setText("Tienes que subir una imagen");
-            }
+                    error.setText("Tienes que subir una imagen");
+                }
             } else {
                 error.setText("Rellena la direccion");
             }
