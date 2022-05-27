@@ -62,7 +62,7 @@ public class Direccion {
     }
 
     public Direccion() {
-
+        this.valida = false;
     }
 
     public int getId_direccion() {
