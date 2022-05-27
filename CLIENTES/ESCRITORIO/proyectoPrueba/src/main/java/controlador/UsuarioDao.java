@@ -83,6 +83,9 @@ public class UsuarioDao {
     public static boolean asignarRolAdministrador(Usuario user) {
         return gestion.hacerConsulta(new Peticion("asignar_rol_admin", user.getJSON()));
     }
+    public static boolean asignarRolCliente(Usuario user) {
+        return gestion.hacerConsulta(new Peticion("asignar_rol_cliente", user.getJSON()));
+    }
 
     public static ArrayList<Usuario> seleccionUsuarios(String peticion) {
         
@@ -125,6 +128,7 @@ public class UsuarioDao {
     public static ArrayList<Usuario> seleccionUsuariosMercader(){
         return seleccionUsuarios("obtener_usuarios_mercader");
     }
+    
     
     
     public static ArrayList<Usuario> obtenerDatosAdministradores(){
