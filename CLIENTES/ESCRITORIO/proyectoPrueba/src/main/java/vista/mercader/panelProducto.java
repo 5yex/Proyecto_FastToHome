@@ -127,6 +127,7 @@ public class panelProducto extends javax.swing.JPanel {
     }
 
     private void eliminarProducto() {
+        ProductoDao.borrarProducto(producto);
         /*int valor = JOptionPane.showConfirmDialog(this, "¿Esta seguro de que quiere eliminar este producto?", "Confirmar borrado", JOptionPane.YES_NO_OPTION);
         if (valor == JOptionPane.YES_OPTION) {
             //System.out.println(producto.toString());
