@@ -40,6 +40,15 @@ public class Producto {
         this.stock = stock;
     }
 
+    public Producto(int id_producto, int id_negocio, String nombre, double precio, String descripcion, int stock) {
+        this.id_producto = id_producto;
+        this.id_negocio = id_negocio;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.descripcion = descripcion;
+        this.stock = stock;
+    }
+
     public Producto(int id_negocio) {
         this.id_negocio = id_negocio;
     }
