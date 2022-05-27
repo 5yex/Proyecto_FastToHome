@@ -207,25 +207,29 @@ public class registroNegocio extends javax.swing.JFrame {
             if (descripcion.length() == 0 | nombre.length() == 0) {
                 throw new IOException("Rellena todos los campos");
             }
+            if (nDireccion.isValida()) {
+                int id_direccion = DireccionDao.nuevaDireccionDevuelveId(nDireccion);
 
-            int id_direccion = DireccionDao.nuevaDireccionDevuelveId(nDireccion);
-            
-            int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
-            
-            if (id_direccion != -1 && id_imagen != -1) {
-                Categoria categoria = new Categoria();
-                categoria.setNombre(comboCategoria.getSelectedItem().toString());
-                int id_categoria = CategoriaDao.ObtenerIdPorNombre(categoria);
+                int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
 
-                Negocio negocio = new Negocio();
-                negocio.setNombre(nombre);
-                negocio.setDescripcion(descripcion);
-                negocio.setId_categoria(id_categoria);
-                negocio.setId_mercader(user.getId());
-                negocio.setId_direccion(id_direccion);
-                negocio.setId_img(id_imagen);
-                return NegocioDao.nuevoNegocio(negocio);
+                if (id_direccion != -1 && id_imagen != -1) {
+                    Categoria categoria = new Categoria();
+                    categoria.setNombre(comboCategoria.getSelectedItem().toString());
+                    int id_categoria = CategoriaDao.ObtenerIdPorNombre(categoria);
+
+                    Negocio negocio = new Negocio();
+                    negocio.setNombre(nombre);
+                    negocio.setDescripcion(descripcion);
+                    negocio.setId_categoria(id_categoria);
+                    negocio.setId_mercader(user.getId());
+                    negocio.setId_direccion(id_direccion);
+                    negocio.setId_img(id_imagen);
+                    return NegocioDao.nuevoNegocio(negocio);
+                }
+            }else{
+                 error.setText("Rellena la direccion");
             }
+
         } catch (NumberFormatException ex) {
             error.setText("Rellena correctamente los campos numéricos");
             return false;
