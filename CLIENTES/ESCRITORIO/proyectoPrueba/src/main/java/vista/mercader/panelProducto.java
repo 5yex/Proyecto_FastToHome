@@ -31,13 +31,6 @@ public class panelProducto extends javax.swing.JPanel {
         mostrarDatos();
     }
 
-    public panelProducto(Producto producto, JFrame frameProductos) {
-        initComponents();
-        this.producto = producto;
-        this.frameProductos = frameProductos;
-        mostrarDatos();
-    }
-
     public panelProducto(Producto producto, JPanel panelProductos) {
         initComponents();
         this.producto = producto;
