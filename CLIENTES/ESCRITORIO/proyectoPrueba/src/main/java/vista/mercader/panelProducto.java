@@ -8,6 +8,7 @@ import com.formdev.flatlaf.ui.FlatButtonBorder;
 import controlador.ProductoDao;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import modelo.Producto;
 
 /**
@@ -16,7 +17,7 @@ import modelo.Producto;
  */
 public class panelProducto extends javax.swing.JPanel {
     private Producto producto;
-    private JFrame frameMercader;
+    private JPanel panelMercader;
     /**
      * Creates new form producto
      */
@@ -26,10 +27,10 @@ public class panelProducto extends javax.swing.JPanel {
         mostrarDatos();
     }
     
-    public panelProducto(Producto prod, JFrame frameMercader) {
+    public panelProducto(Producto prod, JPanel panelMercader) {
         initComponents();
         this.producto = prod;
-        this.frameMercader = frameMercader;
+        this.panelMercader = panelMercader;
         mostrarDatos();
     }
 
