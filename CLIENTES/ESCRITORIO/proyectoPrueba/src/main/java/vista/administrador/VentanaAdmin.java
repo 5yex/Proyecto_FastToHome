@@ -16,6 +16,8 @@ import javax.swing.JMenu;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.UIManager;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 import modelo.Negocio;
 import modelo.Usuario;
@@ -159,12 +161,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-                recargarTodo();
+                recargarTablaClientes();
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-                recargarTodo();
+                recargarTablaClientes();
             }
         });
 
