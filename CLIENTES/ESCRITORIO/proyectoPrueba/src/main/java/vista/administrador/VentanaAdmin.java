@@ -221,7 +221,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         //hacerMecader
         int filaSeleccionada = tablaClientes.getSelectedRow();
         if (UsuarioDao.asignarRolMercader(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
-            recargarTablaClientes(UsuarioDao.obtenerDatosClientes());
+            recargarTablaClientes(UsuarioDao.seleccionUsuariosAdmin());
             //this.revalidate();
             //this.repaint();
         } else {
@@ -234,7 +234,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         //hacerAdmin
         int filaSeleccionada = tablaClientes.getSelectedRow();
         if (UsuarioDao.asignarRolAdministrador(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
-            recargarTablaClientes(UsuarioDao.obtenerDatosClientes());
+            recargarTablaClientes(UsuarioDao.seleccionUsuariosAdmin());
         } else {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como administrador a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
         }
