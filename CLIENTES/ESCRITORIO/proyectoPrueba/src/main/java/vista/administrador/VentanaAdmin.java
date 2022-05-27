@@ -431,11 +431,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_recargarMercaderesActionPerformed
 
     private void checkBusquedaAdminsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaAdminsActionPerformed
-        // TODO add your handling code here:
+        recargarTablaAdmins();
     }//GEN-LAST:event_checkBusquedaAdminsActionPerformed
 
     private void recargarAdminsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarAdminsActionPerformed
-        // TODO add your handling code here:
+        recargarTablaAdmins();
+
     }//GEN-LAST:event_recargarAdminsActionPerformed
 
     private void actualizarVentana() {
