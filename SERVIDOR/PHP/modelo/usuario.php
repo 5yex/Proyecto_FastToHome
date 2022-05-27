@@ -200,7 +200,7 @@ class usuario extends conexion {
     }
     
     public function todosUsuariosMercader() {
-        $sql = "SELECT * FROM usuarios WHERE Rol = 'admin'";
+        $sql = "SELECT * FROM usuarios WHERE Rol = 'mercader'";
         
         $sentencia = $this->dblink->prepare($sql);
         
