@@ -28,6 +28,7 @@ import org.apache.http.message.BasicNameValuePair;
 public class gestion {
 
     public static boolean hacerConsulta(Peticion peticion) {
+        System.out.println(peticion.toString());
         String json = null;
         try {
             CloseableHttpClient client = HttpClients.createDefault();
