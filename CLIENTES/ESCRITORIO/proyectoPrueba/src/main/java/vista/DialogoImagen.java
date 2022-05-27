@@ -36,7 +36,6 @@ public class DialogoImagen extends javax.swing.JDialog {
     private File imagenSeleccionada;
     private String b64_imagen;
     private Imagen imagen;
-    boolean imagenSelect;
 
     /**
      * Creates new form DialogoImagen
@@ -147,7 +146,6 @@ public class DialogoImagen extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        imagenSelect = true;
         imagen.setB64_imagen(b64_imagen);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
