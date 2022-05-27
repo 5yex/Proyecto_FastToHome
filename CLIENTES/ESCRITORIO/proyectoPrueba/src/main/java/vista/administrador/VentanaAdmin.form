@@ -32,12 +32,12 @@
         <Property name="useNullLayout" type="boolean" value="true"/>
       </Layout>
       <SubComponents>
-        <MenuItem class="javax.swing.JMenuItem" name="itemDegradarACliente">
+        <MenuItem class="javax.swing.JMenuItem" name="itemAdminACliente">
           <Properties>
             <Property name="text" type="java.lang.String" value="Degradar a cliente"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemDegradarAClienteActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemAdminAClienteActionPerformed"/>
           </Events>
         </MenuItem>
       </SubComponents>
@@ -48,12 +48,12 @@
         <Property name="useNullLayout" type="boolean" value="true"/>
       </Layout>
       <SubComponents>
-        <MenuItem class="javax.swing.JMenuItem" name="itemDegradarAClienteMercader">
+        <MenuItem class="javax.swing.JMenuItem" name="itemMercaderACliente">
           <Properties>
             <Property name="text" type="java.lang.String" value="Degradar a cliente"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemDegradarAClienteMercaderActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemMercaderAClienteActionPerformed"/>
           </Events>
         </MenuItem>
       </SubComponents>
