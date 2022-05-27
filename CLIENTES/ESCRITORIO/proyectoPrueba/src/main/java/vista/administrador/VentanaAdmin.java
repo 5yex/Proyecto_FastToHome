@@ -336,7 +336,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_checkBusquedaClientesActionPerformed
 
     private void checkBusquedaMercaderesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaMercaderesActionPerformed
-        // TODO add your handling code here:
+        recargarTablaMercaderes();
     }//GEN-LAST:event_checkBusquedaMercaderesActionPerformed
 
     private void actualizarVentana() {
