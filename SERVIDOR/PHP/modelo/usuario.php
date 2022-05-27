@@ -188,6 +188,16 @@ class usuario extends conexion {
         $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
+    
+    
+     public function todosUsuariosAdministrador() {
+        $sql = "SELECT * FROM usuarios WHERE Rol = 'admin'";
+        
+        $sentencia = $this->dblink->prepare($sql);
+        
+        $sentencia->execute();
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }
 
     public function usuarioCompleto() {
         $sql = "SELECT * FROM usuarios where id like :id and password like :pass ";
