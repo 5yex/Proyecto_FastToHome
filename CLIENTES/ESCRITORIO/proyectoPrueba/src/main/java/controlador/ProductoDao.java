@@ -14,6 +14,7 @@ import modelo.Producto;
 /**
  *
  * @author Jesus
+ * obtener_productos_negocio
  */
 
 
@@ -24,8 +25,8 @@ public class ProductoDao {
         return gestion.hacerConsulta(new Peticion("nuevo_producto", product.getJSON()));
     }
 
-    public static ArrayList<Producto> selecciónProductosNegocio(Negocio negocio) {
-        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_productos_negocio", negocio.getJSON()));
+    public static ArrayList<Producto> selecciónProductosNegocio(Negocio negocio,String consulta) {
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion(consulta, negocio.getJSON()));
         ArrayList<Producto> listaProductos = new ArrayList<>();
         System.out.println("controlador.ProductoDao.selecciónProductosNegocio()     NUMERO PRODUCTOS: " + listaProductos.size());
         if (jsonArray != null) {
