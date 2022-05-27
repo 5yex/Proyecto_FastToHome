@@ -236,6 +236,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
                 direccion.setCodigo_postal(cp);
                 direccion.setNumero(num);
                 direccion.setOtros(otros);
+                direccion.setValida(true);
             }
 
         } catch (NumberFormatException ex) {
