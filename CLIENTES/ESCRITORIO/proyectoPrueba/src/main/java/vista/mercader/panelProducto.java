@@ -8,6 +8,7 @@ import com.formdev.flatlaf.ui.FlatButtonBorder;
 import controlador.ProductoDao;
 import java.util.ArrayList;
 import javax.swing.JFrame;
+import javax.swing.JMenu;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import modelo.Negocio;
@@ -31,7 +32,7 @@ public class panelProducto extends javax.swing.JPanel {
         mostrarDatos();
     }
 
-    public panelProducto(Producto producto, JPanel panelProductos) {
+    public panelProducto(Producto producto, JPanel panelProductos, JMenu bt) {
         initComponents();
         this.producto = producto;
         this.panelProductos = panelProductos;
