@@ -33,7 +33,7 @@ import vista.FrameLogin;
  *
  * @author jmcbg
  */
-public class VentanaMercader1 extends javax.swing.JFrame {
+public class VentanaMercader extends javax.swing.JFrame {
 
     private Usuario mercader;
     private Negocio negocio;
@@ -57,7 +57,7 @@ public class VentanaMercader1 extends javax.swing.JFrame {
     /**
      * Creates new form VentanaPrincipal
      */
-    public VentanaMercader1(Usuario user) {
+    public VentanaMercader(Usuario user) {
         this.mercader = user;
         this.negocio = NegocioDao.negocioDeMercader(user);
         initComponents();
