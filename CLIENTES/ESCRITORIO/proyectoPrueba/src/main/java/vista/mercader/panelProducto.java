@@ -16,6 +16,7 @@ import modelo.Producto;
  */
 public class panelProducto extends javax.swing.JPanel {
     private Producto producto;
+    private JFrame frameMercader;
     /**
      * Creates new form producto
      */
