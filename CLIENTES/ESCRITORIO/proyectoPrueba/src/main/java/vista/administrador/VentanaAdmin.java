@@ -293,7 +293,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
 
     public void recargarTablaClientes() {
-         recargarTabla(UsuarioDao.seleccionUsuariosClientes(),tablaClientes,null);
+        if(checkBusquedaClientes.isSelected()){
+            recargarTabla(UsuarioDao.seleccionUsuariosClientes(),tablaClientes,busquedaClientes.getText());
+        }
     }
 
     
@@ -315,7 +317,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) tabla.getModel();
         
         //busqueda
-        if(checkBusquedaClientes.isSelected() && filtroNombre!= null && !filtroNombre.isBlank()){
+        if(filtroNombre!= null && !filtroNombre.isBlank()){
             for (Usuario cliente : listaClientes) {
                 String nombreApellidoMayus = (cliente.getNombre() +" "+cliente.getApellidos()).toUpperCase();
                 String busquedaMayus = filtroNombre.toUpperCase();
