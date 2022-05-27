@@ -127,18 +127,18 @@ public class panelProducto extends javax.swing.JPanel {
     }
 
     private void eliminarProducto() {
-        int valor = JOptionPane.showConfirmDialog(this, "¿Esta seguro de que quiere eliminar este producto?", "Confirmar borrado", JOptionPane.YES_NO_OPTION);
+        /*int valor = JOptionPane.showConfirmDialog(this, "¿Esta seguro de que quiere eliminar este producto?", "Confirmar borrado", JOptionPane.YES_NO_OPTION);
         if (valor == JOptionPane.YES_OPTION) {
             //System.out.println(producto.toString());
             if(ProductoDao.borrarProducto(producto)){
                 JOptionPane.showMessageDialog(null, "Se eliminó el producto.", "Producto eliminado", JOptionPane.INFORMATION_MESSAGE);
                 /*panelProductos.remove(this);
                 panelProductos.revalidate();
-                panelProductos.repaint();*/
+                panelProductos.repaint();
             }else{
                 JOptionPane.showMessageDialog(null, "No se pudo eliminar el producto.", "Producto no eliminado", JOptionPane.INFORMATION_MESSAGE);
             }
-        }
+        }*/
     }
 
     private void editarProducto() {
