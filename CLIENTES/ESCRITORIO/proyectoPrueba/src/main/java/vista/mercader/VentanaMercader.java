@@ -140,6 +140,11 @@ public class VentanaMercader extends javax.swing.JFrame {
                 deselección(evt);
             }
         });
+        botonProductos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonProductosActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(botonProductos);
 
         botonPedidos.setText("PEDIDOS");
@@ -190,6 +195,10 @@ public class VentanaMercader extends javax.swing.JFrame {
     private void botonPedidosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonPedidosMouseClicked
         mostrarPedidos();
     }//GEN-LAST:event_botonPedidosMouseClicked
+
+    private void botonProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonProductosActionPerformed
+        mostrarProductos();
+    }//GEN-LAST:event_botonProductosActionPerformed
 
     public void mostrarProductos() {
         //interrumpirHilo();
