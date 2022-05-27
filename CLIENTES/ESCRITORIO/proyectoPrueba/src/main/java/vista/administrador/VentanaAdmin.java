@@ -298,7 +298,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) tabla.getModel();
         
         //busqueda
-        if(filtroNombre!= null | !filtroNombre.isBlank()){
+        if(checkBusquedaClientes && filtroNombre!= null && !filtroNombre.isBlank()){
             for (Usuario cliente : listaClientes) {
                 String nombreApellidoMayus = (cliente.getNombre() +" "+cliente.getApellidos()).toUpperCase();
                 String busquedaMayus = busquedaClientes.getText().toUpperCase();
