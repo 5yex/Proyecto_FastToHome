@@ -495,7 +495,7 @@ function obtenerUsuariosAdministrador(){
     
     try {
         $cliente = new usuario();
-        $respuesta = $cliente->todosUsuariosClientes();
+        $respuesta = $cliente->todosUsuariosAdministrador();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
