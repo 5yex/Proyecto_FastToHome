@@ -242,7 +242,7 @@ public class VentanaMercader1 extends javax.swing.JFrame {
         if (productos != null) {
             for (Producto producto : productos) {
                 //System.out.print(producto.toString());
-                contenido.add(new panelProducto(producto));
+                contenido.add(new panelProducto(producto,recargarProductos));
             }
         }
 
