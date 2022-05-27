@@ -15,6 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 import modelo.Negocio;
@@ -151,6 +152,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
         tablaClientes.setComponentPopupMenu(jPopupMenu1);
         jScrollPane2.setViewportView(tablaClientes);
 
+        busquedaClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                busquedaClientesActionPerformed(evt);
+            }
+        });
+
         checkBusquedaClientes.setText("Búsqueda por nombre:");
 
         recargarClientes.setText("RECARGAR");
@@ -269,6 +276,11 @@ public class VentanaAdmin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como administrador a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_itemAdministradorActionPerformed
+
+    private void busquedaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_busquedaClientesActionPerformed
+        JTextField source = (JTextField)evt.getSource();
+        if
+    }//GEN-LAST:event_busquedaClientesActionPerformed
 
     private void actualizarVentana() {
         administrador = UsuarioDao.obtenerDatosUsuario(administrador);
