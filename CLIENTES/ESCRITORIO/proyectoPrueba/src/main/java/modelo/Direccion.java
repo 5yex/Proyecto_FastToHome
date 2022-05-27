@@ -20,6 +20,15 @@ public class Direccion {
     private int codigo_postal;
     private int coordenadas;
     private int id_imagen;
+    private boolean valida;
+
+    public boolean isValida() {
+        return valida;
+    }
+
+    public void setValida(boolean valida) {
+        this.valida = valida;
+    }
 
     public int getId_imagen() {
         return id_imagen;
