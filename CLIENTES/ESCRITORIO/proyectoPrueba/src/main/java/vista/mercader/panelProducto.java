@@ -19,7 +19,7 @@ import modelo.Producto;
  */
 public class panelProducto extends javax.swing.JPanel {
     private Producto producto;
-    private JPanel panelMercader;
+    private Negocio negocio;
     /**
      * Creates new form producto
      */
@@ -29,10 +29,10 @@ public class panelProducto extends javax.swing.JPanel {
         mostrarDatos();
     }
     
-    public panelProducto(Producto prod, JPanel panelMercader, Negocio negocio) {
+    public panelProducto(Producto prod,Negocio negocio) {
         initComponents();
         this.producto = prod;
-        this.panelMercader = panelMercader;
+        this.negocio = negocio;
         mostrarDatos();
     }
 
