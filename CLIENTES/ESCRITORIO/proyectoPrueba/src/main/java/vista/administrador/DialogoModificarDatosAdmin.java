@@ -408,7 +408,9 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     private void modificarDatosAdmin() {
         
         Usuario adminCopia = admin;
+        boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionAdmin);
         
+        if(direccionActualizada){
         admin.setNombre(nombreField.getText());
         admin.setApellidos(apellidosField.getText());
         admin.setDni(dniField.getText());
@@ -423,6 +425,9 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
         }else{
             JOptionPane.showMessageDialog(this, "No se pudo actualizar el administrador", "Error al actualizar", JOptionPane.ERROR_MESSAGE);
             admin = adminCopia;
+        }
+        }else{
+            JOptionPane.showMessageDialog(this, "Error, nose actualizó la dirección por lo que no se procedió a crear el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
         }
     }
 
