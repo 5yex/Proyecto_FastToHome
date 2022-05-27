@@ -27,7 +27,7 @@ public class registroNegocio extends javax.swing.JFrame {
 
     private Usuario User;
     private Direccion nDireccion = new Direccion();
-    private Imagen nImg;
+    private Imagen nImg = new Imagen();
     private ArrayList<Categoria> listaCategorias;
 
     /**
