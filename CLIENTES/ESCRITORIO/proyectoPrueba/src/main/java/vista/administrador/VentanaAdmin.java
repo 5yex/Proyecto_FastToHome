@@ -42,6 +42,8 @@ public class VentanaAdmin extends javax.swing.JFrame {
         actualizarVentana();
         recargarTablaClientes();
         recargarTablaMercaderes();
+        recargarTablaAdmins();
+
 
     }
 
