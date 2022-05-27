@@ -275,8 +275,8 @@ public class VentanaAdmin extends javax.swing.JFrame {
         labelNombreAdmin.setText(administrador.getNombre() + "  " + administrador.getApellidos());
     }
 
-    public void recargarTablaClientes(ArrayList<Usuario> listaClientes) {
-         recargarTabla()
+    public void recargarTablaClientes() {
+         recargarTabla(UsuarioDao.seleccionUsuariosClientes(),tablaClientes);
     }
 
     
