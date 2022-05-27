@@ -32,6 +32,10 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
     private Usuario administrador;
     private ArrayList<Usuario> arrayListClientes;
+    private ArrayList<Usuario> arrayListAdmins;
+    private ArrayList<Usuario> arrayListMercaderes;
+
+
 
     /**
      * Creates new form VentanaPrincipal
@@ -124,6 +128,11 @@ public class VentanaAdmin extends javax.swing.JFrame {
         setResizable(false);
 
         panelTableado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        panelTableado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                panelTableadoMousePressed(evt);
+            }
+        });
 
         labelBienvenido.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
         labelBienvenido.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -386,7 +395,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        panelTableado.addTab("ADMINS", panelTablaAdmins);
+        panelTableado.addTab("ADMININSTRADORES", panelTablaAdmins);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -466,6 +475,10 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void itemDegradarAClienteMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemDegradarAClienteMercaderActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_itemDegradarAClienteMercaderActionPerformed
+
+    private void panelTableadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panelTableadoMousePressed
 
     private void actualizarVentana() {
         administrador = UsuarioDao.obtenerDatosUsuario(administrador);

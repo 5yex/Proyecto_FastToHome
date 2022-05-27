@@ -102,6 +102,9 @@
           <Font name="Segoe UI" size="14" style="1"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="panelTableadoMousePressed"/>
+      </Events>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
@@ -352,8 +355,8 @@
         <Container class="javax.swing.JPanel" name="panelTablaAdmins">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="ADMINS">
-                <Property name="tabTitle" type="java.lang.String" value="ADMINS"/>
+              <JTabbedPaneConstraints tabName="ADMININSTRADORES">
+                <Property name="tabTitle" type="java.lang.String" value="ADMININSTRADORES"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
