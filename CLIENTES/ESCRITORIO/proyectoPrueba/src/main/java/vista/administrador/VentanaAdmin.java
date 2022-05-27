@@ -156,19 +156,19 @@ public class VentanaAdmin extends javax.swing.JFrame {
         busquedaClientes.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
-                if(checkBusquedaClientes)recargarTablaClientes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+                if(checkBusquedaClientes.isSelected())recargarTablaClientes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-                if(checkBusquedaClientes)recargarTablaClientes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-                ();
+                if(checkBusquedaClientes.isSelected())recargarTablaClientes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-                if(checkBusquedaClientes)recargarTablaClientes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-                ();
+                if(checkBusquedaClientes.isSelected())recargarTablaClientes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
             }
         });
 
