@@ -187,4 +187,16 @@ class Pedido extends Conexion{
         $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
+    
+    public function obtenerPedidosClientes() {
+        $sql = "SELECT * FROM pedido WHERE id_usuario = :id_user";
+        
+        $sentencia = $this->dblink->prepare($sql);
+
+        $this->id_usuario = $this->getId_usuario();
+        $sentencia->bindParam(":id_user", $this->id_usuario);
+
+        $sentencia->execute();
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }
 }
