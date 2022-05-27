@@ -226,8 +226,8 @@ public class registroNegocio extends javax.swing.JFrame {
                     negocio.setId_img(id_imagen);
                     return NegocioDao.nuevoNegocio(negocio);
                 }
-            }else{
-                 error.setText("Rellena la direccion");
+            } else {
+                error.setText("Rellena la direccion");
             }
 
         } catch (NumberFormatException ex) {
