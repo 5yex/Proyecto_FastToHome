@@ -470,7 +470,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         if (UsuarioDao.asignarRolCliente(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
             recargarTablaAdmins();
         } else {
-            JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como administrador a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Ha ocurrido un error al degradar a cliente a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_itemAdminAClienteActionPerformed
 
@@ -480,7 +480,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         if (UsuarioDao.asignarRolCliente(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
             recargarTablaAdmins();
         } else {
-            JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como administrador a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Ha ocurrido un error al degradar a cliente a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_itemMercaderAClienteActionPerformed
 
