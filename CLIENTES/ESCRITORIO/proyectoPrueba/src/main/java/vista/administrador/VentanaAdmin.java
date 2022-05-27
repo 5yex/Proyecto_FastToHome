@@ -132,8 +132,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
         labelBienvenido.setText("Bienvenido administrador:");
         labelBienvenido.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
 
-        labelNombreAdmin.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        labelNombreAdmin.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
         labelNombreAdmin.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        labelNombreAdmin.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         botonModificarDatosAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         botonModificarDatosAdmin.setText("MODIFICAR DATOS CUENTA");
