@@ -506,6 +506,23 @@ function obtenerUsuariosAdministrador(){
     }
 }
 
+
+function obtenerUsuariosMercader(){
+    require_once '../modelo/usuario.php';
+    
+    try {
+        $cliente = new usuario();
+        $respuesta = $cliente->todosUsuariosMercader();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
 function obtenerPedidoUnico($datos){
     require_once '../modelo/Pedido.php';
     
