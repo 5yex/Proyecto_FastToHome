@@ -295,6 +295,8 @@ public class VentanaAdmin extends javax.swing.JFrame {
     public void recargarTablaClientes() {
         if(checkBusquedaClientes.isSelected()){
             recargarTabla(UsuarioDao.seleccionUsuariosClientes(),tablaClientes,busquedaClientes.getText());
+        }else{
+            recargarTabla(UsuarioDao.seleccionUsuariosClientes(),tablaClientes,null);
         }
     }
 
