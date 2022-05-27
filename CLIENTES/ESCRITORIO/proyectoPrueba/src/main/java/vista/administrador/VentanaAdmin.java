@@ -297,7 +297,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_itemAdministradorActionPerformed
 
     private void checkBusquedaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaClientesActionPerformed
-        busquedaClientes();
+        recargarClientes();
     }//GEN-LAST:event_checkBusquedaClientesActionPerformed
 
     private void actualizarVentana() {
