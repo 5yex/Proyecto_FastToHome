@@ -41,6 +41,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         initComponents();
         actualizarVentana();
         recargarTablaClientes();
+        recargarMercaderes();
         
     }
 
@@ -363,9 +364,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
     
      public void recargarTablaMercaderes() {
         if(checkBusquedaMercaderes.isSelected()){
-            recargarTabla(UsuarioDao.seleccionUsuariosClientes(),tablaMercaderes,busquedaMercaderes.getText());
+            recargarTabla(UsuarioDao.seleccionUsuariosMercader(),tablaMercaderes,busquedaMercaderes.getText());
         }else{
-            recargarTabla(UsuarioDao.seleccionUsuariosClientes(),tablaMercaderes,null);
+            recargarTabla(UsuarioDao.seleccionUsuariosMercader(),tablaMercaderes,null);
         }
     }
 
