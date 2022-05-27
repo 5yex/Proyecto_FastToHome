@@ -75,88 +75,90 @@ public class UsuarioDao {
     public static boolean actualizarUsuario(Usuario user) {
         return gestion.hacerConsulta(new Peticion("actualizar_usuario", user.getJSON()));
     }
-    
+
     public static boolean asignarRolMercader(Usuario user) {
         return gestion.hacerConsulta(new Peticion("asignar_rol_mercader", user.getJSON()));
     }
-    
+
     public static boolean asignarRolAdministrador(Usuario user) {
         return gestion.hacerConsulta(new Peticion("asignar_rol_admin", user.getJSON()));
     }
+
     public static boolean asignarRolCliente(Usuario user) {
         return gestion.hacerConsulta(new Peticion("asignar_rol_cliente", user.getJSON()));
     }
 
     public static ArrayList<Usuario> seleccionUsuarios(String peticion) {
-        
+
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion(peticion, null));
 
         ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
 
-        for (int i = 0; i < jsonArray.size(); i++) {
-            Usuario user = new Usuario();
-            
-            JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
-            
-            user.setId(usuarioJson.get("id").getAsInt());
-            user.setDni(usuarioJson.get("Dni").getAsString());
-            user.setEmail(usuarioJson.get("Email").getAsString());
-            user.setId(usuarioJson.get("id").getAsInt());
-            if (!usuarioJson.get("direccion_id").isJsonNull()) {
-                user.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
-            }
-            user.setNombre(usuarioJson.get("Nombre").getAsString());
-            user.setApellidos(usuarioJson.get("apellidos").getAsString());
-            user.setPassword(usuarioJson.get("password").getAsString());
-            user.setRol(usuarioJson.get("Rol").getAsString());
-            user.setTlf(usuarioJson.get("tlf").getAsString());
-            
-            listaUsuarios.add(user);
+        if (jsonArray != null) {
+            for (int i = 0; i < jsonArray.size(); i++) {
+                Usuario user = new Usuario();
 
+                JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
+
+                user.setId(usuarioJson.get("id").getAsInt());
+                user.setDni(usuarioJson.get("Dni").getAsString());
+                user.setEmail(usuarioJson.get("Email").getAsString());
+                user.setId(usuarioJson.get("id").getAsInt());
+                if (!usuarioJson.get("direccion_id").isJsonNull()) {
+                    user.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
+                }
+                user.setNombre(usuarioJson.get("Nombre").getAsString());
+                user.setApellidos(usuarioJson.get("apellidos").getAsString());
+                user.setPassword(usuarioJson.get("password").getAsString());
+                user.setRol(usuarioJson.get("Rol").getAsString());
+                user.setTlf(usuarioJson.get("tlf").getAsString());
+
+                listaUsuarios.add(user);
+
+            }
         }
+
         return listaUsuarios;
 
     }
-    
-    public static ArrayList<Usuario> seleccionUsuariosClientes(){
+
+    public static ArrayList<Usuario> seleccionUsuariosClientes() {
         return seleccionUsuarios("obtener_usuarios_clientes");
     }
-    
-    public static ArrayList<Usuario> seleccionUsuariosAdmin(){
+
+    public static ArrayList<Usuario> seleccionUsuariosAdmin() {
         return seleccionUsuarios("obtener_usuarios_admin");
     }
-    public static ArrayList<Usuario> seleccionUsuariosMercader(){
+
+    public static ArrayList<Usuario> seleccionUsuariosMercader() {
         return seleccionUsuarios("obtener_usuarios_mercader");
     }
-    
-    
-    
-    public static ArrayList<Usuario> obtenerDatosAdministradores(){
-        
+
+    public static ArrayList<Usuario> obtenerDatosAdministradores() {
+
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios_clientes", null));
 
         ArrayList<Usuario> listaClientes = new ArrayList<Usuario>();
+        if (jsonArray != null) {
+            for (int i = 0; i < jsonArray.size(); i++) {
+                Usuario user = new Usuario();
+                JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
 
-        for (int i = 0; i < jsonArray.size(); i++) {
-            Usuario user = new Usuario();
-            JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
+                user.setDni(usuarioJson.get("Dni").getAsString());
+                user.setEmail(usuarioJson.get("Email").getAsString());
+                user.setId(usuarioJson.get("id").getAsInt());
+                if (!usuarioJson.get("direccion_id").isJsonNull()) {
+                    user.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
+                }
+                user.setNombre(usuarioJson.get("Nombre").getAsString());
+                user.setPassword(usuarioJson.get("password").getAsString());
+                //user.setRol(usuarioJson.get("Rol").getAsString());
+                user.setTlf(usuarioJson.get("tlf").getAsString());
 
-            user.setDni(usuarioJson.get("Dni").getAsString());
-            user.setEmail(usuarioJson.get("Email").getAsString());
-            user.setId(usuarioJson.get("id").getAsInt());
-            if (!usuarioJson.get("direccion_id").isJsonNull()) {
-                user.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
+                listaClientes.add(user);
             }
-            user.setNombre(usuarioJson.get("Nombre").getAsString());
-            user.setPassword(usuarioJson.get("password").getAsString());
-            //user.setRol(usuarioJson.get("Rol").getAsString());
-            user.setTlf(usuarioJson.get("tlf").getAsString());
-            
-            listaClientes.add(user);
-
         }
         return listaClientes;
     }
-
 
 }
