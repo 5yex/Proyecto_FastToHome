@@ -42,7 +42,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         actualizarVentana();
         recargarTablaClientes();
         recargarTablaMercaderes();
-        
+
     }
 
     /**
@@ -74,6 +74,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
         busquedaMercaderes = new javax.swing.JTextField();
         checkBusquedaMercaderes = new javax.swing.JCheckBox();
         recargarMercaderes = new javax.swing.JButton();
+        panelTablaAdmins = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        tablaAdmins = new javax.swing.JTable();
+        busquedaAdmins = new javax.swing.JTextField();
+        checkBusquedaAdmins = new javax.swing.JCheckBox();
+        recargarAdmins = new javax.swing.JButton();
 
         itemMercader.setText("Hacer mercader a este usuario");
         itemMercader.addActionListener(new java.awt.event.ActionListener() {
@@ -287,6 +293,81 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
         panelTableado.addTab("MERCADERES", panelTablaMercaderes);
 
+        tablaAdmins.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        tablaAdmins.setComponentPopupMenu(jPopupMenu1);
+        jScrollPane5.setViewportView(tablaAdmins);
+
+        busquedaMercaderes.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                if(checkBusquedaMercaderes.isSelected())recargarTablaMercaderes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                if(checkBusquedaMercaderes.isSelected())recargarTablaMercaderes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                if(checkBusquedaMercaderes.isSelected())recargarTablaMercaderes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
+            }
+        });
+
+        checkBusquedaAdmins.setText("Búsqueda por nombre:");
+        checkBusquedaAdmins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBusquedaAdminsActionPerformed(evt);
+            }
+        });
+
+        recargarAdmins.setText("RECARGAR");
+        recargarAdmins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                recargarAdminsActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelTablaAdminsLayout = new javax.swing.GroupLayout(panelTablaAdmins);
+        panelTablaAdmins.setLayout(panelTablaAdminsLayout);
+        panelTablaAdminsLayout.setHorizontalGroup(
+            panelTablaAdminsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane5)
+            .addGroup(panelTablaAdminsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(checkBusquedaAdmins)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(busquedaAdmins, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(recargarAdmins, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        panelTablaAdminsLayout.setVerticalGroup(
+            panelTablaAdminsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTablaAdminsLayout.createSequentialGroup()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelTablaAdminsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(busquedaAdmins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(recargarAdmins)
+                    .addComponent(checkBusquedaAdmins))
+                .addContainerGap())
+        );
+
+        panelTableado.addTab("ADMINS", panelTablaAdmins);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -349,29 +430,44 @@ public class VentanaAdmin extends javax.swing.JFrame {
         recargarTablaMercaderes();
     }//GEN-LAST:event_recargarMercaderesActionPerformed
 
+    private void checkBusquedaAdminsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaAdminsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkBusquedaAdminsActionPerformed
+
+    private void recargarAdminsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarAdminsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_recargarAdminsActionPerformed
+
     private void actualizarVentana() {
         administrador = UsuarioDao.obtenerDatosUsuario(administrador);
         labelNombreAdmin.setText(administrador.getNombre() + "  " + administrador.getApellidos());
     }
 
     public void recargarTablaClientes() {
-        if(checkBusquedaClientes.isSelected()){
-            recargarTabla(UsuarioDao.seleccionUsuariosClientes(),tablaClientes,busquedaClientes.getText());
-        }else{
-            recargarTabla(UsuarioDao.seleccionUsuariosClientes(),tablaClientes,null);
-        }
-    }
-    
-     public void recargarTablaMercaderes() {
-        if(checkBusquedaMercaderes.isSelected()){
-            recargarTabla(UsuarioDao.seleccionUsuariosMercader(),tablaMercaderes,busquedaMercaderes.getText());
-        }else{
-            recargarTabla(UsuarioDao.seleccionUsuariosMercader(),tablaMercaderes,null);
+        if (checkBusquedaClientes.isSelected()) {
+            recargarTabla(UsuarioDao.seleccionUsuariosClientes(), tablaClientes, busquedaClientes.getText());
+        } else {
+            recargarTabla(UsuarioDao.seleccionUsuariosClientes(), tablaClientes, null);
         }
     }
 
-    
-    public void recargarTabla(ArrayList<Usuario> listaClientes,JTable tabla,String filtroNombre) {
+    public void recargarTablaMercaderes() {
+        if (checkBusquedaMercaderes.isSelected()) {
+            recargarTabla(UsuarioDao.seleccionUsuariosMercader(), tablaMercaderes, busquedaMercaderes.getText());
+        } else {
+            recargarTabla(UsuarioDao.seleccionUsuariosMercader(), tablaMercaderes, null);
+        }
+    }
+
+    public void recargarTablaAdmins() {
+        if (checkBusquedaAdmins.isSelected()) {
+            recargarTabla(UsuarioDao.seleccionUsuariosAdmin(), tablaAdmins, busquedaAdmins.getText());
+        } else {
+            recargarTabla(UsuarioDao.seleccionUsuariosAdmin(), tablaAdmins, null);
+        }
+    }
+
+    public void recargarTabla(ArrayList<Usuario> listaClientes, JTable tabla, String filtroNombre) {
         arrayListClientes = listaClientes;
         tabla.setModel(new javax.swing.table.DefaultTableModel(
                 null,
@@ -387,26 +483,25 @@ public class VentanaAdmin extends javax.swing.JFrame {
         //tablaClientes.getColumnModel().getColumn(2).setMinWidth(100);
         tabla.setAutoCreateRowSorter(true);
         DefaultTableModel model = (DefaultTableModel) tabla.getModel();
-        
+
         //busqueda
-        if(filtroNombre!= null && !filtroNombre.isBlank()){
+        if (filtroNombre != null && !filtroNombre.isBlank()) {
             System.out.println("busqueda");
             for (Usuario cliente : listaClientes) {
-                String nombreMayus = (cliente.getNombre()+" "+cliente.getApellidos()).toUpperCase();
+                String nombreMayus = (cliente.getNombre() + " " + cliente.getApellidos()).toUpperCase();
                 String busquedaMayus = filtroNombre.toUpperCase();
-                if(nombreMayus.contains(new StringBuffer(busquedaMayus))){
+                if (nombreMayus.contains(new StringBuffer(busquedaMayus))) {
                     model.addRow(cliente.getRow());
-                }  
+                }
             }
-        }else{
+        } else {
             //Mostrar sin busqueda
             for (Usuario cliente : listaClientes) {
                 model.addRow(cliente.getRow());
             }
         }
     }
-    
-    
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -429,38 +524,40 @@ public class VentanaAdmin extends javax.swing.JFrame {
         /* Create and display the dialog */
         new VentanaAdmin(null).setVisible(true);
     }
-    
-    public void confirmarCierre(){
-        try{
+
+    public void confirmarCierre() {
+        try {
             this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
             addWindowListener(new WindowAdapter() {
-                public void windowClosing(WindowEvent e){
+                public void windowClosing(WindowEvent e) {
                     confirmarSalida();
                 }
             });
             this.setVisible(true);
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            
+
         }
-        
+
     }
-    
-    public void confirmarSalida(){
-        int valor = JOptionPane.showConfirmDialog(this,"¿Esta seguro de que quiere abandonar esta ventana?", "Advertencia", JOptionPane.YES_NO_OPTION);
-        if(valor == JOptionPane.YES_OPTION){
-            
+
+    public void confirmarSalida() {
+        int valor = JOptionPane.showConfirmDialog(this, "¿Esta seguro de que quiere abandonar esta ventana?", "Advertencia", JOptionPane.YES_NO_OPTION);
+        if (valor == JOptionPane.YES_OPTION) {
+
             JOptionPane.showMessageDialog(null, "Volverá a la ventana de Logueo", "Hasta luego!", JOptionPane.INFORMATION_MESSAGE);
             this.dispose();
             new FrameLogin().setVisible(true);
         }
-        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonModificarDatosAdmin;
+    private javax.swing.JTextField busquedaAdmins;
     private javax.swing.JTextField busquedaClientes;
     private javax.swing.JTextField busquedaMercaderes;
+    private javax.swing.JCheckBox checkBusquedaAdmins;
     private javax.swing.JCheckBox checkBusquedaClientes;
     private javax.swing.JCheckBox checkBusquedaMercaderes;
     private javax.swing.JMenuItem itemAdministrador;
@@ -468,14 +565,18 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JLabel labelBienvenido;
     private javax.swing.JLabel labelNombreAdmin;
     private javax.swing.JPanel panelInicioAdmin;
+    private javax.swing.JPanel panelTablaAdmins;
     private javax.swing.JPanel panelTablaClientes;
     private javax.swing.JPanel panelTablaMercaderes;
     private javax.swing.JTabbedPane panelTableado;
+    private javax.swing.JButton recargarAdmins;
     private javax.swing.JButton recargarClientes;
     private javax.swing.JButton recargarMercaderes;
+    private javax.swing.JTable tablaAdmins;
     private javax.swing.JTable tablaClientes;
     private javax.swing.JTable tablaMercaderes;
     // End of variables declaration//GEN-END:variables
