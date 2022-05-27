@@ -297,9 +297,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
 
     
-    public void recargarTabla(ArrayList<Usuario> listaClientes,JTable tablaClientes ) {
+    public void recargarTabla(ArrayList<Usuario> listaClientes,JTable tabla ) {
         arrayListClientes = listaClientes;
-        tablaClientes.setModel(new javax.swing.table.DefaultTableModel(
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
                 null,
                 new String[]{
                     "ID", "DNI", "EMAIL", "NOMBRE", "TELÉFONO"
@@ -311,9 +311,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
         });
         //tablaClientes.getColumnModel().getColumn(0).setMaxWidth(60);
         //tablaClientes.getColumnModel().getColumn(2).setMinWidth(100);
-        tablaClientes.setAutoCreateRowSorter(true);
+        tabla.setAutoCreateRowSorter(true);
         for (Usuario cliente : listaClientes) {
-            DefaultTableModel model = (DefaultTableModel) tablaClientes.getModel();
+            DefaultTableModel model = (DefaultTableModel) tabla.getModel();
             model.addRow(cliente.getRow());
         }
     }
