@@ -427,7 +427,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
             admin = adminCopia;
         }
         }else{
-            JOptionPane.showMessageDialog(this, "Error, nose actualizó la dirección por lo que no se procedió a crear el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Error, nose actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
         }
     }
 
