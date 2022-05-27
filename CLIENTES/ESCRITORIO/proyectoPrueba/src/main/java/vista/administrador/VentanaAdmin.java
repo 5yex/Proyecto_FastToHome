@@ -56,9 +56,13 @@ public class VentanaAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPopupMenu1 = new javax.swing.JPopupMenu();
+        popUpClientes = new javax.swing.JPopupMenu();
         itemMercader = new javax.swing.JMenuItem();
         itemAdministrador = new javax.swing.JMenuItem();
+        popUpAdministrador = new javax.swing.JPopupMenu();
+        itemDegradarACliente = new javax.swing.JMenuItem();
+        popUpMercaderes = new javax.swing.JPopupMenu();
+        itemDegradarAClienteMercader = new javax.swing.JMenuItem();
         panelTableado = new javax.swing.JTabbedPane();
         panelInicioAdmin = new javax.swing.JPanel();
         labelBienvenido = new javax.swing.JLabel();
@@ -89,7 +93,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 itemMercaderActionPerformed(evt);
             }
         });
-        jPopupMenu1.add(itemMercader);
+        popUpClientes.add(itemMercader);
 
         itemAdministrador.setText("Dar permisos de administración");
         itemAdministrador.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +101,23 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 itemAdministradorActionPerformed(evt);
             }
         });
-        jPopupMenu1.add(itemAdministrador);
+        popUpClientes.add(itemAdministrador);
+
+        itemDegradarACliente.setText("Degradar a cliente");
+        itemDegradarACliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemDegradarAClienteActionPerformed(evt);
+            }
+        });
+        popUpAdministrador.add(itemDegradarACliente);
+
+        itemDegradarAClienteMercader.setText("Degradar a cliente");
+        itemDegradarAClienteMercader.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemDegradarAClienteMercaderActionPerformed(evt);
+            }
+        });
+        popUpMercaderes.add(itemDegradarAClienteMercader);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
@@ -161,7 +181,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tablaClientes.setComponentPopupMenu(jPopupMenu1);
+        tablaClientes.setComponentPopupMenu(popUpClientes);
         jScrollPane2.setViewportView(tablaClientes);
 
         busquedaClientes.getDocument().addDocumentListener(new DocumentListener() {
@@ -231,7 +251,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tablaMercaderes.setComponentPopupMenu(jPopupMenu1);
+        tablaMercaderes.setComponentPopupMenu(popUpMercaderes);
         jScrollPane4.setViewportView(tablaMercaderes);
 
         busquedaMercaderes.getDocument().addDocumentListener(new DocumentListener() {
@@ -306,7 +326,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tablaAdmins.setComponentPopupMenu(jPopupMenu1);
+        tablaAdmins.setComponentPopupMenu(popUpAdministrador);
         jScrollPane5.setViewportView(tablaAdmins);
 
         busquedaMercaderes.getDocument().addDocumentListener(new DocumentListener() {
@@ -439,6 +459,14 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
     }//GEN-LAST:event_recargarAdminsActionPerformed
 
+    private void itemDegradarAClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemDegradarAClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemDegradarAClienteActionPerformed
+
+    private void itemDegradarAClienteMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemDegradarAClienteMercaderActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemDegradarAClienteMercaderActionPerformed
+
     private void actualizarVentana() {
         administrador = UsuarioDao.obtenerDatosUsuario(administrador);
         labelNombreAdmin.setText(administrador.getNombre() + "  " + administrador.getApellidos());
@@ -562,8 +590,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private javax.swing.JCheckBox checkBusquedaClientes;
     private javax.swing.JCheckBox checkBusquedaMercaderes;
     private javax.swing.JMenuItem itemAdministrador;
+    private javax.swing.JMenuItem itemDegradarACliente;
+    private javax.swing.JMenuItem itemDegradarAClienteMercader;
     private javax.swing.JMenuItem itemMercader;
-    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -574,6 +603,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel panelTablaClientes;
     private javax.swing.JPanel panelTablaMercaderes;
     private javax.swing.JTabbedPane panelTableado;
+    private javax.swing.JPopupMenu popUpAdministrador;
+    private javax.swing.JPopupMenu popUpClientes;
+    private javax.swing.JPopupMenu popUpMercaderes;
     private javax.swing.JButton recargarAdmins;
     private javax.swing.JButton recargarClientes;
     private javax.swing.JButton recargarMercaderes;
