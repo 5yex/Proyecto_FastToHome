@@ -55,7 +55,7 @@ if (empty($_POST["DATA"])) {
         case 'actualizar_producto';
             actualizarProducto(json_decode($peticion->datos));
             break;
-        case 'borrar_producto';
+        case  'borrar_producto';
             borrarProducto(json_decode($peticion->datos));
             break;
             
