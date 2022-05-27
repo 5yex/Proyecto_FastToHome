@@ -504,10 +504,11 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
 
     public void recargarTablaAdmins() {
+        arrayListAdmins = UsuarioDao.seleccionUsuariosAdmin();
         if (checkBusquedaAdmins.isSelected()) {
-            recargarTabla(UsuarioDao.seleccionUsuariosAdmin(), tablaAdmins, busquedaAdmins.getText());
+            recargarTabla(arrayListAdmins, tablaAdmins, busquedaAdmins.getText());
         } else {
-            recargarTabla(UsuarioDao.seleccionUsuariosAdmin(), tablaAdmins, null);
+            recargarTabla(arrayListAdmins, tablaAdmins, null);
         }
     }
 
