@@ -38,7 +38,14 @@ public class panelProducto extends javax.swing.JPanel {
         mostrarDatos();
     }
 
-        
+    public panelProducto(Producto producto, JPanel panelProductos) {
+        initComponents();
+        this.producto = producto;
+        this.panelProductos = panelProductos;
+        mostrarDatos();
+    }
+
+     
 
     /**
      * This method is called from within the constructor to initialize the form.
