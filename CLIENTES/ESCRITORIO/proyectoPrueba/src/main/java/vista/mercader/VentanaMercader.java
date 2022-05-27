@@ -65,7 +65,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         initComponents();
         confirmarCierre();
         mostrarProductos();
-       mostrarPedidos();
+        mostrarPedidos();
     }
 
     /**
@@ -315,11 +315,11 @@ public class VentanaMercader extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonModificarDatosAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDatosAdminActionPerformed
-       
+
     }//GEN-LAST:event_botonModificarDatosAdminActionPerformed
 
     private void checkBusquedaProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaProductosActionPerformed
-        
+
     }//GEN-LAST:event_checkBusquedaProductosActionPerformed
 
     private void panelTableadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMousePressed
@@ -336,9 +336,9 @@ public class VentanaMercader extends javax.swing.JFrame {
 
     private void autoUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_autoUpdateActionPerformed
         JCheckBox hilo = (JCheckBox) evt.getSource();
-        if (hilo.isSelected()){
+        if (hilo.isSelected()) {
             crearHiloActualizacionDeProductos();
-        }else{
+        } else {
             interrumpirHilo();
         }
     }//GEN-LAST:event_autoUpdateActionPerformed
@@ -361,7 +361,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         if (productos != null) {
             for (Producto producto : productos) {
                 //System.out.print(producto.toString());
-                panelProductos.add(new panelProducto(producto,recargarProductos));
+                panelProductos.add(new panelProducto(producto, recargarProductos));
             }
         }
 
@@ -369,7 +369,6 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelProductos.revalidate();
         panelProductos.repaint();
     }
-
 
     private void interrumpirHilo() {
         if (hiloUpdate != null) {
@@ -380,26 +379,24 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
 
     private void crearHiloActualizacionDeProductos() {
-        if (hiloUpdate == null) {
-            hiloUpdate = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        while (true) {
-                            mostrarPedidos();
-                            Thread.sleep(2000);
-                            System.out.println(".run() PEDIDOS ACTUALIZADOS");
+            if (hiloUpdate == null) {
+                hiloUpdate = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            while (true) {
+                                mostrarPedidos();
+                                Thread.sleep(2000);
+                                System.out.println(".run() PEDIDOS ACTUALIZADOS");
+                            }
+                        } catch (InterruptedException ex) {
+                            System.out.println(".run() HILO ABORTADO");
                         }
-                    } catch (InterruptedException ex) {
-                        ex.printStackTrace();
                     }
-                }
-            });
-            hiloUpdate.start();
-        }
-
+                });
+                hiloUpdate.start();
+            }
     }
-
     private void mostrarPedidos() {
         //crearHiloActualizacionDeProductos();
         ActionListener actualizarPedidos = new ActionListener() {
@@ -415,7 +412,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         ArrayList<Pedido> pedidos = PedidoDao.seleccionTodosPedidos(negocio);
         if (pedidos != null) {
             for (Pedido pedido : pedidos) {
-                panelPedidos.add(new panelPedido(pedido,recargarPedidos));
+                panelPedidos.add(new panelPedido(pedido, recargarPedidos));
             }
         } else {
             panelPedidos.add(new JLabel("NO HAY PEDIDOS"));
@@ -425,32 +422,32 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelPedidos.repaint();
 
     }
-    
-    public void confirmarCierre(){
-        try{
+
+    public void confirmarCierre() {
+        try {
             this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
             addWindowListener(new WindowAdapter() {
-                public void windowClosing(WindowEvent e){
+                public void windowClosing(WindowEvent e) {
                     confirmarSalida();
                 }
             });
             this.setVisible(true);
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            
+
         }
-        
+
     }
-    
-    public void confirmarSalida(){
-        int valor = JOptionPane.showConfirmDialog(this,"¿Esta seguro de que quiere abandonar esta ventana?", "Advertencia", JOptionPane.YES_NO_OPTION);
-        if(valor == JOptionPane.YES_OPTION){
-            
+
+    public void confirmarSalida() {
+        int valor = JOptionPane.showConfirmDialog(this, "¿Esta seguro de que quiere abandonar esta ventana?", "Advertencia", JOptionPane.YES_NO_OPTION);
+        if (valor == JOptionPane.YES_OPTION) {
+
             JOptionPane.showMessageDialog(null, "Volverá a la ventana de Logueo", "Hasta luego!", JOptionPane.INFORMATION_MESSAGE);
             this.dispose();
             new FrameLogin().setVisible(true);
         }
-        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
