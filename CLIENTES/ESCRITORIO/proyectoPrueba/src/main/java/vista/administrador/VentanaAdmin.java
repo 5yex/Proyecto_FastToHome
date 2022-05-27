@@ -151,6 +151,23 @@ public class VentanaAdmin extends javax.swing.JFrame {
         tablaClientes.setComponentPopupMenu(jPopupMenu1);
         jScrollPane2.setViewportView(tablaClientes);
 
+        busquedaClientes.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                ; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                recargarTodo();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                recargarTodo();
+            }
+        });
+
         checkBusquedaClientes.setText("Búsqueda por nombre:");
 
         recargarClientes.setText("RECARGAR");
@@ -301,7 +318,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         if(checkBusquedaClientes.isSelected() && filtroNombre!= null && !filtroNombre.isBlank()){
             for (Usuario cliente : listaClientes) {
                 String nombreApellidoMayus = (cliente.getNombre() +" "+cliente.getApellidos()).toUpperCase();
-                String busquedaMayus = busquedaClientes.getText().toUpperCase();
+                String busquedaMayus = filtroNombre.toUpperCase();
                 if(nombreApellidoMayus.indexOf(filtroNombre)> -1){
                     model.addRow(cliente.getRow());
                 }  
