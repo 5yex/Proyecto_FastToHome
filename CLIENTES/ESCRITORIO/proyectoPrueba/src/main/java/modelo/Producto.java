@@ -28,7 +28,6 @@ public class Producto {
         this.id_img = id_img;
     }
 
-
     public Producto() {
     }
 
