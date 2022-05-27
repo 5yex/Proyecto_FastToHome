@@ -54,7 +54,7 @@ public class ProductoDao {
     }
 
     public static boolean borrarProducto(Producto product) {
-        return gestion.hacerConsulta(new Peticion("borrar_producto", product.getJSON()));
+        return gestion.hacerConsulta(new Peticion("actualizar_producto", product.getJSON()));
     }
 
 }
