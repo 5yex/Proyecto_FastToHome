@@ -486,10 +486,11 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
 
     public void recargarTablaClientes() {
+        arrayListClientes = UsuarioDao.seleccionUsuariosClientes();
         if (checkBusquedaClientes.isSelected()) {
-            recargarTabla(UsuarioDao.seleccionUsuariosClientes(), tablaClientes, busquedaClientes.getText());
+            recargarTabla(arrayListClientes, tablaClientes, busquedaClientes.getText());
         } else {
-            recargarTabla(UsuarioDao.seleccionUsuariosClientes(), tablaClientes, null);
+            recargarTabla(arrayListClientes, tablaClientes, null);
         }
     }
 
@@ -510,7 +511,6 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
 
     public void recargarTabla(ArrayList<Usuario> listaClientes, JTable tabla, String filtroNombre) {
-        arrayListClientes = listaClientes;
         tabla.setModel(new javax.swing.table.DefaultTableModel(
                 null,
                 new String[]{
