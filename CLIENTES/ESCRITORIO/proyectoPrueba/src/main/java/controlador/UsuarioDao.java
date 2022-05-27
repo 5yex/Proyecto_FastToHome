@@ -115,15 +115,15 @@ public class UsuarioDao {
 
     }
     
-    public static ArrayList<Usuario> obtenerDatosClientes(){
+    public static ArrayList<Usuario> seleccionUsuariosClientes(){
         return seleccionUsuarios("obtener_usuarios_clientes");
     }
     
-    public static ArrayList<Usuario> obtenerDatosAdmin(){
-        return seleccionUsuarios("obtener_usuarios_clientes");
+    public static ArrayList<Usuario> seleccionUsuariosAdmin(){
+        return seleccionUsuarios("obtener_usuarios_admin");
     }
-    public static ArrayList<Usuario> obtenerDatosMercader(){
-        return seleccionUsuarios("obtener_usuarios_clientes");
+    public static ArrayList<Usuario> seleccionUsuariosMercader(){
+        return seleccionUsuarios("obtener_usuarios_mercader");
     }
     
     
