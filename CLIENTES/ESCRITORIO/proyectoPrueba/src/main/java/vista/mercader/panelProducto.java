@@ -30,13 +30,7 @@ public class panelProducto extends javax.swing.JPanel {
         mostrarDatos();
     }
     
-    public panelProducto(Producto prod,JPanel panelProductos,Negocio negocio) {
-        initComponents();
-        this.producto = prod;
-        this.panelProductos = panelProductos;
-        this.negocio = negocio;
-        mostrarDatos();
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -105,12 +99,6 @@ public class panelProducto extends javax.swing.JPanel {
 
     private void botonEliminarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarProductoActionPerformed
        eliminarProducto();
-       ArrayList<Producto> productos = ProductoDao.selecciónProductosNegocio(negocio);
-        if (productos != null) {
-            for (Producto producto : productos) {
-                panelProductos.add(new panelProducto(producto));
-            }
-        }
     }//GEN-LAST:event_botonEliminarProductoActionPerformed
 
     private void botonEditarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarProductoActionPerformed
