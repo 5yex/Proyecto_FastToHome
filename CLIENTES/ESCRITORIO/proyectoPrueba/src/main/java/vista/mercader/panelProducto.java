@@ -138,9 +138,9 @@ public class panelProducto extends javax.swing.JPanel {
         if (valor == JOptionPane.YES_OPTION) {
             if(ProductoDao.borrarProducto(producto)){
                 JOptionPane.showMessageDialog(null, "Se eliminó el producto.", "Producto eliminado", JOptionPane.INFORMATION_MESSAGE);
-                panelProductos.remove(this);
+                /*panelProductos.remove(this);
                 panelProductos.revalidate();
-                panelProductos.repaint();
+                panelProductos.repaint();*/
             }else{
                 JOptionPane.showMessageDialog(null, "No se pudo eliminar el producto.", "Producto no eliminado", JOptionPane.INFORMATION_MESSAGE);
             }
