@@ -333,6 +333,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         
         //busqueda
         if(filtroNombre!= null && !filtroNombre.isBlank()){
+            System.out.println("busqueda");
             for (Usuario cliente : listaClientes) {
                 String nombreMayus = cliente.getNombre().toUpperCase();
                 String busquedaMayus = filtroNombre.toUpperCase();
