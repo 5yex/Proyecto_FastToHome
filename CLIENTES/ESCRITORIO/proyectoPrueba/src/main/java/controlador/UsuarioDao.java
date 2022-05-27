@@ -84,9 +84,9 @@ public class UsuarioDao {
         return gestion.hacerConsulta(new Peticion("asignar_rol_admin", user.getJSON()));
     }
 
-    public static ArrayList<Usuario> seleccionUsuarios() {
+    public static ArrayList<Usuario> seleccionUsuarios(String peticion) {
         
-        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios", null));
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion(peticion, null));
 
         ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
 
