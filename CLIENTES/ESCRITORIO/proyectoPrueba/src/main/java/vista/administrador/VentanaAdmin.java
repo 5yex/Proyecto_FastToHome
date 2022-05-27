@@ -406,12 +406,6 @@ public class VentanaAdmin extends javax.swing.JFrame {
         }
     }
     
-    public void filtrarTablaNombre(String text, JTable tabla{
-        
-        
-        
-    }
-
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
