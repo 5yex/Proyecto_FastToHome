@@ -20,6 +20,7 @@ import modelo.Producto;
  */
 public class panelProducto extends javax.swing.JPanel {
     private Producto producto;
+    JMenu btUpdate;
 
     /**
      * Creates new form producto
@@ -27,6 +28,7 @@ public class panelProducto extends javax.swing.JPanel {
     public panelProducto(Producto prod,JMenu btUpdate) {
         initComponents();
         this.producto = prod;
+        this.btUpdate = btUpdate;
         mostrarDatos();
     }
 
