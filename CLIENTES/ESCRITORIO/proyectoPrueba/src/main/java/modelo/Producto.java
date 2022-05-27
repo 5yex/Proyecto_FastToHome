@@ -103,4 +103,11 @@ public class Producto {
     public String getJSON(){
        return new Gson().toJson(this);
     }
+
+    @Override
+    public String toString() {
+        return "Producto{" + "id_producto=" + id_producto + ", id_negocio=" + id_negocio + ", nombre=" + nombre + ", precio=" + precio + ", descripcion=" + descripcion + ", stock=" + stock + ", id_img=" + id_img + '}';
+    }
+    
+    
 }
