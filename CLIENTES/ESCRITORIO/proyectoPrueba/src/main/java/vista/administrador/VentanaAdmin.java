@@ -251,7 +251,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         //hacerMecader
         int filaSeleccionada = tablaClientes.getSelectedRow();
         if (UsuarioDao.asignarRolMercader(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
-            recargarTablaClientes(UsuarioDao.seleccionUsuariosAdmin());
+            recargarTablaClientes();
             //this.revalidate();
             //this.repaint();
         } else {
@@ -264,7 +264,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         //hacerAdmin
         int filaSeleccionada = tablaClientes.getSelectedRow();
         if (UsuarioDao.asignarRolAdministrador(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
-            recargarTablaClientes(UsuarioDao.seleccionUsuariosAdmin());
+            recargarTablaClientes();
         } else {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como administrador a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
         }
@@ -280,7 +280,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
 
     
-    public void recargarTabla(ArrayList<Usuario> listaClientes,JTable tabla ) {
+    public void recargarTabla(ArrayList<Usuario> listaClientes,JTable tabla) {
         arrayListClientes = listaClientes;
         tabla.setModel(new javax.swing.table.DefaultTableModel(
                 null,
