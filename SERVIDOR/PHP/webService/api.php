@@ -13,6 +13,12 @@ if (empty($_POST["DATA"])) {
         case 'obtener_usuarios_clientes';
             obtenerUsuariosClientes();
             break;
+        case 'obtener_usuarios_admin';
+            obtenerUsuariosAdministrador();
+            break;
+        case 'obtener_usuarios_clientes';
+            obtenerUsuariosClientes();
+            break;
         case 'getUsuario';
             getUsuario(json_decode($peticion->datos));
             break;
