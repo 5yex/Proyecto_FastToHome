@@ -59,7 +59,7 @@ public class panelInicioM extends javax.swing.JPanel {
         DescripcionNegocio.setText("Descripcion Negocio");
         DescripcionNegocio.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/noIcon.png"))); // NOI18N
+        img.setIcon(new javax.swing.ImageIcon(getClass().getResource("source/recursos/noIcon.png")));
         img.setPreferredSize(new java.awt.Dimension(271, 271));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
