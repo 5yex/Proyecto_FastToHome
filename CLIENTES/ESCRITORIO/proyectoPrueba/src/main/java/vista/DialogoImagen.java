@@ -46,13 +46,7 @@ public class DialogoImagen extends javax.swing.JDialog {
         this.imagen = imagen;
     }
     
-    public DialogoImagen(java.awt.Frame parent, boolean modal, Imagen imagen, boolean imagenSelect) {
-        super(parent, modal);
-        initComponents();
-        this.imagen = imagen;
-        this.imagenSelect = imagenSelect;
-    }
-
+ 
 
     /**
      * This method is called from within the constructor to initialize the form.
