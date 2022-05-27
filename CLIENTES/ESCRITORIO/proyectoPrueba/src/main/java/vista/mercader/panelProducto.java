@@ -6,6 +6,7 @@ package vista.mercader;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
 import controlador.ProductoDao;
+import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -27,7 +28,7 @@ public class panelProducto extends javax.swing.JPanel {
         mostrarDatos();
     }
     
-    public panelProducto(Producto prod, JPanel panelMercader) {
+    public panelProducto(Producto prod, JPanel panelMercader, Negocio negocio) {
         initComponents();
         this.producto = prod;
         this.panelMercader = panelMercader;
@@ -101,6 +102,12 @@ public class panelProducto extends javax.swing.JPanel {
 
     private void botonEliminarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarProductoActionPerformed
        eliminarProducto();
+       ArrayList<Producto> productos = ProductoDao.selecciónProductosNegocio(negocio);
+        if (productos != null) {
+            for (Producto producto : productos) {
+                contenido.add(new panelProducto(producto));
+            }
+        }
     }//GEN-LAST:event_botonEliminarProductoActionPerformed
 
     private void botonEditarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarProductoActionPerformed
