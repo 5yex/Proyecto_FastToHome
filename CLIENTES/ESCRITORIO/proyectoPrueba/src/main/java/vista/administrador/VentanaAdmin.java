@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 import modelo.Negocio;
@@ -295,6 +296,29 @@ public class VentanaAdmin extends javax.swing.JFrame {
         }
     }
 
+    
+    public void recargarTabla(ArrayList<Usuario> listaClientes,JTable tablaClientes ) {
+        arrayListClientes = listaClientes;
+        tablaClientes.setModel(new javax.swing.table.DefaultTableModel(
+                null,
+                new String[]{
+                    "ID", "DNI", "EMAIL", "NOMBRE", "TELÉFONO"
+                }
+        ) {
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return false;
+            }
+        });
+        //tablaClientes.getColumnModel().getColumn(0).setMaxWidth(60);
+        //tablaClientes.getColumnModel().getColumn(2).setMinWidth(100);
+        tablaClientes.setAutoCreateRowSorter(true);
+        for (Usuario cliente : listaClientes) {
+            DefaultTableModel model = (DefaultTableModel) tablaClientes.getModel();
+            model.addRow(cliente.getRow());
+        }
+    }
+
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
