@@ -185,7 +185,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_deselección
 
     private void botonProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonProductosMouseClicked
-        mostrarProductos();
+        
     }//GEN-LAST:event_botonProductosMouseClicked
 
     private void botonInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonInfoMouseClicked
