@@ -466,7 +466,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
     private void itemAdminAClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAdminAClienteActionPerformed
         //degradar
-        int filaSeleccionada = tablaClientes.getSelectedRow();
+        int filaSeleccionada = tablaAdmins.getSelectedRow();
         if (UsuarioDao.asignarRolAdministrador(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
             recargarTablaClientes();
         } else {
