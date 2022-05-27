@@ -128,7 +128,6 @@ public class panelProducto extends javax.swing.JPanel {
     }
 
     private void editarProducto() {
-      
         
     }
 }
