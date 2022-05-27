@@ -5,6 +5,7 @@
 package vista.mercader;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
+import controlador.ProductoDao;
 import javax.swing.JOptionPane;
 import modelo.Producto;
 
@@ -112,7 +113,7 @@ public class panelProducto extends javax.swing.JPanel {
     private void eliminarProducto() {
         int valor = JOptionPane.showConfirmDialog(this, "¿Esta seguro de que quiere eliminar este producto?", "Confirmar borrado", JOptionPane.YES_NO_OPTION);
         if (valor == JOptionPane.YES_OPTION) {
-
+            ProductoDao.borrarProducto(producto);
             JOptionPane.showMessageDialog(null, "Se eliminó el producto.", "Producto eliminado", JOptionPane.INFORMATION_MESSAGE);
         }
     }
