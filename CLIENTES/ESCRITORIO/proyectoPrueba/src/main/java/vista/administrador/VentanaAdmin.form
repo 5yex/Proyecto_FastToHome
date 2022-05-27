@@ -107,7 +107,7 @@
                           <Component id="labelBienvenido" min="-2" pref="60" max="-2" attributes="0"/>
                           <Component id="labelNombreAdmin" min="-2" pref="60" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="297" max="32767" attributes="0"/>
+                      <EmptySpace pref="298" max="32767" attributes="0"/>
                       <Component id="botonModificarDatosAdmin" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   </Group>
@@ -173,7 +173,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jScrollPane2" pref="395" max="32767" attributes="0"/>
+                      <Component id="jScrollPane2" pref="396" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="busquedaClientes" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -230,11 +230,11 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="panelTablaAdministradores">
+        <Container class="javax.swing.JPanel" name="panelTablaMercaderes">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Administradores">
-                <Property name="tabTitle" type="java.lang.String" value="Administradores"/>
+              <JTabbedPaneConstraints tabName="MERCADERES">
+                <Property name="tabTitle" type="java.lang.String" value="MERCADERES"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -242,10 +242,14 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane3" alignment="0" pref="669" max="32767" attributes="0"/>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="recargarClientes1" min="-2" pref="144" max="-2" attributes="0"/>
+                  <Component id="jScrollPane4" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="checkBusquedaMercaderes" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="busquedaMercaderes" min="-2" pref="357" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="recargarMercaderes" min="-2" pref="144" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -253,23 +257,27 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jScrollPane3" min="-2" pref="395" max="-2" attributes="0"/>
+                      <Component id="jScrollPane4" pref="396" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="recargarClientes1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="busquedaMercaderes" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="recargarMercaderes" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="checkBusquedaMercaderes" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+            <Container class="javax.swing.JScrollPane" name="jScrollPane4">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="tablaAdministradores">
+                <Component class="javax.swing.JTable" name="tablaMercaderes">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="4">
@@ -286,7 +294,20 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="recargarClientes1">
+            <Component class="javax.swing.JTextField" name="busquedaMercaderes">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="busquedaClientes.getDocument().addDocumentListener(new DocumentListener() {&#xa;            @Override&#xa;public void insertUpdate(DocumentEvent e) {&#xa;        if(checkBusquedaClientes.isSelected())recargarTablaClientes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody&#xa;            }&#xa;&#xa;            @Override&#xa;public void removeUpdate(DocumentEvent e) {&#xa;        if(checkBusquedaClientes.isSelected())recargarTablaClientes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody&#xa;&#xa;        }&#xa;&#xa;            @Override&#xa;public void changedUpdate(DocumentEvent e) {&#xa;        if(checkBusquedaClientes.isSelected())recargarTablaClientes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody&#xa;&#xa;}&#xa;        });"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="checkBusquedaMercaderes">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="B&#xfa;squeda por nombre:"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="checkBusquedaMercaderesActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="recargarMercaderes">
               <Properties>
                 <Property name="text" type="java.lang.String" value="RECARGAR"/>
               </Properties>
