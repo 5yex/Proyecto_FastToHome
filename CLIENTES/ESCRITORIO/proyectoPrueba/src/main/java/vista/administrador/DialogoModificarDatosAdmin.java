@@ -414,6 +414,7 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
             admin.setDni(dniField.getText());
             admin.setTlf(tlfField.getText());
             admin.setEmail(emailField.getText());
+            admin.setRol("admin");
             admin.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
             System.out.println(admin.getJSON());
 
