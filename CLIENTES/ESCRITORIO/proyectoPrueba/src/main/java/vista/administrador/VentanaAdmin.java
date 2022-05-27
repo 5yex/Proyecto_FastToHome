@@ -276,7 +276,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
 
     public void recargarTablaClientes() {
-         recargarTabla(UsuarioDao.seleccionUsuariosClientes(),tablaClientes);
+         recargarTabla(UsuarioDao.seleccionUsuariosClientes(),tablaClientes,null);
     }
 
     
