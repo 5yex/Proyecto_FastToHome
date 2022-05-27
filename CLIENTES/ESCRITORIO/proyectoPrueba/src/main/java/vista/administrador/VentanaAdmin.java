@@ -280,7 +280,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
 
     
-    public void recargarTabla(ArrayList<Usuario> listaClientes,JTable tabla) {
+    public void recargarTabla(ArrayList<Usuario> listaClientes,JTable tabla,String filtroNombre) {
         arrayListClientes = listaClientes;
         tabla.setModel(new javax.swing.table.DefaultTableModel(
                 null,
