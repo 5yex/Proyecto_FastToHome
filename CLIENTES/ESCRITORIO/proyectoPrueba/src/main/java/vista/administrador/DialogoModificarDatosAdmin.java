@@ -309,16 +309,16 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     private void botonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarActionPerformed
 
         if (validaciones.validar(nombreField.getText(), PATRON_NOMBRES)
-            && validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)
-            && validaciones.validacionDNI(dniField.getText())
-            && validaciones.validar(tlfField.getText(), PATRON_TELEFONO)
-            && validaciones.validar(emailField.getText(), PATRON_EMAIL)
-            && validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
-            && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0
-            && DireccionDao.actualizarDireccion(direccionAdmin)) {
-                modificarDatosAdmin();
+                && validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)
+                && validaciones.validacionDNI(dniField.getText())
+                && validaciones.validar(tlfField.getText(), PATRON_TELEFONO)
+                && validaciones.validar(emailField.getText(), PATRON_EMAIL)
+                && validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
+                && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0
+                && DireccionDao.actualizarDireccion(direccionAdmin)) {
+            modificarDatosAdmin();
         } else {
-                JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, "Error al rellenar los datos del usuario o dirección",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, "Error al rellenar los datos del usuario o dirección", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_botonActualizarActionPerformed
 
@@ -399,34 +399,31 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
 
     private void botonModificarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDireccionActionPerformed
         direccionAdmin = DireccionDao.obtenerDireccionUsuario(admin);
-        DialogoDireccion dialogoDireccion  = new DialogoDireccion(this, true, direccionAdmin);
+        DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionAdmin);
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonModificarDireccionActionPerformed
 
-
-
     private void modificarDatosAdmin() {
-        
+
         Usuario adminCopia = admin;
         boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionAdmin);
-        
-        if(direccionActualizada){
-        admin.setNombre(nombreField.getText());
-        admin.setApellidos(apellidosField.getText());
-        admin.setDni(dniField.getText());
-        admin.setTlf(tlfField.getText());
-        admin.setEmail(emailField.getText());
-        admin.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
-        System.out.println(admin.getJSON());
-        
-        
-        if(UsuarioDao.actualizarUsuario(admin)){
-            this.dispose();
-        }else{
-            JOptionPane.showMessageDialog(this, "No se pudo actualizar el administrador", "Error al actualizar", JOptionPane.ERROR_MESSAGE);
-            admin = adminCopia;
-        }
-        }else{
+
+        if (direccionActualizada) {
+            admin.setNombre(nombreField.getText());
+            admin.setApellidos(apellidosField.getText());
+            admin.setDni(dniField.getText());
+            admin.setTlf(tlfField.getText());
+            admin.setEmail(emailField.getText());
+            admin.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
+            System.out.println(admin.getJSON());
+
+            if (UsuarioDao.actualizarUsuario(admin)) {
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(this, "No se pudo actualizar el administrador", "Error al actualizar", JOptionPane.ERROR_MESSAGE);
+                admin = adminCopia;
+            }
+        } else {
             JOptionPane.showMessageDialog(this, "Error, nose actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
         }
     }
