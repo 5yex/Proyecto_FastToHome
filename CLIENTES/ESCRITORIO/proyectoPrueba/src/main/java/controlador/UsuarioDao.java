@@ -134,31 +134,4 @@ public class UsuarioDao {
         return seleccionUsuarios("obtener_usuarios_mercader");
     }
 
-    public static ArrayList<Usuario> obtenerDatosAdministradores() {
-
-        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_usuarios_clientes", null));
-
-        ArrayList<Usuario> listaClientes = new ArrayList<Usuario>();
-        if (jsonArray != null) {
-            for (int i = 0; i < jsonArray.size(); i++) {
-                Usuario user = new Usuario();
-                JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
-
-                user.setDni(usuarioJson.get("Dni").getAsString());
-                user.setEmail(usuarioJson.get("Email").getAsString());
-                user.setId(usuarioJson.get("id").getAsInt());
-                if (!usuarioJson.get("direccion_id").isJsonNull()) {
-                    user.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
-                }
-                user.setNombre(usuarioJson.get("Nombre").getAsString());
-                user.setPassword(usuarioJson.get("password").getAsString());
-                //user.setRol(usuarioJson.get("Rol").getAsString());
-                user.setTlf(usuarioJson.get("tlf").getAsString());
-
-                listaClientes.add(user);
-            }
-        }
-        return listaClientes;
-    }
-
 }
