@@ -119,6 +119,13 @@ public class UsuarioDao {
         return seleccionUsuarios("obtener_usuarios_clientes");
     }
     
+    public static ArrayList<Usuario> obtenerDatosAdmin(){
+        return seleccionUsuarios("obtener_usuarios_clientes");
+    }
+    public static ArrayList<Usuario> obtenerDatosMercader(){
+        return seleccionUsuarios("obtener_usuarios_clientes");
+    }
+    
     
     public static ArrayList<Usuario> obtenerDatosAdministradores(){
         
