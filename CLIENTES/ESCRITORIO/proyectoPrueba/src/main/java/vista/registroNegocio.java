@@ -229,9 +229,13 @@ public class registroNegocio extends javax.swing.JFrame {
                     }
                 } else {
                     error.setText("Tienes que subir una imagen");
+                    return false;
+
                 }
             } else {
                 error.setText("Rellena la direccion");
+                return false;
+
             }
         } catch (NumberFormatException ex) {
             error.setText("Rellena correctamente los campos numéricos");
