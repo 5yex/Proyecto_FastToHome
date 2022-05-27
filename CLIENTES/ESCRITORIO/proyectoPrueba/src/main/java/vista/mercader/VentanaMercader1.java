@@ -77,12 +77,22 @@ public class VentanaMercader1 extends javax.swing.JFrame {
         botonesMenu = new javax.swing.ButtonGroup();
         popupProductos = new javax.swing.JPopupMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        contenido = new javax.swing.JPanel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        botonInfo = new javax.swing.JMenu();
-        botonProductos = new javax.swing.JMenu();
-        botonPedidos = new javax.swing.JMenu();
+        panelTableado = new javax.swing.JTabbedPane();
+        panelInicioAdmin = new javax.swing.JPanel();
+        labelBienvenido = new javax.swing.JLabel();
+        labelNombreAdmin = new javax.swing.JLabel();
+        botonModificarDatosAdmin = new javax.swing.JButton();
+        panelTablaClientes = new javax.swing.JPanel();
+        busquedaClientes = new javax.swing.JTextField();
+        checkBusquedaClientes = new javax.swing.JCheckBox();
+        recargarClientes = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        panelTablaMercaderes = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tablaMercaderes = new javax.swing.JTable();
+        busquedaMercaderes = new javax.swing.JTextField();
+        checkBusquedaMercaderes = new javax.swing.JCheckBox();
+        recargarMercaderes = new javax.swing.JButton();
 
         jMenuItem1.setText("NUEVO PRODUCTO");
         popupProductos.add(jMenuItem1);
@@ -90,106 +100,246 @@ public class VentanaMercader1 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
 
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-        jScrollPane1.setDoubleBuffered(true);
+        panelTableado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        panelTableado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                panelTableadoMousePressed(evt);
+            }
+        });
 
-        contenido.setComponentPopupMenu(popupProductos);
+        labelBienvenido.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        labelBienvenido.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        labelBienvenido.setText("Bienvenido administrador:");
+        labelBienvenido.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
 
-        javax.swing.GroupLayout contenidoLayout = new javax.swing.GroupLayout(contenido);
-        contenido.setLayout(contenidoLayout);
-        contenidoLayout.setHorizontalGroup(
-            contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 612, Short.MAX_VALUE)
+        labelNombreAdmin.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        labelNombreAdmin.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        labelNombreAdmin.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        botonModificarDatosAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botonModificarDatosAdmin.setText("MODIFICAR DATOS CUENTA");
+        botonModificarDatosAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonModificarDatosAdminActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelInicioAdminLayout = new javax.swing.GroupLayout(panelInicioAdmin);
+        panelInicioAdmin.setLayout(panelInicioAdminLayout);
+        panelInicioAdminLayout.setHorizontalGroup(
+            panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelInicioAdminLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(labelBienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(labelNombreAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(107, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioAdminLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonModificarDatosAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
-        contenidoLayout.setVerticalGroup(
-            contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 437, Short.MAX_VALUE)
+        panelInicioAdminLayout.setVerticalGroup(
+            panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelInicioAdminLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelBienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelNombreAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 300, Short.MAX_VALUE)
+                .addComponent(botonModificarDatosAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
 
-        jScrollPane1.setViewportView(contenido);
+        panelTableado.addTab("INICIO", panelInicioAdmin);
 
-        jMenuBar1.setBackground(new java.awt.Color(255, 102, 0));
-
-        botonInfo.setBackground(new java.awt.Color(255, 102, 0));
-        botonInfo.setForeground(new java.awt.Color(255, 255, 255));
-        botonInfo.setText("INICIO");
-        botonesMenu.add(botonInfo);
-        botonInfo.setDoubleBuffered(true);
-        botonInfo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        botonInfo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botonInfoMouseClicked(evt);
+        busquedaClientes.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                if(checkBusquedaClientes.isSelected())recargarTablaClientes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                deselección(evt);
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                if(checkBusquedaClientes.isSelected())recargarTablaClientes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                if(checkBusquedaClientes.isSelected())recargarTablaClientes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
             }
         });
-        jMenuBar1.add(botonInfo);
+        busquedaClientes.setMinimumSize(new java.awt.Dimension(4, 22));
 
-        botonProductos.setBackground(new java.awt.Color(255, 102, 0));
-        botonProductos.setForeground(new java.awt.Color(255, 255, 255));
-        botonProductos.setText("PRODUCTOS");
-        botonesMenu.add(botonProductos);
-        botonProductos.setDoubleBuffered(true);
-        botonProductos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        botonProductos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botonProductosMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                deselección(evt);
+        checkBusquedaClientes.setText("Búsqueda por nombre:");
+        checkBusquedaClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBusquedaClientesActionPerformed(evt);
             }
         });
-        jMenuBar1.add(botonProductos);
 
-        botonPedidos.setText("PEDIDOS");
-        botonesMenu.add(botonPedidos);
-        botonPedidos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        botonPedidos.setDoubleBuffered(true);
-        botonPedidos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        botonPedidos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botonPedidosMouseClicked(evt);
+        recargarClientes.setText("RECARGAR");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 401, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout panelTablaClientesLayout = new javax.swing.GroupLayout(panelTablaClientes);
+        panelTablaClientes.setLayout(panelTablaClientesLayout);
+        panelTablaClientesLayout.setHorizontalGroup(
+            panelTablaClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTablaClientesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(checkBusquedaClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(busquedaClientes, javax.swing.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(recargarClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        panelTablaClientesLayout.setVerticalGroup(
+            panelTablaClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTablaClientesLayout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelTablaClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(panelTablaClientesLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(busquedaClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelTablaClientesLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(recargarClientes))
+                    .addGroup(panelTablaClientesLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(checkBusquedaClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+
+        panelTableado.addTab("PRODUCTOS", panelTablaClientes);
+
+        tablaMercaderes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                deselección(evt);
+        ));
+        jScrollPane4.setViewportView(tablaMercaderes);
+
+        busquedaMercaderes.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                if(checkBusquedaMercaderes.isSelected())recargarTablaMercaderes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                if(checkBusquedaMercaderes.isSelected())recargarTablaMercaderes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                if(checkBusquedaMercaderes.isSelected())recargarTablaMercaderes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
             }
         });
-        jMenuBar1.add(botonPedidos);
 
-        setJMenuBar(jMenuBar1);
+        checkBusquedaMercaderes.setText("Búsqueda por nombre:");
+        checkBusquedaMercaderes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBusquedaMercaderesActionPerformed(evt);
+            }
+        });
+
+        recargarMercaderes.setText("RECARGAR");
+        recargarMercaderes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                recargarMercaderesActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelTablaMercaderesLayout = new javax.swing.GroupLayout(panelTablaMercaderes);
+        panelTablaMercaderes.setLayout(panelTablaMercaderesLayout);
+        panelTablaMercaderesLayout.setHorizontalGroup(
+            panelTablaMercaderesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane4)
+            .addGroup(panelTablaMercaderesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(checkBusquedaMercaderes)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(busquedaMercaderes, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(recargarMercaderes, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        panelTablaMercaderesLayout.setVerticalGroup(
+            panelTablaMercaderesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTablaMercaderesLayout.createSequentialGroup()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelTablaMercaderesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(busquedaMercaderes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(recargarMercaderes)
+                    .addComponent(checkBusquedaMercaderes))
+                .addContainerGap())
+        );
+
+        panelTableado.addTab("MERCADERES", panelTablaMercaderes);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
+            .addComponent(panelTableado)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(panelTableado)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void deselección(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deselección
-        JMenu jm = (JMenu) evt.getComponent();
-        jm.setSelected(false);
-    }//GEN-LAST:event_deselección
+    private void botonModificarDatosAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDatosAdminActionPerformed
+        DialogoModificarDatosAdmin dmod = new DialogoModificarDatosAdmin(this, true, administrador);
+        dmod.setVisible(true);
 
-    private void botonProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonProductosMouseClicked
-        mostrarProductos();
-    }//GEN-LAST:event_botonProductosMouseClicked
+        if (!dmod.isVisible()) {
+            administrador = dmod.getAdmin();
+            actualizarVentana();
+        }
+    }//GEN-LAST:event_botonModificarDatosAdminActionPerformed
 
-    private void botonInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonInfoMouseClicked
-        mostrarPanelInicio();
-    }//GEN-LAST:event_botonInfoMouseClicked
+    private void checkBusquedaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaClientesActionPerformed
+        recargarTablaClientes();
+    }//GEN-LAST:event_checkBusquedaClientesActionPerformed
 
-    private void botonPedidosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonPedidosMouseClicked
-        mostrarPedidos();
-    }//GEN-LAST:event_botonPedidosMouseClicked
+    private void checkBusquedaMercaderesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaMercaderesActionPerformed
+        recargarTablaMercaderes();
+    }//GEN-LAST:event_checkBusquedaMercaderesActionPerformed
+
+    private void recargarMercaderesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarMercaderesActionPerformed
+        recargarTablaMercaderes();
+    }//GEN-LAST:event_recargarMercaderesActionPerformed
+
+    private void panelTableadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panelTableadoMousePressed
 
     public void mostrarProductos() {
         //interrumpirHilo();
@@ -303,15 +453,25 @@ public class VentanaMercader1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu botonInfo;
-    private javax.swing.JMenu botonPedidos;
-    private javax.swing.JMenu botonProductos;
+    private javax.swing.JButton botonModificarDatosAdmin;
     private javax.swing.ButtonGroup botonesMenu;
-    private javax.swing.JPanel contenido;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JTextField busquedaClientes;
+    private javax.swing.JTextField busquedaMercaderes;
+    private javax.swing.JCheckBox checkBusquedaClientes;
+    private javax.swing.JCheckBox checkBusquedaMercaderes;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JLabel labelBienvenido;
+    private javax.swing.JLabel labelNombreAdmin;
+    private javax.swing.JPanel panelInicioAdmin;
+    private javax.swing.JPanel panelTablaClientes;
+    private javax.swing.JPanel panelTablaMercaderes;
+    private javax.swing.JTabbedPane panelTableado;
     private javax.swing.JPopupMenu popupProductos;
+    private javax.swing.JButton recargarClientes;
+    private javax.swing.JButton recargarMercaderes;
+    private javax.swing.JTable tablaMercaderes;
     // End of variables declaration//GEN-END:variables
 
 }
