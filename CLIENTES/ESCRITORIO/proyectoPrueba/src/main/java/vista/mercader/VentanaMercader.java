@@ -17,6 +17,7 @@ import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -201,7 +202,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         if (productos != null) {
             for (Producto producto : productos) {
                 //System.out.print(producto.toString());
-                contenido.add(new panelProducto(producto,));
+                contenido.add(new panelProducto(producto,new JButton()));
             }
         }
 
