@@ -405,6 +405,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
             }
         }
     }
+    
+    public void filtrarTablaNombre(String text, JTable tabla{
+        
+        
+        
+    }
 
     
     public static void main(String args[]) {
