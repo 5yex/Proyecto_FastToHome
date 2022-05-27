@@ -50,7 +50,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        menuClientes = new javax.swing.JPopupMenu();
+        jPopupMenu1 = new javax.swing.JPopupMenu();
         itemMercader = new javax.swing.JMenuItem();
         itemAdministrador = new javax.swing.JMenuItem();
         panelTableado = new javax.swing.JTabbedPane();
@@ -67,6 +67,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         panelTablaAdministradores = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tablaAdministradores = new javax.swing.JTable();
+        recargarClientes1 = new javax.swing.JButton();
 
         itemMercader.setText("Hacer mercader a este usuario");
         itemMercader.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +75,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 itemMercaderActionPerformed(evt);
             }
         });
-        menuClientes.add(itemMercader);
+        jPopupMenu1.add(itemMercader);
 
         itemAdministrador.setText("Dar permisos de administración");
         itemAdministrador.addActionListener(new java.awt.event.ActionListener() {
@@ -82,7 +83,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 itemAdministradorActionPerformed(evt);
             }
         });
-        menuClientes.add(itemAdministrador);
+        jPopupMenu1.add(itemAdministrador);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
@@ -128,14 +129,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelBienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelNombreAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 305, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 297, Short.MAX_VALUE)
                 .addComponent(botonModificarDatosAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26))
         );
 
         panelTableado.addTab("INICIO", panelInicioAdmin);
-
-        panelTablaClientes.setPreferredSize(new java.awt.Dimension(669, 470));
 
         tablaClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -148,10 +147,10 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tablaClientes.setComponentPopupMenu(menuClientes);
+        tablaClientes.setComponentPopupMenu(jPopupMenu1);
         jScrollPane2.setViewportView(tablaClientes);
 
-        checkBusquedaClientes.setText("Búsquda por nombre:");
+        checkBusquedaClientes.setText("Búsqueda por nombre:");
 
         recargarClientes.setText("RECARGAR");
 
@@ -159,26 +158,26 @@ public class VentanaAdmin extends javax.swing.JFrame {
         panelTablaClientes.setLayout(panelTablaClientesLayout);
         panelTablaClientesLayout.setHorizontalGroup(
             panelTablaClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 669, Short.MAX_VALUE)
+            .addComponent(jScrollPane2)
             .addGroup(panelTablaClientesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(checkBusquedaClientes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(busquedaClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(recargarClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(recargarClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         panelTablaClientesLayout.setVerticalGroup(
             panelTablaClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTablaClientesLayout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 395, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelTablaClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(busquedaClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(checkBusquedaClientes)
-                    .addComponent(recargarClientes))
-                .addContainerGap(9, Short.MAX_VALUE))
+                    .addComponent(recargarClientes)
+                    .addComponent(checkBusquedaClientes))
+                .addContainerGap())
         );
 
         panelTableado.addTab("CLIENTES", panelTablaClientes);
@@ -194,20 +193,28 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tablaAdministradores.setComponentPopupMenu(menuClientes);
+        tablaAdministradores.setComponentPopupMenu(jPopupMenu1);
         jScrollPane3.setViewportView(tablaAdministradores);
+
+        recargarClientes1.setText("RECARGAR");
 
         javax.swing.GroupLayout panelTablaAdministradoresLayout = new javax.swing.GroupLayout(panelTablaAdministradores);
         panelTablaAdministradores.setLayout(panelTablaAdministradoresLayout);
         panelTablaAdministradoresLayout.setHorizontalGroup(
             panelTablaAdministradoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 669, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTablaAdministradoresLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(recargarClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         panelTablaAdministradoresLayout.setVerticalGroup(
             panelTablaAdministradoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTablaAdministradoresLayout.createSequentialGroup()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 37, Short.MAX_VALUE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(recargarClientes1)
+                .addGap(0, 6, Short.MAX_VALUE))
         );
 
         panelTableado.addTab("Administradores", panelTablaAdministradores);
@@ -344,16 +351,17 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private javax.swing.JCheckBox checkBusquedaClientes;
     private javax.swing.JMenuItem itemAdministrador;
     private javax.swing.JMenuItem itemMercader;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel labelBienvenido;
     private javax.swing.JLabel labelNombreAdmin;
-    private javax.swing.JPopupMenu menuClientes;
     private javax.swing.JPanel panelInicioAdmin;
     private javax.swing.JPanel panelTablaAdministradores;
     private javax.swing.JPanel panelTablaClientes;
     private javax.swing.JTabbedPane panelTableado;
     private javax.swing.JButton recargarClientes;
+    private javax.swing.JButton recargarClientes1;
     private javax.swing.JTable tablaAdministradores;
     private javax.swing.JTable tablaClientes;
     // End of variables declaration//GEN-END:variables
