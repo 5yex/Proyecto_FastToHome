@@ -155,9 +155,9 @@ class Producto extends Conexion{
         $sql= "DELETE FROM producto WHERE id = :id_prod";
         $sentencia = $this->dblink->prepare($sql);
         
-        $id = $this->getId_producto();
+        $id_producto = $this->getId_producto();
       
-        $sentencia->bindParam(":id_prod", $id);
+        $sentencia->bindParam(":id_prod", $id_producto);
         
         // $sentencia->bindParam(":fot", $this->getFoto() );
         $resultado = $sentencia->execute();
