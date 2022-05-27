@@ -280,6 +280,26 @@ class usuario extends conexion {
         return TRUE;
     }
     
+    public function asignarRolCliente() {
+        $sql = "UPDATE usuarios SET Rol = 'cliente' WHERE id = :id_user";
+        
+        $sentencia = $this->dblink->prepare($sql);
+        
+        $id = $this->getId();
+        
+        $sentencia->bindParam(":id_user", $id);
+        
+        $resultado = $sentencia->execute();
+
+        if ($resultado != 1) {
+            //ocurrio un error al insertar
+            return FALSE;
+        }
+
+        //Insertó correctamente
+        return TRUE;
+    }
+    
     public function asignarRolAdministrador() {
         $sql = "UPDATE usuarios SET Rol = 'admin' WHERE id = :id_user";
         
