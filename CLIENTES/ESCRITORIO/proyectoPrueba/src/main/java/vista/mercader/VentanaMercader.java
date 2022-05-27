@@ -195,7 +195,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         //interrumpirHilo();
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
-        contenido.add(new panelProductoNuevo());
+        contenido.add(new panelProductoNuevo(),contenido);
 
         ArrayList<Producto> productos = ProductoDao.selecciónProductosNegocio(negocio);
         if (productos != null) {
