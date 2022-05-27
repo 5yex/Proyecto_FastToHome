@@ -312,18 +312,16 @@ public class VentanaAdmin extends javax.swing.JFrame {
         busquedaMercaderes.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
-                if(checkBusquedaMercaderes.isSelected())recargarTablaMercaderes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
+                if(checkBusquedaAdmins.isSelected())recargarTablaAdmins();             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-                if(checkBusquedaMercaderes.isSelected())recargarTablaMercaderes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-
+                if(checkBusquedaAdmins.isSelected())recargarTablaAdmins();
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-                if(checkBusquedaMercaderes.isSelected())recargarTablaMercaderes(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+                if(checkBusquedaAdmins.isSelected())recargarTablaAdmins(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
 
             }
         });
