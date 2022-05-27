@@ -62,7 +62,6 @@ public class panelInfoInicial extends javax.swing.JPanel {
 
         img.setPreferredSize(new java.awt.Dimension(271, 271));
 
-        img1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/noIcon.png"))); // NOI18N
         img1.setPreferredSize(new java.awt.Dimension(271, 271));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
