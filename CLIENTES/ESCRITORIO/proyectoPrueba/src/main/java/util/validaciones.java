@@ -31,6 +31,7 @@ public class validaciones implements Constantes {
     }
 
     public static boolean validacionDNI(String dni) {
+        dni.toUpperCase();
         if (dni.length() == 9) {
             try {
             int parteNumerica = Integer.parseInt(dni.substring(0, 8));

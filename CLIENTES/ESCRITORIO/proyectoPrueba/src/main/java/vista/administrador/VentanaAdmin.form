@@ -8,20 +8,20 @@
         <Property name="useNullLayout" type="boolean" value="true"/>
       </Layout>
       <SubComponents>
-        <MenuItem class="javax.swing.JMenuItem" name="itemMercader">
+        <MenuItem class="javax.swing.JMenuItem" name="itemClienteAMercader">
           <Properties>
             <Property name="text" type="java.lang.String" value="Hacer mercader a este usuario"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemMercaderActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemClienteAMercaderActionPerformed"/>
           </Events>
         </MenuItem>
-        <MenuItem class="javax.swing.JMenuItem" name="itemAdministrador">
+        <MenuItem class="javax.swing.JMenuItem" name="itemClienteAAdministrador">
           <Properties>
             <Property name="text" type="java.lang.String" value="Dar permisos de administraci&#xf3;n"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemAdministradorActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemClienteAAdministradorActionPerformed"/>
           </Events>
         </MenuItem>
       </SubComponents>

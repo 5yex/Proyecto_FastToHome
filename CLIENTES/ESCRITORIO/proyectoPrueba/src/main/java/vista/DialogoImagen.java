@@ -36,6 +36,7 @@ public class DialogoImagen extends javax.swing.JDialog {
     private File imagenSeleccionada;
     private String b64_imagen;
     private Imagen imagen;
+    boolean imagenSelect;
 
     /**
      * Creates new form DialogoImagen
@@ -45,6 +46,14 @@ public class DialogoImagen extends javax.swing.JDialog {
         initComponents();
         this.imagen = imagen;
     }
+    
+    public DialogoImagen(java.awt.Frame parent, boolean modal, Imagen imagen, boolean imagenSelect) {
+        super(parent, modal);
+        initComponents();
+        this.imagen = imagen;
+        this.imagenSelect = imagenSelect;
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -62,6 +71,7 @@ public class DialogoImagen extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("SELECCIONAR IMAGEN");
+        setResizable(false);
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jButton1.setText("SELECCIONAR IMAGEN");
@@ -71,7 +81,7 @@ public class DialogoImagen extends javax.swing.JDialog {
             }
         });
 
-        jLabel1.setBackground(new java.awt.Color(219, 219, 255));
+        jLabel1.setBackground(new java.awt.Color(204, 255, 204));
         jLabel1.setBorder(new FlatButtonBorder());
         jLabel1.setOpaque(true);
 
@@ -124,7 +134,6 @@ public class DialogoImagen extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           
             JFileChooser jf = new JFileChooser();
             jf.setDialogTitle("Seleccionar Imagen");
             jf.setFileFilter(new FileNameExtensionFilter("Imagenes PNG", "png"));
@@ -138,6 +147,7 @@ public class DialogoImagen extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        imagenSelect = true;
         imagen.setB64_imagen(b64_imagen);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed

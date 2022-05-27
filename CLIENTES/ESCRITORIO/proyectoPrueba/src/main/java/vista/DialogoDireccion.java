@@ -39,20 +39,20 @@ public class DialogoDireccion extends javax.swing.JDialog {
         rellenarDialogo();
         //cargarSelectorDeps(new DepartamentoDAO().mostrarDepartamentos(bd));
     }
-    
+
     /**
      * Contructor cuyo padre es un Dialogo
+     *
      * @param parentDialog
      * @param modal
-     * @param direccion 
+     * @param direccion
      */
-    public DialogoDireccion(JDialog parentDialog, boolean modal, Direccion direccion){
+    public DialogoDireccion(JDialog parentDialog, boolean modal, Direccion direccion) {
         super(parentDialog, modal);
         this.direccion = direccion;
         initComponents();
         rellenarDialogo();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -193,7 +193,6 @@ public class DialogoDireccion extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
-
         this.dispose();
     }//GEN-LAST:event_cancelarActionPerformed
 
@@ -212,11 +211,13 @@ public class DialogoDireccion extends javax.swing.JDialog {
     }//GEN-LAST:event_varCPActionPerformed
 
     public void rellenarDialogo() {
-
-        varNumeroTXT.setText(String.valueOf(direccion.getNumero()));
-        varCP.setText(String.valueOf(direccion.getCodigo_postal()));
-        varCalle.setText(direccion.getCalle());
-        varCiudad.setText(direccion.getCiudad());
+        if (direccion != null) {
+            varNumeroTXT.setText(String.valueOf(direccion.getNumero()));
+            varCP.setText(String.valueOf(direccion.getCodigo_postal()));
+            varCalle.setText(direccion.getCalle());
+            varCiudad.setText(direccion.getCiudad());
+            varOtros.setText(direccion.getOtros());
+        }
     }
 
     private boolean rellenarDireccion(Direccion direccion) {
@@ -265,7 +266,6 @@ public class DialogoDireccion extends javax.swing.JDialog {
     private javax.swing.JTextArea varOtros;
     // End of variables declaration//GEN-END:variables
 
-  
 //    private void cargarSelectorDeps(Objects<Departamento> listaDepartamentos) {
 //        selectorDeps.addItem(" ");
 //        List<String> depsStrings = new ArrayList<String>();

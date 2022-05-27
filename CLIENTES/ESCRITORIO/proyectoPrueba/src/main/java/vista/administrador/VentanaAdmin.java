@@ -35,8 +35,6 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private ArrayList<Usuario> arrayListAdmins;
     private ArrayList<Usuario> arrayListMercaderes;
 
-
-
     /**
      * Creates new form VentanaPrincipal
      */
@@ -44,9 +42,6 @@ public class VentanaAdmin extends javax.swing.JFrame {
         this.administrador = user;
         initComponents();
         actualizarVentana();
-        recargarTablaClientes();
-        recargarTablaMercaderes();
-        recargarTablaAdmins();
     }
 
     /**
@@ -59,8 +54,8 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void initComponents() {
 
         popUpClientes = new javax.swing.JPopupMenu();
-        itemMercader = new javax.swing.JMenuItem();
-        itemAdministrador = new javax.swing.JMenuItem();
+        itemClienteAMercader = new javax.swing.JMenuItem();
+        itemClienteAAdministrador = new javax.swing.JMenuItem();
         popUpAdministrador = new javax.swing.JPopupMenu();
         itemAdminACliente = new javax.swing.JMenuItem();
         popUpMercaderes = new javax.swing.JPopupMenu();
@@ -89,21 +84,21 @@ public class VentanaAdmin extends javax.swing.JFrame {
         checkBusquedaAdmins = new javax.swing.JCheckBox();
         recargarAdmins = new javax.swing.JButton();
 
-        itemMercader.setText("Hacer mercader a este usuario");
-        itemMercader.addActionListener(new java.awt.event.ActionListener() {
+        itemClienteAMercader.setText("Hacer mercader a este usuario");
+        itemClienteAMercader.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemMercaderActionPerformed(evt);
+                itemClienteAMercaderActionPerformed(evt);
             }
         });
-        popUpClientes.add(itemMercader);
+        popUpClientes.add(itemClienteAMercader);
 
-        itemAdministrador.setText("Dar permisos de administración");
-        itemAdministrador.addActionListener(new java.awt.event.ActionListener() {
+        itemClienteAAdministrador.setText("Dar permisos de administración");
+        itemClienteAAdministrador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemAdministradorActionPerformed(evt);
+                itemClienteAAdministradorActionPerformed(evt);
             }
         });
-        popUpClientes.add(itemAdministrador);
+        popUpClientes.add(itemClienteAAdministrador);
 
         itemAdminACliente.setText("Degradar a cliente");
         itemAdminACliente.addActionListener(new java.awt.event.ActionListener() {
@@ -422,26 +417,29 @@ public class VentanaAdmin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_botonModificarDatosAdminActionPerformed
 
-    private void itemMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMercaderActionPerformed
+    private void itemClienteAMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemClienteAMercaderActionPerformed
         //hacerMecader
         int filaSeleccionada = tablaClientes.getSelectedRow();
         if (UsuarioDao.asignarRolMercader(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
             recargarTablaClientes();
+            recargarTablaMercaderes();
         } else {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como mercader a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
-    }//GEN-LAST:event_itemMercaderActionPerformed
+    }//GEN-LAST:event_itemClienteAMercaderActionPerformed
 
-    private void itemAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAdministradorActionPerformed
+    private void itemClienteAAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemClienteAAdministradorActionPerformed
         //hacerAdmin
         int filaSeleccionada = tablaClientes.getSelectedRow();
         if (UsuarioDao.asignarRolAdministrador(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
             recargarTablaClientes();
+            recargarTablaAdmins();
         } else {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error al asignar como administrador a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    }//GEN-LAST:event_itemAdministradorActionPerformed
+
+    }//GEN-LAST:event_itemClienteAAdministradorActionPerformed
 
     private void checkBusquedaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaClientesActionPerformed
         recargarTablaClientes();
@@ -467,18 +465,27 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void itemAdminAClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAdminAClienteActionPerformed
         //degradar
         int filaSeleccionada = tablaAdmins.getSelectedRow();
-        if (UsuarioDao.asignarRolCliente(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
-            recargarTablaAdmins();
+        int id_seleccionado = arrayListAdmins.get(filaSeleccionada).getId();
+
+        if (id_seleccionado != administrador.getId()) {
+            if (UsuarioDao.asignarRolCliente(new Usuario(id_seleccionado))) {
+                recargarTablaAdmins();
+                recargarTablaClientes();
+            } else {
+                JOptionPane.showMessageDialog(this, "Ha ocurrido un error al degradar a cliente a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
+            }
         } else {
-            JOptionPane.showMessageDialog(this, "Ha ocurrido un error al degradar a cliente a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "No puedes degradarte a ti mismo", "Error", JOptionPane.ERROR_MESSAGE);
+
         }
     }//GEN-LAST:event_itemAdminAClienteActionPerformed
 
     private void itemMercaderAClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMercaderAClienteActionPerformed
-         //degradar
+        //degradar
         int filaSeleccionada = tablaMercaderes.getSelectedRow();
-        if (UsuarioDao.asignarRolCliente(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
-            recargarTablaAdmins();
+        if (UsuarioDao.asignarRolCliente(new Usuario(arrayListMercaderes.get(filaSeleccionada).getId()))) {
+            recargarTablaClientes();
+            recargarTablaMercaderes();
         } else {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error al degradar a cliente a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
         }
@@ -491,6 +498,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void actualizarVentana() {
         administrador = UsuarioDao.obtenerDatosUsuario(administrador);
         labelNombreAdmin.setText(administrador.getNombre() + "  " + administrador.getApellidos());
+        recargarTablaClientes();
+        recargarTablaMercaderes();
+        recargarTablaAdmins();
     }
 
     public void recargarTablaClientes() {
@@ -613,8 +623,8 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private javax.swing.JCheckBox checkBusquedaClientes;
     private javax.swing.JCheckBox checkBusquedaMercaderes;
     private javax.swing.JMenuItem itemAdminACliente;
-    private javax.swing.JMenuItem itemAdministrador;
-    private javax.swing.JMenuItem itemMercader;
+    private javax.swing.JMenuItem itemClienteAAdministrador;
+    private javax.swing.JMenuItem itemClienteAMercader;
     private javax.swing.JMenuItem itemMercaderACliente;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;

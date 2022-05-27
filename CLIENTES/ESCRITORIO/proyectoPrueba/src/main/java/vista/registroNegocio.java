@@ -26,8 +26,8 @@ import vista.mercader.VentanaMercader;
 public class registroNegocio extends javax.swing.JFrame {
 
     private Usuario User;
-    private Direccion nDireccion = new Direccion();
-    private Imagen nImg = new Imagen();
+    private Direccion nDireccion;
+    private Imagen nImg;
     private ArrayList<Categoria> listaCategorias;
 
     /**

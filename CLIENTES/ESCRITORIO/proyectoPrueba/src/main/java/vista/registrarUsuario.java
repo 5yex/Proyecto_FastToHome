@@ -297,6 +297,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
                 && validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
                 && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0) {
             registrarUsuario();
+
         } else {
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, URL, HEIGHT);
         }
@@ -383,35 +384,35 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
     }//GEN-LAST:event_botonIntroducirDireccionActionPerformed
 
     private void registrarUsuario() {
-        
-        int id_direccion = DireccionDao.nuevaDireccionDevuelveId(direccionUsuario);
-        if (id_direccion != -1) {
-            newUsuario.setNombre(nombreField.getText());
-            newUsuario.setApellidos(apellidosField.getText());
-            newUsuario.setDni(dniField.getText());
-            newUsuario.setTlf(tlfField.getText());
-            newUsuario.setEmail(emailField.getText());
-            newUsuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
-            newUsuario.setRol("cliente");
-            //Asignamos la dirección recien creada
-            newUsuario.setId_direccion(id_direccion);
-            System.out.println(newUsuario.getJSON());
 
-            if (UsuarioDao.nuevoUsuario(newUsuario)) {
-                //si la consulta del nuevo usuario falla, eliminamos el dirección creada para el
-                this.dispose();
+            int id_direccion = DireccionDao.nuevaDireccionDevuelveId(direccionUsuario);
+            if (id_direccion != -1) {
+                newUsuario.setNombre(nombreField.getText());
+                newUsuario.setApellidos(apellidosField.getText());
+                newUsuario.setDni(dniField.getText());
+                newUsuario.setTlf(tlfField.getText());
+                newUsuario.setEmail(emailField.getText());
+                newUsuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
+                newUsuario.setRol("cliente");
+                //Asignamos la dirección recien creada
+                newUsuario.setId_direccion(id_direccion);
+                System.out.println(newUsuario.getJSON());
+
+                if (UsuarioDao.nuevoUsuario(newUsuario)) {
+                    //si la consulta del nuevo usuario falla, eliminamos el dirección creada para el
+                    this.dispose();
+                } else {
+                    JOptionPane.showMessageDialog(this, "No se pudo registrar el usuario con esos datos", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
+                }
             } else {
-                JOptionPane.showMessageDialog(this, "No se pudo registrar el usuario con esos datos", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Error, no insertó una direccion correcta por lo que no se procedió a crear el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
             }
-        } else {
-            JOptionPane.showMessageDialog(this, "Error, no insertó una direccion correcta por lo que no se procedió a crear el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
-        }
     }
 
-    private void validarCampos(){
-    
+    private void validarCampos() {
+
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellidosField;
     private javax.swing.JLabel apellidosTXT;
