@@ -149,9 +149,9 @@ public class panelPedido extends javax.swing.JPanel {
         if(PedidoDao.actualizarEstadoPedido(pedido)){
             pedido = PedidoDao.obtenerPedido(pedido);
             mostrarDatos();
-        }else{
-            System.out.println("nO SE PUEDE VISUALIZAR EL NUEVO ESTADO");
-        }
+        }/*else{
+            System.out.println("O SE PUEDE VISUALIZAR EL NUEVO ESTADO");
+        }*/
     }//GEN-LAST:event_pasarEstadoActionPerformed
 
 
