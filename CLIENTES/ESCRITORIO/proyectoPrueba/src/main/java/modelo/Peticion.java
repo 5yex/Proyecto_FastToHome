@@ -34,6 +34,11 @@ public class Peticion {
         this.comando = comando;
         this.datos = datos;
     }
+
+    @Override
+    public String toString() {
+        return "Peticion{" + "comando=" + comando + ", datos=" + datos + '}';
+    }
     
     public String getJSON(){
        return new Gson().toJson(this);
