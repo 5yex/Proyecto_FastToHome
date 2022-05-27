@@ -47,6 +47,31 @@ public class UsuarioDao {
         return null;
     }
 
+    public static Usuario obtenerDatosUsuario(Usuario user) {
+        //generamos un json con los datos que vamos a pasarle al php, en este caso solo el usuario
+        String json = user.getJSON();
+        //hacemos una petición con el comando que deberá realizar el php, y los datos en json    
+        Peticion peticion = new Peticion("getUsuario", json);
+        //mandamos la peticion como consulta selección para obtener valores
+        JsonObject usuarioJson = gestion.consultaSeleccionUnico(peticion);
+        //de la respuesta, obtenemos el id    
+        user.setDni(usuarioJson.get("Dni").getAsString());
+        user.setEmail(usuarioJson.get("Email").getAsString());
+        user.setId(usuarioJson.get("id").getAsInt());
+        if (!usuarioJson.get("direccion_id").isJsonNull()) {
+            user.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
+        }
+        user.setNombre(usuarioJson.get("Nombre").getAsString());
+        user.setApellidos(usuarioJson.get("apellidos").getAsString());
+        user.setPassword(usuarioJson.get("password").getAsString());
+        user.setRol(usuarioJson.get("Rol").getAsString());
+        user.setTlf(usuarioJson.get("tlf").getAsString());
+
+        System.out.println("controlador.UsuarioDao.obtenerDatosUsuario()   " + user.toString());
+
+        return user;
+    }
+
     public static boolean actualizarUsuario(Usuario user) {
         return gestion.hacerConsulta(new Peticion("actualizar_usuario", user.getJSON()));
     }
@@ -108,5 +133,7 @@ public class UsuarioDao {
     public static ArrayList<Usuario> seleccionUsuariosMercader() {
         return seleccionUsuarios("obtener_usuarios_mercader");
     }
+
+    
 
 }
