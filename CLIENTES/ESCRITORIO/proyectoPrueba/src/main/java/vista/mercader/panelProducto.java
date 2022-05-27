@@ -30,10 +30,10 @@ public class panelProducto extends javax.swing.JPanel {
         mostrarDatos();
     }
     
-    public panelProducto(Producto prod,JPanel panelMercader,Negocio negocio) {
+    public panelProducto(Producto prod,JPanel panelProductos,Negocio negocio) {
         initComponents();
         this.producto = prod;
-        this.panelProductos = panelMercader;
+        this.panelProductos = panelProductos;
         this.negocio = negocio;
         mostrarDatos();
     }
