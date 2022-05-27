@@ -108,7 +108,7 @@ public class panelProducto extends javax.swing.JPanel {
        ArrayList<Producto> productos = ProductoDao.selecciónProductosNegocio(negocio);
         if (productos != null) {
             for (Producto producto : productos) {
-                contenido.add(new panelProducto(producto));
+                panelProductos.add(new panelProducto(producto));
             }
         }
     }//GEN-LAST:event_botonEliminarProductoActionPerformed
