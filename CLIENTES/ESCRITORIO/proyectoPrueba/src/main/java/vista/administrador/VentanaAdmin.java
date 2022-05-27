@@ -82,7 +82,6 @@ public class VentanaAdmin extends javax.swing.JFrame {
         setTitle("Ventana Mercader");
         setResizable(false);
 
-        panelTableado.setBackground(new java.awt.Color(255, 102, 0));
         panelTableado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
         labelBienvenido.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
@@ -123,7 +122,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelBienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelNombreAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 213, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 259, Short.MAX_VALUE)
                 .addComponent(botonModificarDatosAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26))
         );
@@ -148,17 +147,13 @@ public class VentanaAdmin extends javax.swing.JFrame {
         panelTablaClientes.setLayout(panelTablaClientesLayout);
         panelTablaClientesLayout.setHorizontalGroup(
             panelTablaClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelTablaClientesLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 608, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 669, Short.MAX_VALUE)
         );
         panelTablaClientesLayout.setVerticalGroup(
             panelTablaClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTablaClientesLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 30, Short.MAX_VALUE))
         );
 
         panelTableado.addTab("CLIENTES", panelTablaClientes);
@@ -171,7 +166,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelTableado)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panelTableado, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
