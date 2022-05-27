@@ -214,7 +214,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         //interrumpirHilo();
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 0, 0));
-        contenido.add(new panelInicioM(negocio));
+        contenido.add(new panelInfoInicial(negocio));
         contenido.revalidate();
         contenido.repaint();
     }

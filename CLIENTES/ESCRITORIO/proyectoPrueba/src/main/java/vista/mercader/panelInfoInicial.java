@@ -16,14 +16,14 @@ import util.imagenesUtil;
  *
  * @author jmcbg
  */
-public class panelInicioM extends javax.swing.JPanel {
+public class panelInfoInicial extends javax.swing.JPanel {
 
     private Negocio negocio;
 
     /**
      * Creates new form panelInicio
      */
-    public panelInicioM(Negocio negocio) {
+    public panelInfoInicial(Negocio negocio) {
         initComponents();
         this.negocio = negocio;
         cargaInicial();
