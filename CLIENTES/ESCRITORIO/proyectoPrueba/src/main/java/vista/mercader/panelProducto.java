@@ -134,6 +134,7 @@ public class panelProducto extends javax.swing.JPanel {
             }else{
                 JOptionPane.showMessageDialog(null, "No se pudo eliminar el producto.", "Producto no eliminado", JOptionPane.INFORMATION_MESSAGE);
             }
+            btUpdate.doClick();
             
         }
     }
