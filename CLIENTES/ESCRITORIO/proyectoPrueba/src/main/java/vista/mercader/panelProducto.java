@@ -7,6 +7,7 @@ package vista.mercader;
 import com.formdev.flatlaf.ui.FlatButtonBorder;
 import controlador.ProductoDao;
 import java.util.ArrayList;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JOptionPane;
@@ -20,12 +21,12 @@ import modelo.Producto;
  */
 public class panelProducto extends javax.swing.JPanel {
     private Producto producto;
-    JMenu btUpdate;
+    JButton btUpdate;
 
     /**
      * Creates new form producto
      */
-    public panelProducto(Producto prod,JMenu btUpdate) {
+    public panelProducto(Producto prod,JButton btUpdate) {
         initComponents();
         this.producto = prod;
         this.btUpdate = btUpdate;
