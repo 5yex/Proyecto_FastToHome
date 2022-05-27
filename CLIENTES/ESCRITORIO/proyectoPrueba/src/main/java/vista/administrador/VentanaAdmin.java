@@ -336,7 +336,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
             for (Usuario cliente : listaClientes) {
                 String nombreMayus = cliente.getNombre().toUpperCase();
                 String busquedaMayus = filtroNombre.toUpperCase();
-                if(nombreMayus.indexOf(filtroNombre)> -1){
+                if(nombreMayus.contains(filtroNombre.get)){
                     model.addRow(cliente.getRow());
                 }  
             }
