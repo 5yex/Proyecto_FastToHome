@@ -296,14 +296,15 @@ public class VentanaAdmin extends javax.swing.JFrame {
         //tablaClientes.getColumnModel().getColumn(2).setMinWidth(100);
         tabla.setAutoCreateRowSorter(true);
         DefaultTableModel model = (DefaultTableModel) tabla.getModel();
+        
+        //busqueda
         if(filtroNombre!= null | !filtroNombre.isBlank()){
             for (Usuario cliente : listaClientes) {
-                String nombreApellido = (cliente.getNombre() +" "+cliente.getApellidos()).toUpperCase();
-                if()
-                
-                
-                
-                model.addRow(cliente.getRow());
+                String nombreApellidoMayus = (cliente.getNombre() +" "+cliente.getApellidos()).toUpperCase();
+                String busquedaMayus = busquedaClientes.getText().toUpperCase();
+                if(nombreApellidoMayus.indexOf(filtroNombre)> -1){
+                    model.addRow(cliente.getRow());
+                }  
             }
         }else{
             for (Usuario cliente : listaClientes) {
