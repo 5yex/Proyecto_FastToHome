@@ -217,7 +217,6 @@ public class registroNegocio extends javax.swing.JFrame {
                         Categoria categoria = new Categoria();
                         categoria.setNombre(comboCategoria.getSelectedItem().toString());
                         int id_categoria = CategoriaDao.ObtenerIdPorNombre(categoria);
-
                         Negocio negocio = new Negocio();
                         negocio.setNombre(nombre);
                         negocio.setDescripcion(descripcion);
