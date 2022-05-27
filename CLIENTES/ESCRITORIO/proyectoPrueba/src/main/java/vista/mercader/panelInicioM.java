@@ -33,6 +33,10 @@ public class panelInicioM extends javax.swing.JPanel {
         img.setBorder(new FlatButtonBorder());
         DescripcionNegocio.setText(negocio.getDescripcion());
         nombreNegocio.setText(negocio.getNombre());
+        img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/noIcon.png"))); // NOI18N
+
+        
+        
         imagenesUtil.imagenAjlabel(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())), img);
 
     }
