@@ -38,7 +38,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         this.administrador = user;
         initComponents();
         actualizarVentana();
-        recargarTablaClientes(UsuarioDao.seleccionUsuariosAdmin());
+        recargarTablaClientes();
         
     }
 
@@ -276,24 +276,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
 
     public void recargarTablaClientes(ArrayList<Usuario> listaClientes) {
-        arrayListClientes = listaClientes;
-        tablaClientes.setModel(new javax.swing.table.DefaultTableModel(
-                null,
-                new String[]{
-                    "ID", "DNI", "EMAIL", "NOMBRE", "TELÉFONO"
-                }
-        ) {
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return false;
-            }
-        });
-        //tablaClientes.getColumnModel().getColumn(0).setMaxWidth(60);
-        //tablaClientes.getColumnModel().getColumn(2).setMinWidth(100);
-        tablaClientes.setAutoCreateRowSorter(true);
-        for (Usuario cliente : listaClientes) {
-            DefaultTableModel model = (DefaultTableModel) tablaClientes.getModel();
-            model.addRow(cliente.getRow());
-        }
+         recargarTabla()
     }
 
     
