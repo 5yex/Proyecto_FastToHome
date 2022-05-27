@@ -191,7 +191,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         mostrarPedidos();
     }//GEN-LAST:event_botonPedidosMouseClicked
 
-    private void mostrarProductos() {
+    public void mostrarProductos() {
         //interrumpirHilo();
         contenido.removeAll();
         contenido.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
