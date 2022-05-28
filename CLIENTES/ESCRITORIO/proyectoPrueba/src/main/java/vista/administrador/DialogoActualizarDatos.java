@@ -9,6 +9,8 @@ import com.formdev.flatlaf.FlatDarkLaf;
 import controlador.DireccionDao;
 import controlador.UsuarioDao;
 import java.awt.Color;
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Direccion;
@@ -298,6 +300,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void updateConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateConfirmActionPerformed
 
         if (validaciones.validar(nombreField.getText(), PATRON_NOMBRES)
@@ -394,7 +397,15 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionUsuario);
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonModificarDireccionActionPerformed
+    
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().
+         getImage(ClassLoader.getSystemResource("./recursos/logoIcon.png"));
 
+
+        return retValue;
+    }
+    
     private void modificarDatos() {
 
         Usuario userCopia = usuario;
