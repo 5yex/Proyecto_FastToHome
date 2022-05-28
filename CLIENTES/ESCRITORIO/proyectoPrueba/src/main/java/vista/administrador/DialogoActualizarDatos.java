@@ -63,8 +63,8 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         passwordField = new javax.swing.JPasswordField();
         passwordConfirmTxt = new javax.swing.JLabel();
         passwordConfirmField = new javax.swing.JPasswordField();
-        registerConfirm = new javax.swing.JButton();
-        botonIntroducirDireccion = new javax.swing.JButton();
+        updateConfirm = new javax.swing.JButton();
+        botonModificarDireccion = new javax.swing.JButton();
         infoPass = new javax.swing.JLabel();
         infoConfirmPass = new javax.swing.JLabel();
 
@@ -75,7 +75,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
 
         titleText.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         titleText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleText.setText("REGISTRO DE USUARIO.");
+        titleText.setText("ACTUALIZAR USUARIO.");
 
         infoNombre.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
 
@@ -156,19 +156,20 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             }
         });
 
-        registerConfirm.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        registerConfirm.setText("CONFIRMAR REGISTRO");
-        registerConfirm.addActionListener(new java.awt.event.ActionListener() {
+        updateConfirm.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        updateConfirm.setText("CONFIRMAR MODIFICACIÓN");
+        updateConfirm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                registerConfirmActionPerformed(evt);
+                updateConfirmActionPerformed(evt);
             }
         });
 
-        botonIntroducirDireccion.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        botonIntroducirDireccion.setText("INTRODUCIR DIRECCION");
-        botonIntroducirDireccion.addActionListener(new java.awt.event.ActionListener() {
+        botonModificarDireccion.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botonModificarDireccion.setText("MODIFICAR DIRECCION");
+        botonModificarDireccion.setActionCommand("MODIFICAR DIRECCION");
+        botonModificarDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonIntroducirDireccionActionPerformed(evt);
+                botonModificarDireccionActionPerformed(evt);
             }
         });
 
@@ -188,45 +189,41 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 13, Short.MAX_VALUE)
                         .addComponent(infoConfirmPass, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(passwordConfirmField)
-                    .addComponent(botonIntroducirDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(registerConfirm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonModificarDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(updateConfirm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(emailField)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(tlfTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(infoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(tlfField)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(titleText, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(nombreTXT)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
-                                    .addComponent(infoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(nombreField, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(apellidosTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
-                                    .addComponent(infoApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(apellidosField, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(dniTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
-                                    .addComponent(infoDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(dniField, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(passwordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                                    .addComponent(infoPass, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(passwordField, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(emailTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tlfTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(infoTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(titleText, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(nombreTXT)
                                 .addGap(18, 18, 18)
-                                .addComponent(infoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(infoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(nombreField, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(apellidosTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(infoApellido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(apellidosField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(dniTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(infoDNI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(dniField, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(passwordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(infoPass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(passwordField)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(emailTXT)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(infoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(35, 35, 35))
         );
@@ -278,9 +275,9 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(passwordConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 20, Short.MAX_VALUE)
-                .addComponent(botonIntroducirDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonModificarDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(registerConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(updateConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
@@ -288,7 +285,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void registerConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerConfirmActionPerformed
+    private void updateConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateConfirmActionPerformed
 
         if (validaciones.validar(nombreField.getText(), PATRON_NOMBRES)
                 && validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)
@@ -302,7 +299,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         } else {
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, URL, HEIGHT);
         }
-    }//GEN-LAST:event_registerConfirmActionPerformed
+    }//GEN-LAST:event_updateConfirmActionPerformed
 
     private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
         if (!validaciones.validar(nombreField.getText(), PATRON_NOMBRES)) {
@@ -379,10 +376,11 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordFieldActionPerformed
 
-    private void botonIntroducirDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIntroducirDireccionActionPerformed
+    private void botonModificarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDireccionActionPerformed
+        direccionUsuario = DireccionDao.obtenerDireccionUsuario(usuario);
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionUsuario);
         dialogoDireccion.setVisible(true);
-    }//GEN-LAST:event_botonIntroducirDireccionActionPerformed
+    }//GEN-LAST:event_botonModificarDireccionActionPerformed
 
     private void registrarUsuario() {
         if (direccionUsuario.isValida()) {
@@ -430,7 +428,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellidosField;
     private javax.swing.JLabel apellidosTXT;
-    private javax.swing.JButton botonIntroducirDireccion;
+    private javax.swing.JButton botonModificarDireccion;
     private javax.swing.JTextField dniField;
     private javax.swing.JLabel dniTXT;
     private javax.swing.JTextField emailField;
@@ -448,9 +446,9 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     private javax.swing.JLabel passwordConfirmTxt;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JLabel passwordTxt;
-    private javax.swing.JButton registerConfirm;
     private javax.swing.JLabel titleText;
     private javax.swing.JTextField tlfField;
     private javax.swing.JLabel tlfTXT;
+    private javax.swing.JButton updateConfirm;
     // End of variables declaration//GEN-END:variables
 }
