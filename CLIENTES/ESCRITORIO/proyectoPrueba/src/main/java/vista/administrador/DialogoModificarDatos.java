@@ -26,7 +26,7 @@ public class DialogoModificarDatos extends javax.swing.JDialog implements Consta
     private Usuario usuario = new Usuario();
     Direccion direccionUsuario = new Direccion();
 
-    public Usuario getAdmin() {
+    public Usuario getUsuario() {
         return usuario;
     }
 

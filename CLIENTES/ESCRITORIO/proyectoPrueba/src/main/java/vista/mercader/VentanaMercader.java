@@ -324,7 +324,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         dmod.setVisible(true);
 
         if (!dmod.isVisible()) {
-            mercader = dmod.getAdmin();
+            mercader = dmod.getUsuario();
             actualizarVentana();
         }
         mostrarDatosInicio();

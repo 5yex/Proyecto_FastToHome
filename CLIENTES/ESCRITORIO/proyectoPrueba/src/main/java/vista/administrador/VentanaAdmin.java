@@ -411,7 +411,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         dmod.setVisible(true);
 
         if (!dmod.isVisible()) {
-            administrador = dmod.getAdmin();
+            administrador = dmod.getUsuario();
             actualizarVentana();
         }
     }//GEN-LAST:event_botonModificarDatosAdminActionPerformed
