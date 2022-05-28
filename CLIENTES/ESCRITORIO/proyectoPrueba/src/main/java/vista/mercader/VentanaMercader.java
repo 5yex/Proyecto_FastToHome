@@ -5,6 +5,7 @@
 package vista.mercader;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
+import controlador.ImagenDao;
 import vista.registroNegocio;
 import controlador.NegocioDao;
 import controlador.PedidoDao;
@@ -24,12 +25,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JOptionPane;
+import modelo.Imagen;
 import modelo.Negocio;
 import modelo.Pedido;
 import modelo.Producto;
 import modelo.Usuario;
 import org.apache.http.impl.conn.SystemDefaultRoutePlanner;
 import util.WrapLayout;
+import util.imagenesUtil;
 import vista.FrameLogin;
 import vista.administrador.DialogoActualizarDatos;
 import vista.administrador.DialogoModificarDatos;
@@ -66,11 +69,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         this.mercader = user;
         this.negocio = NegocioDao.negocioDeMercader(user);
         initComponents();
-        confirmarCierre();
-        mostrarDatosInicio();
-        mostrarProductos();
-        mostrarPedidos();
+        inicilizacion();
     }
+
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -86,7 +88,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelInicioAdmin = new javax.swing.JPanel();
         labelBienvenido = new javax.swing.JLabel();
         labelNombreMercader = new javax.swing.JLabel();
+        nombreNegocio = new javax.swing.JLabel();
         botonModificarDatosMercader = new javax.swing.JButton();
+        imgNegocio = new javax.swing.JLabel();
+        botonModificarDatosMercader1 = new javax.swing.JButton();
         panelTablaProductos = new javax.swing.JPanel();
         busquedaProductos = new javax.swing.JTextField();
         checkBusquedaProductos = new javax.swing.JCheckBox();
@@ -104,9 +109,11 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
-        setMinimumSize(new java.awt.Dimension(678, 464));
+        setMinimumSize(new java.awt.Dimension(678, 465));
+        setSize(new java.awt.Dimension(678, 465));
 
         panelTableado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        panelTableado.setMinimumSize(new java.awt.Dimension(678, 465));
         panelTableado.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 panelTableadoMouseClicked(evt);
@@ -116,19 +123,34 @@ public class VentanaMercader extends javax.swing.JFrame {
             }
         });
 
-        labelBienvenido.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        labelBienvenido.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         labelBienvenido.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        labelBienvenido.setText("Bienvenido mercader:");
+        labelBienvenido.setText("Bienvenido:");
         labelBienvenido.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
 
-        labelNombreMercader.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        labelNombreMercader.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         labelNombreMercader.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
+        nombreNegocio.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        nombreNegocio.setText("Nombre Negocio");
+
         botonModificarDatosMercader.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        botonModificarDatosMercader.setText("MODIFICAR DATOS CUENTA");
+        botonModificarDatosMercader.setText("MODIFICA TUS DATOS");
         botonModificarDatosMercader.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonModificarDatosMercaderActionPerformed(evt);
+            }
+        });
+
+        imgNegocio.setMaximumSize(new java.awt.Dimension(310, 310));
+        imgNegocio.setMinimumSize(new java.awt.Dimension(310, 310));
+        imgNegocio.setPreferredSize(new java.awt.Dimension(310, 310));
+
+        botonModificarDatosMercader1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botonModificarDatosMercader1.setText("PERSONALIZA TU NEGOCIO");
+        botonModificarDatosMercader1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonModificarDatosMercader1ActionPerformed(evt);
             }
         });
 
@@ -137,25 +159,38 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelInicioAdminLayout.setHorizontalGroup(
             panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelInicioAdminLayout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(labelBienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelNombreMercader, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioAdminLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonModificarDatosMercader, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
+                .addGap(36, 36, 36)
+                .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nombreNegocio)
+                    .addGroup(panelInicioAdminLayout.createSequentialGroup()
+                        .addComponent(labelBienvenido)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(labelNombreMercader, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(imgNegocio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botonModificarDatosMercader, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonModificarDatosMercader1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14))
         );
         panelInicioAdminLayout.setVerticalGroup(
             panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelInicioAdminLayout.createSequentialGroup()
-                .addGap(51, 51, 51)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioAdminLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
                 .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelBienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelNombreMercader, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 255, Short.MAX_VALUE)
-                .addComponent(botonModificarDatosMercader, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelInicioAdminLayout.createSequentialGroup()
+                        .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelBienvenido)
+                            .addComponent(labelNombreMercader, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                        .addComponent(nombreNegocio))
+                    .addGroup(panelInicioAdminLayout.createSequentialGroup()
+                        .addComponent(botonModificarDatosMercader, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(imgNegocio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonModificarDatosMercader1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26))
         );
 
@@ -309,11 +344,11 @@ public class VentanaMercader extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelTableado)
+            .addComponent(panelTableado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelTableado)
+            .addComponent(panelTableado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -326,7 +361,7 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         if (!dmod.isVisible()) {
             mercader = dmod.getUsuario();
-            mostrarDatosInicio();
+            inicilizacion();
         }
         
     }//GEN-LAST:event_botonModificarDatosMercaderActionPerformed
@@ -367,12 +402,21 @@ public class VentanaMercader extends javax.swing.JFrame {
     private void panelTableadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_panelTableadoMouseClicked
+
+    private void botonModificarDatosMercader1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDatosMercader1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonModificarDatosMercader1ActionPerformed
     
-    public void mostrarDatosInicio(){
+     private void inicilizacion() {
+        confirmarCierre();
         mercader = UsuarioDao.obtenerDatosUsuario(mercader);
         labelNombreMercader.setText(mercader.getNombre() + "  " + mercader.getApellidos());
+        nombreNegocio.setText(negocio.getNombre());
+        imagenesUtil.imagenAjlabel(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())), imgNegocio);
+        mostrarProductos();
+        mostrarPedidos();
     }
-    
+  
     public void mostrarProductos() {
         //interrumpirHilo();
         panelProductos.removeAll();
@@ -475,16 +519,19 @@ public class VentanaMercader extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox autoUpdate;
     private javax.swing.JButton botonModificarDatosMercader;
+    private javax.swing.JButton botonModificarDatosMercader1;
     private javax.swing.ButtonGroup botonesPedidos;
     private javax.swing.JTextField busquedaProductos;
     private javax.swing.JCheckBox checkBusquedaProductos;
     private javax.swing.JRadioButton checkParaEnviar;
     private javax.swing.JRadioButton checkParaPreparar;
     private javax.swing.JRadioButton checkTodos;
+    private javax.swing.JLabel imgNegocio;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel labelBienvenido;
     private javax.swing.JLabel labelNombreMercader;
+    private javax.swing.JLabel nombreNegocio;
     private javax.swing.JPanel panelInicioAdmin;
     private javax.swing.JPanel panelPedidos;
     private javax.swing.JPanel panelProductos;

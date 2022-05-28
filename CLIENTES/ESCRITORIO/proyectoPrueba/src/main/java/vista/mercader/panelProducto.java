@@ -5,6 +5,7 @@
 package vista.mercader;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
+import controlador.ImagenDao;
 import controlador.ProductoDao;
 import java.util.ArrayList;
 import javax.swing.JButton;
@@ -12,29 +13,29 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import modelo.Imagen;
 import modelo.Negocio;
 import modelo.Producto;
+import util.imagenesUtil;
 
 /**
  *
  * @author jmcbg
  */
 public class panelProducto extends javax.swing.JPanel {
+
     private Producto producto;
     JButton btUpdate;
 
     /**
      * Creates new form producto
      */
-    public panelProducto(Producto prod,JButton btUpdate) {
+    public panelProducto(Producto prod, JButton btUpdate) {
         initComponents();
         this.producto = prod;
         this.btUpdate = btUpdate;
         mostrarDatos();
     }
-
-   
-     
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -53,9 +54,12 @@ public class panelProducto extends javax.swing.JPanel {
         nombreProducto.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         nombreProducto.setText("TITULO PRODUCTO");
 
-        imgProducto.setBackground(new java.awt.Color(204, 204, 255));
-        imgProducto.setText("IMAGEN PRODUCTO");
+        imgProducto.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        imgProducto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imgProducto.setText("NO MAGE");
+        imgProducto.setMinimumSize(new java.awt.Dimension(155, 155));
         imgProducto.setOpaque(true);
+        imgProducto.setPreferredSize(new java.awt.Dimension(155, 155));
 
         botonEliminarProducto.setText("DEL");
         botonEliminarProducto.addActionListener(new java.awt.event.ActionListener() {
@@ -75,38 +79,40 @@ public class panelProducto extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(nombreProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(imgProducto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(imgProducto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(botonEliminarProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botonEditarProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(botonEditarProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(nombreProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(nombreProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nombreProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(imgProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(imgProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(botonEliminarProducto, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                    .addComponent(botonEditarProducto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonEditarProducto)
+                    .addComponent(botonEliminarProducto))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonEliminarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarProductoActionPerformed
-       eliminarProducto();
+        eliminarProducto();
     }//GEN-LAST:event_botonEliminarProductoActionPerformed
 
     private void botonEditarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarProductoActionPerformed
-       editarProducto();
+        editarProducto();
     }//GEN-LAST:event_botonEditarProductoActionPerformed
 
 
@@ -119,6 +125,14 @@ public class panelProducto extends javax.swing.JPanel {
 
     private void mostrarDatos() {
         nombreProducto.setText(producto.getNombre());
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                imagenesUtil.imagenAjlabel(ImagenDao.obtenerImagenPorId(new Imagen(producto.getId_img())), imgProducto);
+            }
+        }).start();
+        
         this.setBorder(new FlatButtonBorder());
     }
 
@@ -126,12 +140,12 @@ public class panelProducto extends javax.swing.JPanel {
         int valor = JOptionPane.showConfirmDialog(this, "¿Esta seguro de que quiere eliminar este producto?", "Confirmar borrado", JOptionPane.YES_NO_OPTION);
         if (valor == JOptionPane.YES_OPTION) {
             //System.out.println(producto.toString());
-            if(ProductoDao.borrarProducto(producto)){
+            if (ProductoDao.borrarProducto(producto)) {
                 JOptionPane.showMessageDialog(null, "Se eliminó el producto.", "Producto eliminado", JOptionPane.INFORMATION_MESSAGE);
                 /*panelProductos.remove(this);
                 panelProductos.revalidate();
                 panelProductos.repaint();*/
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(null, "No se pudo eliminar el producto.", "Producto no eliminado", JOptionPane.INFORMATION_MESSAGE);
             }
             btUpdate.doClick();
@@ -139,6 +153,6 @@ public class panelProducto extends javax.swing.JPanel {
     }
 
     private void editarProducto() {
-        
+
     }
 }

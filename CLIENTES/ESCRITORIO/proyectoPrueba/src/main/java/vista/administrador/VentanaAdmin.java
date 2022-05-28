@@ -128,17 +128,17 @@ public class VentanaAdmin extends javax.swing.JFrame {
             }
         });
 
-        labelBienvenido.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        labelBienvenido.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         labelBienvenido.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        labelBienvenido.setText("Bienvenido administrador:");
+        labelBienvenido.setText("Bienvenido:");
         labelBienvenido.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
 
-        labelNombreAdmin.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        labelNombreAdmin.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         labelNombreAdmin.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         labelNombreAdmin.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         botonModificarDatosAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        botonModificarDatosAdmin.setText("MODIFICAR DATOS CUENTA");
+        botonModificarDatosAdmin.setText("MODIFICA TUS DATOS");
         botonModificarDatosAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonModificarDatosAdminActionPerformed(evt);
@@ -150,26 +150,26 @@ public class VentanaAdmin extends javax.swing.JFrame {
         panelInicioAdminLayout.setHorizontalGroup(
             panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelInicioAdminLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(labelBienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(labelNombreAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioAdminLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonModificarDatosAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(botonModificarDatosAdmin)
+                .addGap(34, 34, 34))
+            .addGroup(panelInicioAdminLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(labelBienvenido)
+                .addGap(18, 18, 18)
+                .addComponent(labelNombreAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         panelInicioAdminLayout.setVerticalGroup(
             panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelInicioAdminLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelBienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelNombreAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 298, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioAdminLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelBienvenido)
+                    .addComponent(labelNombreAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 304, Short.MAX_VALUE)
                 .addComponent(botonModificarDatosAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
+                .addGap(46, 46, 46))
         );
 
         panelTableado.addTab("INICIO", panelInicioAdmin);
@@ -225,7 +225,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(checkBusquedaClientes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(busquedaClientes, javax.swing.GroupLayout.DEFAULT_SIZE, 357, Short.MAX_VALUE)
+                .addComponent(busquedaClientes, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(recargarClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -233,7 +233,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         panelTablaClientesLayout.setVerticalGroup(
             panelTablaClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTablaClientesLayout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelTablaClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(busquedaClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -300,7 +300,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(checkBusquedaMercaderes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(busquedaMercaderes, javax.swing.GroupLayout.DEFAULT_SIZE, 357, Short.MAX_VALUE)
+                .addComponent(busquedaMercaderes, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(recargarMercaderes, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -308,7 +308,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         panelTablaMercaderesLayout.setVerticalGroup(
             panelTablaMercaderesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTablaMercaderesLayout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelTablaMercaderesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(busquedaMercaderes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -373,7 +373,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(checkBusquedaAdmins)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(busquedaAdmins, javax.swing.GroupLayout.DEFAULT_SIZE, 357, Short.MAX_VALUE)
+                .addComponent(busquedaAdmins, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(recargarAdmins, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -381,7 +381,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         panelTablaAdminsLayout.setVerticalGroup(
             panelTablaAdminsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTablaAdminsLayout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelTablaAdminsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(busquedaAdmins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -497,7 +497,8 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
     private void actualizarVentana() {
         administrador = UsuarioDao.obtenerDatosUsuario(administrador);
-        labelNombreAdmin.setText(administrador.getNombre() + "  " + administrador.getApellidos());
+        labelNombreAdmin.setText(administrador.getNombre() + " " + administrador.getApellidos());
+        
         recargarTablaClientes();
         recargarTablaMercaderes();
         recargarTablaAdmins();
