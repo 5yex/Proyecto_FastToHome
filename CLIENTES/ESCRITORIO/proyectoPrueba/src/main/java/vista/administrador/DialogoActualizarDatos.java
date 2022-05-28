@@ -87,7 +87,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registro de usuario");
-        setIconImage(getIconImage());
+        setIconImage(null);
         setName("Registro de usuario"); // NOI18N
         setResizable(false);
 

@@ -11,6 +11,7 @@ import controlador.NegocioDao;
 import controlador.UsuarioDao;
 import java.awt.Image;
 import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Negocio;
@@ -30,6 +31,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
      */
     public FrameLogin() {
         initComponents();
+        inicializar();
     }
 
     @SuppressWarnings("unchecked")
@@ -185,12 +187,17 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
 
     }
     
-    public Image getIconImage(){
+    /*public Image getIconImage(){
         Image retValue = Toolkit.getDefaultToolkit().
         getImage(ClassLoader.getSystemResource("./recursos/logoIcon.png"));
 
         return retValue;
-    }
+    }*/
+    
+    private void inicializar() {
+    ImageIcon icono = new ImageIcon("recursos/logoIcon.png");
+    this.setIconImage(icono.getImage());
+}   
 
     private void ventanaMercader(Usuario user) {
         Negocio negocio;
