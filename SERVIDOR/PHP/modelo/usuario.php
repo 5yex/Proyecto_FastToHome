@@ -235,7 +235,7 @@ class usuario extends conexion {
         $dni = $this->getDni();
         $email = $this->getEmail();
         $tlf = $this->getTlf();
-        $rol = $this->getRol();
+        //$rol = $this->getRol();
         $id = $this->getId();
         $password = $this->getPassword();
 
