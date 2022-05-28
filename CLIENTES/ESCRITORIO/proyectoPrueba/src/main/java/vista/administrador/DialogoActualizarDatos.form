@@ -29,55 +29,53 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="passwordConfirmTxt" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" pref="13" max="32767" attributes="0"/>
-                      <Component id="infoConfirmPass" min="-2" pref="200" max="-2" attributes="0"/>
-                  </Group>
                   <Component id="passwordConfirmField" alignment="0" max="32767" attributes="0"/>
                   <Component id="botonModificarDireccion" max="32767" attributes="0"/>
                   <Component id="updateConfirm" max="32767" attributes="0"/>
                   <Component id="emailField" alignment="0" max="32767" attributes="0"/>
                   <Component id="tlfField" alignment="0" max="32767" attributes="0"/>
+                  <Component id="passwordField" alignment="0" max="32767" attributes="0"/>
+                  <Component id="dniField" alignment="0" max="32767" attributes="0"/>
+                  <Component id="apellidosField" alignment="0" max="32767" attributes="0"/>
+                  <Component id="nombreField" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="tlfTXT" min="-2" pref="54" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="infoTelefono" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="titleText" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="nombreTXT" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="infoNombre" min="-2" pref="266" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="nombreField" alignment="0" min="-2" pref="330" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="apellidosTXT" min="-2" pref="62" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="infoApellido" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="apellidosField" alignment="1" pref="331" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="dniTXT" min="-2" pref="42" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="infoDNI" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="dniField" alignment="0" pref="331" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="passwordTxt" min="-2" pref="70" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="infoPass" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="passwordField" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="emailTXT" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="infoEmail" min="-2" pref="216" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <Component id="emailTXT" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="infoEmail" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="passwordConfirmTxt" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="infoConfirmPass" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="passwordTxt" min="-2" pref="70" max="-2" attributes="0"/>
+                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                      <Component id="infoPass" min="-2" pref="292" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="tlfTXT" min="-2" pref="54" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="infoTelefono" min="-2" pref="294" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="dniTXT" min="-2" pref="42" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="infoDNI" min="-2" pref="297" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="apellidosTXT" min="-2" pref="62" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="infoApellido" min="-2" pref="298" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="titleText" min="-2" pref="215" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="nombreTXT" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                      <Component id="infoNombre" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
@@ -282,7 +280,6 @@
           <Font name="Segoe UI" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="MODIFICAR DIRECCION"/>
-        <Property name="actionCommand" type="java.lang.String" value="MODIFICAR DIRECCION"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonModificarDireccionActionPerformed"/>
