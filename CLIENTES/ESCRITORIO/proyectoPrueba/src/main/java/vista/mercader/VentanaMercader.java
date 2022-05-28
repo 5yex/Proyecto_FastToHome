@@ -9,6 +9,7 @@ import vista.registroNegocio;
 import controlador.NegocioDao;
 import controlador.PedidoDao;
 import controlador.ProductoDao;
+import controlador.UsuarioDao;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -104,6 +105,9 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         panelTableado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         panelTableado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelTableadoMouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 panelTableadoMousePressed(evt);
             }
@@ -351,6 +355,15 @@ public class VentanaMercader extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_checkParaPrepararActionPerformed
 
+    private void panelTableadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panelTableadoMouseClicked
+    
+    public void mostrarDatosInicio(){
+        mercader = UsuarioDao.obtenerDatosUsuario(mercader);
+        labelNombreMercader.setText(mercader.getNombre() + "  " + mercader.getApellidos());
+    }
+    
     public void mostrarProductos() {
         //interrumpirHilo();
         panelProductos.removeAll();
