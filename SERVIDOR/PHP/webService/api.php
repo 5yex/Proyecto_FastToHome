@@ -416,7 +416,7 @@ function actualizarUsuario($datos) {
         $usuario->setEmail($datos->email);
         $usuario->setId($datos->id);
         $usuario->setTlf($datos->tlf);
-        $usuario->setRol($datos->rol);
+        //$usuario->setRol($datos->rol);
         $usuario->setPassword($datos->password);
 
         if ($usuario->actualizarUsuario()) {
