@@ -42,6 +42,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         this.administrador = user;
         initComponents();
         actualizarVentana();
+        confirmarCierre();
     }
 
     /**
