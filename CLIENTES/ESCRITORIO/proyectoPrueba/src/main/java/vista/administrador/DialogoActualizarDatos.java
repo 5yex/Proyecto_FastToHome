@@ -384,24 +384,23 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
 
     private void modificarDatosAdmin() {
 
-        Usuario adminCopia = admin;
+        Usuario userCopia = usuario;
         boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionUsuario);
 
         if (direccionActualizada) {
-            admin.setNombre(nombreField.getText());
-            admin.setApellidos(apellidosField.getText());
-            admin.setDni(dniField.getText());
-            admin.setTlf(tlfField.getText());
-            admin.setEmail(emailField.getText());
-            admin.setRol("admin");
-            admin.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
-            System.out.println(admin.getJSON());
+            usuario.setNombre(nombreField.getText());
+            usuario.setApellidos(apellidosField.getText());
+            usuario.setDni(dniField.getText());
+            usuario.setTlf(tlfField.getText());
+            usuario.setEmail(emailField.getText());
+            usuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
+            System.out.println(usuario.getJSON());
 
-            if (UsuarioDao.actualizarUsuario(admin)) {
+            if (UsuarioDao.actualizarUsuario(usuario)) {
                 this.dispose();
             } else {
                 JOptionPane.showMessageDialog(this, "No se pudo actualizar el administrador", "Error al actualizar", JOptionPane.ERROR_MESSAGE);
-                admin = adminCopia;
+                usuario = userCopia;
             }
         } else {
             JOptionPane.showMessageDialog(this, "Error, no se actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);          
