@@ -83,6 +83,9 @@ public class registrarProducto extends javax.swing.JFrame {
         textAreaDescripcion.setColumns(20);
         textAreaDescripcion.setRows(5);
         textAreaDescripcion.setBorder(new FlatButtonBorder());
+        textAreaDescripcion.setMaximumSize(new java.awt.Dimension(188, 84));
+        textAreaDescripcion.setMinimumSize(new java.awt.Dimension(188, 84));
+        textAreaDescripcion.setPreferredSize(new java.awt.Dimension(188, 84));
         jScrollPane1.setViewportView(textAreaDescripcion);
 
         botonPedirImagen.setText("ABRIR IMAGEN");
