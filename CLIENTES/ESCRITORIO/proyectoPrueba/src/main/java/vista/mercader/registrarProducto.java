@@ -213,13 +213,13 @@ public class registrarProducto extends javax.swing.JFrame {
             if (descripcion.length() == 0 | nombre.length() == 0) {
                 throw new IOException("Rellena todos los campos");
             }
-            if (nDireccion.isValida()) {
+            
                 if (nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()) {
-                    int id_direccion = DireccionDao.nuevaDireccionDevuelveId(nDireccion);
+                   
 
                     int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
 
-                    if (id_direccion != -1 && id_imagen != -1) {
+                    if (id_imagen != -1) {
                         
                     }
                 } else {
@@ -227,11 +227,7 @@ public class registrarProducto extends javax.swing.JFrame {
                     return false;
 
                 }
-            } else {
-                errorTexto.setText("Rellena la direccion");
-                return false;
-
-            }
+           
         } catch (NumberFormatException ex) {
             errorTexto.setText("Rellena correctamente los campos numéricos");
             return false;
