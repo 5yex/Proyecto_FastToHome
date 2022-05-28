@@ -47,7 +47,6 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio Sesión");
-        setIconImage(getIconImage());
         setResizable(false);
 
         buttonLogin1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
