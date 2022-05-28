@@ -228,7 +228,7 @@ public class registrarProducto extends javax.swing.JFrame {
 //        JOptionPane.showMessageDialog(null, User.getNombre() + " Bienvenido al equipo de mercaderes! \n A continuación podrás configurar tu negocio");
     }
 
-    private boolean nuevoNegocio(Usuario user) {
+    private boolean nuevoProducto() {
 
         try {
 
