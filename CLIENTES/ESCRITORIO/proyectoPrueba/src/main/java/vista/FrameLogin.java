@@ -193,11 +193,6 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
 
         return retValue;
     }*/
-    
-    private void inicializar() {
-    ImageIcon icono = new ImageIcon("recursos/logoIcon.png");
-    this.setIconImage(icono.getImage());
-}   
 
     private void ventanaMercader(Usuario user) {
         Negocio negocio;
