@@ -130,6 +130,7 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         labelNombreMercader.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         labelNombreMercader.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        labelNombreMercader.setText("nom");
 
         nombreNegocio.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         nombreNegocio.setText("Nombre Negocio");
