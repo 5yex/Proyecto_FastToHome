@@ -400,8 +400,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     
     public Image getIconImage(){
         Image retValue = Toolkit.getDefaultToolkit().
-         getImage(ClassLoader.getSystemResource("./recursos/logoIcon.png"));
-
+        getImage(ClassLoader.getSystemResource("./recursos/logoIcon.png"));
 
         return retValue;
     }
