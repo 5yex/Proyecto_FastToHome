@@ -86,7 +86,7 @@ public class gestion {
 
             httpPost.setEntity(new UrlEncodedFormEntity(params));
 
-            CloseableHttpResponse response = client.execute(httpPost);
+            CloseableHttpResponse response = client.execute(httpPost,HTTP.UTF_8);
 
             HttpEntity entity = response.getEntity();
             Header headers = entity.getContentType();
