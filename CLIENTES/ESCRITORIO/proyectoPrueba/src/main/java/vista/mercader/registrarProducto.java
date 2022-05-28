@@ -33,6 +33,7 @@ import vista.mercader.VentanaMercader;
 public class registrarProducto extends javax.swing.JFrame {
 
     private Imagen nImg = new Imagen();
+    private Negocio neg;
     private JButton btActupaizar;
 
     /**
@@ -40,10 +41,10 @@ public class registrarProducto extends javax.swing.JFrame {
      *
      * @param user
      */
-    public registrarProducto(JButton btActupaizar) {
+    public registrarProducto(JButton btActupaizar, Negocio neg) {
         initComponents();
         this.btActupaizar=btActupaizar;
-        
+        this.neg = neg;
         cargaInicial();
     }
 
