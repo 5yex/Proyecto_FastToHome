@@ -7,7 +7,6 @@ package controlador;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.google.gson.stream.JsonReader;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -55,9 +54,7 @@ public class gestion {
 
                 System.out.println("controlador.gestion.hacerConsulta() ---- RECEPCIÓN: " + htmlTxt);
 
-                JsonParser jp =new JsonParser();
-                JsonObject jsonObject = jp.parse(htmlTxt).getAsJsonObject();
-                
+                JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
                 
                 return !jsonObject.get("error").getAsBoolean();
             } else {
