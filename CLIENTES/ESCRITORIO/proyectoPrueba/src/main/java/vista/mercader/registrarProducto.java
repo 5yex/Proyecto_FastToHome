@@ -78,6 +78,8 @@ public class registrarProducto extends javax.swing.JFrame {
 
         varNombre.setBorder(new FlatButtonBorder());
 
+        jScrollPane1.setBorder(null);
+
         textAreaDescripcion.setColumns(20);
         textAreaDescripcion.setRows(5);
         textAreaDescripcion.setBorder(new FlatButtonBorder());
