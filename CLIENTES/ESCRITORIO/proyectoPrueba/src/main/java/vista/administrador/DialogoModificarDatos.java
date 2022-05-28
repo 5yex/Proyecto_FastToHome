@@ -24,7 +24,7 @@ import vista.DialogoDireccion;
 public class DialogoModificarDatos extends javax.swing.JDialog implements Constantes {
 
     private Usuario admin = new Usuario();
-    Direccion direccionAdmin = new Direccion();
+    Direccion direccionUsuario = new Direccion();
 
     public Usuario getAdmin() {
         return admin;
@@ -315,7 +315,7 @@ public class DialogoModificarDatos extends javax.swing.JDialog implements Consta
                 && validaciones.validar(emailField.getText(), PATRON_EMAIL)
                 && validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
                 && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0
-                && DireccionDao.actualizarDireccion(direccionAdmin)) {
+                && DireccionDao.actualizarDireccion(direccionUsuario)) {
             modificarDatosAdmin();
         } else {
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, "Error al rellenar los datos del usuario o dirección", JOptionPane.ERROR_MESSAGE);
@@ -398,15 +398,15 @@ public class DialogoModificarDatos extends javax.swing.JDialog implements Consta
     }//GEN-LAST:event_passwordConfirmFieldActionPerformed
 
     private void botonModificarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDireccionActionPerformed
-        direccionAdmin = DireccionDao.obtenerDireccionUsuario(admin);
-        DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionAdmin);
+        direccionUsuario = DireccionDao.obtenerDireccionUsuario(admin);
+        DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionUsuario);
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonModificarDireccionActionPerformed
 
     private void modificarDatosAdmin() {
 
         Usuario adminCopia = admin;
-        boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionAdmin);
+        boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionUsuario);
 
         if (direccionActualizada) {
             admin.setNombre(nombreField.getText());
