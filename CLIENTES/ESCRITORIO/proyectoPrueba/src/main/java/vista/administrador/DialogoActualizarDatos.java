@@ -423,6 +423,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     }
     
     private void establecerCamposIniciales(Usuario user) {
+        direccionUsuario = DireccionDao.obtenerDireccionUsuario(usuario);
         nombreField.setText(user.getNombre());
         apellidosField.setText(user.getApellidos());
         tlfField.setText(user.getTlf());
