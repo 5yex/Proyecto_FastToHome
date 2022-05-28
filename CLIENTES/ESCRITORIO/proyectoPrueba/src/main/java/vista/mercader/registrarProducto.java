@@ -251,8 +251,7 @@ public class registrarProducto extends javax.swing.JFrame {
                         produc.setPrecio(precio);
                         produc.setId_img(id_imagen);
                         produc.setNombre(nombre);
-                        
-                        ProductoDao.nuevoProducto(product);
+                        return ProductoDao.nuevoProducto(produc);
                     }
                 } else {
                     errorTexto.setText("Tienes que subir una imagen");
