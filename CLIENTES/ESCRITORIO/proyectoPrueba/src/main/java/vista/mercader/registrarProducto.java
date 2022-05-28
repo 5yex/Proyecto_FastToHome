@@ -52,24 +52,26 @@ public class registrarProducto extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        NombreTxt = new javax.swing.JLabel();
+        DescripcionTXT = new javax.swing.JLabel();
         varNombre = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         textAreaDescripcion = new javax.swing.JTextArea();
         botonPedirImagen = new javax.swing.JButton();
-        error = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        varNombre2 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        txtPrecio = new javax.swing.JLabel();
+        precioProducto = new javax.swing.JTextField();
+        botonAceptar = new javax.swing.JButton();
+        botonCacelar = new javax.swing.JButton();
+        imgProducto = new javax.swing.JLabel();
+        errorTexto = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("NUEVO PRODUCTO");
         setResizable(false);
 
-        jLabel1.setText("NOMBRE:");
+        NombreTxt.setText("NOMBRE:");
 
-        jLabel2.setText("DESCRIPCIÓN:");
+        DescripcionTXT.setText("DESCRIPCIÓN:");
 
         textAreaDescripcion.setColumns(20);
         textAreaDescripcion.setRows(5);
@@ -82,87 +84,99 @@ public class registrarProducto extends javax.swing.JFrame {
             }
         });
 
-        error.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.background"));
-        error.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
-        error.setText(" ");
+        txtPrecio.setText("PRECIO:");
 
-        jLabel4.setText("PRECIO:");
-
-        jButton2.setText("Aceptar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        botonAceptar.setText("Aceptar");
+        botonAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                botonAceptarActionPerformed(evt);
             }
         });
+
+        botonCacelar.setText("Cancelar");
+        botonCacelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCacelarActionPerformed(evt);
+            }
+        });
+
+        imgProducto.setText("IMAGEN PRODUCTO");
+        imgProducto.setOpaque(true);
+
+        errorTexto.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
+        errorTexto.setText("  ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(11, 11, 11)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel1))
-                                .addGap(37, 37, 37)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(varNombre2, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
-                                    .addComponent(varNombre)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addComponent(botonPedirImagen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(388, 388, 388)
-                        .addComponent(jButton2)))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(355, 355, 355)
-                .addComponent(error, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(NombreTxt)
+                        .addGap(36, 36, 36)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(precioProducto, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
+                            .addComponent(varNombre)))
+                    .addComponent(txtPrecio)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(botonPedirImagen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(errorTexto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(DescripcionTXT)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(botonCacelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(imgProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(varNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(botonPedirImagen))
+                            .addComponent(NombreTxt)
+                            .addComponent(varNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(varNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtPrecio)
+                            .addComponent(precioProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(186, 186, 186)
-                        .addComponent(jButton2)))
-                .addGap(334, 334, 334)
-                .addComponent(error, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(DescripcionTXT))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botonPedirImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(imgProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonAceptar)
+                    .addComponent(botonCacelar)
+                    .addComponent(errorTexto))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -173,16 +187,20 @@ public class registrarProducto extends javax.swing.JFrame {
         new DialogoImagen(this, rootPaneCheckingEnabled, nImg).setVisible(true);
     }//GEN-LAST:event_botonPedirImagenActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_botonAceptarActionPerformed
+
+    private void botonCacelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCacelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonCacelarActionPerformed
 
     private void cargaInicial() {
-        listaCategorias = controlador.CategoriaDao.obtenerCategorias();
-        for (Categoria listaCategoria : listaCategorias) {
-            comboCategoria.addItem(listaCategoria.getNombre());
-        }
-        JOptionPane.showMessageDialog(null, User.getNombre() + " Bienvenido al equipo de mercaderes! \n A continuación podrás configurar tu negocio");
+//        listaCategorias = controlador.CategoriaDao.obtenerCategorias();
+//        for (Categoria listaCategoria : listaCategorias) {
+//            comboCategoria.addItem(listaCategoria.getNombre());
+//        }
+//        JOptionPane.showMessageDialog(null, User.getNombre() + " Bienvenido al equipo de mercaderes! \n A continuación podrás configurar tu negocio");
     }
 
     private boolean nuevoNegocio(Usuario user) {
@@ -202,33 +220,23 @@ public class registrarProducto extends javax.swing.JFrame {
                     int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
 
                     if (id_direccion != -1 && id_imagen != -1) {
-                        Categoria categoria = new Categoria();
-                        categoria.setNombre(comboCategoria.getSelectedItem().toString());
-                        int id_categoria = CategoriaDao.ObtenerIdPorNombre(categoria);
-                        Negocio negocio = new Negocio();
-                        negocio.setNombre(nombre);
-                        negocio.setDescripcion(descripcion);
-                        negocio.setId_categoria(id_categoria);
-                        negocio.setId_mercader(user.getId());
-                        negocio.setId_direccion(id_direccion);
-                        negocio.setId_img(id_imagen);
-                        return NegocioDao.nuevoNegocio(negocio);
+                        
                     }
                 } else {
-                    error.setText("Tienes que subir una imagen");
+                    errorTexto.setText("Tienes que subir una imagen");
                     return false;
 
                 }
             } else {
-                error.setText("Rellena la direccion");
+                errorTexto.setText("Rellena la direccion");
                 return false;
 
             }
         } catch (NumberFormatException ex) {
-            error.setText("Rellena correctamente los campos numéricos");
+            errorTexto.setText("Rellena correctamente los campos numéricos");
             return false;
         } catch (IOException ex) {
-            error.setText(ex.getMessage());
+            errorTexto.setText(ex.getMessage());
             return false;
         }
         return true;
@@ -236,16 +244,18 @@ public class registrarProducto extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel DescripcionTXT;
+    private javax.swing.JLabel NombreTxt;
+    private javax.swing.JButton botonAceptar;
+    private javax.swing.JButton botonCacelar;
     private javax.swing.JButton botonPedirImagen;
-    private javax.swing.JLabel error;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel errorTexto;
+    private javax.swing.JLabel imgProducto;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField precioProducto;
     private javax.swing.JTextArea textAreaDescripcion;
+    private javax.swing.JLabel txtPrecio;
     private javax.swing.JTextField varNombre;
-    private javax.swing.JTextField varNombre2;
     // End of variables declaration//GEN-END:variables
 }
