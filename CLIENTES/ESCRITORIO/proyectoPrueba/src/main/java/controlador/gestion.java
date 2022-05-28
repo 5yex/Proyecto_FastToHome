@@ -55,7 +55,11 @@ public class gestion {
                 System.out.println("controlador.gestion.hacerConsulta() ---- RECEPCIÓN: " + htmlTxt);
 
                 JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
-                return !jsonObject.get("error").getAsBoolean();
+                if(jsonObject.get("error").getAsBoolean()){
+                    return ;
+                }else{
+                    return true;
+                };
             } else {
                 return false;
             }
