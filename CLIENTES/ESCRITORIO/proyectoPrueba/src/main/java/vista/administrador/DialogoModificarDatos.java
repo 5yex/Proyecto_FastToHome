@@ -21,7 +21,7 @@ import vista.DialogoDireccion;
  *
  * @author Jesus
  */
-public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements Constantes {
+public class DialogoModificarDatos extends javax.swing.JDialog implements Constantes {
 
     private Usuario admin = new Usuario();
     Direccion direccionAdmin = new Direccion();
@@ -37,12 +37,12 @@ public class DialogoModificarDatosAdmin extends javax.swing.JDialog implements C
     /**
      * Creates new form DialogoRegistro
      */
-    public DialogoModificarDatosAdmin(java.awt.Frame parent, boolean modal) {
+    public DialogoModificarDatos(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
 
-    public DialogoModificarDatosAdmin(java.awt.Frame parent, boolean modal, Usuario administrador) {
+    public DialogoModificarDatos(java.awt.Frame parent, boolean modal, Usuario administrador) {
         super(parent, modal);
         admin = administrador;
         initComponents();
