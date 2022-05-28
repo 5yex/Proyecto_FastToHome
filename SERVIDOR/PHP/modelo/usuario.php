@@ -225,7 +225,7 @@ class usuario extends conexion {
 
     public function actualizarUsuario() {
 
-        $sql = "UPDATE IGNORE usuarios SET Nombre = :nom, apellidos = :ape, Dni = :dni, Email = :email, tlf = :tlf, Rol = :rol, password = :pass WHERE id = :id_user";
+        $sql = "UPDATE IGNORE usuarios SET Nombre = :nom, apellidos = :ape, Dni = :dni, Email = :email, tlf = :tlf, password = :pass WHERE id = :id_user";
 
         $sentencia = $this->dblink->prepare($sql);
 
