@@ -25,6 +25,14 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
 
     private Usuario usuario = new Usuario();
     Direccion direccionUsuario = new Direccion();
+    
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario admin) {
+        this.usuario = admin;
+    }
 
     /**
      * Creates new form DialogoRegistro
