@@ -20,6 +20,7 @@ import modelo.Imagen;
 import modelo.Negocio;
 import modelo.Usuario;
 import util.imagenesUtil;
+import static util.imagenesUtil.imagenAjlabel;
 import vista.mercader.VentanaMercader;
 
 /**
@@ -187,7 +188,7 @@ public class registrarProducto extends javax.swing.JFrame {
     private void botonPedirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirImagenActionPerformed
         new DialogoImagen(this, rootPaneCheckingEnabled, nImg).setVisible(true);
         if(nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()){
-            imgProducto.setIcon(imagenesUtil.base64AImagen(nImg.getB64_imagen()));
+            imagenAjlabel(nImg.getB64_imagen(),imgProducto);
         }
     }//GEN-LAST:event_botonPedirImagenActionPerformed
 
