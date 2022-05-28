@@ -12,6 +12,7 @@ import controlador.NegocioDao;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import modelo.Categoria;
 import modelo.Direccion;
@@ -26,19 +27,18 @@ import vista.mercader.VentanaMercader;
  */
 public class registrarProducto extends javax.swing.JFrame {
 
-    private Usuario User;
-    private Direccion nDireccion = new Direccion();
     private Imagen nImg = new Imagen();
-    private ArrayList<Categoria> listaCategorias;
+    private JButton btActupaizar;
 
     /**
      * Creates new form VentanaRegistroNegocio
      *
      * @param user
      */
-    public registrarProducto(Usuario user) {
+    public registrarProducto(JButton btActupaizar) {
         initComponents();
-        this.User = user;
+        this.btActupaizar=btActupaizar;
+        
         cargaInicial();
     }
 
