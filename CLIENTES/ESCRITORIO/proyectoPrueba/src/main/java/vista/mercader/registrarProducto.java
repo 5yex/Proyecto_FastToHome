@@ -254,6 +254,7 @@ public class registrarProducto extends javax.swing.JFrame {
                         produc.setPrecio(precio);
                         produc.setId_img(id_imagen);
                         produc.setNombre(nombre);
+                        produc.setId_negocio(neg.getId_negocio());
                         return ProductoDao.nuevoProducto(produc);
                     }
                 } else {
