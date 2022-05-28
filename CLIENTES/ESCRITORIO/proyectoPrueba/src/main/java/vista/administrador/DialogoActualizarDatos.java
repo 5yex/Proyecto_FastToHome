@@ -382,35 +382,30 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonModificarDireccionActionPerformed
 
-    private void registrarUsuario() {
-        if (direccionUsuario.isValida()) {
-            int id_direccion = DireccionDao.nuevaDireccionDevuelveId(direccionUsuario);
-            if (id_direccion != -1) {
-                usuario.setNombre(nombreField.getText());
-                usuario.setApellidos(apellidosField.getText());
-                usuario.setDni(dniField.getText());
-                usuario.setTlf(tlfField.getText());
-                usuario.setEmail(emailField.getText());
-                usuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
-                usuario.setRol("cliente");
-                //Asignamos la dirección recien creada
-                usuario.setId_direccion(id_direccion);
-                System.out.println(usuario.getJSON());
+    private void modificarDatosAdmin() {
 
-                if (UsuarioDao.nuevoUsuario(usuario)) {
-                    //si la consulta del nuevo usuario falla, eliminamos el dirección creada para el
-                    this.dispose();
-                } else {
-                    JOptionPane.showMessageDialog(this, "No se pudo registrar el usuario con esos datos", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
-                }
+        Usuario adminCopia = admin;
+        boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionUsuario);
+
+        if (direccionActualizada) {
+            admin.setNombre(nombreField.getText());
+            admin.setApellidos(apellidosField.getText());
+            admin.setDni(dniField.getText());
+            admin.setTlf(tlfField.getText());
+            admin.setEmail(emailField.getText());
+            admin.setRol("admin");
+            admin.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
+            System.out.println(admin.getJSON());
+
+            if (UsuarioDao.actualizarUsuario(admin)) {
+                this.dispose();
             } else {
-                JOptionPane.showMessageDialog(this, "Error, no insertó una direccion correcta por lo que no se procedió a crear el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "No se pudo actualizar el administrador", "Error al actualizar", JOptionPane.ERROR_MESSAGE);
+                admin = adminCopia;
             }
-
         } else {
-            JOptionPane.showMessageDialog(this, "Tienes que introducir una direccion", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Error, no se actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);          
         }
-
     }
     
     private void establecerCamposIniciales(Usuario user) {
