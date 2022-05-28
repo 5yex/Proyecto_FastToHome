@@ -23,7 +23,7 @@ import util.validaciones;
  */
 public class DialogoActualizarDatos extends javax.swing.JDialog implements Constantes {
 
-    private Usuario newUsuario = new Usuario();
+    private Usuario usuario = new Usuario();
     Direccion direccionUsuario = new Direccion();
 
     /**
@@ -386,18 +386,18 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         if (direccionUsuario.isValida()) {
             int id_direccion = DireccionDao.nuevaDireccionDevuelveId(direccionUsuario);
             if (id_direccion != -1) {
-                newUsuario.setNombre(nombreField.getText());
-                newUsuario.setApellidos(apellidosField.getText());
-                newUsuario.setDni(dniField.getText());
-                newUsuario.setTlf(tlfField.getText());
-                newUsuario.setEmail(emailField.getText());
-                newUsuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
-                newUsuario.setRol("cliente");
+                usuario.setNombre(nombreField.getText());
+                usuario.setApellidos(apellidosField.getText());
+                usuario.setDni(dniField.getText());
+                usuario.setTlf(tlfField.getText());
+                usuario.setEmail(emailField.getText());
+                usuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
+                usuario.setRol("cliente");
                 //Asignamos la dirección recien creada
-                newUsuario.setId_direccion(id_direccion);
-                System.out.println(newUsuario.getJSON());
+                usuario.setId_direccion(id_direccion);
+                System.out.println(usuario.getJSON());
 
-                if (UsuarioDao.nuevoUsuario(newUsuario)) {
+                if (UsuarioDao.nuevoUsuario(usuario)) {
                     //si la consulta del nuevo usuario falla, eliminamos el dirección creada para el
                     this.dispose();
                 } else {
