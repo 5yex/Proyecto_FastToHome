@@ -4,6 +4,7 @@
  */
 package vista.mercader;
 
+import com.formdev.flatlaf.ui.FlatButtonBorder;
 import vista.*;
 import controlador.CategoriaDao;
 import controlador.DireccionDao;
@@ -103,6 +104,8 @@ public class registrarProducto extends javax.swing.JFrame {
         });
 
         imgProducto.setText("IMAGEN PRODUCTO");
+        imgProducto.setBorder(new FlatButtonBorder()
+        );
         imgProducto.setMaximumSize(new java.awt.Dimension(190, 190));
         imgProducto.setMinimumSize(new java.awt.Dimension(190, 190));
         imgProducto.setOpaque(true);
