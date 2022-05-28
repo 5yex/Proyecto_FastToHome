@@ -414,6 +414,14 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         }
 
     }
+    
+    private void establecerCamposIniciales(Usuario admin) {
+        nombreField.setText(admin.getNombre());
+        apellidosField.setText(admin.getApellidos());
+        tlfField.setText(admin.getTlf());
+        dniField.setText(admin.getDni());
+        emailField.setText(admin.getEmail());
+    }
 
     private void validarCampos() {
 
