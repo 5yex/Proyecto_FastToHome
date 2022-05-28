@@ -325,9 +325,9 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         if (!dmod.isVisible()) {
             mercader = dmod.getUsuario();
-            actualizarVentana();
+            mostrarDatosInicio();
         }
-        mostrarDatosInicio();
+        
     }//GEN-LAST:event_botonModificarDatosMercaderActionPerformed
 
     private void checkBusquedaProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaProductosActionPerformed
