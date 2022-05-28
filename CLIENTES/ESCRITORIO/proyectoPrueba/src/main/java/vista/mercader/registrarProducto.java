@@ -10,6 +10,7 @@ import controlador.CategoriaDao;
 import controlador.DireccionDao;
 import controlador.ImagenDao;
 import controlador.NegocioDao;
+import controlador.ProductoDao;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,7 @@ import modelo.Categoria;
 import modelo.Direccion;
 import modelo.Imagen;
 import modelo.Negocio;
+import modelo.Producto;
 import modelo.Usuario;
 import util.imagenesUtil;
 import static util.imagenesUtil.imagenAjlabel;
@@ -232,6 +234,7 @@ public class registrarProducto extends javax.swing.JFrame {
 
             String nombre = varNombre.getText();
             String descripcion = textAreaDescripcion.getText();
+            double precio = Double.parseDouble(precioProducto.getText());
 
             if (descripcion.length() == 0 | nombre.length() == 0) {
                 throw new IOException("Rellena todos los campos");
@@ -243,7 +246,13 @@ public class registrarProducto extends javax.swing.JFrame {
                     int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
 
                     if (id_imagen != -1) {
+                        Producto produc = new Producto();
+                        produc.setDescripcion(descripcion);
+                        produc.setPrecio(precio);
+                        produc.setId_img(id_imagen);
+                        produc.setNombre(nombre);
                         
+                        ProductoDao.nuevoProducto(product);
                     }
                 } else {
                     errorTexto.setText("Tienes que subir una imagen");
