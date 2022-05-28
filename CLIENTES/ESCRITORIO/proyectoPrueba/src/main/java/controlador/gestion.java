@@ -20,6 +20,7 @@ import java.util.List;
 import modelo.Peticion;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.protocol.HTTP;
 
 /**
  *
