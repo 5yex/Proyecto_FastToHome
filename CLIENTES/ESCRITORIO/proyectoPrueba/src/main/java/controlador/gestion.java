@@ -64,6 +64,7 @@ public class gestion {
                 return false;
             }
         } catch (Exception ex) {
+            ex.printStackTrace();
             return false;
         }
     }
