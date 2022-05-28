@@ -30,7 +30,7 @@ public class DialogoModificarDatos extends javax.swing.JDialog implements Consta
         return usuario;
     }
 
-    public void setAdmin(Usuario admin) {
+    public void setUsuario(Usuario admin) {
         this.usuario = admin;
     }
 
