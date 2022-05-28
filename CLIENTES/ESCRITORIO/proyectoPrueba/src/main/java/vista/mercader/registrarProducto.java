@@ -215,6 +215,7 @@ public class registrarProducto extends javax.swing.JFrame {
 
     private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
         if(nuevoProducto()){
+            btActupaizar.doClick();
             this.dispose();
         }
     }//GEN-LAST:event_botonAceptarActionPerformed
