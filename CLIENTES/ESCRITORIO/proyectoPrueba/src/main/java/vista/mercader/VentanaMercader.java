@@ -65,6 +65,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         this.negocio = NegocioDao.negocioDeMercader(user);
         initComponents();
         confirmarCierre();
+        mostrarDatosInicio();
         mostrarProductos();
         mostrarPedidos();
     }
@@ -319,7 +320,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonModificarDatosMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDatosMercaderActionPerformed
-
+        
     }//GEN-LAST:event_botonModificarDatosMercaderActionPerformed
 
     private void checkBusquedaProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaProductosActionPerformed
