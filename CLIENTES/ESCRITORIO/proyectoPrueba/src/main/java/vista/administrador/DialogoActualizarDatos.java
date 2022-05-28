@@ -294,7 +294,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
                 && validaciones.validar(emailField.getText(), PATRON_EMAIL)
                 && validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
                 && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0) {
-            registrarUsuario();
+            modificarDatos();
 
         } else {
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, URL, HEIGHT);
@@ -382,7 +382,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonModificarDireccionActionPerformed
 
-    private void modificarDatosAdmin() {
+    private void modificarDatos() {
 
         Usuario userCopia = usuario;
         boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionUsuario);
