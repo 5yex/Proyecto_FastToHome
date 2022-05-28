@@ -40,6 +40,7 @@ public class imagenesUtil {
     }
 
     public static void imagenAjlabel(String imgBase64, JLabel label){
+        label.setText("");
         try {
             ImageIcon image = imagenesUtil.base64AImagen(imgBase64);
             label.setIcon(new ImageIcon(image.getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_DEFAULT)));
