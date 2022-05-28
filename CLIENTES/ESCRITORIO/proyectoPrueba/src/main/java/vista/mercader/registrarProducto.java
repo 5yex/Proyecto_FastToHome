@@ -73,6 +73,7 @@ public class registrarProducto extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("NUEVO PRODUCTO");
+        setAlwaysOnTop(true);
         setResizable(false);
 
         NombreTxt.setText("NOMBRE:");
