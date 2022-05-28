@@ -31,6 +31,7 @@ import modelo.Usuario;
 import org.apache.http.impl.conn.SystemDefaultRoutePlanner;
 import util.WrapLayout;
 import vista.FrameLogin;
+import vista.administrador.DialogoModificarDatos;
 
 /**
  *
@@ -319,6 +320,13 @@ public class VentanaMercader extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonModificarDatosMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDatosMercaderActionPerformed
+        DialogoModificarDatos dmod = new DialogoModificarDatos(this, true, mercader);
+        dmod.setVisible(true);
+
+        if (!dmod.isVisible()) {
+            administrador = dmod.getAdmin();
+            actualizarVentana();
+        }
         mostrarDatosInicio();
     }//GEN-LAST:event_botonModificarDatosMercaderActionPerformed
 
