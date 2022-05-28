@@ -76,8 +76,11 @@ public class registrarProducto extends javax.swing.JFrame {
 
         DescripcionTXT.setText("DESCRIPCIÓN:");
 
+        varNombre.setBorder(new FlatButtonBorder());
+
         textAreaDescripcion.setColumns(20);
         textAreaDescripcion.setRows(5);
+        textAreaDescripcion.setBorder(new FlatButtonBorder());
         jScrollPane1.setViewportView(textAreaDescripcion);
 
         botonPedirImagen.setText("ABRIR IMAGEN");
@@ -88,6 +91,8 @@ public class registrarProducto extends javax.swing.JFrame {
         });
 
         txtPrecio.setText("PRECIO:");
+
+        precioProducto.setBorder(new FlatButtonBorder());
 
         botonAceptar.setText("Aceptar");
         botonAceptar.addActionListener(new java.awt.event.ActionListener() {
