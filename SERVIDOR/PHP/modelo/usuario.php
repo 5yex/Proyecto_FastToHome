@@ -246,7 +246,7 @@ class usuario extends conexion {
         $sentencia->bindParam(":dni", $dni);
         $sentencia->bindParam(":email", $email);
         $sentencia->bindParam(":tlf", $tlf);
-        $sentencia->bindParam(":rol", $rol);
+        //$sentencia->bindParam(":rol", $rol);
         $sentencia->bindParam(":id_user", $id);
         $sentencia->bindParam(":pass", $password);
 
