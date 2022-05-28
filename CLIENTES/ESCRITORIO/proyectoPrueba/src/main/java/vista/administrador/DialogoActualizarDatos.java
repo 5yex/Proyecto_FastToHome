@@ -392,7 +392,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     }//GEN-LAST:event_passwordFieldActionPerformed
 
     private void botonModificarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDireccionActionPerformed
-        direccionUsuario = DireccionDao.obtenerDireccionUsuario(usuario);
+        //direccionUsuario = DireccionDao.obtenerDireccionUsuario(usuario);
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionUsuario);
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonModificarDireccionActionPerformed
