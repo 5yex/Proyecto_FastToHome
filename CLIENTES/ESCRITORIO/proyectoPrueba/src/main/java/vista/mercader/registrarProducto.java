@@ -213,7 +213,9 @@ public class registrarProducto extends javax.swing.JFrame {
     }//GEN-LAST:event_botonPedirImagenActionPerformed
 
     private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
-        // TODO add your handling code here:
+        if(nuevoProducto()){
+            this.dispose();
+        }
     }//GEN-LAST:event_botonAceptarActionPerformed
 
     private void botonCacelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCacelarActionPerformed
