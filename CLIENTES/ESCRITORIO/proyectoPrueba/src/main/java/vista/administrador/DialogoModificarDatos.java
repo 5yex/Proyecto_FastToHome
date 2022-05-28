@@ -23,15 +23,15 @@ import vista.DialogoDireccion;
  */
 public class DialogoModificarDatos extends javax.swing.JDialog implements Constantes {
 
-    private Usuario admin = new Usuario();
+    private Usuario usuario = new Usuario();
     Direccion direccionUsuario = new Direccion();
 
     public Usuario getAdmin() {
-        return admin;
+        return usuario;
     }
 
     public void setAdmin(Usuario admin) {
-        this.admin = admin;
+        this.usuario = admin;
     }
 
     /**
@@ -44,9 +44,9 @@ public class DialogoModificarDatos extends javax.swing.JDialog implements Consta
 
     public DialogoModificarDatos(java.awt.Frame parent, boolean modal, Usuario administrador) {
         super(parent, modal);
-        admin = administrador;
+        usuario = administrador;
         initComponents();
-        establecerCamposIniciales(admin);
+        establecerCamposIniciales(usuario);
     }
 
     /**
@@ -398,31 +398,31 @@ public class DialogoModificarDatos extends javax.swing.JDialog implements Consta
     }//GEN-LAST:event_passwordConfirmFieldActionPerformed
 
     private void botonModificarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDireccionActionPerformed
-        direccionUsuario = DireccionDao.obtenerDireccionUsuario(admin);
+        direccionUsuario = DireccionDao.obtenerDireccionUsuario(usuario);
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionUsuario);
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonModificarDireccionActionPerformed
 
     private void modificarDatosAdmin() {
 
-        Usuario adminCopia = admin;
+        Usuario adminCopia = usuario;
         boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionUsuario);
 
         if (direccionActualizada) {
-            admin.setNombre(nombreField.getText());
-            admin.setApellidos(apellidosField.getText());
-            admin.setDni(dniField.getText());
-            admin.setTlf(tlfField.getText());
-            admin.setEmail(emailField.getText());
-            admin.setRol("admin");
-            admin.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
-            System.out.println(admin.getJSON());
+            usuario.setNombre(nombreField.getText());
+            usuario.setApellidos(apellidosField.getText());
+            usuario.setDni(dniField.getText());
+            usuario.setTlf(tlfField.getText());
+            usuario.setEmail(emailField.getText());
+            usuario.setRol("admin");
+            usuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
+            System.out.println(usuario.getJSON());
 
-            if (UsuarioDao.actualizarUsuario(admin)) {
+            if (UsuarioDao.actualizarUsuario(usuario)) {
                 this.dispose();
             } else {
                 JOptionPane.showMessageDialog(this, "No se pudo actualizar el administrador", "Error al actualizar", JOptionPane.ERROR_MESSAGE);
-                admin = adminCopia;
+                usuario = adminCopia;
             }
         } else {
             JOptionPane.showMessageDialog(this, "Error, no se actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);          
