@@ -31,7 +31,6 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
      */
     public FrameLogin() {
         initComponents();
-        inicializar();
     }
 
     @SuppressWarnings("unchecked")
