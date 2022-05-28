@@ -164,7 +164,7 @@ function nuevoProducto($datos) {
         $producto->setPrecio($datos->precio);
         $producto->setDescripcion($datos->descripcion);
         $producto->setStock($datos->stock);
-        $producto->setId_imagen($datos->id_imagen);
+        $producto->setId_imagen($datos->id_img);
 
         if ($producto->agregar()) {
             mandarRespuesta(false, 'Se ha realizado la insercion de un producto');
