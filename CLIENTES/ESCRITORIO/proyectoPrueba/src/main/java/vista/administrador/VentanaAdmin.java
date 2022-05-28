@@ -407,7 +407,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonModificarDatosAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDatosAdminActionPerformed
-        DialogoModificarDatos dmod = new DialogoModificarDatos(this, true, administrador);
+        DialogoActualizarDatos dmod = new DialogoModificarDatos(this, true, administrador);
         dmod.setVisible(true);
 
         if (!dmod.isVisible()) {
