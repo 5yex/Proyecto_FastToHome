@@ -33,6 +33,13 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         super(parent, modal);
         initComponents();
     }
+    
+    public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, Usuario administrador) {
+        super(parent, modal);
+        usuario = administrador;
+        initComponents();
+        establecerCamposIniciales(usuario);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
