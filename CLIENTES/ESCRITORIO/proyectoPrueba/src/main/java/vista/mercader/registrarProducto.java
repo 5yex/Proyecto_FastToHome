@@ -103,7 +103,10 @@ public class registrarProducto extends javax.swing.JFrame {
         });
 
         imgProducto.setText("IMAGEN PRODUCTO");
+        imgProducto.setMaximumSize(new java.awt.Dimension(190, 190));
+        imgProducto.setMinimumSize(new java.awt.Dimension(190, 190));
         imgProducto.setOpaque(true);
+        imgProducto.setPreferredSize(new java.awt.Dimension(190, 190));
 
         errorTexto.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
         errorTexto.setText("  ");
