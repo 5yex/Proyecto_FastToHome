@@ -79,6 +79,9 @@ public class registrarProducto extends javax.swing.JFrame {
         varNombre.setBorder(new FlatButtonBorder());
 
         jScrollPane1.setBorder(null);
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setToolTipText("");
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
         jScrollPane1.setViewportBorder(new FlatButtonBorder());
 
         textAreaDescripcion.setColumns(20);
