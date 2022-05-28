@@ -115,9 +115,7 @@ class usuario extends conexion {
         $sentencia->bindParam(":rol", $rol);
         $sentencia->bindParam(":dir", $id_direccion);
         $sentencia->bindParam(":pass", $password);
-        
-        print_r($this->id_direccion);
-
+   
         // $sentencia->bindParam(":fot", $this->getFoto() );
         $resultado = $sentencia->execute();
 
