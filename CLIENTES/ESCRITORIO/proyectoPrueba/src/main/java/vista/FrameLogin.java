@@ -182,6 +182,13 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         }
 
     }
+    
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().
+        getImage(ClassLoader.getSystemResource("./recursos/logoIcon.png"));
+
+        return retValue;
+    }
 
     private void ventanaMercader(Usuario user) {
         Negocio negocio;
