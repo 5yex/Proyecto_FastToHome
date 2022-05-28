@@ -56,10 +56,10 @@ public class gestion {
 
                 JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
                 if(jsonObject.get("error").getAsBoolean()){
-                    return ;
+                    return false;
                 }else{
                     return true;
-                };
+                }
             } else {
                 return false;
             }
