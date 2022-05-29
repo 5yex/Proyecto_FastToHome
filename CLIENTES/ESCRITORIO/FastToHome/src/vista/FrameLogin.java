@@ -160,10 +160,10 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         try {
             int index = ((JComboBox) evt.getSource()).getSelectedIndex();
             
-            if (combo.getSelectedIndex() == 1) {
+            if (index == 1) {
                 UIManager.setLookAndFeel(new FlatLightLaf());
             }
-            if (combo.getSelectedIndex() == 2) {
+            if (index == 2) {
                 UIManager.setLookAndFeel(new FlatDarkLaf());
             }
             
