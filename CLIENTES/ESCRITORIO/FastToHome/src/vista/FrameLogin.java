@@ -39,7 +39,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         initComponents();
         imagenesUtil.imagenProyectoAjlabel(new ImageIcon(getClass().getResource("/recursos/logoGrandeBlanco.png")), jLabel1);
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
-        String[] combo = { "Tema Claro", "Tema Oscuro"};
+        String[] combo = {"Tema Claro", "Tema Oscuro"};
         jComboBox1 = new JComboBox<>(combo);
         jComboBox1.setSelectedIndex(0);
     }
@@ -159,9 +159,9 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         try {
-            JComboBox combo = new JComboBox();
+            JComboBox combo = (JComboBox) evt.getSource();
 
-            System.out.println("vista.FrameLogin.jComboBox1ActionPerformed()"+ combo.getSelectedIndex() );
+            System.out.println("vista.FrameLogin.jComboBox1ActionPerformed()" + combo.getSelectedIndex());
             if (combo.getSelectedIndex() == 0) {
                 UIManager.setLookAndFeel(new FlatLightLaf());
             }
