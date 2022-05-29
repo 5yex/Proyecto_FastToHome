@@ -34,7 +34,6 @@ public class DireccionDao {
         Peticion peticion = new Peticion("obtener_direccion", json);
         //mandamos la peticion como consulta selección para obtener valores
         JsonObject respuesta = gestion.consultaSeleccionUnico(peticion);
-        
         direccion.setCalle(respuesta.get("Calle").getAsString());
         direccion.setNumero(respuesta.get("Numero").getAsInt());
         direccion.setCiudad(respuesta.get("Ciudad").getAsString());
