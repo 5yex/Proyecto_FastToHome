@@ -54,7 +54,7 @@ public class imagenesUtil {
     public static void imagenProyectoAjlabel(ImageIcon image, JLabel label){
         label.setText("");
         try {
-            label.setIcon(new ImageIcon(image.getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_DEFAULT)));
+            label.setIcon(new ImageIcon(image.getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_SMOOTH)));
         } catch (Exception e) {
             label.setIcon(new ImageIcon(new ImageIcon("/recursos/noIcon.png").getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_DEFAULT)));
             label.setText("NO IMAGE");
