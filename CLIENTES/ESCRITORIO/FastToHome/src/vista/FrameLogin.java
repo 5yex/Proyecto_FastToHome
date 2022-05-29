@@ -83,7 +83,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         jLabel1.setMinimumSize(new java.awt.Dimension(289, 289));
         jLabel1.setPreferredSize(new java.awt.Dimension(289, 289));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tema Claro", "Tema Oscuro" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "  ", "Tema Claro", "Tema Oscuro" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -159,10 +159,10 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
             JComboBox combo = (JComboBox) evt.getSource();
 
             System.out.println("vista.FrameLogin.jComboBox1ActionPerformed()" + combo.getSelectedIndex());
-            if (combo.getSelectedIndex() == 0) {
+            if (combo.getSelectedIndex() == 1) {
                 UIManager.setLookAndFeel(new FlatLightLaf());
             }
-            if (combo.getSelectedIndex() == 1) {
+            if (combo.getSelectedIndex() == 2) {
                 UIManager.setLookAndFeel(new FlatDarkLaf());
                 System.out.println("vista.FrameLogin.jComboBox1ActionPerformed()");
             }
