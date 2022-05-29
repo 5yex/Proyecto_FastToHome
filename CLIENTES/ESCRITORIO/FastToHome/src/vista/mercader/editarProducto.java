@@ -34,14 +34,15 @@ public class editarProducto extends javax.swing.JFrame {
 
     private Imagen nImg = new Imagen();
     private Negocio neg;
+    private Producto producto;
     private JButton btActupaizar;
-
+    
     /**
      * Creates new form VentanaRegistroNegocio
      *
      * @param user
      */
-    public editarProducto(JButton btActupaizar, Negocio neg) {
+    public editarProducto(JButton btActupaizar, Negocio neg, Producto producto) {
         initComponents();
         this.btActupaizar=btActupaizar;
         this.neg = neg;
