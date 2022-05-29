@@ -152,6 +152,8 @@ class Negocio extends Conexion {
         $sentencia->bindParam(":img", $id_imagen);
         $sentencia->bindParam(":id_neg", $id_negocio);
         
+        printf($sentencia);
+        
         $resultado = $sentencia->execute();
 
         if ($resultado != 1) {
