@@ -40,9 +40,6 @@ public static FrameLogin lg;
         UIManager.setLookAndFeel(new FlatLightLaf());
         lg = new FrameLogin();
         lg.setVisible(true);
-        
-       
-
     }
 
 }
