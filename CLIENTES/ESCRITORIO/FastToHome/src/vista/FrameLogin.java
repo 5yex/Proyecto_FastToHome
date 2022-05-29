@@ -33,7 +33,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     public FrameLogin() {
         initComponents();
         imagenesUtil.imagenProyectoAjlabel(new ImageIcon(getClass().getResource("/recursos/logoGrandeBlanco.png")), jLabel1);
-        this.setIconImage(getClass().getResource("/recursos/logoIcon.png"));
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")));
     }
 
     @SuppressWarnings("unchecked")
