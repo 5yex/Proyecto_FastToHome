@@ -189,6 +189,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
         varNombre.setText(negocio.getNombre());
         textAreaDescripcion.setText(negocio.getDescripcion());
         direccionNegocio = DireccionDao.obtenerDireccionNegocio(negocio);
+        direccionNegocio.setId_direccion(negocio.getId_direccion());
         listaCategorias = controlador.CategoriaDao.obtenerCategorias();
         for (Categoria listaCategoria : listaCategorias) {
             comboCategoria.addItem(listaCategoria.getNombre());
