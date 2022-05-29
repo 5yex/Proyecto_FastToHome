@@ -433,6 +433,9 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         } else {
             JOptionPane.showMessageDialog(this, "Error, no se actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);          
         }
+        if(updateInicio !=null){
+            updateInicio.doClick();
+        }
     }
     
     private void establecerCamposIniciales(Usuario user) {
