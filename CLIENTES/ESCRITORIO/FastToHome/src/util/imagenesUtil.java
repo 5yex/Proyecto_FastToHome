@@ -66,7 +66,7 @@ public class imagenesUtil {
         boton.setText("");
         try {
             boton.setIcon(new ImageIcon(image.getImage().getScaledInstance(boton.getPreferredSize().width-2, boton.getPreferredSize().width-2, Image.SCALE_SMOOTH)));
-            boton.setBackground(Color(image.getRGB(0, 0));
+            boton.setBackground(Color(image.getRGB(0, 0)));
         } catch (Exception e) {
             System.out.println("no tienes icono");
         }
