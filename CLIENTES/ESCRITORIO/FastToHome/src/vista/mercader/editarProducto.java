@@ -6,25 +6,19 @@ package vista.mercader;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
 import vista.*;
-import controlador.CategoriaDao;
-import controlador.DireccionDao;
+
 import controlador.ImagenDao;
-import controlador.NegocioDao;
+
 import controlador.ProductoDao;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 import javax.swing.JButton;
-import javax.swing.JOptionPane;
-import modelo.Categoria;
-import modelo.Direccion;
+
 import modelo.Imagen;
 import modelo.Negocio;
 import modelo.Producto;
-import modelo.Usuario;
 import util.imagenesUtil;
 import static util.imagenesUtil.imagenAjlabel;
-import vista.mercader.VentanaMercader;
 
 /**
  *
@@ -250,11 +244,12 @@ public class editarProducto extends javax.swing.JFrame {
             if (descripcion.length() == 0 | nombre.length() == 0) {
                 throw new IOException("Rellena todos los campos");
             }
-            
+
             if (imagen.getB64_imagen() != null && !imagen.getB64_imagen().isBlank()) {
                 imagen.setId(producto.getId_img());
                 ImagenDao.editarImagenPorId(imagen);
             }
+
             producto.setDescripcion(descripcion);
             producto.setPrecio(precio);
             producto.setNombre(nombre);
