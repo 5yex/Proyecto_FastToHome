@@ -32,7 +32,7 @@ import vista.mercader.VentanaMercader;
  */
 public class editarProducto extends javax.swing.JFrame {
 
-    private Imagen nImg = new Imagen();
+    private Imagen imagen = new Imagen();
     private Negocio neg;
     private Producto producto;
     private JButton btActupaizar;
@@ -210,9 +210,9 @@ public class editarProducto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonPedirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirImagenActionPerformed
-        new DialogoImagen(this, rootPaneCheckingEnabled, nImg).setVisible(true);
-        if (nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()) {
-            imagenAjlabel(nImg.getB64_imagen(), imgProducto);
+        new DialogoImagen(this, rootPaneCheckingEnabled, imagen).setVisible(true);
+        if (imagen.getB64_imagen() != null && !imagen.getB64_imagen().isBlank()) {
+            imagenAjlabel(imagen.getB64_imagen(), imgProducto);
         }
     }//GEN-LAST:event_botonPedirImagenActionPerformed
 
@@ -251,9 +251,9 @@ public class editarProducto extends javax.swing.JFrame {
                 throw new IOException("Rellena todos los campos");
             }
             
-            if (nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()) {
-                nImg.setId(producto.getId_img());
-                ImagenDao.editarImagenPorId(nImg);
+            if (imagen.getB64_imagen() != null && !imagen.getB64_imagen().isBlank()) {
+                imagen.setId(producto.getId_img());
+                ImagenDao.editarImagenPorId(imagen);
             }
             producto.setDescripcion(descripcion);
             producto.setPrecio(precio);
