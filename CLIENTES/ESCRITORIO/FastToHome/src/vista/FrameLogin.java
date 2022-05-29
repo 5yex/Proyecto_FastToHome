@@ -158,18 +158,14 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         try {
             JComboBox combo = (JComboBox) evt.getSource();
-
-            System.out.println("vista.FrameLogin.jComboBox1ActionPerformed()" + combo.getSelectedIndex());
             if (combo.getSelectedIndex() == 1) {
                 UIManager.setLookAndFeel(new FlatLightLaf());
             }
             if (combo.getSelectedIndex() == 2) {
                 UIManager.setLookAndFeel(new FlatDarkLaf());
-                System.out.println("vista.FrameLogin.jComboBox1ActionPerformed()");
             }
-            if (combo.getSelectedIndex() == 2) {
+            if (combo.getSelectedIndex() == 3) {
                 UIManager.setLookAndFeel(new FlatDarculaLaf());
-                System.out.println("vista.FrameLogin.jComboBox1ActionPerformed()");
             }
             this.dispose();
             new FrameLogin().setVisible(true);
