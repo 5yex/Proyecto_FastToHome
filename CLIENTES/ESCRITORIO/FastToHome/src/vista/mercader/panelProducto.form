@@ -41,7 +41,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="botonEditarProducto" min="-2" pref="45" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="botonEliminarProducto" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="botonEliminarProducto" min="-2" pref="121" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
