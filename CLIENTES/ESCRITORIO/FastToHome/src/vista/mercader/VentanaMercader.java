@@ -369,7 +369,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_botonModificarDatosMercaderActionPerformed
 
     private void checkBusquedaProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaProductosActionPerformed
-
+        
     }//GEN-LAST:event_checkBusquedaProductosActionPerformed
 
     private void panelTableadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMousePressed
