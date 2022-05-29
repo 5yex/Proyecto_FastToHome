@@ -243,9 +243,15 @@ public class editarProducto extends javax.swing.JFrame {
                 throw new IOException("Rellena todos los campos");
             }
 
+            if(producto.getId_img() == 0){
+            
+            
+            }
             if (imagen.getB64_imagen() != null && !imagen.getB64_imagen().isBlank()) {
                 imagen.setId(producto.getId_img());
                 ImagenDao.editarImagenPorId(imagen);
+                
+                
             }
 
             producto.setDescripcion(descripcion);
