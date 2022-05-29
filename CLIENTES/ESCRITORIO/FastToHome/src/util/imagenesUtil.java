@@ -45,6 +45,7 @@ public class imagenesUtil {
         try {
             ImageIcon image = imagenesUtil.base64AImagen(imgBase64);
             label.setIcon(new ImageIcon(image.getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_SMOOTH)));
+            label.setBackground(Color(image.getRGB(0, 0)));
         } catch (Exception e) {
             label.setText("NO IMAGE");
             System.out.println("no tienes icono");
