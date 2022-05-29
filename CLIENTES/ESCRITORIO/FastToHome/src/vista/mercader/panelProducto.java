@@ -56,8 +56,7 @@ public class panelProducto extends javax.swing.JPanel {
         botonInfoProducto = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(javax.swing.UIManager.getDefaults().getColor("MenuItem.selectionBackground"));
-        setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+        setBorder(new FlatButtonBorder());
 
         nombreProducto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         nombreProducto.setText("TITULO PRODUCTO");
