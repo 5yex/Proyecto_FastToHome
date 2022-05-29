@@ -35,4 +35,9 @@ public class ImagenDao {
        return gestion.consultaSeleccionImagen(new Peticion("obtener_imagen_id", imagen.getJSON()));
             //File imgTmp = File.createTempFile("img"+new Date().getTime(), ".png");
     }
+    public static boolean editarImagenPorId(Imagen imagen) {
+        return gestion.hacerConsulta(new Peticion("nueva_imagen", imagen.getJSON()));
+    }
+    
+    
 }
