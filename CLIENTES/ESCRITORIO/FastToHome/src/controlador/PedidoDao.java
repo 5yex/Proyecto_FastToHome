@@ -34,14 +34,14 @@ public class PedidoDao {
 
             pedido.setId_pedido(pedidoJson.get("id").getAsInt());
             pedido.setId_usuario(pedidoJson.get("id_usuario").getAsInt());
-            
+
             String fechaActual = pedidoJson.get("fecha_hora").getAsString();
             try {
-                    pedido.setFecha_hora(dateParser.parse(fechaActual));
-                } catch (ParseException ex) {
-                    Logger.getLogger(PedidoDao.class.getName()).log(Level.SEVERE, null, ex);
+                pedido.setFecha_hora(dateParser.parse(fechaActual));
+            } catch (ParseException ex) {
+                Logger.getLogger(PedidoDao.class.getName()).log(Level.SEVERE, null, ex);
             }
-            
+
             pedido.setEstado(pedidoJson.get("estado").getAsString());
             pedido.setTotal(pedidoJson.get("total").getAsDouble());
             pedido.setTransporte(pedidoJson.get("transporte").getAsString());
@@ -57,27 +57,30 @@ public class PedidoDao {
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_pedidos_en_preparacion", negocio.getJSON()));
 
         ArrayList<Pedido> listaPedidosEnPreparacion = new ArrayList<Pedido>();
+        if (jsonArray != null) {
+            for (int i = 0; i < jsonArray.size(); i++) {
+                Pedido pedido = new Pedido();
 
-        for (int i = 0; i < jsonArray.size(); i++) {
-            Pedido pedido = new Pedido();
+                JsonObject pedidoJson = jsonArray.get(i).getAsJsonObject();
 
-            JsonObject pedidoJson = jsonArray.get(i).getAsJsonObject();
-
-            pedido.setId_pedido(pedidoJson.get("id").getAsInt());
-            pedido.setId_usuario(pedidoJson.get("id_usuario").getAsInt());
-            String fechaActual = pedidoJson.get("fecha_hora").getAsString();
-            try {
+                pedido.setId_pedido(pedidoJson.get("id").getAsInt());
+                pedido.setId_usuario(pedidoJson.get("id_usuario").getAsInt());
+                String fechaActual = pedidoJson.get("fecha_hora").getAsString();
+                try {
                     pedido.setFecha_hora(dateParser.parse(fechaActual));
                 } catch (ParseException ex) {
                     Logger.getLogger(PedidoDao.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            
-            pedido.setEstado(pedidoJson.get("estado").getAsString());
-            pedido.setTotal(pedidoJson.get("total").getAsDouble());
-            pedido.setTransporte(pedidoJson.get("transporte").getAsString());
 
-            listaPedidosEnPreparacion.add(pedido);
+                pedido.setEstado(pedidoJson.get("estado").getAsString());
+                pedido.setTotal(pedidoJson.get("total").getAsDouble());
+                pedido.setTransporte(pedidoJson.get("transporte").getAsString());
 
+                listaPedidosEnPreparacion.add(pedido);
+
+            }
+        } else {
+            System.out.println("no hay ningun pedido");
         }
         return listaPedidosEnPreparacion;
     }
