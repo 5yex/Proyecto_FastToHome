@@ -12,6 +12,7 @@ import controlador.UsuarioDao;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Negocio;
@@ -79,6 +80,11 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         jLabel1.setPreferredSize(new java.awt.Dimension(289, 289));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tema Claro", "Tema Oscuro" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
         panelPrincipal.setLayout(panelPrincipalLayout);
@@ -143,6 +149,10 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     private void buttonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogin1ActionPerformed
         comprobarLogin();
     }//GEN-LAST:event_buttonLogin1ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+       JComboBox combo = new JComboBox();
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void comprobarLogin() {
 
