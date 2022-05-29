@@ -362,8 +362,8 @@ function actualizarNegocio($datos){
         $negocio = new Negocio();
         $negocio->setId_categoria($datos->id_categoria);
         $negocio->setNombre($datos->nombre);
-        $negocio->setId_categoria($datos->id_categoria);
-        $respuesta = $negocio->obtenerNegocioDeMercader();
+        $negocio->setDescripcion($datos->descripcion);
+        $respuesta = $negocio->modificarNegocio();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
