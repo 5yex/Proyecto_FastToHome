@@ -136,7 +136,7 @@ class Negocio extends Conexion {
     }
 
     public function modificarNegocio() {
-        $sql = "UPDATE negocio set imagenes_id = :img, Nombre = :nom, Descripcion = :des, id_categoria = :cat  where id = 25";
+        $sql = "UPDATE negocio set imagenes_id = :img, Nombre = :nom, Descripcion = :des, id_categoria = :cat  where id = :id ";
 
         $sentencia = $this->dblink->prepare($sql);
         
@@ -150,7 +150,7 @@ class Negocio extends Conexion {
         $sentencia->bindParam(":nom", $nombre);
         $sentencia->bindParam(":des", $descripcion);
         $sentencia->bindParam(":img", $id_imagen);
-       // $sentencia->bindParam(":id_neg", $id_negocio);
+        $sentencia->bindParam(":id", $id_negocio);
        
         
         $resultado = $sentencia->execute();
