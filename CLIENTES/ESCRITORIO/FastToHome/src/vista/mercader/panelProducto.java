@@ -55,7 +55,7 @@ public class panelProducto extends javax.swing.JPanel {
         botonInfoProducto = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(javax.swing.UIManager.getDefaults().getColor("Button.default.background"));
+        setBorder(new FlatButtonBorder());
 
         nombreProducto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         nombreProducto.setText("TITULO PRODUCTO");
@@ -63,7 +63,6 @@ public class panelProducto extends javax.swing.JPanel {
         imgProducto.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         imgProducto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         imgProducto.setText("NO MAGE");
-        imgProducto.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 51), 1, true));
         imgProducto.setMinimumSize(new java.awt.Dimension(155, 155));
         imgProducto.setOpaque(true);
         imgProducto.setPreferredSize(new java.awt.Dimension(155, 155));
