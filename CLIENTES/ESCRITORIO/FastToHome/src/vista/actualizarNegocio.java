@@ -246,7 +246,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
             error.setText(ex.getMessage());
             return false;
         }
-
+        
     }
 
 
