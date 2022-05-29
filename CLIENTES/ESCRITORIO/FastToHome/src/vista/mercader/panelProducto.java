@@ -8,6 +8,7 @@ import com.formdev.flatlaf.ui.FlatButtonBorder;
 import controlador.ImagenDao;
 import controlador.ProductoDao;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -146,7 +147,7 @@ public class panelProducto extends javax.swing.JPanel {
         }).start();
         
         
-        imagenesUtil.imagenProyectoABttton(getClass().getResource("/recursos/editar"), btUpdate);
+        imagenesUtil.imagenProyectoABttton(new ImageIcon(getClass().getResource("/recursos/editar")), btUpdate);
         imagenesUtil.imagenProyectoABttton(getClass().getResource("/recursos/editar"), btUpdate);
 
         this.setBorder(new FlatButtonBorder());
