@@ -196,6 +196,11 @@ public class actualizarNegocio extends javax.swing.JFrame {
     }
 
     private boolean actualizarNegocio(Negocio negocio) {
+        
+        boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionNegocio);
+        
+        
+        
         return false;
     }
 
