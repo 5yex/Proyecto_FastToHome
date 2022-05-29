@@ -36,7 +36,7 @@ public class editarProducto extends javax.swing.JFrame {
     private Negocio neg;
     private Producto producto;
     private JButton btActupaizar;
-    
+
     /**
      * Creates new form VentanaRegistroNegocio
      *
@@ -44,7 +44,7 @@ public class editarProducto extends javax.swing.JFrame {
      */
     public editarProducto(JButton btActupaizar, Negocio neg, Producto producto) {
         initComponents();
-        this.btActupaizar=btActupaizar;
+        this.btActupaizar = btActupaizar;
         this.neg = neg;
         this.producto = producto;
         cargaInicial();
@@ -211,13 +211,13 @@ public class editarProducto extends javax.swing.JFrame {
 
     private void botonPedirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirImagenActionPerformed
         new DialogoImagen(this, rootPaneCheckingEnabled, nImg).setVisible(true);
-        if(nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()){
-            imagenAjlabel(nImg.getB64_imagen(),imgProducto);
+        if (nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()) {
+            imagenAjlabel(nImg.getB64_imagen(), imgProducto);
         }
     }//GEN-LAST:event_botonPedirImagenActionPerformed
 
     private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
-        if(editarProducto()){
+        if (editarProducto()) {
             btActupaizar.doClick();
             this.dispose();
         }
@@ -250,27 +250,14 @@ public class editarProducto extends javax.swing.JFrame {
             if (descripcion.length() == 0 | nombre.length() == 0) {
                 throw new IOException("Rellena todos los campos");
             }
-            
-                if (nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()) {
-                   
+            if (nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()) {
+                
+            }
+            producto.setDescripcion(descripcion);
+            producto.setPrecio(precio);
+            producto.setNombre(nombre);
+            return ProductoDao.actualizarProducto(producto);
 
-                    int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
-
-                    if (id_imagen != -1) {
-                        Producto produc = new Producto();
-                        produc.setDescripcion(descripcion);
-                        produc.setPrecio(precio);
-                        produc.setId_img(id_imagen);
-                        produc.setNombre(nombre);
-                        produc.setId_negocio(neg.getId_negocio());
-                        return ProductoDao.nuevoProducto(produc);
-                    }
-                } else {
-                    errorTexto.setText("Tienes que subir una imagen");
-                    return false;
-
-                }
-           
         } catch (NumberFormatException ex) {
             errorTexto.setText("Rellena correctamente los campos numéricos");
             return false;
@@ -278,7 +265,6 @@ public class editarProducto extends javax.swing.JFrame {
             errorTexto.setText(ex.getMessage());
             return false;
         }
-        return true;
     }
 
 
