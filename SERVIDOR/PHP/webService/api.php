@@ -356,6 +356,24 @@ function obtenerNegocioDeMercader($datos) {
     }
 }
 
+function actualizarNegocio($datos){
+    require_once '../modelo/Negocio.php';
+    try {
+        $negocio = new Negocio();
+        $negocio->setId_categoria($datos->id_categoria);
+        $negocio->setNombre($datos->nombre);
+        $negocio->setId_categoria($datos->id_categoria);
+        $respuesta = $negocio->obtenerNegocioDeMercader();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'El mercader no tiene negocio');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
 function obtenerProductosNegocio($datos){
     require_once '../modelo/Producto.php';
     require_once '../modelo/Negocio.php';
