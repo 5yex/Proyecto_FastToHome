@@ -68,7 +68,7 @@ public class panelProducto extends javax.swing.JPanel {
         );
         imgProducto.setMinimumSize(new java.awt.Dimension(155, 155));
         imgProducto.setOpaque(true);
-        imgProducto.setPreferredSize(new java.awt.Dimension(155, 155));
+        imgProducto.setPreferredSize(new java.awt.Dimension(155, 159));
 
         botonEliminarProducto.setPreferredSize(new java.awt.Dimension(45, 45));
         botonEliminarProducto.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +101,6 @@ public class panelProducto extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(imgProducto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,6 +120,7 @@ public class panelProducto extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(botonEliminarProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addComponent(imgProducto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
