@@ -45,9 +45,9 @@ public class PedidoDao {
         return listaPedidosPagados;
     }
 
-    public static ArrayList<Pedido> seleccionPedidosEnPreparacion() {
+    public static ArrayList<Pedido> seleccionPedidosEnPreparacion(Negocio negocio) {
 
-        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_pedidos_en_preparacion", null));
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_pedidos_en_preparacion", negocio));
 
         ArrayList<Pedido> listaPedidosEnPreparacion = new ArrayList<Pedido>();
 
