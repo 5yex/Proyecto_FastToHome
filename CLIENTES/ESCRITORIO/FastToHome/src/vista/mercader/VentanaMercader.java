@@ -73,8 +73,6 @@ public class VentanaMercader extends javax.swing.JFrame {
         inicilizacion();
     }
 
-   
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -362,7 +360,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         dmod.setVisible(true);
         cargarInicio();
 
-        
+
     }//GEN-LAST:event_botonModificarDatosMercaderActionPerformed
 
     private void checkBusquedaProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaProductosActionPerformed
@@ -405,9 +403,12 @@ public class VentanaMercader extends javax.swing.JFrame {
     private void btnModificarNegocioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarNegocioActionPerformed
         actualizarNegocio dialogoEditarNegocio = new actualizarNegocio(negocio);
         dialogoEditarNegocio.setVisible(true);
+        negocio = NegocioDao.negocioDeMercader(mercader);
+        cargarInicio();
+
     }//GEN-LAST:event_btnModificarNegocioActionPerformed
-    
-     private void inicilizacion() {
+
+    private void inicilizacion() {
         confirmarCierre();
         cargarInicio();
         mostrarProductos();
@@ -420,12 +421,12 @@ public class VentanaMercader extends javax.swing.JFrame {
         nombreNegocio.setText(negocio.getNombre());
         imagenesUtil.imagenB64Ajlabel(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())), imgNegocio);
     }
-  
+
     public void mostrarProductos() {
         //interrumpirHilo();
         panelProductos.removeAll();
         panelProductos.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
-        panelProductos.add(new panelProductoNuevo(recargarProductos,negocio));
+        panelProductos.add(new panelProductoNuevo(recargarProductos, negocio));
 
         ArrayList<Producto> productos = ProductoDao.selecciónProductosNegocio(negocio);
         if (productos != null) {
@@ -449,24 +450,25 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
 
     private void crearHiloActualizacionDeProductos() {
-            if (hiloUpdate == null) {
-                hiloUpdate = new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            while (true) {
-                                mostrarPedidos();
-                                Thread.sleep(2000);
-                                System.out.println(".run() PEDIDOS ACTUALIZADOS");
-                            }
-                        } catch (InterruptedException ex) {
-                            System.out.println(".run() HILO ABORTADO");
+        if (hiloUpdate == null) {
+            hiloUpdate = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        while (true) {
+                            mostrarPedidos();
+                            Thread.sleep(2000);
+                            System.out.println(".run() PEDIDOS ACTUALIZADOS");
                         }
+                    } catch (InterruptedException ex) {
+                        System.out.println(".run() HILO ABORTADO");
                     }
-                });
-                hiloUpdate.start();
-            }
+                }
+            });
+            hiloUpdate.start();
+        }
     }
+
     private void mostrarPedidos() {
         //crearHiloActualizacionDeProductos();
         ActionListener actualizarPedidos = new ActionListener() {
