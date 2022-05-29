@@ -399,6 +399,7 @@ public class VentanaMercader extends javax.swing.JFrame {
 
     private void checkParaPrepararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkParaPrepararActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_checkParaPrepararActionPerformed
 
     private void panelTableadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMouseClicked
@@ -479,6 +480,58 @@ public class VentanaMercader extends javax.swing.JFrame {
             });
             hiloUpdate.start();
         }
+    }
+    
+    private void mostrarPedidosPagados() {
+        //crearHiloActualizacionDeProductos();
+        ActionListener actualizarPedidos = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.err.println("MOSTRANDO LOS PEDIDOS");
+                mostrarPedidos();
+            }
+        };
+        jScrollPane1.setIgnoreRepaint(true);
+        panelPedidos.removeAll();
+        panelPedidos.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
+        ArrayList<Pedido> pedidos = PedidoDao.seleccionPedidosPagados(negocio);
+        if (pedidos != null) {
+            for (Pedido pedido : pedidos) {
+                panelPedidos.add(new panelPedido(pedido, recargarPedidos));
+            }
+        } else {
+            panelPedidos.add(new JLabel("NO HAY PEDIDOS"));
+        }
+
+        panelPedidos.revalidate();
+        panelPedidos.repaint();
+
+    }
+    
+    private void mostrarPedidosEnPreparacion() {
+        //crearHiloActualizacionDeProductos();
+        ActionListener actualizarPedidos = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.err.println("MOSTRANDO LOS PEDIDOS");
+                mostrarPedidos();
+            }
+        };
+        jScrollPane1.setIgnoreRepaint(true);
+        panelPedidos.removeAll();
+        panelPedidos.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
+        ArrayList<Pedido> pedidos = PedidoDao.seleccionPedidosPagados(negocio);
+        if (pedidos != null) {
+            for (Pedido pedido : pedidos) {
+                panelPedidos.add(new panelPedido(pedido, recargarPedidos));
+            }
+        } else {
+            panelPedidos.add(new JLabel("NO HAY PEDIDOS"));
+        }
+
+        panelPedidos.revalidate();
+        panelPedidos.repaint();
+
     }
 
     private void mostrarPedidos() {
