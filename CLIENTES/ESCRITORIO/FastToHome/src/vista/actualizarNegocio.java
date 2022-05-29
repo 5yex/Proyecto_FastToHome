@@ -26,7 +26,7 @@ import vista.mercader.VentanaMercader;
 public class actualizarNegocio extends javax.swing.JFrame {
 
     private Negocio negocio;
-    
+    private Direccion direccionNegocio;
     private ArrayList<Categoria> listaCategorias;
 
     public actualizarNegocio(Negocio negocio) {
@@ -169,6 +169,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonPedirDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirDireccionActionPerformed
+        Direccion nDireccion = 
         new DialogoDireccion(this, rootPaneCheckingEnabled, nDireccion).setVisible(true);
     }//GEN-LAST:event_botonPedirDireccionActionPerformed
 
@@ -184,6 +185,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
     }//GEN-LAST:event_botonPedirImagenActionPerformed
 
     private void cargaInicial() {
+        dire
         listaCategorias = controlador.CategoriaDao.obtenerCategorias();
         for (Categoria listaCategoria : listaCategorias) {
             comboCategoria.addItem(listaCategoria.getNombre());
