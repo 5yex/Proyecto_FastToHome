@@ -208,18 +208,22 @@ public class actualizarNegocio extends javax.swing.JFrame {
                     throw new IOException("Rellena todos los campos");
                 }
                 if (negocio.getId_img() == 0) {
-                //System.out.println("NO TIENE IMAGEN SE LE AÑADIRÁ UNA NUEVA");
-                int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
-                if (id_imagen != 0) {
-                    negocio.setId_img(id_imagen);
-                }
-            } else {
-                if (nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()) {
-                    nImg.setId(negocio.getId_img());
-                    ImagenDao.editarImagenPorId(nImg);
-                }
+                    //System.out.println("NO TIENE IMAGEN SE LE AÑADIRÁ UNA NUEVA");
+                    int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
+                    if (id_imagen != 0) {
+                        negocio.setId_img(id_imagen);
+                    }
+                } else {
+                    if (nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()) {
+                        nImg.setId(negocio.getId_img());
+                        ImagenDao.editarImagenPorId(nImg);
+                    }
 
-            }
+                }
+                
+                 negocio.setDescripcion(descripcion);
+                 negocio.setNombre(nombre);
+                 return NegocioDao.actualizarNegocio(negocio);
             } else {
                 JOptionPane.showMessageDialog(this, "Error, no se actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
             }
