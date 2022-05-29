@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.Base64;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -67,7 +68,7 @@ public class imagenesUtil {
         boton.setText("");
         try {
             boton.setIcon(new ImageIcon(image.getImage().getScaledInstance(boton.getPreferredSize().width-2, boton.getPreferredSize().width-2, Image.SCALE_SMOOTH)));
-            boton.setBackground(Color(image.getRGB(0, 0));
+            
         } catch (Exception e) {
             System.out.println("no tienes icono");
         }
