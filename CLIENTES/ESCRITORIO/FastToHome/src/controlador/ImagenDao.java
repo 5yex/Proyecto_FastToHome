@@ -36,7 +36,7 @@ public class ImagenDao {
             //File imgTmp = File.createTempFile("img"+new Date().getTime(), ".png");
     }
     public static boolean editarImagenPorId(Imagen imagen) {
-        return gestion.hacerConsulta(new Peticion("nueva_imagen", imagen.getJSON()));
+        return gestion.hacerConsulta(new Peticion("editar_imagen_id", imagen.getJSON()));
     }
     
     
