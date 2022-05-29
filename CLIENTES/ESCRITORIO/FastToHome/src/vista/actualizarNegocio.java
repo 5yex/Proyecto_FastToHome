@@ -199,9 +199,25 @@ public class actualizarNegocio extends javax.swing.JFrame {
         
         boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionNegocio);
         
+        try{
+        if (direccionActualizada) {
+            String nombre = varNombre.getText();
+            String descripcion = textAreaDescripcion.getText();
+            
+            if (descripcion.length() == 0 | nombre.length() == 0) {
+                throw new IOException("Rellena todos los campos");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Error, no se actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);          
+        }
         
-        
-        return false;
+        } catch (NumberFormatException ex) {
+            error.setText("Rellena correctamente los campos numéricos");
+            return false;
+        } catch (IOException ex) {
+            error.setText(ex.getMessage());
+            return false;
+        }
     }
 
 
