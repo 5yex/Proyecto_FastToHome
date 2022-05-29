@@ -231,7 +231,12 @@ public class editarProducto extends javax.swing.JFrame {
         varNombre.setText(producto.getNombre());
         precioProducto.setText(String.valueOf(producto.getPrecio()));
         textAreaDescripcion.setText(producto.getDescripcion());
-        
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                imagenesUtil.imagenAjlabel(ImagenDao.obtenerImagenPorId(new Imagen(producto.getId_img())), imgProducto);
+            }
+        }).start();
     }
 
     private boolean editarProducto() {
