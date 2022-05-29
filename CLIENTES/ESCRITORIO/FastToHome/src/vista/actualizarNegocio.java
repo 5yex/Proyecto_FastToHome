@@ -26,6 +26,7 @@ import vista.mercader.VentanaMercader;
 public class actualizarNegocio extends javax.swing.JFrame {
 
     private Negocio negocio;
+    private Imagen nImg = new Imagen();
     private Direccion direccionNegocio = new Direccion();
     private ArrayList<Categoria> listaCategorias;
 
@@ -51,18 +52,18 @@ public class actualizarNegocio extends javax.swing.JFrame {
         varNombre = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         textAreaDescripcion = new javax.swing.JTextArea();
-        botonPedirImagen = new javax.swing.JButton();
+        botonActualizarImagen = new javax.swing.JButton();
         comboCategoria = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
-        botonCompletarRegistro = new javax.swing.JButton();
-        botonPedirDireccion = new javax.swing.JButton();
+        botonConfirmarCambios = new javax.swing.JButton();
+        botonActualizarDireccion = new javax.swing.JButton();
         error = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         titleText.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        titleText.setText("REGISTRAR NEGOCIO:");
+        titleText.setText("ACTUALIZAR NEGOCIO:");
 
         jLabel1.setText("NOMBRE");
 
@@ -72,26 +73,26 @@ public class actualizarNegocio extends javax.swing.JFrame {
         textAreaDescripcion.setRows(5);
         jScrollPane1.setViewportView(textAreaDescripcion);
 
-        botonPedirImagen.setText("Subir logo del negocio");
-        botonPedirImagen.addActionListener(new java.awt.event.ActionListener() {
+        botonActualizarImagen.setText("Cambiar imagen del negocio");
+        botonActualizarImagen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonPedirImagenActionPerformed(evt);
+                botonActualizarImagenActionPerformed(evt);
             }
         });
 
         jLabel3.setText("CATEGORÍA");
 
-        botonCompletarRegistro.setText("COMPLETAR REGISTRO");
-        botonCompletarRegistro.addActionListener(new java.awt.event.ActionListener() {
+        botonConfirmarCambios.setText("CONFIRMAR CAMBIOS");
+        botonConfirmarCambios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCompletarRegistroActionPerformed(evt);
+                botonConfirmarCambiosActionPerformed(evt);
             }
         });
 
-        botonPedirDireccion.setText("Añadir dirección del negocio");
-        botonPedirDireccion.addActionListener(new java.awt.event.ActionListener() {
+        botonActualizarDireccion.setText("Cambiar imagen del negocio");
+        botonActualizarDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonPedirDireccionActionPerformed(evt);
+                botonActualizarDireccionActionPerformed(evt);
             }
         });
 
@@ -118,11 +119,11 @@ public class actualizarNegocio extends javax.swing.JFrame {
                     .addComponent(titleText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel2)
                     .addComponent(jScrollPane1)
-                    .addComponent(botonCompletarRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonConfirmarCambios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(botonPedirImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonActualizarImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(botonPedirDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(botonActualizarDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -144,12 +145,12 @@ public class actualizarNegocio extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonPedirImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonPedirDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonActualizarImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonActualizarDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(error, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(botonCompletarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonConfirmarCambios, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
@@ -168,23 +169,24 @@ public class actualizarNegocio extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonPedirDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirDireccionActionPerformed
+    private void botonActualizarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarDireccionActionPerformed
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionNegocio);
         dialogoDireccion.setVisible(true);
-    }//GEN-LAST:event_botonPedirDireccionActionPerformed
+    }//GEN-LAST:event_botonActualizarDireccionActionPerformed
 
-    private void botonCompletarRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCompletarRegistroActionPerformed
+    private void botonConfirmarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConfirmarCambiosActionPerformed
         if (nuevoNegocio(User)) {
             new VentanaMercader(User).setVisible(true);
             this.dispose();
         }
-    }//GEN-LAST:event_botonCompletarRegistroActionPerformed
+    }//GEN-LAST:event_botonConfirmarCambiosActionPerformed
 
-    private void botonPedirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirImagenActionPerformed
+    private void botonActualizarImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarImagenActionPerformed
         new DialogoImagen(this, rootPaneCheckingEnabled, nImg).setVisible(true);
-    }//GEN-LAST:event_botonPedirImagenActionPerformed
+    }//GEN-LAST:event_botonActualizarImagenActionPerformed
 
     private void cargaInicial() {
+        
         varNombre.setText(negocio.getNombre());
         textAreaDescripcion.setText(negocio.getDescripcion());
         direccionNegocio = DireccionDao.obtenerDireccionNegocio(negocio);
@@ -245,9 +247,9 @@ public class actualizarNegocio extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonCompletarRegistro;
-    private javax.swing.JButton botonPedirDireccion;
-    private javax.swing.JButton botonPedirImagen;
+    private javax.swing.JButton botonActualizarDireccion;
+    private javax.swing.JButton botonActualizarImagen;
+    private javax.swing.JButton botonConfirmarCambios;
     private javax.swing.JComboBox<String> comboCategoria;
     private javax.swing.JLabel error;
     private javax.swing.JLabel jLabel1;

@@ -57,11 +57,11 @@
                       <Component id="titleText" max="32767" attributes="0"/>
                       <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
-                      <Component id="botonCompletarRegistro" max="32767" attributes="0"/>
+                      <Component id="botonConfirmarCambios" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="botonPedirImagen" min="-2" pref="188" max="-2" attributes="0"/>
+                          <Component id="botonActualizarImagen" min="-2" pref="188" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="botonPedirDireccion" min="-2" pref="194" max="-2" attributes="0"/>
+                          <Component id="botonActualizarDireccion" min="-2" pref="194" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="32" max="32767" attributes="0"/>
@@ -89,13 +89,13 @@
                   <Component id="jScrollPane1" min="-2" pref="138" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="botonPedirImagen" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="botonPedirDireccion" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="botonActualizarImagen" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="botonActualizarDireccion" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="error" min="-2" pref="22" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="botonCompletarRegistro" min="-2" pref="31" max="-2" attributes="0"/>
+                  <Component id="botonConfirmarCambios" min="-2" pref="31" max="-2" attributes="0"/>
                   <EmptySpace pref="29" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -107,7 +107,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="REGISTRAR NEGOCIO:"/>
+            <Property name="text" type="java.lang.String" value="ACTUALIZAR NEGOCIO:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
@@ -137,12 +137,12 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="botonPedirImagen">
+        <Component class="javax.swing.JButton" name="botonActualizarImagen">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Subir logo del negocio"/>
+            <Property name="text" type="java.lang.String" value="Cambiar imagen del negocio"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonPedirImagenActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonActualizarImagenActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="comboCategoria">
@@ -155,20 +155,20 @@
             <Property name="text" type="java.lang.String" value="CATEGOR&#xcd;A"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="botonCompletarRegistro">
+        <Component class="javax.swing.JButton" name="botonConfirmarCambios">
           <Properties>
-            <Property name="text" type="java.lang.String" value="COMPLETAR REGISTRO"/>
+            <Property name="text" type="java.lang.String" value="CONFIRMAR CAMBIOS"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonCompletarRegistroActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonConfirmarCambiosActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="botonPedirDireccion">
+        <Component class="javax.swing.JButton" name="botonActualizarDireccion">
           <Properties>
-            <Property name="text" type="java.lang.String" value="A&#xf1;adir direcci&#xf3;n del negocio"/>
+            <Property name="text" type="java.lang.String" value="Cambiar imagen del negocio"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonPedirDireccionActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonActualizarDireccionActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="error">
