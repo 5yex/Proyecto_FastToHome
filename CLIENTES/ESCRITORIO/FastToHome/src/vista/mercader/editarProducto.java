@@ -243,21 +243,20 @@ public class editarProducto extends javax.swing.JFrame {
                 throw new IOException("Rellena todos los campos");
             }
 
-            if(producto.getId_img() == 0){
+            if (producto.getId_img() == 0) {
                 System.out.println("NO TIENE IMAGEN SE LE AÑADIRÁ UNA NUEVA");
                 int id_imagen = ImagenDao.nuevaImagenDevuelveId(imagen);
-                if(id_imagen != 0){
-                                    producto.setId_img(id_imagen);
-
+                if (id_imagen != 0) {
+                    producto.setId_img(id_imagen);
                 }
-            }else{
+            } else {
                 if (imagen.getB64_imagen() != null && !imagen.getB64_imagen().isBlank()) {
-                imagen.setId(producto.getId_img());
-                ImagenDao.editarImagenPorId(imagen);
-            }
+                    imagen.setId(producto.getId_img());
+                    ImagenDao.editarImagenPorId(imagen);
+                }
 
             }
-            
+
             producto.setDescripcion(descripcion);
             producto.setPrecio(precio);
             producto.setNombre(nombre);
