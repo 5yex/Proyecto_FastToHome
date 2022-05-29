@@ -125,7 +125,7 @@ if (empty($_POST["DATA"])) {
             obtenerImagenPorId(json_decode($peticion->datos));
             break;
         case 'editar_imagen_id';
-            obtenerImagenPorId(json_decode($peticion->datos));
+            editarImagenPorId(json_decode($peticion->datos));
             break;
         
         //Mandar Repuesta
@@ -752,6 +752,26 @@ function obtenerImagenPorId($datos){
         $imagen = new Imagen();
         $imagen->setId_imagen($datos->id);
         $respuesta = $imagen->obtenerImagenPorId();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error en obtener la Imagen');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+    
+    
+}
+
+
+function editarImagenPorId($datos){
+    require_once '../modelo/Imagen.php';
+    try {
+        $imagen = new Imagen();
+        $imagen->setId_imagen($datos->id);
+        $imagen->setB64_imagen($datos->b64_imagen);
+        $respuesta = $imagen->editarImagenPorId();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
