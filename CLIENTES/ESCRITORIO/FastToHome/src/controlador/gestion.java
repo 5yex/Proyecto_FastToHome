@@ -87,7 +87,7 @@ public class gestion {
 
             params.add(new BasicNameValuePair("DATA", peticion.getJSON()));
 
-            httpPost.setEntity(new UrlEncodedFormEntity(params,HTTP));
+            httpPost.setEntity(new UrlEncodedFormEntity(params));
 
             CloseableHttpResponse response = client.execute(httpPost);
 
