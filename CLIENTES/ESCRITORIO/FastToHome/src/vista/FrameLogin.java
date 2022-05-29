@@ -86,6 +86,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         jLabel1.setMinimumSize(new java.awt.Dimension(289, 289));
         jLabel1.setPreferredSize(new java.awt.Dimension(289, 289));
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tema Claro", "Tema Oscuro" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -159,7 +160,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         try {
             JComboBox combo = new JComboBox();
-            
+
             System.out.println("vista.FrameLogin.jComboBox1ActionPerformed()"+ combo.getSelectedIndex() );
             if (combo.getSelectedIndex() == 0) {
                 UIManager.setLookAndFeel(new FlatLightLaf());
@@ -170,7 +171,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
             }
             this.revalidate();
             this.repaint();
-            
+
         } catch (UnsupportedLookAndFeelException ex) {
             Logger.getLogger(FrameLogin.class.getName()).log(Level.SEVERE, null, ex);
         }
