@@ -148,7 +148,7 @@ public class panelProducto extends javax.swing.JPanel {
         
         
         imagenesUtil.imagenProyectoABttton(new ImageIcon(getClass().getResource("/recursos/editar")), btUpdate);
-        imagenesUtil.imagenProyectoABttton(getClass().getResource("/recursos/editar"), btUpdate);
+        imagenesUtil.imagenProyectoABttton(new ImageIcon(getClass().getResource("/recursos/editar")), btUpdate);
 
         this.setBorder(new FlatButtonBorder());
     }
