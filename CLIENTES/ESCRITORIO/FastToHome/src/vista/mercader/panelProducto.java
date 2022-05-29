@@ -136,7 +136,7 @@ public class panelProducto extends javax.swing.JPanel {
 
     private void mostrarDatos() {
         nombreProducto.setText(producto.getNombre());
-        precio.setText(String.valueOf(producto.getPrecio());
+        precio.setText(String.valueOf(producto.getPrecio()));
         new Thread(new Runnable() {
             @Override
             public void run() {
