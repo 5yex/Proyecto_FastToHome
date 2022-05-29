@@ -176,7 +176,6 @@ public class actualizarNegocio extends javax.swing.JFrame {
 
     private void botonConfirmarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConfirmarCambiosActionPerformed
         if (actualizarNegocio(negocio)) {
-            new VentanaMercader(User).setVisible(true);
             this.dispose();
         }
     }//GEN-LAST:event_botonConfirmarCambiosActionPerformed
@@ -196,8 +195,8 @@ public class actualizarNegocio extends javax.swing.JFrame {
         }
     }
 
-    private boolean actulizarNegocio(Negocio negocio) {
-        
+    private boolean actualizarNegocio(Negocio negocio) {
+        return false;
     }
 
 
