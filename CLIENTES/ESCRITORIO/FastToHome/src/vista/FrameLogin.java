@@ -158,7 +158,8 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         try {
-            JComboBox combo = (JComboBox) evt.getSource();
+            int index = ((JComboBox) evt.getSource()).getSelectedIndex();
+            
             if (combo.getSelectedIndex() == 1) {
                 UIManager.setLookAndFeel(new FlatLightLaf());
             }
