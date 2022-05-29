@@ -32,8 +32,9 @@ public class actualizarNegocio extends javax.swing.JFrame {
     private ArrayList<Categoria> listaCategorias;
     private JButton updateInicio;
 
-    public actualizarNegocio(Negocio negocio) {
+    public actualizarNegocio(Negocio negocio,JButton updateInicio) {
         this.negocio = negocio;
+        this.updateInicio = JButton updateInicio;
         initComponents();
         cargaInicial();
     }
