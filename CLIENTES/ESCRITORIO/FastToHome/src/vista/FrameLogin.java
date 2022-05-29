@@ -163,7 +163,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                 UIManager.setLookAndFeel(new FlatLightLaf());
             }
             if (combo.getSelectedIndex() == 2) {
-                UIManager.setLookAndFeel(new FlatDarkLaf());
+                UIManager.setLookAndFeel(new FlatIntelliJLaf());
                 System.out.println("vista.FrameLogin.jComboBox1ActionPerformed()");
             }
             this.dispose();
