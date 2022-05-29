@@ -17,7 +17,6 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JOptionPane;
 import modelo.Peticion;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -62,7 +61,6 @@ public class gestion {
                 return false;
             }
         } catch (Exception ex) {
-            ex.printStackTrace();
             return false;
         }
     }
@@ -83,7 +81,7 @@ public class gestion {
             List<NameValuePair> params = new ArrayList<>();
 
             //prueba
-            System.err.println("controlador.gestion.hacerConsulta() ---- PETICION ENVIADO: " + peticion.getJSON());
+            System.out.println("controlador.gestion.hacerConsulta() ---- PETICION ENVIADO: " + peticion.getJSON());
 
             params.add(new BasicNameValuePair("DATA", peticion.getJSON()));
 
@@ -98,7 +96,7 @@ public class gestion {
 
                 String htmlTxt = EntityUtils.toString(entity);
 
-                System.err.println("controlador.gestion.hacerConsulta() ---- RECEPCIÓN: " + htmlTxt);
+                System.out.println("controlador.gestion.hacerConsulta() ---- RECEPCIÓN: " + htmlTxt);
 
                 JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
 
@@ -114,7 +112,7 @@ public class gestion {
             return null;
 
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex.getMessage());
+            //JOptionPane.showMessageDialog(null, ex.getMessage());
             return null;
         }
     }
