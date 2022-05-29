@@ -46,6 +46,7 @@ public class editarProducto extends javax.swing.JFrame {
         initComponents();
         this.btActupaizar=btActupaizar;
         this.neg = neg;
+        this.producto = producto;
         cargaInicial();
     }
 
