@@ -169,8 +169,8 @@ public class actualizarNegocio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonPedirDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirDireccionActionPerformed
-        Direccion nDireccion = 
-        new DialogoDireccion(this, rootPaneCheckingEnabled, nDireccion).setVisible(true);
+        DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionNegocio);
+        dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonPedirDireccionActionPerformed
 
     private void botonCompletarRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCompletarRegistroActionPerformed
@@ -185,12 +185,11 @@ public class actualizarNegocio extends javax.swing.JFrame {
     }//GEN-LAST:event_botonPedirImagenActionPerformed
 
     private void cargaInicial() {
-        dire
+        direccionNegocio = DireccionDao.obtenerDireccionNegocio(negocio);
         listaCategorias = controlador.CategoriaDao.obtenerCategorias();
         for (Categoria listaCategoria : listaCategorias) {
             comboCategoria.addItem(listaCategoria.getNombre());
         }
-        JOptionPane.showMessageDialog(null, User.getNombre() + " Bienvenido al equipo de mercaderes! \n A continuación podrás configurar tu negocio");
     }
 
     private boolean nuevoNegocio(Usuario user) {
