@@ -119,6 +119,8 @@ public class registrarProducto extends javax.swing.JFrame {
             }
         });
 
+        imgProducto.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        imgProducto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         imgProducto.setText("IMAGEN PRODUCTO");
         imgProducto.setBorder(new FlatButtonBorder()
         );
@@ -187,6 +189,8 @@ public class registrarProducto extends javax.swing.JFrame {
                     .addComponent(errorTexto))
                 .addContainerGap(9, Short.MAX_VALUE))
         );
+
+        imgProducto.getAccessibleContext().setAccessibleName("IMAGEN OBLIGATORIA");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

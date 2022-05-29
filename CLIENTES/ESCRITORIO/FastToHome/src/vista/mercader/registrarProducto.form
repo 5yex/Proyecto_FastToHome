@@ -208,6 +208,10 @@
         </Component>
         <Component class="javax.swing.JLabel" name="imgProducto">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="12" style="3"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="IMAGEN PRODUCTO"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="new FlatButtonBorder()&#xd;&#xa;" type="code"/>
@@ -223,6 +227,9 @@
               <Dimension value="[190, 190]"/>
             </Property>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="IMAGEN OBLIGATORIA"/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="errorTexto">
           <Properties>
