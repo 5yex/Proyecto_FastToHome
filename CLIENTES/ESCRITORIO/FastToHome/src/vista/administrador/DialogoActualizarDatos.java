@@ -38,15 +38,9 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         this.usuario = admin;
     }
 
-    /**
-     * Creates new form DialogoRegistro
-     */
-    public DialogoActualizarDatos(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
-        initComponents();
-    }
+  
     
-    public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, Usuario administrador) {
+    public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, Usuario administrador,  JButton updateInicio) {
         super(parent, modal);
         this.updateInicio = updateInicio;
         usuario = administrador;
