@@ -136,7 +136,7 @@ class Negocio extends Conexion {
     }
 
     public function modificarNegocio() {
-        $sql = "UPDATE ignore negocio set imagenes_id = :img, Nombre = :nom, Descripcion = :des, id_categoria = :cat  where id = :id ";
+        $sql = "UPDATE negocio set imagenes_id = :img, Nombre = :nom, Descripcion = :des, id_categoria = :cat  where id = :id ";
 
         $sentencia = $this->dblink->prepare($sql);
         
