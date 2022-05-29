@@ -13,6 +13,7 @@ import java.util.Base64;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import org.apache.commons.io.IOUtils;
 
@@ -56,6 +57,16 @@ public class imagenesUtil {
             label.setIcon(new ImageIcon(image.getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_SMOOTH)));
         } catch (Exception e) {
             label.setText("NO IMAGE");
+            System.out.println("no tienes icono");
+        }
+    }
+    
+    public static void imagenProyectoABttton(ImageIcon image, JButton boton){
+        boton.setText("");
+        try {
+            boton.setIcon(new ImageIcon(image.getImage().getScaledInstance(boton.getPreferredSize().width, boton.getPreferredSize().height, Image.SCALE_SMOOTH)));
+        } catch (Exception e) {
+            boton.setText("NO IMAGE");
             System.out.println("no tienes icono");
         }
     }
