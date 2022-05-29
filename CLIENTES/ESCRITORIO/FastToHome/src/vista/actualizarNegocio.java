@@ -208,28 +208,29 @@ public class actualizarNegocio extends javax.swing.JFrame {
                 if (descripcion.length() == 0 | nombre.length() == 0) {
                     throw new IOException("Rellena todos los campos");
                 }
-                if (negocio.getId_img() == 0) {
-                    //System.out.println("NO TIENE IMAGEN SE LE AÑADIRÁ UNA NUEVA");
-                    int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
-                    if (id_imagen != 0) {
-                        negocio.setId_img(id_imagen);
-                    }
-                } else {
-                    if (nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()) {
+                if (nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()) {
+                    if (negocio.getId_img() == 0) {
+                        //System.out.println("NO TIENE IMAGEN SE LE AÑADIRÁ UNA NUEVA");
+                        int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
+                        if (id_imagen != 0) {
+                            negocio.setId_img(id_imagen);
+                        }
+                    } else {
+
                         nImg.setId(negocio.getId_img());
                         ImagenDao.editarImagenPorId(nImg);
-                    }
 
+                    }
                 }
-                
+
                 Categoria categoria = new Categoria();
                 categoria.setNombre(comboCategoria.getSelectedItem().toString());
                 int id_categoria = CategoriaDao.ObtenerIdPorNombre(categoria);
-                
-                 negocio.setDescripcion(descripcion);
-                 negocio.setNombre(nombre);
-                 negocio.setId_categoria(id_categoria);
-                 return NegocioDao.actualizarNegocio(negocio);
+
+                negocio.setDescripcion(descripcion);
+                negocio.setNombre(nombre);
+                negocio.setId_categoria(id_categoria);
+                return NegocioDao.actualizarNegocio(negocio);
             } else {
                 JOptionPane.showMessageDialog(this, "Error, no se actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
                 return false;
@@ -242,7 +243,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
             error.setText(ex.getMessage());
             return false;
         }
-        
+
     }
 
 
