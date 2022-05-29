@@ -16,10 +16,6 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="imgProducto" min="-2" pref="155" max="-2" attributes="0"/>
-          </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -28,11 +24,16 @@
                       <Component id="nombreProducto" min="-2" pref="149" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="precio" min="-2" pref="45" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="botonEditarProducto" min="-2" pref="45" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="botonEliminarProducto" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="imgProducto" min="-2" pref="155" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="botonEditarProducto" min="-2" pref="45" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="precio" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="botonEliminarProducto" min="-2" pref="45" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -48,9 +49,9 @@
               <Component id="imgProducto" min="-2" pref="155" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="botonEditarProducto" max="32767" attributes="0"/>
                   <Component id="botonEliminarProducto" alignment="0" max="32767" attributes="0"/>
-                  <Component id="precio" alignment="0" max="32767" attributes="0"/>
-                  <Component id="botonEditarProducto" alignment="0" max="32767" attributes="0"/>
+                  <Component id="precio" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
