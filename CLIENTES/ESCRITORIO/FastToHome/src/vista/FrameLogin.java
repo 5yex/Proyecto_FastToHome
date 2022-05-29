@@ -39,7 +39,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         initComponents();
         imagenesUtil.imagenProyectoAjlabel(new ImageIcon(getClass().getResource("/recursos/logoGrandeBlanco.png")), jLabel1);
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
-        String[] combo = { "Bird", "Cat", "Dog", "Rabbit", "Pig" };
+        String[] combo = { "Tema Claro", "Tema Oscuro"};
         jComboBox1 = new JComboBox<>(combo);
     }
 
