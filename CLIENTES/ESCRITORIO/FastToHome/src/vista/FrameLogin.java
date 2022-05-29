@@ -165,6 +165,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
             }
             this.revalidate();
             this.repaint();
+            System.out.println("vista.FrameLogin.jComboBox1ActionPerformed()");
         } catch (UnsupportedLookAndFeelException ex) {
             Logger.getLogger(FrameLogin.class.getName()).log(Level.SEVERE, null, ex);
         }
