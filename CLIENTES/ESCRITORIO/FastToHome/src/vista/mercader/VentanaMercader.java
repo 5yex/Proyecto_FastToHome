@@ -83,6 +83,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     private void initComponents() {
 
         botonesPedidos = new javax.swing.ButtonGroup();
+        updateInicio = new javax.swing.JButton();
         panelTableado = new javax.swing.JTabbedPane();
         panelInicioAdmin = new javax.swing.JPanel();
         labelBienvenido = new javax.swing.JLabel();
@@ -105,6 +106,13 @@ public class VentanaMercader extends javax.swing.JFrame {
         checkTodos = new javax.swing.JRadioButton();
         checkParaPreparar = new javax.swing.JRadioButton();
         checkParaEnviar = new javax.swing.JRadioButton();
+
+        updateInicio.setText("jButton1");
+        updateInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateInicioActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
@@ -406,6 +414,10 @@ public class VentanaMercader extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnModificarNegocioActionPerformed
 
+    private void updateInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateInicioActionPerformed
+        cargarInicio();
+    }//GEN-LAST:event_updateInicioActionPerformed
+
     private void inicilizacion() {
         confirmarCierre();
         cargarInicio();
@@ -547,6 +559,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     private javax.swing.JTabbedPane panelTableado;
     private javax.swing.JButton recargarPedidos;
     private javax.swing.JButton recargarProductos;
+    private javax.swing.JButton updateInicio;
     // End of variables declaration//GEN-END:variables
 
 }
