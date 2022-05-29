@@ -59,7 +59,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
         botonActualizarDireccion = new javax.swing.JButton();
         error = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         titleText.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
