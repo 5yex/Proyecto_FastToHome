@@ -25,21 +25,17 @@ import vista.mercader.VentanaMercader;
  */
 public class actualizarNegocio extends javax.swing.JFrame {
 
-    private Usuario User;
-    private Direccion nDireccion = new Direccion();
-    private Imagen nImg = new Imagen();
+    private Negocio negocio;
+    
     private ArrayList<Categoria> listaCategorias;
 
-    /**
-     * Creates new form VentanaRegistroNegocio
-     *
-     * @param user
-     */
-    public actualizarNegocio(Usuario user) {
+    public actualizarNegocio(Negocio negocio) {
+        this.negocio = negocio;
         initComponents();
-        this.User = user;
         cargaInicial();
     }
+
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
