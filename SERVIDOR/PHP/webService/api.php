@@ -367,7 +367,7 @@ function actualizarNegocio($datos){
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
-            mandarRespuesta(true, 'El mercader no tiene negocio');
+            mandarRespuesta(true, 'No se actualizó el negocio');
         }
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
