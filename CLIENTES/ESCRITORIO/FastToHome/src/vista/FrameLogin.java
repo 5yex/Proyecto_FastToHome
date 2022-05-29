@@ -163,8 +163,8 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
             if ((String) combo.getSelectedItem() == "Tema Oscuro") {
                 UIManager.setLookAndFeel(new FlatDarkLaf());
             }
-            this.revalidate();
-            this.repaint();
+            this.dispose();
+            new FrameLogin();
             System.out.println("vista.FrameLogin.jComboBox1ActionPerformed()");
         } catch (UnsupportedLookAndFeelException ex) {
             Logger.getLogger(FrameLogin.class.getName()).log(Level.SEVERE, null, ex);
