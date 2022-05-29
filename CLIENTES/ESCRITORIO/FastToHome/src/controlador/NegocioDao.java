@@ -42,5 +42,9 @@ public class NegocioDao {
 
         return negocio;
     }
+    
+    public static boolean actualizarNegocio(Negocio negocio){
+        return gestion.hacerConsulta(new Peticion("actualizar_negocio", negocio.getJSON()));
+    }
 
 }
