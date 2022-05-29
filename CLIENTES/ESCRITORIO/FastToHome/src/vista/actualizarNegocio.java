@@ -186,7 +186,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
     }//GEN-LAST:event_botonActualizarImagenActionPerformed
 
     private void cargaInicial() {
-        
+        nImg = new Imagen(negocio.getId_img());
         varNombre.setText(negocio.getNombre());
         textAreaDescripcion.setText(negocio.getDescripcion());
         direccionNegocio = DireccionDao.obtenerDireccionNegocio(negocio);
