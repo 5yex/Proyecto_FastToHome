@@ -398,7 +398,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_checkTodosActionPerformed
 
     private void checkParaPrepararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkParaPrepararActionPerformed
-        // TODO add your handling code here:
+        mostrarPedidosPagados();
         
     }//GEN-LAST:event_checkParaPrepararActionPerformed
 
