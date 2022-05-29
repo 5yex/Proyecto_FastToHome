@@ -23,6 +23,11 @@ public class Imagen {
         this.id = id;
     }
 
+    public Imagen(int id, String b64_imagen) {
+        this.id = id;
+        this.b64_imagen = b64_imagen;
+    }
+
     public int getId() {
         return id;
     }
