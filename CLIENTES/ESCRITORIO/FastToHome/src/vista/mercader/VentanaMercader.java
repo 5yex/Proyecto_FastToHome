@@ -91,7 +91,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         nombreNegocio = new javax.swing.JLabel();
         botonModificarDatosMercader = new javax.swing.JButton();
         imgNegocio = new javax.swing.JLabel();
-        botonModificarDatosMercader1 = new javax.swing.JButton();
+        btnModificarNegocio = new javax.swing.JButton();
         panelTablaProductos = new javax.swing.JPanel();
         busquedaProductos = new javax.swing.JTextField();
         checkBusquedaProductos = new javax.swing.JCheckBox();
@@ -147,11 +147,11 @@ public class VentanaMercader extends javax.swing.JFrame {
         imgNegocio.setMinimumSize(new java.awt.Dimension(312, 312));
         imgNegocio.setPreferredSize(new java.awt.Dimension(312, 312));
 
-        botonModificarDatosMercader1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        botonModificarDatosMercader1.setText("PERSONALIZA TU NEGOCIO");
-        botonModificarDatosMercader1.addActionListener(new java.awt.event.ActionListener() {
+        btnModificarNegocio.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnModificarNegocio.setText("PERSONALIZA TU NEGOCIO");
+        btnModificarNegocio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonModificarDatosMercader1ActionPerformed(evt);
+                btnModificarNegocioActionPerformed(evt);
             }
         });
 
@@ -169,7 +169,7 @@ public class VentanaMercader extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
                         .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(botonModificarDatosMercader, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(botonModificarDatosMercader1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnModificarNegocio, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(panelInicioAdminLayout.createSequentialGroup()
                         .addComponent(labelBienvenido)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -191,7 +191,7 @@ public class VentanaMercader extends javax.swing.JFrame {
                     .addGroup(panelInicioAdminLayout.createSequentialGroup()
                         .addComponent(botonModificarDatosMercader, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botonModificarDatosMercader1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnModificarNegocio, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(26, 26, 26))
         );
 
@@ -404,9 +404,9 @@ public class VentanaMercader extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_panelTableadoMouseClicked
 
-    private void botonModificarDatosMercader1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDatosMercader1ActionPerformed
+    private void btnModificarNegocioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarNegocioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonModificarDatosMercader1ActionPerformed
+    }//GEN-LAST:event_btnModificarNegocioActionPerformed
     
      private void inicilizacion() {
         confirmarCierre();
@@ -520,8 +520,8 @@ public class VentanaMercader extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox autoUpdate;
     private javax.swing.JButton botonModificarDatosMercader;
-    private javax.swing.JButton botonModificarDatosMercader1;
     private javax.swing.ButtonGroup botonesPedidos;
+    private javax.swing.JButton btnModificarNegocio;
     private javax.swing.JTextField busquedaProductos;
     private javax.swing.JCheckBox checkBusquedaProductos;
     private javax.swing.JRadioButton checkParaEnviar;
