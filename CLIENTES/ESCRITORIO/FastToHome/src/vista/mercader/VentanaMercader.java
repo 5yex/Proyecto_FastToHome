@@ -408,12 +408,17 @@ public class VentanaMercader extends javax.swing.JFrame {
     
      private void inicilizacion() {
         confirmarCierre();
+        cargarInicio();
+        mostrarProductos();
+        mostrarPedidos();
+    }
+
+    private void cargarInicio() {
         mercader = UsuarioDao.obtenerDatosUsuario(mercader);
+        negocio = NegocioDao.negocioDeMercader(mercader);
         labelNombreMercader.setText(mercader.getNombre() + "  " + mercader.getApellidos());
         nombreNegocio.setText(negocio.getNombre());
         imagenesUtil.imagenB64Ajlabel(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())), imgNegocio);
-        mostrarProductos();
-        mostrarPedidos();
     }
   
     public void mostrarProductos() {
