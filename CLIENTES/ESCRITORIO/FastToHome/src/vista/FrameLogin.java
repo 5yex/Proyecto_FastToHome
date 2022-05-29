@@ -4,6 +4,7 @@
  */
 package vista;
 
+import com.formdev.flatlaf.FlatDarculaLaf;
 import vista.mercader.VentanaMercader;
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatIntelliJLaf;
@@ -163,7 +164,11 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                 UIManager.setLookAndFeel(new FlatLightLaf());
             }
             if (combo.getSelectedIndex() == 2) {
-                UIManager.setLookAndFeel(new FlatIntelliJLaf());
+                UIManager.setLookAndFeel(new FlatDarkLaf());
+                System.out.println("vista.FrameLogin.jComboBox1ActionPerformed()");
+            }
+            if (combo.getSelectedIndex() == 2) {
+                UIManager.setLookAndFeel(new FlatDarculaLaf());
                 System.out.println("vista.FrameLogin.jComboBox1ActionPerformed()");
             }
             this.dispose();
