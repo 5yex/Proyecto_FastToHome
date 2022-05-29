@@ -63,6 +63,7 @@ public class panelProducto extends javax.swing.JPanel {
         imgProducto.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         imgProducto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         imgProducto.setText("NO MAGE");
+        imgProducto.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(204, 204, 204)));
         imgProducto.setMinimumSize(new java.awt.Dimension(155, 155));
         imgProducto.setOpaque(true);
         imgProducto.setPreferredSize(new java.awt.Dimension(155, 155));
