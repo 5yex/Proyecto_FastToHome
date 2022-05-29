@@ -196,21 +196,34 @@ public class actualizarNegocio extends javax.swing.JFrame {
     }
 
     private boolean actualizarNegocio(Negocio negocio) {
-        
+
         boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionNegocio);
-        
-        try{
-        if (direccionActualizada) {
-            String nombre = varNombre.getText();
-            String descripcion = textAreaDescripcion.getText();
-            
-            if (descripcion.length() == 0 | nombre.length() == 0) {
-                throw new IOException("Rellena todos los campos");
+
+        try {
+            if (direccionActualizada) {
+                String nombre = varNombre.getText();
+                String descripcion = textAreaDescripcion.getText();
+
+                if (descripcion.length() == 0 | nombre.length() == 0) {
+                    throw new IOException("Rellena todos los campos");
+                }
+                if (negocio.getId_img() == 0) {
+                //System.out.println("NO TIENE IMAGEN SE LE AÑADIRÁ UNA NUEVA");
+                int id_imagen = ImagenDao.nuevaImagenDevuelveId(imagen);
+                if (id_imagen != 0) {
+                    negocio.setId_img(id_imagen);
+                }
+            } else {
+                if (nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()) {
+                    nImg.setId(negocio.getId_img());
+                    ImagenDao.editarImagenPorId(nImg);
+                }
+
             }
-        } else {
-            JOptionPane.showMessageDialog(this, "Error, no se actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);          
-        }
-        
+            } else {
+                JOptionPane.showMessageDialog(this, "Error, no se actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
+            }
+
         } catch (NumberFormatException ex) {
             error.setText("Rellena correctamente los campos numéricos");
             return false;
