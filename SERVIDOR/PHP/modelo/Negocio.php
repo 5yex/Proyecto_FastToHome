@@ -144,13 +144,13 @@ class Negocio extends Conexion {
         $nombre = $this->getNombre();
         $descripcion = $this->getDescripcion();
         $id_imagen = $this->getId_imagen();
-       // $id_negocio = $this->getId_negocio();
+        $id_negocio = $this->getId_negocio();
         
         $sentencia->bindParam(":cat", $id_categoria);
         $sentencia->bindParam(":nom", $nombre);
         $sentencia->bindParam(":des", $descripcion);
         $sentencia->bindParam(":img", $id_imagen);
-        $sentencia->bindParam(":id_neg", $id_negocio);
+       // $sentencia->bindParam(":id_neg", $id_negocio);
        
         
         $resultado = $sentencia->execute();
