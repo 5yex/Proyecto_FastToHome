@@ -37,7 +37,7 @@
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="af" green="6e" id="PasswordField.selectionBackground" palette="3" red="4b" type="palette"/>
+          <Color blue="af" green="6e" id="Menu.selectionBackground" palette="3" red="4b" type="palette"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="18" style="1"/>

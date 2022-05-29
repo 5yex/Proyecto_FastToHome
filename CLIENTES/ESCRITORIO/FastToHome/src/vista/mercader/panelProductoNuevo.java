@@ -35,7 +35,7 @@ public class panelProductoNuevo extends javax.swing.JPanel {
 
         jButton1 = new javax.swing.JButton();
 
-        jButton1.setBackground(javax.swing.UIManager.getDefaults().getColor("PasswordField.selectionBackground"));
+        jButton1.setBackground(javax.swing.UIManager.getDefaults().getColor("Menu.selectionBackground"));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("NUEVO");
