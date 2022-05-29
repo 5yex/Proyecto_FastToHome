@@ -25,7 +25,7 @@ import util.validaciones;
  * @author Jesus
  */
 public class DialogoActualizarDatos extends javax.swing.JDialog implements Constantes {
-        JButton updateInicio;
+    private    JButton updateInicio;
 
     private Usuario usuario = new Usuario();
     Direccion direccionUsuario;
@@ -41,16 +41,14 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     /**
      * Creates new form DialogoRegistro
      */
-    public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, JButton updateInicio;
-) {
+    public DialogoActualizarDatos(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
-                this.updateInicio = updateInicio;
-
         initComponents();
     }
     
     public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, Usuario administrador) {
         super(parent, modal);
+        this.updateInicio = updateInicio;
         usuario = administrador;
         initComponents();
         establecerCamposIniciales(usuario);
