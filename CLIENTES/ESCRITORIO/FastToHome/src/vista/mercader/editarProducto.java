@@ -253,7 +253,7 @@ public class editarProducto extends javax.swing.JFrame {
             
             if (nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()) {
                 nImg.setId(producto.getId_img());
-                ImagenDao.editarImagenPorId(nImg)
+                ImagenDao.editarImagenPorId(nImg);
             }
             producto.setDescripcion(descripcion);
             producto.setPrecio(precio);
