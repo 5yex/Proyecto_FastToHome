@@ -11,6 +11,7 @@ import controlador.NegocioDao;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import modelo.Categoria;
 import modelo.Direccion;
@@ -29,6 +30,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
     private Imagen nImg = new Imagen();
     private Direccion direccionNegocio = new Direccion();
     private ArrayList<Categoria> listaCategorias;
+    private JButton updateInicio;
 
     public actualizarNegocio(Negocio negocio) {
         this.negocio = negocio;
