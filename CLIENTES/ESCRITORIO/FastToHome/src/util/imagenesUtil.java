@@ -59,7 +59,6 @@ public class imagenesUtil {
             label.setIcon(new ImageIcon(new ImageIcon("/recursos/noIcon.png").getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_DEFAULT)));
             label.setText("NO IMAGE");
             System.out.println("no tienes icono");
-//getClass().getResource("/recursos/logoGrandeBlanco.png"))
         }
     }
     
