@@ -53,7 +53,14 @@ class Imagen extends Conexion {
     }
 
     public function editar() {
-        if (file_put_contents($this->url_imagen, base64_decode($this->b64_imagen)) !== false) {
+        $sql = "SELECT url FROM imagenes WHERE id = :id";
+        $sentencia = $this->dblink->prepare($sql);
+        $id = $this->getId_imagen();
+        $sentencia->bindParam(":id", $id);
+        $sentencia->execute();
+        $resultado = $sentencia->fetchAll(PDO::FETCH_OBJ);
+        $url = $resultado[0]->url;        
+        if (file_put_contents($url, base64_decode($this->b64_imagen)) !== false) {
             return TRUE;
         }
         return false;
