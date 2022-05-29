@@ -27,7 +27,6 @@ import static util.imagenesUtil.imagenAjlabel;
 public class editarProducto extends javax.swing.JFrame {
 
     private Imagen imagen = new Imagen();
-    private Negocio neg;
     private Producto producto;
     private JButton btActupaizar;
 
@@ -36,7 +35,7 @@ public class editarProducto extends javax.swing.JFrame {
      *
      * @param user
      */
-    public editarProducto(JButton btActupaizar, Negocio neg, Producto producto) {
+    public editarProducto(JButton btActupaizar, Producto producto) {
         initComponents();
         this.btActupaizar = btActupaizar;
         this.neg = neg;
