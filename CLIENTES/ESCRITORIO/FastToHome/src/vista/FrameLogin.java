@@ -39,7 +39,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     public FrameLogin() {
         initComponents();
         imagenesUtil.imagenProyectoAjlabel(new ImageIcon(getClass().getResource("/recursos/logoGrandeBlanco.png")), jLabel1);
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());      
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
     }
 
     @SuppressWarnings("unchecked")
@@ -159,16 +159,17 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         try {
             int index = ((JComboBox) evt.getSource()).getSelectedIndex();
-            
+
             if (index == 1) {
                 UIManager.setLookAndFeel(new FlatLightLaf());
             }
             if (index == 2) {
                 UIManager.setLookAndFeel(new FlatDarkLaf());
             }
-            
-            this.dispose();
-            new FrameLogin().setVisible(true);
+            if (index != 0) {
+                this.dispose();
+                new FrameLogin().setVisible(true);
+            }
 
         } catch (UnsupportedLookAndFeelException ex) {
             Logger.getLogger(FrameLogin.class.getName()).log(Level.SEVERE, null, ex);
