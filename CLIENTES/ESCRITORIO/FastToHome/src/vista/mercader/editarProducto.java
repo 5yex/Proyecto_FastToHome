@@ -242,19 +242,19 @@ public class editarProducto extends javax.swing.JFrame {
             if (descripcion.length() == 0 | nombre.length() == 0) {
                 throw new IOException("Rellena todos los campos");
             }
+            if (imagen.getB64_imagen() != null && !imagen.getB64_imagen().isBlank()) {
+                if (producto.getId_img() == 0) {
+                    //System.out.println("NO TIENE IMAGEN SE LE AÑADIRÁ UNA NUEVA");
+                    int id_imagen = ImagenDao.nuevaImagenDevuelveId(imagen);
+                    if (id_imagen != 0) {
+                        producto.setId_img(id_imagen);
+                    }
+                } else {
 
-            if (producto.getId_img() == 0) {
-                //System.out.println("NO TIENE IMAGEN SE LE AÑADIRÁ UNA NUEVA");
-                int id_imagen = ImagenDao.nuevaImagenDevuelveId(imagen);
-                if (id_imagen != 0) {
-                    producto.setId_img(id_imagen);
-                }
-            } else {
-                if (imagen.getB64_imagen() != null && !imagen.getB64_imagen().isBlank()) {
                     imagen.setId(producto.getId_img());
                     ImagenDao.editarImagenPorId(imagen);
-                }
 
+                }
             }
 
             producto.setDescripcion(descripcion);
