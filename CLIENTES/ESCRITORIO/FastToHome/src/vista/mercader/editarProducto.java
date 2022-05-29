@@ -217,7 +217,7 @@ public class editarProducto extends javax.swing.JFrame {
     }//GEN-LAST:event_botonPedirImagenActionPerformed
 
     private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
-        if(nuevoProducto()){
+        if(editarProducto()){
             btActupaizar.doClick();
             this.dispose();
         }
@@ -235,7 +235,7 @@ public class editarProducto extends javax.swing.JFrame {
 //        JOptionPane.showMessageDialog(null, User.getNombre() + " Bienvenido al equipo de mercaderes! \n A continuación podrás configurar tu negocio");
     }
 
-    private boolean nuevoProducto() {
+    private boolean editarProducto() {
 
         try {
 
