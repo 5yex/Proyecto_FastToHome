@@ -32,7 +32,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
     private ArrayList<Categoria> listaCategorias;
     private JButton updateInicio;
 
-    public actualizarNegocio(Negocio negocio,JButton updateInicio) {
+    public actualizarNegocio(Negocio negocio, JButton updateInicio) {
         this.negocio = negocio;
         this.updateInicio = updateInicio;
         initComponents();
@@ -245,8 +245,13 @@ public class actualizarNegocio extends javax.swing.JFrame {
         } catch (IOException ex) {
             error.setText(ex.getMessage());
             return false;
+        } finally {
+            if (updateInicio = null) {
+                updateInicio.doClick();
+            }
+
         }
-        
+
     }
 
 
