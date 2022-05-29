@@ -17,6 +17,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Negocio;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
+import util.imagenesUtil;
 import util.validaciones;
 import vista.administrador.VentanaAdmin;
 
@@ -31,6 +32,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
      */
     public FrameLogin() {
         initComponents();
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -73,8 +75,6 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
 
         titleText.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         titleText.setText("INICIAR SESIÓN");
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/logoGrandeBlanco.png"))); // NOI18N
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
         panelPrincipal.setLayout(panelPrincipalLayout);
