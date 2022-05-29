@@ -66,7 +66,6 @@ public class panelProducto extends javax.swing.JPanel {
         imgProducto.setText("NO MAGE");
         imgProducto.setBorder(new FlatButtonBorder()
         );
-        imgProducto.setMinimumSize(new java.awt.Dimension(155, 155));
         imgProducto.setOpaque(true);
         imgProducto.setPreferredSize(new java.awt.Dimension(155, 159));
 
