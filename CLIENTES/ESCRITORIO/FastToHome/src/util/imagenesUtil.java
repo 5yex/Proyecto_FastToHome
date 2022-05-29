@@ -74,8 +74,7 @@ public class imagenesUtil {
         }
     }
     
-    public static void imageTOBufferedImage(        ImageIcon imagen
-) {
+    public static void imageTOBufferedImage(ImageIcon imagen) {
         Image image = imagen.getImage();
         BufferedImage buffered = (BufferedImage) image;
         
