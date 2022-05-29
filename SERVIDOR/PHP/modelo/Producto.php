@@ -132,9 +132,7 @@ class Producto extends Conexion{
         if($id_imagen == 0){
             $id_imagen = null;
         }
-        
-        
-        
+
         $sentencia->bindParam(":id_prod", $id_producto);
         $sentencia->bindParam(":nom", $nombre);
         $sentencia->bindParam(":pre", $precio);
