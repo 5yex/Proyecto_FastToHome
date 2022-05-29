@@ -246,7 +246,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
             error.setText(ex.getMessage());
             return false;
         } finally {
-            if (updateInicio = null) {
+            if (updateInicio != null) {
                 updateInicio.doClick();
             }
 
