@@ -209,7 +209,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
                 }
                 if (negocio.getId_img() == 0) {
                 //System.out.println("NO TIENE IMAGEN SE LE AÑADIRÁ UNA NUEVA");
-                int id_imagen = ImagenDao.nuevaImagenDevuelveId(imagen);
+                int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
                 if (id_imagen != 0) {
                     negocio.setId_img(id_imagen);
                 }
