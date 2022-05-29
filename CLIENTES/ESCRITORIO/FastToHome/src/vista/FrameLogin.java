@@ -7,13 +7,17 @@ package vista;
 import vista.mercader.VentanaMercader;
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatIntelliJLaf;
+import com.formdev.flatlaf.FlatLightLaf;
 import controlador.NegocioDao;
 import controlador.UsuarioDao;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Negocio;
 import modelo.Usuario;
@@ -151,7 +155,17 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     }//GEN-LAST:event_buttonLogin1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-       JComboBox combo = new JComboBox();
+        try {
+            JComboBox combo = new JComboBox();
+            if ((String) combo.getSelectedItem() == "Tema Claro") {
+                UIManager.setLookAndFeel(new FlatLightLaf());
+            }
+            if ((String) combo.getSelectedItem() == "Tema Oscuro") {
+                UIManager.setLookAndFeel(new FlatDarkLaf());
+            }
+        } catch (UnsupportedLookAndFeelException ex) {
+            Logger.getLogger(FrameLogin.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void comprobarLogin() {
@@ -202,14 +216,13 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         }
 
     }
-    
+
     /*public Image getIconImage(){
         Image retValue = Toolkit.getDefaultToolkit().
         getImage(ClassLoader.getSystemResource("./recursos/logoIcon.png"));
 
         return retValue;
     }*/
-
     private void ventanaMercader(Usuario user) {
         Negocio negocio;
         this.setVisible(false);
