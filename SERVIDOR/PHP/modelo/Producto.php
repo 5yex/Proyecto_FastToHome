@@ -129,6 +129,12 @@ class Producto extends Conexion{
         $stock = $this->getStock();
         $id_imagen = $this->getId_imagen();
         
+        if($id_imagen == 0){
+            $id_imagen = null;
+        }
+        
+        
+        
         $sentencia->bindParam(":id_prod", $id_producto);
         $sentencia->bindParam(":nom", $nombre);
         $sentencia->bindParam(":pre", $precio);
