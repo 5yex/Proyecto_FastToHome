@@ -189,7 +189,7 @@ function actualizarProducto($datos){
         $producto->setPrecio($datos->precio);
         $producto->setDescripcion($datos->descripcion);
         $producto->setStock($datos->stock);
-        $producto->setId_imagen($datos->id_imagen);
+        //$producto->setId_imagen($datos->id_imagen);
 
         if ($producto->actualizarProducto()) {
             mandarRespuesta(false, 'Se ha realizado la actualización de un producto');
