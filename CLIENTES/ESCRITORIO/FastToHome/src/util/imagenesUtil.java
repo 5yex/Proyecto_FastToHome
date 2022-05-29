@@ -43,9 +43,9 @@ public class imagenesUtil {
         label.setText("");
         try {
             ImageIcon image = imagenesUtil.base64AImagen(imgBase64);
-            label.setIcon(new ImageIcon(image.getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_DEFAULT)));
+            label.setIcon(new ImageIcon(image.getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_SMOOTH)));
         } catch (Exception e) {
-            label.setIcon(new ImageIcon(new ImageIcon("/recursos/noIcon.png").getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_DEFAULT)));
+            label.setIcon(new ImageIcon(new ImageIcon("/recursos/noIcon.png").getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_SMOOTH)));
             label.setText("NO IMAGE");
             System.out.println("no tienes icono");
         }
@@ -56,7 +56,7 @@ public class imagenesUtil {
         try {
             label.setIcon(new ImageIcon(image.getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_SMOOTH)));
         } catch (Exception e) {
-            label.setIcon(new ImageIcon(new ImageIcon("/recursos/noIcon.png").getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_DEFAULT)));
+            label.setIcon(new ImageIcon(new ImageIcon("/recursos/noIcon.png").getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_SMOOTH)));
             label.setText("NO IMAGE");
             System.out.println("no tienes icono");
         }
