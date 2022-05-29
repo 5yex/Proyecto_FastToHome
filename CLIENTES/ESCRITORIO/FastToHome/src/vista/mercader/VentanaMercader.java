@@ -424,6 +424,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         cargarInicio();
         mostrarProductos();
         mostrarPedidos();
+        englobarRadioButtons();
     }
 
     private void cargarInicio() {
