@@ -21,9 +21,9 @@ import modelo.Peticion;
  */
 public class PedidoDao {
 
-    public static ArrayList<Pedido> seleccionPedidosPagados() {
+    public static ArrayList<Pedido> seleccionPedidosPagados(Negocio negocio) {
 
-        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_pedidos_pagados", null));
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_pedidos_pagados", negocio.getJSON()));
 
         ArrayList<Pedido> listaPedidosPagados = new ArrayList<Pedido>();
 
