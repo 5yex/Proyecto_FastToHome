@@ -418,6 +418,9 @@ public class VentanaMercader extends javax.swing.JFrame {
         labelNombreMercader.setText(mercader.getNombre() + "  " + mercader.getApellidos());
         nombreNegocio.setText(negocio.getNombre());
         imagenesUtil.imagenB64Ajlabel(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())), imgNegocio);
+        
+        
+        
     }
 
     public void mostrarProductos() {
