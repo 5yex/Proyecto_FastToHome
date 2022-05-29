@@ -226,6 +226,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
                  return NegocioDao.actualizarNegocio(negocio);
             } else {
                 JOptionPane.showMessageDialog(this, "Error, no se actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
+                return false;
             }
 
         } catch (NumberFormatException ex) {
@@ -235,6 +236,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
             error.setText(ex.getMessage());
             return false;
         }
+        
     }
 
 
