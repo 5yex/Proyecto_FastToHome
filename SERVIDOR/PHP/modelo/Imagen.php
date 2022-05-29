@@ -52,6 +52,15 @@ class Imagen extends Conexion {
         return false;
     }
 
+    public function editar() {
+        if (file_put_contents($this->url_imagen, base64_decode($this->b64_imagen)) !== false) {
+            return TRUE;
+        }
+        return false;
+    }
+
+    
+    
     public function agregarConId() {
         $resultado = $this->agregar();
         if ($resultado) {
