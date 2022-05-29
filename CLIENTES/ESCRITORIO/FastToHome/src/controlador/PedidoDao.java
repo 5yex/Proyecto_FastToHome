@@ -27,27 +27,31 @@ public class PedidoDao {
 
         ArrayList<Pedido> listaPedidosPagados = new ArrayList<Pedido>();
 
-        for (int i = 0; i < jsonArray.size(); i++) {
-            Pedido pedido = new Pedido();
+        if (jsonArray != null) {
+            for (int i = 0; i < jsonArray.size(); i++) {
+                Pedido pedido = new Pedido();
 
-            JsonObject pedidoJson = jsonArray.get(i).getAsJsonObject();
+                JsonObject pedidoJson = jsonArray.get(i).getAsJsonObject();
 
-            pedido.setId_pedido(pedidoJson.get("id").getAsInt());
-            pedido.setId_usuario(pedidoJson.get("id_usuario").getAsInt());
+                pedido.setId_pedido(pedidoJson.get("id").getAsInt());
+                pedido.setId_usuario(pedidoJson.get("id_usuario").getAsInt());
 
-            String fechaActual = pedidoJson.get("fecha_hora").getAsString();
-            try {
-                pedido.setFecha_hora(dateParser.parse(fechaActual));
-            } catch (ParseException ex) {
-                Logger.getLogger(PedidoDao.class.getName()).log(Level.SEVERE, null, ex);
+                String fechaActual = pedidoJson.get("fecha_hora").getAsString();
+                try {
+                    pedido.setFecha_hora(dateParser.parse(fechaActual));
+                } catch (ParseException ex) {
+                    Logger.getLogger(PedidoDao.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+                pedido.setEstado(pedidoJson.get("estado").getAsString());
+                pedido.setTotal(pedidoJson.get("total").getAsDouble());
+                pedido.setTransporte(pedidoJson.get("transporte").getAsString());
+
+                listaPedidosPagados.add(pedido);
+
             }
-
-            pedido.setEstado(pedidoJson.get("estado").getAsString());
-            pedido.setTotal(pedidoJson.get("total").getAsDouble());
-            pedido.setTransporte(pedidoJson.get("transporte").getAsString());
-
-            listaPedidosPagados.add(pedido);
-
+        } else {
+            System.out.println("no hay ningun pedido");
         }
         return listaPedidosPagados;
     }
