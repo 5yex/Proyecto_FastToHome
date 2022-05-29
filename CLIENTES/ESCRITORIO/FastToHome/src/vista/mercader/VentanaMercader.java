@@ -34,6 +34,7 @@ import org.apache.http.impl.conn.SystemDefaultRoutePlanner;
 import util.WrapLayout;
 import util.imagenesUtil;
 import vista.FrameLogin;
+import vista.actualizarNegocio;
 import vista.administrador.DialogoActualizarDatos;
 import vista.administrador.DialogoModificarDatos;
 
@@ -405,7 +406,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_panelTableadoMouseClicked
 
     private void btnModificarNegocioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarNegocioActionPerformed
-        // TODO add your handling code here:
+        actualizarNegocio dialogoEditarNegocio = new actualizarNegocio(negocio);
     }//GEN-LAST:event_btnModificarNegocioActionPerformed
     
      private void inicilizacion() {
