@@ -186,7 +186,7 @@ public class gestion {
 
                 String htmlTxt = EntityUtils.toString(entity);
 
-                System.out.println("controlador.gestion.hacerConsulta() ---- RECEPCIÓN: " + htmlTxt);
+                System.out.println("controlador.gestion.hacerConsulta() ---- RECEPCIÓN: UNA IMAGEN");
 
                 JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
 
