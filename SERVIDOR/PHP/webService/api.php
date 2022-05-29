@@ -775,7 +775,7 @@ function editarImagenPorId($datos){
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
-            mandarRespuesta(true, 'Error en obtener la Imagen');
+            mandarRespuesta(true, 'Error en editar la Imagen');
         }
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
