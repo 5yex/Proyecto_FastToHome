@@ -83,7 +83,9 @@ if (empty($_POST["DATA"])) {
         case 'negocio_de_mercader';
             obtenerNegocioDeMercader(json_decode($peticion->datos));
             break;
-        
+        case 'actualizar_negocio';
+            actualizarNegocio(json_decode($peticion->datos));
+            break;
         
         //Casos de pedidos
         case 'obtener_pedido_unico';
