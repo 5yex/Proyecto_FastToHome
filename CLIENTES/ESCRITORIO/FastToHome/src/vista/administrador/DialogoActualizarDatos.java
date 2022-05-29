@@ -11,6 +11,7 @@ import controlador.UsuarioDao;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Direccion;
@@ -24,6 +25,7 @@ import util.validaciones;
  * @author Jesus
  */
 public class DialogoActualizarDatos extends javax.swing.JDialog implements Constantes {
+        JButton updateInicio;
 
     private Usuario usuario = new Usuario();
     Direccion direccionUsuario;
@@ -39,8 +41,11 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     /**
      * Creates new form DialogoRegistro
      */
-    public DialogoActualizarDatos(java.awt.Frame parent, boolean modal) {
+    public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, JButton updateInicio;
+) {
         super(parent, modal);
+                this.updateInicio = updateInicio;
+
         initComponents();
     }
     
