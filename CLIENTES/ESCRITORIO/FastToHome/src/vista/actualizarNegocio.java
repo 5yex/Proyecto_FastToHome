@@ -26,7 +26,7 @@ import vista.mercader.VentanaMercader;
 public class actualizarNegocio extends javax.swing.JFrame {
 
     private Negocio negocio;
-    private Direccion direccionNegocio;
+    private Direccion direccionNegocio = new Direccion();
     private ArrayList<Categoria> listaCategorias;
 
     public actualizarNegocio(Negocio negocio) {
