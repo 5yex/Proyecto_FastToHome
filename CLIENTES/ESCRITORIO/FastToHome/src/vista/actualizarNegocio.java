@@ -221,8 +221,13 @@ public class actualizarNegocio extends javax.swing.JFrame {
 
                 }
                 
+                Categoria categoria = new Categoria();
+                categoria.setNombre(comboCategoria.getSelectedItem().toString());
+                int id_categoria = CategoriaDao.ObtenerIdPorNombre(categoria);
+                
                  negocio.setDescripcion(descripcion);
                  negocio.setNombre(nombre);
+                 negocio.setId_categoria(id_categoria);
                  return NegocioDao.actualizarNegocio(negocio);
             } else {
                 JOptionPane.showMessageDialog(this, "Error, no se actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
