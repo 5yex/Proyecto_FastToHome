@@ -20,6 +20,7 @@ import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ButtonGroup;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -558,6 +559,13 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelPedidos.revalidate();
         panelPedidos.repaint();
 
+    }
+    
+    public void englobarRadioButtons(){
+        ButtonGroup grupoEstados = new ButtonGroup();
+        grupoEstados.add(checkTodos);
+        grupoEstados.add(checkParaPreparar);
+        grupoEstados.add(checkParaEnviar);
     }
 
     public void confirmarCierre() {
