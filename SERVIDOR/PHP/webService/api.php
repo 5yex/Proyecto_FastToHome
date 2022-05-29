@@ -71,6 +71,7 @@ if (empty($_POST["DATA"])) {
             break;
         case 'actualizar_direccion';
             modificarDireccion(json_decode($peticion->datos));
+            break;
             
             
         //Casos negocio
