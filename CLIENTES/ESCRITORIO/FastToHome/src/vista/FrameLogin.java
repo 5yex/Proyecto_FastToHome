@@ -39,6 +39,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         initComponents();
         imagenesUtil.imagenProyectoAjlabel(new ImageIcon(getClass().getResource("/recursos/logoGrandeBlanco.png")), jLabel1);
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        jComboBox1 = new JComboBox<>({ "Bird", "Cat", "Dog", "Rabbit", "Pig" });
     }
 
     @SuppressWarnings("unchecked")
@@ -83,7 +84,6 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         jLabel1.setMinimumSize(new java.awt.Dimension(289, 289));
         jLabel1.setPreferredSize(new java.awt.Dimension(289, 289));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tema Claro", "Tema Oscuro" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
