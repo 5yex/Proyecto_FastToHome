@@ -4,6 +4,7 @@
  */
 package util;
 
+import java.awt.Color;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -68,7 +69,7 @@ public class imagenesUtil {
         boton.setText("");
         try {
             boton.setIcon(new ImageIcon(image.getImage().getScaledInstance(boton.getPreferredSize().width-2, boton.getPreferredSize().width-2, Image.SCALE_SMOOTH)));
-            
+            boton.setBackground(new Color(imageTOBufferedImage(image).getRGB(0, 0)));
         } catch (Exception e) {
             System.out.println("no tienes icono");
         }
