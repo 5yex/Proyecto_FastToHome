@@ -145,7 +145,8 @@ public class panelProducto extends javax.swing.JPanel {
     }//GEN-LAST:event_botonEditarProductoActionPerformed
 
     private void botonInfoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInfoProductoActionPerformed
-        // TODO add your handling code here:
+       JOptionPane.showMessageDialog(null, "Nombre:  "+ producto.getNombre() + "\nPrecio:  "+ producto.getPrecio()+ "\nPrecio:  "+ producto.getDescripcion(), "INFO PRODUCTO", JOptionPane.INFORMATION_MESSAGE);
+
     }//GEN-LAST:event_botonInfoProductoActionPerformed
 
 
