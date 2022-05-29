@@ -175,7 +175,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
     }//GEN-LAST:event_botonActualizarDireccionActionPerformed
 
     private void botonConfirmarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConfirmarCambiosActionPerformed
-        if (nuevoNegocio(User)) {
+        if (actualizarNegocio(negocio)) {
             new VentanaMercader(User).setVisible(true);
             this.dispose();
         }
@@ -196,53 +196,8 @@ public class actualizarNegocio extends javax.swing.JFrame {
         }
     }
 
-    private boolean nuevoNegocio(Usuario user) {
-
-        try {
-
-            String nombre = varNombre.getText();
-            String descripcion = textAreaDescripcion.getText();
-
-            if (descripcion.length() == 0 | nombre.length() == 0) {
-                throw new IOException("Rellena todos los campos");
-            }
-            if (nDireccion.isValida()) {
-                if (nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()) {
-                    int id_direccion = DireccionDao.nuevaDireccionDevuelveId(nDireccion);
-
-                    int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
-
-                    if (id_direccion != -1 && id_imagen != -1) {
-                        Categoria categoria = new Categoria();
-                        categoria.setNombre(comboCategoria.getSelectedItem().toString());
-                        int id_categoria = CategoriaDao.ObtenerIdPorNombre(categoria);
-                        Negocio negocio = new Negocio();
-                        negocio.setNombre(nombre);
-                        negocio.setDescripcion(descripcion);
-                        negocio.setId_categoria(id_categoria);
-                        negocio.setId_mercader(user.getId());
-                        negocio.setId_direccion(id_direccion);
-                        negocio.setId_img(id_imagen);
-                        return NegocioDao.nuevoNegocio(negocio);
-                    }
-                } else {
-                    error.setText("Tienes que subir una imagen");
-                    return false;
-
-                }
-            } else {
-                error.setText("Rellena la direccion");
-                return false;
-
-            }
-        } catch (NumberFormatException ex) {
-            error.setText("Rellena correctamente los campos numéricos");
-            return false;
-        } catch (IOException ex) {
-            error.setText(ex.getMessage());
-            return false;
-        }
-        return true;
+    private boolean actulizarNegocio(Negocio negocio) {
+        
     }
 
 
