@@ -52,7 +52,7 @@ class Imagen extends Conexion {
         return false;
     }
 
-    public function editar() {
+    public function editarImagenPorId() {
         $sql = "SELECT url FROM imagenes WHERE id = :id";
         $sentencia = $this->dblink->prepare($sql);
         $id = $this->getId_imagen();
