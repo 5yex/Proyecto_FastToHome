@@ -367,6 +367,8 @@ function actualizarNegocio($datos){
         $negocio->setNombre($datos->nombre);
         $negocio->setDescripcion($datos->descripcion);
         $negocio->setId_negocio($datos->id_negocio);
+        $negocio->setId_imagen($datos->id_img);
+
         
         if ($negocio->modificarNegocio()) {
             mandarRespuesta(false, 'Se actualizó el negocio');
