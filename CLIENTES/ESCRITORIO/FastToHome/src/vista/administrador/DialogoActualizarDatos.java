@@ -26,7 +26,7 @@ import util.validaciones;
 public class DialogoActualizarDatos extends javax.swing.JDialog implements Constantes {
 
     private Usuario usuario = new Usuario();
-    Direccion direccionUsuario = new Direccion();
+    Direccion direccionUsuario;
     
     public Usuario getUsuario() {
         return usuario;
