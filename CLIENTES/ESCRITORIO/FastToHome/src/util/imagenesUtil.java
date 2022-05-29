@@ -74,4 +74,11 @@ public class imagenesUtil {
         }
     }
     
+    public static void imageTOBufferedImage(        ImageIcon yourImage
+) {
+        Image image = yourImage.getImage();
+        BufferedImage buffered = (BufferedImage) image;
+        
+    }
+    
 }
