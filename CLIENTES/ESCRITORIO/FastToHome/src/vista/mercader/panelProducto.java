@@ -153,6 +153,10 @@ public class panelProducto extends javax.swing.JPanel {
     }
 
     private void editarProducto() {
-
+        if (ProductoDao.actualizarProducto(producto)) {
+                JOptionPane.showMessageDialog(null, "Se eliminó el producto.", "Producto eliminado", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(null, "No se pudo eliminar el producto.", "Producto no eliminado", JOptionPane.INFORMATION_MESSAGE);
+        }
     }
 }
