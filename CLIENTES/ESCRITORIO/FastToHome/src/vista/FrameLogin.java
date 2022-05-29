@@ -11,7 +11,6 @@ import controlador.NegocioDao;
 import controlador.UsuarioDao;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -34,7 +33,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     public FrameLogin() {
         initComponents();
         imagenesUtil.imagenProyectoAjlabel(new ImageIcon(getClass().getResource("/recursos/logoGrandeBlanco.png")), jLabel1);
-        this.setIconImage(new ImageIcon(new File("/recursos/logoIcon.png").getAbsolutePath()).getImage());
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
     }
 
     @SuppressWarnings("unchecked")
