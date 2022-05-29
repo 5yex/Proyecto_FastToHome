@@ -361,7 +361,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         DialogoActualizarDatos dmod = new DialogoActualizarDatos(this, true, mercader);
         dmod.setVisible(true);
         System.out.println("vista.mercader.VentanaMercader.botonModificarDatosMercaderActionPerformed()");
-                cargarInicio();
+        cargarInicio();
 
         
     }//GEN-LAST:event_botonModificarDatosMercaderActionPerformed
