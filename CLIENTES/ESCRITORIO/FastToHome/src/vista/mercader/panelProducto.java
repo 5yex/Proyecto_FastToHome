@@ -63,6 +63,7 @@ public class panelProducto extends javax.swing.JPanel {
         imgProducto.setOpaque(true);
         imgProducto.setPreferredSize(new java.awt.Dimension(155, 155));
 
+        botonEliminarProducto.setBorder(null);
         botonEliminarProducto.setPreferredSize(new java.awt.Dimension(45, 45));
         botonEliminarProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,6 +71,7 @@ public class panelProducto extends javax.swing.JPanel {
             }
         });
 
+        botonEditarProducto.setBorder(null);
         botonEditarProducto.setPreferredSize(new java.awt.Dimension(45, 45));
         botonEditarProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
