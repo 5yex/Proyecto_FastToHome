@@ -364,7 +364,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonModificarDatosMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDatosMercaderActionPerformed
-        DialogoActualizarDatos dmod = new DialogoActualizarDatos(this, true, mercader);
+        DialogoActualizarDatos dmod = new DialogoActualizarDatos(this, true, mercader,updateInicio);
         dmod.setVisible(true);
     }//GEN-LAST:event_botonModificarDatosMercaderActionPerformed
 
@@ -406,7 +406,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_panelTableadoMouseClicked
 
     private void btnModificarNegocioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarNegocioActionPerformed
-        actualizarNegocio dialogoEditarNegocio = new actualizarNegocio(negocio);
+        actualizarNegocio dialogoEditarNegocio = new actualizarNegocio(negocio,updateInicio);
         dialogoEditarNegocio.setVisible(true);
         negocio = NegocioDao.negocioDeMercader(mercader);
     }//GEN-LAST:event_btnModificarNegocioActionPerformed
