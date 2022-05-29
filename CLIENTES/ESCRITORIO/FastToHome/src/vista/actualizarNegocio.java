@@ -185,6 +185,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
     }//GEN-LAST:event_botonPedirImagenActionPerformed
 
     private void cargaInicial() {
+        varNombre.setText(negocio.getNombre());
         direccionNegocio = DireccionDao.obtenerDireccionNegocio(negocio);
         listaCategorias = controlador.CategoriaDao.obtenerCategorias();
         for (Categoria listaCategoria : listaCategorias) {
