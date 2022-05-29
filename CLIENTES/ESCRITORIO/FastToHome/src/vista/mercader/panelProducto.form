@@ -54,8 +54,8 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="botonEditarProducto" min="-2" pref="40" max="-2" attributes="0"/>
-                          <Component id="botonEliminarProducto" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="botonEditarProducto" min="-2" pref="45" max="-2" attributes="0"/>
+                          <Component id="botonEliminarProducto" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -90,11 +90,21 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="botonEliminarProducto">
+      <Properties>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[45, 45]"/>
+        </Property>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonEliminarProductoActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botonEditarProducto">
+      <Properties>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[45, 45]"/>
+        </Property>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonEditarProductoActionPerformed"/>
       </Events>
