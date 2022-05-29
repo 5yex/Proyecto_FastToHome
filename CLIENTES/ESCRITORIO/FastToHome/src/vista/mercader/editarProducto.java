@@ -244,8 +244,9 @@ public class editarProducto extends javax.swing.JFrame {
             }
 
             if(producto.getId_img() == 0){
-            
-            
+                System.out.println("NO TIENE IMAGEN SE LE AÑADIRÁ UNA NUEVA");
+                int id_imagen = ImagenDao.nuevaImagenDevuelveId(imagen);
+                producto.setId_img(id_imagen);
             }
             if (imagen.getB64_imagen() != null && !imagen.getB64_imagen().isBlank()) {
                 imagen.setId(producto.getId_img());
