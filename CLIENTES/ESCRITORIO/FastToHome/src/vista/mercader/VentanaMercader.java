@@ -360,7 +360,6 @@ public class VentanaMercader extends javax.swing.JFrame {
     private void botonModificarDatosMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDatosMercaderActionPerformed
         DialogoActualizarDatos dmod = new DialogoActualizarDatos(this, true, mercader);
         dmod.setVisible(true);
-        System.out.println("vista.mercader.VentanaMercader.botonModificarDatosMercaderActionPerformed()");
         cargarInicio();
 
         
