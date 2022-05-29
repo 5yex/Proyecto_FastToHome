@@ -61,6 +61,8 @@ public class gestion {
                 return false;
             }
         } catch (Exception ex) {
+                        JOptionPane.showMessageDialog(null, ex.getMessage());
+
             return false;
         }
     }
