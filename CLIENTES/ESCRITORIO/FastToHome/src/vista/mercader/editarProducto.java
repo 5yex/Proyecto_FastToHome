@@ -250,8 +250,10 @@ public class editarProducto extends javax.swing.JFrame {
             if (descripcion.length() == 0 | nombre.length() == 0) {
                 throw new IOException("Rellena todos los campos");
             }
+            
             if (nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()) {
-                
+                nImg.setId(producto.getId_img());
+                ImagenDao.editarImagenPorId(nImg)
             }
             producto.setDescripcion(descripcion);
             producto.setPrecio(precio);
