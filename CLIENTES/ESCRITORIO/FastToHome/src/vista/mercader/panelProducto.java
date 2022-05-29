@@ -5,6 +5,7 @@
 package vista.mercader;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
+import com.formdev.flatlaf.ui.FlatDropShadowBorder;
 import controlador.ImagenDao;
 import controlador.ProductoDao;
 import java.util.ArrayList;
