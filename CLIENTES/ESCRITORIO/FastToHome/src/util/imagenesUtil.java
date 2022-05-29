@@ -39,7 +39,7 @@ public class imagenesUtil {
         return new ImageIcon(decodedBytes);
     }
 
-    public static void imagenAjlabel(String imgBase64, JLabel label){
+    public static void imagenB64Ajlabel(String imgBase64, JLabel label){
         label.setText("");
         try {
             ImageIcon image = imagenesUtil.base64AImagen(imgBase64);

@@ -129,7 +129,7 @@ public class panelProducto extends javax.swing.JPanel {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                imagenesUtil.imagenAjlabel(ImagenDao.obtenerImagenPorId(new Imagen(producto.getId_img())), imgProducto);
+                imagenesUtil.imagenB64Ajlabel(ImagenDao.obtenerImagenPorId(new Imagen(producto.getId_img())), imgProducto);
             }
         }).start();
         

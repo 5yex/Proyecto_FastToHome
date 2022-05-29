@@ -18,7 +18,7 @@ import modelo.Imagen;
 import modelo.Negocio;
 import modelo.Producto;
 import util.imagenesUtil;
-import static util.imagenesUtil.imagenAjlabel;
+import static util.imagenesUtil.imagenB64Ajlabel;
 
 /**
  *
@@ -204,7 +204,7 @@ public class editarProducto extends javax.swing.JFrame {
     private void botonPedirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirImagenActionPerformed
         new DialogoImagen(this, rootPaneCheckingEnabled, imagen).setVisible(true);
         if (imagen.getB64_imagen() != null && !imagen.getB64_imagen().isBlank()) {
-            imagenAjlabel(imagen.getB64_imagen(), imgProducto);
+            imagenB64Ajlabel(imagen.getB64_imagen(), imgProducto);
         }
     }//GEN-LAST:event_botonPedirImagenActionPerformed
 
@@ -226,7 +226,7 @@ public class editarProducto extends javax.swing.JFrame {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                imagenesUtil.imagenAjlabel(ImagenDao.obtenerImagenPorId(new Imagen(producto.getId_img())), imgProducto);
+                imagenesUtil.imagenB64Ajlabel(ImagenDao.obtenerImagenPorId(new Imagen(producto.getId_img())), imgProducto);
             }
         }).start();
     }

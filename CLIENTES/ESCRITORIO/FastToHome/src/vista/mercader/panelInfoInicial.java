@@ -34,7 +34,7 @@ public class panelInfoInicial extends javax.swing.JPanel {
         nombreNegocio.setText(negocio.getNombre());   
         
         img.setBorder(new FlatButtonBorder());
-        imagenesUtil.imagenAjlabel(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())), img);
+        imagenesUtil.imagenB64Ajlabel(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())), img);
 
     }
 
