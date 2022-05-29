@@ -152,7 +152,7 @@ class Negocio extends Conexion {
         $sentencia->bindParam(":img", $id_imagen);
         $sentencia->bindParam(":id_neg", $id_negocio);
         
-        printf($sentencia);
+        var_dump($sentencia)
         
         $resultado = $sentencia->execute();
 
