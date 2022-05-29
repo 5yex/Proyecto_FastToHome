@@ -113,7 +113,7 @@ public class gestion {
             return null;
 
         } catch (Exception ex) {
-            //JOptionPane.showMessageDialog(null, ex.getMessage());
+            JOptionPane.showMessageDialog(null, ex.getMessage());
             return null;
         }
     }
