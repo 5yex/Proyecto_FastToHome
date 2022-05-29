@@ -157,10 +157,10 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         try {
             JComboBox combo = new JComboBox();
-            if ((String) combo.getSelectedItem() == "Tema Claro") {
+            if (combo.getSelectedIndex() == 0) {
                 UIManager.setLookAndFeel(new FlatLightLaf());
             }
-            if ((String) combo.getSelectedItem() == "Tema Oscuro") {
+            if (combo.getSelectedIndex() == 0) {
                 UIManager.setLookAndFeel(new FlatDarkLaf());
                 System.out.println("vista.FrameLogin.jComboBox1ActionPerformed()");
             }
