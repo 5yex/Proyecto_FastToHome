@@ -52,10 +52,10 @@ public class imagenesUtil {
         }
     }
     
-    public static void imagenProyectoAjlabel(String imgBase64, JLabel label){
+    public static void imagenProyectoAjlabel(String imagenEnRecursos, JLabel label){
         label.setText("");
         try {
-            ImageIcon image = imagenesUtil.base64AImagen(imgBase64);
+            ImageIcon image = imagenesUtil.base64AImagen(imagenEnRecursos);
             label.setIcon(new ImageIcon(image.getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_DEFAULT)));
         } catch (Exception e) {
             label.setIcon(new ImageIcon(new ImageIcon("recursos/noIcon.png").getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_DEFAULT)));
