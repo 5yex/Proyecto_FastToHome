@@ -410,8 +410,6 @@ public class VentanaMercader extends javax.swing.JFrame {
         actualizarNegocio dialogoEditarNegocio = new actualizarNegocio(negocio);
         dialogoEditarNegocio.setVisible(true);
         negocio = NegocioDao.negocioDeMercader(mercader);
-        cargarInicio();
-
     }//GEN-LAST:event_btnModificarNegocioActionPerformed
 
     private void updateInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateInicioActionPerformed
