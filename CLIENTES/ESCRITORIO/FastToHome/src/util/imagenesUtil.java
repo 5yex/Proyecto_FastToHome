@@ -64,7 +64,7 @@ public class imagenesUtil {
     public static void imagenProyectoABttton(ImageIcon image, JButton boton){
         boton.setText("");
         try {
-            boton.setIcon(new ImageIcon(image.getImage().getScaledInstance(boton.getPreferredSize().width, boton.getPreferredSize().height, Image.SCALE_SMOOTH)));
+            boton.setIcon(new ImageIcon(image.getImage().getScaledInstance(boton.getPreferredSize().width-5, boton.getPreferredSize().height-5, Image.SCALE_SMOOTH)));
         } catch (Exception e) {
             System.out.println("no tienes icono");
         }
