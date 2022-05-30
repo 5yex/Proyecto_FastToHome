@@ -37,6 +37,7 @@ import util.imagenesUtil;
 import vista.FrameLogin;
 import vista.actualizarNegocio;
 import vista.administrador.DialogoActualizarDatos;
+
 /**
  *
  * @author jmcbg
@@ -373,12 +374,12 @@ public class VentanaMercader extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonModificarDatosMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDatosMercaderActionPerformed
-        DialogoActualizarDatos dmod = new DialogoActualizarDatos(this, true, mercader,updateInicio);
+        DialogoActualizarDatos dmod = new DialogoActualizarDatos(this, true, mercader, updateInicio);
         dmod.setVisible(true);
     }//GEN-LAST:event_botonModificarDatosMercaderActionPerformed
 
     private void checkBusquedaProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaProductosActionPerformed
-        
+
     }//GEN-LAST:event_checkBusquedaProductosActionPerformed
 
     private void panelTableadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMousePressed
@@ -408,7 +409,7 @@ public class VentanaMercader extends javax.swing.JFrame {
 
     private void checkParaPrepararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkParaPrepararActionPerformed
         mostrarPedidosPagados();
-        
+
     }//GEN-LAST:event_checkParaPrepararActionPerformed
 
     private void panelTableadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMouseClicked
@@ -416,15 +417,15 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_panelTableadoMouseClicked
 
     private void btnModificarNegocioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarNegocioActionPerformed
-        actualizarNegocio dialogoEditarNegocio = new actualizarNegocio(negocio,updateInicio);
+        actualizarNegocio dialogoEditarNegocio = new actualizarNegocio(negocio, updateInicio);
         dialogoEditarNegocio.setVisible(true);
-        
+
     }//GEN-LAST:event_btnModificarNegocioActionPerformed
 
     private void updateInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateInicioActionPerformed
         negocio = NegocioDao.negocioDeMercader(mercader);
         cargarInicio();
-        
+
     }//GEN-LAST:event_updateInicioActionPerformed
 
     private void checkParaEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkParaEnviarActionPerformed
@@ -444,7 +445,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         labelNombreMercader.setText(mercader.getNombre() + "  " + mercader.getApellidos());
         nombreNegocio.setText(negocio.getNombre());
         imagenesUtil.imagenB64Ajlabel(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())), imgNegocio);
-         
+
     }
 
     public void mostrarProductos() {
@@ -493,7 +494,7 @@ public class VentanaMercader extends javax.swing.JFrame {
             hiloUpdate.start();
         }
     }
-    
+
     private void mostrarPedidosPagados() {
         //crearHiloActualizacionDeProductos();
         ActionListener actualizarPedidos = new ActionListener() {
@@ -519,7 +520,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelPedidos.repaint();
 
     }
-    
+
     private void mostrarPedidosEnPreparacion() {
         //crearHiloActualizacionDeProductos();
         ActionListener actualizarPedidos = new ActionListener() {
@@ -558,7 +559,23 @@ public class VentanaMercader extends javax.swing.JFrame {
         jScrollPane1.setIgnoreRepaint(true);
         panelPedidos.removeAll();
         panelPedidos.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
-        ArrayList<Pedido> pedidos = PedidoDao.seleccionTodosPedidos(negocio);
+
+        ArrayList<Pedido> pedidos;
+
+        if (checkTodos.isSelected()) {
+            pedidos = PedidoDao.seleccionPedidosEnPreparacion(negocio);
+        } else {
+            if (!checkParaEnviar.isSelected()) {
+                if (!checkParaPreparar.isSelected()) {
+
+                } else {
+                    pedidos = PedidoDao.seleccionPedidosPagados(negocio);
+                }
+            } else {
+                pedidos = PedidoDao.seleccionPedidosEnPreparacion(negocio);
+            }
+        }
+
         if (pedidos != null) {
             for (Pedido pedido : pedidos) {
                 panelPedidos.add(new panelPedido(pedido, recargarPedidos));
@@ -571,8 +588,8 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelPedidos.repaint();
 
     }
-    
-    public void englobarRadioButtons(){
+
+    public void englobarRadioButtons() {
         ButtonGroup grupoEstados = new ButtonGroup();
         grupoEstados.add(checkTodos);
         grupoEstados.add(checkParaPreparar);
