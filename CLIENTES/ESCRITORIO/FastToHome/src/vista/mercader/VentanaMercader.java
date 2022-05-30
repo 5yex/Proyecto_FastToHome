@@ -314,6 +314,11 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         botonesPedidos.add(checkParaEnviar);
         checkParaEnviar.setText("Para Enviar");
+        checkParaEnviar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkParaEnviarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelTablaPedidosLayout = new javax.swing.GroupLayout(panelTablaPedidos);
         panelTablaPedidos.setLayout(panelTablaPedidosLayout);
@@ -418,6 +423,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         cargarInicio();
         
     }//GEN-LAST:event_updateInicioActionPerformed
+
+    private void checkParaEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkParaEnviarActionPerformed
+        mostrarPedidosEnPreparacion();
+    }//GEN-LAST:event_checkParaEnviarActionPerformed
 
     private void inicilizacion() {
         confirmarCierre();

@@ -407,6 +407,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Para Enviar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="checkParaEnviarActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
