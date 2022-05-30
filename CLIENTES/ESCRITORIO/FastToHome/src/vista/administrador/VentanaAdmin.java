@@ -119,7 +119,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
-        setMinimumSize(new java.awt.Dimension(669, 463));
+        setMinimumSize(new java.awt.Dimension(878, 665));
 
         panelTableado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         panelTableado.addMouseListener(new java.awt.event.MouseAdapter() {

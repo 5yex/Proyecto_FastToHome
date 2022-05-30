@@ -154,7 +154,9 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     }//GEN-LAST:event_buttonRegistroActionPerformed
 
     private void buttonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogin1ActionPerformed
-        comprobarLogin();
+        if(comprobarLogin()){
+            this.dispose();
+        }
         
     }//GEN-LAST:event_buttonLogin1ActionPerformed
 
@@ -178,8 +180,9 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    private void comprobarLogin() {
-
+    private boolean comprobarLogin() {
+        
+        
         String tFieldEmail = emailField.getText();
         String tFieldPass = String.valueOf(passwordField.getPassword());
 
@@ -213,18 +216,23 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                             break;
                         default:
                             throw new AssertionError();
+                            
                     }
 
                 } else {
                     JOptionPane.showMessageDialog(this, "La contraseña introducida no es correcta", "Advertencia", JOptionPane.INFORMATION_MESSAGE);
+                    return false;
                 }
             } else {
                 JOptionPane.showMessageDialog(this, "El usuario introducido no existe", "Advertencia", JOptionPane.INFORMATION_MESSAGE);
+                return false;
+                
             }
         } else {
             JOptionPane.showMessageDialog(this, "Ambos campos deben estar rellenos para iniciar sesion", "Error", JOptionPane.ERROR_MESSAGE);
+            return false;
         }
-
+        return true;
     }
 
     /*public Image getIconImage(){

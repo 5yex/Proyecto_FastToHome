@@ -115,7 +115,7 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
-        setMinimumSize(new java.awt.Dimension(678, 465));
+        setMinimumSize(new java.awt.Dimension(878, 665));
         setSize(new java.awt.Dimension(678, 465));
 
         panelTableado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -169,18 +169,21 @@ public class VentanaMercader extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelInicioAdminLayout.createSequentialGroup()
-                        .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nombreNegocio)
-                            .addComponent(imgNegocio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
-                        .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(botonModificarDatosMercader, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnModificarNegocio, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(nombreNegocio)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(panelInicioAdminLayout.createSequentialGroup()
-                        .addComponent(labelBienvenido)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(labelNombreMercader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(14, 14, 14))
+                        .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelInicioAdminLayout.createSequentialGroup()
+                                .addComponent(imgNegocio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                                .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(botonModificarDatosMercader, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnModificarNegocio, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(panelInicioAdminLayout.createSequentialGroup()
+                                .addComponent(labelBienvenido)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(labelNombreMercader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(14, 14, 14))))
         );
         panelInicioAdminLayout.setVerticalGroup(
             panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -189,16 +192,18 @@ public class VentanaMercader extends javax.swing.JFrame {
                 .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelBienvenido)
                     .addComponent(labelNombreMercader, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(nombreNegocio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(imgNegocio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelInicioAdminLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(imgNegocio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelInicioAdminLayout.createSequentialGroup()
+                        .addGap(238, 238, 238)
                         .addComponent(botonModificarDatosMercader, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnModificarNegocio, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(26, 26, 26))
+                .addGap(32, 32, 32))
         );
 
         panelTableado.addTab("INICIO", panelInicioAdmin);
@@ -312,6 +317,11 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         botonesPedidos.add(checkParaEnviar);
         checkParaEnviar.setText("Para Enviar");
+        checkParaEnviar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkParaEnviarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelTablaPedidosLayout = new javax.swing.GroupLayout(panelTablaPedidos);
         panelTablaPedidos.setLayout(panelTablaPedidosLayout);
@@ -416,6 +426,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         cargarInicio();
         
     }//GEN-LAST:event_updateInicioActionPerformed
+
+    private void checkParaEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkParaEnviarActionPerformed
+        mostrarPedidosEnPreparacion();
+    }//GEN-LAST:event_checkParaEnviarActionPerformed
 
     private void inicilizacion() {
         confirmarCierre();
