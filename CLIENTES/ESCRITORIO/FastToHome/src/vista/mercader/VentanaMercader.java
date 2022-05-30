@@ -560,7 +560,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelPedidos.removeAll();
         panelPedidos.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
 
-        ArrayList<Pedido> pedidos;
+        ArrayList<Pedido> pedidos = null;
 
         if (checkTodos.isSelected()) {
             pedidos = PedidoDao.seleccionPedidosEnPreparacion(negocio);
