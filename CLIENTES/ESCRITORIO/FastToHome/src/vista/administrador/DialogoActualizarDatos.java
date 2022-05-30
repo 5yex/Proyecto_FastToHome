@@ -496,8 +496,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     private boolean modificarDatos() {
         Usuario userCopia = usuario;
 
-        boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionUsuario);
-        if (direccionActualizada) {
+        if(jCheckBox1.isSelected()){
+            if(!modificarPassword()){
+                return false;
+            }
+        }
+        if (DireccionDao.actualizarDireccion(direccionUsuario)) {
             usuario.setNombre(nombreField.getText());
             usuario.setApellidos(apellidosField.getText());
             usuario.setDni(dniField.getText());
@@ -507,7 +511,6 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             System.out.println(usuario.getJSON());
 
             if (UsuarioDao.actualizarUsuario(usuario)) {
-                
                 return true;
             } else {
                 JOptionPane.showMessageDialog(this, "No se pudo actualizar el usuario", "Error al actualizar", JOptionPane.ERROR_MESSAGE);
@@ -516,7 +519,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         } else {
             JOptionPane.showMessageDialog(this, "Error, no se actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
         }
-
+        return false;
     }
 
     private void establecerCamposIniciales(Usuario user) {
