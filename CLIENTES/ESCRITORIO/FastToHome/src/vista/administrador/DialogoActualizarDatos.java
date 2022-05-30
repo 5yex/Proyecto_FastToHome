@@ -54,6 +54,17 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         initComponents();
         establecerCamposIniciales(usuario);
     }
+    
+    private boolean validarpassiguales() {
+
+        if (modificarPassCheck.isSelected()) {
+            if (validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
+                    && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -360,9 +371,8 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
                 && validaciones.validacionDNI(dniField.getText())
                 && validaciones.validar(tlfField.getText(), PATRON_TELEFONO)
                 && validaciones.validar(emailField.getText(), PATRON_EMAIL)
-                && validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
-                && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0) {
-            if(modificarDatos()){
+                && validarpassiguales()) {
+            if (modificarDatos()) {
                 if (updateInicio != null) {
                     updateInicio.doClick();
                 }
@@ -496,8 +506,8 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     private boolean modificarDatos() {
         Usuario userCopia = usuario;
 
-        if(modificarPassCheck.isSelected()){
-            if(!modificarPassword()){
+        if (modificarPassCheck.isSelected()) {
+            if (!modificarPassword()) {
                 passwordAnteriorTxt.setText("Incorrecta");
                 JOptionPane.showMessageDialog(this, "Tu contraseña actual introducida es incorrecta", "Error al actualizar", JOptionPane.ERROR_MESSAGE);
                 return false;
@@ -567,4 +577,6 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     private javax.swing.JLabel tlfTXT;
     private javax.swing.JButton updateConfirm;
     // End of variables declaration//GEN-END:variables
+
+    
 }
