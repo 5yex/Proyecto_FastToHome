@@ -28,25 +28,25 @@ import util.validaciones;
 public class DialogoActualizarDatos extends javax.swing.JDialog implements Constantes {
 
     private JButton updateInicio;
-    
+
     private Usuario usuario = new Usuario();
     Direccion direccionUsuario;
-    
+
     public Usuario getUsuario() {
         return usuario;
     }
-    
+
     public void setUsuario(Usuario admin) {
         this.usuario = admin;
     }
-    
+
     public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, Usuario administrador) {
         super(parent, modal);
         usuario = administrador;
         initComponents();
         establecerCamposIniciales(usuario);
     }
-    
+
     public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, Usuario administrador, JButton updateInicio) {
         super(parent, modal);
         this.updateInicio = updateInicio;
@@ -354,7 +354,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
 
 
     private void updateConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateConfirmActionPerformed
-        
+
         if (validaciones.validar(nombreField.getText(), PATRON_NOMBRES)
                 && validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)
                 && validaciones.validacionDNI(dniField.getText())
@@ -363,7 +363,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
                 && validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
                 && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0) {
             modificarDatos();
-            
+
         } else {
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, URL, HEIGHT);
         }
@@ -464,25 +464,23 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             passwordAnteriorField.setEnabled(true);
             passwordField.setEnabled(true);
             passwordConfirmField.setEnabled(true);
-        }else{
+        } else {
             passwordAnteriorField.setEnabled(false);
             passwordField.setEnabled(false);
             passwordConfirmField.setEnabled(false);
         }
     }//GEN-LAST:event_jCheckBox1ActionPerformed
-    
+
     public Image getIconImage() {
         Image retValue = Toolkit.getDefaultToolkit().
                 getImage(ClassLoader.getSystemResource("./recursos/logoIcon.png"));
-        
+
         return retValue;
     }
-    
+
     private void modificarDatos() {
-        
         Usuario userCopia = usuario;
         boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionUsuario);
-        
         if (direccionActualizada) {
             usuario.setNombre(nombreField.getText());
             usuario.setApellidos(apellidosField.getText());
@@ -491,7 +489,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             usuario.setEmail(emailField.getText());
             //usuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
             System.out.println(usuario.getJSON());
-            
+
             if (UsuarioDao.actualizarUsuario(usuario)) {
                 this.dispose();
             } else {
@@ -499,13 +497,13 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
                 usuario = userCopia;
             }
         } else {
-            JOptionPane.showMessageDialog(this, "Error, no se actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);            
+            JOptionPane.showMessageDialog(this, "Error, no se actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
         }
         if (updateInicio != null) {
             updateInicio.doClick();
         }
     }
-    
+
     private void establecerCamposIniciales(Usuario user) {
         direccionUsuario = DireccionDao.obtenerDireccionUsuario(usuario);
         nombreField.setText(user.getNombre());
@@ -514,9 +512,9 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         dniField.setText(user.getDni());
         emailField.setText(user.getEmail());
     }
-    
+
     private void validarCampos() {
-        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
