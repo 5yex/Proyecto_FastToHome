@@ -66,7 +66,7 @@ public class editarProducto extends javax.swing.JFrame {
         errorTexto = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("NUEVO PRODUCTO");
+        setTitle("EDITAR PRODUCTO");
         setAlwaysOnTop(true);
         setResizable(false);
 

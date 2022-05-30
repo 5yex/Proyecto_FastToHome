@@ -76,7 +76,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
         textAreaDescripcion.setRows(5);
         jScrollPane1.setViewportView(textAreaDescripcion);
 
-        botonActualizarImagen.setText("Cambiar imagen del negocio");
+        botonActualizarImagen.setText("SUSTITUIR IMAGEN");
         botonActualizarImagen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonActualizarImagenActionPerformed(evt);
@@ -92,7 +92,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
             }
         });
 
-        botonActualizarDireccion.setText("Cambiar imagen del negocio");
+        botonActualizarDireccion.setText("EDITAR DIRECCIÓN");
         botonActualizarDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonActualizarDireccionActionPerformed(evt);

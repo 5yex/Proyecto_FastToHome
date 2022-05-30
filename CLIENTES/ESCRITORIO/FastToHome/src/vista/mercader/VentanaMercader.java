@@ -37,8 +37,6 @@ import util.imagenesUtil;
 import vista.FrameLogin;
 import vista.actualizarNegocio;
 import vista.administrador.DialogoActualizarDatos;
-import vista.administrador.DialogoModificarDatos;
-
 /**
  *
  * @author jmcbg
