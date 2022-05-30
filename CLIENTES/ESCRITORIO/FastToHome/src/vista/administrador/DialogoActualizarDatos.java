@@ -54,16 +54,18 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         initComponents();
         establecerCamposIniciales(usuario);
     }
-    
+
     private boolean validarpassiguales() {
 
         if (modificarPassCheck.isSelected()) {
             if (validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
                     && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0) {
                 return true;
+            } else {
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     /**
@@ -578,5 +580,4 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     private javax.swing.JButton updateConfirm;
     // End of variables declaration//GEN-END:variables
 
-    
 }
