@@ -117,7 +117,7 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ventana Mercader");
-        setMinimumSize(new java.awt.Dimension(678, 465));
+        setMinimumSize(new java.awt.Dimension(878, 665));
         setSize(new java.awt.Dimension(678, 465));
 
         panelTableado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
