@@ -362,7 +362,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
                 && validaciones.validar(emailField.getText(), PATRON_EMAIL)
                 && validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
                 && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0) {
-            modificarDatos();
+            if(modificarDatos()){
+                if (updateInicio != null) {
+                    updateInicio.doClick();
+                }
+                this.dispose();
+            }
 
         } else {
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, URL, HEIGHT);
@@ -481,14 +486,14 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     private boolean modificarPassword() {
         String passHash = usuario.getPassword();
         String tFieldPass = String.valueOf(passwordAnteriorField.getPassword());
-        if(BCrypt.checkpw(tFieldPass, passHash)){
+        if (BCrypt.checkpw(tFieldPass, passHash)) {
             usuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
             return true;
         }
         return false;
     }
 
-    private void modificarDatos() {
+    private boolean modificarDatos() {
         Usuario userCopia = usuario;
 
         boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionUsuario);
@@ -498,11 +503,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             usuario.setDni(dniField.getText());
             usuario.setTlf(tlfField.getText());
             usuario.setEmail(emailField.getText());
-            //
+
             System.out.println(usuario.getJSON());
 
             if (UsuarioDao.actualizarUsuario(usuario)) {
-                this.dispose();
+                
+                return true;
             } else {
                 JOptionPane.showMessageDialog(this, "No se pudo actualizar el usuario", "Error al actualizar", JOptionPane.ERROR_MESSAGE);
                 usuario = userCopia;
@@ -510,9 +516,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         } else {
             JOptionPane.showMessageDialog(this, "Error, no se actualizó la dirección por lo que no se procedió a actualizar el usuario", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
         }
-        if (updateInicio != null) {
-            updateInicio.doClick();
-        }
+
     }
 
     private void establecerCamposIniciales(Usuario user) {
