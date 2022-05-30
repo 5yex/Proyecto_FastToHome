@@ -479,6 +479,9 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     }
 
     private void modificarDatos() {
+        
+        
+        
         Usuario userCopia = usuario;
         boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionUsuario);
         if (direccionActualizada) {
