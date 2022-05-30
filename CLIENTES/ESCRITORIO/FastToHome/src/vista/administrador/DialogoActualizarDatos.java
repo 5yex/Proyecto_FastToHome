@@ -498,6 +498,8 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
 
         if(modificarPassCheck.isSelected()){
             if(!modificarPassword()){
+                passwordAnteriorTxt.setText("Incorrecta");
+                JOptionPane.showMessageDialog(this, "Tu contraseña actual introducida es incorrecta", "Error al actualizar", JOptionPane.ERROR_MESSAGE);
                 return false;
             }
         }
