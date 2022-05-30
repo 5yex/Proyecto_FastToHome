@@ -565,11 +565,11 @@ public class VentanaMercader extends javax.swing.JFrame {
         if (checkTodos.isSelected()) {
             pedidos = PedidoDao.seleccionTodosPedidos(negocio);
         } else {
-            if (checkParaEnviar.isSelected()) {
-                pedidos = PedidoDao.seleccionPedidosEnPreparacion(negocio);
-            }
             if (checkParaPreparar.isSelected()) {
                 pedidos = PedidoDao.seleccionPedidosPagados(negocio);
+            }
+            if (checkParaEnviar.isSelected()) {
+                pedidos = PedidoDao.seleccionPedidosEnPreparacion(negocio);
             }
         }
 
