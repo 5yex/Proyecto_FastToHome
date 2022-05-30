@@ -12,6 +12,8 @@ public class PantallaLogin extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_login);
     }
 
-
+    public void comprobarPass(){
+        
+    }
 
 }
