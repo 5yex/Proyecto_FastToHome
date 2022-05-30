@@ -478,11 +478,19 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         return retValue;
     }
 
+    private boolean modificarPassword() {
+        String passHash = usuario.getPassword();
+        String tFieldPass = String.valueOf(passwordAnteriorField.getPassword());
+        if(BCrypt.checkpw(tFieldPass, passHash)){
+            usuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
+            return true;
+        }
+        return false;
+    }
+
     private void modificarDatos() {
-        
-        
-        
         Usuario userCopia = usuario;
+
         boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionUsuario);
         if (direccionActualizada) {
             usuario.setNombre(nombreField.getText());
@@ -490,7 +498,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             usuario.setDni(dniField.getText());
             usuario.setTlf(tlfField.getText());
             usuario.setEmail(emailField.getText());
-            //usuario.setPassword(BCrypt.hashpw(new String(passwordField.getPassword()), BCrypt.gensalt(10)));
+            //
             System.out.println(usuario.getJSON());
 
             if (UsuarioDao.actualizarUsuario(usuario)) {
