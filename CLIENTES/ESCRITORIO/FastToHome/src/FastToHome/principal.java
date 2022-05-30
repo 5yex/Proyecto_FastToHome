@@ -8,6 +8,7 @@ import com.formdev.flatlaf.FlatLightLaf;
 import java.io.IOException;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import vista.FrameLogin;
 
 /**
@@ -37,7 +38,7 @@ public static FrameLogin lg;
         //System.out.println(hacerConsulta(new Peticion("nuevo_producto", producto.getJSON())));
         //System.out.println(UsuarioDao.obtenerIdCliente(user));
         
-        UIManager.setLookAndFeel(new FlatLightLaf());
+        UIManager.setLookAndFeel(new NimbusLookAndFeel());
         lg = new FrameLogin();
         lg.setVisible(true);
     }
