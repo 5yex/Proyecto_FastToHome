@@ -91,7 +91,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         passwordAnteriorTxt = new javax.swing.JLabel();
         passwordAnteriorField = new javax.swing.JPasswordField();
         infoPassAnterior = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        modificarPassCheck = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registro de usuario");
@@ -220,10 +220,10 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
 
         infoPassAnterior.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
 
-        jCheckBox1.setText("EDITAR CONTRASEÑA");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        modificarPassCheck.setText("EDITAR CONTRASEÑA");
+        modificarPassCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                modificarPassCheckActionPerformed(evt);
             }
         });
 
@@ -235,7 +235,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jCheckBox1)
+                        .addComponent(modificarPassCheck)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -322,7 +322,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addComponent(jCheckBox1)
+                .addComponent(modificarPassCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(passwordAnteriorTxt)
@@ -463,7 +463,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordAnteriorFieldActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void modificarPassCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarPassCheckActionPerformed
         JCheckBox check = (JCheckBox) evt.getSource();
         if (check.isSelected()) {
             passwordAnteriorField.setEnabled(true);
@@ -474,7 +474,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             passwordField.setEnabled(false);
             passwordConfirmField.setEnabled(false);
         }
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_modificarPassCheckActionPerformed
 
     public Image getIconImage() {
         Image retValue = Toolkit.getDefaultToolkit().
@@ -496,7 +496,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     private boolean modificarDatos() {
         Usuario userCopia = usuario;
 
-        if(jCheckBox1.isSelected()){
+        if(modificarPassCheck.isSelected()){
             if(!modificarPassword()){
                 return false;
             }
@@ -551,7 +551,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     private javax.swing.JLabel infoPass;
     private javax.swing.JLabel infoPassAnterior;
     private javax.swing.JLabel infoTelefono;
-    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox modificarPassCheck;
     private javax.swing.JTextField nombreField;
     private javax.swing.JLabel nombreTXT;
     private javax.swing.JPasswordField passwordAnteriorField;
