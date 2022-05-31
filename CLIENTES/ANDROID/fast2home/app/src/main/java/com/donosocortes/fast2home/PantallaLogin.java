@@ -61,8 +61,8 @@ public class PantallaLogin extends AppCompatActivity {
         }, new Response.ErrorListener(){
             @Override
             public void onErrorResponse(VolleyError error) {
-
-            }Toast.makeText(PantallaLogin.this, "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
+                Toast.makeText(PantallaLogin.this, "Fail to get response = " + error, Toast.LENGTH_SHORT).show()
+            };
         }) {
             @Override
             protected Map<String, String> getParams() {
