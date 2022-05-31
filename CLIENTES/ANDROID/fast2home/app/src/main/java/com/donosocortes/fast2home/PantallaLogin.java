@@ -41,7 +41,7 @@ public class PantallaLogin extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(PantallaLogin.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override
-            public void onResponse(String response) {
+            public void onResponse(String response) throws VolleyError() {
                 System.out.println(response);
 
                 try {
