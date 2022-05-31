@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -70,6 +71,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         this.mercader = user;
         this.negocio = NegocioDao.negocioDeMercader(user);
         initComponents();
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         inicilizacion();
     }
 
