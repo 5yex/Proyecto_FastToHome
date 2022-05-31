@@ -9,8 +9,6 @@ import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.donosocortes.fast2home.modelo.Peticion;
@@ -45,11 +43,7 @@ public class PantallaLogin extends AppCompatActivity {
                 System.out.println(response);
 
                 try {
-                    if((new JSONObject(response).getBoolean("error")) == true){
-                        throw new VolleyError("Error de login");
-                    }
-
-                    JSONObject resp = new JSONObject(response).getJSONArray("datos").getJSONObject(0);
+                    JSONObject resp = new JSONObject(response).getJSONObject("datos");
                     user.setPassword(resp.getString("password"));
                     user.setId(resp.getInt("id"));
                     Toast.makeText(PantallaLogin.this, user.toString(), Toast.LENGTH_SHORT).show();
@@ -58,11 +52,8 @@ public class PantallaLogin extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-        }, new Response.ErrorListener(){
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(PantallaLogin.this, "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
-            };
+        }, error -> {
+            Toast.makeText(PantallaLogin.this, "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
         }) {
             @Override
             protected Map<String, String> getParams() {
