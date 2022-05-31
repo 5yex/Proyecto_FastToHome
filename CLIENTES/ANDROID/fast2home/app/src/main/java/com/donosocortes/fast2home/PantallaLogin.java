@@ -63,8 +63,6 @@ public class PantallaLogin extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(PantallaLogin.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
             }
-
-            ;
         }) {
             @Override
             protected Map<String, String> getParams() {
