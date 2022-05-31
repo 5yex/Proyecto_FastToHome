@@ -11,6 +11,7 @@ import controlador.ImagenDao;
 
 import controlador.ProductoDao;
 import java.io.IOException;
+import javax.swing.ImageIcon;
 
 import javax.swing.JButton;
 
@@ -37,6 +38,7 @@ public class editarProducto extends javax.swing.JFrame {
      */
     public editarProducto(JButton btActupaizar, Producto producto) {
         initComponents();
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         this.btActupaizar = btActupaizar;
         this.producto = producto;
         cargaInicial();
