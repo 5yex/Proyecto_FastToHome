@@ -33,7 +33,7 @@ public class PantallaLogin extends AppCompatActivity {
         password = findViewById(R.id.eTPassword);
     }
 
-    public void comprobarPass() {
+    public void comprobarPass(View view) {
         String url = "http://10.0.2.2/php/webService/api.php";
         RequestQueue queue = Volley.newRequestQueue(PantallaLogin.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
