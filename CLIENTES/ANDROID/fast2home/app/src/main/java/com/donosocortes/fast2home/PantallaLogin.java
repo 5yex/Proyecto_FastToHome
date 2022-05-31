@@ -54,6 +54,8 @@ public class PantallaLogin extends AppCompatActivity {
                         user.setId(datos.getInt("id"));
                         if(BCrypt.checkpw(password.getText().toString(),user.getPassword())){
                             Toast.makeText(PantallaLogin.this, "Has iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
+                        }else {
+                            Toast.makeText(PantallaLogin.this, "Tu contraseña es incorrecta", Toast.LENGTH_SHORT).show();
                         }
                     }
                 } catch (JSONException | VolleyError e) {
