@@ -41,12 +41,12 @@ public class PantallaLogin extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(PantallaLogin.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override
-            public void onResponse(String response) throws VolleyError() {
+            public void onResponse(String response) {
                 System.out.println(response);
 
                 try {
                     if((new JSONObject(response).getBoolean("error")) == true){
-                        throw new VolleyError("Error de login");
+                      throw new VolleyError();
                     }
 
                     JSONObject resp = new JSONObject(response).getJSONArray("datos").getJSONObject(0);
@@ -54,7 +54,7 @@ public class PantallaLogin extends AppCompatActivity {
                     user.setId(resp.getInt("id"));
                     Toast.makeText(PantallaLogin.this, user.toString(), Toast.LENGTH_SHORT).show();
 
-                } catch (JSONException e) {
+                } catch (JSONException | VolleyError e) {
                     e.printStackTrace();
                 }
             }
