@@ -45,12 +45,13 @@ public class PantallaLogin extends AppCompatActivity {
                 System.out.println(response);
 
                 try {
-                    if((new JSONObject(response).getBoolean("error")) == true){
-                      throw new VolleyError();
+                    JSONObject resp = new JSONObject(response);
+                    if((resp.getBoolean("error")) == true){
+                      throw new VolleyError(resp.getString("datos"));
                     }
-                    JSONObject resp = new JSONObject(response).getJSONArray("datos").getJSONObject(0);
-                    user.setPassword(resp.getString("password"));
-                    user.setId(resp.getInt("id"));
+                    JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
+                    user.setPassword(datos.getString("password"));
+                    user.setId(datos.getInt("id"));
                     Toast.makeText(PantallaLogin.this, user.toString(), Toast.LENGTH_SHORT).show();
 
                 } catch (JSONException | VolleyError e) {
