@@ -41,6 +41,9 @@ public class PantallaLogin extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 System.out.println(response);
+                if(new JSONObject(response).getBoolean("error") == true){
+                    
+                }
                 try {
                     JSONObject resp = new JSONObject(response).getJSONObject("datos");
                     user.setPassword(resp.getString("password"));
