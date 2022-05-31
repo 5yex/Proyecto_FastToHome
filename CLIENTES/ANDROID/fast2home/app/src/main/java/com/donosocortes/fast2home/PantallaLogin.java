@@ -72,7 +72,7 @@ public class PantallaLogin extends AppCompatActivity {
                 Map<String, String> params = new HashMap<String, String>();
                 user = new Usuario();
                 user.setEmail(email.getText().toString());
-                params.put("job", job);
+                params.put("DATA", user.getJSON());
                 return params;
             }
         };
