@@ -14,6 +14,7 @@ import controlador.ProductoDao;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import modelo.Categoria;
@@ -45,6 +46,7 @@ public class registrarProducto extends javax.swing.JFrame {
         initComponents();
         this.btActupaizar=btActupaizar;
         this.neg = neg;
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         cargaInicial();
     }
 
