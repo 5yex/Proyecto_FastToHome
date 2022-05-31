@@ -184,18 +184,12 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    private boolean comprobarLogin() {
-        
-        
+    private boolean comprobarLogin() {        
         String tFieldEmail = emailField.getText();
         String tFieldPass = String.valueOf(passwordField.getPassword());
-
         if (tFieldEmail.length() > 0 && tFieldPass.length() > 0) {
-
             boolean passCorrecto = false;
-
             Usuario user = new Usuario(tFieldEmail);
-
             user = UsuarioDao.getHash(user);
             if (user != null) {
                 String passHash = user.getPassword();
@@ -219,8 +213,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                             ventanaMercader(user);
                             break;
                         default:
-                            throw new AssertionError();
-                            
+                            throw new AssertionError();       
                     }
 
                 } else {
