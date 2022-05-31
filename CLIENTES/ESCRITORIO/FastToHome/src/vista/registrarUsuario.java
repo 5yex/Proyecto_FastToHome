@@ -8,6 +8,7 @@ import com.formdev.flatlaf.FlatDarkLaf;
 import controlador.DireccionDao;
 import controlador.UsuarioDao;
 import java.awt.Color;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.UnsupportedLookAndFeelException;
 import modelo.Direccion;
@@ -30,6 +31,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
      */
     public registrarUsuario(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         initComponents();
     }
 
