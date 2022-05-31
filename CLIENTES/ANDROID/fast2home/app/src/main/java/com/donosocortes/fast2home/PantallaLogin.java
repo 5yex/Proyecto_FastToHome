@@ -43,7 +43,6 @@ public class PantallaLogin extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 System.out.println(response);
-
                 try {
                     JSONObject resp = new JSONObject(response);
                     if ((resp.getBoolean("error")) == true) {
