@@ -40,11 +40,11 @@ public class PantallaLogin extends AppCompatActivity {
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Toast.makeText(PantallaLogin.this, response, Toast.LENGTH_SHORT).show();
                 try {
                     JSONObject resp = new JSONObject(response);
                     user.setPassword(resp.getString("password"));
                     user.setId(resp.getInt("id"));
+                    Toast.makeText(PantallaLogin.this, user.toString(), Toast.LENGTH_SHORT).show();
 
                 } catch (JSONException e) {
                     e.printStackTrace();
