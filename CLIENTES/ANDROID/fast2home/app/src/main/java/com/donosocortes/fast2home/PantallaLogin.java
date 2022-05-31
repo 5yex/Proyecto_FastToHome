@@ -13,6 +13,9 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.donosocortes.fast2home.modelo.Usuario;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -52,10 +55,10 @@ public class PantallaLogin extends AppCompatActivity {
 
                 // on below line we are displaying a success toast message.
                 // Toast.makeText(MainActivity.this, "Data added to API", Toast.LENGTH_SHORT).show();
-                //try {
+                try {
                 // on below line we are parsing the response
                 // to json object to extract data from it.
-                // JSONObject respObj = new JSONObject(response);
+                JSONObject respObj = new JSONObject(response);
 
                 // below are the strings which we
                 // extract from our json object.
@@ -64,9 +67,9 @@ public class PantallaLogin extends AppCompatActivity {
 
                 // on below line we are setting this string s to our text view.
                 // responseTV.setText("Name : " + name + "\n" + "Job : " + job);
-                //} catch (JSONException e) {
-                //e.printStackTrace();
-                //}
+                } catch (JSONException e) {
+                e.printStackTrace();
+                }
             }
         }, error -> {
             // method to handle errors.
@@ -81,8 +84,6 @@ public class PantallaLogin extends AppCompatActivity {
                 return params;
             }
         };
-        // below line is to make
-        // a json object request.
         queue.add(request);
     }
 }
