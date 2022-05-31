@@ -46,23 +46,25 @@ public class PantallaLogin extends AppCompatActivity {
 
                 try {
                     JSONObject resp = new JSONObject(response);
-                    if((resp.getBoolean("error")) == true){
-                      throw new VolleyError(resp.getString("datos"));
+                    if ((resp.getBoolean("error")) == true) {
+                        throw new VolleyError(resp.getString("datos"));
+                    } else {
+                        JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
+                        user.setPassword(datos.getString("password"));
+                        user.setId(datos.getInt("id"));
+                        Toast.makeText(PantallaLogin.this, user.toString(), Toast.LENGTH_SHORT).show();
                     }
-                    JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
-                    user.setPassword(datos.getString("password"));
-                    user.setId(datos.getInt("id"));
-                    Toast.makeText(PantallaLogin.this, user.toString(), Toast.LENGTH_SHORT).show();
-
                 } catch (JSONException | VolleyError e) {
                     Toast.makeText(PantallaLogin.this, "Se ha producido un error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
-        }, new Response.ErrorListener(){
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(PantallaLogin.this, "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
-            };
+            }
+
+            ;
         }) {
             @Override
             protected Map<String, String> getParams() {
