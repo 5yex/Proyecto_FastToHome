@@ -60,8 +60,9 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         setTitle("Inicio Sesión");
         setResizable(false);
 
-        buttonLogin1.setBackground(new java.awt.Color(255, 102, 0));
+        buttonLogin1.setBackground(new java.awt.Color(255, 51, 0));
         buttonLogin1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        buttonLogin1.setForeground(new java.awt.Color(204, 204, 204));
         buttonLogin1.setText("ENTRAR");
         buttonLogin1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
