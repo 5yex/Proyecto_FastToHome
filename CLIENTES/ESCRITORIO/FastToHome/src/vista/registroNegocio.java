@@ -11,6 +11,7 @@ import controlador.NegocioDao;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import modelo.Categoria;
 import modelo.Direccion;
@@ -38,6 +39,7 @@ public class registroNegocio extends javax.swing.JFrame {
     public registroNegocio(Usuario user) {
         initComponents();
         this.User = user;
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         cargaInicial();
     }
 
