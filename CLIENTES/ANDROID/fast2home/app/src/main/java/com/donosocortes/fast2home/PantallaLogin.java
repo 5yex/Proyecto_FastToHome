@@ -40,6 +40,7 @@ public class PantallaLogin extends AppCompatActivity {
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                System.out.println(response);
                 try {
                     JSONObject resp = new JSONObject(response);
                     user.setPassword(resp.getString("password"));
@@ -58,7 +59,7 @@ public class PantallaLogin extends AppCompatActivity {
                 Map<String, String> params = new HashMap<String, String>();
                 user = new Usuario();
                 user.setEmail(email.getText().toString());
-                params.put("DATA", new Peticion("getHash",user.getJSON()).getJSON());
+                params.put("DATA", new Peticion("getHash", user.getJSON()).getJSON());
                 return params;
             }
         };
