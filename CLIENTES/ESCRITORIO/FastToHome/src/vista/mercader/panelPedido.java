@@ -59,6 +59,9 @@ public class panelPedido extends javax.swing.JPanel {
         tituloTransporte.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         tituloTransporte.setText("TRANSPORTE:");
 
+        pasarEstado.setBackground(new java.awt.Color(240, 87, 66));
+        pasarEstado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        pasarEstado.setForeground(new java.awt.Color(255, 255, 255));
         pasarEstado.setText("PASAR ESTADO");
         pasarEstado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,11 +129,8 @@ public class panelPedido extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(numPedido)
                         .addGap(8, 8, 8))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(estadoActualPedido)
-                            .addComponent(tipoTransporte))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                    .addComponent(estadoActualPedido, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(tipoTransporte, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
