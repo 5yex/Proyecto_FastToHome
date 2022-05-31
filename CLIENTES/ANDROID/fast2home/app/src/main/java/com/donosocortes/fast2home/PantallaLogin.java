@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.donosocortes.fast2home.modelo.Peticion;
@@ -56,8 +58,11 @@ public class PantallaLogin extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-        }, error -> {
-            Toast.makeText(PantallaLogin.this, "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
+        }, new Response.ErrorListener(){
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }Toast.makeText(PantallaLogin.this, "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
         }) {
             @Override
             protected Map<String, String> getParams() {
