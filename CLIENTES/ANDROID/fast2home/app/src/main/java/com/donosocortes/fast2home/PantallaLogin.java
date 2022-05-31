@@ -56,7 +56,7 @@ public class PantallaLogin extends AppCompatActivity {
                             Toast.makeText(PantallaLogin.this, "Has iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
 
 
-                            
+                            //todo: Ir a siguiente pantalla
 
                         }else {
                             Toast.makeText(PantallaLogin.this, "Tu contraseña es incorrecta", Toast.LENGTH_SHORT).show();
