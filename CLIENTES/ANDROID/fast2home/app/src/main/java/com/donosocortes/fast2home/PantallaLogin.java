@@ -41,9 +41,9 @@ public class PantallaLogin extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Toast.makeText(PantallaLogin.this, response, Toast.LENGTH_SHORT).show();
-
                 try {
                     JSONObject respObj = new JSONObject(response);
+                    respObj.getString("")
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
