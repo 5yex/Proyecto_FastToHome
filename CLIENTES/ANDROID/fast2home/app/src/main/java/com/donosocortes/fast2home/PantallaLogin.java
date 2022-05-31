@@ -54,7 +54,7 @@ public class PantallaLogin extends AppCompatActivity {
                     Toast.makeText(PantallaLogin.this, user.toString(), Toast.LENGTH_SHORT).show();
 
                 } catch (JSONException | VolleyError e) {
-                    Toast.makeText(PantallaLogin.this, "Fail to get response = " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PantallaLogin.this, "Se ha producido un error" + e.getMessage(), Toast.LENGTH_SHORT).show();
 
                 }
             }
