@@ -11,6 +11,7 @@ import java.awt.FlowLayout;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JOptionPane;
@@ -41,6 +42,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     public VentanaAdmin(Usuario user) {
         this.administrador = user;
         initComponents();
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         actualizarVentana();
         confirmarCierre();
     }
