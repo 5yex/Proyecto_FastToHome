@@ -46,7 +46,7 @@ public class PantallaLogin extends AppCompatActivity {
 
                 try {
                     if((new JSONObject(response).getBoolean("error")) == true){
-                        new VolleyError();
+                        new VolleyError("Error de login");
                     }
 
                     JSONObject resp = new JSONObject(response).getJSONObject("datos");
