@@ -24,6 +24,7 @@ public class PantallaLogin extends AppCompatActivity {
     private EditText email;
     private EditText password;
     private Usuario user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,29 +39,21 @@ public class PantallaLogin extends AppCompatActivity {
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                // inside on response method we are
-                // hiding our progress bar
-                // and setting data to edit text as empty
-                //loadingPB.setVisibility(View.GONE);
-                // nameEdt.setText("");
-                // jobEdt.setText("");
-
-                // on below line we are displaying a success toast message.
-                // Toast.makeText(MainActivity.this, "Data added to API", Toast.LENGTH_SHORT).show();
                 try {
-                // on below line we are parsing the response
-                // to json object to extract data from it.
-                JSONObject respObj = new JSONObject(response);
+                    Toast.makeText(PantallaLogin.this, response, Toast.LENGTH_SHORT).show();
+                    // on below line we are parsing the response
+                    // to json object to extract data from it.
+                    JSONObject respObj = new JSONObject(response);
 
-                // below are the strings which we
-                // extract from our json object.
-                //  String name = respObj.getString("name");
-                // String job = respObj.getString("job");
+                    // below are the strings which we
+                    // extract from our json object.
+                    //  String name = respObj.getString("name");
+                    // String job = respObj.getString("job");
 
-                // on below line we are setting this string s to our text view.
-                // responseTV.setText("Name : " + name + "\n" + "Job : " + job);
+                    // on below line we are setting this string s to our text view.
+                    // responseTV.setText("Name : " + name + "\n" + "Job : " + job);
                 } catch (JSONException e) {
-                e.printStackTrace();
+                    e.printStackTrace();
                 }
             }
         }, error -> {
