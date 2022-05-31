@@ -48,14 +48,14 @@ public class PantallaLogin extends AppCompatActivity {
                     if((new JSONObject(response).getBoolean("error")) == true){
                       throw new VolleyError();
                     }
-
                     JSONObject resp = new JSONObject(response).getJSONArray("datos").getJSONObject(0);
                     user.setPassword(resp.getString("password"));
                     user.setId(resp.getInt("id"));
                     Toast.makeText(PantallaLogin.this, user.toString(), Toast.LENGTH_SHORT).show();
 
                 } catch (JSONException | VolleyError e) {
-                    e.printStackTrace();
+                    Toast.makeText(PantallaLogin.this, "Fail to get response = " + e.getMessage(), Toast.LENGTH_SHORT).show();
+
                 }
             }
         }, new Response.ErrorListener(){
