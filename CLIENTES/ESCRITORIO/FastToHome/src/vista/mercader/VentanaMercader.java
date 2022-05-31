@@ -210,6 +210,11 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelTableado.addTab("INICIO", panelInicioAdmin);
 
         busquedaProductos.setMinimumSize(new java.awt.Dimension(4, 22));
+        busquedaProductos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                busquedaProductosActionPerformed(evt);
+            }
+        });
 
         checkBusquedaProductos.setText("Búsqueda por nombre:");
         checkBusquedaProductos.addActionListener(new java.awt.event.ActionListener() {
@@ -379,7 +384,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_botonModificarDatosMercaderActionPerformed
 
     private void checkBusquedaProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaProductosActionPerformed
-
+        
     }//GEN-LAST:event_checkBusquedaProductosActionPerformed
 
     private void panelTableadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMousePressed
@@ -431,6 +436,10 @@ public class VentanaMercader extends javax.swing.JFrame {
     private void checkParaEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkParaEnviarActionPerformed
         mostrarPedidosEnPreparacion();
     }//GEN-LAST:event_checkParaEnviarActionPerformed
+
+    private void busquedaProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_busquedaProductosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_busquedaProductosActionPerformed
 
     private void inicilizacion() {
         confirmarCierre();
