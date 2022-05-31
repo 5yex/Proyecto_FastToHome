@@ -43,6 +43,7 @@ public class DialogoImagen extends javax.swing.JDialog {
     public DialogoImagen(java.awt.Frame parent, boolean modal, Imagen imagen) {
         super(parent, modal);
         initComponents();
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         this.imagen = imagen;
     }
     

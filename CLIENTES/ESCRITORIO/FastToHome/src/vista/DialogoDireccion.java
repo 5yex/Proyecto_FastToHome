@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ComboBoxModel;
+import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.table.DefaultTableModel;
@@ -35,6 +36,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
     public DialogoDireccion(java.awt.Frame parent, boolean modal, Direccion direccion) {
         super(parent, modal);
         this.direccion = direccion;
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         initComponents();
         rellenarDialogo();
         //cargarSelectorDeps(new DepartamentoDAO().mostrarDepartamentos(bd));
