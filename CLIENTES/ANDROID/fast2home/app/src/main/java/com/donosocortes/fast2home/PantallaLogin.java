@@ -42,9 +42,9 @@ public class PantallaLogin extends AppCompatActivity {
             public void onResponse(String response) {
                 Toast.makeText(PantallaLogin.this, response, Toast.LENGTH_SHORT).show();
                 try {
-                    JSONObject respObj = new JSONObject(response);
-                    user.setPassword(respObj.getString("password"));
-                    user.setId();
+                    JSONObject resp = new JSONObject(response);
+                    user.setPassword(resp.getString("password"));
+                    user.setId(resp.getInt("id"));
 
                 } catch (JSONException e) {
                     e.printStackTrace();
