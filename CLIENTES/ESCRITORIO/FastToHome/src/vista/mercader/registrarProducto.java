@@ -105,14 +105,14 @@ public class registrarProducto extends javax.swing.JFrame {
 
         precioProducto.setBorder(new FlatButtonBorder());
 
-        botonAceptar.setText("Aceptar");
+        botonAceptar.setText("ACEPTAR");
         botonAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonAceptarActionPerformed(evt);
             }
         });
 
-        botonCacelar.setText("Cancelar");
+        botonCacelar.setText("CANCELAR");
         botonCacelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonCacelarActionPerformed(evt);
