@@ -64,7 +64,6 @@ public class PantallaLogin extends AppCompatActivity {
                 }
             }
         }, error -> {
-            // method to handle errors.
             Toast.makeText(PantallaLogin.this, "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
         }) {
             @Override
