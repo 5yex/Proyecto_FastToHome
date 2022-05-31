@@ -85,6 +85,9 @@ public class actualizarNegocio extends javax.swing.JFrame {
 
         jLabel3.setText("CATEGORÍA");
 
+        botonConfirmarCambios.setBackground(new java.awt.Color(240, 87, 66));
+        botonConfirmarCambios.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        botonConfirmarCambios.setForeground(new java.awt.Color(255, 255, 255));
         botonConfirmarCambios.setText("CONFIRMAR CAMBIOS");
         botonConfirmarCambios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
