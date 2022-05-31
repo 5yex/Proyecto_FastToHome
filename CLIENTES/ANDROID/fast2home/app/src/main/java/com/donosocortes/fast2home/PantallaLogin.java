@@ -18,6 +18,7 @@ import com.donosocortes.fast2home.modelo.Usuario;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -51,7 +52,7 @@ public class PantallaLogin extends AppCompatActivity {
                         JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
                         user.setPassword(datos.getString("password"));
                         user.setId(datos.getInt("id"));
-
+                        BCrypt.checkpw(password.getText(),user.getPassword());
                     }
                 } catch (JSONException | VolleyError e) {
                     Toast.makeText(PantallaLogin.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
