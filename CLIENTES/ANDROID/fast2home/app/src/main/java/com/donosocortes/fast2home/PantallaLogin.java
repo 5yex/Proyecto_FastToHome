@@ -11,6 +11,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.donosocortes.fast2home.modelo.Peticion;
 import com.donosocortes.fast2home.modelo.Usuario;
 
 import org.json.JSONException;
@@ -55,7 +56,7 @@ public class PantallaLogin extends AppCompatActivity {
                 Map<String, String> params = new HashMap<String, String>();
                 user = new Usuario();
                 user.setEmail(email.getText().toString());
-                params.put("DATA", user.getJSON());
+                params.put("DATA", new Peticion("",user.getJSON()));
                 return params;
             }
         };
