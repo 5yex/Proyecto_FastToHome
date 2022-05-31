@@ -137,7 +137,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
         labelNombreAdmin.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         labelNombreAdmin.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
+        botonModificarDatosAdmin.setBackground(new java.awt.Color(240, 87, 66));
         botonModificarDatosAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botonModificarDatosAdmin.setForeground(new java.awt.Color(255, 255, 255));
         botonModificarDatosAdmin.setText("MODIFICA TUS DATOS");
         botonModificarDatosAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

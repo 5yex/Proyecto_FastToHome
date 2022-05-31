@@ -197,7 +197,9 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             }
         });
 
+        updateConfirm.setBackground(new java.awt.Color(240, 87, 66));
         updateConfirm.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        updateConfirm.setForeground(new java.awt.Color(255, 255, 255));
         updateConfirm.setText("CONFIRMAR MODIFICACIÓN");
         updateConfirm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -291,12 +293,13 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
                                 .addComponent(infoPass, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(passwordAnteriorField)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(titleText)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(passwordAnteriorTxt)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(infoPassAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(titleText)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(passwordAnteriorTxt)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(infoPassAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(35, 35, 35))))
         );
         layout.setVerticalGroup(

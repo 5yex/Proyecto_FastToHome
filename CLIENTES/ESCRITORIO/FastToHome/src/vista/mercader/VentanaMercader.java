@@ -142,7 +142,9 @@ public class VentanaMercader extends javax.swing.JFrame {
         nombreNegocio.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         nombreNegocio.setText("Nombre Negocio");
 
+        botonModificarDatosMercader.setBackground(new java.awt.Color(240, 87, 66));
         botonModificarDatosMercader.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botonModificarDatosMercader.setForeground(new java.awt.Color(255, 255, 255));
         botonModificarDatosMercader.setText("MODIFICA TUS DATOS");
         botonModificarDatosMercader.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,7 +156,9 @@ public class VentanaMercader extends javax.swing.JFrame {
         imgNegocio.setMinimumSize(new java.awt.Dimension(312, 312));
         imgNegocio.setPreferredSize(new java.awt.Dimension(312, 312));
 
+        btnModificarNegocio.setBackground(new java.awt.Color(240, 87, 66));
         btnModificarNegocio.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnModificarNegocio.setForeground(new java.awt.Color(255, 255, 255));
         btnModificarNegocio.setText("PERSONALIZA TU NEGOCIO");
         btnModificarNegocio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
