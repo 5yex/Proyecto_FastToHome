@@ -33,11 +33,8 @@ public class PantallaLogin extends AppCompatActivity {
     }
 
     public void comprobarPass() {
-        // url to post our data
         String url = "http://10.0.2.2/php/webService/api.php";
-        // creating a new variable for our request queue
         RequestQueue queue = Volley.newRequestQueue(PantallaLogin.this);
-
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
