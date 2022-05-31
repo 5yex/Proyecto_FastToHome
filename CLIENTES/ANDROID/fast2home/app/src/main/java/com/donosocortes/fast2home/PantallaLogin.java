@@ -51,7 +51,7 @@ public class PantallaLogin extends AppCompatActivity {
                         JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
                         user.setPassword(datos.getString("password"));
                         user.setId(datos.getInt("id"));
-                        Toast.makeText(PantallaLogin.this, user.toString(), Toast.LENGTH_SHORT).show();
+                        
                     }
                 } catch (JSONException | VolleyError e) {
                     Toast.makeText(PantallaLogin.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
