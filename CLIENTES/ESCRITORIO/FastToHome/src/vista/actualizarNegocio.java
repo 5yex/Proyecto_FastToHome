@@ -11,6 +11,7 @@ import controlador.NegocioDao;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import modelo.Categoria;
@@ -35,6 +36,7 @@ public class actualizarNegocio extends javax.swing.JFrame {
     public actualizarNegocio(Negocio negocio, JButton updateInicio) {
         this.negocio = negocio;
         this.updateInicio = updateInicio;
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         initComponents();
         cargaInicial();
     }
