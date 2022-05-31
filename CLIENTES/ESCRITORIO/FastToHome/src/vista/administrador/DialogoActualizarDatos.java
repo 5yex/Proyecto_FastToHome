@@ -11,6 +11,7 @@ import controlador.UsuarioDao;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
@@ -44,6 +45,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         super(parent, modal);
         usuario = administrador;
         initComponents();
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         establecerCamposIniciales(usuario);
     }
 
