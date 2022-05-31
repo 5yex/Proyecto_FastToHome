@@ -34,7 +34,7 @@ public class PantallaLogin extends AppCompatActivity {
 
     public void comprobarPass() {
         // url to post our data
-        String url = "https://reqres.in/api/users";
+        String url = "http://localhost/php/webService/api.php;
 
 
         // creating a new variable for our request queue
