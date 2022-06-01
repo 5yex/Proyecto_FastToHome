@@ -201,7 +201,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                     switch (rol) {
                         case CLIENTE:
                             JOptionPane.showMessageDialog(this, "No está disponible una aplicación de escritorio para los clientes.\n"
-                                    + "Si quieres registrar tu negocio y acceder como mercader solicítalo a los adminsitradores.\n"
+                                    + "Si quieres registrar tu negocio y acceder como mercader, solicítalo a los adminsitradores.\n"
                                     + "Si eres un nuevo administrador y no puedes entrar espera a un administrador te registre como tal.", "Advertencia.", JOptionPane.INFORMATION_MESSAGE);
                             break;
                         case ADMIN:
