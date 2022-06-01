@@ -17,7 +17,6 @@ import com.donosocortes.fast2home.modelo.Usuario;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.mindrot.jbcrypt.BCrypt;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,7 +28,7 @@ public class PantallaRegistro extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pantalla_registro);
+        setContentView(R.layout.activity_pantalla_registro_paso1);
 
     }
 
@@ -38,7 +37,7 @@ public class PantallaRegistro extends AppCompatActivity {
     }
 
     public void lastStepUsuario(View view) {
-        setContentView(R.layout.activity_pantalla_registro);
+        setContentView(R.layout.activity_pantalla_registro_paso1);
     }
 
 
