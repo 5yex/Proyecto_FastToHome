@@ -7,5 +7,7 @@
     <string name="userEmail">Correo Elecrónico:</string>
     <string name="userPassword">Contraseña</string>
     <string name="userPasswordConfirmation">Confirmar Contraseña:</string>
-    <string name="userDireccion"
+    <string name="userDirNumero">Número:</string>
+    <string name="userDirCp">Código Postal:</string>
+    
 </resources>
