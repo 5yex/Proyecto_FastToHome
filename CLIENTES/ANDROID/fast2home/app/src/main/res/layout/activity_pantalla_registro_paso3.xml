@@ -31,16 +31,16 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView7"
         android:layout_width="359dp"
         android:layout_height="49dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-black"
-        android:text="REGISTRAR USUARIO"
-        android:textAlignment="center"
+        android:text="REGISTRO"
+        android:textAlignment="viewStart"
         android:textColor="@color/principalFastToHome"
         android:textSize="34sp"
-        android:textStyle="bold"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,13 +50,12 @@
         android:id="@+id/textView5"
         android:layout_width="360dp"
         android:layout_height="30dp"
-        android:layout_marginTop="64dp"
         android:text="@string/userPassword"
         android:textColor="@color/principalFastToHome"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView4" />
+        tools:layout_editor_absoluteY="80dp" />
 
     <Button
         android:id="@+id/button"
