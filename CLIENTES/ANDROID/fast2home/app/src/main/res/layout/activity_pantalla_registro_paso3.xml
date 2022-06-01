@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".PantallaRegistro">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="195dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/principalFastToHome"
+        android:onClick="nextStepDireccion"
+        android:text="SIGUIENTE PASO"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <TextView
         android:id="@+id/textView10"
         android:layout_width="360dp"
@@ -120,21 +135,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="195dp"
-        android:layout_height="70dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="28dp"
-        android:backgroundTint="@color/principalFastToHome"
-        android:onClick="nextStepDireccion"
-        android:text="SIGUIENTE PASO"
-        android:textSize="16sp"
-        android:textStyle="bold|italic"
-        app:cornerRadius="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <EditText
         android:id="@+id/editTextTextPersonName11"
         android:layout_width="360dp"
@@ -155,12 +155,13 @@
 
     <EditText
         android:id="@+id/editTextTextMultiLine"
-        android:layout_width="359dp"
-        android:layout_height="91dp"
+        android:layout_width="355dp"
+        android:layout_height="74dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        tools:layout_editor_absoluteX="26dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

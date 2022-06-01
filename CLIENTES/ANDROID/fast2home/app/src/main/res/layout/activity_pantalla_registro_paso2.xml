@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".PantallaRegistro">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="195dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/principalFastToHome"
+        android:onClick="nextStepDireccion"
+        android:text="SIGUIENTE PASO"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <EditText
         android:id="@+id/editTextTextPersonName13"
         android:layout_width="360dp"
@@ -57,21 +72,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="195dp"
-        android:layout_height="70dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="28dp"
-        android:backgroundTint="@color/principalFastToHome"
-        android:onClick="nextStepDireccion"
-        android:text="SIGUIENTE PASO"
-        android:textSize="16sp"
-        android:textStyle="bold|italic"
-        app:cornerRadius="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPersonName11"
