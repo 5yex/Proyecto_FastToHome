@@ -10,7 +10,7 @@
         android:id="@+id/textView10"
         android:layout_width="360dp"
         android:layout_height="30dp"
-        android:text="otros"
+        android:text="@string/userDirOtrosDatos"
         android:textColor="@color/principalFastToHome"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
