@@ -40,6 +40,14 @@ public class PantallaRegistro extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_registro_paso1);
     }
 
+    @Override
+    public void onBackPressed() {
+        if (shouldAllowBack()) {
+            super.onBackPressed();
+        } else {
+            doSomething();
+        }
+    }
 
     /**
      * Registra un usuario llamando a la api rest con volley
