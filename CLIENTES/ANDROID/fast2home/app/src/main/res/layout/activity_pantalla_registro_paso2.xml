@@ -7,54 +7,6 @@
     tools:context=".PantallaRegistro">
 
     <EditText
-        android:id="@+id/editTextTextPersonName15"
-        android:layout_width="360dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="360dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/userTlf"
-        android:textColor="#FF5722"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName14" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName14"
-        android:layout_width="360dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="360dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="11dp"
-        android:text="@string/userDni"
-        android:textColor="#FF5722"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName13" />
-
-    <EditText
         android:id="@+id/editTextTextPersonName13"
         android:layout_width="360dp"
         android:layout_height="49dp"
@@ -70,7 +22,7 @@
         android:layout_width="360dp"
         android:layout_height="30dp"
         android:layout_marginTop="16dp"
-        android:text="@string/userLastname"
+        android:text="@string/userPasswordConfirmation"
         android:textColor="#FF5722"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,7 +51,7 @@
         android:layout_width="360dp"
         android:layout_height="30dp"
         android:layout_marginTop="64dp"
-        android:text="@string/userName"
+        android:text="@string/userPassword"
         android:textColor="#FF5722"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
