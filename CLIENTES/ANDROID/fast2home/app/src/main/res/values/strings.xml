@@ -10,5 +10,6 @@
     <string name="userDirNumero">Número:</string>
     <string name="userDirCp">Código Postal:</string>
     <string name="userDirCalle">Calle:</string>
+    <string name="userDirCiudad">Ciudad:</string>
     <string name="userDir"
 </resources>
