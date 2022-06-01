@@ -80,7 +80,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
         varOtros = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("INTRODUCIR DIRECCIÓN");
+        setTitle("Introducir Dirección");
         setResizable(false);
 
         cancelar.setText("CANCELAR");
