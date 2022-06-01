@@ -14,6 +14,7 @@ import javax.swing.ComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modelo.Direccion;
 
@@ -200,6 +201,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
 
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
         if (rellenarDireccion(direccion)) {
+           JOptionPane.showMessageDialog(this, "Se introdujo la dirección", "Dirección Introducida", JOptionPane.INFORMATION_MESSAGE);
             this.dispose();
         }
     }//GEN-LAST:event_aceptarActionPerformed
