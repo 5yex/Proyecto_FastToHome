@@ -204,7 +204,6 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                                     + "Si quieres registrar tu negocio y acceder como mercader, solicítalo a los adminsitradores.\n"
                                     + "Si eres un nuevo administrador y no puedes entrar, espera a que un administrador te registre como tal.", "Advertencia.", JOptionPane.INFORMATION_MESSAGE);
                             return false;
-                            break;
                         case ADMIN:
                             this.setEnabled(false);
                             VentanaAdmin ventanaAdmin = new VentanaAdmin(user);
