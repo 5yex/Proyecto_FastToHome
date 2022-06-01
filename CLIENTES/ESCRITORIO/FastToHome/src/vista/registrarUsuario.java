@@ -360,7 +360,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
     private void passwordConfirmFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmFieldFocusLost
         if (String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) != 0 || !validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)) {
             infoConfirmPass.setForeground(Color.RED);
-            infoConfirmPass.setText(MENSAJE_CONFIRMA_PASS);
+            infoConfirmPass.setText("La contraseña debe ser igual.");
         } else {
             infoConfirmPass.setText("");
         }
