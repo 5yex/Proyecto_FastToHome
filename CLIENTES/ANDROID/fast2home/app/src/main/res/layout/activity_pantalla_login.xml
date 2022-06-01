@@ -91,6 +91,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="14dp"
         android:backgroundTint="#FF5722"
+        android:onClick="nextToRegister"
         android:text="REGISTRARSE"
         android:textSize="20sp"
         android:textStyle="bold|italic"

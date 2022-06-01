@@ -2,6 +2,7 @@ package com.donosocortes.fast2home;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -37,6 +38,15 @@ public class PantallaLogin extends AppCompatActivity {
         password = findViewById(R.id.eTPassword);
     }
 
+    public void nextToRegister(View view) {
+        Intent i = new Intent(this, PantallaRegistro.class );
+        startActivity(i);
+    };
+
+    /**
+     * Comprueba la contrasña llamando a la api rest con volley
+     * @param view
+     */
     public void comprobarPass(View view) {
         String url = "http://10.0.2.2/php/webService/api.php";
         RequestQueue queue = Volley.newRequestQueue(PantallaLogin.this);
