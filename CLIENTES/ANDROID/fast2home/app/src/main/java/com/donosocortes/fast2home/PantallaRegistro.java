@@ -33,7 +33,11 @@ public class PantallaRegistro extends AppCompatActivity {
     }
 
     public void nextStepDireccion(View view) {
-        setContentView(R.layout.activity_pantalla_registro_direccion);
+        setContentView(R.layout.activity_pantalla_registro_paso3);
+    }
+
+    public void nextStepPassword(View view) {
+        setContentView(R.layout.activity_pantalla_registro_paso2);
     }
 
     public void lastStepUsuario(View view) {

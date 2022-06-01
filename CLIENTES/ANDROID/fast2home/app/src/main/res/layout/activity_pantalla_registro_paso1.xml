@@ -129,7 +129,7 @@
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="28dp"
         android:backgroundTint="@color/principalFastToHome"
-        android:onClick="nextStepDireccion"
+        android:onClick="nextStepPassword"
         android:text="SIGUIENTE PASO"
         android:textSize="16sp"
         android:textStyle="bold|italic"
