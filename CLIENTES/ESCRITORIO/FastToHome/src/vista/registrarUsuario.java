@@ -299,7 +299,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             registrarUsuario();
 
         } else {
-            JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, URL, HEIGHT);
+            JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_registerConfirmActionPerformed
 
