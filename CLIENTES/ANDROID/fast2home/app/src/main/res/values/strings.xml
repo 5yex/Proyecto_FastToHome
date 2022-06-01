@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_name">FastToHome</string>
     <string name="userName">Nombre:</string>
     <string name="userDni">Dni:</string>
     <string name="userLastname">Apellidos:</string>
