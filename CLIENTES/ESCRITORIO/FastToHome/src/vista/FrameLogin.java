@@ -203,6 +203,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                             JOptionPane.showMessageDialog(this, "No está disponible una aplicación de escritorio para los clientes.\n"
                                     + "Si quieres registrar tu negocio y acceder como mercader, solicítalo a los adminsitradores.\n"
                                     + "Si eres un nuevo administrador y no puedes entrar, espera a que un administrador te registre como tal.", "Advertencia.", JOptionPane.INFORMATION_MESSAGE);
+                            return false;
                             break;
                         case ADMIN:
                             this.setEnabled(false);
