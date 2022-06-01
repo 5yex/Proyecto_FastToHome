@@ -108,13 +108,15 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="200dp"
-        android:layout_height="65dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="195dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
         android:backgroundTint="#FF5722"
         android:onClick="nextStepDireccion"
         android:text="SIGUIENTE PASO"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
         app:cornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
