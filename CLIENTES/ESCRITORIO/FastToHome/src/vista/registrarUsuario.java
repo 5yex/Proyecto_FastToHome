@@ -297,6 +297,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
                 && validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)
                 && String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) == 0) {
             registrarUsuario();
+            
 
         } else {
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
@@ -400,6 +401,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
 
                 if (UsuarioDao.nuevoUsuario(newUsuario)) {
                     //si la consulta del nuevo usuario falla, eliminamos el dirección creada para el
+                    JOptionPane.showMessageDialog(this, "Usuario registrado con exito!!", "Usuario Registrado", JOptionPane.INFORMATION_MESSAGE);
                     this.dispose();
                 } else {
                     JOptionPane.showMessageDialog(this, "No se pudo registrar el usuario con esos datos", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
