@@ -1,11 +1,11 @@
 <resources>
-    <string name="userName">FAST TO HOME</string>
-    <string name="userDni">FAST TO HOME</string>
-    <string name="userLastname">FAST TO HOME</string>
-    <string name="userTlf">FAST TO HOME</string>
-    <string name="userEmail">FAST TO HOME</string>
-    <string name="app_name">FAST TO HOME</string>
-    <string name="app_name">FAST TO HOME</string>
+    <string name="userName">Nombre:</string>
+    <string name="userDni">Dni:</string>
+    <string name="userLastname">Apellidos:</string>
+    <string name="userTlf">Teléfono:</string>
+    <string name="userEmail">Correo Elecrónico:</string>
+    <string name="userPassword">Contraseña</string>
+    <string name="userPasswordConfirmation">Confirmar Contraseña:</string>
     <string name="app_name">FAST TO HOME</string>
     <string name="app_name">FAST TO HOME</string>
 
