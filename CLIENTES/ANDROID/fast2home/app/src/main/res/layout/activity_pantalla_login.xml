@@ -17,34 +17,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/image2vector" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="198dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="24dp"
-        android:text="Usuario (Email)"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FF5722"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="143dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="8dp"
-        android:text="Contraseña"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FF5722"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.264"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eTEmail" />
-
     <EditText
         android:id="@+id/eTEmail"
         android:layout_width="275dp"
@@ -75,27 +47,57 @@
         android:id="@+id/botonLogin"
         android:layout_width="278dp"
         android:layout_height="60dp"
-        android:layout_marginTop="26dp"
-        android:backgroundTint="#FF5722"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/principalFastToHome"
         android:onClick="comprobarPass"
         android:text="ENTRAR"
         android:textSize="20sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eTPassword" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="198dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="24dp"
+        android:text="Usuario (Email)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/principalFastToHome"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="143dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:text="Contraseña"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/principalFastToHome"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.264"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTEmail" />
 
     <Button
         android:id="@+id/botonRegistrar"
         android:layout_width="278dp"
         android:layout_height="60dp"
-        android:layout_marginTop="14dp"
-        android:backgroundTint="#FF5722"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/principalFastToHome"
         android:onClick="nextToRegister"
         android:text="REGISTRARSE"
         android:textSize="20sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonLogin" />
 
