@@ -42,11 +42,7 @@ public class PantallaRegistro extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (shouldAllowBack()) {
-            super.onBackPressed();
-        } else {
-            doSomething();
-        }
+       
     }
 
     /**
