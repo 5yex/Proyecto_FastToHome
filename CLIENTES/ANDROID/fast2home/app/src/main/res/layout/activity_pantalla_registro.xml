@@ -8,9 +8,9 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="361dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="359dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-black"
         android:text="REGISTRAR USUARIO"
         android:textAlignment="center"
@@ -18,19 +18,20 @@
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="167dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="80dp"
+        android:layout_width="358dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="64dp"
         android:text="Nombre :"
         android:textColor="#FF5722"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView4" />
 
@@ -41,8 +42,8 @@
         android:text="Apellidos :"
         android:textColor="#FF5722"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="174dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="319dp" />
 
     <TextView
         android:id="@+id/textView7"
@@ -51,8 +52,8 @@
         android:text="Email :"
         android:textColor="#FF5722"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="289dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="411dp" />
 
     <TextView
         android:id="@+id/textView9"
@@ -61,8 +62,8 @@
         android:text="Telefono :"
         android:textColor="#FF5722"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="353dp" />
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="458dp" />
 
     <TextView
         android:id="@+id/textView10"
@@ -71,8 +72,8 @@
         android:text="Contraseña : "
         android:textColor="#FF5722"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="418dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="512dp" />
 
     <TextView
         android:id="@+id/textView11"
@@ -81,8 +82,8 @@
         android:text="Confirmar contraseña :"
         android:textColor="#FF5722"
         android:textSize="15sp"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="480dp" />
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="562dp" />
 
     <TextView
         android:id="@+id/textView8"
@@ -91,8 +92,8 @@
         android:text="DNI :"
         android:textColor="#FF5722"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="231dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="352dp" />
 
     <Button
         android:id="@+id/button"
@@ -104,74 +105,4 @@
         tools:layout_editor_absoluteX="24dp"
         tools:layout_editor_absoluteY="654dp" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="166dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="32dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="112dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="168dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="214dp"
-        tools:layout_editor_absoluteY="174dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="168dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="232dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName4"
-        android:layout_width="170dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="211dp"
-        tools:layout_editor_absoluteY="290dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName5"
-        android:layout_width="170dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="211dp"
-        tools:layout_editor_absoluteY="346dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName6"
-        android:layout_width="171dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="210dp"
-        tools:layout_editor_absoluteY="418dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName7"
-        android:layout_width="173dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="210dp"
-        tools:layout_editor_absoluteY="480dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
