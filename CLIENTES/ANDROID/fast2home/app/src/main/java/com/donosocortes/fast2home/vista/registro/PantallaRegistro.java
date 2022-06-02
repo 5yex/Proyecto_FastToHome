@@ -26,15 +26,17 @@ import java.util.Map;
 public class PantallaRegistro extends AppCompatActivity {
     Usuario user = null;
     Direccion direccion = null;
-    EditText calle;
-    EditText numero;
+    
     EditText nombre;
-    EditText codigoPostal;
-    EditText ciudad;
-    EditText otros;
     EditText apellidos;
     EditText dni;
     EditText telefono;
+
+    EditText calle;
+    EditText numero;
+    EditText codigoPostal;
+    EditText ciudad;
+    EditText otros;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
