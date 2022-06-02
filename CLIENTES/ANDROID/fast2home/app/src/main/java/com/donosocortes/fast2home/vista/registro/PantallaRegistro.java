@@ -97,7 +97,7 @@ public class PantallaRegistro extends AppCompatActivity {
                 if ((resp.getBoolean("error")) == true) {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
-                    JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
+                    Toast.makeText(PantallaRegistro.this, "Registro Completado Con Éxito", Toast.LENGTH_SHORT).show();
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaRegistro.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
