@@ -25,8 +25,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PantallaRegistro extends AppCompatActivity {
-    Usuario user = null;
-    Direccion direccion = null;
+    Usuario user = new Usuario();
+    Direccion direccion = new Direccion();
 
     EditText nombre;
     EditText apellidos;
@@ -104,8 +104,6 @@ public class PantallaRegistro extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                user = new Usuario();
-
                 user.setEmail(email.getText().toString());
                 user.setPassword(BCrypt.hashpw(password.getText().toString(), BCrypt.gensalt(10)));
                 user.setApellidos(apellidos.getText().toString());
