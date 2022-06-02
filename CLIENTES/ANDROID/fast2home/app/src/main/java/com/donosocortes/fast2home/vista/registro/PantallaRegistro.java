@@ -141,8 +141,7 @@ public class PantallaRegistro extends AppCompatActivity {
                 direccion.setCiudad(ciudad.getText().toString());
                 direccion.setCodigo_postal(Integer.parseInt(codigoPostal.getText().toString()));
                 direccion.setNumero(Integer.parseInt(numero.getText().toString()));
-
-
+                direccion.setOtros(otros.getText().toString());
                 params.put("DATA", new Peticion("nuevo_usuario", user.getJSON()).getJSON());
                 return params;
             }
