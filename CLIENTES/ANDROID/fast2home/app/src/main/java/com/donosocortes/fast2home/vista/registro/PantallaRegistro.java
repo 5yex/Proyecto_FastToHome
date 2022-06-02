@@ -138,7 +138,7 @@ public class PantallaRegistro extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
                 user = new Usuario();
-
+                
                 user.setEmail(email.getText().toString());
                 user.setPassword(BCrypt.hashpw(password.getText().toString(), BCrypt.gensalt(10)));
                 user.setApellidos(apellidos.getText().toString());
