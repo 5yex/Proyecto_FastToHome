@@ -160,8 +160,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     private void buttonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogin1ActionPerformed
         if(comprobarLogin()){
             this.dispose();
-        }
-        
+        }      
     }//GEN-LAST:event_buttonLogin1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
