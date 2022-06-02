@@ -82,7 +82,6 @@ public class PantallaRegistro extends AppCompatActivity {
     /**
      * Registra un usuario llamando a la api rest con volley
      *
-     * @param view
      */
     public void registerCompleter() {
         String url = "http://10.0.2.2/php/webService/api.php";
