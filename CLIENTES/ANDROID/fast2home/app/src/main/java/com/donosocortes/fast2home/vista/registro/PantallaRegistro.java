@@ -132,7 +132,7 @@ public class PantallaRegistro extends AppCompatActivity {
                 } else {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
                     int DireccionId = datos.getInt("last_id");
-                    if(DireccionId != -1){
+                    if (DireccionId != -1){
                         registerCompleter(DireccionId);
                     }
                 }
