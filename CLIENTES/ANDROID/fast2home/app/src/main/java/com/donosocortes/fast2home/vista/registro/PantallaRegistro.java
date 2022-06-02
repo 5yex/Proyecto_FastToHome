@@ -139,7 +139,7 @@ public class PantallaRegistro extends AppCompatActivity {
                 Map<String, String> params = new HashMap<String, String>();
                 direccion.setCalle(calle.getText().toString());
                 direccion.setCiudad(ciudad.getText().toString());
-                direccion.setCodigo_postal(codigoPostal.getText().toIntege());
+                direccion.setCodigo_postal(Integer.parseInt(codigoPostal.getText().toString()));
 
                 params.put("DATA", new Peticion("nuevo_usuario", user.getJSON()).getJSON());
                 return params;
