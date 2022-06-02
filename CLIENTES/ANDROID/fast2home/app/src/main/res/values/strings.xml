@@ -12,4 +12,5 @@
     <string name="userDirCalle">Calle:</string>
     <string name="userDirCiudad">Ciudad:</string>
     <string name="userDirOtrosDatos">Otros:</string>
+    <string name="controlSiguientes">Siguiente</string>
 </resources>
