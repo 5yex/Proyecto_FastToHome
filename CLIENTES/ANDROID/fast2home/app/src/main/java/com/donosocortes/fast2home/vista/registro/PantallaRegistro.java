@@ -84,7 +84,7 @@ public class PantallaRegistro extends AppCompatActivity {
      */
 
     public void accionRegistro(View view){
-
+        registerDirecion();
     }
 
     private void registerCompleter(int idDireccion) {
