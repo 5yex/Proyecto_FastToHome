@@ -26,11 +26,14 @@ import java.util.Map;
 public class PantallaRegistro extends AppCompatActivity {
     Usuario user = null;
     Direccion direccion = null;
-    
+
     EditText nombre;
     EditText apellidos;
     EditText dni;
     EditText telefono;
+
+    EditText password;
+    EditText passwordConfirm;
 
     EditText calle;
     EditText numero;
