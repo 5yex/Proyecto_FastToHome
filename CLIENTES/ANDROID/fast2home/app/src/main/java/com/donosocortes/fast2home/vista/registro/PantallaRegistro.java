@@ -108,7 +108,10 @@ public class PantallaRegistro extends AppCompatActivity {
 
                 user.setEmail(email.getText().toString());
                 user.setPassword(BCrypt.hashpw(password.getText().toString(), BCrypt.gensalt(10)));
-
+                user.setApellidos(apellidos.getText().toString());
+                user.setDni(dni.getText().toString());
+                user.setNombre(nombre.getText().toString());
+                user.setTlf(telefono.getText().toString());
 
                 params.put("DATA", new Peticion("nuevo_usuario", user.getJSON()).getJSON());
                 return params;
