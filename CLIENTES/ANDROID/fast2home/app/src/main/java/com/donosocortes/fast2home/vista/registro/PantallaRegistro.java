@@ -137,14 +137,9 @@ public class PantallaRegistro extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                user = new Usuario();
-                
-                user.setEmail(email.getText().toString());
-                user.setPassword(BCrypt.hashpw(password.getText().toString(), BCrypt.gensalt(10)));
-                user.setApellidos(apellidos.getText().toString());
-                user.setDni(dni.getText().toString());
-                user.setNombre(nombre.getText().toString());
-                user.setTlf(telefono.getText().toString());
+                direccion.setCalle(calle.getText().toString());
+                direccion.setCiudad(ciudad.getText().toString());
+                direccion.setCodigo_postal(codigoPostal.getText().toIntege());
 
                 params.put("DATA", new Peticion("nuevo_usuario", user.getJSON()).getJSON());
                 return params;
