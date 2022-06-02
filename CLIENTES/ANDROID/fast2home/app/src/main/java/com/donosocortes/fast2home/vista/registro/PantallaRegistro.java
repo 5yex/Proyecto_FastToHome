@@ -45,18 +45,18 @@ public class PantallaRegistro extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        email = (EditText) findViewById(R.id.eTEmail);
-        nombre = (EditText) findViewById(R.id.etNombre);
-        apellidos = (EditText) findViewById(R.id.etApellidos);
-        dni = (EditText) findViewById(R.id.etDni);
-        telefono = (EditText) findViewById(R.id.etTelefono);
-        password = (EditText) findViewById(R.id.etPassword);
-        passwordConfirm = (EditText) findViewById(R.id.etPasswordConfirm);
-        calle = (EditText) findViewById(R.id.etCalle);
-        numero = (EditText) findViewById(R.id.etNumero);
-        codigoPostal = (EditText) findViewById(R.id.etCodigoPostal);
-        ciudad = (EditText) findViewById(R.id.etCiudad);
-        otros = (EditText) findViewById(R.id.etOtros);
+        email = findViewById(R.id.eTEmail);
+        nombre = findViewById(R.id.etNombre);
+        apellidos = findViewById(R.id.etApellidos);
+        dni = findViewById(R.id.etDni);
+        telefono = findViewById(R.id.etTelefono);
+        password = findViewById(R.id.etPassword);
+        passwordConfirm = findViewById(R.id.etPasswordConfirm);
+        calle = findViewById(R.id.etCalle);
+        numero = findViewById(R.id.etNumero);
+        codigoPostal = findViewById(R.id.etCodigoPostal);
+        ciudad = findViewById(R.id.etCiudad);
+        otros = findViewById(R.id.etOtros);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_registro_paso1);
@@ -82,6 +82,7 @@ public class PantallaRegistro extends AppCompatActivity {
 
     /**
      * Registra un usuario llamando a la api rest con volley
+     *
      * @param view
      */
     public void register(View view) {
@@ -107,7 +108,7 @@ public class PantallaRegistro extends AppCompatActivity {
                 user = new Usuario();
 
                 user.setEmail(email.getText().toString());
-                user.setPassword(BCrypt.hashpw(new String(password.getText().toString()), BCrypt.gensalt(10)));
+                user.setPassword(BCrypt.hashpw(password.getText().toString(), BCrypt.gensalt(10)));
 
 
                 params.put("DATA", new Peticion("nuevo_usuario", user.getJSON()).getJSON());
