@@ -32,6 +32,7 @@ public class PantallaRegistro extends AppCompatActivity {
     EditText dni;
     EditText telefono;
 
+    EditText email;
     EditText password;
     EditText passwordConfirm;
 
@@ -43,6 +44,7 @@ public class PantallaRegistro extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        email = (EditText) findViewById(R.id.eTEmail);
         nombre = (EditText) findViewById(R.id.etNombre);
         apellidos = (EditText) findViewById(R.id.etApellidos);
         dni = (EditText) findViewById(R.id.etDni);
@@ -102,6 +104,8 @@ public class PantallaRegistro extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
                 user = new Usuario();
+
+                user.setEmail();
 
 
                 params.put("DATA", new Peticion("nuevo_usuario", user.getJSON()).getJSON());
