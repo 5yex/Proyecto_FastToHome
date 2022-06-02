@@ -425,6 +425,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         //hacerMecader
         int filaSeleccionada = tablaClientes.getSelectedRow();
         if (UsuarioDao.asignarRolMercader(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
+            JOptionPane.showMessageDialog(this, "Se asignó a este usuario como mercader", "", JOptionPane.INFORMATION_MESSAGE);
             recargarTablaClientes();
             recargarTablaMercaderes();
         } else {
@@ -437,6 +438,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         //hacerAdmin
         int filaSeleccionada = tablaClientes.getSelectedRow();
         if (UsuarioDao.asignarRolAdministrador(new Usuario(arrayListClientes.get(filaSeleccionada).getId()))) {
+            JOptionPane.showMessageDialog(this, "Se asignó a este usuario como administrador", "", JOptionPane.INFORMATION_MESSAGE);
             recargarTablaClientes();
             recargarTablaAdmins();
         } else {
