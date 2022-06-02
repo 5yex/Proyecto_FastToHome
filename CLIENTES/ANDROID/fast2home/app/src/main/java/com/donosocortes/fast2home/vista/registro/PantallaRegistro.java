@@ -60,8 +60,6 @@ public class PantallaRegistro extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_registro_paso1);
-
-
     }
 
     public void nextStepDireccion(View view) {
