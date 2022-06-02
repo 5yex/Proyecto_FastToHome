@@ -113,7 +113,6 @@ public class PantallaRegistro extends AppCompatActivity {
                 user.setNombre(nombre.getText().toString());
                 user.setTlf(telefono.getText().toString());
                 user.setId_direccion(idDireccion);
-
                 params.put("DATA", new Peticion("nuevo_usuario", user.getJSON()).getJSON());
                 return params;
             }
