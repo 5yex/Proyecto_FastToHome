@@ -27,7 +27,7 @@ public class PantallaRegistro extends AppCompatActivity {
     Usuario user = null;
     Direccion direccion = null;
     EditText calle;
-    Ed
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
