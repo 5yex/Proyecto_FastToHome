@@ -47,10 +47,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.549"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/etCiudad" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/etCiudad"
         android:layout_width="360dp"
         android:layout_height="49dp"
         android:layout_marginTop="196dp"
@@ -75,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etCalle" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etCodigoPostal"
         android:layout_width="360dp"
         android:layout_height="49dp"
         android:layout_marginTop="100dp"
@@ -100,7 +100,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etCalle" />
 
     <EditText
-        android:id="@+id/etApellidos"
+        android:id="@+id/etNumero"
         android:layout_width="360dp"
         android:layout_height="49dp"
         android:ems="10"
@@ -169,7 +169,7 @@
         app:layout_constraintGuide_begin="24dp" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/etOtros"
         android:layout_width="362dp"
         android:layout_height="73dp"
         android:ems="10"
