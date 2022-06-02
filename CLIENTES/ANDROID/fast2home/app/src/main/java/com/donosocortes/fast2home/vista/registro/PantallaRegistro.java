@@ -83,7 +83,12 @@ public class PantallaRegistro extends AppCompatActivity {
      * Registra un usuario llamando a la api rest con volley
      *
      */
-    public void registerCompleter() {
+
+    public void accionRegistro(View view){
+
+    }
+
+    private void registerCompleter() {
         String url = "http://10.0.2.2/php/webService/api.php";
         RequestQueue queue = Volley.newRequestQueue(PantallaRegistro.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
@@ -116,7 +121,7 @@ public class PantallaRegistro extends AppCompatActivity {
         queue.add(request);
     }
 
-    public void registerDirecion(View view) {
+    private void registerDirecion(View view) {
         String url = "http://10.0.2.2/php/webService/api.php";
         RequestQueue queue = Volley.newRequestQueue(PantallaRegistro.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
