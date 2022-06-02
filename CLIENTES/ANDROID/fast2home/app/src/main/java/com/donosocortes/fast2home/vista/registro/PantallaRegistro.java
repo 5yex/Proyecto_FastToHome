@@ -120,7 +120,7 @@ public class PantallaRegistro extends AppCompatActivity {
         queue.add(request);
     }
 
-    public void registerDirecion(Usuario userView view) {
+    public void registerDirecion(View view) {
         String url = "http://10.0.2.2/php/webService/api.php";
         RequestQueue queue = Volley.newRequestQueue(PantallaRegistro.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
