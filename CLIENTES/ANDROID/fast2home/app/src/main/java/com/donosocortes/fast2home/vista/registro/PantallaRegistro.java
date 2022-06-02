@@ -19,6 +19,7 @@ import com.donosocortes.fast2home.modelo.Usuario;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -106,7 +107,7 @@ public class PantallaRegistro extends AppCompatActivity {
                 user = new Usuario();
 
                 user.setEmail(email.getText().toString());
-                user.setPassword(password.getText().toString());
+                user.setPassword(BCrypt.hashpw(new String(password.getText().toString()), BCrypt.gensalt(10)));
 
 
                 params.put("DATA", new Peticion("nuevo_usuario", user.getJSON()).getJSON());
