@@ -40,9 +40,11 @@ public class PantallaRegistro extends AppCompatActivity {
     EditText codigoPostal;
     EditText ciudad;
     EditText otros;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        nombre = (EditText) findViewById(R.id.)
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_registro_paso1);
 
