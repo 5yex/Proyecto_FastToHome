@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="269dp"
-        android:layout_height="233dp"
+        android:layout_width="276dp"
+        android:layout_height="253dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,13 +63,13 @@
         android:id="@+id/textView2"
         android:layout_width="198dp"
         android:layout_height="31dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="40dp"
         android:text="@string/userEmail"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/principalFastToHome"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.316"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
