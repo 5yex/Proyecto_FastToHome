@@ -1,4 +1,4 @@
-package com.donosocortes.fast2home;
+package com.donosocortes.fast2home.vista.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +13,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.donosocortes.fast2home.R;
 import com.donosocortes.fast2home.modelo.Peticion;
 import com.donosocortes.fast2home.modelo.Usuario;
 import com.donosocortes.fast2home.vista.registro.PantallaRegistro;

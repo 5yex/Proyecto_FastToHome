@@ -19,7 +19,7 @@
             android:name=".vista.registro.PantallaRegistro"
             android:exported="false" />
         <activity
-            android:name=".PantallaLogin"
+            android:name=".vista.login.PantallaLogin"
             android:exported="false" />
         <activity
             android:name=".PantallaInicio"
