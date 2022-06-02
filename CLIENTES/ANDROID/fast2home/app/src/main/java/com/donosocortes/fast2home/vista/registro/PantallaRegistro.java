@@ -85,7 +85,42 @@ public class PantallaRegistro extends AppCompatActivity {
      *
      * @param view
      */
-    public void register(View view) {
+    public void registerCompleter(View view) {
+        String url = "http://10.0.2.2/php/webService/api.php";
+        RequestQueue queue = Volley.newRequestQueue(PantallaRegistro.this);
+        StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
+            System.out.println(response);
+            try {
+                JSONObject resp = new JSONObject(response);
+                if ((resp.getBoolean("error")) == true) {
+                    throw new VolleyError(resp.getString("datos"));
+                } else {
+                    JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
+                }
+            } catch (JSONException | VolleyError e) {
+                Toast.makeText(PantallaRegistro.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        }, error -> Toast.makeText(PantallaRegistro.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show()) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                user = new Usuario();
+
+                user.setEmail(email.getText().toString());
+                user.setPassword(BCrypt.hashpw(password.getText().toString(), BCrypt.gensalt(10)));
+                user.setApellidos(apellidos.getText().toString());
+                user.setDni(dni.getText().toString());
+                user.setNombre(nombre.getText().toString());
+                user.setTlf(telefono.getText().toString());
+
+                params.put("DATA", new Peticion("nuevo_usuario", user.getJSON()).getJSON());
+                return params;
+            }
+        };
+        queue.add(request);
+    }
+
+    public void registerDirecion(Usuario userView view) {
         String url = "http://10.0.2.2/php/webService/api.php";
         RequestQueue queue = Volley.newRequestQueue(PantallaRegistro.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
