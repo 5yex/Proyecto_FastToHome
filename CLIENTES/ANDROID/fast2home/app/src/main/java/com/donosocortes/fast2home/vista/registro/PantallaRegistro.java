@@ -143,7 +143,9 @@ public class PantallaRegistro extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                direccion.setCiudad((EditText)(findViewById(R.id.etCalle)).getText().toString());
+                ciudad = findViewById(R.id.etCiudad);
+
+                direccion.setCiudad(ciudad.getText().toString());
                 direccion.setCodigo_postal(Integer.parseInt(codigoPostal.getText().toString()));
                 direccion.setNumero(Integer.parseInt(numero.getText().toString()));
                 direccion.setOtros(otros.getText().toString());
