@@ -132,7 +132,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
         labelBienvenido.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         labelBienvenido.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        labelBienvenido.setText("Bienvenido:");
+        labelBienvenido.setText("Bienvenido :");
         labelBienvenido.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
 
         labelNombreAdmin.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -162,7 +162,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
                 .addComponent(labelBienvenido)
                 .addGap(18, 18, 18)
                 .addComponent(labelNombreAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelInicioAdminLayout.setVerticalGroup(
             panelInicioAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
