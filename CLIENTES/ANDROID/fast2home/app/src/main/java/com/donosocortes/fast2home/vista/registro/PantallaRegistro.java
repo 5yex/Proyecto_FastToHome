@@ -51,7 +51,7 @@ public class PantallaRegistro extends AppCompatActivity {
         telefono = findViewById(R.id.etTelefono);
         password = findViewById(R.id.etPassword);
         passwordConfirm = findViewById(R.id.etPasswordConfirm);
-        calle = findViewById(R.id.etCalle);
+        calle = (EditText) findViewById(R.id.etCalle);
         numero = findViewById(R.id.etNumero);
         codigoPostal = findViewById(R.id.etCodigoPostal);
         ciudad = findViewById(R.id.etCiudad);
