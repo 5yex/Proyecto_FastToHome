@@ -27,7 +27,7 @@ import java.util.Map;
 public class PantallaRegistro extends AppCompatActivity {
     Usuario user = new Usuario();
     Direccion direccion = new Direccion();
-
+    int Direccionid;
     EditText nombre;
     EditText apellidos;
     EditText dni;
@@ -60,6 +60,7 @@ public class PantallaRegistro extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_registro_paso1);
+
 
     }
 
