@@ -407,6 +407,8 @@ public class VentanaAdmin extends javax.swing.JFrame {
             .addComponent(panelTableado)
         );
 
+        getAccessibleContext().setAccessibleName("Ventana Administrador");
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
