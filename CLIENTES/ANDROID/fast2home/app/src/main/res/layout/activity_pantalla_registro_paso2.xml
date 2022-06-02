@@ -51,7 +51,7 @@
         android:layout_height="49dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-black"
-        android:text="REGISTRO"
+        android:text="@string/titulosRegistro"
         android:textAlignment="viewStart"
         android:textColor="@color/principalFastToHome"
         android:textSize="34sp"
