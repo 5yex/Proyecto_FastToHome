@@ -1,10 +1,9 @@
-package com.donosocortes.fast2home;
+package com.donosocortes.fast2home.vista.registro;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.TranslateAnimation;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -12,6 +11,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.donosocortes.fast2home.R;
 import com.donosocortes.fast2home.modelo.Direccion;
 import com.donosocortes.fast2home.modelo.Peticion;
 import com.donosocortes.fast2home.modelo.Usuario;
