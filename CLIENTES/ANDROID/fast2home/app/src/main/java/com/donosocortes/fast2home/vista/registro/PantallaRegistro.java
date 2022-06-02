@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -25,7 +26,8 @@ import java.util.Map;
 public class PantallaRegistro extends AppCompatActivity {
     Usuario user = null;
     Direccion direccion = null;
-
+    EditText calle;
+    Ed
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
