@@ -15,8 +15,12 @@
     <string name="userDirCiudad">Ciudad:</string>
     <string name="userDirOtrosDatos">Otros:</string>
 
+    <string name=""
+
     <string name="controlSiguientePaso">SIGUIENTE PASO</string>
 
+
     <string name="titulosRegistro">Registro</string>
+
 
 </resources>
