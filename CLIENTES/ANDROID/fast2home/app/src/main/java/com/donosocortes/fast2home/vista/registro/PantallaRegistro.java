@@ -131,6 +131,7 @@ public class PantallaRegistro extends AppCompatActivity {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
+                    datos.getInt("last_id");
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaRegistro.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
