@@ -87,7 +87,7 @@ public class PantallaRegistro extends AppCompatActivity {
         registerDirecion();
     }
 
-    private void registerCompleter() {
+    private void registerCompleter(int idDireccion) {
         String url = "http://10.0.2.2/php/webService/api.php";
         RequestQueue queue = Volley.newRequestQueue(PantallaRegistro.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
@@ -112,6 +112,7 @@ public class PantallaRegistro extends AppCompatActivity {
                 user.setDni(dni.getText().toString());
                 user.setNombre(nombre.getText().toString());
                 user.setTlf(telefono.getText().toString());
+                user.setId_direccion(idDireccion);
 
                 params.put("DATA", new Peticion("nuevo_usuario", user.getJSON()).getJSON());
                 return params;
@@ -133,7 +134,7 @@ public class PantallaRegistro extends AppCompatActivity {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
                     int DireccionId = datos.getInt("last_id");
                     if (DireccionId != -1){
-                        registerCompleter();
+                        registerCompleter(DireccionId);
                     }
                 }
             } catch (JSONException | VolleyError e) {
