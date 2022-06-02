@@ -51,31 +51,28 @@ public class PantallaLogin extends AppCompatActivity {
     public void comprobarPass(View view) {
         String url = "http://10.0.2.2/php/webService/api.php";
         RequestQueue queue = Volley.newRequestQueue(PantallaLogin.this);
-        StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                System.out.println(response);
-                try {
-                    JSONObject resp = new JSONObject(response);
-                    if ((resp.getBoolean("error")) == true) {
-                        throw new VolleyError(resp.getString("datos"));
-                    } else {
-                        JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
-                        user.setPassword(datos.getString("password"));
-                        user.setId(datos.getInt("id"));
-                        if(BCrypt.checkpw(password.getText().toString(),user.getPassword())){
-                            Toast.makeText(PantallaLogin.this, "Has iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
+        StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
+            System.out.println(response);
+            try {
+                JSONObject resp = new JSONObject(response);
+                if ((resp.getBoolean("error")) == true) {
+                    throw new VolleyError(resp.getString("datos"));
+                } else {
+                    JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
+                    user.setPassword(datos.getString("password"));
+                    user.setId(datos.getInt("id"));
+                    if(BCrypt.checkpw(password.getText().toString(),user.getPassword())){
+                        Toast.makeText(PantallaLogin.this, "Has iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
 
 
-                            //todo: Ir a siguiente pantalla
+                        //todo: Ir a siguiente pantalla
 
-                        }else {
-                            Toast.makeText(PantallaLogin.this, "Tu contraseña es incorrecta", Toast.LENGTH_SHORT).show();
-                        }
+                    }else {
+                        Toast.makeText(PantallaLogin.this, "Tu contraseña es incorrecta", Toast.LENGTH_SHORT).show();
                     }
-                } catch (JSONException | VolleyError e) {
-                    Toast.makeText(PantallaLogin.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
+            } catch (JSONException | VolleyError e) {
+                Toast.makeText(PantallaLogin.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         }, error -> Toast.makeText(PantallaLogin.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show()) {
             @Override
