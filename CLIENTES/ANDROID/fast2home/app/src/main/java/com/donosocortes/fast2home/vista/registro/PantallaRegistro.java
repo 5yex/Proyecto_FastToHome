@@ -27,7 +27,6 @@ import java.util.Map;
 public class PantallaRegistro extends AppCompatActivity {
     Usuario user = new Usuario();
     Direccion direccion = new Direccion();
-    int Direccionid = -1;
     EditText nombre;
     EditText apellidos;
     EditText dni;
