@@ -46,7 +46,6 @@ public class PantallaLogin extends AppCompatActivity {
 
     /**
      * Comprueba la contrasña llamando a la api rest con volley
-     * @param view
      */
     public void comprobarPass(View view) {
         String url = "http://10.0.2.2/php/webService/api.php";
