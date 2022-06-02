@@ -84,7 +84,7 @@ public class PantallaRegistro extends AppCompatActivity {
      *
      * @param view
      */
-    public void registerCompleter(View view) {
+    public void registerCompleter() {
         String url = "http://10.0.2.2/php/webService/api.php";
         RequestQueue queue = Volley.newRequestQueue(PantallaRegistro.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
