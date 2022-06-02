@@ -105,7 +105,8 @@ public class PantallaRegistro extends AppCompatActivity {
                 Map<String, String> params = new HashMap<String, String>();
                 user = new Usuario();
 
-                user.setEmail();
+                user.setEmail(email.getText().toString());
+                user.setPassword(password.getText().toString());
 
 
                 params.put("DATA", new Peticion("nuevo_usuario", user.getJSON()).getJSON());
