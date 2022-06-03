@@ -84,6 +84,7 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
                 user.setId_direccion(idDireccion);
+                user.setRol("cliente");
                 params.put("DATA", new Peticion("nuevo_usuario", user.getJSON()).getJSON());
                 return params;
             }
