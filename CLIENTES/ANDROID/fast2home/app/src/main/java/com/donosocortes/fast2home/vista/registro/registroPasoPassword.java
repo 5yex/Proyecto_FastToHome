@@ -26,5 +26,7 @@ public class registroPasoPassword extends AppCompatActivity {
 
         password = findViewById(R.id.etPassword);
         passwordConfirm = findViewById(R.id.etPasswordConfirm);
+
+        System.err.println(user.getJSON()+direccion.getJSON());
     }
 }
