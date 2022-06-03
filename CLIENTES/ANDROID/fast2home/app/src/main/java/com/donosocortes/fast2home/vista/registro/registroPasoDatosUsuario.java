@@ -35,9 +35,18 @@ public class registroPasoDatosUsuario extends AppCompatActivity {
 
 
     public void irPasoPassword(View view) {
+        //Transporte de los datos
+        user.setNombre(nombre.getText().toString());
+        user.setApellidos(apellidos.getText().toString());
+        user.setDni(dni.getText().toString());
+        user.setTlf(telefono.getText().toString());
+        user.setEmail(email.getText().toString());
+
         Intent i = new Intent(this, registroPasoPassword.class );
+
         i.putExtra("user", user);
         i.putExtra("direccion", direccion);
+
         startActivity(i);
     };
 
