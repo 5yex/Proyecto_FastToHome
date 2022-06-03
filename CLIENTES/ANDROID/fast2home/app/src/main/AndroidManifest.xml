@@ -28,9 +28,6 @@
             android:name=".vista.registro.registroPasoPassword"
             android:exported="false" />
         <activity
-            android:name=".vista.registro.PantallaRegistro_paso3"
-            android:exported="false" />
-        <activity
             android:name=".vista.login.PantallaLogin"
             android:exported="false" />
         <activity

@@ -2,7 +2,9 @@ package com.donosocortes.fast2home.vista.registro;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 
 import com.donosocortes.fast2home.R;
@@ -29,4 +31,11 @@ public class registroPasoPassword extends AppCompatActivity {
 
         System.err.println(user.getJSON()+direccion.getJSON());
     }
+
+    public void irPasoDireccionFinal(View view) {
+        Intent i = new Intent(this, registroPasoDireccionFinal.class );
+        i.putExtra("user", user);
+        i.putExtra("direccion", direccion);
+        startActivity(i);
+    };
 }
