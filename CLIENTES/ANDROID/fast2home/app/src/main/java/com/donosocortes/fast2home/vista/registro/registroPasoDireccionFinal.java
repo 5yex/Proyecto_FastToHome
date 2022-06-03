@@ -56,6 +56,9 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
     public void accionRegistro(View view){
         direccion.setNumero(Integer.valueOf(numero.getText().toString()));
         direccion.setCodigo_postal(Integer.valueOf(codigoPostal.getText().toString()));
+        direccion.setCiudad(ciudad.getText().toString());
+        direccion.setCalle(calle.getText().toString());
+        direccion.setOtros(otros.getText().toString());
 
         System.err.println(user.getJSON()+direccion.getJSON());
         registerDirecion();
