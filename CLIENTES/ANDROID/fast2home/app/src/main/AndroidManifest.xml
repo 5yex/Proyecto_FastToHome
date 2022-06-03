@@ -19,6 +19,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31" >
         <activity
+            android:name=".registroPasoDireccionFinal"
+            android:exported="false" />
+        <activity
             android:name=".vista.registro.registroPasoDatosUsuario"
             android:exported="false" />
         <activity
@@ -26,9 +29,6 @@
             android:exported="false" />
         <activity
             android:name=".vista.registro.PantallaRegistro_paso3"
-            android:exported="false" />
-        <activity
-            android:name=".vista.registro.PantallaRegistro_paso2"
             android:exported="false" />
         <activity
             android:name=".vista.login.PantallaLogin"
