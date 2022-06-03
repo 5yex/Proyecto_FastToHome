@@ -22,5 +22,10 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_paso_direccion_final);
+        calle =  findViewById(R.id.etCalle);
+        numero = findViewById(R.id.etNumero);
+        codigoPostal = findViewById(R.id.etCodigoPostal);
+        ciudad = findViewById(R.id.etCiudad);
+        otros = findViewById(R.id.etOtros);
     }
 }
