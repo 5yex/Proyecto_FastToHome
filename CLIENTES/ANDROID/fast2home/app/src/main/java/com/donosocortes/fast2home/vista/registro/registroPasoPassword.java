@@ -11,6 +11,8 @@ import com.donosocortes.fast2home.R;
 import com.donosocortes.fast2home.modelo.Direccion;
 import com.donosocortes.fast2home.modelo.Usuario;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 public class registroPasoPassword extends AppCompatActivity {
     Usuario user;
     Direccion direccion;
@@ -33,6 +35,9 @@ public class registroPasoPassword extends AppCompatActivity {
     }
 
     public void irPasoDireccionFinal(View view) {
+
+        user.setPassword(BCrypt.hashpw(password.getText().toString(), BCrypt.gensalt(10)));
+        
         Intent i = new Intent(this, registroPasoDireccionFinal.class );
         i.putExtra("user", user);
         i.putExtra("direccion", direccion);
