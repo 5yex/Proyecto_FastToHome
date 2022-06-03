@@ -13,7 +13,6 @@
         android:layout_marginStart="28dp"
         android:layout_marginBottom="28dp"
         android:backgroundTint="@color/principalFastToHome"
-        android:onClick="nextStepDireccion"
         android:textSize="24sp"
         android:textStyle="bold|italic"
         app:cornerRadius="100dp"
