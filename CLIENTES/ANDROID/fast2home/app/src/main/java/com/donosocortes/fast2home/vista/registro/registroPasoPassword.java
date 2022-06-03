@@ -28,8 +28,8 @@ public class registroPasoPassword extends AppCompatActivity {
         user = (Usuario) getIntent().getExtras().getSerializable("user");
         direccion = (Direccion) getIntent().getExtras().getSerializable("direccion");
 
-        password = findViewById(R.id.etPassword);
-        passwordConfirm = findViewById(R.id.etPasswordConfirm);
+        password = findViewById(R.id.etPasswordR);
+        passwordConfirm = findViewById(R.id.etPasswordConfirmR);
 
         System.err.println(user.getJSON()+direccion.getJSON());
     }
