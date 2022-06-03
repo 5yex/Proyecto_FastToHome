@@ -40,7 +40,7 @@ public class registroPasoDatosUsuario extends AppCompatActivity {
         user.setApellidos(apellidos.getText().toString());
         user.setDni(dni.getText().toString());
         user.setTlf(telefono.getText().toString());
-        user.setEmail(email.getText().toString());
+       // user.setEmail(email.getText().toString());
 
         Intent i = new Intent(this, registroPasoPassword.class );
 
