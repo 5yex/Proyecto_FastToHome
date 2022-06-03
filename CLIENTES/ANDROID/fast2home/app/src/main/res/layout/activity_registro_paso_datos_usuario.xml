@@ -154,7 +154,7 @@
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="28dp"
         android:backgroundTint="@color/principalFastToHome"
-        android:onClick="irRegistroP2"
+        android:onClick="irPasoPassword"
         android:text="@string/controlSiguientePaso"
         android:textSize="16sp"
         android:textStyle="bold|italic"

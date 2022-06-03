@@ -35,7 +35,7 @@ public class registroPasoDatosUsuario extends AppCompatActivity {
     }
 
 
-    public void irPartePassword(View view) {
+    public void irPasoPassword(View view) {
         Intent i = new Intent(this, registroPasoPassword.class );
         i.putExtra("user", user);
         i.putExtra("direccion", direccion);
