@@ -19,7 +19,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31" >
         <activity
-            android:name=".registroPasoDireccionFinal"
+            android:name=".vista.registro.registroPasoDireccionFinal"
             android:exported="false" />
         <activity
             android:name=".vista.registro.registroPasoDatosUsuario"
