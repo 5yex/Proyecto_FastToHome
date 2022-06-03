@@ -22,6 +22,10 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_paso_direccion_final);
+
+        user = (Usuario) getIntent().getExtras().getSerializable("user");
+        direccion = (Direccion) getIntent().getExtras().getSerializable("direccion");
+
         calle =  findViewById(R.id.etCalle);
         numero = findViewById(R.id.etNumero);
         codigoPostal = findViewById(R.id.etCodigoPostal);
