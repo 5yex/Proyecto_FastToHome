@@ -13,8 +13,8 @@ import com.donosocortes.fast2home.modelo.Direccion;
 import com.donosocortes.fast2home.modelo.Usuario;
 
 public class registroPasoDatosUsuario extends AppCompatActivity {
-    Usuario user;
-    Direccion direccion;
+    Usuario user = new Usuario();
+    Direccion direccion = new Direccion();
     EditText nombre;
     EditText apellidos;
     EditText dni;
