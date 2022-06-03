@@ -24,18 +24,9 @@ import org.mindrot.jbcrypt.BCrypt;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PantallaRegistro extends AppCompatActivity {
-    Usuario user = new Usuario();
-    Direccion direccion = new Direccion();
-    EditText nombre;
-    EditText apellidos;
-    EditText dni;
-    EditText telefono;
-
-    EditText email;
-    EditText password;
-    EditText passwordConfirm;
-
+public class PantallaRegistro_paso3 extends AppCompatActivity {
+    Usuario user;
+    Direccion direccion;
     EditText calle;
     EditText numero;
     EditText codigoPostal;
@@ -44,33 +35,13 @@ public class PantallaRegistro extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        email = findViewById(R.id.eTEmail);
-        nombre = findViewById(R.id.etNombre);
-        apellidos = findViewById(R.id.etApellidos);
-        dni = findViewById(R.id.etDni);
-        telefono = findViewById(R.id.etTelefono);
-        password = findViewById(R.id.etPassword);
-        passwordConfirm = findViewById(R.id.etPasswordConfirm);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_pantalla_registro_paso3);
         calle =  findViewById(R.id.etCalle);
         numero = findViewById(R.id.etNumero);
         codigoPostal = findViewById(R.id.etCodigoPostal);
         ciudad = findViewById(R.id.etCiudad);
         otros = findViewById(R.id.etOtros);
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pantalla_registro_paso1);
-    }
-
-    public void nextStepDireccion(View view) {
-        setContentView(R.layout.activity_pantalla_registro_paso3);
-    }
-
-    public void nextStepPassword(View view) {
-        setContentView(R.layout.activity_pantalla_registro_paso2);
-    }
-
-    public void lastStepUsuario(View view) {
-        setContentView(R.layout.activity_pantalla_registro_paso1);
     }
 
     @Override
@@ -89,7 +60,7 @@ public class PantallaRegistro extends AppCompatActivity {
 
     private void registerCompleter(int idDireccion) {
         String url = "http://10.0.2.2/php/webService/api.php";
-        RequestQueue queue = Volley.newRequestQueue(PantallaRegistro.this);
+        RequestQueue queue = Volley.newRequestQueue(PantallaRegistro_paso3.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
             System.out.println(response);
             try {
@@ -97,21 +68,15 @@ public class PantallaRegistro extends AppCompatActivity {
                 if ((resp.getBoolean("error")) == true) {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
-                    Toast.makeText(PantallaRegistro.this, "Registro Completado Con Éxito", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PantallaRegistro_paso3.this, "Registro Completado Con Éxito", Toast.LENGTH_SHORT).show();
                 }
             } catch (JSONException | VolleyError e) {
-                Toast.makeText(PantallaRegistro.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(PantallaRegistro_paso3.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
-        }, error -> Toast.makeText(PantallaRegistro.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show()) {
+        }, error -> Toast.makeText(PantallaRegistro_paso3.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show()) {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                user.setEmail(email.getText().toString());
-                user.setPassword(BCrypt.hashpw(password.getText().toString(), BCrypt.gensalt(10)));
-                user.setApellidos(apellidos.getText().toString());
-                user.setDni(dni.getText().toString());
-                user.setNombre(nombre.getText().toString());
-                user.setTlf(telefono.getText().toString());
                 user.setId_direccion(idDireccion);
                 params.put("DATA", new Peticion("nuevo_usuario", user.getJSON()).getJSON());
                 return params;
@@ -122,7 +87,7 @@ public class PantallaRegistro extends AppCompatActivity {
 
     private void registerDirecion() {
         String url = "http://10.0.2.2/php/webService/api.php";
-        RequestQueue queue = Volley.newRequestQueue(PantallaRegistro.this);
+        RequestQueue queue = Volley.newRequestQueue(PantallaRegistro_paso3.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
             System.out.println(response);
             try {
@@ -137,9 +102,9 @@ public class PantallaRegistro extends AppCompatActivity {
                     }
                 }
             } catch (JSONException | VolleyError e) {
-                Toast.makeText(PantallaRegistro.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(PantallaRegistro_paso3.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
-        }, error -> Toast.makeText(PantallaRegistro.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show()) {
+        }, error -> Toast.makeText(PantallaRegistro_paso3.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show()) {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();

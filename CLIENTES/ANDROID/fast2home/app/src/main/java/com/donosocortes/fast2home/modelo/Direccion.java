@@ -6,11 +6,13 @@ package com.donosocortes.fast2home.modelo;
 
 import com.google.gson.Gson;
 
+import java.io.Serializable;
+
 /**
  *
  * @author jmcbg
  */
-public class Direccion {
+public class Direccion implements Serializable {
 
     private int id_direccion;
     private String calle;

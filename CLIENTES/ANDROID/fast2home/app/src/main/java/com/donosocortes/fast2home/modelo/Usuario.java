@@ -5,6 +5,8 @@
 package com.donosocortes.fast2home.modelo;
 
 import com.google.gson.Gson;
+
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Vector;
 
@@ -12,7 +14,7 @@ import java.util.Vector;
  *
  * @author jmcbg
  */
-public class Usuario {
+public class Usuario implements Serializable {
 
     private int id;
     private String nombre;
