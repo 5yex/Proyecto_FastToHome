@@ -3,9 +3,21 @@ package com.donosocortes.fast2home.vista.registro;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.EditText;
+
+import com.donosocortes.fast2home.R;
+import com.donosocortes.fast2home.modelo.Direccion;
+import com.donosocortes.fast2home.modelo.Usuario;
 
 public class registroPasoDireccionFinal extends AppCompatActivity {
-
+    Usuario user;
+    Direccion direccion;
+    EditText calle;
+    EditText numero;
+    EditText codigoPostal;
+    EditText ciudad;
+    EditText otros;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
