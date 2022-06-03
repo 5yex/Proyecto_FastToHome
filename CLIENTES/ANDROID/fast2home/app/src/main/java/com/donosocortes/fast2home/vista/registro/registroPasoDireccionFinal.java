@@ -17,7 +17,7 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
     EditText codigoPostal;
     EditText ciudad;
     EditText otros;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

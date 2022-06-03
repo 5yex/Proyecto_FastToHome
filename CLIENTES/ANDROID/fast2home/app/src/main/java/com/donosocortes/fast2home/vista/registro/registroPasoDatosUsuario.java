@@ -20,8 +20,7 @@ public class registroPasoDatosUsuario extends AppCompatActivity {
     EditText dni;
     EditText telefono;
     EditText email;
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
