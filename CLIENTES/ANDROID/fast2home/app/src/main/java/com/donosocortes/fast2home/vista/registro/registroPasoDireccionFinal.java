@@ -108,12 +108,6 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                ciudad = findViewById(R.id.etCiudad);
-
-                direccion.setCiudad(ciudad.getText().toString());
-                direccion.setCodigo_postal(Integer.parseInt(codigoPostal.getText().toString()));
-                direccion.setNumero(Integer.parseInt(numero.getText().toString()));
-                direccion.setOtros(otros.getText().toString());
                 params.put("DATA", new Peticion("nueva_direccion_devuelve_id", direccion.getJSON()).getJSON());
                 return params;
             }
