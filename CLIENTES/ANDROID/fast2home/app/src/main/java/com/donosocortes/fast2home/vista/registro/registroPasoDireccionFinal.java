@@ -54,6 +54,7 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
      */
 
     public void accionRegistro(View view){
+        System.err.println(user.getJSON()+direccion.getJSON());
         registerDirecion();
     }
 
