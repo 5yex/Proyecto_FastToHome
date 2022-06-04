@@ -125,7 +125,7 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
         queue.add(request);
     }
 
-    public void volverPantallaLogin(View view){
+    public void volverPantallaLogin(){
         Intent i = new Intent(this, PantallaLogin.class );
 
         //Para facilitar el inicio de sesión una vez registrado
