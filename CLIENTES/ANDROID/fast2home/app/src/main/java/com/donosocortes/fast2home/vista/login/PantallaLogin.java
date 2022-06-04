@@ -37,7 +37,7 @@ public class PantallaLogin extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_login);
         email = findViewById(R.id.eTEmail);
         password = findViewById(R.id.eTPassword);
-        if(!getIntent().getExtras().isEmpty()){
+        if(getIntent().getExtras() != null){
             email.setText(getIntent().getExtras().getString("email"));
         }
     }
