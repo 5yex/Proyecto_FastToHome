@@ -18,7 +18,7 @@
 
     <EditText
         android:id="@+id/eTEmail"
-        style="@android:style/Widget.Holo.EditText"
+        style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
         android:layout_width="276dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
