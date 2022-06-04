@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.FASTTOHOME" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.FASTTOHOME" parent="Theme.Material3.Light">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/principalFastToHome</item>
         <item name="colorPrimaryVariant">@color/principalFastToHome</item>
@@ -17,13 +17,6 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.FASTTOHOME.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
 
-    <style name="Theme.FASTTOHOME.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.FASTTOHOME.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
