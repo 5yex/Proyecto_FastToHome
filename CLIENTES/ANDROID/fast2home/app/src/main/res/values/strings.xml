@@ -4,6 +4,8 @@
 
     <string name="buttonEntrar">INICIAR SESIÓN</string>
     <string name="buttonRegistro">REGÍSTRATE</string>
+    <string name="buttonSiguientePaso">SIGUIENTE PASO</string>
+
     <string name="userName">Nombre:</string>
     <string name="userDni">Dni:</string>
     <string name="userLastname">Apellidos:</string>
@@ -11,14 +13,11 @@
     <string name="userEmail">Correo Elecrónico:</string>
     <string name="userPassword">Contraseña:</string>
     <string name="userPasswordConfirmation">Confirmar Contraseña:</string>
-
     <string name="userDirNumero">Número:</string>
     <string name="userDirCp">Código Postal:</string>
     <string name="userDirCalle">Calle:</string>
     <string name="userDirCiudad">Ciudad:</string>
     <string name="userDirOtrosDatos">Otros:</string>
-
-    <string name="controlSiguientePaso">SIGUIENTE PASO</string>
 
     <string name="titulosRegistro">Registro</string>
 
