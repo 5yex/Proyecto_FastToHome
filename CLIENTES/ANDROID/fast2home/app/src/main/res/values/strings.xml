@@ -3,7 +3,7 @@
     <string name="apiUrl">http://10.0.2.2/php/webService/api.php</string>
 
     <string name="buttonEntrar">INICIAR SESIÓN</string>
-    <string name="buttonRegistro">REGISTRARSE</string>
+    <string name="buttonRegistro">REGÍSTRATE</string>
     <string name="userName">Nombre:</string>
     <string name="userDni">Dni:</string>
     <string name="userLastname">Apellidos:</string>
