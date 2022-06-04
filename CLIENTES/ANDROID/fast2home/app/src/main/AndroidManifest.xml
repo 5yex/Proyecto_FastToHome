@@ -18,11 +18,7 @@
         android:theme="@style/Theme.FASTTOHOME"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <activity
-            android:name=".principal"
-            android:exported="false"
-            android:label="@string/title_activity_principal"
-            android:theme="@style/Theme.FASTTOHOME.NoActionBar" />
+       
         <activity
             android:name=".vista.registro.registroPaso3Direccion"
             android:exported="false" />
