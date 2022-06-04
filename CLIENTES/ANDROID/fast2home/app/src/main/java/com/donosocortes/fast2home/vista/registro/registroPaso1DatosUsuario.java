@@ -12,7 +12,7 @@ import com.donosocortes.fast2home.R;
 import com.donosocortes.fast2home.modelo.Direccion;
 import com.donosocortes.fast2home.modelo.Usuario;
 
-public class registroPasoDatosUsuario extends AppCompatActivity {
+public class registroPaso1DatosUsuario extends AppCompatActivity {
     Usuario user = new Usuario();
     Direccion direccion = new Direccion();
     EditText nombre;
@@ -42,7 +42,7 @@ public class registroPasoDatosUsuario extends AppCompatActivity {
         user.setTlf(telefono.getText().toString());
         user.setEmail(email.getText().toString());
 
-        Intent i = new Intent(this, registroPasoPassword.class );
+        Intent i = new Intent(this, registroPaso2Password.class );
 
         i.putExtra("user", user);
         i.putExtra("direccion", direccion);

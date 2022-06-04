@@ -19,13 +19,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31" >
         <activity
-            android:name=".vista.registro.registroPasoDireccionFinal"
+            android:name=".vista.registro.registroPaso3Direccion"
             android:exported="false" />
         <activity
-            android:name=".vista.registro.registroPasoDatosUsuario"
+            android:name=".vista.registro.registroPaso1DatosUsuario"
             android:exported="false" />
         <activity
-            android:name=".vista.registro.registroPasoPassword"
+            android:name=".vista.registro.registroPaso2Password"
             android:exported="false" />
         <activity
             android:name=".vista.login.PantallaLogin"

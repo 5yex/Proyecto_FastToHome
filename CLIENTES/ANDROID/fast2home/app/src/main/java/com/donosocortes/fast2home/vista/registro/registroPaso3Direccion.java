@@ -25,7 +25,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class registroPasoDireccionFinal extends AppCompatActivity {
+public class registroPaso3Direccion extends AppCompatActivity {
     Usuario user;
     Direccion direccion;
     EditText calle;
@@ -69,7 +69,7 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
     private void registerCompleter(int idDireccion) {
         //Obtenemos la url del archivo strings.xml
         String url = getString(R.string.apiUrl);
-        RequestQueue queue = Volley.newRequestQueue(registroPasoDireccionFinal.this);
+        RequestQueue queue = Volley.newRequestQueue(registroPaso3Direccion.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
             System.out.println(response);
             try {
@@ -77,13 +77,13 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
                 if ((resp.getBoolean("error")) == true) {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
-                    Toast.makeText(registroPasoDireccionFinal.this, "Registro Completado Con Éxito", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(registroPaso3Direccion.this, "Registro Completado Con Éxito", Toast.LENGTH_SHORT).show();
                     volverPantallaLogin();
                 }
             } catch (JSONException | VolleyError e) {
-                Toast.makeText(registroPasoDireccionFinal.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(registroPaso3Direccion.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
-        }, error -> Toast.makeText(registroPasoDireccionFinal.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show()) {
+        }, error -> Toast.makeText(registroPaso3Direccion.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show()) {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
@@ -98,7 +98,7 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
 
     private void registerDirecion() {
         String url = getString(R.string.apiUrl);
-        RequestQueue queue = Volley.newRequestQueue(registroPasoDireccionFinal.this);
+        RequestQueue queue = Volley.newRequestQueue(registroPaso3Direccion.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
             System.out.println(response);
             try {
@@ -113,9 +113,9 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
                     }
                 }
             } catch (JSONException | VolleyError e) {
-                Toast.makeText(registroPasoDireccionFinal.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(registroPaso3Direccion.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
-        }, error -> Toast.makeText(registroPasoDireccionFinal.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show()) {
+        }, error -> Toast.makeText(registroPaso3Direccion.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show()) {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
