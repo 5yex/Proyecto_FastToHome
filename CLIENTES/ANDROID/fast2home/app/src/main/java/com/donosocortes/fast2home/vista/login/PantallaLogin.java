@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -17,7 +18,6 @@ import com.donosocortes.fast2home.R;
 import com.donosocortes.fast2home.modelo.Peticion;
 import com.donosocortes.fast2home.modelo.Usuario;
 import com.donosocortes.fast2home.vista.registro.registroPaso1DatosUsuario;
-import com.donosocortes.fast2home.vista.ventanaPrincipal.principal;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,6 +41,9 @@ public class PantallaLogin extends AppCompatActivity {
         if(getIntent().getExtras() != null){
             email.setText(getIntent().getExtras().getString("email"));
         }
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getSupportActionBar().hide();
     }
 
     public void irPrincipal() {
