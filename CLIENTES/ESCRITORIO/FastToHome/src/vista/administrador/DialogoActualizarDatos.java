@@ -388,7 +388,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             }
 
         } else {
-            JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, URL, HEIGHT);
+            JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_updateConfirmActionPerformed
 
