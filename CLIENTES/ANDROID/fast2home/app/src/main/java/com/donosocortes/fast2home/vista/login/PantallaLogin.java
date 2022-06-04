@@ -51,7 +51,9 @@ public class PantallaLogin extends AppCompatActivity {
      * Comprueba la contrasña llamando a la api rest con volley
      */
     public void comprobarPass(View view) {
-        String url = "http://10.0.2.2/php/webService/api.php";
+        //String url = "http://10.0.2.2/php/webService/api.php";
+        //Url del archivo strings.xml
+        String url = getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(PantallaLogin.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
             System.out.println(response);
