@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 
 import com.donosocortes.fast2home.R;
@@ -32,6 +33,10 @@ public class registroPaso2Password extends AppCompatActivity {
         passwordConfirm = findViewById(R.id.etPasswordConfirmR);
 
         System.err.println(user.getJSON()+direccion.getJSON());
+
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getSupportActionBar().hide();
     }
 
     public void irPasoDireccionFinal(View view) {

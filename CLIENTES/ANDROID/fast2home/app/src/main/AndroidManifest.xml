@@ -21,7 +21,8 @@
         <activity
             android:name=".principal"
             android:exported="false"
-            android:label="@string/title_activity_principal" />
+            android:label="@string/title_activity_principal"
+            android:theme="@style/Theme.FASTTOHOME.NoActionBar" />
         <activity
             android:name=".vista.registro.registroPaso3Direccion"
             android:exported="false" />
@@ -30,9 +31,6 @@
             android:exported="false" />
         <activity
             android:name=".vista.registro.registroPaso2Password"
-            android:exported="false" />
-        <activity
-            android:name=".vista.login.PantallaLogin"
             android:exported="false" />
         <activity
             android:name=".PantallaInicio"

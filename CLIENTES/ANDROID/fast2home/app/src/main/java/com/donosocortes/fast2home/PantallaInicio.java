@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.donosocortes.fast2home.vista.login.PantallaLogin;
-
 public class PantallaInicio extends AppCompatActivity {
 
     @Override
@@ -19,6 +17,7 @@ public class PantallaInicio extends AppCompatActivity {
     public void pantallaLogin(View view){
         Intent i = new Intent(this, PantallaLogin.class );
         startActivity(i);
+
     }
 
 }

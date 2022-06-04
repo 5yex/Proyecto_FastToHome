@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -31,6 +32,9 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         dni = findViewById(R.id.etDni);
         telefono = findViewById(R.id.etTelefono);
         email = findViewById(R.id.ediTextemail);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getSupportActionBar().hide();
     }
 
 
