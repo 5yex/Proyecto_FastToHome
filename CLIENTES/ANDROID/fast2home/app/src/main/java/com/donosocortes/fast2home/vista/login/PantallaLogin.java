@@ -17,6 +17,7 @@ import com.android.volley.toolbox.Volley;
 import com.donosocortes.fast2home.R;
 import com.donosocortes.fast2home.modelo.Peticion;
 import com.donosocortes.fast2home.modelo.Usuario;
+import com.donosocortes.fast2home.vista.principal.PantallaPrincipal;
 import com.donosocortes.fast2home.vista.registro.registroPaso1DatosUsuario;
 
 import org.json.JSONException;
@@ -48,8 +49,8 @@ public class PantallaLogin extends AppCompatActivity {
     }
 
     public void irPrincipal() {
-      //  Intent i = new Intent(this, principal.class );
-       // startActivity(i);
+        Intent i = new Intent(this, PantallaPrincipal.class );
+       startActivity(i);
     };
 
     public void irRegistro(View view) {
