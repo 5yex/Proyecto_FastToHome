@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FASTTOHOME"
         android:usesCleartextTraffic="true"
-        android:screenOrientation="portrait">
+        android:screenOrientation="portrait"
         tools:targetApi="31" >
         <activity
             android:name=".vista.registro.registroPaso3Direccion"
