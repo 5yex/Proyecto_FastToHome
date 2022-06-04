@@ -6,6 +6,8 @@
     <string name="buttonRegistro">REGÍSTRATE</string>
     <string name="buttonSiguientePaso">SIGUIENTE PASO</string>
 
+    <string name="titulosRegistro">Registro</string>
+
     <string name="userName">Nombre:</string>
     <string name="userDni">Dni:</string>
     <string name="userLastname">Apellidos:</string>
@@ -19,7 +21,6 @@
     <string name="userDirCiudad">Ciudad:</string>
     <string name="userDirOtrosDatos">Otros:</string>
 
-    <string name="titulosRegistro">Registro</string>
 
 
 
