@@ -109,7 +109,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         modificarPassCheck = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Registro de usuario");
+        setTitle("Actualizar usuario");
         setIconImage(null);
         setName("Registro de usuario"); // NOI18N
         setResizable(false);
