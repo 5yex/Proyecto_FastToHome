@@ -17,6 +17,7 @@ import com.donosocortes.fast2home.R;
 import com.donosocortes.fast2home.modelo.Peticion;
 import com.donosocortes.fast2home.modelo.Usuario;
 import com.donosocortes.fast2home.vista.registro.registroPaso1DatosUsuario;
+import com.donosocortes.fast2home.vista.ventanaPrincipal.principal;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -43,7 +44,7 @@ public class PantallaLogin extends AppCompatActivity {
     }
 
     public void irPrincipal(View view) {
-        Intent i = new Intent(this, registroPaso1DatosUsuario.class );
+        Intent i = new Intent(this, principal.class );
         startActivity(i);
     };
 
