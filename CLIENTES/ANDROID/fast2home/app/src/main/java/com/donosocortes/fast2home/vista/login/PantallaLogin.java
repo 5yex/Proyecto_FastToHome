@@ -74,7 +74,7 @@ public class PantallaLogin extends AppCompatActivity {
                     if(BCrypt.checkpw(password.getText().toString(),user.getPassword())){
                         Toast.makeText(PantallaLogin.this, "Has iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
 
-
+                        irPrincipal();
                         //todo: Ir a siguiente pantalla
 
                     }else {
