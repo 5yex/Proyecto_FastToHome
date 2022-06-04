@@ -2,6 +2,7 @@ package com.donosocortes.fast2home.vista.registro;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -16,6 +17,7 @@ import com.donosocortes.fast2home.R;
 import com.donosocortes.fast2home.modelo.Direccion;
 import com.donosocortes.fast2home.modelo.Peticion;
 import com.donosocortes.fast2home.modelo.Usuario;
+import com.donosocortes.fast2home.vista.login.PantallaLogin;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -75,6 +77,7 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
                     Toast.makeText(registroPasoDireccionFinal.this, "Registro Completado Con Éxito", Toast.LENGTH_SHORT).show();
+
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(registroPasoDireccionFinal.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -120,5 +123,11 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
             }
         };
         queue.add(request);
+    }
+
+    public void volverPantallaLogin(View view){
+        Intent i = new Intent(this, PantallaLogin.class );
+
+        startActivity(i);
     }
 }
