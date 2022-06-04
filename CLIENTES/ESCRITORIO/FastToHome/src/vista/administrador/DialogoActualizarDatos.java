@@ -210,7 +210,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         });
 
         botonModificarDireccion.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        botonModificarDireccion.setText("MODIFICAR DIRECCION");
+        botonModificarDireccion.setText("MODIFICAR DIRECCIÓN");
         botonModificarDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonModificarDireccionActionPerformed(evt);
