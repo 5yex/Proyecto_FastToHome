@@ -35,8 +35,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         telefono = findViewById(R.id.etTelefono);
         email = findViewById(R.id.ediTextemail);
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getSupportActionBar().hide();
+        
     }
 
 
