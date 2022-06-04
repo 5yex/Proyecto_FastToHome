@@ -509,7 +509,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_panelTableadoMousePressed
 
     private void recargarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarClientesActionPerformed
-        // TODO add your handling code here:
+        recargarTablaClientes();
     }//GEN-LAST:event_recargarClientesActionPerformed
 
     private void actualizarVentana() {
