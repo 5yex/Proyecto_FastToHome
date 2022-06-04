@@ -47,7 +47,7 @@ public class imagenesUtil {
         label.setText("");
         try {
             ImageIcon image = imagenesUtil.base64AImagen(imgBase64);
-            label.setIcon(new ImageIcon(image.getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_SMOOTH)));
+            label.setIcon(new ImageIcon(image.getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().width, Image.SCALE_SMOOTH)));
             
         } catch (Exception e) {
             label.setText("NO IMAGE");
