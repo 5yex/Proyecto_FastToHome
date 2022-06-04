@@ -35,7 +35,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         telefono = findViewById(R.id.etTelefono);
         email = findViewById(R.id.ediTextemail);
 
-        
+
     }
 
 
