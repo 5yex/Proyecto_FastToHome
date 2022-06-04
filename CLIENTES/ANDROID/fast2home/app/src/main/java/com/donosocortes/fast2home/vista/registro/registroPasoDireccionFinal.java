@@ -67,6 +67,7 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
     }
 
     private void registerCompleter(int idDireccion) {
+        //Obtenemos la url del archivo strings.xml
         String url = getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(registroPasoDireccionFinal.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
