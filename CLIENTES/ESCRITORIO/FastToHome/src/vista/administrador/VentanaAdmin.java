@@ -482,6 +482,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
         if (id_seleccionado != administrador.getId()) {
             if (UsuarioDao.asignarRolCliente(new Usuario(id_seleccionado))) {
+                JOptionPane.showMessageDialog(this, "Se degradó este admistrador a cliente", "Informe", JOptionPane.INFORMATION_MESSAGE);
                 recargarTablaAdmins();
                 recargarTablaClientes();
             } else {
