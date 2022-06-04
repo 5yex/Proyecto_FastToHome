@@ -14,9 +14,11 @@ public class PantallaInicio extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
+
+        setContentView(R.layout.activity_main);
+
     }
 
     public void pantallaLogin(View view){
