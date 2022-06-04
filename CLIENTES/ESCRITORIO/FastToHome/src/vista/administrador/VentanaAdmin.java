@@ -120,7 +120,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         popUpMercaderes.add(itemMercaderACliente);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Ventana Mercader");
+        setTitle("Ventana Administrador");
         setMinimumSize(new java.awt.Dimension(878, 665));
 
         panelTableado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
