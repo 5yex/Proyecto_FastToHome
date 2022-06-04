@@ -383,6 +383,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
                 if (updateInicio != null) {
                     updateInicio.doClick();
                 }
+                JOptionPane.showMessageDialog(this, "Usuario modificado con éxito", "Información", JOptionPane.INFORMATION_MESSAGE);
                 this.dispose();
             }
 
