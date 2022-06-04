@@ -2,6 +2,8 @@ package com.donosocortes.fast2home.vista.ventanaPrincipal;
 
 import android.os.Bundle;
 
+import com.donosocortes.fast2home.R;
+import com.donosocortes.fast2home.databinding.ActivityPrincipalBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +12,6 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.donosocortes.fast2home.vista.ventanaPrincipal.databinding.ActivityPrincipalBinding;
 
 public class principal extends AppCompatActivity {
 
