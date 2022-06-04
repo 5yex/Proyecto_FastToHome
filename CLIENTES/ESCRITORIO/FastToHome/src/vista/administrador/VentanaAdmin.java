@@ -498,6 +498,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         //degradar
         int filaSeleccionada = tablaMercaderes.getSelectedRow();
         if (UsuarioDao.asignarRolCliente(new Usuario(arrayListMercaderes.get(filaSeleccionada).getId()))) {
+            JOptionPane.showMessageDialog(this, "Se degradó este mercader a cliente", "Informe", JOptionPane.INFORMATION_MESSAGE);
             recargarTablaClientes();
             recargarTablaMercaderes();
         } else {
