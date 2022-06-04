@@ -93,7 +93,7 @@
         android:layout_height="60dp"
         android:layout_marginBottom="48dp"
         android:backgroundTint="@color/principalFastToHome"
-        android:onClick="irRegistroP1"
+        android:onClick="irRegistro"
         android:text="REGISTRARSE"
         android:textSize="20sp"
         android:textStyle="bold|italic"

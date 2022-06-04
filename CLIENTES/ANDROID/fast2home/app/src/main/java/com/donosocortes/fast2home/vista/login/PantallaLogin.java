@@ -42,7 +42,7 @@ public class PantallaLogin extends AppCompatActivity {
         }
     }
 
-    public void irRegistroP1(View view) {
+    public void irRegistro(View view) {
         Intent i = new Intent(this, registroPaso1DatosUsuario.class );
         startActivity(i);
     };
