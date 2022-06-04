@@ -42,6 +42,11 @@ public class PantallaLogin extends AppCompatActivity {
         }
     }
 
+    public void irPrincipal(View view) {
+        Intent i = new Intent(this, registroPaso1DatosUsuario.class );
+        startActivity(i);
+    };
+
     public void irRegistro(View view) {
         Intent i = new Intent(this, registroPaso1DatosUsuario.class );
         startActivity(i);
