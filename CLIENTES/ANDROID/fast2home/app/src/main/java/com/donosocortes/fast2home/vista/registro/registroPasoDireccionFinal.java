@@ -67,7 +67,7 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
     }
 
     private void registerCompleter(int idDireccion) {
-        String url = "http://10.0.2.2/php/webService/api.php";
+        String url = getString(R.string.);;
         RequestQueue queue = Volley.newRequestQueue(registroPasoDireccionFinal.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
             System.out.println(response);
