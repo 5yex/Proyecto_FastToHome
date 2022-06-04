@@ -201,7 +201,6 @@ public class DialogoDireccion extends javax.swing.JDialog {
 
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
         if (rellenarDireccion(direccion)) {
-            JOptionPane.showMessageDialog(this, "Se introdujo la dirección del usuario", "Dirección Introducida", JOptionPane.INFORMATION_MESSAGE);
             this.dispose();
         }
     }//GEN-LAST:event_aceptarActionPerformed
