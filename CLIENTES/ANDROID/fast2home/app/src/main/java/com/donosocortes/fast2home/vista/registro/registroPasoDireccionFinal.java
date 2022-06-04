@@ -131,6 +131,5 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
         //Para facilitar el inicio de sesión una vez registrado
         i.putExtra("email",user.getEmail());
         startActivity(i);
-
     }
 }
