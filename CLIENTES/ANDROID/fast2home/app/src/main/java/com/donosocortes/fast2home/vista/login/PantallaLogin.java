@@ -43,7 +43,7 @@ public class PantallaLogin extends AppCompatActivity {
         }
     }
 
-    public void irPrincipal(View view) {
+    public void irPrincipal() {
         Intent i = new Intent(this, principal.class );
         startActivity(i);
     };
