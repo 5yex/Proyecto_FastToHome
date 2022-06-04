@@ -1,4 +1,4 @@
-package com.donosocortes.fast2home.vista.registro;
+package com.donosocortes.fast2home;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.donosocortes.fast2home.R;
 import com.donosocortes.fast2home.modelo.Direccion;
 import com.donosocortes.fast2home.modelo.Usuario;
 

@@ -1,4 +1,4 @@
-package com.donosocortes.fast2home.vista.ventanaPrincipal;
+package com.donosocortes.fast2home;
 
 import android.os.Bundle;
 

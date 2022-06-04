@@ -1,4 +1,4 @@
-package com.donosocortes.fast2home.vista.ventanaPrincipal.ui.notifications;
+package com.donosocortes.fast2home.ui.notifications;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,8 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-
-import com.donosocortes.fast2home.databinding.FragmentNotificationsBinding;
 
 
 public class NotificationsFragment extends Fragment {

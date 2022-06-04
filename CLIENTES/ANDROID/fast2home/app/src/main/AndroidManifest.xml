@@ -19,20 +19,20 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".vista.ventanaPrincipal.principal"
+            android:name=".principal"
             android:exported="false"
             android:label="@string/title_activity_principal" />
         <activity
-            android:name=".vista.registro.registroPaso3Direccion"
+            android:name=".registroPaso3Direccion"
             android:exported="false" />
         <activity
-            android:name=".vista.registro.registroPaso1DatosUsuario"
+            android:name=".registroPaso1DatosUsuario"
             android:exported="false" />
         <activity
-            android:name=".vista.registro.registroPaso2Password"
+            android:name=".registroPaso2Password"
             android:exported="false" />
         <activity
-            android:name=".vista.login.PantallaLogin"
+            android:name=".PantallaLogin"
             android:exported="false" />
         <activity
             android:name=".PantallaInicio"

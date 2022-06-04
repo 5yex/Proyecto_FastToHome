@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.donosocortes.fast2home.vista.login.PantallaLogin;
-
 public class PantallaInicio extends AppCompatActivity {
 
     @Override
