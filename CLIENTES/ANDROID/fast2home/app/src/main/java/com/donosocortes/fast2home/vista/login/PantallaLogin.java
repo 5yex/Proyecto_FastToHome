@@ -35,6 +35,8 @@ public class PantallaLogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_pantalla_login);
         email = findViewById(R.id.eTEmail);
         password = findViewById(R.id.eTPassword);
@@ -42,8 +44,7 @@ public class PantallaLogin extends AppCompatActivity {
             email.setText(getIntent().getExtras().getString("email"));
         }
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getSupportActionBar().hide();
+
     }
 
     public void irPrincipal() {
