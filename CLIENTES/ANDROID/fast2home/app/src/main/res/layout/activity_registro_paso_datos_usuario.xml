@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".registroPaso1DatosUsuario">
+    tools:context=".vista.registro.registroPaso1DatosUsuario">
 
     <EditText
         android:id="@+id/ediTextemail"
