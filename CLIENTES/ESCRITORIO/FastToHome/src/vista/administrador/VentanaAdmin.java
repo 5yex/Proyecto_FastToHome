@@ -219,6 +219,11 @@ public class VentanaAdmin extends javax.swing.JFrame {
         });
 
         recargarClientes.setText("RECARGAR");
+        recargarClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                recargarClientesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelTablaClientesLayout = new javax.swing.GroupLayout(panelTablaClientes);
         panelTablaClientes.setLayout(panelTablaClientesLayout);
@@ -502,6 +507,10 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void panelTableadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMousePressed
         // TODO add your handling code here:
     }//GEN-LAST:event_panelTableadoMousePressed
+
+    private void recargarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarClientesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_recargarClientesActionPerformed
 
     private void actualizarVentana() {
         administrador = UsuarioDao.obtenerDatosUsuario(administrador);
