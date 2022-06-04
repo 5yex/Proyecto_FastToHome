@@ -510,6 +510,8 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
     private void recargarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarClientesActionPerformed
         recargarTablaClientes();
+        recargarTablaMercaderes();
+        recargarTablaAdmins();
     }//GEN-LAST:event_recargarClientesActionPerformed
 
     private void actualizarVentana() {
