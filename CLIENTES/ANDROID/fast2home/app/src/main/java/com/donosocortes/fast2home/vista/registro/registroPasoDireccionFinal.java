@@ -77,7 +77,7 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
                     Toast.makeText(registroPasoDireccionFinal.this, "Registro Completado Con Éxito", Toast.LENGTH_SHORT).show();
-
+                    volverPantallaLogin();
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(registroPasoDireccionFinal.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
