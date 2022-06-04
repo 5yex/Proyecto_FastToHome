@@ -17,8 +17,6 @@ public class PantallaInicio extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
 
-        setContentView(R.layout.activity_main);
-
     }
 
     public void pantallaLogin(View view){
