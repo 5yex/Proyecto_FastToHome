@@ -127,6 +127,8 @@ public class registroPasoDireccionFinal extends AppCompatActivity {
 
     public void volverPantallaLogin(View view){
         Intent i = new Intent(this, PantallaLogin.class );
+
+        //Para facilitar el inicio de sesión una vez registrado
         i.putExtra("email",user.getEmail());
         startActivity(i);
 
