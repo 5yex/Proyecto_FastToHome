@@ -611,6 +611,20 @@ function obtenerUsuariosMercader(){
 
 function hacerPedido($datos){
     require_once '../modelo/Pedido.php';
+    
+    try{
+        $pedido = new Pedido();
+        $pedido
+
+        if ($pedido->agregar()) {
+            mandarRespuesta(false, 'Se realizó un pedido con exito');
+        } else {
+            mandarRespuesta(true, 'No se pudo procesar el pedido');
+        }        
+    }catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+    
 }
 
 function obtenerPedidoUnico($datos){
