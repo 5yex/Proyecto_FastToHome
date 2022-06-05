@@ -22,9 +22,6 @@
     <string name="userDirOtrosDatos">Otros:</string>
     <string name="title_activity_principal">principal</string>
     <string name="title_home">INICIO</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_ventana_principal">ventanaPrincipal</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
