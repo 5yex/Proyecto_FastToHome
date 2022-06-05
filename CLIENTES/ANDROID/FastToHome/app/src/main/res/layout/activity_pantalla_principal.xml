@@ -7,7 +7,7 @@
     tools:context=".vista.principal.PantallaPrincipal">
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -16,19 +16,22 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintStart_toStartOf="@+id/bienvenido"
+        app:layout_constraintTop_toBottomOf="@+id/bienvenido" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="190dp"
-        tools:layout_editor_absoluteY="381dp" />
+        android:layout_width="349dp"
+        android:layout_height="63dp"
+        android:text="HACER PEDIDO"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="311dp" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/bienvenido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
