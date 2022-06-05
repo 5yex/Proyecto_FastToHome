@@ -14,10 +14,11 @@ import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.donosocortes.fast2home.R;
-import com.donosocortes.fast2home.modelo.Peticion;
-import com.donosocortes.fast2home.modelo.Usuario;
-import com.donosocortes.fast2home.vista.registro.registroPaso1DatosUsuario;
+
+import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.modelo.Peticion;
+import com.proyecto.fasttohome.modelo.Usuario;
+import com.proyecto.fasttohome.vista.registro.registroPaso1DatosUsuario;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -9,9 +9,10 @@ import android.view.Window;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.donosocortes.fast2home.R;
-import com.donosocortes.fast2home.modelo.Direccion;
-import com.donosocortes.fast2home.modelo.Usuario;
+import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.modelo.Direccion;
+import com.proyecto.fasttohome.modelo.Usuario;
+
 
 public class registroPaso1DatosUsuario extends AppCompatActivity {
     Usuario user = new Usuario();

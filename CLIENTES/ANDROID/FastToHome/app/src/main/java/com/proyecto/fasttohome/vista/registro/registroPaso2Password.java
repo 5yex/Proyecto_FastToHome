@@ -8,9 +8,10 @@ import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
 
-import com.donosocortes.fast2home.R;
-import com.donosocortes.fast2home.modelo.Direccion;
-import com.donosocortes.fast2home.modelo.Usuario;
+
+import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.modelo.Direccion;
+import com.proyecto.fasttohome.modelo.Usuario;
 
 import org.mindrot.jbcrypt.BCrypt;
 

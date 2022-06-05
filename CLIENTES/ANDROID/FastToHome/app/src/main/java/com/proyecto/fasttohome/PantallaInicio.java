@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
-import com.donosocortes.fast2home.vista.login.PantallaLogin;
+import com.proyecto.fasttohome.vista.login.PantallaLogin;
 
 public class PantallaInicio extends AppCompatActivity {
 
