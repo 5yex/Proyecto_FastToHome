@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FAST_TO_HOME.iml" filepath="$PROJECT_DIR$/.idea/modules/FAST_TO_HOME.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FAST_TO_HOME.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FAST_TO_HOME.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FAST_TO_HOME.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FAST_TO_HOME.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FAST_TO_HOME.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FAST_TO_HOME.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FAST_TO_HOME.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FAST_TO_HOME.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>

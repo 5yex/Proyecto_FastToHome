@@ -1,0 +1,30 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id botonEntrar
+id botonLogin
+id botonRegistrar
+id eTEmail
+id eTPassword
+id imageView
+id imageView2
+id textView
+id textView2
+id textView3
+layout activity_main
+layout activity_pantalla_login
+mipmap ic_launcher
+mipmap ic_launcher_round
+mipmap image2vector
+string app_name
+style Theme.FASTTOHOME
+xml backup_rules
+xml data_extraction_rules
