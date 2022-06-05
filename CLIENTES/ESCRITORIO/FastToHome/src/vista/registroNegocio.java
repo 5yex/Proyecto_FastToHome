@@ -200,6 +200,7 @@ public class registroNegocio extends javax.swing.JFrame {
     }//GEN-LAST:event_botonPedirImagenActionPerformed
 
     private void cargaInicial() {
+        textAreaDescripcion.setLineWrap(true);
         listaCategorias = controlador.CategoriaDao.obtenerCategorias();
         for (Categoria listaCategoria : listaCategorias) {
             comboCategoria.addItem(listaCategoria.getNombre());
