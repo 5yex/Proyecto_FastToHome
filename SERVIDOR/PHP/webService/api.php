@@ -614,7 +614,12 @@ function hacerPedido($datos){
     
     try{
         $pedido = new Pedido();
-        $pedido
+        $pedido->setId_usuario($id_usuario);
+        $pedido->setId_negocio($id_negocio);
+        $pedido->setFecha_hora($fecha_hora);
+        $pedido->setTotal($total);
+        $pedido->setTransporte($transporte);
+        $pedido->setEstado($estado);
 
         if ($pedido->agregar()) {
             mandarRespuesta(false, 'Se realizó un pedido con exito');
