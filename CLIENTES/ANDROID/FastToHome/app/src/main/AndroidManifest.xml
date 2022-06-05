@@ -19,7 +19,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".principal"
+            android:name=".vista.principal.PrincipalP"
             android:exported="false"
             android:label="@string/title_activity_principal" />
         <activity
