@@ -1,4 +1,4 @@
-package com.donosocortes.fast2home.vista.registro;
+package com.proyecto.fasttohome.vista.registro;
 
 import androidx.appcompat.app.AppCompatActivity;
 

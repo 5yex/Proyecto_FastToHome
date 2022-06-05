@@ -1,4 +1,4 @@
-package com.donosocortes.fast2home;
+package com.proyecto.fasttohome;
 
 import androidx.appcompat.app.AppCompatActivity;
 
