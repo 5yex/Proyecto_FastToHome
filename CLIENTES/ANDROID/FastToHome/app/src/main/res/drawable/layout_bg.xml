@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <?xml version="1.0" encoding="UTF-8"?>
     <shape xmlns:android="http://schemas.android.com/apk/res/android">
         <solid android:color="#FFFFFF"/>
         <stroke android:width="3dp" android:color="#B1BCBE" />
         <corners android:radius="10dp"/>
         <padding android:left="0dp" android:top="0dp" android:right="0dp" android:bottom="0dp" />
-    </shape>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
