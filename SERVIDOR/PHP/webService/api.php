@@ -864,9 +864,9 @@ function rellenarCesta($datos){
         $cesta->setId_producto($id_producto);
         
         if ($cesta->agregar()) {
-            mandarRespuesta(false, 'Se ha realizado la insercion de una categoria');
+            mandarRespuesta(false, 'Se rellenó la cesta');
         } else {
-            mandarRespuesta(true, 'Error en la inserccion de la categoria');
+            mandarRespuesta(true, 'Error al rellenar la cesta');
         }
         
     } catch (PDOException $ex) {
