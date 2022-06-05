@@ -619,7 +619,6 @@ function hacerPedido($datos){
         $pedido->setFecha_hora($fecha_hora);
         $pedido->setTotal($total);
         $pedido->setTransporte($transporte);
-        $pedido->setEstado($estado);
 
         if ($pedido->agregar()) {
             mandarRespuesta(false, 'Se realizó un pedido con exito');
