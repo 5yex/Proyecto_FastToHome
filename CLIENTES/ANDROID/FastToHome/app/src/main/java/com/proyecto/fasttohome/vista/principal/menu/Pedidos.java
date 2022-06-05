@@ -20,4 +20,8 @@ class Pedidos extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_pedidos, container, false);
     }
+
+    public Pedidos(){
+
+    }
 }
