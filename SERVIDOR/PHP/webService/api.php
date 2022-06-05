@@ -92,6 +92,9 @@ if (empty($_POST["DATA"])) {
             break;
         
         //Casos de pedidos
+        case 'nuevo_pedido';
+            hacerPedido(json_decode($peticion->datos));
+            break;
         case 'obtener_pedido_unico';
             obtenerPedidoUnico(json_decode($peticion->datos));
             break;
