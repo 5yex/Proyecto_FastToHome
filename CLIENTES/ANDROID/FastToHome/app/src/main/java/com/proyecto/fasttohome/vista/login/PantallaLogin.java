@@ -40,8 +40,8 @@ public class PantallaLogin extends AppCompatActivity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
-        setContentView(R.layout.activity_pantalla_login);
 
+        setContentView(R.layout.activity_pantalla_login);
         email = findViewById(R.id.eTEmail);
         password = findViewById(R.id.eTPassword);
         if(getIntent().getExtras() != null){
