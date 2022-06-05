@@ -18,7 +18,6 @@ import com.android.volley.toolbox.Volley;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
-import com.proyecto.fasttohome.vista.principal.PrincipalP;
 import com.proyecto.fasttohome.vista.registro.registroPaso1DatosUsuario;
 
 import org.json.JSONException;
@@ -37,9 +36,11 @@ public class PantallaLogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_pantalla_login);
+
         email = findViewById(R.id.eTEmail);
         password = findViewById(R.id.eTPassword);
         if(getIntent().getExtras() != null){
@@ -50,8 +51,8 @@ public class PantallaLogin extends AppCompatActivity {
     }
 
     public void irPrincipal() {
-       Intent i = new Intent(this, PrincipalP.class );
-       startActivity(i);
+       //Intent i = new Intent(this, PrincipalP.class );
+      // startActivity(i);
     };
 
     public void irRegistro(View view) {

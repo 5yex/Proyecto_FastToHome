@@ -10,7 +10,11 @@
             android:id="@+id/navigation_home"
             android:name="com.proyecto.fasttohome.vista.principal.menu.Inicio"
             android:label="@string/title_home"
-            tools:layout="@layout/fragment_incio" />
+            tools:layout="@layout/fragment_incio" >
+                <argument
+                    android:name="prueba"
+                    app:argType="string" />
+        </fragment>
         <fragment
             android:id="@+id/pedidos"
             android:name="com.proyecto.fasttohome.vista.principal.menu.Pedidos"
