@@ -604,7 +604,8 @@ public class VentanaAdmin extends javax.swing.JFrame {
     public void confirmarSalida() {
         /*this, "¿Esta seguro de que quiere abandonar esta ventana?", "Advertencia", 
         JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, new Object[]{"Si","No"},"Si"*/
-        int valor = JOptionPane.showOptionDialog();
+        Object[] options = {"Si","No"};
+        int valor = JOptionPane.showOptionDialog(this, "¿Esta seguro de que quiere abandonar esta ventana?", "Advertencia", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, options, options[0]);
         if (valor == JOptionPane.YES_OPTION) {
 
             JOptionPane.showMessageDialog(null, "Volverá a la ventana de Logueo", "Hasta luego!", JOptionPane.INFORMATION_MESSAGE);
