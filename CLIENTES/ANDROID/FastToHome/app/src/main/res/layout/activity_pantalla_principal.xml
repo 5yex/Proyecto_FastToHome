@@ -6,4 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".vista.principal.PantallaPrincipal">
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="263dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="20dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
