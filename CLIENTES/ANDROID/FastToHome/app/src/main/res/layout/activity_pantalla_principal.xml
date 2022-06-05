@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#FFFFFF"
     tools:context=".vista.principal.PantallaPrincipal">
 
     <Button
@@ -57,17 +58,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="346dp"
         android:layout_height="93dp"
-        android:layout_marginTop="196dp"
-        android:background="@color/principalFastToHome"
-        android:backgroundTint="#F44336"
+        android:layout_marginTop="188dp"
+        android:background="@drawable/layout_bg"
+        android:backgroundTint="#E8D3D3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
