@@ -25,7 +25,7 @@ public class NotificationsFragment extends Fragment {
     }
 
     public void editarUsuario(View view){
-        
+        System.err.println("FUNCIUONA");
     }
 
     @Override
