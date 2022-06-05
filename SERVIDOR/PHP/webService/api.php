@@ -330,7 +330,18 @@ function nuevoNegocio($datos){
 }
 
 function obtenerTodosNegocios(){
-    
+    require_once '../modelo/Negocio.php';
+    try {
+        $negocio = new Negocio();
+        $respuesta = $negocio->obtenerTodosNegocios();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
 }
 
 function obtenerIdNegocio($datos) {
