@@ -13,6 +13,6 @@
     <fragment
         android:id="@+id/pedidos"
         android:name="com.proyecto.fasttohome.vista.principal.menu.Pedidos"
-        android:label="fragment_pedidos"
+        android:label="@string/title_pedidos"
         tools:layout="@layout/fragment_pedidos" />
 </navigation>
