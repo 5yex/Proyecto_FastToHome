@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -38,6 +39,8 @@
     </FrameLayout>
 </RelativeLayout>
 =======
+=======
+>>>>>>> parent of 9425a1e2 (autoCommit 20220605.174510)
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
@@ -81,5 +84,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation" />
 
+<<<<<<< HEAD
+</androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> parent of 9425a1e2 (autoCommit 20220605.174510)
+=======
 </androidx.constraintlayout.widget.ConstraintLayout>
 >>>>>>> parent of 9425a1e2 (autoCommit 20220605.174510)
