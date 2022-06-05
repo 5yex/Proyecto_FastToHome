@@ -71,6 +71,7 @@ public class registroNegocio extends javax.swing.JFrame {
         error = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Registro Negocio");
         setResizable(false);
 
         titleText.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
