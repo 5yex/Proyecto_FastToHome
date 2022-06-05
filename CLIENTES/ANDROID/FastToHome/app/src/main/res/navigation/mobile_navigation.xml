@@ -5,8 +5,7 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/navigation_home">
 
-    <navigation android:id="@+id/navigation"
-        app:startDestination="@id/navigation_home">
+    
         <fragment
             android:id="@+id/navigation_home"
             android:name="com.proyecto.fasttohome.vista.principal.menu.Inicio"
@@ -17,5 +16,5 @@
             android:name="com.proyecto.fasttohome.vista.principal.menu.Pedidos"
             android:label="@string/title_pedidos"
             tools:layout="@layout/fragment_pedidos" />
-    </navigation>
+
 </navigation>
