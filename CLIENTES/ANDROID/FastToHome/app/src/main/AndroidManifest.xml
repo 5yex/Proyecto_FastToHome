@@ -24,12 +24,15 @@
             android:exported="false" />
         <activity
             android:name=".vista.registro.registroPaso3Direccion"
+            android:label="Introduzca su dirección"
             android:exported="false" />
         <activity
             android:name=".vista.registro.registroPaso1DatosUsuario"
+            android:label="Introduzca sus datos"
             android:exported="false" />
         <activity
             android:name=".vista.registro.registroPaso2Password"
+            android:label="Introduzca su contraseña"
             android:exported="false" />
         <activity
             android:name=".PantallaInicio"
