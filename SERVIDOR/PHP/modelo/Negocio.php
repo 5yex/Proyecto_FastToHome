@@ -106,6 +106,10 @@ class Negocio extends Conexion {
         return TRUE;
     }
     
+    public function obtenerTodosNegocios(){
+        $sql = "SELECT * FROM negocio";
+    }
+    
     public function obtenerIdNegocio(){
         $sql = "SELECT id FROM negocio WHERE Nombre = :nom";
         
