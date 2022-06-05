@@ -44,6 +44,7 @@ public class registroNegocio extends javax.swing.JFrame {
         this.User = user;
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         cargaInicial();
+        confirmarCierre();
     }
 
     /**
