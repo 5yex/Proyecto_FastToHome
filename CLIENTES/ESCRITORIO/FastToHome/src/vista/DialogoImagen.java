@@ -64,7 +64,7 @@ public class DialogoImagen extends javax.swing.JDialog {
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("SELECCIONAR IMAGEN");
+        setTitle("Seleccionar Imagen");
         setResizable(false);
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
