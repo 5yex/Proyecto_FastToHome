@@ -18,6 +18,7 @@ import com.android.volley.toolbox.Volley;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
+import com.proyecto.fasttohome.vista.principal.PantallaPrincipal;
 import com.proyecto.fasttohome.vista.registro.registroPaso1DatosUsuario;
 
 import org.json.JSONException;
@@ -51,8 +52,8 @@ public class PantallaLogin extends AppCompatActivity {
     }
 
     public void irPrincipal() {
-       //Intent i = new Intent(this, PrincipalP.class );
-      // startActivity(i);
+       Intent i = new Intent(this, PantallaPrincipal.class );
+        startActivity(i);
     };
 
     public void irRegistro(View view) {

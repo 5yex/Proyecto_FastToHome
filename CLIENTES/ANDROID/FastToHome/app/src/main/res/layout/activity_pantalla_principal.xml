@@ -27,9 +27,9 @@
         tools:layout_editor_absoluteY="434dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="409dp"
+        android:layout_width="421dp"
         android:layout_height="194dp"
-        android:background="@color/principalFastToHome"
+        android:background="#F44336"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +43,7 @@
             android:textColor="#FFFFFF"
             android:textSize="34sp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="16dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
