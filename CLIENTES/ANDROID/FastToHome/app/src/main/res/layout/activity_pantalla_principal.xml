@@ -15,7 +15,7 @@
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="234dp" />
+        tools:layout_editor_absoluteY="364dp" />
 
     <Button
         android:id="@+id/button4"

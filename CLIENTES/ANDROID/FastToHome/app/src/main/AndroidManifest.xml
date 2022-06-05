@@ -19,8 +19,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".PantallaPrincipal"
-            android:exported="false" />
+            android:name=".vista.principal.PantallaPrincipal"
+            android:label="Bienvenido: " />
+
         <activity
             android:name=".vista.login.PantallaLogin"
             android:exported="false" />
