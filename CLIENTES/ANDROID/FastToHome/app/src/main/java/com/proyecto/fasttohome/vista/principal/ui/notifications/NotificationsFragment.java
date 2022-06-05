@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.proyecto.fasttohome.vista.principal.databinding.FragmentNotificationsBinding;
+import com.proyecto.fasttohome.databinding.FragmentNotificationsBinding;
 
 public class NotificationsFragment extends Fragment {
 

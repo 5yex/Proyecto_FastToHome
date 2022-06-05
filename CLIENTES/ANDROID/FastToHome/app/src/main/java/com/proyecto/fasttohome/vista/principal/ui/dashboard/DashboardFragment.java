@@ -10,7 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.proyecto.fasttohome.vista.principal.databinding.FragmentDashboardBinding;
+import com.proyecto.fasttohome.databinding.FragmentDashboardBinding;
+
 
 public class DashboardFragment extends Fragment {
 
