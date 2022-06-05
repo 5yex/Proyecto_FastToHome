@@ -3,6 +3,8 @@ package com.proyecto.fasttohome.vista.principal;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.databinding.ActivityPrincipalBinding;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -10,7 +12,6 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.proyecto.fasttohome.vista.principal.databinding.ActivityPrincipalBinding;
 
 public class PrincipalP extends AppCompatActivity {
 
