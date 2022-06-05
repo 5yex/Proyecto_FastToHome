@@ -8,10 +8,13 @@ import controlador.CategoriaDao;
 import controlador.DireccionDao;
 import controlador.ImagenDao;
 import controlador.NegocioDao;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import modelo.Categoria;
 import modelo.Direccion;
@@ -246,6 +249,35 @@ public class registroNegocio extends javax.swing.JFrame {
             return false;
         }
         return true;
+    }
+    
+    public void confirmarCierre() {
+        try {
+            this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+            addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent e) {
+                    confirmarSalida();
+                }
+            });
+            this.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+
+    }
+
+    public void confirmarSalida() {
+        Object[] options = {"Si","No"};
+        
+        int valor = JOptionPane.showOptionDialog(this,"¿Esta seguro de que quiere abandonar esta ventana? \n Tendrá que configurar el negocio de nuevo cuando vuelva a entrar", "Advertencia", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null,options, options[0]);
+        if (valor == JOptionPane.YES_OPTION) {
+
+            JOptionPane.showMessageDialog(null, "Volverá a la ventana de Logueo", "Hasta luego!", JOptionPane.INFORMATION_MESSAGE);
+            this.dispose();
+            new FrameLogin().setVisible(true);
+        }
+
     }
 
 
