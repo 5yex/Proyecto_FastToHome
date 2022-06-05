@@ -125,6 +125,10 @@ if (empty($_POST["DATA"])) {
             obtenerCategoriaPorNombre(json_decode($peticion->datos));
             break;     
         
+        //Casos de cesta
+        case 'rellenar_cesta';
+            rellenarCesta(json_decode($peticion->datos));
+            break;
         
         //imagenes
         case 'nueva_imagen';
