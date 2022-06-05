@@ -27,8 +27,8 @@
         tools:layout_editor_absoluteY="434dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="409dp"
-        android:layout_height="247dp"
+        android:layout_width="412dp"
+        android:layout_height="237dp"
         android:background="@color/principalFastToHome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -37,14 +37,14 @@
 
         <TextView
             android:id="@+id/textView18"
-            android:layout_width="280dp"
-            android:layout_height="63dp"
-            android:text="@string/texto_bienvenida"
+            android:layout_width="357dp"
+            android:layout_height="45dp"
+            android:text="Nombre"
             android:textColor="#FFFFFF"
-            android:textSize="48sp"
+            android:textSize="34sp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="55dp" />
+            tools:layout_editor_absoluteX="29dp"
+            tools:layout_editor_absoluteY="16dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
