@@ -10,9 +10,9 @@
         android:name="com.proyecto.fasttohome.vista.principal.ui.Inicio"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_incio" />
-    <activity
-        android:id="@+id/pantallaLogin"
-        android:name="com.proyecto.fasttohome.vista.login.PantallaLogin"
-        android:label="activity_pantalla_login"
-        tools:layout="@layout/activity_pantalla_login" />
+    <fragment
+        android:id="@+id/pedidos"
+        android:name="com.proyecto.fasttohome.vista.principal.menu.Pedidos"
+        android:label="fragment_pedidos"
+        tools:layout="@layout/fragment_pedidos" />
 </navigation>

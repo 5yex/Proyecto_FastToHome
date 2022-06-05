@@ -22,6 +22,7 @@
     <string name="userDirOtrosDatos">Otros:</string>
     <string name="title_activity_principal">principal</string>
     <string name="title_home">INICIO</string>
+    <string name="title_pedidos">PEDIDOS</string>
     <string name="title_activity_ventana_principal">ventanaPrincipal</string>
     <string name="title_activity_pantalla_principal">PantallaPrincipal</string>
     <!-- TODO: Remove or change this placeholder text -->
