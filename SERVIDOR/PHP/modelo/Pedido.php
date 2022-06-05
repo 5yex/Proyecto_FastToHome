@@ -79,14 +79,12 @@ class Pedido extends Conexion{
         $id_usuario = $this->getId_usuario();
         $id_negocio = $this->getId_negocio();
         $fecha_hora = $this->getFecha_hora();
-        $estado = $this->getEstado();
         $total = $this->getTotal();
         $transporte = $this->getTransporte();
         
         $sentencia->bindParam(":usu", $id_usuario);
         $sentencia->bindParam(":neg", $id_negocio);
         $sentencia->bindParam(":fec_hora", $fecha_hora);
-        $sentencia->bindParam(":est", $estado);
         $sentencia->bindParam(":tot", $total);
         $sentencia->bindParam(":tra", $transporte);
         
