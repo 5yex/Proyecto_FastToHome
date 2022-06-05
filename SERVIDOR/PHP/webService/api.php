@@ -856,5 +856,20 @@ function editarImagenPorId($datos){
 }
 
 function rellenarCesta($datos){
-    require_once '../modelo/Cesta.php'
+    require_once '../modelo/Cesta.php';
+    try {
+        $cesta = new Cesta();
+        $cesta->setCantidad($cantidad);
+        $cesta->setId_pedido($id_pedido);
+        $cesta->setId_producto($id_producto);
+        
+        if ($cesta->agregar()) {
+            mandarRespuesta(false, 'Se ha realizado la insercion de una categoria');
+        } else {
+            mandarRespuesta(true, 'Error en la inserccion de la categoria');
+        }
+        
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
 }
