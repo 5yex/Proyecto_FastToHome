@@ -94,6 +94,9 @@ public class registroNegocio extends javax.swing.JFrame {
 
         jLabel3.setText("CATEGORÍA");
 
+        botonCompletarRegistro.setBackground(new java.awt.Color(240, 87, 66));
+        botonCompletarRegistro.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botonCompletarRegistro.setForeground(new java.awt.Color(255, 255, 255));
         botonCompletarRegistro.setText("COMPLETAR REGISTRO");
         botonCompletarRegistro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
