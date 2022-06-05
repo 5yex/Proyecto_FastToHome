@@ -855,3 +855,6 @@ function editarImagenPorId($datos){
     
 }
 
+function rellenarCesta($datos){
+    require_once '../modelo/Cesta.php'
+}
