@@ -108,6 +108,11 @@ class Negocio extends Conexion {
     
     public function obtenerTodosNegocios(){
         $sql = "SELECT * FROM negocio";
+        
+        $sentencia = $this->dblink->prepare($sql);
+        
+        $sentencia->execute();            
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
     
     public function obtenerIdNegocio(){
