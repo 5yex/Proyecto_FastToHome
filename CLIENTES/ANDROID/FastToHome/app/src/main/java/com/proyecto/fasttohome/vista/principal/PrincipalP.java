@@ -12,7 +12,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.proyecto.fasttohome.vista.principal.databinding.ActivityPrincipalBinding;
 
-public class principal extends AppCompatActivity {
+public class PrincipalP extends AppCompatActivity {
 
     private ActivityPrincipalBinding binding;
 
