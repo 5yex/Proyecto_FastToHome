@@ -609,6 +609,10 @@ function obtenerUsuariosMercader(){
     }
 }
 
+function hacerPedido($datos){
+    require_once '../modelo/Pedido.php';
+}
+
 function obtenerPedidoUnico($datos){
     require_once '../modelo/Pedido.php';
     
