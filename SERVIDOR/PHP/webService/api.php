@@ -81,6 +81,9 @@ if (empty($_POST["DATA"])) {
         case 'get_id_negocio';
             obtenerIdNegocio(json_decode($peticion->datos));
             break;
+        case 'obtener_todos_negocios';
+            obtenerTodosNegocios();
+            break;
         case 'negocio_de_mercader';
             obtenerNegocioDeMercader(json_decode($peticion->datos));
             break;
@@ -324,6 +327,10 @@ function nuevoNegocio($datos){
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
+}
+
+function obtenerTodosNegocios(){
+    
 }
 
 function obtenerIdNegocio($datos) {
