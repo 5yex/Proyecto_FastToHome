@@ -24,7 +24,9 @@ public class NotificationsFragment extends Fragment {
         return root;
     }
 
-    public void 
+    public void editarUsuario(View view){
+        
+    }
 
     @Override
     public void onDestroyView() {
