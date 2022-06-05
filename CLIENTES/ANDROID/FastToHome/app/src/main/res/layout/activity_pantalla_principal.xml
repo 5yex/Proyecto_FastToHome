@@ -28,9 +28,10 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="409dp"
-        android:layout_height="255dp"
+        android:layout_height="247dp"
         android:background="@color/principalFastToHome"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -39,10 +40,11 @@
             android:layout_width="280dp"
             android:layout_height="63dp"
             android:text="@string/texto_bienvenida"
+            android:textColor="#FFFFFF"
             android:textSize="48sp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="17dp"
-            tools:layout_editor_absoluteY="20dp" />
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="55dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
