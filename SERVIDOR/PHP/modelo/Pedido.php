@@ -72,7 +72,7 @@ class Pedido extends Conexion{
     }
     
     public function agregar() {
-        $sql = "INSERT INTO pedido (id_usuario, id_negocio, fecha_hora, estado, total, transporte) VALUES (:usu, :neg, :fec_hora, :est, :tot, :tra)";
+        $sql = "INSERT INTO pedido (id_usuario, id_negocio, fecha_hora, estado, total, transporte) VALUES (:usu, :neg, :fec_hora, 'pendiente_pago', :tot, :tra)";
        
         $sentencia = $this->dblink->prepare($sql);
         
