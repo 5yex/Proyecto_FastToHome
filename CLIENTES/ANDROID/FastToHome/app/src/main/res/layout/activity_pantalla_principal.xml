@@ -28,12 +28,12 @@
 
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="307dp"
-        android:layout_height="94dp"
+        android:layout_width="280dp"
+        android:layout_height="63dp"
         android:text="@string/texto_bienvenida"
-        android:textSize="60sp"
+        android:textSize="48sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="25dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
