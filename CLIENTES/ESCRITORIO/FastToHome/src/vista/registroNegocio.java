@@ -196,7 +196,7 @@ public class registroNegocio extends javax.swing.JFrame {
         for (Categoria listaCategoria : listaCategorias) {
             comboCategoria.addItem(listaCategoria.getNombre());
         }
-        JOptionPane.showMessageDialog(null, User.getNombre() + " Bienvenido al equipo de mercaderes! \n A continuación podrás configurar tu negocio");
+        JOptionPane.showMessageDialog(null, User.getNombre() + ", bienvenido al equipo de mercaderes! \n A continuación podrás configurar tu negocio");
     }
 
     private boolean nuevoNegocio(Usuario user) {
