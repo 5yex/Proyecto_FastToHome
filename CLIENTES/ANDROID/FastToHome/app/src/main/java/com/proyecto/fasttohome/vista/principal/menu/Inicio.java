@@ -1,4 +1,4 @@
-package com.proyecto.fasttohome.vista.principal.ui;
+package com.proyecto.fasttohome.vista.principal.menu;
 
 import android.os.Bundle;
 
