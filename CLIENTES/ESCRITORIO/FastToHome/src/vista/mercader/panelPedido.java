@@ -16,7 +16,7 @@ import modelo.Producto;
  *
  * @author jmcbg
  */
-public class panelPedido extends javax.swing.JPanel {
+public class PanelPedido extends javax.swing.JPanel {
     private Pedido pedido;
     private ActionListener actualizarPedido;
     private JButton botonPedidos;
@@ -25,14 +25,14 @@ public class panelPedido extends javax.swing.JPanel {
      */
 
 
-    public panelPedido(Pedido pedido, JButton botonPedidos){
+    public PanelPedido(Pedido pedido, JButton botonPedidos){
         initComponents();
         this.pedido = pedido;
         this.botonPedidos = botonPedidos;
         mostrarDatos();
     }
     
-    public panelPedido(Pedido pedido){
+    public PanelPedido(Pedido pedido){
         initComponents();
         this.pedido = pedido;
         mostrarDatos();}

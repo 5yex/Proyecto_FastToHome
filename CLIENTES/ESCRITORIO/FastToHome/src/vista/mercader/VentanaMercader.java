@@ -496,7 +496,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         ArrayList<Pedido> pedidos = PedidoDao.seleccionPedidosPagados(negocio);
         if (pedidos != null) {
             for (Pedido pedido : pedidos) {
-                panelPedidos.add(new panelPedido(pedido, recargarPedidos));
+                panelPedidos.add(new PanelPedido(pedido, recargarPedidos));
             }
         } else {
             panelPedidos.add(new JLabel("NO HAY PEDIDOS"));
@@ -522,7 +522,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         ArrayList<Pedido> pedidos = PedidoDao.seleccionPedidosEnPreparacion(negocio);
         if (pedidos != null) {
             for (Pedido pedido : pedidos) {
-                panelPedidos.add(new panelPedido(pedido, recargarPedidos));
+                panelPedidos.add(new PanelPedido(pedido, recargarPedidos));
             }
         } else {
             panelPedidos.add(new JLabel("NO HAY PEDIDOS"));
@@ -561,7 +561,7 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         if (pedidos != null) {
             for (Pedido pedido : pedidos) {
-                panelPedidos.add(new panelPedido(pedido, recargarPedidos));
+                panelPedidos.add(new PanelPedido(pedido, recargarPedidos));
             }
         } else {
             panelPedidos.add(new JLabel("NO HAY PEDIDOS"));
