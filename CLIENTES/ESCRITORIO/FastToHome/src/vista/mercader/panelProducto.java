@@ -197,6 +197,7 @@ public class panelProducto extends javax.swing.JPanel {
     }
 
     private void editarProducto() {
-        new editarProducto(btUpdate,producto).setVisible(true);
+        //new editarProducto(btUpdate,producto).setVisible(true);
+        new DialogoEditarProducto(this, btUpdate, producto, true).setVisible(true);
     }
 }
