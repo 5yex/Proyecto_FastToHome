@@ -184,7 +184,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
     }//GEN-LAST:event_cancelarActionPerformed
     
     /**
-     * Acción del botón Aceptar
+     * Acción del botón Aceptar, si los campos están rellenos cierra el Diálogo 
      * 
      * @param evt evento
      */
