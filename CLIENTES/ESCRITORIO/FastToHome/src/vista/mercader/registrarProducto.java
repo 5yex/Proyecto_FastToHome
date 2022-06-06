@@ -233,7 +233,6 @@ public class registrarProducto extends javax.swing.JFrame {
 
     private void cargaInicial() {
         textAreaDescripcion.setLineWrap(true);
-
     }
 
     private boolean nuevoProducto() {
