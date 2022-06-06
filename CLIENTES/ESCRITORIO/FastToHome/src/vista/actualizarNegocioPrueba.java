@@ -25,7 +25,7 @@ import vista.mercader.VentanaMercader;
  *
  * @author jmcbg
  */
-public class actualizarNegocioPrueba extends javax.swing.JFrame {
+public class actualizarNegocioPrueba extends javax.swing.JDialog {
 
     private Negocio negocio;
     private Imagen nImg = new Imagen();
