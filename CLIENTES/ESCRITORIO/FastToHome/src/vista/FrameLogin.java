@@ -31,7 +31,9 @@ import vista.administrador.VentanaAdmin;
 public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
 
     /**
-     * Creates new form tests
+     * Objeto de la clase FrameLogin
+     * 
+     * @since 1.0
      */
     public FrameLogin() {
         initComponents();
@@ -147,7 +149,12 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Accion de pulsar el botón buttonRegistro
+     * 
+     * @param evt evento
+     */
     private void buttonRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRegistroActionPerformed
         //new PruebaRegistro().setVisible(true);
         //this.dispose();
