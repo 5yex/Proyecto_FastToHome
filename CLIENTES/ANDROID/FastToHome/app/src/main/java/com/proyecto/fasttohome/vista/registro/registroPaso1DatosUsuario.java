@@ -55,6 +55,8 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
 
                 if(Validaciones.validar(name,getString(R.string.patron_nombre))) {
                     user.setNombre(nombre.getText().toString());
+                }else{
+                    //Toast
                 }
                 user.setApellidos(apellidos.getText().toString());
                 user.setDni(dni.getText().toString());
