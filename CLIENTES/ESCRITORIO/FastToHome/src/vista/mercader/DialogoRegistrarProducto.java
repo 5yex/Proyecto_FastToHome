@@ -31,7 +31,7 @@ import static util.imagenesUtil.imagenB64Ajlabel;
  *
  * @author jmcbg
  */
-public class DialogoRegistrarProducto extends javax.swing.JFrame {
+public class DialogoRegistrarProducto extends javax.swing.JDialog {
 
     private Imagen nImg = new Imagen();
     private Negocio neg;
