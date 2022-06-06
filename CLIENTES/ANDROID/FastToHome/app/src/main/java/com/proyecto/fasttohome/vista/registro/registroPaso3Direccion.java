@@ -84,12 +84,14 @@ public class registroPaso3Direccion extends AppCompatActivity {
                 System.err.println(user.getJSON() + direccion.getJSON());
                 registerDirecion();
             }else{
-                //Toast
+                Toast notificacion = Toast.makeText(this,"No debes dejar ningún campo vacío.",Toast.LENGTH_SHORT);
+                notificacion.show();
             }
 
 
         }catch (NumberFormatException exception){
-            //Toast
+            Toast notificacion = Toast.makeText(this,"El numero de la calle y el codigo postal deben ser numeros enteros.",Toast.LENGTH_SHORT);
+            notificacion.show();
         }
     }
 
