@@ -53,7 +53,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         emailField = new javax.swing.JTextField();
         buttonRegistro = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        selectorDeTemas = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio Sesión");
@@ -87,10 +87,10 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         jLabel1.setMinimumSize(new java.awt.Dimension(289, 289));
         jLabel1.setPreferredSize(new java.awt.Dimension(289, 289));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar tema", "Tema Claro", "Tema Oscuro" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        selectorDeTemas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar tema", "Tema Claro", "Tema Oscuro" }));
+        selectorDeTemas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                selectorDeTemasActionPerformed(evt);
             }
         });
 
@@ -110,7 +110,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                         .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(selectorDeTemas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(57, Short.MAX_VALUE))
         );
         panelPrincipalLayout.setVerticalGroup(
@@ -131,7 +131,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                     .addComponent(buttonRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(selectorDeTemas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -172,7 +172,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         }      
     }//GEN-LAST:event_buttonLoginActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void selectorDeTemasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectorDeTemasActionPerformed
         try {
             int index = ((JComboBox) evt.getSource()).getSelectedIndex();
 
@@ -190,7 +190,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         } catch (UnsupportedLookAndFeelException ex) {
             Logger.getLogger(FrameLogin.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_selectorDeTemasActionPerformed
 
     private boolean comprobarLogin() {        
         String tFieldEmail = emailField.getText();
@@ -264,10 +264,10 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     private javax.swing.JButton buttonRegistro;
     private javax.swing.JTextField emailField;
     private javax.swing.JLabel emailTxt;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel panelPrincipal;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JLabel passwordTxt;
+    private javax.swing.JComboBox<String> selectorDeTemas;
     // End of variables declaration//GEN-END:variables
 }
