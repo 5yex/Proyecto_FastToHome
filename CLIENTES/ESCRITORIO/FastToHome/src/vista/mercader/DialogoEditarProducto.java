@@ -36,7 +36,7 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
      *
      * @param user
      */
-    public DialogoEditarProducto(JButton btActupaizar, Producto producto) {
+    public DialogoEditarProducto(JFrame parent,JButton btActupaizar, Producto producto,boolean modal) {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         this.btActupaizar = btActupaizar;
