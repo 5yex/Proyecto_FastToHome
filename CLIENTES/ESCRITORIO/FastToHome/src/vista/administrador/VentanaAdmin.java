@@ -29,6 +29,7 @@ import vista.FrameLogin;
  * Clase que representa una ventana de administrador
  * 
  * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
  */
 public class VentanaAdmin extends javax.swing.JFrame {
 
