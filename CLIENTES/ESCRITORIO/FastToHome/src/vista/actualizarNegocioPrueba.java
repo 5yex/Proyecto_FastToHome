@@ -33,7 +33,8 @@ public class actualizarNegocioPrueba extends javax.swing.JDialog {
     private ArrayList<Categoria> listaCategorias;
     private JButton updateInicio;
 
-    public actualizarNegocioPrueba(Negocio negocio, JButton updateInicio) {
+    public actualizarNegocioPrueba(java.awt.Frame parent, Negocio negocio, JButton updateInicio, boolean modal) {
+        super(parent,modal);
         this.negocio = negocio;
         this.updateInicio = updateInicio;
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
