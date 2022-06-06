@@ -71,8 +71,10 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
                     //Toast
                 }
 
-                
-                user.setTlf(telefono.getText().toString());
+                if(Validaciones.validar(numTelefono,getString(R.string.patron_telefono))){
+                    user.setTlf(numTelefono);
+                }
+
                 user.setEmail(email.getText().toString());
 
                 Intent i = new Intent(this, registroPaso2Password.class);
