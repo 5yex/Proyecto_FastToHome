@@ -5,6 +5,7 @@
 package vista.mercader;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import modelo.Negocio;
 import modelo.Producto;
 
@@ -18,7 +19,7 @@ public class panelProductoNuevo extends javax.swing.JPanel {
     /**
      * Creates new form producto
      */
-    public panelProductoNuevo(JButton actualizar, Negocio negocio) {
+    public panelProductoNuevo(JFrame parent, JButton actualizar, Negocio negocio) {
         initComponents();
         this.actualizar = actualizar;
         this.negocio = negocio;
