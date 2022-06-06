@@ -52,7 +52,7 @@ public class panelProducto extends javax.swing.JPanel {
         imgProducto = new javax.swing.JLabel();
         botonEliminarProducto = new javax.swing.JButton();
         botonEditarProducto = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        labelPrecio = new javax.swing.JLabel();
         botonInfoProducto = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
@@ -83,8 +83,8 @@ public class panelProducto extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("0.0");
+        labelPrecio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        labelPrecio.setText("0.0");
 
         botonInfoProducto.setPreferredSize(new java.awt.Dimension(45, 45));
         botonInfoProducto.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +107,7 @@ public class panelProducto extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(labelPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(botonInfoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -131,7 +131,7 @@ public class panelProducto extends javax.swing.JPanel {
                     .addComponent(botonInfoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -155,14 +155,14 @@ public class panelProducto extends javax.swing.JPanel {
     private javax.swing.JButton botonEliminarProducto;
     private javax.swing.JButton botonInfoProducto;
     private javax.swing.JLabel imgProducto;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel labelPrecio;
     private javax.swing.JLabel nombreProducto;
     // End of variables declaration//GEN-END:variables
 
     private void mostrarDatos() {
         nombreProducto.setText(producto.getNombre());
-        jLabel1.setText(String.valueOf(producto.getPrecio()));
+        labelPrecio.setText(String.valueOf(producto.getPrecio()) + " €");
         new Thread(new Runnable() {
             @Override
             public void run() {
