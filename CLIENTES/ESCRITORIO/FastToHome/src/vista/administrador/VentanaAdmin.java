@@ -26,8 +26,9 @@ import vista.DialogoImagen;
 import vista.FrameLogin;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa una ventana de administrador
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
  */
 public class VentanaAdmin extends javax.swing.JFrame {
 
