@@ -194,7 +194,12 @@ public class DialogoDireccion extends javax.swing.JDialog {
     private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
         this.dispose();
     }//GEN-LAST:event_cancelarActionPerformed
-
+    
+    /**
+     * Acción del botón Aceptar
+     * 
+     * @param evt evento
+     */
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
         if (rellenarDireccion(direccion)) {
             this.dispose();
