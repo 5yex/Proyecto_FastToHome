@@ -95,6 +95,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         imgNegocio = new javax.swing.JLabel();
         btnModificarNegocio = new javax.swing.JButton();
         panelTablaProductos = new javax.swing.JPanel();
+        recargarProductos = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         panelProductos = new javax.swing.JPanel();
         panelTablaPedidos = new javax.swing.JPanel();
@@ -212,6 +213,13 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         panelTableado.addTab("INICIO", panelInicioAdmin);
 
+        recargarProductos.setText("RECARGAR PRODUCTOS");
+        recargarProductos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                recargarProductosActionPerformed(evt);
+            }
+        });
+
         jScrollPane1.setMinimumSize(new java.awt.Dimension(0, 0));
 
         panelProductos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -224,7 +232,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         );
         panelProductosLayout.setVerticalGroup(
             panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 435, Short.MAX_VALUE)
+            .addGap(0, 401, Short.MAX_VALUE)
         );
 
         jScrollPane1.setViewportView(panelProductos);
@@ -233,11 +241,19 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelTablaProductos.setLayout(panelTablaProductosLayout);
         panelTablaProductosLayout.setHorizontalGroup(
             panelTablaProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTablaProductosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(recargarProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelTablaProductosLayout.setVerticalGroup(
             panelTablaProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 437, Short.MAX_VALUE)
+            .addGroup(panelTablaProductosLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(recargarProductos)
+                .addContainerGap())
         );
 
         panelTableado.addTab("PRODUCTOS", panelTablaProductos);
@@ -395,6 +411,10 @@ public class VentanaMercader extends javax.swing.JFrame {
     private void checkParaEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkParaEnviarActionPerformed
         mostrarPedidosEnPreparacion();
     }//GEN-LAST:event_checkParaEnviarActionPerformed
+
+    private void recargarProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarProductosActionPerformed
+        mostrarProductos();
+    }//GEN-LAST:event_recargarProductosActionPerformed
 
     private void inicilizacion() {
         confirmarCierre();
@@ -605,6 +625,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     private javax.swing.JPanel panelTablaProductos;
     private javax.swing.JTabbedPane panelTableado;
     private javax.swing.JButton recargarPedidos;
+    private javax.swing.JButton recargarProductos;
     private javax.swing.JButton updateInicio;
     // End of variables declaration//GEN-END:variables
 
