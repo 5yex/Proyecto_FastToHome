@@ -36,6 +36,7 @@ public class PantallaPrincipal extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_principal);
 
         user = (Usuario) getIntent().getExtras().getSerializable("user");
+        obtenerDatosUsuario();
         System.out.println("User: " + user.toString());
     }
 
