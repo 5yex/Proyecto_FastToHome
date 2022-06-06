@@ -249,7 +249,7 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
         }).start();
     }
 
-    private boolean nuevoProducto() {
+    private boolean editarProducto() {
 
         try {
 
@@ -260,27 +260,26 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
             if (descripcion.length() == 0 | nombre.length() == 0) {
                 throw new IOException("Rellena todos los campos");
             }
-            
-                if (nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()) {
-                   
-
-                    int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
-
-                    if (id_imagen != -1) {
-                        Producto produc = new Producto();
-                        produc.setDescripcion(descripcion);
-                        produc.setPrecio(precio);
-                        produc.setId_img(id_imagen);
-                        produc.setNombre(nombre);
-                        produc.setId_negocio(neg.getId_negocio());
-                        return ProductoDao.nuevoProducto(produc);
+            if (imagen.getB64_imagen() != null && !imagen.getB64_imagen().isBlank()) {
+                if (producto.getId_img() == 0) {
+                    //System.out.println("NO TIENE IMAGEN SE LE AÑADIRÁ UNA NUEVA");
+                    int id_imagen = ImagenDao.nuevaImagenDevuelveId(imagen);
+                    if (id_imagen != 0) {
+                        producto.setId_img(id_imagen);
                     }
                 } else {
-                    errorTexto.setText("Tienes que subir una imagen");
-                    return false;
+
+                    imagen.setId(producto.getId_img());
+                    ImagenDao.editarImagenPorId(imagen);
 
                 }
-           
+            }
+
+            producto.setDescripcion(descripcion);
+            producto.setPrecio(precio);
+            producto.setNombre(nombre);
+            return ProductoDao.actualizarProducto(producto);
+
         } catch (NumberFormatException ex) {
             errorTexto.setText("Rellena correctamente los campos numéricos");
             return false;
@@ -288,7 +287,6 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
             errorTexto.setText(ex.getMessage());
             return false;
         }
-        return true;
     }
 
 
