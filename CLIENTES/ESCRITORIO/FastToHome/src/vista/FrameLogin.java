@@ -151,7 +151,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     }// </editor-fold>//GEN-END:initComponents
     
     /**
-     * Accion de pulsar el botón buttonRegistro
+     * Acción de pulsar el botón buttonRegistro
      * 
      * @param evt evento
      */
