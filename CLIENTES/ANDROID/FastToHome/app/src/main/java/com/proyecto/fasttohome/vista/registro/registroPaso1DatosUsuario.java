@@ -53,8 +53,9 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
 
             if(name.length() > 0 && ape.length() > 0 && nif.length() > 0 && numTelefono.length() > 0 && correo.length() > 0){
 
-                if(Validaciones.validar(name,))
-                user.setNombre(nombre.getText().toString());
+                if(Validaciones.validar(name,getString(R.string.patron_nombre))) {
+                    user.setNombre(nombre.getText().toString());
+                }
                 user.setApellidos(apellidos.getText().toString());
                 user.setDni(dni.getText().toString());
                 user.setTlf(telefono.getText().toString());
