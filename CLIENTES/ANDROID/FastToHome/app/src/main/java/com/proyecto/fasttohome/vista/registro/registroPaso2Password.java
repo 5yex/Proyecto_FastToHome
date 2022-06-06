@@ -10,6 +10,7 @@ import android.widget.EditText;
 
 
 import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.Validaciones;
 import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Usuario;
 
@@ -47,7 +48,13 @@ public class registroPaso2Password extends AppCompatActivity {
         String passConfirm = passwordConfirm.getText().toString();
 
         if(pass.length() > 0 && passConfirm.length() > 0){
-            
+
+            if(Validaciones.validar(pass,getString(R.string.))){
+
+            }
+
+        }else{
+            //Toast
         }
 
         user.setPassword(BCrypt.hashpw(password.getText().toString(), BCrypt.gensalt(10)));
