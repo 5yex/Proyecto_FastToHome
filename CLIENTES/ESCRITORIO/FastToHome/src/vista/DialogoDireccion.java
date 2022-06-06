@@ -24,7 +24,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
      *
      * @param parent Frame padre
      * @param modal No se puede clickar en la ventana padre si esta a true
-     * @param direccion Objeto direccion
+     * @param direccion Objeto de tipo Direccion
      */
     public DialogoDireccion(java.awt.Frame parent, boolean modal, Direccion direccion) {
         super(parent, modal);
@@ -37,9 +37,9 @@ public class DialogoDireccion extends javax.swing.JDialog {
     /**
      * Contruye un nuevo DialogoDireccion con parametros cuyo padre es un Dialogo
      *
-     * @param parentDialog
-     * @param modal
-     * @param direccion
+     * @param parentDialog Dialogo padre
+     * @param modal No se puede clickar en la ventana padre si esta a true
+     * @param direccion Objeto de tipo Direccion
      */
     public DialogoDireccion(JDialog parentDialog, boolean modal, Direccion direccion) {
         super(parentDialog, modal);
