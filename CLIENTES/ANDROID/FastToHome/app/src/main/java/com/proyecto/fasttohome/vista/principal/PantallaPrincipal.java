@@ -53,15 +53,12 @@ public class PantallaPrincipal extends AppCompatActivity {
                     user.setPassword(datos.getString("password"));
                     user.setId(datos.getInt("id"));
                     user.setEmail(datos.getString("email"));
-                    user.setNombre(datos.getString("nombre"));
+                    user.setNombre(datos.getString("Nombre"));
                     user.setApellidos(datos.getString("apellidos"));
                     user.setDni(datos.getString("Dni"));
                     user.setId_direccion(datos.getInt("direccion_id"));
                     user.setRol(datos.getString("Rol"));
                     user.setTlf(datos.getString("tlf"));
-
-
-
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaPrincipal.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
