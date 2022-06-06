@@ -224,9 +224,10 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
     }//GEN-LAST:event_botonPedirImagenActionPerformed
 
     private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
-        if(nuevoProducto()){
+        
+        if (editarProducto()) {
             btActupaizar.doClick();
-            JOptionPane.showMessageDialog(this, "Se registró el producto con éxito", "Producto Registrado", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Se editó el producto con éxito", "Producto Registrado", JOptionPane.INFORMATION_MESSAGE);
             this.dispose();
         }
     }//GEN-LAST:event_botonAceptarActionPerformed
@@ -237,11 +238,15 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
 
     private void cargaInicial() {
         this.textAreaDescripcion.setLineWrap(true);
-//        listaCategorias = controlador.CategoriaDao.obtenerCategorias();
-//        for (Categoria listaCategoria : listaCategorias) {
-//            comboCategoria.addItem(listaCategoria.getNombre());
-//        }
-//        JOptionPane.showMessageDialog(null, User.getNombre() + " Bienvenido al equipo de mercaderes! \n A continuación podrás configurar tu negocio");
+        varNombre.setText(producto.getNombre());
+        precioProducto.setText(String.valueOf(producto.getPrecio()));
+        textAreaDescripcion.setText(producto.getDescripcion());
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                imagenesUtil.imagenB64Ajlabel(ImagenDao.obtenerImagenPorId(new Imagen(producto.getId_img())), imgProducto);
+            }
+        }).start();
     }
 
     private boolean nuevoProducto() {
