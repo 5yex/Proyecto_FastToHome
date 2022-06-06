@@ -30,7 +30,7 @@
     <string name="patron_apellido">^(([A-ZÁÉÍÓÚÑ]{1}[a-záéíóúüñ]*)(\\s)?)((((((((de)|(del)|(la)|(las)|(los))\\s)?)?){1,2})(([A-ZÁÉÍÑÓ]{1}[a-záéíñóúü\\.]*)(\\s([A-ZÁÉÍÑÓ]{1}[a-záéíñóúü\\.]*))?){1})?)$</string>
     <string name="patron_dni">(([x-z]|[X-Z]{1})([-]?)(\\d{7})([-]?)([a-z]|[A-Z]{1}))|((\\d{8})([-]?)([a-z]|[A-Z]{1}))</string>
     <string name="patron_telefono">(\\+34|0034|34)?[ -]*(6|7|9)[ -]*([0-9][ -]*){8}</string>
-    <string name="patron_email">(\\+34|0034|34)?[ -]*(6|7|9)[ -]*([0-9][ -]*){8}</string>
+    <string name="patron_email"></string>
 
 
 
