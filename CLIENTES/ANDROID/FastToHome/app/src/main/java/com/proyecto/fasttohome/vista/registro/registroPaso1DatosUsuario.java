@@ -71,6 +71,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
                     //Toast
                 }
 
+                
                 user.setTlf(telefono.getText().toString());
                 user.setEmail(email.getText().toString());
 
