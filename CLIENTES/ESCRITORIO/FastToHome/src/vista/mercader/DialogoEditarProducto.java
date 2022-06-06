@@ -14,6 +14,7 @@ import java.io.IOException;
 import javax.swing.ImageIcon;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 
 import modelo.Imagen;
 import modelo.Negocio;
@@ -37,6 +38,7 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
      * @param user
      */
     public DialogoEditarProducto(JFrame parent,JButton btActupaizar, Producto producto,boolean modal) {
+        super(parent,modal);
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         this.btActupaizar = btActupaizar;
