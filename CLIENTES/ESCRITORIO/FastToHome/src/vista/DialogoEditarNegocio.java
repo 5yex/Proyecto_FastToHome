@@ -230,7 +230,13 @@ public class DialogoEditarNegocio extends javax.swing.JDialog {
             comboCategoria.addItem(listaCategoria.getNombre());
         }
     }
-
+    
+    /**
+     * Actualiza el negocio
+     * 
+     * @param negocio Negocio que va a ser modificado
+     * @return tru si se ha actualizado el negocio
+     */
     private boolean actualizarNegocio(Negocio negocio) {
 
         boolean direccionActualizada = DireccionDao.actualizarDireccion(direccionNegocio);
