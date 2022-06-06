@@ -37,7 +37,7 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
 
     private Imagen nImg = new Imagen();
     private Negocio neg;
-    private JButton btActupaizar;
+    private JButton btActualizar;
 
     /**
      * Creates new form VentanaRegistroNegocio
@@ -47,7 +47,7 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
     public DialogoRegistrarProducto(JFrame parent, JButton btActupaizar, Negocio neg, boolean modal) {
         super(parent,modal);
         initComponents();
-        this.btActupaizar=btActupaizar;
+        this.btActualizar=btActupaizar;
         this.neg = neg;
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         cargaInicial();
@@ -225,7 +225,7 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
 
     private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
         if(nuevoProducto()){
-            btActupaizar.doClick();
+            btActualizar.doClick();
             JOptionPane.showMessageDialog(this, "Se registró el producto con éxito", "Producto Registrado", JOptionPane.INFORMATION_MESSAGE);
             this.dispose();
         }
