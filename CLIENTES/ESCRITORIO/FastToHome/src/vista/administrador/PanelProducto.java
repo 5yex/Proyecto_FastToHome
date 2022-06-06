@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package vista.mercader;
+package vista.administrador;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
 import com.formdev.flatlaf.ui.FlatDropShadowBorder;
@@ -19,6 +19,7 @@ import modelo.Imagen;
 import modelo.Negocio;
 import modelo.Producto;
 import util.imagenesUtil;
+import vista.mercader.DialogoEditarProducto;
 
 /**
  * Clase que representa el panel con con el contenido del producto

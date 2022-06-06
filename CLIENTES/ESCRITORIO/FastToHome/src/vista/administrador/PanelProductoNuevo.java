@@ -2,12 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package vista.mercader;
+package vista.administrador;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import modelo.Negocio;
 import modelo.Producto;
+import vista.mercader.DialogoRegistrarProducto;
 
 /**
  * Clase que representa un panel con un único botón para crear un nuevo producto
