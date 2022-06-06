@@ -20,11 +20,11 @@ public class DialogoDireccion extends javax.swing.JDialog {
     Direccion direccion;
 
     /**
-     * Creates new form dialogoNuevoDepartamento
+     * Construye un nuevo DialogoDireccion con parametros
      *
-     * @param parent
-     * @param modal
-     * @param direccion
+     * @param parent Frame padre
+     * @param modal No se puede clickar en la ventana padre si esta a true
+     * @param direccion Objeto direccion
      */
     public DialogoDireccion(java.awt.Frame parent, boolean modal, Direccion direccion) {
         super(parent, modal);
