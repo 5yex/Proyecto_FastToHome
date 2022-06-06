@@ -49,8 +49,15 @@ public class registroPaso2Password extends AppCompatActivity {
 
         if(pass.length() > 0 && passConfirm.length() > 0){
 
-            if(Validaciones.validar(pass,getString(R.string.))){
+            if(Validaciones.validar(pass,getString(R.string.patron_pass))){
 
+                if(Validaciones.validar(passConfirm,getString(R.string.patron_pass))){
+
+                }else{
+                    //Toast
+                }
+            }else{
+                //Toast
             }
 
         }else{
