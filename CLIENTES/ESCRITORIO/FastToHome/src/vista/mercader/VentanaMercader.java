@@ -95,9 +95,6 @@ public class VentanaMercader extends javax.swing.JFrame {
         imgNegocio = new javax.swing.JLabel();
         btnModificarNegocio = new javax.swing.JButton();
         panelTablaProductos = new javax.swing.JPanel();
-        busquedaProductos = new javax.swing.JTextField();
-        checkBusquedaProductos = new javax.swing.JCheckBox();
-        recargarProductos = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         panelProductos = new javax.swing.JPanel();
         panelTablaPedidos = new javax.swing.JPanel();
@@ -215,27 +212,6 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         panelTableado.addTab("INICIO", panelInicioAdmin);
 
-        busquedaProductos.setMinimumSize(new java.awt.Dimension(4, 22));
-        busquedaProductos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                busquedaProductosActionPerformed(evt);
-            }
-        });
-
-        checkBusquedaProductos.setText("Búsqueda por nombre:");
-        checkBusquedaProductos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                checkBusquedaProductosActionPerformed(evt);
-            }
-        });
-
-        recargarProductos.setText("RECARGAR PRODUCTOS");
-        recargarProductos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                recargarProductosActionPerformed(evt);
-            }
-        });
-
         jScrollPane1.setMinimumSize(new java.awt.Dimension(0, 0));
 
         panelProductos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -248,7 +224,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         );
         panelProductosLayout.setVerticalGroup(
             panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
+            .addGap(0, 435, Short.MAX_VALUE)
         );
 
         jScrollPane1.setViewportView(panelProductos);
@@ -257,26 +233,11 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelTablaProductos.setLayout(panelTablaProductosLayout);
         panelTablaProductosLayout.setHorizontalGroup(
             panelTablaProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelTablaProductosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(checkBusquedaProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(busquedaProductos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(recargarProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelTablaProductosLayout.setVerticalGroup(
             panelTablaProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelTablaProductosLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelTablaProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(recargarProductos)
-                    .addComponent(busquedaProductos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(checkBusquedaProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 437, Short.MAX_VALUE)
         );
 
         panelTableado.addTab("PRODUCTOS", panelTablaProductos);
@@ -389,17 +350,9 @@ public class VentanaMercader extends javax.swing.JFrame {
         dmod.setVisible(true);
     }//GEN-LAST:event_botonModificarDatosMercaderActionPerformed
 
-    private void checkBusquedaProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaProductosActionPerformed
-        
-    }//GEN-LAST:event_checkBusquedaProductosActionPerformed
-
     private void panelTableadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMousePressed
         // TODO add your handling code here:
     }//GEN-LAST:event_panelTableadoMousePressed
-
-    private void recargarProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarProductosActionPerformed
-        mostrarProductos();
-    }//GEN-LAST:event_recargarProductosActionPerformed
 
     private void recargarPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarPedidosActionPerformed
         mostrarPedidos();
@@ -442,10 +395,6 @@ public class VentanaMercader extends javax.swing.JFrame {
     private void checkParaEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkParaEnviarActionPerformed
         mostrarPedidosEnPreparacion();
     }//GEN-LAST:event_checkParaEnviarActionPerformed
-
-    private void busquedaProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_busquedaProductosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_busquedaProductosActionPerformed
 
     private void inicilizacion() {
         confirmarCierre();
@@ -640,8 +589,6 @@ public class VentanaMercader extends javax.swing.JFrame {
     private javax.swing.JButton botonModificarDatosMercader;
     private javax.swing.ButtonGroup botonesPedidos;
     private javax.swing.JButton btnModificarNegocio;
-    private javax.swing.JTextField busquedaProductos;
-    private javax.swing.JCheckBox checkBusquedaProductos;
     private javax.swing.JRadioButton checkParaEnviar;
     private javax.swing.JRadioButton checkParaPreparar;
     private javax.swing.JRadioButton checkTodos;
@@ -658,7 +605,6 @@ public class VentanaMercader extends javax.swing.JFrame {
     private javax.swing.JPanel panelTablaProductos;
     private javax.swing.JTabbedPane panelTableado;
     private javax.swing.JButton recargarPedidos;
-    private javax.swing.JButton recargarProductos;
     private javax.swing.JButton updateInicio;
     // End of variables declaration//GEN-END:variables
 
