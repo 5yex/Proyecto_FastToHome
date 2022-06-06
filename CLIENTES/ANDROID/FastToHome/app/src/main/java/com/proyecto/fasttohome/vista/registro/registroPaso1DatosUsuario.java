@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.Validaciones;
 import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Usuario;
 
@@ -51,6 +52,8 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         try {
 
             if(name.length() > 0 && ape.length() > 0 && nif.length() > 0 && numTelefono.length() > 0 && correo.length() > 0){
+
+                if(Validaciones.validar(name,))
                 user.setNombre(nombre.getText().toString());
                 user.setApellidos(apellidos.getText().toString());
                 user.setDni(dni.getText().toString());
