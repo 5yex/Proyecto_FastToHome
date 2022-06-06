@@ -49,20 +49,25 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         String correo = email.getText().toString();
 
         try {
-            user.setNombre(nombre.getText().toString());
-            user.setApellidos(apellidos.getText().toString());
-            user.setDni(dni.getText().toString());
-            user.setTlf(telefono.getText().toString());
-            user.setEmail(email.getText().toString());
 
-            Intent i = new Intent(this, registroPaso2Password.class);
+            if(name.length() > 0 && ape.length() && nif.length() && numTelefono.length() && correo.length() > 0) {
+                user.setNombre(nombre.getText().toString());
+                user.setApellidos(apellidos.getText().toString());
+                user.setDni(dni.getText().toString());
+                user.setTlf(telefono.getText().toString());
+                user.setEmail(email.getText().toString());
 
-            i.putExtra("user", user);
-            i.putExtra("direccion", direccion);
+                Intent i = new Intent(this, registroPaso2Password.class);
 
-            startActivity(i);
+                i.putExtra("user", user);
+                i.putExtra("direccion", direccion);
+
+                startActivity(i);
+            }else{
+                //Toast
+            }
         }catch (NumberFormatException ex){
-
+            //Toast
         }
     }
 
