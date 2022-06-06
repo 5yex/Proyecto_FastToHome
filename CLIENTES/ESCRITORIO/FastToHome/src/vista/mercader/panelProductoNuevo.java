@@ -21,7 +21,7 @@ public class panelProductoNuevo extends javax.swing.JPanel {
     public panelProductoNuevo(JButton actualizar, Negocio negocio) {
         initComponents();
         this.actualizar = actualizar;
-        this.negocio =negocio;
+        this.negocio = negocio;
     }
 
     /**
