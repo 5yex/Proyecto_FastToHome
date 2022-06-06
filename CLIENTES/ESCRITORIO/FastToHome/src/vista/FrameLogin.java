@@ -46,7 +46,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     private void initComponents() {
 
         panelPrincipal = new javax.swing.JPanel();
-        buttonLogin1 = new javax.swing.JButton();
+        buttonLogin = new javax.swing.JButton();
         passwordField = new javax.swing.JPasswordField();
         passwordTxt = new javax.swing.JLabel();
         emailTxt = new javax.swing.JLabel();
@@ -59,13 +59,13 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         setTitle("Inicio Sesión");
         setResizable(false);
 
-        buttonLogin1.setBackground(new java.awt.Color(240, 87, 66));
-        buttonLogin1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        buttonLogin1.setForeground(new java.awt.Color(255, 255, 255));
-        buttonLogin1.setText("ENTRAR");
-        buttonLogin1.addActionListener(new java.awt.event.ActionListener() {
+        buttonLogin.setBackground(new java.awt.Color(240, 87, 66));
+        buttonLogin.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        buttonLogin.setForeground(new java.awt.Color(255, 255, 255));
+        buttonLogin.setText("ENTRAR");
+        buttonLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonLogin1ActionPerformed(evt);
+                buttonLoginActionPerformed(evt);
             }
         });
 
@@ -107,7 +107,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                     .addGroup(panelPrincipalLayout.createSequentialGroup()
                         .addComponent(buttonRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(buttonLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -129,7 +129,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                 .addGap(28, 28, 28)
                 .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(buttonRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -151,7 +151,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     }// </editor-fold>//GEN-END:initComponents
     
     /**
-     * Acción de pulsar el botón buttonRegistro
+     * Acción de pulsar el botón de Registro
      * 
      * @param evt evento
      */
@@ -162,15 +162,15 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     }//GEN-LAST:event_buttonRegistroActionPerformed
     
     /**
-     * 
+     * Acción de pulsar el botón de Login
      * 
      * @param evt evento
      */
-    private void buttonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogin1ActionPerformed
+    private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
         if(comprobarLogin()){
             this.dispose();
         }      
-    }//GEN-LAST:event_buttonLogin1ActionPerformed
+    }//GEN-LAST:event_buttonLoginActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         try {
@@ -260,7 +260,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonLogin1;
+    private javax.swing.JButton buttonLogin;
     private javax.swing.JButton buttonRegistro;
     private javax.swing.JTextField emailField;
     private javax.swing.JLabel emailTxt;
