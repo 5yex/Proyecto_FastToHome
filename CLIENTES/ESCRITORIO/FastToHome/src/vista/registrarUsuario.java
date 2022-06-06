@@ -21,7 +21,7 @@ import util.validaciones;
  *
  * @author Jesus
  */
-public class DialogoRegistrarUsuario extends javax.swing.JDialog implements Constantes {
+public class registrarUsuario extends javax.swing.JDialog implements Constantes {
 
     private Usuario newUsuario = new Usuario();
     Direccion direccionUsuario = new Direccion();
@@ -29,7 +29,7 @@ public class DialogoRegistrarUsuario extends javax.swing.JDialog implements Cons
     /**
      * Creates new form DialogoRegistro
      */
-    public DialogoRegistrarUsuario(java.awt.Frame parent, boolean modal) {
+    public registrarUsuario(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         initComponents();

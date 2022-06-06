@@ -154,7 +154,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     private void buttonRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRegistroActionPerformed
         //new PruebaRegistro().setVisible(true);
         //this.dispose();
-        new DialogoRegistrarUsuario(this, true).setVisible(true);
+        new registrarUsuario(this, true).setVisible(true);
     }//GEN-LAST:event_buttonRegistroActionPerformed
 
     private void buttonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogin1ActionPerformed
@@ -243,7 +243,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
 
         negocio = NegocioDao.negocioDeMercader(user);
         if (negocio == null) {
-            new VentanaRegistroNegocio(user).setVisible(true);
+            new registroNegocio(user).setVisible(true);
         } else {
             new VentanaMercader(user).setVisible(true);
         }

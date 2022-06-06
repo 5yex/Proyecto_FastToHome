@@ -13,14 +13,14 @@ import modelo.Producto;
  *
  * @author jmcbg
  */
-public class PanelProductoNuevo extends javax.swing.JPanel {
+public class panelProductoNuevo extends javax.swing.JPanel {
     JButton actualizar;
     Negocio negocio;
     JFrame framePadre;
     /**
      * Creates new form producto
      */
-    public PanelProductoNuevo(JFrame parent, JButton actualizar, Negocio negocio) {
+    public panelProductoNuevo(JFrame parent, JButton actualizar, Negocio negocio) {
         initComponents();
         this.actualizar = actualizar;
         this.negocio = negocio;

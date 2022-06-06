@@ -6,7 +6,7 @@ package vista.mercader;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
 import controlador.ImagenDao;
-import vista.VentanaRegistroNegocio;
+import vista.registroNegocio;
 import controlador.NegocioDao;
 import controlador.PedidoDao;
 import controlador.ProductoDao;
@@ -437,7 +437,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         //interrumpirHilo();
         panelProductos.removeAll();
         panelProductos.setLayout(new WrapLayout(FlowLayout.CENTER, 30, 30));
-        panelProductos.add(new PanelProductoNuevo(this,recargarProductos, negocio));
+        panelProductos.add(new panelProductoNuevo(this,recargarProductos, negocio));
         //panelProductos.add(new panelProductoNuevo(recargarProductos, negocio));
         
         ArrayList<Producto> productos = ProductoDao.selecciónProductosNegocio(negocio);
@@ -496,7 +496,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         ArrayList<Pedido> pedidos = PedidoDao.seleccionPedidosPagados(negocio);
         if (pedidos != null) {
             for (Pedido pedido : pedidos) {
-                panelPedidos.add(new PanelPedido(pedido, recargarPedidos));
+                panelPedidos.add(new panelPedido(pedido, recargarPedidos));
             }
         } else {
             panelPedidos.add(new JLabel("NO HAY PEDIDOS"));
@@ -522,7 +522,7 @@ public class VentanaMercader extends javax.swing.JFrame {
         ArrayList<Pedido> pedidos = PedidoDao.seleccionPedidosEnPreparacion(negocio);
         if (pedidos != null) {
             for (Pedido pedido : pedidos) {
-                panelPedidos.add(new PanelPedido(pedido, recargarPedidos));
+                panelPedidos.add(new panelPedido(pedido, recargarPedidos));
             }
         } else {
             panelPedidos.add(new JLabel("NO HAY PEDIDOS"));
@@ -561,7 +561,7 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         if (pedidos != null) {
             for (Pedido pedido : pedidos) {
-                panelPedidos.add(new PanelPedido(pedido, recargarPedidos));
+                panelPedidos.add(new panelPedido(pedido, recargarPedidos));
             }
         } else {
             panelPedidos.add(new JLabel("NO HAY PEDIDOS"));
