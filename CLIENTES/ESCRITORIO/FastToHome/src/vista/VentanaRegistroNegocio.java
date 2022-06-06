@@ -27,7 +27,7 @@ import vista.mercader.VentanaMercader;
  *
  * @author jmcbg
  */
-public class registroNegocio extends javax.swing.JFrame {
+public class VentanaRegistroNegocio extends javax.swing.JFrame {
 
     private Usuario User;
     private Direccion nDireccion = new Direccion();
@@ -39,7 +39,7 @@ public class registroNegocio extends javax.swing.JFrame {
      *
      * @param user
      */
-    public registroNegocio(Usuario user) {
+    public VentanaRegistroNegocio(Usuario user) {
         initComponents();
         this.User = user;
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
