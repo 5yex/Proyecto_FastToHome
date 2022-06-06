@@ -37,7 +37,7 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
 
     private Imagen nImg = new Imagen();
     private Producto producto;
-    private JButton btActupaizar;
+    private JButton btActualizar;
 
     /**
      * Creates new form VentanaRegistroNegocio
@@ -47,7 +47,7 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
     public DialogoEditarProducto(JFrame parent, JButton btActupaizar, Producto product, boolean modal) {
         super(parent,modal);
         initComponents();
-        this.btActupaizar = btActupaizar;
+        this.btActualizar = btActupaizar;
         this.producto = producto;
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         cargaInicial();
@@ -226,7 +226,7 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
     private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
         
         if (editarProducto()) {
-            btActupaizar.doClick();
+            btActualizar.doClick();
             JOptionPane.showMessageDialog(this, "Se editó el producto con éxito", "Producto Registrado", JOptionPane.INFORMATION_MESSAGE);
             this.dispose();
         }
