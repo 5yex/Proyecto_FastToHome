@@ -62,7 +62,9 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
                     startActivity(i);
                 }
             }else{
-                //Toast
+                Toast notificacion= Toast.makeText(this,"No puedes dejar ningun campo vacio",Toast.LENGTH_LONG);
+                notificacion.show();
+
             }
         }catch (NumberFormatException ex){
             //Toast
