@@ -184,7 +184,8 @@ public class DialogoDireccion extends javax.swing.JDialog {
     }//GEN-LAST:event_cancelarActionPerformed
     
     /**
-     * Acción del botón Aceptar, si los campos están rellenos cierra el Diálogo 
+     * Acción del botón Aceptar. Cierra el diálogo si se ha modificado el objeto
+     * de tipo dirección con los campos rellenos.
      * 
      * @param evt evento
      */
@@ -206,7 +207,12 @@ public class DialogoDireccion extends javax.swing.JDialog {
             varOtros.setText(direccion.getOtros());
         }
     }
-
+    
+    /**
+     * 
+     * @param direccion objeto de tipo Direccion (dirección del usuario)
+     * @return true si hemos rellenado los datos y establecido la dirección del usuario
+     */
     private boolean rellenarDireccion(Direccion direccion) {
         try {
             int num = Integer.valueOf(varNumeroTXT.getText());
