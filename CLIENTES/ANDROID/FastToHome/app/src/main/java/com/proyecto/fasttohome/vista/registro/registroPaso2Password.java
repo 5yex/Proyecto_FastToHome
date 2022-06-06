@@ -62,11 +62,13 @@ public class registroPaso2Password extends AppCompatActivity {
                     notificacion.show();
                 }
             }else{
-                //Toast
+                Toast notificacion = Toast.makeText(this,"Patrón incorrecto. Mínimo 8 caracteres, una mayúscula y un número",Toast.LENGTH_LONG);
+                notificacion.show();
             }
 
         }else{
-            //Toast
+            Toast notificacion = Toast.makeText(this,"No puedes dejar ningún campo vacío",Toast.LENGTH_LONG);
+            notificacion.show();
         }
 
         user.setPassword(BCrypt.hashpw(password.getText().toString(), BCrypt.gensalt(10)));
