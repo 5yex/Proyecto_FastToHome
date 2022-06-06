@@ -209,6 +209,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
     }
     
     /**
+     * Obtiene los campos rellenos, y comprueba si se ha establecido la dirección con los campos rellenados 
      * 
      * @param direccion objeto de tipo Direccion (dirección del usuario)
      * @return true si hemos rellenado los datos y establecido la dirección del usuario
