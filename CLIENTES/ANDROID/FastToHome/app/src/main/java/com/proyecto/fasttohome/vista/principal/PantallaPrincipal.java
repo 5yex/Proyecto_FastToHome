@@ -66,7 +66,7 @@ public class PantallaPrincipal extends AppCompatActivity {
                 Toast.makeText(PantallaPrincipal.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 finish();
             }
-        }, error -> Toast.makeText(PantallaPrincipal.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show()) {
+        }, this::onErrorResponse) {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
@@ -78,7 +78,8 @@ public class PantallaPrincipal extends AppCompatActivity {
     }
 
 
-
-
-
+    private void onErrorResponse(VolleyError error) {
+        Toast.makeText(PantallaPrincipal.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
+        finish();
+    }
 }
