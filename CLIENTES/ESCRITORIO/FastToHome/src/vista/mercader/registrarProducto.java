@@ -223,6 +223,7 @@ public class registrarProducto extends javax.swing.JFrame {
     private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
         if(nuevoProducto()){
             btActupaizar.doClick();
+            JOptionPane.showMessageDialog(null, "Se registró el producto con éxito", "Producto Registrado", JOptionPane.INFORMATION_MESSAGE);
             this.dispose();
         }
     }//GEN-LAST:event_botonAceptarActionPerformed
