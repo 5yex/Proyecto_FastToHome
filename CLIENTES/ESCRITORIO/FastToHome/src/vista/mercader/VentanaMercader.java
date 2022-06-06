@@ -4,9 +4,6 @@
  */
 package vista.mercader;
 
-import vista.administrador.PanelPedido;
-import vista.administrador.PanelProducto;
-import vista.administrador.PanelProductoNuevo;
 import com.formdev.flatlaf.ui.FlatButtonBorder;
 import controlador.ImagenDao;
 import vista.registroNegocio;
