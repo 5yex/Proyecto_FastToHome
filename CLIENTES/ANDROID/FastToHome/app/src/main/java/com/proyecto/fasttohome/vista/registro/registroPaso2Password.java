@@ -42,6 +42,14 @@ public class registroPaso2Password extends AppCompatActivity {
     }
 
     public void irPasoDireccionFinal(View view) {
+
+        String pass = password.getText().toString();
+        String passConfirm = passwordConfirm.getText().toString();
+
+        if(pass.length() > 0 && passConfirm.length() > 0){
+
+        }
+
         user.setPassword(BCrypt.hashpw(password.getText().toString(), BCrypt.gensalt(10)));
         Intent i = new Intent(this, registroPaso3Direccion.class );
         i.putExtra("user", user);
