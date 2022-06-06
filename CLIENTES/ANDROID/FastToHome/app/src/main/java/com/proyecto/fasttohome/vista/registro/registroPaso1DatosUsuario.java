@@ -66,9 +66,11 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
                 }
 
                 if(Validaciones.validar(nif,getString(R.string.patron_dni))){
-
+                    user.setDni(nif);
+                }else{
+                    //Toast
                 }
-                user.setDni(nif);
+
                 user.setTlf(telefono.getText().toString());
                 user.setEmail(email.getText().toString());
 
