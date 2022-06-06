@@ -208,7 +208,7 @@ public class registroNegocio extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, User.getNombre() + ", bienvenido al equipo de mercaderes! \n A continuación podrás configurar tu negocio.","Bienvenida mercader", JOptionPane.INFORMATION_MESSAGE);
         textAreaDescripcion.setLineWrap(true);
     }
-
+    
     private boolean nuevoNegocio(Usuario user) {
 
         try {
