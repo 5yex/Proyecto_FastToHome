@@ -121,7 +121,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         if(Validaciones.validar(correo, getString(R.string.patron_email))){
             user.setEmail(correo);
         }else {
-            Toast notificacion = Toast.makeText(this,"Correo inválido. Con @ y acabado",Toast.LENGTH_LONG);
+            Toast notificacion = Toast.makeText(this,"Correo inválido. Con @ y con reminación tras . (.es, .com, .org)",Toast.LENGTH_LONG);
             notificacion.show();
             return false;
         }
