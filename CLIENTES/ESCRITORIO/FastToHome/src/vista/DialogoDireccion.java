@@ -20,7 +20,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
     Direccion direccion;
 
     /**
-     * Construye un nuevo DialogoDireccion con parametros
+     * Construye un nuevo DialogoDireccion con parametros cuyo padre es un Frame
      *
      * @param parent Frame padre
      * @param modal No se puede clickar en la ventana padre si esta a true
@@ -32,11 +32,10 @@ public class DialogoDireccion extends javax.swing.JDialog {
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         initComponents();
         rellenarDialogo();
-        //cargarSelectorDeps(new DepartamentoDAO().mostrarDepartamentos(bd));
     }
 
     /**
-     * Contructor cuyo padre es un Dialogo
+     * Contruye un nuevo DialogoDireccion con parametros cuyo padre es un Dialogo
      *
      * @param parentDialog
      * @param modal
