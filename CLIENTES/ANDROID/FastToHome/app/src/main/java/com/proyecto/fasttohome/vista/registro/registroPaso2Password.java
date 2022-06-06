@@ -58,7 +58,7 @@ public class registroPaso2Password extends AppCompatActivity {
                         notificacion.show();
                     }
                 }else{
-                    Toast notificacion = Toast.makeText(this,"Patrón incorrecto. Minimo 8 caracteres; una mayúscula, minusculas y",Toast.LENGTH_LONG);
+                    Toast notificacion = Toast.makeText(this,"Patrón incorrecto. Mínimo 8 caracteres, una mayúscula y un número",Toast.LENGTH_LONG);
                     notificacion.show();
                 }
             }else{
