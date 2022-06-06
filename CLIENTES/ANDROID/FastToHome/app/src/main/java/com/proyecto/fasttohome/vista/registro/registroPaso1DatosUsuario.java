@@ -54,21 +54,21 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
             if(name.length() > 0 && ape.length() > 0 && nif.length() > 0 && numTelefono.length() > 0 && correo.length() > 0){
 
                 if(Validaciones.validar(name,getString(R.string.patron_nombre))) {
-                    user.setNombre(nombre.getText().toString());
+                    user.setNombre(name);
                 }else{
                     //Toast
                 }
 
                 if(Validaciones.validar(ape,getString(R.string.patron_apellido))) {
-                    user.setApellidos(apellidos.getText().toString());
+                    user.setApellidos(ape);
                 }else{
                     //Toast
                 }
 
                 if(Validaciones.validar(nif,getString(R.string.patron_dni))){
-                    
+
                 }
-                user.setDni(dni.getText().toString());
+                user.setDni(nif);
                 user.setTlf(telefono.getText().toString());
                 user.setEmail(email.getText().toString());
 
