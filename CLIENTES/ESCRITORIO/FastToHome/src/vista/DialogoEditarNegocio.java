@@ -215,7 +215,10 @@ public class DialogoEditarNegocio extends javax.swing.JDialog {
     private void botonActualizarImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarImagenActionPerformed
         new DialogoImagen(this, true, nImg).setVisible(true);
     }//GEN-LAST:event_botonActualizarImagenActionPerformed
-
+    
+    /**
+     * Carga inicial del Diálogo con los datos del Negocio
+     */
     private void cargaInicial() {
         nImg = new Imagen(negocio.getId_img());
         varNombre.setText(negocio.getNombre());
