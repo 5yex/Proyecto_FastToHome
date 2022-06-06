@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 import com.proyecto.fasttohome.R;
@@ -48,11 +49,14 @@ public class registroPaso2Password extends AppCompatActivity {
         String passConfirm = passwordConfirm.getText().toString();
 
         if(pass.length() > 0 && passConfirm.length() > 0){
-
             if(Validaciones.validar(pass,getString(R.string.patron_pass))){
-
                 if(Validaciones.validar(passConfirm,getString(R.string.patron_pass))){
+                    if(pass.compareTo(passConfirm) == 0){
 
+                    }else{
+                        Toast notificacion = Toast.makeText(this,"Lo campos contraseña y confirmar contraseña deben coincidir",Toast.LENGTH_LONG);
+                        notificacion.show();
+                    }
                 }else{
                     //Toast
                 }
