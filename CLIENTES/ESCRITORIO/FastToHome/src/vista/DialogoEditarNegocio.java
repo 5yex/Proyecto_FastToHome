@@ -25,7 +25,7 @@ import vista.mercader.VentanaMercader;
  *
  * @author jmcbg
  */
-public class actualizarNegocioPrueba extends javax.swing.JDialog {
+public class DialogoEditarNegocio extends javax.swing.JDialog {
 
     private Negocio negocio;
     private Imagen nImg = new Imagen();
@@ -33,7 +33,7 @@ public class actualizarNegocioPrueba extends javax.swing.JDialog {
     private ArrayList<Categoria> listaCategorias;
     private JButton updateInicio;
 
-    public actualizarNegocioPrueba(java.awt.Frame parent, Negocio negocio, JButton updateInicio, boolean modal) {
+    public DialogoEditarNegocio(java.awt.Frame parent, Negocio negocio, JButton updateInicio, boolean modal) {
         super(parent,modal);
         this.negocio = negocio;
         this.updateInicio = updateInicio;

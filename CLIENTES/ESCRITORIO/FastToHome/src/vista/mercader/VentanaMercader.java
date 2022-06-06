@@ -37,7 +37,7 @@ import util.WrapLayout;
 import util.imagenesUtil;
 import vista.FrameLogin;
 import vista.actualizarNegocio;
-import vista.actualizarNegocioPrueba;
+import vista.DialogoEditarNegocio;
 import vista.administrador.DialogoActualizarDatos;
 
 /**
@@ -401,7 +401,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     private void btnModificarNegocioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarNegocioActionPerformed
         /*actualizarNegocio dialogoEditarNegocio = new actualizarNegocio(negocio, updateInicio);
         dialogoEditarNegocio.setVisible(true);*/
-        actualizarNegocioPrueba dialogoEditarNegocio = new actualizarNegocioPrueba(this,negocio,updateInicio,true);
+        DialogoEditarNegocio dialogoEditarNegocio = new DialogoEditarNegocio(this,negocio,updateInicio,true);
         dialogoEditarNegocio.setVisible(true);
 
     }//GEN-LAST:event_btnModificarNegocioActionPerformed
