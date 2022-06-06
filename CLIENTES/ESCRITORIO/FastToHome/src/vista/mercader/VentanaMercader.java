@@ -36,7 +36,6 @@ import org.apache.http.impl.conn.SystemDefaultRoutePlanner;
 import util.WrapLayout;
 import util.imagenesUtil;
 import vista.FrameLogin;
-import vista.actualizarNegocio;
 import vista.DialogoEditarNegocio;
 import vista.administrador.DialogoActualizarDatos;
 
