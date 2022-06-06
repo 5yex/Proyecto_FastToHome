@@ -25,7 +25,7 @@ import static util.imagenesUtil.imagenB64Ajlabel;
  *
  * @author jmcbg
  */
-public class DialogoEditarProducto extends javax.swing.JFrame {
+public class DialogoEditarProducto extends javax.swing.JDialog {
 
     private Imagen imagen = new Imagen();
     private Producto producto;
