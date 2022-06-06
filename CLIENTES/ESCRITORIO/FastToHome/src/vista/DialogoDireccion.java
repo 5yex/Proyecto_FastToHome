@@ -196,7 +196,6 @@ public class DialogoDireccion extends javax.swing.JDialog {
     
     /**
      * Rellena los campos del DiálogoDireccion si la dirección no es nula
-     * 
      */
     public void rellenarDialogo() {
         if (direccion != null) {
