@@ -17,6 +17,7 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import modelo.Categoria;
 import modelo.Direccion;
 import modelo.Imagen;
@@ -42,7 +43,8 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
      *
      * @param user
      */
-    public DialogoRegistrarProducto(JButton btActupaizar, Negocio neg) {
+    public DialogoRegistrarProducto(JPanel panelProductoNuevo, JButton btActupaizar, Negocio neg, boolean modal) {
+        super(panelProductoNuevo,modal);
         initComponents();
         this.btActupaizar=btActupaizar;
         this.neg = neg;
