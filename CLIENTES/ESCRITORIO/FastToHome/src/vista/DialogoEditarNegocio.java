@@ -19,7 +19,8 @@ import modelo.Imagen;
 import modelo.Negocio;
 
 /**
- *
+ * Clase que representa el diálogo donde podemos editar los datos del negocio 
+ * 
  * @author Jose Miguel Calderón, Jesús Rueda
  * @version 1.0
  */
