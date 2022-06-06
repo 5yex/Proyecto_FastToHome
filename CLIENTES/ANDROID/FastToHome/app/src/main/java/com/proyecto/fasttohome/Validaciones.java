@@ -1,2 +1,6 @@
-package com.proyecto.fasttohome;public class Validaciones {
+package com.proyecto.fasttohome;
+
+public class Validaciones {
+
+    
 }
