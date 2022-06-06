@@ -52,6 +52,13 @@ public class PantallaPrincipal extends AppCompatActivity {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
                     user.setPassword(datos.getString("password"));
                     user.setId(datos.getInt("id"));
+                    user.setEmail(datos.getString("email"));
+                    user.setNombre(datos.getString("nombre"));
+                    user.setDni(datos.getString("dni"));
+                    user.setId_direccion(datos.getInt("id_direccion"));
+                    user.setRol(datos.getString("rol"));
+                    user.setTlf(datos.getString("tlf"));
+
 
 
                 }
