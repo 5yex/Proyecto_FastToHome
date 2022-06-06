@@ -113,7 +113,8 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         if(Validaciones.validar(numTelefono,getString(R.string.patron_telefono))){
             user.setTlf(numTelefono);
         }else{
-            //Toast
+            Toast notificacion = Toast.makeText(this,"DNI inválido",Toast.LENGTH_SHORT);
+            notificacion.show();
             return false;
         }
 
