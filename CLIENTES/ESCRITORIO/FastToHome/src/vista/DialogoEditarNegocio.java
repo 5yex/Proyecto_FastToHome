@@ -33,7 +33,7 @@ public class DialogoEditarNegocio extends javax.swing.JDialog {
     private JButton updateInicio;
     
     /**
-     * Contruye un nuevo DialogoEditarNegocio
+     * Contruye un nuevo DialogoEditarNegocio.
      * 
      * @param parent Frame que es padre del diálogo
      * @param negocio objeto de tipo Negocio que va a ser editado
@@ -187,7 +187,7 @@ public class DialogoEditarNegocio extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
     
     /**
-     * Acción de pulsar el botón de 'Editar dirección'
+     * Acción de pulsar el botón de 'Editar dirección'.
      * 
      * @param evt evento
      */
@@ -195,7 +195,12 @@ public class DialogoEditarNegocio extends javax.swing.JDialog {
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionNegocio);
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonActualizarDireccionActionPerformed
-
+    
+    /**
+     * Accíon de pulsar el botón de 'CONFIRMAR CAMBIOS'.
+     * 
+     * @param evt evento
+     */
     private void botonConfirmarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConfirmarCambiosActionPerformed
         if (actualizarNegocio(negocio)) {
             this.dispose();
