@@ -173,7 +173,8 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     }//GEN-LAST:event_buttonLoginActionPerformed
     
     /**
-     * Acción de pulsar en el combobox del Selector de temas 
+     * Acción de pulsar en el combobox del Selector de temas
+     * 
      * @param evt evento
      */
     private void selectorDeTemasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectorDeTemasActionPerformed
@@ -195,7 +196,12 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
             Logger.getLogger(FrameLogin.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_selectorDeTemasActionPerformed
-
+    
+    /**
+     * Comprueba que se ha realizado el login
+     * 
+     * @return true si el se ha realizado el login
+     */
     private boolean comprobarLogin() {        
         String tFieldEmail = emailField.getText();
         String tFieldPass = String.valueOf(passwordField.getPassword());
@@ -244,12 +250,12 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         return true;
     }
 
-    /*public Image getIconImage(){
-        Image retValue = Toolkit.getDefaultToolkit().
-        getImage(ClassLoader.getSystemResource("./recursos/logoIcon.png"));
-
-        return retValue;
-    }*/
+    /**
+     * Abre la ventana de registro de negocio o la ventana de mercader dependiendo de si el usuario que le pasamos por
+     * parametro ha registrado su negocio o no.
+     * 
+     * @param user usario que se esta logueando
+     */
     private void ventanaMercader(Usuario user) {
         Negocio negocio;
         this.setVisible(false);
