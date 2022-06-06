@@ -189,7 +189,7 @@ public class DialogoEditarNegocio extends javax.swing.JDialog {
     /**
      * Acción de pulsar el botón de 'Editar dirección'
      * 
-     * @param evt 
+     * @param evt evento
      */
     private void botonActualizarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarDireccionActionPerformed
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionNegocio);
