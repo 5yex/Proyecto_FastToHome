@@ -10,8 +10,9 @@ import modelo.Negocio;
 import modelo.Producto;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa un panel con un único botón para crear un nuevo producto
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
  */
 public class panelProductoNuevo extends javax.swing.JPanel {
     JButton actualizar;
