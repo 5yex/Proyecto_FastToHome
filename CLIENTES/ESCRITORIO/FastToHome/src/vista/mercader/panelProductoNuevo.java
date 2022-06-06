@@ -68,7 +68,7 @@ public class panelProductoNuevo extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        //new registrarProducto(actualizar,negocio).setVisible(true);
-       new DialogoRegistrarProducto(this, actualizar, negocio, true);
+       new DialogoRegistrarProducto(framePadre, actualizar, negocio, true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
