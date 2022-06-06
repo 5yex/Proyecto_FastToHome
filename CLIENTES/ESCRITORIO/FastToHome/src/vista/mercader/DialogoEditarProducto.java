@@ -70,7 +70,7 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
         errorTexto = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("EDITAR PRODUCTO");
+        setTitle("Editar Producto");
         setAlwaysOnTop(true);
         setResizable(false);
 
