@@ -31,7 +31,7 @@
     <string name="patron_dni">(([x-z]|[X-Z]{1})([-]?)(\\d{7})([-]?)([a-z]|[A-Z]{1}))|((\\d{8})([-]?)([a-z]|[A-Z]{1}))</string>
     <string name="patron_telefono">(\\+34|0034|34)?[ -]*(6|7|9)[ -]*([0-9][ -]*){8}</string>
     <string name="patron_email">[a-z0-9!#$%&amp;\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?</string>
-    <string name="patron_pass"></string>
+    <string name="patron_pass">^(?=\\w*\\d)(?=\\w*[A-Z])(?=\\w*[a-z])\\S{8,20}$</string>
 
 
 </resources>
