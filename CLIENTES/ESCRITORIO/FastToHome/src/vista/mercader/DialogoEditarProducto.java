@@ -11,7 +11,6 @@ import controlador.DireccionDao;
 import controlador.ImagenDao;
 import controlador.NegocioDao;
 import controlador.ProductoDao;
-import java.awt.Frame;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +44,7 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
      *
      * @param user
      */
-    public DialogoEditarProducto(Frame parent, JButton btActualizar, Producto product, boolean modal) {
+    public DialogoEditarProducto(JFrame parent, JButton btActualizar, Producto product, boolean modal) {
         super(parent,modal);
         initComponents();
         this.btActualizar = btActualizar;
