@@ -236,6 +236,7 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
     }//GEN-LAST:event_botonCacelarActionPerformed
 
     private void cargaInicial() {
+        this.textAreaDescripcion.setLineWrap(true);
 //        listaCategorias = controlador.CategoriaDao.obtenerCategorias();
 //        for (Categoria listaCategoria : listaCategorias) {
 //            comboCategoria.addItem(listaCategoria.getNombre());
