@@ -54,11 +54,12 @@ public class registroPaso2Password extends AppCompatActivity {
                     if(pass.compareTo(passConfirm) == 0){
 
                     }else{
-                        Toast notificacion = Toast.makeText(this,"Lo campos contraseña y confirmar contraseña deben coincidir",Toast.LENGTH_LONG);
+                        Toast notificacion = Toast.makeText(this,"Lo campos contraseña y confirmar contraseña deben coincidir.",Toast.LENGTH_LONG);
                         notificacion.show();
                     }
                 }else{
-                    //Toast
+                    Toast notificacion = Toast.makeText(this,"Patrón incorrecto. Minimo 8 caracteres; una mayúscula, minusculas y",Toast.LENGTH_LONG);
+                    notificacion.show();
                 }
             }else{
                 //Toast
