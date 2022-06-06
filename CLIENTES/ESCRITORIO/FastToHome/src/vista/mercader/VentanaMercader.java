@@ -399,8 +399,6 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_panelTableadoMouseClicked
 
     private void btnModificarNegocioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarNegocioActionPerformed
-        /*actualizarNegocio dialogoEditarNegocio = new actualizarNegocio(negocio, updateInicio);
-        dialogoEditarNegocio.setVisible(true);*/
         DialogoEditarNegocio dialogoEditarNegocio = new DialogoEditarNegocio(this,negocio,updateInicio,true);
         dialogoEditarNegocio.setVisible(true);
 
