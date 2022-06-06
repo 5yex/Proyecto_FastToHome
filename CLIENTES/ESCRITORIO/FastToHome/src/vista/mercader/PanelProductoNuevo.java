@@ -7,7 +7,6 @@ package vista.mercader;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import modelo.Negocio;
-import modelo.Producto;
 import vista.mercader.DialogoRegistrarProducto;
 
 /**
