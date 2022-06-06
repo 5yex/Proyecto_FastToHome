@@ -50,7 +50,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
 
         try {
 
-            if(name.length() > 0 && ape.length() && nif.length() && numTelefono.length() > 0 && correo.length() > 0){
+            if(name.length() > 0 && ape.length() > 0 && nif.length() > 0 && numTelefono.length() > 0 && correo.length() > 0){
                 user.setNombre(nombre.getText().toString());
                 user.setApellidos(apellidos.getText().toString());
                 user.setDni(dni.getText().toString());
