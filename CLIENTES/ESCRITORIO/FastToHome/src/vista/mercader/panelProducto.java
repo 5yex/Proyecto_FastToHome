@@ -26,7 +26,7 @@ import util.imagenesUtil;
  * @author Jose Miguel Calderón, Jesús Rueda
  * @version 1.0
  */
-public class panelProducto extends javax.swing.JPanel {
+public class PanelProducto extends javax.swing.JPanel {
 
     private Producto producto;
     JButton btUpdate;
@@ -35,7 +35,7 @@ public class panelProducto extends javax.swing.JPanel {
     /**
      * Creates new form producto
      */
-    public panelProducto(JFrame parent,Producto prod, JButton btUpdate) {
+    public PanelProducto(JFrame parent,Producto prod, JButton btUpdate) {
         initComponents();
         this.parent = parent;
         this.producto = prod;
