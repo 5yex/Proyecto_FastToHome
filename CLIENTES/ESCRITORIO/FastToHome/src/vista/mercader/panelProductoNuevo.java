@@ -16,6 +16,7 @@ import modelo.Producto;
 public class panelProductoNuevo extends javax.swing.JPanel {
     JButton actualizar;
     Negocio negocio;
+    JFrame framePadre;
     /**
      * Creates new form producto
      */
@@ -23,6 +24,7 @@ public class panelProductoNuevo extends javax.swing.JPanel {
         initComponents();
         this.actualizar = actualizar;
         this.negocio = negocio;
+        this.framePadre = parent;
     }
 
     /**
