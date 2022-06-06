@@ -20,7 +20,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
     Direccion direccion;
 
     /**
-     * Construye un nuevo DialogoDireccion con parametros cuyo padre es un Frame
+     * Construye un nuevo DialogoDireccion con parametros cuyo padre es un Frame.
      *
      * @param parent Frame padre
      * @param modal No se puede clickar en la ventana padre si esta a true
@@ -35,7 +35,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
     }
 
     /**
-     * Contruye un nuevo DialogoDireccion con parametros cuyo padre es un Dialogo
+     * Contruye un nuevo DialogoDireccion con parametros cuyo padre es un Dialogo.
      *
      * @param parentDialog Dialogo padre
      * @param modal No se puede clickar en la ventana padre si esta a true
@@ -185,7 +185,12 @@ public class DialogoDireccion extends javax.swing.JDialog {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción del botón Cancelar
+     * 
+     * @param evt evento
+     */
     private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
         this.dispose();
     }//GEN-LAST:event_cancelarActionPerformed
