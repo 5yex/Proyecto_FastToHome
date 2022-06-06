@@ -26,5 +26,6 @@
     <string name="title_activity_ventana_principal">ventanaPrincipal</string>
     <string name="title_activity_pantalla_principal">PantallaPrincipal</string>
     <string name="texto_bienvenida">Bienvenido:</string>
+    <string name="patron_nombre"></string>
 
 </resources>
