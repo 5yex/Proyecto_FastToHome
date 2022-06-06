@@ -103,20 +103,22 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
 
         precioProducto.setBorder(new FlatButtonBorder());
 
-        botonAceptar.setText("Aceptar");
+        botonAceptar.setText("ACEPTAR");
         botonAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonAceptarActionPerformed(evt);
             }
         });
 
-        botonCacelar.setText("Cancelar");
+        botonCacelar.setText("CANCELAR");
         botonCacelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonCacelarActionPerformed(evt);
             }
         });
 
+        imgProducto.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        imgProducto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         imgProducto.setText("IMAGEN PRODUCTO");
         imgProducto.setBorder(new FlatButtonBorder()
         );
