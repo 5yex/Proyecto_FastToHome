@@ -206,7 +206,12 @@ public class DialogoEditarNegocio extends javax.swing.JDialog {
             this.dispose();
         }
     }//GEN-LAST:event_botonConfirmarCambiosActionPerformed
-
+    
+    /**
+     * Acción de pulsar el botón de 'SUSTITUIR IMAGEN'
+     * 
+     * @param evt evento
+     */
     private void botonActualizarImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarImagenActionPerformed
         new DialogoImagen(this, true, nImg).setVisible(true);
     }//GEN-LAST:event_botonActualizarImagenActionPerformed
