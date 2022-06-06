@@ -4,15 +4,11 @@
  */
 package vista;
 
-import com.formdev.flatlaf.FlatDarculaLaf;
 import vista.mercader.VentanaMercader;
 import com.formdev.flatlaf.FlatDarkLaf;
-import com.formdev.flatlaf.FlatIntelliJLaf;
 import com.formdev.flatlaf.FlatLightLaf;
 import controlador.NegocioDao;
 import controlador.UsuarioDao;
-import java.awt.Image;
-import java.awt.Toolkit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
@@ -24,7 +20,6 @@ import modelo.Negocio;
 import modelo.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
 import util.imagenesUtil;
-import util.validaciones;
 import vista.administrador.VentanaAdmin;
 
 /**
