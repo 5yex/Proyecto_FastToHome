@@ -193,7 +193,10 @@ public class DialogoDireccion extends javax.swing.JDialog {
             this.dispose();
         }
     }//GEN-LAST:event_aceptarActionPerformed
-
+    
+    /**
+     * 
+     */
     public void rellenarDialogo() {
         if (direccion != null) {
             varNumeroTXT.setText(String.valueOf(direccion.getNumero()));
@@ -251,12 +254,5 @@ public class DialogoDireccion extends javax.swing.JDialog {
     private javax.swing.JTextArea varOtros;
     // End of variables declaration//GEN-END:variables
 
-//    private void cargarSelectorDeps(Objects<Departamento> listaDepartamentos) {
-//        selectorDeps.addItem(" ");
-//        List<String> depsStrings = new ArrayList<String>();
-//        for (Departamento departamento : listaDepartamentos) {
-//            departamentos.add(departamento);
-//            selectorDeps.addItem(departamento.toString());
-//        }
-//    }
+
 }
