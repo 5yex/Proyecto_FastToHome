@@ -89,12 +89,6 @@ public class DialogoDireccion extends javax.swing.JDialog {
             }
         });
 
-        varNumeroTXT.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                varNumeroTXTActionPerformed(evt);
-            }
-        });
-
         laberNumero.setText("Número:");
 
         labelCalle.setText("Calle:");
@@ -205,10 +199,6 @@ public class DialogoDireccion extends javax.swing.JDialog {
             this.dispose();
         }
     }//GEN-LAST:event_aceptarActionPerformed
-
-    private void varNumeroTXTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_varNumeroTXTActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_varNumeroTXTActionPerformed
 
     private void varCPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_varCPActionPerformed
         // TODO add your handling code here:
