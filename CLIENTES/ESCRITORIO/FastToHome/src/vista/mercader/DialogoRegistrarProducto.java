@@ -44,7 +44,6 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
      * @param user
      */
     public DialogoRegistrarProducto(JPanel panelProductoNuevo, JButton btActupaizar, Negocio neg, boolean modal) {
-        super(panelProductoNuevo,modal);
         initComponents();
         this.btActupaizar=btActupaizar;
         this.neg = neg;
