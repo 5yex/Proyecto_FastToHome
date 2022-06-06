@@ -53,36 +53,6 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
 
             if(name.length() > 0 && ape.length() > 0 && nif.length() > 0 && numTelefono.length() > 0 && correo.length() > 0){
 
-                if(Validaciones.validar(name,getString(R.string.patron_nombre))) {
-                    user.setNombre(name);
-                }else{
-                    //Toast
-                }
-
-                if(Validaciones.validar(ape,getString(R.string.patron_apellido))) {
-                    user.setApellidos(ape);
-                }else{
-                    //Toast
-                }
-
-                if(Validaciones.validar(nif,getString(R.string.patron_dni))){
-                    user.setDni(nif);
-                }else{
-                    //Toast
-                }
-
-                if(Validaciones.validar(numTelefono,getString(R.string.patron_telefono))){
-                    user.setTlf(numTelefono);
-                }else{
-                    //Toast
-                }
-
-                if(Validaciones.validar(correo, getString(R.string.patron_email))){
-                    user.setEmail(correo);
-                }else {
-                    //Toast
-                }
-
                 Intent i = new Intent(this, registroPaso2Password.class);
 
                 i.putExtra("user", user);
@@ -109,5 +79,43 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
             Toast.makeText(getBaseContext(), "Presiona otra vez sin quieres salir del registro!", Toast.LENGTH_SHORT).show();
         }
         back_pressed = System.currentTimeMillis();
+    }
+
+    public boolean validaciones(String name, String ape, String nif, String numTelefono, String correo){
+        if(Validaciones.validar(name,getString(R.string.patron_nombre))) {
+            user.setNombre(name);
+        }else{
+            //Toast
+            return false;
+        }
+
+        if(Validaciones.validar(ape,getString(R.string.patron_apellido))) {
+            user.setApellidos(ape);
+        }else{
+            //Toast
+            return false;
+        }
+
+        if(Validaciones.validar(nif,getString(R.string.patron_dni))){
+            user.setDni(nif);
+        }else{
+            //Toast
+            return false;
+        }
+
+        if(Validaciones.validar(numTelefono,getString(R.string.patron_telefono))){
+            user.setTlf(numTelefono);
+        }else{
+            //Toast
+            return false;
+        }
+
+        if(Validaciones.validar(correo, getString(R.string.patron_email))){
+            user.setEmail(correo);
+        }else {
+            //Toast
+            return false;
+        }
+        return true;
     }
 }
