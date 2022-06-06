@@ -47,7 +47,7 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
     public DialogoRegistrarProducto(JFrame parent, JButton btActualizar, Negocio neg, boolean modal) {
         super(parent,modal);
         initComponents();
-        this.btActualizar=btActualizar;
+        this.btActualizar = btActualizar;
         this.neg = neg;
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         cargaInicial();
