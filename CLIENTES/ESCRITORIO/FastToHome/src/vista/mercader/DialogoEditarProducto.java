@@ -33,7 +33,7 @@ import static util.imagenesUtil.imagenB64Ajlabel;
  *
  * @author jmcbg
  */
-public class DialogoRegistrarProducto extends javax.swing.JDialog {
+public class DialogoEditarProducto extends javax.swing.JDialog {
 
     private Imagen nImg = new Imagen();
     private Negocio neg;
@@ -44,7 +44,7 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
      *
      * @param user
      */
-    public DialogoRegistrarProducto(JFrame parent, JButton btActupaizar, Negocio neg, boolean modal) {
+    public DialogoEditarProducto(JFrame parent, JButton btActupaizar, Negocio neg, boolean modal) {
         super(parent,modal);
         initComponents();
         this.btActupaizar=btActupaizar;
