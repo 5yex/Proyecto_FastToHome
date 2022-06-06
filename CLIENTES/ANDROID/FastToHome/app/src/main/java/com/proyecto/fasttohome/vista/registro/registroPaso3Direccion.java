@@ -65,6 +65,11 @@ public class registroPaso3Direccion extends AppCompatActivity {
     public void accionRegistro(View view){
 
         try {
+            String numero_casa = numero.getText().toString();
+            String postalCode = codigoPostal.getText().toString();
+            String city = ciudad.getText().toString();
+            String street = calle.getText().toString();
+            String other = otros.getText().toString();
 
 
             direccion.setNumero(Integer.valueOf(numero.getText().toString()));
