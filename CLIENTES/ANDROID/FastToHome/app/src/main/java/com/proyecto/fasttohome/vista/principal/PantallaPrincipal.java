@@ -64,6 +64,7 @@ public class PantallaPrincipal extends AppCompatActivity {
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaPrincipal.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                finish();
             }
         }, error -> Toast.makeText(PantallaPrincipal.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show()) {
             @Override
