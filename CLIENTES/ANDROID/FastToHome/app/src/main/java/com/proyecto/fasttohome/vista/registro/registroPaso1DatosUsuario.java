@@ -67,7 +67,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
 
             }
         }catch (NumberFormatException ex){
-            Toast notificacion = Toast.makeText(this,"El número de telefono debe ser un entero de 9 cifras que empiece por 6, 7 o 9.",Toast.LENGTH_SHORT);
+            Toast notificacion = Toast.makeText(this,"El número de teléfono debe ser un entero de 9 cifras que empiece por 6, 7 o 9.",Toast.LENGTH_SHORT);
             notificacion.show();
         }
     }
@@ -90,7 +90,8 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         if(Validaciones.validar(name,getString(R.string.patron_nombre))) {
             user.setNombre(name);
         }else{
-            //Toast
+            Toast notificacion = Toast.makeText(this,"Nombre que empice por mayusculas y resto minúsculas",Toast.LENGTH_SHORT);
+            notificacion.show();
             return false;
         }
 
