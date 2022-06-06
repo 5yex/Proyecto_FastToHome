@@ -19,13 +19,14 @@ import javax.swing.table.DefaultTableModel;
 import modelo.Direccion;
 
 /**
- *
+ * Clase que representa el diálogo de dirección
+ * 
  * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
  */
 public class DialogoDireccion extends javax.swing.JDialog {
 
     Direccion direccion;
-    //List<Departamento> departamentos = new ArrayList<Departamento>();
 
     /**
      * Creates new form dialogoNuevoDepartamento
