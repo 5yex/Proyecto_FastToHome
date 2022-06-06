@@ -145,7 +145,7 @@ public class panelProducto extends javax.swing.JPanel {
     }//GEN-LAST:event_botonEditarProductoActionPerformed
 
     private void botonInfoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInfoProductoActionPerformed
-       JOptionPane.showMessageDialog(null, "Nombre:  "+ producto.getNombre() + "\nPrecio:  "+ producto.getPrecio()+ " €\nDescripción:  "+ producto.getDescripcion(), "INFO PRODUCTO", JOptionPane.INFORMATION_MESSAGE);
+       JOptionPane.showMessageDialog(null, "Nombre:  "+ producto.getNombre() + "\nPrecio:  "+ producto.getPrecio()+ " €\nDescripción:  "+ producto.getDescripcion(), "Información Producto", JOptionPane.INFORMATION_MESSAGE);
 
     }//GEN-LAST:event_botonInfoProductoActionPerformed
 
