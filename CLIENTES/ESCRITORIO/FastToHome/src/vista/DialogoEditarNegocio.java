@@ -185,7 +185,12 @@ public class DialogoEditarNegocio extends javax.swing.JDialog {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción de pulsar el botón de 'Editar dirección'
+     * 
+     * @param evt 
+     */
     private void botonActualizarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarDireccionActionPerformed
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionNegocio);
         dialogoDireccion.setVisible(true);
