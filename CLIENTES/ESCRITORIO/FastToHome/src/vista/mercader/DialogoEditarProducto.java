@@ -36,7 +36,7 @@ import static util.imagenesUtil.imagenB64Ajlabel;
 public class DialogoEditarProducto extends javax.swing.JDialog {
 
     private Imagen nImg = new Imagen();
-    private Negocio neg;
+    private Producto producto;
     private JButton btActupaizar;
 
     /**
