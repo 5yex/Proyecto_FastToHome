@@ -171,7 +171,11 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
             this.dispose();
         }      
     }//GEN-LAST:event_buttonLoginActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el combobox del Selector de temas 
+     * @param evt evento
+     */
     private void selectorDeTemasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectorDeTemasActionPerformed
         try {
             int index = ((JComboBox) evt.getSource()).getSelectedIndex();
