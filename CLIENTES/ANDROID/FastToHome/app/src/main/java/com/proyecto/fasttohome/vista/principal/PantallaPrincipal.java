@@ -38,6 +38,7 @@ public class PantallaPrincipal extends AppCompatActivity {
         user = (Usuario) getIntent().getExtras().getSerializable("user");
         obtenerDatosUsuario();
         System.out.println("User: " + user.toString());
+        finish();
     }
 
     public void obtenerDatosUsuario() {
