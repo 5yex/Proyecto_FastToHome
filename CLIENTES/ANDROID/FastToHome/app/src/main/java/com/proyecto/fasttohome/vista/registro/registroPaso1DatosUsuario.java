@@ -90,7 +90,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         if(Validaciones.validar(name,getString(R.string.patron_nombre))) {
             user.setNombre(name);
         }else{
-            Toast notificacion = Toast.makeText(this,"Nombre que empiece por mayusculas y resto minúsculas",Toast.LENGTH_SHORT);
+            Toast notificacion = Toast.makeText(this,"Nombre que empiece por mayuscula y resto minúsculas",Toast.LENGTH_SHORT);
             notificacion.show();
             return false;
         }
@@ -98,7 +98,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         if(Validaciones.validar(ape,getString(R.string.patron_apellido))) {
             user.setApellidos(ape);
         }else{
-            Toast notificacion = Toast.makeText(this,"Apellido que empiece por mayusculas y resto minúsculas",Toast.LENGTH_SHORT);
+            Toast notificacion = Toast.makeText(this,"Apellido que empiece por mayúscula y resto minúsculas, tambien acepta ",Toast.LENGTH_SHORT);
             notificacion.show();
             return false;
         }
