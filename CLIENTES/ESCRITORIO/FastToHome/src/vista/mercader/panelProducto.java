@@ -21,8 +21,9 @@ import modelo.Producto;
 import util.imagenesUtil;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa el panel con con el contenido del producto
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
  */
 public class panelProducto extends javax.swing.JPanel {
 
