@@ -101,12 +101,6 @@ public class DialogoDireccion extends javax.swing.JDialog {
 
         LabelCP.setText("CP:");
 
-        varCP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                varCPActionPerformed(evt);
-            }
-        });
-
         labelCiudad1.setText("Otros Datos:");
 
         varOtros.setColumns(20);
@@ -199,10 +193,6 @@ public class DialogoDireccion extends javax.swing.JDialog {
             this.dispose();
         }
     }//GEN-LAST:event_aceptarActionPerformed
-
-    private void varCPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_varCPActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_varCPActionPerformed
 
     public void rellenarDialogo() {
         if (direccion != null) {
