@@ -53,12 +53,14 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
 
             if(name.length() > 0 && ape.length() > 0 && nif.length() > 0 && numTelefono.length() > 0 && correo.length() > 0){
 
-                Intent i = new Intent(this, registroPaso2Password.class);
+                if(validaciones(name,ape,nif,numTelefono,correo)){
+                    Intent i = new Intent(this, registroPaso2Password.class);
 
-                i.putExtra("user", user);
-                i.putExtra("direccion", direccion);
+                    i.putExtra("user", user);
+                    i.putExtra("direccion", direccion);
 
-                startActivity(i);
+                    startActivity(i);
+                }
             }else{
                 //Toast
             }
