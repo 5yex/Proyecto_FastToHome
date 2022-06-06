@@ -39,7 +39,11 @@ public class DialogoImagen extends javax.swing.JDialog {
     private Imagen imagen;
 
     /**
-     * Creates new form DialogoImagen
+     * Construye un nuevo DialogImagen cuyo elemento padre es un Frame
+     * 
+     * @param parent
+     * @param modal
+     * @param imagen 
      */
     public DialogoImagen(java.awt.Frame parent, boolean modal, Imagen imagen) {
         super(parent, modal);
