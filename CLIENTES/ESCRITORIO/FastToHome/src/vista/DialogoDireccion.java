@@ -195,6 +195,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
     }//GEN-LAST:event_aceptarActionPerformed
     
     /**
+     * Rellena los campos del DiálogoDireccion si la dirección no es nula
      * 
      */
     public void rellenarDialogo() {
