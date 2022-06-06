@@ -16,4 +16,7 @@ public class PantallaPrincipal extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_pantalla_principal);
     }
+
+
+
 }
