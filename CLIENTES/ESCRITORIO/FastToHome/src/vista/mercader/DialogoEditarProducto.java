@@ -260,17 +260,17 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
             if (descripcion.length() == 0 | nombre.length() == 0) {
                 throw new IOException("Rellena todos los campos");
             }
-            if (imagen.getB64_imagen() != null && !imagen.getB64_imagen().isBlank()) {
+            if (nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()) {
                 if (producto.getId_img() == 0) {
                     //System.out.println("NO TIENE IMAGEN SE LE AÑADIRÁ UNA NUEVA");
-                    int id_imagen = ImagenDao.nuevaImagenDevuelveId(imagen);
+                    int id_imagen = ImagenDao.nuevaImagenDevuelveId(nImg);
                     if (id_imagen != 0) {
                         producto.setId_img(id_imagen);
                     }
                 } else {
 
                     imagen.setId(producto.getId_img());
-                    ImagenDao.editarImagenPorId(imagen);
+                    ImagenDao.editarImagenPorId(nImg);
 
                 }
             }
