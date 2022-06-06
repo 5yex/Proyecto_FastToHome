@@ -20,7 +20,7 @@ import modelo.Direccion;
 
 /**
  *
- * @author 5yex
+ * @author Jose Miguel Calderón, Jesús Rueda
  */
 public class DialogoDireccion extends javax.swing.JDialog {
 
