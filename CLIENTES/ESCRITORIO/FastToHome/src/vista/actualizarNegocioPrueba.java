@@ -190,7 +190,7 @@ public class actualizarNegocioPrueba extends javax.swing.JDialog {
     }//GEN-LAST:event_botonConfirmarCambiosActionPerformed
 
     private void botonActualizarImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarImagenActionPerformed
-        new DialogoImagen(this, rootPaneCheckingEnabled, nImg).setVisible(true);
+        new DialogoImagen(this, true, nImg).setVisible(true);
     }//GEN-LAST:event_botonActualizarImagenActionPerformed
 
     private void cargaInicial() {
