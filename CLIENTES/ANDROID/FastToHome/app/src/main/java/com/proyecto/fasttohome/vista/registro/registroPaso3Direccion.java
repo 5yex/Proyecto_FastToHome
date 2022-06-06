@@ -66,20 +66,28 @@ public class registroPaso3Direccion extends AppCompatActivity {
 
         try {
             String numero_casa = numero.getText().toString();
-            String postalCode = codigoPostal.getText().toString();
+            String cod_postal = codigoPostal.getText().toString();
             String city = ciudad.getText().toString();
             String street = calle.getText().toString();
             String other = otros.getText().toString();
 
+            if(numero_casa.length() > 0 && cod_postal.length() > 0 && city.length() > 0 && street.length() > 0 && other.length() > 0){
+                int numeroEntero = Integer.valueOf(numero.getText().toString());
+                int cod_postalEntero = Integer.valueOf(codigoPostal.getText().toString());
 
-            direccion.setNumero(Integer.valueOf(numero.getText().toString()));
-            direccion.setCodigo_postal(Integer.valueOf(codigoPostal.getText().toString()));
-            direccion.setCiudad(ciudad.getText().toString());
-            direccion.setCalle(calle.getText().toString());
-            direccion.setOtros(otros.getText().toString());
+                direccion.setNumero(numeroEntero);
+                direccion.setCodigo_postal(cod_postalEntero);
+                direccion.setCiudad(ciudad.getText().toString());
+                direccion.setCalle(calle.getText().toString());
+                direccion.setOtros(otros.getText().toString());
 
-            System.err.println(user.getJSON() + direccion.getJSON());
-            registerDirecion();
+                System.err.println(user.getJSON() + direccion.getJSON());
+                registerDirecion();
+            }else{
+                //Toast
+            }
+
+
         }catch (NumberFormatException exception){
             //Toast
         }
