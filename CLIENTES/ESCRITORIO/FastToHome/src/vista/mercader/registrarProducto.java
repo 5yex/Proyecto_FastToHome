@@ -74,7 +74,7 @@ public class registrarProducto extends javax.swing.JFrame {
         errorTexto = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("NUEVO PRODUCTO");
+        setTitle("Nuevo Producto");
         setAlwaysOnTop(true);
         setResizable(false);
 
