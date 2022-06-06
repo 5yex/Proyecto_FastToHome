@@ -160,7 +160,12 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
         //this.dispose();
         new registrarUsuario(this, true).setVisible(true);
     }//GEN-LAST:event_buttonRegistroActionPerformed
-
+    
+    /**
+     * 
+     * 
+     * @param evt evento
+     */
     private void buttonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogin1ActionPerformed
         if(comprobarLogin()){
             this.dispose();
