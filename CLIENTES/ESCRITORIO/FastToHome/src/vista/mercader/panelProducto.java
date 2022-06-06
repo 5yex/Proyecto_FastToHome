@@ -28,12 +28,14 @@ public class panelProducto extends javax.swing.JPanel {
 
     private Producto producto;
     JButton btUpdate;
+    JFrame parent;
 
     /**
      * Creates new form producto
      */
-    public panelProducto(Producto prod, JButton btUpdate) {
+    public panelProducto(JFrame parent,Producto prod, JButton btUpdate) {
         initComponents();
+        this.parent = parent;
         this.producto = prod;
         this.btUpdate = btUpdate;
         mostrarDatos();
