@@ -98,7 +98,8 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         if(Validaciones.validar(ape,getString(R.string.patron_apellido))) {
             user.setApellidos(ape);
         }else{
-            //Toast
+            Toast notificacion = Toast.makeText(this,"Apellido que empiece por mayusculas y resto minúsculas",Toast.LENGTH_SHORT);
+            notificacion.show();
             return false;
         }
 
