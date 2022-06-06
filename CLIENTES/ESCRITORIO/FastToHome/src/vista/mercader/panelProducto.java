@@ -24,6 +24,7 @@ import util.imagenesUtil;
  * Clase que representa el panel con con el contenido del producto
  * 
  * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
  */
 public class panelProducto extends javax.swing.JPanel {
 
