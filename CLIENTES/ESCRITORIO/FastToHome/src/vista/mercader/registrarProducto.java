@@ -233,11 +233,7 @@ public class registrarProducto extends javax.swing.JFrame {
 
     private void cargaInicial() {
         textAreaDescripcion.setLineWrap(true);
-//        listaCategorias = controlador.CategoriaDao.obtenerCategorias();
-//        for (Categoria listaCategoria : listaCategorias) {
-//            comboCategoria.addItem(listaCategoria.getNombre());
-//        }
-//        JOptionPane.showMessageDialog(null, User.getNombre() + " Bienvenido al equipo de mercaderes! \n A continuación podrás configurar tu negocio");
+
     }
 
     private boolean nuevoProducto() {
