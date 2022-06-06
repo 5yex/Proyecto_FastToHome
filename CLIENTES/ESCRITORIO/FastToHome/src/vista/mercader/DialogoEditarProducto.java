@@ -269,7 +269,7 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
                     }
                 } else {
 
-                    imagen.setId(producto.getId_img());
+                    nImg.setId(producto.getId_img());
                     ImagenDao.editarImagenPorId(nImg);
 
                 }
