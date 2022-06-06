@@ -73,6 +73,8 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
 
                 if(Validaciones.validar(numTelefono,getString(R.string.patron_telefono))){
                     user.setTlf(numTelefono);
+                }else{
+                    //Toast
                 }
 
                 user.setEmail(email.getText().toString());
