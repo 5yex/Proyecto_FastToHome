@@ -42,6 +42,11 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
 
     public void irPasoPassword(View view) {
         //Transporte de los datos
+        String name = nombre.getText().toString();
+                String ape = apellidos.getText().toString();
+                String nif = dni.getText().toString();
+                String telefono = telefono.getText().toString();
+                String correo = email.getText().toString();
         user.setNombre(nombre.getText().toString());
         user.setApellidos(apellidos.getText().toString());
         user.setDni(dni.getText().toString());
