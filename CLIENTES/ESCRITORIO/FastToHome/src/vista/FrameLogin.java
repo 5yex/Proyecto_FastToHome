@@ -23,7 +23,7 @@ import util.imagenesUtil;
 import vista.administrador.VentanaAdmin;
 
 /**
- * Clase que representa la ventana del Login
+ * Clase que representa la ventana del Login.
  * 
  * @author Jose Miguel Caderón, Jesús Rueda
  * @version 1.0
@@ -151,7 +151,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     }// </editor-fold>//GEN-END:initComponents
     
     /**
-     * Acción de pulsar el botón de Registro
+     * Acción de pulsar el botón de Registro.
      * 
      * @param evt evento
      */
@@ -162,7 +162,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     }//GEN-LAST:event_buttonRegistroActionPerformed
     
     /**
-     * Acción de pulsar el botón de Login
+     * Acción de pulsar el botón de Login.
      * 
      * @param evt evento
      */
@@ -173,7 +173,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     }//GEN-LAST:event_buttonLoginActionPerformed
     
     /**
-     * Acción de pulsar en el combobox del Selector de temas
+     * Acción de pulsar en el combobox del Selector de temas.
      * 
      * @param evt evento
      */
@@ -198,7 +198,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
     }//GEN-LAST:event_selectorDeTemasActionPerformed
     
     /**
-     * Comprueba que se ha realizado el login
+     * Comprueba que se ha realizado el login.
      * 
      * @return true si el se ha realizado el login
      */
