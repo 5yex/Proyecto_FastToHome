@@ -31,7 +31,15 @@ public class DialogoEditarNegocio extends javax.swing.JDialog {
     private Direccion direccionNegocio = new Direccion();
     private ArrayList<Categoria> listaCategorias;
     private JButton updateInicio;
-
+    
+    /**
+     * Contruye un nuevo DialogoEditarNegocio
+     * 
+     * @param parent Frame que es padre del diálogo
+     * @param negocio objeto de tipo Negocio que va a ser editado
+     * @param updateInicio botón encargado de cargar la ventana de inicio con la nueva información
+     * @param modal No se puede clickar en la ventana padre si está a true
+     */
     public DialogoEditarNegocio(java.awt.Frame parent, Negocio negocio, JButton updateInicio, boolean modal) {
         super(parent,modal);
         this.negocio = negocio;
