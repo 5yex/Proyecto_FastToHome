@@ -67,7 +67,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
 
             }
         }catch (NumberFormatException ex){
-            Toast notificacion = Toast.makeText(this,"El número de telefono debe ser un entero de 9 cifras que ",Toast.LENGTH_SHORT);
+            Toast notificacion = Toast.makeText(this,"El número de telefono debe ser un entero de 9 cifras que empiece por ",Toast.LENGTH_SHORT);
             notificacion.show();
         }
     }
