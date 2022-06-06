@@ -10,7 +10,6 @@ import controlador.ImagenDao;
 import controlador.NegocioDao;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
@@ -18,12 +17,10 @@ import modelo.Categoria;
 import modelo.Direccion;
 import modelo.Imagen;
 import modelo.Negocio;
-import modelo.Usuario;
-import vista.mercader.VentanaMercader;
 
 /**
  *
- * @author jmcbg
+ * @author Jose Miguel Calderón, Jesús Rueda
  */
 public class DialogoEditarNegocio extends javax.swing.JDialog {
 
