@@ -44,7 +44,7 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
      *
      * @param user
      */
-    public DialogoEditarProducto(JFrame parent, JButton btActupaizar, Negocio neg, boolean modal) {
+    public DialogoEditarProducto(JFrame parent, JButton btActupaizar, Producto product, boolean modal) {
         super(parent,modal);
         initComponents();
         this.btActupaizar = btActupaizar;
