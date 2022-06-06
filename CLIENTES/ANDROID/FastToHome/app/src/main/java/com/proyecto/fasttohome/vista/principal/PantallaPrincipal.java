@@ -55,7 +55,7 @@ public class PantallaPrincipal extends AppCompatActivity {
                     user.setEmail(datos.getString("email"));
                     user.setNombre(datos.getString("nombre"));
                     user.setDni(datos.getString("dni"));
-                    user.setId_direccion(datos.getInt("id_direccion"));
+                    user.setId_direccion(datos.getInt("direccion_id"));
                     user.setRol(datos.getString("Rol"));
                     user.setTlf(datos.getString("tlf"));
 
