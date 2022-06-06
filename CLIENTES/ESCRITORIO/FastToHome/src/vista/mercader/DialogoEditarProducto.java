@@ -47,7 +47,7 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
     public DialogoEditarProducto(JFrame parent, JButton btActupaizar, Negocio neg, boolean modal) {
         super(parent,modal);
         initComponents();
-        this.btActupaizar=btActupaizar;
+        this.btActupaizar = btActupaizar;
         this.neg = neg;
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         cargaInicial();
