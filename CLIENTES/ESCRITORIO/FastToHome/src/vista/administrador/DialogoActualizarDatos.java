@@ -507,7 +507,8 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     
     /**
      * Comprueba que ocurre al pulsar en el botón de 'MODIFICAR DIRECCIÓN'
-     * @param evt 
+     * 
+     * @param evt evento
      */
     private void botonModificarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDireccionActionPerformed
         //direccionUsuario = DireccionDao.obtenerDireccionUsuario(usuario);
