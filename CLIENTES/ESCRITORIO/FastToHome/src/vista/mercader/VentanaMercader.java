@@ -549,7 +549,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelPedidos.repaint();
 
     }
-
+    
+    /**
+     * Muestra los paneles de los pedidos que tiene el estado 'en_preparacion'
+     */
     private void mostrarPedidosEnPreparacion() {
         //crearHiloActualizacionDeProductos();
         ActionListener actualizarPedidos = new ActionListener() {
