@@ -206,7 +206,12 @@ public class registroNegocio extends javax.swing.JFrame {
             this.dispose();
         }
     }//GEN-LAST:event_botonCompletarRegistroActionPerformed
-
+    
+    /**
+     * Acción de pulsar el botón 'Subir logo del negocio'
+     * 
+     * @param evt 
+     */
     private void botonPedirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirImagenActionPerformed
         new DialogoImagen(this, rootPaneCheckingEnabled, nImg).setVisible(true);
     }//GEN-LAST:event_botonPedirImagenActionPerformed
