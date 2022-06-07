@@ -84,7 +84,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         initComponents();
         establecerCamposIniciales(usuario);
     }
-
+    
+    /**
+     * Comprueba que los campos de 'Contraseña' y 'Comprobar contraeña' son iguales y cumplen el patrón
+     * 
+     * @return true si los campos de 'Contraseña' y 'Comprobar contraeña' son iguales y cumplen el patrón
+     */
     private boolean validarpassiguales() {
 
         if (modificarPassCheck.isSelected()) {
