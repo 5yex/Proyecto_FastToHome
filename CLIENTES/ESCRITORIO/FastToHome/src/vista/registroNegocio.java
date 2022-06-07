@@ -229,6 +229,12 @@ public class registroNegocio extends javax.swing.JFrame {
         textAreaDescripcion.setLineWrap(true);
     }
     
+    /**
+     * Comprueba que se crea un nuevo negocio de un usario (mercader) en concreto
+     * 
+     * @param user Usuario que va a ser propietario del negocio
+     * @return true si se ha registrado con éxito el negocio 
+     */
     private boolean nuevoNegocio(Usuario user) {
 
         try {
