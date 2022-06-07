@@ -534,14 +534,24 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             passwordConfirmField.setEnabled(false);
         }
     }//GEN-LAST:event_modificarPassCheckActionPerformed
-
+    
+    /**
+     * Obtiene una imagen de un directorio y la devuelve como un objeto de tipo Image
+     * 
+     * @return un objeto de tipo Image
+     */
     public Image getIconImage() {
         Image retValue = Toolkit.getDefaultToolkit().
                 getImage(ClassLoader.getSystemResource("./recursos/logoIcon.png"));
 
         return retValue;
     }
-
+    
+    /**
+     * Comprueba que se ha modificado la contraseña correctamente
+     * 
+     * @return true si se ha modificado la contraseña correctamente
+     */
     private boolean modificarPassword() {
         String passHash = usuario.getPassword();
         String tFieldPass = String.valueOf(passwordAnteriorField.getPassword());
