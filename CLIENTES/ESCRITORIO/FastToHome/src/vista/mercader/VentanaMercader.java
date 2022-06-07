@@ -499,7 +499,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
     
     /**
-     * Crea el hilo de la actualización automatica de productos
+     * Crea el hilo de la actualización automática de productos
      */
     private void crearHiloActualizacionDeProductos() {
         if (hiloUpdate == null) {
