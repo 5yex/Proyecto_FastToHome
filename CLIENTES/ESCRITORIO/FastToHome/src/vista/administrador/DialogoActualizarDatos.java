@@ -513,7 +513,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             infoPass.setText("");
         }
     }//GEN-LAST:event_passwordFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de confirmar contraseña
+     * 
+     * @param evt evento
+     */
     private void passwordConfirmFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmFieldFocusLost
         if (String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) != 0 || !validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)) {
             infoConfirmPass.setForeground(Color.RED);
