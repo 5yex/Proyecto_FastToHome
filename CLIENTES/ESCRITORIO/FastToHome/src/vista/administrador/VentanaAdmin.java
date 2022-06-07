@@ -488,7 +488,8 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void checkBusquedaMercaderesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaMercaderesActionPerformed
         recargarTablaMercaderes();
     }//GEN-LAST:event_checkBusquedaMercaderesActionPerformed
-
+    
+    
     private void recargarMercaderesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarMercaderesActionPerformed
         recargarTablaMercaderes();
     }//GEN-LAST:event_recargarMercaderesActionPerformed
