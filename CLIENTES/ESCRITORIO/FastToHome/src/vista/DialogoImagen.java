@@ -148,7 +148,7 @@ public class DialogoImagen extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
     
     /**
-     * Acción de pulsar el botón de seleccionar imagen
+     * Acción de pulsar el botón de 'SELECCIONAR IMAGEN'
      * 
      * @param evt evento
      */
