@@ -34,9 +34,11 @@ public class PanelProducto extends javax.swing.JPanel {
     JFrame parent;
 
     /**
-     * Constructor
+     * Construye un PanelProducto
      * 
-     * Creates new form producto
+     * @param parent Frame padre del panel
+     * @param prod
+     * @param btUpdate 
      */
     public PanelProducto(JFrame parent,Producto prod, JButton btUpdate) {
         initComponents();
