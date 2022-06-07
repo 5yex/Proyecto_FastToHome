@@ -345,6 +345,11 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
         }
     }//GEN-LAST:event_apellidosFieldFocusLost
     
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de dni
+     * 
+     * @param evt evento
+     */
     private void dniFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dniFieldFocusLost
         if (!validaciones.validacionDNI(dniField.getText())) {
             infoDNI.setForeground(Color.RED);
