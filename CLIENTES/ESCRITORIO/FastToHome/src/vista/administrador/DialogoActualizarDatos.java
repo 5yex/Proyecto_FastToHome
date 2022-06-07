@@ -45,9 +45,9 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     }
     
     /**
+     * Modifica un objeto de tipo Usuario
      * 
-     * 
-     * @param user 
+     * @param user objeto de tipo usuario a ser modificado
      */
     public void setUsuario(Usuario user) {
         this.usuario = user;
