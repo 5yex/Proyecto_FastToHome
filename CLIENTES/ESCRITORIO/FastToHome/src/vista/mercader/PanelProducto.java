@@ -183,7 +183,10 @@ public class PanelProducto extends javax.swing.JPanel {
     private javax.swing.JLabel labelPrecio;
     private javax.swing.JLabel nombreProducto;
     // End of variables declaration//GEN-END:variables
-
+    
+    /**
+     * Muestra los datos del producto en el Panel
+     */
     private void mostrarDatos() {
         nombreProducto.setText(producto.getNombre());
         labelPrecio.setText(String.valueOf(producto.getPrecio()) + " €");
