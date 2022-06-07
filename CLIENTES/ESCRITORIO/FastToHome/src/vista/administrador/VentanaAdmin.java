@@ -595,7 +595,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
     
     /**
-     * Recarga la información de las tabla con la información de los administradores
+     * Obtiene la información para recargar la tabla con la información de los administradores
      */
     public void recargarTablaAdmins() {
         arrayListAdmins = UsuarioDao.seleccionUsuariosAdmin();
