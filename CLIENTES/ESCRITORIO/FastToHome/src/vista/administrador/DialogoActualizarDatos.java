@@ -504,7 +504,11 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             infoConfirmPass.setText("");
         }
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al pulsar en el botón de 'MODIFICAR DIRECCIÓN'
+     * @param evt 
+     */
     private void botonModificarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDireccionActionPerformed
         //direccionUsuario = DireccionDao.obtenerDireccionUsuario(usuario);
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionUsuario);
