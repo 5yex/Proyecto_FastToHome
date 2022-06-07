@@ -23,7 +23,7 @@ import util.Constantes;
 import util.validaciones;
 
 /**
- *
+ * Clase que representa al dialogo para actualizar los datos del usuario
  * 
  * @author Jose Miguel Calderón, Jesús Rueda
  * @version 1.0
