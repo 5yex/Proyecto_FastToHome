@@ -15,8 +15,10 @@ import modelo.Pedido;
 import modelo.Producto;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa el panel con la información del pedido
+ * 
+ * @author Jose Miguel Calderón, Jesus Rueda
+ * @versio 1.0
  */
 public class PanelPedido extends javax.swing.JPanel {
     private Pedido pedido;
