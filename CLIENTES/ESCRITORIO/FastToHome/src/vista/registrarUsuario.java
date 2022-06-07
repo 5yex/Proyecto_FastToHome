@@ -336,7 +336,6 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
      * 
      * @param evt evento
      */
-     
     private void apellidosFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_apellidosFieldFocusLost
         if (!validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)) {
             infoApellido.setForeground(Color.RED);
