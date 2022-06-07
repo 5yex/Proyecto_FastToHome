@@ -442,7 +442,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             infoNombre.setText("");
         }
     }//GEN-LAST:event_nombreFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de apellidos
+     * 
+     * @param evt evento
+     */
     private void apellidosFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_apellidosFieldFocusLost
         if (!validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)) {
             infoApellido.setForeground(Color.RED);
