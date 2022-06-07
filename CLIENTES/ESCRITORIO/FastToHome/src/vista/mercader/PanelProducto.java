@@ -165,6 +165,7 @@ public class PanelProducto extends javax.swing.JPanel {
     
     /**
      * Acción de pulsar en el icono de mostrar la información del producto
+     * 
      * @param evt evento
      */
     private void botonInfoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInfoProductoActionPerformed
