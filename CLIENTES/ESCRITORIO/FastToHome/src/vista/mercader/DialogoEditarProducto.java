@@ -246,7 +246,12 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
             this.dispose();
         }
     }//GEN-LAST:event_botonAceptarActionPerformed
-
+    
+    /**
+     * Acción de pulsar el botón 'CANCELAR'
+     * 
+     * @param evt evento
+     */
     private void botonCacelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCacelarActionPerformed
         this.dispose();
     }//GEN-LAST:event_botonCacelarActionPerformed
