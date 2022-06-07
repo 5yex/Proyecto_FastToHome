@@ -520,7 +520,10 @@ public class VentanaMercader extends javax.swing.JFrame {
             hiloUpdate.start();
         }
     }
-
+    
+    /**
+     * Muestra los paneles de los pedidos que tiene el estado 'pagado'
+     */
     private void mostrarPedidosPagados() {
         //crearHiloActualizacionDeProductos();
         ActionListener actualizarPedidos = new ActionListener() {
