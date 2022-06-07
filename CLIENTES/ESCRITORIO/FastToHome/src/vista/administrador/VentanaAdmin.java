@@ -581,7 +581,10 @@ public class VentanaAdmin extends javax.swing.JFrame {
             recargarTabla(arrayListClientes, tablaClientes, null);
         }
     }
-
+    
+    /**
+     * Recarga la información de las tabla con la información de los mercaderes
+     */
     public void recargarTablaMercaderes() {
         arrayListMercaderes = UsuarioDao.seleccionUsuariosMercader();
         if (checkBusquedaMercaderes.isSelected()) {
