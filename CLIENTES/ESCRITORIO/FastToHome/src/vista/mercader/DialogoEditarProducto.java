@@ -54,8 +54,15 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
         initComponents();
         this.btActualizar = btActualizar;
         this.producto = product;
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         cargaInicial();
+    }
+    
+    /**
+     * Establece el icono del diálogo
+     */
+    private void establecerIcono() {
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
     }
 
     /**
