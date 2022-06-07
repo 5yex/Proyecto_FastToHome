@@ -198,7 +198,7 @@ public class registroNegocio extends javax.swing.JFrame {
     /**
      * Acción de pulsar el botón 'COMPLETAR REGISTRO'
      * 
-     * @param evt 
+     * @param evt evento
      */
     private void botonCompletarRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCompletarRegistroActionPerformed
         if (nuevoNegocio(User)) {
