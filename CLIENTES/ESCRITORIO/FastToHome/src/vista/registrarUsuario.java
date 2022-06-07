@@ -298,7 +298,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
     /**
      * Acción de pulsar el botón de confirmar registro
      * 
-     * @param evt 
+     * @param evt evento
      */
     private void registerConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerConfirmActionPerformed
 
@@ -320,7 +320,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
     /**
      * Comprueba que ocurre al perder el foco en el campo de nombre
      * 
-     * @param evt 
+     * @param evt evento
      */
     private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
         if (!validaciones.validar(nombreField.getText(), PATRON_NOMBRES)) {
@@ -330,7 +330,14 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             infoNombre.setText("");
         }
     }//GEN-LAST:event_nombreFieldFocusLost
-
+    
+    /**
+     * /**
+     * Comprueba que ocurre al perder el foco en el campo de apellidos
+     * 
+     * @param evt evento
+     */
+     
     private void apellidosFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_apellidosFieldFocusLost
         if (!validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)) {
             infoApellido.setForeground(Color.RED);
