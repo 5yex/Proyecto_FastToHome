@@ -667,7 +667,10 @@ public class VentanaAdmin extends javax.swing.JFrame {
         }
 
     }
-
+    
+    /**
+     * Muestra un cuadro de diálogo preguntando si queremos abandonar o no la ventana de registro
+     */
     public void confirmarSalida() {
         Object[] options = {"Si","No"};
         
