@@ -499,7 +499,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             infoEmail.setText("");
         }
     }//GEN-LAST:event_emailFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de contraseña
+     * 
+     * @param evt evento
+     */
     private void passwordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFieldFocusLost
         if (!validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)) {
             infoPass.setForeground(Color.RED);
