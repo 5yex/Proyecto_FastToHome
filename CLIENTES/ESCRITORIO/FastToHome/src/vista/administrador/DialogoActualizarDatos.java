@@ -470,7 +470,13 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             infoDNI.setText("");
         }
     }//GEN-LAST:event_dniFieldFocusLost
-
+    
+    /**
+     * /**
+     * Comprueba que ocurre al perder el foco en el campo de teléfono
+     * 
+     * @param evt evento
+     */
     private void tlfFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tlfFieldFocusLost
         if (!validaciones.validar(tlfField.getText(), PATRON_TELEFONO)) {
             infoTelefono.setForeground(Color.RED);
