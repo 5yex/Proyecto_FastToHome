@@ -41,9 +41,12 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
     private JButton btActualizar;
 
     /**
-     * Creates new form VentanaRegistroNegocio
-     *
-     * @param user
+     * Construye un DialogoRegistrarProducto
+     * 
+     * @param parent Frame padre del diálogo
+     * @param btActualizar 
+     * @param neg
+     * @param modal 
      */
     public DialogoRegistrarProducto(JFrame parent, JButton btActualizar, Negocio neg, boolean modal) {
         super(parent,modal);
