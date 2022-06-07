@@ -42,9 +42,9 @@ public class DialogoImagen extends javax.swing.JDialog {
     /**
      * Construye un nuevo DialogImagen cuyo elemento padre es un Frame
      * 
-     * @param parent
-     * @param modal
-     * @param imagen 
+     * @param parent Frame padre del diálogo
+     * @param modal No se puede clickar en la ventana padre si está a true
+     * @param imagen Imagen a seleccionar
      */
     public DialogoImagen(java.awt.Frame parent, boolean modal, Imagen imagen) {
         super(parent, modal);
