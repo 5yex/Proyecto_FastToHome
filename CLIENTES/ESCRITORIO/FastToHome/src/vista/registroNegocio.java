@@ -27,6 +27,7 @@ import vista.mercader.VentanaMercader;
  * Clase que representa la ventana de registro de negocio
  * 
  * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
  */
 public class registroNegocio extends javax.swing.JFrame {
 
@@ -36,7 +37,7 @@ public class registroNegocio extends javax.swing.JFrame {
     private ArrayList<Categoria> listaCategorias;
 
     /**
-     * Creates new form VentanaRegistroNegocio
+     * Constrye un
      *
      * @param user
      */
