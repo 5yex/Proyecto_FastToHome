@@ -21,6 +21,7 @@ import util.validaciones;
  * Clase que representa la ventana de registro de usuario
  * 
  * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
  */
 public class registrarUsuario extends javax.swing.JDialog implements Constantes {
 
