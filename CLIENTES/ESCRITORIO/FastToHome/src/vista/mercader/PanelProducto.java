@@ -204,7 +204,10 @@ public class PanelProducto extends javax.swing.JPanel {
 
         this.setBorder(new FlatButtonBorder());
     }
-
+    
+    /**
+     * Muestra el diálogo con la elección de borrar definitivamente el producto o no
+     */
     private void eliminarProducto() {
         Object[] options = {"Si","No"};
         
