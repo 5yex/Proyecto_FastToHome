@@ -71,8 +71,15 @@ public class VentanaMercader extends javax.swing.JFrame {
         this.mercader = user;
         this.negocio = NegocioDao.negocioDeMercader(user);
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         inicilizacion();
+    }
+    
+    /**
+     * Establece el icono del diálogo
+     */
+    private void establecerIcono() {
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
     }
 
     /**
