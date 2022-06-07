@@ -45,8 +45,8 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
      * 
      * @param parent Frame padre del diálogo
      * @param btActualizar botón 'RECARGAR PRODUCTOS' de la sección 'PRODUCTOS'
-     * @param neg
-     * @param modal 
+     * @param neg obejto de tipo Negocio al que pertenece el producto
+     * @param modal No se puede clickar en la ventana padre si está a true
      */
     public DialogoRegistrarProducto(JFrame parent, JButton btActualizar, Negocio neg, boolean modal) {
         super(parent,modal);
