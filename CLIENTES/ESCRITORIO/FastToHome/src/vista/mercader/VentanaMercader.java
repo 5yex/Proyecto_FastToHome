@@ -121,14 +121,6 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         panelTableado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         panelTableado.setMinimumSize(new java.awt.Dimension(678, 465));
-        panelTableado.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                panelTableadoMouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                panelTableadoMousePressed(evt);
-            }
-        });
 
         labelBienvenido.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         labelBienvenido.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -367,10 +359,6 @@ public class VentanaMercader extends javax.swing.JFrame {
         dmod.setVisible(true);
     }//GEN-LAST:event_botonModificarDatosMercaderActionPerformed
 
-    private void panelTableadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panelTableadoMousePressed
-
     private void recargarPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarPedidosActionPerformed
         mostrarPedidos();
     }//GEN-LAST:event_recargarPedidosActionPerformed
@@ -392,10 +380,6 @@ public class VentanaMercader extends javax.swing.JFrame {
         mostrarPedidosPagados();
 
     }//GEN-LAST:event_checkParaPrepararActionPerformed
-
-    private void panelTableadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panelTableadoMouseClicked
 
     private void btnModificarNegocioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarNegocioActionPerformed
         DialogoEditarNegocio dialogoEditarNegocio = new DialogoEditarNegocio(this,negocio,updateInicio,true);
