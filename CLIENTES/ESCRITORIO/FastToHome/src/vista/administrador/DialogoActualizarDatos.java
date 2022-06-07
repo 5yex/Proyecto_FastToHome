@@ -506,7 +506,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
     
     /**
-     * Comprueba que ocurre al pulsar en el botón de 'MODIFICAR DIRECCIÓN'
+     * Acción de pulsar en el botón de 'MODIFICAR DIRECCIÓN'
      * 
      * @param evt evento
      */
