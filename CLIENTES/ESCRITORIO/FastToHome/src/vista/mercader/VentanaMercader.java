@@ -401,7 +401,12 @@ public class VentanaMercader extends javax.swing.JFrame {
         mostrarPedidosPagados();
 
     }//GEN-LAST:event_checkParaPrepararActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el botón 'PERSONALIZA TU NEGOCIO' de seccion de 'INICIO'
+     * 
+     * @param evt 
+     */
     private void btnModificarNegocioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarNegocioActionPerformed
         DialogoEditarNegocio dialogoEditarNegocio = new DialogoEditarNegocio(this,negocio,updateInicio,true);
         dialogoEditarNegocio.setVisible(true);
