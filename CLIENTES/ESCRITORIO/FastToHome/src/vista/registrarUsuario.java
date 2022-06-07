@@ -388,7 +388,12 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionUsuario);
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonIntroducirDireccionActionPerformed
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de nombre
+     * 
+     * @param evt evento
+     */
     private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
         if (!validaciones.validar(nombreField.getText(), PATRON_NOMBRES)) {
             infoNombre.setForeground(Color.RED);
