@@ -19,8 +19,13 @@ public class PanelProductoNuevo extends javax.swing.JPanel {
     JButton actualizar;
     Negocio negocio;
     JFrame framePadre;
+    
     /**
-     * Creates new form producto
+     * Construye un PanelProductoNuevo
+     * 
+     * @param parent Frame en el que esta situado el panel
+     * @param actualizar botón 'RECARGAR PRODUCTOS' de la seccion 'PRODUCTOS' de la ventana de mercader
+     * @param negocio objeto de tipo Negocio al que pertenece el producto
      */
     public PanelProductoNuevo(JFrame parent, JButton actualizar, Negocio negocio) {
         initComponents();
@@ -67,7 +72,11 @@ public class PanelProductoNuevo extends javax.swing.JPanel {
                 .addGap(0, 0, 0))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción de pulsar el boton azul 'NUEVO'
+     * @param evt 
+     */
     private void botonNuevoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevoProductoActionPerformed
        //new registrarProducto(actualizar,negocio).setVisible(true);
        new DialogoRegistrarProducto(framePadre, actualizar, negocio, true).setVisible(true);
