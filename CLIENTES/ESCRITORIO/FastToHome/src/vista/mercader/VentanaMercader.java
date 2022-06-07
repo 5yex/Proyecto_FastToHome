@@ -40,8 +40,9 @@ import vista.DialogoEditarNegocio;
 import vista.administrador.DialogoActualizarDatos;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa la ventana de un mercader 
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
  */
 public class VentanaMercader extends javax.swing.JFrame {
 
