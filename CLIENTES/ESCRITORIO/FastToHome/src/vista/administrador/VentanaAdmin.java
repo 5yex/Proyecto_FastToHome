@@ -436,7 +436,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
             actualizarVentana();
         }
     }//GEN-LAST:event_botonModificarDatosAdminActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el item 'Hacer mercader a este usuario' del popUpClientes
+     * 
+     * @param evt evento
+     */
     private void itemClienteAMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemClienteAMercaderActionPerformed
         //hacerMecader
         int filaSeleccionada = tablaClientes.getSelectedRow();
