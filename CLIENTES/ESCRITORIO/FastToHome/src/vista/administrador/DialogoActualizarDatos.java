@@ -47,10 +47,10 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     /**
      * 
      * 
-     * @param admin 
+     * @param user 
      */
-    public void setUsuario(Usuario admin) {
-        this.usuario = admin;
+    public void setUsuario(Usuario user) {
+        this.usuario = user;
     }
 
     public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, Usuario administrador) {
