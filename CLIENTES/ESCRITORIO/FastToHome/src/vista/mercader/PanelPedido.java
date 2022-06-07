@@ -180,7 +180,10 @@ public class PanelPedido extends javax.swing.JPanel {
     private javax.swing.JLabel tituloIdPedido;
     private javax.swing.JLabel tituloTransporte;
     // End of variables declaration//GEN-END:variables
-
+    
+    /**
+     * Muestra los datos del pedido
+     */
     private void mostrarDatos() {
         pasarEstado.addActionListener(actualizarPedido);
         
