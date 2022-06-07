@@ -472,7 +472,11 @@ public class VentanaAdmin extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_itemClienteAAdministradorActionPerformed
-
+    
+    /**
+     * Acción de hacer check en el checkbox 'Busqueda por nombre' de la seccion 'CLIENTES' 
+     * @param evt evento
+     */
     private void checkBusquedaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaClientesActionPerformed
         recargarTablaClientes();
     }//GEN-LAST:event_checkBusquedaClientesActionPerformed
