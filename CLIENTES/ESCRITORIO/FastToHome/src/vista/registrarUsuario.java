@@ -358,7 +358,12 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             infoDNI.setText("");
         }
     }//GEN-LAST:event_dniFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de telefono
+     * 
+     * @param evt evento
+     */
     private void tlfFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tlfFieldFocusLost
         if (!validaciones.validar(tlfField.getText(), PATRON_TELEFONO)) {
             infoTelefono.setForeground(Color.RED);
@@ -367,7 +372,12 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             infoTelefono.setText("");
         }
     }//GEN-LAST:event_tlfFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de email
+     * 
+     * @param evt evento
+     */
     private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
         if (!validaciones.validar(emailField.getText(), PATRON_EMAIL)) {
             infoEmail.setForeground(Color.RED);
