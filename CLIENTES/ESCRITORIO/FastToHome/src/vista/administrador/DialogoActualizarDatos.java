@@ -209,11 +209,6 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
                 passwordFieldFocusLost(evt);
             }
         });
-        passwordField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordFieldActionPerformed(evt);
-            }
-        });
 
         passwordConfirmTxt.setText("Confirmar contraseña:");
 
@@ -519,10 +514,6 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             infoConfirmPass.setText("");
         }
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
-
-    private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordFieldActionPerformed
 
     private void botonModificarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDireccionActionPerformed
         //direccionUsuario = DireccionDao.obtenerDireccionUsuario(usuario);
