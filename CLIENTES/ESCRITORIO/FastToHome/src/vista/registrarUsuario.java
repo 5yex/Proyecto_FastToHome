@@ -85,14 +85,6 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
 
         nombreTXT.setText("Nombre:");
 
-        nombreField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                nombreFieldFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                nombreFieldFocusLost(evt);
-            }
-        });
         nombreField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreFieldActionPerformed(evt);
@@ -317,20 +309,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
         }
     }//GEN-LAST:event_registerConfirmActionPerformed
     
-    /**
-     * Comprueba que ocurre al perder el foco en el campo de nombre
-     * 
-     * @param evt evento
-     */
-    private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
-        if (!validaciones.validar(nombreField.getText(), PATRON_NOMBRES)) {
-            infoNombre.setForeground(Color.RED);
-            infoNombre.setText(MENSAJE_NOMBRE_INFO);
-        } else {
-            infoNombre.setText("");
-        }
-    }//GEN-LAST:event_nombreFieldFocusLost
-    
+   
     /**
      * Comprueba que ocurre al perder el foco en el campo de apellidos
      * 
@@ -414,10 +393,6 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             infoConfirmPass.setText("");
         }
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
-
-    private void nombreFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombreFieldFocusGained
 
     private void nombreFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreFieldActionPerformed
         // TODO add your handling code here:
