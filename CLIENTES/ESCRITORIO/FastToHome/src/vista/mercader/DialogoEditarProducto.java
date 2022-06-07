@@ -42,9 +42,12 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
     private JButton btActualizar;
 
     /**
-     * Creates new form VentanaRegistroNegocio
-     *
-     * @param user
+     * Construye un DialogoEditarProducto
+     * 
+     * @param parent Frame padre del diálogo
+     * @param btActualizar 
+     * @param product
+     * @param modal No se puede clickar en la ventana padre si está a true
      */
     public DialogoEditarProducto(JFrame parent, JButton btActualizar, Producto product, boolean modal) {
         super(parent,modal);
