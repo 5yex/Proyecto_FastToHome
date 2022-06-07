@@ -231,7 +231,12 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
             imagenB64Ajlabel(nImg.getB64_imagen(),imgProducto);
         }
     }//GEN-LAST:event_botonPedirImagenActionPerformed
-
+    
+    /**
+     * Acción de pulsar el botón 'ACEPTAR'
+     * 
+     * @param evt evento
+     */
     private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
         if(nuevoProducto()){
             btActualizar.doClick();
