@@ -63,11 +63,13 @@ public class DialogoImagen extends javax.swing.JDialog {
     public DialogoImagen(java.awt.Dialog parent, boolean modal, Imagen imagen) {
         super(parent, modal);
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         this.imagen = imagen;
     }
     
- 
+    private void establecerIcono() {
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
