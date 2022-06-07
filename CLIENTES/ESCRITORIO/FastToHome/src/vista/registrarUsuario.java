@@ -27,7 +27,10 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
     Direccion direccionUsuario = new Direccion();
 
     /**
-     * Creates new form DialogoRegistro
+     * Construye un JDialog cuyo elemento padre es un Frame
+     * 
+     * @param parent Frame padre del diálogo
+     * @param modal No se puede clickar en la ventana padre si está a true
      */
     public registrarUsuario(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -291,7 +294,12 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción de pulsar el botón de confirmar registro
+     * 
+     * @param evt 
+     */
     private void registerConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerConfirmActionPerformed
 
         if (validaciones.validar(nombreField.getText(), PATRON_NOMBRES)
