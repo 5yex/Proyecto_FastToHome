@@ -632,7 +632,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
     
     /**
-     * 
+     * Realiza el cierre definitivo de la ventana de registro de negocio
      */
     public void confirmarCierre() {
         try {
@@ -649,7 +649,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         }
 
     }
-
+    
+    /**
+     * Muestra un cuadro de diálogo preguntando si queremos abandonar o no la ventana de mercader
+     */
     public void confirmarSalida() {
         Object[] options = {"Si","No"};
         
