@@ -194,7 +194,12 @@ public class registroNegocio extends javax.swing.JFrame {
     private void botonPedirDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirDireccionActionPerformed
         new DialogoDireccion(this, rootPaneCheckingEnabled, nDireccion).setVisible(true);
     }//GEN-LAST:event_botonPedirDireccionActionPerformed
-
+    
+    /**
+     * Acción de pulsar el botón 'COMPLETAR REGISTRO'
+     * 
+     * @param evt 
+     */
     private void botonCompletarRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCompletarRegistroActionPerformed
         if (nuevoNegocio(User)) {
             new VentanaMercader(User).setVisible(true);
