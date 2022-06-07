@@ -175,7 +175,12 @@ public class DialogoImagen extends javax.swing.JDialog {
         imagen.setB64_imagen(b64_imagen);
         this.dispose();
     }//GEN-LAST:event_btnAceptarActionPerformed
-
+    
+    /**
+     * Acción de pulsar el botón de cancelar
+     * 
+     * @param evt 
+     */
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnCancelarActionPerformed
