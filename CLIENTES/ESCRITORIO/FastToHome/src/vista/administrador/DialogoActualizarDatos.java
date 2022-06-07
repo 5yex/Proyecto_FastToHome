@@ -53,9 +53,9 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         this.usuario = user;
     }
 
-    public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, Usuario administrador) {
+    public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, Usuario usuario) {
         super(parent, modal);
-        usuario = administrador;
+        usuario = usuario;
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         establecerCamposIniciales(usuario);
