@@ -561,7 +561,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         }
         return false;
     }
-
+    
+    /**
+     * Comprueba que se han modificado los datos del usuario correctamente
+     * 
+     * @return true si se han modificado los datos del usuario correctamente
+     */
     private boolean modificarDatos() {
         Usuario userCopia = usuario;
 
@@ -592,7 +597,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         }
         return false;
     }
-
+    
+    /**
+     * Rellena los campos con los datos del usuario que se va a modificar
+     * 
+     * @param user Usuario que va a ser modificado
+     */
     private void establecerCamposIniciales(Usuario user) {
         direccionUsuario = DireccionDao.obtenerDireccionUsuario(usuario);
         nombreField.setText(user.getNombre());
@@ -600,10 +610,6 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         tlfField.setText(user.getTlf());
         dniField.setText(user.getDni());
         emailField.setText(user.getEmail());
-    }
-
-    private void validarCampos() {
-
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
