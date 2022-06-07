@@ -224,7 +224,7 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
     /**
      * Acción de pulsar el botón 'ABRIR IMAGEN'
      * 
-     * @param evt 
+     * @param evt evento
      */
     private void botonPedirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirImagenActionPerformed
         new DialogoImagen(this, rootPaneCheckingEnabled, nImg).setVisible(true);
