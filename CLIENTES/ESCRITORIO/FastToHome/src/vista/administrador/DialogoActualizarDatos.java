@@ -485,7 +485,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             infoTelefono.setText("");
         }
     }//GEN-LAST:event_tlfFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de email
+     * 
+     * @param evt evento
+     */
     private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
         if (!validaciones.validar(emailField.getText(), PATRON_EMAIL)) {
             infoEmail.setForeground(Color.RED);
