@@ -448,10 +448,6 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
 
     }
 
-    private void validarCampos() {
-
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellidosField;
     private javax.swing.JLabel apellidosTXT;
