@@ -144,7 +144,12 @@ public class PanelProducto extends javax.swing.JPanel {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción de pulsar en el icono de eliminar producto
+     * 
+     * @param evt evento
+     */
     private void botonEliminarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarProductoActionPerformed
         eliminarProducto();
     }//GEN-LAST:event_botonEliminarProductoActionPerformed
