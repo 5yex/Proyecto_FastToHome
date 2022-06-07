@@ -284,7 +284,9 @@ public class registroNegocio extends javax.swing.JFrame {
         return true;
     }
     
-    
+    /**
+     * Realiza el cierre definitivo de la ventana de registro de negocio
+     */
     private void confirmarCierre() {
         try {
             this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
