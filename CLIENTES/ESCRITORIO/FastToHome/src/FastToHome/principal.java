@@ -17,25 +17,6 @@ import vista.FrameLogin;
 public class principal {
 public static FrameLogin lg;
     public static void main(String[] args) throws IOException, UnsupportedLookAndFeelException {
-
-        // Usuario user = new Usuario("11");
-        //user.setDni("12345678D");
-        /*user.setEmail("fasdfa");
-        user.setId_direccion(0);
-        user.setNombre("paco");
-        user.setPassword("pruebas");
-        user.setRol("clientes");
-        user.setTlf("654789211");*/
-
- /*Producto producto = new Producto();
-        producto.setId_negocio(1);
-        producto.setNombre("Manzana");
-        producto.setPrecio(3.40);
-        producto.setDescripcion("Manzana roja de la huerta");
-        producto.setStock(20);*/
-        //System.out.println(hacerConsulta(new Peticion("nuevo_usuario", user.getJSON())));
-        //System.out.println(hacerConsulta(new Peticion("nuevo_producto", producto.getJSON())));
-        //System.out.println(UsuarioDao.obtenerIdCliente(user));
         
         UIManager.setLookAndFeel(new FlatLightLaf());
         lg = new FrameLogin();
