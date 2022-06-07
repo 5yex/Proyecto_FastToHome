@@ -261,8 +261,8 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
     }//GEN-LAST:event_botonCacelarActionPerformed
     
     /**
-     * Comprueba que se ha creado (o registrado) un nuevo producto
-     * @return true si se ha registrado el nuevo producto
+     * Comprueba que se ha creado (o registrado) un nuevo producto del negocio
+     * @return true si se ha registrado el nuevo producto del negocio
      */
     private boolean nuevoProducto() {
 
