@@ -539,7 +539,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_itemAdminAClienteActionPerformed
     
     /**
-     * Acción de pulsar en el item 'Degradar a cliente' del popUpMercader
+     * Acción de pulsar en el item 'Degradar a cliente' del popUpMercaderes
      * 
      * @param evt evento
      */
