@@ -647,10 +647,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
             }
         }
     }
+    
     private void confirmarCierre() {
         try {
             this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
             addWindowListener(new WindowAdapter() {
+                @Override
                 public void windowClosing(WindowEvent e) {
                     confirmarSalida();
                 }
