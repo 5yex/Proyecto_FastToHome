@@ -12,7 +12,8 @@ import vista.FrameLogin;
 
 /**
  *
- * @author jmcbg
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
  */
 public class principal {
 public static FrameLogin lg;
