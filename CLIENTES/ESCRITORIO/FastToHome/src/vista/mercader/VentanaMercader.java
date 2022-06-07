@@ -620,7 +620,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelPedidos.repaint();
 
     }
-
+    
+    /**
+     * Engloba los distintos checkbox de estado en el mismo grupo
+     */
     public void englobarRadioButtons() {
         ButtonGroup grupoEstados = new ButtonGroup();
         grupoEstados.add(checkTodos);
