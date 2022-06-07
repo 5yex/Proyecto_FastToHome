@@ -28,7 +28,12 @@ public class PanelPedido extends javax.swing.JPanel {
      * Creates new form producto
      */
 
-
+    /**
+     * Construye un PanelPedido
+     * 
+     * @param pedido objeto de tipo Pedido con la información del pedido
+     * @param botonPedidos boton 'ACTUALIZAR' de la sección 'PEDIDOS' de la ventana de mercaderes
+     */
     public PanelPedido(Pedido pedido, JButton botonPedidos){
         initComponents();
         this.pedido = pedido;
