@@ -29,9 +29,16 @@ public class DialogoDireccion extends javax.swing.JDialog {
     public DialogoDireccion(java.awt.Frame parent, boolean modal, Direccion direccion) {
         super(parent, modal);
         this.direccion = direccion;
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         initComponents();
         rellenarDialogo();
+    }
+    
+    /**
+     * Establece el icono del diálogo
+     */
+    private void establecerIcono() {
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
     }
 
     /**
