@@ -383,7 +383,12 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             infoConfirmPass.setText("");
         }
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
-
+    
+    /**
+     * Acción de pulsar el botón de 'INTRODUCIR DIRECCIÓN' 
+     * 
+     * @param evt 
+     */
     private void botonIntroducirDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIntroducirDireccionActionPerformed
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionUsuario);
         dialogoDireccion.setVisible(true);
