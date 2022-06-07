@@ -549,7 +549,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_itemMercaderAClienteActionPerformed
     
     /**
-     * 
+     * Acción de pulsar en la cabecera de la sección 'CLIENTES'
      * @param evt evento
      */
     private void recargarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarClientesActionPerformed
