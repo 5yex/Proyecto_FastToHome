@@ -156,16 +156,8 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         nombreTXT.setText("Nombre:");
 
         nombreField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                nombreFieldFocusGained(evt);
-            }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 nombreFieldFocusLost(evt);
-            }
-        });
-        nombreField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nombreFieldActionPerformed(evt);
             }
         });
 
@@ -527,14 +519,6 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             infoConfirmPass.setText("");
         }
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
-
-    private void nombreFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombreFieldFocusGained
-
-    private void nombreFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombreFieldActionPerformed
 
     private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
         // TODO add your handling code here:
