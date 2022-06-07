@@ -387,7 +387,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
     /**
      * Acción de pulsar el botón de 'INTRODUCIR DIRECCIÓN' 
      * 
-     * @param evt 
+     * @param evt evento
      */
     private void botonIntroducirDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIntroducirDireccionActionPerformed
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionUsuario);
