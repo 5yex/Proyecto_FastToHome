@@ -463,7 +463,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         imagenesUtil.imagenB64Ajlabel(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())), imgNegocio);
 
     }
-
+    
+    /**
+     * Muestra los paneles de los productos del negocio
+     */
     public void mostrarProductos() {
         //interrumpirHilo();
         panelProductos.removeAll();
