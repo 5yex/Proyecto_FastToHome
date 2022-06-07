@@ -630,7 +630,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         grupoEstados.add(checkParaPreparar);
         grupoEstados.add(checkParaEnviar);
     }
-
+    
+    /**
+     * 
+     */
     public void confirmarCierre() {
         try {
             this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
