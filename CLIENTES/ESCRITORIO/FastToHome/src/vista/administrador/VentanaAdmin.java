@@ -610,8 +610,8 @@ public class VentanaAdmin extends javax.swing.JFrame {
      * Recarga la tabla con la información obtenida
      * 
      * @param listaUsuarios Lista de usuarios de un tipo en concreto (cliente,mercader,admin)
-     * @param tabla
-     * @param filtroNombre 
+     * @param tabla Tabla con los datos de los usuarios
+     * @param filtroNombre Cadena por la que se va a filtrar los usuarios
      */
     public void recargarTabla(ArrayList<Usuario> listaUsuarios, JTable tabla, String filtroNombre) {
         tabla.setModel(new javax.swing.table.DefaultTableModel(
