@@ -359,7 +359,12 @@ public class VentanaMercader extends javax.swing.JFrame {
         DialogoActualizarDatos dmod = new DialogoActualizarDatos(this, true, mercader, updateInicio);
         dmod.setVisible(true);
     }//GEN-LAST:event_botonModificarDatosMercaderActionPerformed
-
+    
+    /**
+     * Acción de pulsar el botón de 'ACTUALIZAR' de la sección 'PEDIDOS' de la ventana mercader
+     * 
+     * @param evt evento
+     */
     private void recargarPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarPedidosActionPerformed
         mostrarPedidos();
     }//GEN-LAST:event_recargarPedidosActionPerformed
