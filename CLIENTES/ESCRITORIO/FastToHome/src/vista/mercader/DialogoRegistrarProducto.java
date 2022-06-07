@@ -53,8 +53,15 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
         initComponents();
         this.btActualizar = btActualizar;
         this.neg = neg;
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         cargaInicial();
+    }
+    
+    /**
+     * Establece el icono del diálogo
+     */
+    private void establecerIcono() {
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
     }
 
     /**
