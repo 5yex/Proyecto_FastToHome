@@ -571,7 +571,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
     
     /**
-     * Recarga la información de 
+     * Recarga la información de las tabla con la información de los clientes
      */
     public void recargarTablaClientes() {
         arrayListClientes = UsuarioDao.seleccionUsuariosClientes();
