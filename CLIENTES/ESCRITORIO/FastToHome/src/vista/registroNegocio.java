@@ -215,7 +215,10 @@ public class registroNegocio extends javax.swing.JFrame {
     private void botonPedirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirImagenActionPerformed
         new DialogoImagen(this, rootPaneCheckingEnabled, nImg).setVisible(true);
     }//GEN-LAST:event_botonPedirImagenActionPerformed
-
+    
+    /**
+     * Realiza una carga inicial de los elementos del diálogo
+     */
     private void cargaInicial() {
         
         listaCategorias = controlador.CategoriaDao.obtenerCategorias();
