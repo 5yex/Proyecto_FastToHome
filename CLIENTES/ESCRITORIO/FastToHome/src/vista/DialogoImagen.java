@@ -167,7 +167,7 @@ public class DialogoImagen extends javax.swing.JDialog {
     }//GEN-LAST:event_btnSeleccionarImagenActionPerformed
     
     /**
-     * Acción de pulsar el botón de aceptar
+     * Acción de pulsar el botón de 'ACEPTAR'
      * 
      * @param evt 
      */
