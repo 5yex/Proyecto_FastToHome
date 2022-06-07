@@ -486,7 +486,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelProductos.revalidate();
         panelProductos.repaint();
     }
-
+    
+    /**
+     * Interrumpe el hilo de actualización automaticas
+     */
     private void interrumpirHilo() {
         if (hiloUpdate != null) {
             hiloUpdate.interrupt();
@@ -494,7 +497,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         }
 
     }
-
+    
+    /**
+     * Crea el hilo de la actualización automatica de productos
+     */
     private void crearHiloActualizacionDeProductos() {
         if (hiloUpdate == null) {
             hiloUpdate = new Thread(new Runnable() {
