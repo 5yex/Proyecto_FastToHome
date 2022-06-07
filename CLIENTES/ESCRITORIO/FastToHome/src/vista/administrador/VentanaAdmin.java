@@ -489,7 +489,10 @@ public class VentanaAdmin extends javax.swing.JFrame {
         recargarTablaMercaderes();
     }//GEN-LAST:event_checkBusquedaMercaderesActionPerformed
     
-    
+    /**
+     * Acción de pulsar en la cabecera de 'MERCADERES'
+     * @param evt evento
+     */
     private void recargarMercaderesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarMercaderesActionPerformed
         recargarTablaMercaderes();
     }//GEN-LAST:event_recargarMercaderesActionPerformed
