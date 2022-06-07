@@ -40,7 +40,6 @@ public interface Constantes {
     final public String MENSAJE_NOMBRE_INFO = "Primera letra en mayuscula.";
     final public String MENSAJE_APELLIDO_INFO = "Primera letra en mayuscula.";
     final public String MENSAJE_EDAD = "Edad (mayor o igual a 18 menor que 99): ";
-    final public String MENSAJE_KILOS = "Kilos recogidos (numero con 2 decimales): ";
     final public String MENSAJE_FINCA = "Dame el nombre de la finca: ";
     final public String MENSAJE_FECHA = "Dame la fecha (formato: yyyy-mm-dd): ";
     final public String MENSAJE_ID_RECOLECTOR = "Dame el id del recolector: ";
