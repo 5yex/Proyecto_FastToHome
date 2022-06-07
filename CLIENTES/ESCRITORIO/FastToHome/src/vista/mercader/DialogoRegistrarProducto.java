@@ -54,7 +54,6 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
         this.btActualizar = btActualizar;
         this.neg = neg;
         establecerIcono();
-        cargaInicial();
     }
     
     /**
@@ -260,14 +259,6 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
     private void botonCacelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCacelarActionPerformed
         this.dispose();
     }//GEN-LAST:event_botonCacelarActionPerformed
-
-    private void cargaInicial() {
-//        listaCategorias = controlador.CategoriaDao.obtenerCategorias();
-//        for (Categoria listaCategoria : listaCategorias) {
-//            comboCategoria.addItem(listaCategoria.getNombre());
-//        }
-//        JOptionPane.showMessageDialog(null, User.getNombre() + " Bienvenido al equipo de mercaderes! \n A continuación podrás configurar tu negocio");
-    }
 
     private boolean nuevoProducto() {
 
