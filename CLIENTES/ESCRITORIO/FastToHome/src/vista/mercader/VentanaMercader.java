@@ -391,7 +391,12 @@ public class VentanaMercader extends javax.swing.JFrame {
     private void checkTodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkTodosActionPerformed
         mostrarPedidos();
     }//GEN-LAST:event_checkTodosActionPerformed
-
+    
+    /**
+     * Acción de hacer check en el checkbox de ''
+     * 
+     * @param evt evento
+     */
     private void checkParaPrepararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkParaPrepararActionPerformed
         mostrarPedidosPagados();
 
