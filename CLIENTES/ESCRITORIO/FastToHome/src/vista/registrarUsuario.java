@@ -151,11 +151,6 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
                 passwordConfirmFieldFocusLost(evt);
             }
         });
-        passwordConfirmField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordConfirmFieldActionPerformed(evt);
-            }
-        });
 
         registerConfirm.setBackground(new java.awt.Color(240, 87, 66));
         registerConfirm.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
@@ -402,10 +397,6 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionUsuario);
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonIntroducirDireccionActionPerformed
-
-    private void passwordConfirmFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordConfirmFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordConfirmFieldActionPerformed
 
     private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
         if (!validaciones.validar(nombreField.getText(), PATRON_NOMBRES)) {
