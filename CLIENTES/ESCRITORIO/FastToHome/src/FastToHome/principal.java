@@ -11,7 +11,8 @@ import javax.swing.UnsupportedLookAndFeelException;
 import vista.FrameLogin;
 
 /**
- *
+ * Clase principal desde donde arrancamos la ventana de Logueo
+ * 
  * @author Jose Miguel Calderón, Jesús Rueda
  * @version 1.0
  */
