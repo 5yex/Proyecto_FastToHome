@@ -332,7 +332,6 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
     }//GEN-LAST:event_nombreFieldFocusLost
     
     /**
-     * /**
      * Comprueba que ocurre al perder el foco en el campo de apellidos
      * 
      * @param evt evento
@@ -346,7 +345,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             infoApellido.setText("");
         }
     }//GEN-LAST:event_apellidosFieldFocusLost
-
+    
     private void dniFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dniFieldFocusLost
         if (!validaciones.validacionDNI(dniField.getText())) {
             infoDNI.setForeground(Color.RED);
