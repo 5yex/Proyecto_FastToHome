@@ -31,7 +31,8 @@ import static util.imagenesUtil.imagenB64Ajlabel;
 
 /**
  *
- * @author jmcbg
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
  */
 public class DialogoEditarProducto extends javax.swing.JDialog {
 
