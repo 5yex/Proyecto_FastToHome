@@ -368,7 +368,12 @@ public class VentanaMercader extends javax.swing.JFrame {
     private void recargarPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarPedidosActionPerformed
         mostrarPedidos();
     }//GEN-LAST:event_recargarPedidosActionPerformed
-
+    
+    /**
+     * Accíón de hacer check en el checkbox de 'Auto Actualizar' para que se vayan actualizando los pedidos automaticamente
+     * 
+     * @param evt 
+     */
     private void autoUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_autoUpdateActionPerformed
         JCheckBox hilo = (JCheckBox) evt.getSource();
         if (hilo.isSelected()) {
