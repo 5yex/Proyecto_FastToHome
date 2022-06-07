@@ -407,7 +407,10 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             infoNombre.setText("");
         }
     }//GEN-LAST:event_nombreFieldFocusLost
-
+    
+    /**
+     * Metodo encargado de realizar el registro del usuario
+     */
     private void registrarUsuario() {
         if (direccionUsuario.isValida()) {
             int id_direccion = DireccionDao.nuevaDireccionDevuelveId(direccionUsuario);
