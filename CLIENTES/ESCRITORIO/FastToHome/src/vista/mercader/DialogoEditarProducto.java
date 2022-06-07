@@ -255,7 +255,10 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
     private void botonCacelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCacelarActionPerformed
         this.dispose();
     }//GEN-LAST:event_botonCacelarActionPerformed
-
+    
+    /**
+     * Realiza una carga inicial de los elementos del diálogo
+     */
     private void cargaInicial() {
         this.textAreaDescripcion.setLineWrap(true);
         varNombre.setText(producto.getNombre());
