@@ -30,7 +30,8 @@ import vista.mercader.VentanaMercader;
 import static util.imagenesUtil.imagenB64Ajlabel;
 
 /**
- *
+ * Clase que representa el diálogo de editar producto.
+ * 
  * @author Jose Miguel Calderón, Jesús Rueda
  * @version 1.0
  */
