@@ -41,6 +41,11 @@ public class PanelPedido extends javax.swing.JPanel {
         mostrarDatos();
     }
     
+    /**
+     * Construye un PanelPedido
+     * 
+     * @param pedido objeto de tipo Pedido con la información del pedido
+     */
     public PanelPedido(Pedido pedido){
         initComponents();
         this.pedido = pedido;
@@ -147,7 +152,12 @@ public class PanelPedido extends javax.swing.JPanel {
                 .addGap(19, 19, 19))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción de pulsar el botón 'PASAR ESTADO'
+     * 
+     * @param evt evento
+     */
     private void pasarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasarEstadoActionPerformed
         if(PedidoDao.actualizarEstadoPedido(pedido)){
             pedido = PedidoDao.obtenerPedido(pedido);
