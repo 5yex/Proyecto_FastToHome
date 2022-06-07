@@ -128,11 +128,6 @@ public class VentanaAdmin extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(878, 665));
 
         panelTableado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        panelTableado.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                panelTableadoMousePressed(evt);
-            }
-        });
 
         labelBienvenido.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         labelBienvenido.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -416,8 +411,6 @@ public class VentanaAdmin extends javax.swing.JFrame {
             .addComponent(panelTableado)
         );
 
-        getAccessibleContext().setAccessibleName("Ventana Administrador");
-
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -554,10 +547,6 @@ public class VentanaAdmin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error al degradar a cliente a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_itemMercaderAClienteActionPerformed
-
-    private void panelTableadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panelTableadoMousePressed
 
     private void recargarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarClientesActionPerformed
         recargarTablaClientes();
