@@ -24,8 +24,9 @@ import modelo.Usuario;
 import vista.mercader.VentanaMercader;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa la ventana de registro de negocio
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
  */
 public class registroNegocio extends javax.swing.JFrame {
 
