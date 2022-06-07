@@ -428,7 +428,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_updateConfirmActionPerformed
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de nombre
+     * 
+     * @param evt evento
+     */
     private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
         if (!validaciones.validar(nombreField.getText(), PATRON_NOMBRES)) {
             infoNombre.setForeground(Color.RED);
