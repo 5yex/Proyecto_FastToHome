@@ -403,7 +403,11 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-
+    /**
+     * Acción de pulsar en el botón 'CONFIRMAR MODIFICACION'
+     * 
+     * @param evt evento
+     */
     private void updateConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateConfirmActionPerformed
 
         if (validaciones.validar(nombreField.getText(), PATRON_NOMBRES)
