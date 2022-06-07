@@ -199,6 +199,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
      * Rellena los campos del DiálogoDireccion si la dirección no es nula
      */
     private void rellenarDialogo() {
+        
         if (direccion != null) {
             varNumeroTXT.setText(String.valueOf(direccion.getNumero()));
             varCP.setText(String.valueOf(direccion.getCodigo_postal()));
