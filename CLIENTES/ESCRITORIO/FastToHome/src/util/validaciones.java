@@ -15,19 +15,27 @@ import java.util.regex.Pattern;
  * @version 1.0
  */
 public class validaciones implements Constantes {
-
+    
+    /**
+     * Valida si el campo introducido cumple el patrón
+     * 
+     * @param campo campo rellenado por el usuario de la aplicación
+     * @param patron
+     * @return 
+     */
     public static boolean validar(String campo, String patron) {
 
         Pattern p = Pattern.compile(patron);
         Matcher m = p.matcher(campo);
 
-        if (m.matches()) {
-            return true;
-        }
-
-        return false;
+        return m.matches();
     }
-
+    
+    /**
+     * 
+     * @param dni
+     * @return 
+     */
     public static boolean validacionDNI(String dni) {
         dni.toUpperCase();
         if (dni.length() == 9) {
