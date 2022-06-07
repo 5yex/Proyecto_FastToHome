@@ -423,7 +423,12 @@ public class VentanaMercader extends javax.swing.JFrame {
         cargarInicio();
 
     }//GEN-LAST:event_updateInicioActionPerformed
-
+    
+    /**
+     * Acción de hacer check en el checkbox de 'Para enviar'
+     * 
+     * @param evt evento
+     */
     private void checkParaEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkParaEnviarActionPerformed
         mostrarPedidosEnPreparacion();
     }//GEN-LAST:event_checkParaEnviarActionPerformed
