@@ -177,7 +177,7 @@ public class DialogoImagen extends javax.swing.JDialog {
     }//GEN-LAST:event_btnAceptarActionPerformed
     
     /**
-     * Acción de pulsar el botón de cancelar
+     * Acción de pulsar el botón de 'CANCELAR'
      * 
      * @param evt 
      */
