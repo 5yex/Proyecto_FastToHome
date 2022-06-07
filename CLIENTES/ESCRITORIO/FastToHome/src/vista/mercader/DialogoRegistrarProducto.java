@@ -30,8 +30,9 @@ import vista.mercader.VentanaMercader;
 import static util.imagenesUtil.imagenB64Ajlabel;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa el diálogo de registrar producto
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
  */
 public class DialogoRegistrarProducto extends javax.swing.JDialog {
 
