@@ -454,7 +454,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_itemClienteAMercaderActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el item 'Dar permisos de administración' del popUpClientes
+     * 
+     * @param evt evento
+     */
     private void itemClienteAAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemClienteAAdministradorActionPerformed
         //hacerAdmin
         int filaSeleccionada = tablaClientes.getSelectedRow();
