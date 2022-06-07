@@ -384,7 +384,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_autoUpdateActionPerformed
     
     /**
-     * Acción de hacer check en el checkbox de 'Auto Actualizar'
+     * Acción de hacer check en el checkbox de 'Mostrar Todos'
      * 
      * @param evt 
      */
