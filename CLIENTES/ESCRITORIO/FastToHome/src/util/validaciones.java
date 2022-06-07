@@ -14,10 +14,6 @@ import java.util.regex.Pattern;
  */
 public class validaciones implements Constantes {
 
-    public void validarString() {
-
-    }
-
     public static boolean validar(String campo, String patron) {
 
         Pattern p = Pattern.compile(patron);
