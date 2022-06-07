@@ -620,6 +620,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
                     "ID", "DNI", "EMAIL", "NOMBRE", "TELÉFONO"
                 }
         ) {
+            @Override
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return false;
             }
