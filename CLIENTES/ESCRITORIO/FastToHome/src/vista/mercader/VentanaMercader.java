@@ -52,7 +52,9 @@ public class VentanaMercader extends javax.swing.JFrame {
     Thread hiloUpdate;
 
     /**
-     * Creates new form VentanaPrincipal
+     * Construye una VentanaMercader
+     * 
+     * @param user objeto de tipo Usuario con la informacion del mercader
      */
     public VentanaMercader(Usuario user) {
         this.mercader = user;
