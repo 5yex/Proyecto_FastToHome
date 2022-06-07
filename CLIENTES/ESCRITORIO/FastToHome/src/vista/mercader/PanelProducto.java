@@ -37,8 +37,8 @@ public class PanelProducto extends javax.swing.JPanel {
      * Construye un PanelProducto
      * 
      * @param parent Frame padre del panel
-     * @param prod
-     * @param btUpdate 
+     * @param prod objeto de tipo Producto con la información del producto
+     * @param btUpdate botón 'RECARGAR PRODUCTOS' de la seccion 'PRODUCTOS' de la ventana de mercader
      */
     public PanelProducto(JFrame parent,Producto prod, JButton btUpdate) {
         initComponents();
