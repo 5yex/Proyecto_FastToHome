@@ -648,6 +648,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
         }
     }
     
+    /**
+     * Realiza el cierre definitivo de la ventana de registro de negocio
+     */
     private void confirmarCierre() {
         try {
             this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
