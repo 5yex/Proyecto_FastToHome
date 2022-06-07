@@ -641,8 +641,8 @@ public class VentanaAdmin extends javax.swing.JFrame {
             }
         } else {
             //Mostrar sin busqueda
-            for (Usuario cliente : listaUsuarios) {
-                model.addRow(cliente.getRow());
+            for (Usuario usuario : listaUsuarios) {
+                model.addRow(usuario.getRow());
             }
         }
     }
