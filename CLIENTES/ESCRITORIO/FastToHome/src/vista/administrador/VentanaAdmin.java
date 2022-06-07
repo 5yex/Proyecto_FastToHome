@@ -504,12 +504,21 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void checkBusquedaAdminsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaAdminsActionPerformed
         recargarTablaAdmins();
     }//GEN-LAST:event_checkBusquedaAdminsActionPerformed
-
+    
+    /**
+     * Acción de pulsar en la cabecera de la sección 'ADMINISTRADORES'
+     * @param evt evento
+     */
     private void recargarAdminsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarAdminsActionPerformed
         recargarTablaAdmins();
 
     }//GEN-LAST:event_recargarAdminsActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el item 'Dar permisos de administración' del popUpAdministrador
+     * 
+     * @param evt evento
+     */
     private void itemAdminAClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAdminAClienteActionPerformed
         //degradar
         int filaSeleccionada = tablaAdmins.getSelectedRow();
