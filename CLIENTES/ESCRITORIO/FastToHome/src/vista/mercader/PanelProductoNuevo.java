@@ -75,7 +75,7 @@ public class PanelProductoNuevo extends javax.swing.JPanel {
     
     /**
      * Acción de pulsar el boton azul 'NUEVO'
-     * @param evt 
+     * @param evt evento
      */
     private void botonNuevoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevoProductoActionPerformed
        //new registrarProducto(actualizar,negocio).setVisible(true);

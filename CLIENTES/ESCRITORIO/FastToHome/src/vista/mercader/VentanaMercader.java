@@ -47,20 +47,6 @@ public class VentanaMercader extends javax.swing.JFrame {
 
     private Usuario mercader;
     private Negocio negocio;
-//    private final ActionListener actualizarProductos = new ActionListener() {
-//        @Override
-//        public void actionPerformed(ActionEvent e) {
-//            mostrarProductos();
-//        }
-//    };
-//
-//    private final ActionListener actualizarPedidos = new ActionListener() {
-//        @Override
-//        public void actionPerformed(ActionEvent e) {
-//            System.err.println("MOSTRANDO LOS PEDIDOS");
-//            mostrarPedidos();
-//        }
-//    };
 
     Thread hiloUpdate;
 
