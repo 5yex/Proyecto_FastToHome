@@ -393,7 +393,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_checkTodosActionPerformed
     
     /**
-     * Acción de hacer check en el checkbox de ''
+     * Acción de hacer check en el checkbox de 'Para Preparar'
      * 
      * @param evt evento
      */
