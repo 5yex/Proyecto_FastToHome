@@ -244,16 +244,6 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         passwordAnteriorTxt.setText("Contraseña Anterior:");
 
         passwordAnteriorField.setEnabled(false);
-        passwordAnteriorField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                passwordAnteriorFieldFocusLost(evt);
-            }
-        });
-        passwordAnteriorField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordAnteriorFieldActionPerformed(evt);
-            }
-        });
 
         infoPassAnterior.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
 
@@ -520,14 +510,6 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionUsuario);
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonModificarDireccionActionPerformed
-
-    private void passwordAnteriorFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordAnteriorFieldFocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordAnteriorFieldFocusLost
-
-    private void passwordAnteriorFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordAnteriorFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordAnteriorFieldActionPerformed
 
     private void modificarPassCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarPassCheckActionPerformed
         JCheckBox check = (JCheckBox) evt.getSource();
