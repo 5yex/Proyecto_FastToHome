@@ -349,7 +349,12 @@ public class VentanaMercader extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción de pulsar el botón de 'PERSONALIZAR TU NEGOCIO' de la sección 'INICIO'
+     * 
+     * @param evt 
+     */
     private void botonModificarDatosMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDatosMercaderActionPerformed
         DialogoActualizarDatos dmod = new DialogoActualizarDatos(this, true, mercader, updateInicio);
         dmod.setVisible(true);
