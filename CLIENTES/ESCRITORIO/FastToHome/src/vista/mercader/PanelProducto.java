@@ -153,7 +153,12 @@ public class PanelProducto extends javax.swing.JPanel {
     private void botonEliminarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarProductoActionPerformed
         eliminarProducto();
     }//GEN-LAST:event_botonEliminarProductoActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el icono de editar producto
+     * 
+     * @param evt 
+     */
     private void botonEditarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarProductoActionPerformed
         editarProducto();
     }//GEN-LAST:event_botonEditarProductoActionPerformed
