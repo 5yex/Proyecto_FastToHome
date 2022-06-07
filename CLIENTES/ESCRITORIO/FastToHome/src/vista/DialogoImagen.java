@@ -28,7 +28,8 @@ import org.apache.commons.io.IOUtils;
 import util.imagenesUtil;
 
 /**
- *
+ * Clase que representa el diálogo de selección de imagen.
+ * 
  * @author Jose Miguel Calderón, Jesús Rueda
  * @version 1.0
  */
