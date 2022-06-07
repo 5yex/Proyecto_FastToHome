@@ -220,7 +220,12 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción de pulsar el botón 'ABRIR IMAGEN'
+     * 
+     * @param evt 
+     */
     private void botonPedirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirImagenActionPerformed
         new DialogoImagen(this, rootPaneCheckingEnabled, nImg).setVisible(true);
         if(nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()){
