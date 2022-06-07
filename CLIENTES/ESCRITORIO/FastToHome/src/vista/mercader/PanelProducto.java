@@ -157,7 +157,7 @@ public class PanelProducto extends javax.swing.JPanel {
     /**
      * Acción de pulsar en el icono de editar producto
      * 
-     * @param evt 
+     * @param evt evento
      */
     private void botonEditarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarProductoActionPerformed
         editarProducto();
@@ -165,7 +165,7 @@ public class PanelProducto extends javax.swing.JPanel {
     
     /**
      * Acción de pulsar en el icono de mostrar la información del producto
-     * @param evt 
+     * @param evt evento
      */
     private void botonInfoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInfoProductoActionPerformed
        JOptionPane.showMessageDialog(null, "Nombre:  "+ producto.getNombre() + "\nPrecio:  "+ producto.getPrecio()+ " €\nDescripción:  "+ producto.getDescripcion(), "Información Producto", JOptionPane.INFORMATION_MESSAGE);
