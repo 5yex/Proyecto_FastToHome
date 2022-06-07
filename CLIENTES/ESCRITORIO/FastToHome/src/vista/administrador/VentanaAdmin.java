@@ -537,7 +537,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
         }
     }//GEN-LAST:event_itemAdminAClienteActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el item 'Degradar a cliente' del popUpMercader
+     * 
+     * @param evt evento
+     */
     private void itemMercaderAClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMercaderAClienteActionPerformed
         //degradar
         int filaSeleccionada = tablaMercaderes.getSelectedRow();
