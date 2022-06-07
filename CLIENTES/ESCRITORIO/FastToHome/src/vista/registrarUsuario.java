@@ -41,7 +41,7 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
     }
     
     /**
-     * Establece el icono del Diálogo
+     * Establece el icono del diálogo
      */
     private void establecerIcono() {
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
