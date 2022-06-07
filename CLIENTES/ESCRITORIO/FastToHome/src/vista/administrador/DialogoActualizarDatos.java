@@ -64,7 +64,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, Usuario user, JButton updateInicio) {
         super(parent, modal);
         this.updateInicio = updateInicio;
-        usuario = user;
+        this.usuario = user;
         initComponents();
         establecerCamposIniciales(usuario);
     }
