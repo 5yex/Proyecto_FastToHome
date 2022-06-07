@@ -68,7 +68,15 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
         establecerCamposIniciales(usuario);
     }
-
+    
+    /**
+     * Construye un nuevo DialogoActualizarDatos cuyo padre es un Frame 
+     * (Normalmente el padre es la Ventana Mercader)
+     * 
+     * @param parent Frame padre del dialogo
+     * @param modal No se puede clickar en la ventana padre si está a true
+     * @param user objeto de tipo Usuario a ser modificado
+     */
     public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, Usuario user, JButton updateInicio) {
         super(parent, modal);
         this.updateInicio = updateInicio;
