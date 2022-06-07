@@ -559,7 +559,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_recargarClientesActionPerformed
     
     /**
-     * Actualiza la información de las tablas de la ventana de administrador
+     * Actualiza la ventana de administrador
      */
     private void actualizarVentana() {
         administrador = UsuarioDao.obtenerDatosUsuario(administrador);
@@ -569,7 +569,10 @@ public class VentanaAdmin extends javax.swing.JFrame {
         recargarTablaMercaderes();
         recargarTablaAdmins();
     }
-
+    
+    /**
+     * Recarga la información de 
+     */
     public void recargarTablaClientes() {
         arrayListClientes = UsuarioDao.seleccionUsuariosClientes();
         if (checkBusquedaClientes.isSelected()) {
