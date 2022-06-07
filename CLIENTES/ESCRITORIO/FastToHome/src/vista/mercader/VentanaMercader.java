@@ -441,7 +441,10 @@ public class VentanaMercader extends javax.swing.JFrame {
     private void recargarProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarProductosActionPerformed
         mostrarProductos();
     }//GEN-LAST:event_recargarProductosActionPerformed
-
+    
+    /**
+     * Inicia algunos elementos y comportamientos de la ventana de merader
+     */
     private void inicilizacion() {
         confirmarCierre();
         cargarInicio();
