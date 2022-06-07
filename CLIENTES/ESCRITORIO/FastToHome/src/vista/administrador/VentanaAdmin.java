@@ -609,11 +609,11 @@ public class VentanaAdmin extends javax.swing.JFrame {
     /**
      * Recarga la tabla con la información obtenida
      * 
-     * @param listaClientes 
+     * @param listaUsuarios 
      * @param tabla
      * @param filtroNombre 
      */
-    public void recargarTabla(ArrayList<Usuario> listaClientes, JTable tabla, String filtroNombre) {
+    public void recargarTabla(ArrayList<Usuario> listaUsuarios, JTable tabla, String filtroNombre) {
         tabla.setModel(new javax.swing.table.DefaultTableModel(
                 null,
                 new String[]{
@@ -632,7 +632,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
         //busqueda
         if (filtroNombre != null && !filtroNombre.isBlank()) {
             System.out.println("busqueda");
-            for (Usuario cliente : listaClientes) {
+            for (Usuario cliente : listaUsuarios) {
                 String nombreMayus = (cliente.getNombre() + " " + cliente.getApellidos()).toUpperCase();
                 String busquedaMayus = filtroNombre.toUpperCase();
                 if (nombreMayus.contains(new StringBuffer(busquedaMayus))) {
@@ -641,7 +641,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
             }
         } else {
             //Mostrar sin busqueda
-            for (Usuario cliente : listaClientes) {
+            for (Usuario cliente : listaUsuarios) {
                 model.addRow(cliente.getRow());
             }
         }
