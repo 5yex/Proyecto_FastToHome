@@ -498,7 +498,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_recargarMercaderesActionPerformed
     
     /**
-     * Acción de hacer check en el checkbox 'Busqueda por nombre' de la seccion 'MERCADERES' 
+     * Acción de hacer check en el checkbox 'Busqueda por nombre' de la seccion 'ADMINISTRADORES' 
      * @param evt evento
      */
     private void checkBusquedaAdminsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaAdminsActionPerformed
