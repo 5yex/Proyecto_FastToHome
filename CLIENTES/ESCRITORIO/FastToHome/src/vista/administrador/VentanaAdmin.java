@@ -39,7 +39,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private ArrayList<Usuario> arrayListMercaderes;
 
     /**
-     * Creates new form VentanaPrincipal
+     * Construye una VentanaAdmin
+     * 
+     * @param user Usuario de tipo administrador que ha iniciado sesión
      */
     public VentanaAdmin(Usuario user) {
         this.administrador = user;
@@ -419,7 +421,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción de pulsar en el botón de 'MODIFICA TUS DATOS'
+     * 
+     * @param evt evento
+     */
     private void botonModificarDatosAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDatosAdminActionPerformed
         DialogoActualizarDatos dmod = new DialogoActualizarDatos(this, true, administrador);
         dmod.setVisible(true);
@@ -587,7 +594,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
             }
         }
     }
-    public void confirmarCierre() {
+    private void confirmarCierre() {
         try {
             this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
             addWindowListener(new WindowAdapter() {
