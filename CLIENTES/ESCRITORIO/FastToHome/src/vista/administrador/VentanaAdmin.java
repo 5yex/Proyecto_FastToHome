@@ -571,7 +571,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
     
     /**
-     * Recarga la información de las tabla con la información de los clientes
+     * Obtiene la información para recargar la tabla con la información de los clientes
      */
     public void recargarTablaClientes() {
         arrayListClientes = UsuarioDao.seleccionUsuariosClientes();
@@ -605,7 +605,13 @@ public class VentanaAdmin extends javax.swing.JFrame {
             recargarTabla(arrayListAdmins, tablaAdmins, null);
         }
     }
-
+    
+    /**
+     * Recarga 
+     * @param listaClientes
+     * @param tabla
+     * @param filtroNombre 
+     */
     public void recargarTabla(ArrayList<Usuario> listaClientes, JTable tabla, String filtroNombre) {
         tabla.setModel(new javax.swing.table.DefaultTableModel(
                 null,
