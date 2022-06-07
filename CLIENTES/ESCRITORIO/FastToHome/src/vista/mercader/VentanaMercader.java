@@ -432,7 +432,12 @@ public class VentanaMercader extends javax.swing.JFrame {
     private void checkParaEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkParaEnviarActionPerformed
         mostrarPedidosEnPreparacion();
     }//GEN-LAST:event_checkParaEnviarActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el botón 'RECARGAR PRODUCTOS' de la sección 'PRODUCTOS'
+     * 
+     * @param evt 
+     */
     private void recargarProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarProductosActionPerformed
         mostrarProductos();
     }//GEN-LAST:event_recargarProductosActionPerformed
