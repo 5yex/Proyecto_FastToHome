@@ -37,9 +37,9 @@ public class registroNegocio extends javax.swing.JFrame {
     private ArrayList<Categoria> listaCategorias;
 
     /**
-     * Constrye un
+     * Constrye un registroNegocio 
      *
-     * @param user
+     * @param user Usuario propietario del negocio a registrar
      */
     public registroNegocio(Usuario user) {
         initComponents();
