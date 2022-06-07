@@ -578,7 +578,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelPedidos.repaint();
 
     }
-
+    
+    /**
+     * Muestra los paneles de todos los pedidos
+     */
     private void mostrarPedidos() {
         //crearHiloActualizacionDeProductos();
         ActionListener actualizarPedidos = new ActionListener() {
