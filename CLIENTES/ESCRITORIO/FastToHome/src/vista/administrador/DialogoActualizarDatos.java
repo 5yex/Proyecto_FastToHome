@@ -34,7 +34,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
 
     private Usuario usuario = new Usuario();
     Direccion direccionUsuario;
-
+    
+    /**
+     * Devuelve un objeto de tipo Usuario
+     * 
+     * @return objeto de tipo usuario
+     */
     public Usuario getUsuario() {
         return usuario;
     }
