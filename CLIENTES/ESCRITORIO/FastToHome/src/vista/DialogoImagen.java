@@ -67,6 +67,9 @@ public class DialogoImagen extends javax.swing.JDialog {
         this.imagen = imagen;
     }
     
+    /**
+     * Establece el icono del diálogo
+     */
     private void establecerIcono() {
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
     }
