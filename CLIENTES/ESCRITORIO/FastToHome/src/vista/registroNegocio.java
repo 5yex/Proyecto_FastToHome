@@ -44,9 +44,16 @@ public class registroNegocio extends javax.swing.JFrame {
     public registroNegocio(Usuario user) {
         initComponents();
         this.User = user;
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         cargaInicial();
         confirmarCierre();
+    }
+    
+    /**
+     * Establece el icono del diálogo
+     */
+    private void establecerIcono() {
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
     }
 
     /**
