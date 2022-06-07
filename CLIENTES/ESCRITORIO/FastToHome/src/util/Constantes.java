@@ -7,7 +7,7 @@ package util;
 import java.time.LocalDate;
 
 /**
- *
+ * Interfaz donde almacenamos las variables constantes y los patrones para las validaciones ademas de otros elementos
  * @author Jesus
  */
 public interface Constantes {
