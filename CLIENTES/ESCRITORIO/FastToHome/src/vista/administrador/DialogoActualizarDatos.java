@@ -515,7 +515,13 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionUsuario);
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonModificarDireccionActionPerformed
-
+    
+    /**
+     * Comprueba si el check de 'EDITAR CONTRASEÑA' esta seleccionado y habilita
+     * los campos de las contraseñas si esta seleccionado.
+     * 
+     * @param evt evento
+     */
     private void modificarPassCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarPassCheckActionPerformed
         JCheckBox check = (JCheckBox) evt.getSource();
         if (check.isSelected()) {
