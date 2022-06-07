@@ -632,11 +632,11 @@ public class VentanaAdmin extends javax.swing.JFrame {
         //busqueda
         if (filtroNombre != null && !filtroNombre.isBlank()) {
             System.out.println("busqueda");
-            for (Usuario cliente : listaUsuarios) {
-                String nombreMayus = (cliente.getNombre() + " " + cliente.getApellidos()).toUpperCase();
+            for (Usuario usuario : listaUsuarios) {
+                String nombreMayus = (usuario.getNombre() + " " + usuario.getApellidos()).toUpperCase();
                 String busquedaMayus = filtroNombre.toUpperCase();
                 if (nombreMayus.contains(new StringBuffer(busquedaMayus))) {
-                    model.addRow(cliente.getRow());
+                    model.addRow(usuario.getRow());
                 }
             }
         } else {
