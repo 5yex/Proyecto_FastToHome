@@ -465,7 +465,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }
     
     /**
-     * Muestra los paneles de los productos del negocio
+     * Muestra los paneles de los productos del negocio en la sección 'PEDIDOS'
      */
     public void mostrarProductos() {
         //interrumpirHilo();
