@@ -9,8 +9,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- *
- * @author jmcbg
+ * Clase donde establecemos las distintos metodos con validaciones de campos que se pueden usar en otras clases
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
  */
 public class validaciones implements Constantes {
 
