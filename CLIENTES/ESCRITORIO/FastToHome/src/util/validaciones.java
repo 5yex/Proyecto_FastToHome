@@ -20,8 +20,8 @@ public class validaciones implements Constantes {
      * Valida si el campo introducido cumple el patrón
      * 
      * @param campo campo rellenado por el usuario de la aplicación
-     * @param patron
-     * @return 
+     * @param patron patron que debe serguir el campo introducido
+     * @return true si el campo introducido cumple el patrón
      */
     public static boolean validar(String campo, String patron) {
 
