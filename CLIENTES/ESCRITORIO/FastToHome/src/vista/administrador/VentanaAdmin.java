@@ -547,7 +547,11 @@ public class VentanaAdmin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error al degradar a cliente a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_itemMercaderAClienteActionPerformed
-
+    
+    /**
+     * 
+     * @param evt evento
+     */
     private void recargarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarClientesActionPerformed
         recargarTablaClientes();
         recargarTablaMercaderes();
