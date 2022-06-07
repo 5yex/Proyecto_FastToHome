@@ -225,7 +225,10 @@ public class PanelProducto extends javax.swing.JPanel {
             btUpdate.doClick();
         }
     }
-
+    
+    /**
+     * Abre el diálogo encargado de editar el producto
+     */
     private void editarProducto() {
         //new editarProducto(btUpdate,producto).setVisible(true);
         new DialogoEditarProducto(parent, btUpdate, producto, true).setVisible(true);
