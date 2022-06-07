@@ -517,8 +517,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
     }//GEN-LAST:event_botonModificarDireccionActionPerformed
     
     /**
-     * Comprueba si el check de 'EDITAR CONTRASEÑA' esta seleccionado y habilita
-     * los campos de las contraseñas si esta seleccionado.
+     * Acción de hacer check en el checkbox de 'EDITAR CONTRASEÑA'
      * 
      * @param evt evento
      */
