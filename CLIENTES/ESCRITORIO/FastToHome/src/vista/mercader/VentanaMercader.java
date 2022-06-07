@@ -452,7 +452,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         mostrarPedidos();
         englobarRadioButtons();
     }
-
+    
+    /**
+     * Carga los datos del mercader y rellena los campos con su información
+     */
     private void cargarInicio() {
         mercader = UsuarioDao.obtenerDatosUsuario(mercader);
         labelNombreMercader.setText(mercader.getNombre() + "  " + mercader.getApellidos());
