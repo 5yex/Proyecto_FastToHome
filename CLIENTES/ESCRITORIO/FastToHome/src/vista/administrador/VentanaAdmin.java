@@ -515,7 +515,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_recargarAdminsActionPerformed
     
     /**
-     * Acción de pulsar en el item 'Dar permisos de administración' del popUpAdministrador
+     * Acción de pulsar en el item 'Degradar a cliente' del popUpAdministrador
      * 
      * @param evt evento
      */
