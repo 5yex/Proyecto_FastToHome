@@ -271,7 +271,12 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
             }
         }).start();
     }
-
+    
+    /**
+     * Edita el producto y comprueba si se ha editado correctamente
+     * 
+     * @return true si se ha editado el producto
+     */
     private boolean editarProducto() {
 
         try {
