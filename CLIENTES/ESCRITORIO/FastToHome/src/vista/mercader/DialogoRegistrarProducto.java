@@ -44,7 +44,7 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
      * Construye un DialogoRegistrarProducto
      * 
      * @param parent Frame padre del diálogo
-     * @param btActualizar 
+     * @param btActualizar botón 'RECARGAR PRODUCTOS' de la sección 'PRODUCTOS'
      * @param neg
      * @param modal 
      */
