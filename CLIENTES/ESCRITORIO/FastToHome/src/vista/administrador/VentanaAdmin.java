@@ -46,9 +46,16 @@ public class VentanaAdmin extends javax.swing.JFrame {
     public VentanaAdmin(Usuario user) {
         this.administrador = user;
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         actualizarVentana();
         confirmarCierre();
+    }
+    
+    /**
+     * Establece el icono de la ventana
+     */
+    private void establecerIcono() {
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
     }
 
     /**
