@@ -32,9 +32,10 @@ public class validaciones implements Constantes {
     }
     
     /**
+     * Valida que el dni introducido es correcto
      * 
-     * @param dni
-     * @return 
+     * @param dni DNI a verificar
+     * @return true si el dni introducido es correcto
      */
     public static boolean validacionDNI(String dni) {
         dni.toUpperCase();
