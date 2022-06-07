@@ -45,8 +45,8 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
      * Construye un DialogoEditarProducto
      * 
      * @param parent Frame padre del diálogo
-     * @param btActualizar 
-     * @param product
+     * @param btActualizar Botón de 'RECARGAR PRODUCTOS' de la sección 'PRODUCTOS' de la Ventana Mercader
+     * @param product Producto a ser editado
      * @param modal No se puede clickar en la ventana padre si está a true
      */
     public DialogoEditarProducto(JFrame parent, JButton btActualizar, Producto product, boolean modal) {
