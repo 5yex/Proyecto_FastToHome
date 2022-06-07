@@ -85,9 +85,12 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
 
         nombreTXT.setText("Nombre:");
 
-        nombreField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nombreFieldActionPerformed(evt);
+        nombreField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                nombreFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                nombreFieldFocusLost(evt);
             }
         });
 
@@ -394,10 +397,6 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
         }
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
 
-    private void nombreFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombreFieldActionPerformed
-
     private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordFieldActionPerformed
@@ -410,6 +409,19 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
     private void passwordConfirmFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordConfirmFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordConfirmFieldActionPerformed
+
+    private void nombreFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombreFieldFocusGained
+
+    private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
+        if (!validaciones.validar(nombreField.getText(), PATRON_NOMBRES)) {
+            infoNombre.setForeground(Color.RED);
+            infoNombre.setText(MENSAJE_NOMBRE_INFO);
+        } else {
+            infoNombre.setText("");
+        }
+    }//GEN-LAST:event_nombreFieldFocusLost
 
     private void registrarUsuario() {
         if (direccionUsuario.isValida()) {
