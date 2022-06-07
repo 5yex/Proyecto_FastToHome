@@ -412,7 +412,12 @@ public class VentanaMercader extends javax.swing.JFrame {
         dialogoEditarNegocio.setVisible(true);
 
     }//GEN-LAST:event_btnModificarNegocioActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el boton updateInicio
+     * 
+     * @param evt evento
+     */
     private void updateInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateInicioActionPerformed
         negocio = NegocioDao.negocioDeMercader(mercader);
         cargarInicio();
