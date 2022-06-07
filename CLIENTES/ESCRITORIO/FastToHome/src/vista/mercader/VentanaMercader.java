@@ -361,7 +361,7 @@ public class VentanaMercader extends javax.swing.JFrame {
     }//GEN-LAST:event_botonModificarDatosMercaderActionPerformed
     
     /**
-     * Acción de pulsar el botón de 'ACTUALIZAR' de la sección 'PEDIDOS' de la ventana mercader
+     * Acción de pulsar el botón de 'ACTUALIZAR' de la sección 'PEDIDOS'
      * 
      * @param evt evento
      */
