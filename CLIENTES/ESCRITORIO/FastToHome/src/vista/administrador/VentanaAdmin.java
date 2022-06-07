@@ -607,8 +607,9 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
     
     /**
-     * Recarga 
-     * @param listaClientes
+     * Recarga la tabla con la información obtenida
+     * 
+     * @param listaClientes 
      * @param tabla
      * @param filtroNombre 
      */
