@@ -557,7 +557,10 @@ public class VentanaAdmin extends javax.swing.JFrame {
         recargarTablaMercaderes();
         recargarTablaAdmins();
     }//GEN-LAST:event_recargarClientesActionPerformed
-
+    
+    /**
+     * Actualiza la información de las tablas de la ventana de administrador
+     */
     private void actualizarVentana() {
         administrador = UsuarioDao.obtenerDatosUsuario(administrador);
         labelNombreAdmin.setText(administrador.getNombre() + " " + administrador.getApellidos());
