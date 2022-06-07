@@ -8,7 +8,7 @@ import java.time.LocalDate;
 
 /**
  * Interfaz donde almacenamos las variables constantes y los patrones para las validaciones ademas de otros elementos
- * @author Jesus
+ * @author Jose Miguel Calderón, Jesús Rueda
  */
 public interface Constantes {
 
