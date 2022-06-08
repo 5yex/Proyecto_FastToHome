@@ -46,4 +46,9 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         holder.descripcion.setText(listaProductos.get(position).getDescripcion());
         holder.precio.setText("Precio: " + listaProductos.get(position).getPrecio() + " €");
     }
+
+    @Override
+    public int getItemCount() {
+        return 0;
+    }
 }
