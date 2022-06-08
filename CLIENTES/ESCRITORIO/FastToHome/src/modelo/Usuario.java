@@ -16,7 +16,12 @@ import java.util.Vector;
  * @since 1.0
  */
 public class Usuario {
-
+    
+    /**
+     * Número que identifica al usuario en la base de datos
+     * 
+     * @since 1.0
+     */
     private int id;
     private String nombre;
     private String apellidos;
