@@ -81,7 +81,7 @@ public class gestion {
             List<NameValuePair> params = new ArrayList<>();
 
             //prueba
-            System.out.println("controlador.gestion.hacerConsulta() ---- PETICION ENVIADO: " + peticion.getJSON());
+            //System.out.println("controlador.gestion.hacerConsulta() ---- PETICION ENVIADO: " + peticion.getJSON());
 
             params.add(new BasicNameValuePair("DATA", peticion.getJSON()));
 
