@@ -38,11 +38,21 @@ public class Peticion {
     public String getComando() {
         return comando;
     }
-
+    
+    /**
+     * Establece el comando con la acción a realizar por parte del servicio web
+     * 
+     * @param comando Comando con la acción a realizar por parte del servicio web
+     */
     public void setComando(String comando) {
         this.comando = comando;
     }
-
+    
+    /**
+     * Devuelve los datos necesarios para hacer la acción en el servicio web
+     * 
+     * @return Los datos necesarios para hacer la acción en el servicio web
+     */
     public String getDatos() {
         return datos;
     }
