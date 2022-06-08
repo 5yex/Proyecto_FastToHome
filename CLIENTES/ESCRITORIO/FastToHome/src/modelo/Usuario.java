@@ -304,7 +304,13 @@ public class Usuario {
     public void setRol(String rol) {
         this.rol = rol;
     }
-
+    
+    /**
+     * Devuelve una cadena con los atributos del objetod de tipo Usuario
+     * 
+     * @return Cadena con los atributos del objetod de tipo Usuario
+     * @since 1.0
+     */
     @Override
     public String toString() {
         return "Usuario{" + "id=" + id + ", nombre=" + nombre + ", dni=" + dni + ", email=" + email + ", tlf=" + tlf + ", rol=" + rol + ", id_direccion=" + id_direccion + ", password=" + password + '}';
