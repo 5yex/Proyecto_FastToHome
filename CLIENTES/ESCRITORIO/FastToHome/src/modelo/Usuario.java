@@ -165,7 +165,12 @@ public class Usuario {
         this.email = email;
         this.password = password;
     }
-
+    
+    /**
+     * Devuelve el número que identifica al usuario en la base de datos
+     * 
+     * @return 
+     */
     public int getId() {
         return id;
     }
