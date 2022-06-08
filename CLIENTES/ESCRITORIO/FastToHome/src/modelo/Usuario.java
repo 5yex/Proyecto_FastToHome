@@ -88,7 +88,12 @@ public class Usuario {
      */
     public Usuario() {
     }
-
+    
+    /**
+     * Construye un Usuario con los parametros indicados
+     * 
+     * @param id Número que identifica al usuario en la base de datos
+     */
     public Usuario(int id) {
         this.id = id;
     }
