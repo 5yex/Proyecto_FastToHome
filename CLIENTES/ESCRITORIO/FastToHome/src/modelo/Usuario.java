@@ -30,6 +30,12 @@ public class Usuario {
      * @since 1.0
      */
     private String nombre;
+    
+    /**
+     * Apellidos del usuario
+     * 
+     * @since 1.0
+     */
     private String apellidos;
     private String dni;
     private String email;
