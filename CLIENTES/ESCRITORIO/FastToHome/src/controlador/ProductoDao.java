@@ -45,7 +45,7 @@ public class ProductoDao {
                 }
                 listaProductos.add(producto);
             }
-            System.out.println("controlador.ProductoDao.selecciónProductosNegocio()     NUMERO PRODUCTOS: " + listaProductos.size());
+            //System.out.println("controlador.ProductoDao.selecciónProductosNegocio()     NUMERO PRODUCTOS: " + listaProductos.size());
         }
         
         return listaProductos;
