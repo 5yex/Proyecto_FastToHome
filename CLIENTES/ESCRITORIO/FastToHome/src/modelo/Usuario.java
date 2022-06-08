@@ -44,6 +44,12 @@ public class Usuario {
      * @since 1.0
      */
     private String dni;
+    
+    /**
+     * Correo o email del usuario
+     * 
+     * @since 1.0
+     */
     private String email;
     private String tlf;
     private String rol;
