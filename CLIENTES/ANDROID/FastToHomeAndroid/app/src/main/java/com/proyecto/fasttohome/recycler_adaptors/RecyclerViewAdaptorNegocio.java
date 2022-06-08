@@ -34,11 +34,6 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
             });
 
         }
-
-
-
-
-
     }
 
     public List<Negocio> listaNegocios;
