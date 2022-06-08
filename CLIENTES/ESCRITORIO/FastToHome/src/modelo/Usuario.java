@@ -234,7 +234,13 @@ public class Usuario {
     public String getDni() {
         return dni;
     }
-
+    
+    /**
+     * Establece el DNI del usuario
+     * 
+     * @param dni DNI del usuario
+     * @since 1.0
+     */
     public void setDni(String dni) {
         this.dni = dni;
     }
