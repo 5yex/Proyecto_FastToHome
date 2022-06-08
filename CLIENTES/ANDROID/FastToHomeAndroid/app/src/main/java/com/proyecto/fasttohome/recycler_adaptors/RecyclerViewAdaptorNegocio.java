@@ -24,6 +24,11 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
             descripcion = (TextView) itemView.findViewById(R.id.tvDescripcionNegocio);
             //categoria = (TextView) itemView.findViewById(R.id.tvCategoriaNegocio);
         }
+
+
+        
+
+
     }
 
     public List<Negocio> listaNegocios;
