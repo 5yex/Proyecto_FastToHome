@@ -175,7 +175,13 @@ public class Usuario {
     public int getId() {
         return id;
     }
-
+    
+    /**
+     * Establece el número que identifica al usuario en la base de datos
+     * 
+     * @param id Número que identifica al usuario en la base de datos
+     * @since 1.0
+     */
     public void setId(int id) {
         this.id = id;
     }
