@@ -52,7 +52,7 @@ public class imagenesUtil {
             
         } catch (Exception e) {
             label.setText("NO IMAGE");
-            System.out.println("no tienes icono");
+            //System.out.println("no tienes icono");
         }
     }
     
