@@ -21,7 +21,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
     Direccion direccion;
 
     /**
-     * Construye un nuevo DialogoDireccion con parametros cuyo padre es un JFrame.
+     * Construye un nuevo DialogoDireccion con parametros indicados
      *
      * @param parent Frame padre
      * @param modal No se puede clickar en la ventana padre si está a true
