@@ -190,6 +190,7 @@ public class Usuario {
      * Devuelve el nombre del usuario
      * 
      * @return Nombre del usuario
+     * @since 1.0
      */
     public String getNombre() {
         return nombre;
