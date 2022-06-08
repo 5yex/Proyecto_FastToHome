@@ -22,6 +22,7 @@ import util.validaciones;
  * 
  * @author Jose Miguel Calderón, Jesús Rueda
  * @version 1.0
+ * @since 1.0
  */
 public class registrarUsuario extends javax.swing.JDialog implements Constantes {
 
