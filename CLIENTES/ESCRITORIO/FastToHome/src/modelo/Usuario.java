@@ -350,6 +350,7 @@ public class Usuario {
      * Establece la contraseña del usuario
      * 
      * @param password Contraseña del usuario
+     * @since 1.0
      * 
      */
     public void setPassword(String password) {
