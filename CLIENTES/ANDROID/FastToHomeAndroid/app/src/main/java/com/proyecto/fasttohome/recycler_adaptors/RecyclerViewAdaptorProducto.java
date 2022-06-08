@@ -4,9 +4,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerViewAdaptorProducto.ViewHolder> {
+public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerViewAdaptorProducto.ViewHolder2> {
 
-    public static ViewHolder extends RecyclerView.ViewHolder{
+    public static ViewHolder2 extends RecyclerView.ViewHolder{
         private TextView nombre, descripcion, precio;
 
         public ViewHolder(View itemView){
