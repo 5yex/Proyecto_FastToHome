@@ -591,7 +591,7 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             usuario.setTlf(tlfField.getText());
             usuario.setEmail(emailField.getText());
 
-            System.out.println(usuario.getJSON());
+            //System.out.println(usuario.getJSON());
 
             if (UsuarioDao.actualizarUsuario(usuario)) {
                 return true;
