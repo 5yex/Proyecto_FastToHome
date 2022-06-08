@@ -42,6 +42,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_de_negocios);
+        usuario = (Usuario) getIntent().getExtras().getSerializable("user");
 
         recyclerViewNegocio=(RecyclerView) findViewById(R.id.recyclerNegocios);
         recyclerViewNegocio.setLayoutManager(new LinearLayoutManager(this));
