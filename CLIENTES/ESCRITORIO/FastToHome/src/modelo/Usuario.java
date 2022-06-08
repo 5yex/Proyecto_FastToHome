@@ -325,7 +325,13 @@ public class Usuario {
     public int getId_direccion() {
         return id_direccion;
     }
-
+    
+    /**
+     * Establece un número que identifica la direccion del usuario en la base de datos
+     * 
+     * @param id_direccion Número que identifica la direccion del usuario en la base de datos
+     * @since 1.0
+     */
     public void setId_direccion(int id_direccion) {
         this.id_direccion = id_direccion;
     }
