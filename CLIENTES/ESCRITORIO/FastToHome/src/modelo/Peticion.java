@@ -53,6 +53,7 @@ public class Peticion {
      * Devuelve los datos necesarios para hacer la acción en el servicio web
      * 
      * @return Los datos necesarios para hacer la acción en el servicio web
+     * @since 1.0
      */
     public String getDatos() {
         return datos;
