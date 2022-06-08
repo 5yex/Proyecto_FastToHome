@@ -22,7 +22,8 @@ import org.apache.commons.io.IOUtils;
 
 /**
  *
- * @author jmcbg
+ * @author Jose Miguél Calderón, Jesús Rueda
+ * @version 1.0
  */
 public class imagenesUtil {
 

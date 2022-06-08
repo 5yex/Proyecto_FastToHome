@@ -30,8 +30,10 @@ import vista.mercader.VentanaMercader;
 import static util.imagenesUtil.imagenB64Ajlabel;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa el diálogo de editar producto.
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
  */
 public class DialogoEditarProducto extends javax.swing.JDialog {
 
@@ -40,17 +42,27 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
     private JButton btActualizar;
 
     /**
-     * Creates new form VentanaRegistroNegocio
-     *
-     * @param user
+     * Construye un DialogoEditarProducto
+     * 
+     * @param parent Frame padre del diálogo
+     * @param btActualizar Botón de 'RECARGAR PRODUCTOS' de la sección 'PRODUCTOS' de la Ventana Mercader
+     * @param product Producto a ser editado
+     * @param modal No se puede clickar en la ventana padre si está a true
      */
     public DialogoEditarProducto(JFrame parent, JButton btActualizar, Producto product, boolean modal) {
         super(parent,modal);
         initComponents();
         this.btActualizar = btActualizar;
         this.producto = product;
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         cargaInicial();
+    }
+    
+    /**
+     * Establece el icono del diálogo
+     */
+    private void establecerIcono() {
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
     }
 
     /**
@@ -215,14 +227,24 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción de pulsar el botón 'ABRIR IMAGEN'
+     * 
+     * @param evt evento
+     */
     private void botonPedirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirImagenActionPerformed
         new DialogoImagen(this, rootPaneCheckingEnabled, nImg).setVisible(true);
         if(nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()){
             imagenB64Ajlabel(nImg.getB64_imagen(),imgProducto);
         }
     }//GEN-LAST:event_botonPedirImagenActionPerformed
-
+    
+    /**
+     * Acción de pulsar el botón 'ACEPTAR'
+     * 
+     * @param evt evento 
+     */
     private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
         
         if (editarProducto()) {
@@ -231,11 +253,19 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
             this.dispose();
         }
     }//GEN-LAST:event_botonAceptarActionPerformed
-
+    
+    /**
+     * Acción de pulsar el botón 'CANCELAR'
+     * 
+     * @param evt evento
+     */
     private void botonCacelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCacelarActionPerformed
         this.dispose();
     }//GEN-LAST:event_botonCacelarActionPerformed
-
+    
+    /**
+     * Realiza una carga inicial de los elementos del diálogo
+     */
     private void cargaInicial() {
         this.textAreaDescripcion.setLineWrap(true);
         varNombre.setText(producto.getNombre());
@@ -248,7 +278,12 @@ public class DialogoEditarProducto extends javax.swing.JDialog {
             }
         }).start();
     }
-
+    
+    /**
+     * Edita el producto y comprueba si se ha editado correctamente
+     * 
+     * @return true si se ha editado el producto
+     */
     private boolean editarProducto() {
 
         try {

@@ -23,8 +23,10 @@ import util.Constantes;
 import util.validaciones;
 
 /**
- *
- * @author Jesus
+ * Clase que representa al dialogo para actualizar los datos del usuario
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
  */
 public class DialogoActualizarDatos extends javax.swing.JDialog implements Constantes {
 
@@ -32,31 +34,69 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
 
     private Usuario usuario = new Usuario();
     Direccion direccionUsuario;
-
+    
+    /**
+     * Devuelve un objeto de tipo Usuario
+     * 
+     * @return objeto de tipo usuario
+     */
     public Usuario getUsuario() {
         return usuario;
     }
-
-    public void setUsuario(Usuario admin) {
-        this.usuario = admin;
+    
+    /**
+     * Modifica un objeto de tipo Usuario
+     * 
+     * @param user objeto de tipo usuario a ser modificado
+     */
+    public void setUsuario(Usuario user) {
+        this.usuario = user;
     }
-
-    public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, Usuario administrador) {
+    
+    /**
+     * Construye un nuevo DialogoActualizarDatos cuyo padre es un Frame 
+     * (Normalmente el padre es la Ventana Admin)
+     * 
+     * @param parent Frame padre del dialogo
+     * @param modal No se puede clickar en la ventana padre si está a true
+     * @param user objeto de tipo Usuario a ser modificado
+     */
+    public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, Usuario user) {
         super(parent, modal);
-        usuario = administrador;
+        this.usuario = user;
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         establecerCamposIniciales(usuario);
     }
-
-    public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, Usuario administrador, JButton updateInicio) {
+    
+    /**
+     * Establece el icono del diálogo
+     */
+    private void establecerIcono() {
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+    }
+    
+    /**
+     * Construye un nuevo DialogoActualizarDatos cuyo padre es un Frame 
+     * (Normalmente el padre es la Ventana Mercader)
+     * 
+     * @param parent Frame padre del dialogo
+     * @param modal No se puede clickar en la ventana padre si está a true
+     * @param user objeto de tipo Usuario a ser modificado
+     */
+    public DialogoActualizarDatos(java.awt.Frame parent, boolean modal, Usuario user, JButton updateInicio) {
         super(parent, modal);
         this.updateInicio = updateInicio;
-        usuario = administrador;
+        this.usuario = user;
         initComponents();
         establecerCamposIniciales(usuario);
     }
-
+    
+    /**
+     * Comprueba que los campos de 'Contraseña' y 'Comprobar contraeña' son iguales y cumplen el patrón
+     * 
+     * @return true si los campos de 'Contraseña' y 'Comprobar contraeña' son iguales y cumplen el patrón
+     */
     private boolean validarpassiguales() {
 
         if (modificarPassCheck.isSelected()) {
@@ -123,16 +163,8 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         nombreTXT.setText("Nombre:");
 
         nombreField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                nombreFieldFocusGained(evt);
-            }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 nombreFieldFocusLost(evt);
-            }
-        });
-        nombreField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nombreFieldActionPerformed(evt);
             }
         });
 
@@ -184,11 +216,6 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
                 passwordFieldFocusLost(evt);
             }
         });
-        passwordField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordFieldActionPerformed(evt);
-            }
-        });
 
         passwordConfirmTxt.setText("Confirmar contraseña:");
 
@@ -224,16 +251,6 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         passwordAnteriorTxt.setText("Contraseña Anterior:");
 
         passwordAnteriorField.setEnabled(false);
-        passwordAnteriorField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                passwordAnteriorFieldFocusLost(evt);
-            }
-        });
-        passwordAnteriorField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordAnteriorFieldActionPerformed(evt);
-            }
-        });
 
         infoPassAnterior.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
 
@@ -370,7 +387,11 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-
+    /**
+     * Acción de pulsar en el botón 'CONFIRMAR MODIFICACION'
+     * 
+     * @param evt evento
+     */
     private void updateConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateConfirmActionPerformed
 
         if (validaciones.validar(nombreField.getText(), PATRON_NOMBRES)
@@ -391,7 +412,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_updateConfirmActionPerformed
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de nombre
+     * 
+     * @param evt evento
+     */
     private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
         if (!validaciones.validar(nombreField.getText(), PATRON_NOMBRES)) {
             infoNombre.setForeground(Color.RED);
@@ -400,7 +426,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             infoNombre.setText("");
         }
     }//GEN-LAST:event_nombreFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de apellidos
+     * 
+     * @param evt evento
+     */
     private void apellidosFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_apellidosFieldFocusLost
         if (!validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)) {
             infoApellido.setForeground(Color.RED);
@@ -409,7 +440,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             infoApellido.setText("");
         }
     }//GEN-LAST:event_apellidosFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de dni
+     * 
+     * @param evt evento
+     */
     private void dniFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dniFieldFocusLost
         if (!validaciones.validacionDNI(dniField.getText())) {
             infoDNI.setForeground(Color.RED);
@@ -418,7 +454,13 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             infoDNI.setText("");
         }
     }//GEN-LAST:event_dniFieldFocusLost
-
+    
+    /**
+     * /**
+     * Comprueba que ocurre al perder el foco en el campo de teléfono
+     * 
+     * @param evt evento
+     */
     private void tlfFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tlfFieldFocusLost
         if (!validaciones.validar(tlfField.getText(), PATRON_TELEFONO)) {
             infoTelefono.setForeground(Color.RED);
@@ -427,7 +469,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             infoTelefono.setText("");
         }
     }//GEN-LAST:event_tlfFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de email
+     * 
+     * @param evt evento
+     */
     private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
         if (!validaciones.validar(emailField.getText(), PATRON_EMAIL)) {
             infoEmail.setForeground(Color.RED);
@@ -436,7 +483,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             infoEmail.setText("");
         }
     }//GEN-LAST:event_emailFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de contraseña
+     * 
+     * @param evt evento
+     */
     private void passwordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFieldFocusLost
         if (!validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)) {
             infoPass.setForeground(Color.RED);
@@ -445,7 +497,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             infoPass.setText("");
         }
     }//GEN-LAST:event_passwordFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de confirmar contraseña
+     * 
+     * @param evt evento
+     */
     private void passwordConfirmFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmFieldFocusLost
         if (String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) != 0 || !validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)) {
             infoConfirmPass.setForeground(Color.RED);
@@ -454,33 +511,23 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             infoConfirmPass.setText("");
         }
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
-
-    private void nombreFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombreFieldFocusGained
-
-    private void nombreFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombreFieldActionPerformed
-
-    private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordFieldActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el botón de 'MODIFICAR DIRECCIÓN'
+     * 
+     * @param evt evento
+     */
     private void botonModificarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDireccionActionPerformed
         //direccionUsuario = DireccionDao.obtenerDireccionUsuario(usuario);
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionUsuario);
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonModificarDireccionActionPerformed
-
-    private void passwordAnteriorFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordAnteriorFieldFocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordAnteriorFieldFocusLost
-
-    private void passwordAnteriorFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordAnteriorFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordAnteriorFieldActionPerformed
-
+    
+    /**
+     * Acción de hacer check en el checkbox de 'EDITAR CONTRASEÑA'
+     * 
+     * @param evt evento
+     */
     private void modificarPassCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarPassCheckActionPerformed
         JCheckBox check = (JCheckBox) evt.getSource();
         if (check.isSelected()) {
@@ -493,14 +540,24 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
             passwordConfirmField.setEnabled(false);
         }
     }//GEN-LAST:event_modificarPassCheckActionPerformed
-
+    
+    /**
+     * Obtiene una imagen de un directorio y la devuelve como un objeto de tipo Image
+     * 
+     * @return un objeto de tipo Image
+     */
     public Image getIconImage() {
         Image retValue = Toolkit.getDefaultToolkit().
                 getImage(ClassLoader.getSystemResource("./recursos/logoIcon.png"));
 
         return retValue;
     }
-
+    
+    /**
+     * Comprueba que se ha modificado la contraseña correctamente
+     * 
+     * @return true si se ha modificado la contraseña correctamente
+     */
     private boolean modificarPassword() {
         String passHash = usuario.getPassword();
         String tFieldPass = String.valueOf(passwordAnteriorField.getPassword());
@@ -510,7 +567,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         }
         return false;
     }
-
+    
+    /**
+     * Comprueba que se han modificado los datos del usuario correctamente
+     * 
+     * @return true si se han modificado los datos del usuario correctamente
+     */
     private boolean modificarDatos() {
         Usuario userCopia = usuario;
 
@@ -541,7 +603,12 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         }
         return false;
     }
-
+    
+    /**
+     * Rellena los campos con los datos del usuario que se va a modificar
+     * 
+     * @param user Usuario que va a ser modificado
+     */
     private void establecerCamposIniciales(Usuario user) {
         direccionUsuario = DireccionDao.obtenerDireccionUsuario(usuario);
         nombreField.setText(user.getNombre());
@@ -549,10 +616,6 @@ public class DialogoActualizarDatos extends javax.swing.JDialog implements Const
         tlfField.setText(user.getTlf());
         dniField.setText(user.getDni());
         emailField.setText(user.getEmail());
-    }
-
-    private void validarCampos() {
-
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

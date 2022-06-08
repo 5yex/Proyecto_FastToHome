@@ -15,8 +15,10 @@ import modelo.Pedido;
 import modelo.Producto;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa el panel con la información del pedido
+ * 
+ * @author Jose Miguel Calderón, Jesus Rueda
+ * @versio 1.0
  */
 public class PanelPedido extends javax.swing.JPanel {
     private Pedido pedido;
@@ -26,7 +28,12 @@ public class PanelPedido extends javax.swing.JPanel {
      * Creates new form producto
      */
 
-
+    /**
+     * Construye un PanelPedido
+     * 
+     * @param pedido objeto de tipo Pedido con la información del pedido
+     * @param botonPedidos boton 'ACTUALIZAR' de la sección 'PEDIDOS' de la ventana de mercaderes
+     */
     public PanelPedido(Pedido pedido, JButton botonPedidos){
         initComponents();
         this.pedido = pedido;
@@ -34,6 +41,11 @@ public class PanelPedido extends javax.swing.JPanel {
         mostrarDatos();
     }
     
+    /**
+     * Construye un PanelPedido
+     * 
+     * @param pedido objeto de tipo Pedido con la información del pedido
+     */
     public PanelPedido(Pedido pedido){
         initComponents();
         this.pedido = pedido;
@@ -140,7 +152,12 @@ public class PanelPedido extends javax.swing.JPanel {
                 .addGap(19, 19, 19))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción de pulsar el botón 'PASAR ESTADO'
+     * 
+     * @param evt evento
+     */
     private void pasarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasarEstadoActionPerformed
         if(PedidoDao.actualizarEstadoPedido(pedido)){
             pedido = PedidoDao.obtenerPedido(pedido);
@@ -163,7 +180,10 @@ public class PanelPedido extends javax.swing.JPanel {
     private javax.swing.JLabel tituloIdPedido;
     private javax.swing.JLabel tituloTransporte;
     // End of variables declaration//GEN-END:variables
-
+    
+    /**
+     * Muestra los datos del pedido
+     */
     private void mostrarDatos() {
         pasarEstado.addActionListener(actualizarPedido);
         

@@ -24,8 +24,10 @@ import modelo.Usuario;
 import vista.mercader.VentanaMercader;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa la ventana de registro de negocio
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
  */
 public class registroNegocio extends javax.swing.JFrame {
 
@@ -35,16 +37,23 @@ public class registroNegocio extends javax.swing.JFrame {
     private ArrayList<Categoria> listaCategorias;
 
     /**
-     * Creates new form VentanaRegistroNegocio
+     * Constrye un registroNegocio 
      *
-     * @param user
+     * @param user Usuario propietario del negocio a registrar
      */
     public registroNegocio(Usuario user) {
         initComponents();
         this.User = user;
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         cargaInicial();
         confirmarCierre();
+    }
+    
+    /**
+     * Establece el icono del diálogo
+     */
+    private void establecerIcono() {
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
     }
 
     /**
@@ -183,22 +192,40 @@ public class registroNegocio extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción de pulsar el botón de 'Añadir dirección del negocio'
+     * 
+     * @param evt evento
+     */
     private void botonPedirDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirDireccionActionPerformed
         new DialogoDireccion(this, rootPaneCheckingEnabled, nDireccion).setVisible(true);
     }//GEN-LAST:event_botonPedirDireccionActionPerformed
-
+    
+    /**
+     * Acción de pulsar el botón 'COMPLETAR REGISTRO'
+     * 
+     * @param evt evento
+     */
     private void botonCompletarRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCompletarRegistroActionPerformed
         if (nuevoNegocio(User)) {
             new VentanaMercader(User).setVisible(true);
             this.dispose();
         }
     }//GEN-LAST:event_botonCompletarRegistroActionPerformed
-
+    
+    /**
+     * Acción de pulsar el botón 'Subir logo del negocio'
+     * 
+     * @param evt 
+     */
     private void botonPedirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirImagenActionPerformed
         new DialogoImagen(this, rootPaneCheckingEnabled, nImg).setVisible(true);
     }//GEN-LAST:event_botonPedirImagenActionPerformed
-
+    
+    /**
+     * Realiza una carga inicial de los elementos del diálogo
+     */
     private void cargaInicial() {
         
         listaCategorias = controlador.CategoriaDao.obtenerCategorias();
@@ -209,6 +236,12 @@ public class registroNegocio extends javax.swing.JFrame {
         textAreaDescripcion.setLineWrap(true);
     }
     
+    /**
+     * Comprueba que se crea un nuevo negocio de un usario (mercader) en concreto
+     * 
+     * @param user Usuario que va a ser propietario del negocio
+     * @return true si se ha registrado con éxito el negocio 
+     */
     private boolean nuevoNegocio(Usuario user) {
 
         try {
@@ -258,10 +291,14 @@ public class registroNegocio extends javax.swing.JFrame {
         return true;
     }
     
-    public void confirmarCierre() {
+    /**
+     * Realiza el cierre definitivo de la ventana de registro de negocio
+     */
+    private void confirmarCierre() {
         try {
             this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
             addWindowListener(new WindowAdapter() {
+                @Override
                 public void windowClosing(WindowEvent e) {
                     confirmarSalida();
                 }
@@ -273,7 +310,10 @@ public class registroNegocio extends javax.swing.JFrame {
         }
 
     }
-
+    
+    /**
+     * Muestra un cuadro de diálogo preguntando si queremos abandonar o no la ventana de registro
+     */
     public void confirmarSalida() {
         Object[] options = {"Si","No"};
         

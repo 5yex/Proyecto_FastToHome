@@ -34,9 +34,11 @@ public class PanelProducto extends javax.swing.JPanel {
     JFrame parent;
 
     /**
-     * Constructor
+     * Construye un PanelProducto
      * 
-     * Creates new form producto
+     * @param parent Frame padre del panel
+     * @param prod objeto de tipo Producto con la información del producto
+     * @param btUpdate botón 'RECARGAR PRODUCTOS' de la seccion 'PRODUCTOS' de la ventana de mercader
      */
     public PanelProducto(JFrame parent,Producto prod, JButton btUpdate) {
         initComponents();
@@ -142,15 +144,30 @@ public class PanelProducto extends javax.swing.JPanel {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción de pulsar en el icono de eliminar producto
+     * 
+     * @param evt evento
+     */
     private void botonEliminarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarProductoActionPerformed
         eliminarProducto();
     }//GEN-LAST:event_botonEliminarProductoActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el icono de editar producto
+     * 
+     * @param evt evento
+     */
     private void botonEditarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarProductoActionPerformed
         editarProducto();
     }//GEN-LAST:event_botonEditarProductoActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el icono de mostrar la información del producto
+     * 
+     * @param evt evento
+     */
     private void botonInfoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInfoProductoActionPerformed
        JOptionPane.showMessageDialog(null, "Nombre:  "+ producto.getNombre() + "\nPrecio:  "+ producto.getPrecio()+ " €\nDescripción:  "+ producto.getDescripcion(), "Información Producto", JOptionPane.INFORMATION_MESSAGE);
 
@@ -166,7 +183,10 @@ public class PanelProducto extends javax.swing.JPanel {
     private javax.swing.JLabel labelPrecio;
     private javax.swing.JLabel nombreProducto;
     // End of variables declaration//GEN-END:variables
-
+    
+    /**
+     * Muestra los datos del producto en el Panel
+     */
     private void mostrarDatos() {
         nombreProducto.setText(producto.getNombre());
         labelPrecio.setText(String.valueOf(producto.getPrecio()) + " €");
@@ -184,7 +204,10 @@ public class PanelProducto extends javax.swing.JPanel {
 
         this.setBorder(new FlatButtonBorder());
     }
-
+    
+    /**
+     * Muestra el diálogo con la elección de borrar definitivamente el producto o no
+     */
     private void eliminarProducto() {
         Object[] options = {"Si","No"};
         
@@ -202,7 +225,10 @@ public class PanelProducto extends javax.swing.JPanel {
             btUpdate.doClick();
         }
     }
-
+    
+    /**
+     * Abre el diálogo encargado de editar el producto
+     */
     private void editarProducto() {
         //new editarProducto(btUpdate,producto).setVisible(true);
         new DialogoEditarProducto(parent, btUpdate, producto, true).setVisible(true);

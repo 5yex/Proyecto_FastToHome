@@ -28,7 +28,8 @@ import org.apache.commons.io.IOUtils;
 import util.imagenesUtil;
 
 /**
- *
+ * Clase que representa el diálogo de selección de imagen.
+ * 
  * @author Jose Miguel Calderón, Jesús Rueda
  * @version 1.0
  */
@@ -39,27 +40,39 @@ public class DialogoImagen extends javax.swing.JDialog {
     private Imagen imagen;
 
     /**
-     * Construye un nuevo DialogImagen cuyo elemento padre es un Frame
+     * Construye un nuevo DialogoImagen cuyo elemento padre es un Frame
      * 
-     * @param parent
-     * @param modal
-     * @param imagen 
+     * @param parent Frame padre del diálogo
+     * @param modal No se puede clickar en la ventana padre si está a true
+     * @param imagen Imagen a seleccionar
      */
     public DialogoImagen(java.awt.Frame parent, boolean modal, Imagen imagen) {
         super(parent, modal);
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         this.imagen = imagen;
     }
     
+    /**
+     * Construye un nuevo DialogoImagen cuyo elemento padre es un Diálogo
+     * 
+     * @param parent Diálogo padre
+     * @param modal No se puede clickar en el diálogo padre si está a true
+     * @param imagen Imagen a seleccionar
+     */
     public DialogoImagen(java.awt.Dialog parent, boolean modal, Imagen imagen) {
         super(parent, modal);
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         this.imagen = imagen;
     }
     
- 
+    /**
+     * Establece el icono del diálogo
+     */
+    private void establecerIcono() {
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -70,20 +83,20 @@ public class DialogoImagen extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        btnSeleccionarImagen = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnAceptar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Seleccionar Imagen");
         setResizable(false);
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jButton1.setText("SELECCIONAR IMAGEN");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnSeleccionarImagen.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        btnSeleccionarImagen.setText("SELECCIONAR IMAGEN");
+        btnSeleccionarImagen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnSeleccionarImagenActionPerformed(evt);
             }
         });
 
@@ -91,18 +104,18 @@ public class DialogoImagen extends javax.swing.JDialog {
         jLabel1.setBorder(new FlatButtonBorder());
         jLabel1.setOpaque(true);
 
-        jButton2.setText("ACEPTAR");
-        jButton2.setEnabled(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnAceptar.setText("ACEPTAR");
+        btnAceptar.setEnabled(false);
+        btnAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnAceptarActionPerformed(evt);
             }
         });
 
-        jButton3.setText("CANCELAR");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnCancelar.setText("CANCELAR");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnCancelarActionPerformed(evt);
             }
         });
 
@@ -113,33 +126,38 @@ public class DialogoImagen extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1)
+                    .addComponent(btnSeleccionarImagen)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(btnAceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(btnSeleccionarImagen)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(btnAceptar)
+                    .addComponent(btnCancelar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    
+    /**
+     * Acción de pulsar el botón de 'SELECCIONAR IMAGEN'
+     * 
+     * @param evt evento
+     */
+    private void btnSeleccionarImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarImagenActionPerformed
             JFileChooser jf = new JFileChooser();
             jf.setDialogTitle("Seleccionar Imagen");
             jf.setFileFilter(new FileNameExtensionFilter("Imagenes PNG", "png"));
@@ -148,25 +166,35 @@ public class DialogoImagen extends javax.swing.JDialog {
                 imagenSeleccionada = jf.getSelectedFile();
                 jLabel1.setIcon(new ImageIcon(new ImageIcon(imagenSeleccionada.getPath()).getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT)));
                  b64_imagen = imagenesUtil.imagenABase64(imagenSeleccionada); 
-                jButton2.setEnabled(true);
+                btnAceptar.setEnabled(true);
             }            
            
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnSeleccionarImagenActionPerformed
+    
+    /**
+     * Acción de pulsar el botón de 'ACEPTAR'
+     * 
+     * @param evt 
+     */
+    private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         imagen.setB64_imagen(b64_imagen);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnAceptarActionPerformed
+    
+    /**
+     * Acción de pulsar el botón de 'CANCELAR'
+     * 
+     * @param evt 
+     */
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnAceptar;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnSeleccionarImagen;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

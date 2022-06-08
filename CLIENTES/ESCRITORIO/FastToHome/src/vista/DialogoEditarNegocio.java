@@ -44,9 +44,16 @@ public class DialogoEditarNegocio extends javax.swing.JDialog {
         super(parent,modal);
         this.negocio = negocio;
         this.updateInicio = updateInicio;
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         initComponents();
         cargaInicial();
+    }
+    
+    /**
+     * Establece el icono del diálogo
+     */
+    private void establecerIcono() {
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
     }
 
     /**

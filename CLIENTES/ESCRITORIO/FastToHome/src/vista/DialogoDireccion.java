@@ -20,7 +20,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
     Direccion direccion;
 
     /**
-     * Construye un nuevo DialogoDireccion con parametros cuyo padre es un Frame.
+     * Construye un nuevo DialogoDireccion con parametros cuyo padre es un JFrame.
      *
      * @param parent Frame padre
      * @param modal No se puede clickar en la ventana padre si está a true
@@ -29,9 +29,16 @@ public class DialogoDireccion extends javax.swing.JDialog {
     public DialogoDireccion(java.awt.Frame parent, boolean modal, Direccion direccion) {
         super(parent, modal);
         this.direccion = direccion;
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         initComponents();
         rellenarDialogo();
+    }
+    
+    /**
+     * Establece el icono del diálogo
+     */
+    private void establecerIcono() {
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
     }
 
     /**
@@ -198,7 +205,8 @@ public class DialogoDireccion extends javax.swing.JDialog {
     /**
      * Rellena los campos del DiálogoDireccion si la dirección no es nula
      */
-    public void rellenarDialogo() {
+    private void rellenarDialogo() {
+        
         if (direccion != null) {
             varNumeroTXT.setText(String.valueOf(direccion.getNumero()));
             varCP.setText(String.valueOf(direccion.getCodigo_postal()));

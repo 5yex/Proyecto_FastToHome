@@ -18,8 +18,10 @@ import util.Constantes;
 import util.validaciones;
 
 /**
- *
- * @author Jesus
+ * Clase que representa la ventana de registro de usuario
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
  */
 public class registrarUsuario extends javax.swing.JDialog implements Constantes {
 
@@ -27,12 +29,22 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
     Direccion direccionUsuario = new Direccion();
 
     /**
-     * Creates new form DialogoRegistro
+     * Construye un JDialog cuyo elemento padre es un Frame
+     * 
+     * @param parent Frame padre del diálogo
+     * @param modal No se puede clickar en la ventana padre si está a true
      */
     public registrarUsuario(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         initComponents();
+    }
+    
+    /**
+     * Establece el icono del diálogo
+     */
+    private void establecerIcono() {
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
     }
 
     /**
@@ -83,16 +95,8 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
         nombreTXT.setText("Nombre:");
 
         nombreField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                nombreFieldFocusGained(evt);
-            }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 nombreFieldFocusLost(evt);
-            }
-        });
-        nombreField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nombreFieldActionPerformed(evt);
             }
         });
 
@@ -141,11 +145,6 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
         passwordField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 passwordFieldFocusLost(evt);
-            }
-        });
-        passwordField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordFieldActionPerformed(evt);
             }
         });
 
@@ -286,7 +285,12 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción de pulsar el botón de confirmar registro
+     * 
+     * @param evt evento
+     */
     private void registerConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerConfirmActionPerformed
 
         if (validaciones.validar(nombreField.getText(), PATRON_NOMBRES)
@@ -303,16 +307,13 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             JOptionPane.showMessageDialog(this, MENSAJE_ERROR_RELLENO_DATOS, "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_registerConfirmActionPerformed
-
-    private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
-        if (!validaciones.validar(nombreField.getText(), PATRON_NOMBRES)) {
-            infoNombre.setForeground(Color.RED);
-            infoNombre.setText(MENSAJE_NOMBRE_INFO);
-        } else {
-            infoNombre.setText("");
-        }
-    }//GEN-LAST:event_nombreFieldFocusLost
-
+    
+   
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de apellidos
+     * 
+     * @param evt evento
+     */
     private void apellidosFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_apellidosFieldFocusLost
         if (!validaciones.validar(apellidosField.getText(), PATRON_APELLIDOS)) {
             infoApellido.setForeground(Color.RED);
@@ -321,7 +322,12 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             infoApellido.setText("");
         }
     }//GEN-LAST:event_apellidosFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de dni
+     * 
+     * @param evt evento
+     */
     private void dniFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dniFieldFocusLost
         if (!validaciones.validacionDNI(dniField.getText())) {
             infoDNI.setForeground(Color.RED);
@@ -330,7 +336,12 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             infoDNI.setText("");
         }
     }//GEN-LAST:event_dniFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de telefono
+     * 
+     * @param evt evento
+     */
     private void tlfFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tlfFieldFocusLost
         if (!validaciones.validar(tlfField.getText(), PATRON_TELEFONO)) {
             infoTelefono.setForeground(Color.RED);
@@ -339,7 +350,12 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             infoTelefono.setText("");
         }
     }//GEN-LAST:event_tlfFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de email
+     * 
+     * @param evt evento
+     */
     private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
         if (!validaciones.validar(emailField.getText(), PATRON_EMAIL)) {
             infoEmail.setForeground(Color.RED);
@@ -348,7 +364,12 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             infoEmail.setText("");
         }
     }//GEN-LAST:event_emailFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de la contraseña
+     * 
+     * @param evt evento
+     */
     private void passwordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFieldFocusLost
         if (!validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)) {
             infoPass.setForeground(Color.RED);
@@ -357,7 +378,12 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             infoPass.setText("");
         }
     }//GEN-LAST:event_passwordFieldFocusLost
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de confirmar contraseña
+     * 
+     * @param evt evento
+     */
     private void passwordConfirmFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmFieldFocusLost
         if (String.valueOf(passwordField.getPassword()).compareTo(String.valueOf(passwordConfirmField.getPassword())) != 0 || !validaciones.validar(String.valueOf(passwordField.getPassword()), PATRON_PASS_USUARIO)) {
             infoConfirmPass.setForeground(Color.RED);
@@ -366,24 +392,34 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
             infoConfirmPass.setText("");
         }
     }//GEN-LAST:event_passwordConfirmFieldFocusLost
-
-    private void nombreFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombreFieldFocusGained
-
-    private void nombreFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombreFieldActionPerformed
-
-    private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordFieldActionPerformed
-
+    
+    /**
+     * Acción de pulsar el botón de 'INTRODUCIR DIRECCIÓN' 
+     * 
+     * @param evt evento
+     */
     private void botonIntroducirDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIntroducirDireccionActionPerformed
         DialogoDireccion dialogoDireccion = new DialogoDireccion(this, true, direccionUsuario);
         dialogoDireccion.setVisible(true);
     }//GEN-LAST:event_botonIntroducirDireccionActionPerformed
-
+    
+    /**
+     * Comprueba que ocurre al perder el foco en el campo de nombre
+     * 
+     * @param evt evento
+     */
+    private void nombreFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nombreFieldFocusLost
+        if (!validaciones.validar(nombreField.getText(), PATRON_NOMBRES)) {
+            infoNombre.setForeground(Color.RED);
+            infoNombre.setText(MENSAJE_NOMBRE_INFO);
+        } else {
+            infoNombre.setText("");
+        }
+    }//GEN-LAST:event_nombreFieldFocusLost
+    
+    /**
+     * Metodo encargado de realizar el registro del usuario
+     */
     private void registrarUsuario() {
         if (direccionUsuario.isValida()) {
             int id_direccion = DireccionDao.nuevaDireccionDevuelveId(direccionUsuario);
@@ -413,10 +449,6 @@ public class registrarUsuario extends javax.swing.JDialog implements Constantes 
         } else {
             JOptionPane.showMessageDialog(this, "Tienes que introducir una direccion", "Error al registrar usuario", JOptionPane.ERROR_MESSAGE);
         }
-
-    }
-
-    private void validarCampos() {
 
     }
 

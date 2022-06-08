@@ -40,39 +40,35 @@ import vista.DialogoEditarNegocio;
 import vista.administrador.DialogoActualizarDatos;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa la ventana de un mercader 
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
  */
 public class VentanaMercader extends javax.swing.JFrame {
 
     private Usuario mercader;
     private Negocio negocio;
-//    private final ActionListener actualizarProductos = new ActionListener() {
-//        @Override
-//        public void actionPerformed(ActionEvent e) {
-//            mostrarProductos();
-//        }
-//    };
-//
-//    private final ActionListener actualizarPedidos = new ActionListener() {
-//        @Override
-//        public void actionPerformed(ActionEvent e) {
-//            System.err.println("MOSTRANDO LOS PEDIDOS");
-//            mostrarPedidos();
-//        }
-//    };
 
     Thread hiloUpdate;
 
     /**
-     * Creates new form VentanaPrincipal
+     * Construye una VentanaMercader
+     * 
+     * @param user objeto de tipo Usuario con la informacion del mercader
      */
     public VentanaMercader(Usuario user) {
         this.mercader = user;
         this.negocio = NegocioDao.negocioDeMercader(user);
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         inicilizacion();
+    }
+    
+    /**
+     * Establece el icono del diálogo
+     */
+    private void establecerIcono() {
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
     }
 
     /**
@@ -121,14 +117,6 @@ public class VentanaMercader extends javax.swing.JFrame {
 
         panelTableado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         panelTableado.setMinimumSize(new java.awt.Dimension(678, 465));
-        panelTableado.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                panelTableadoMouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                panelTableadoMousePressed(evt);
-            }
-        });
 
         labelBienvenido.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         labelBienvenido.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -361,20 +349,31 @@ public class VentanaMercader extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción de pulsar el botón de 'PERSONALIZAR TU NEGOCIO' de la sección 'INICIO'
+     * 
+     * @param evt evento
+     */
     private void botonModificarDatosMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDatosMercaderActionPerformed
         DialogoActualizarDatos dmod = new DialogoActualizarDatos(this, true, mercader, updateInicio);
         dmod.setVisible(true);
     }//GEN-LAST:event_botonModificarDatosMercaderActionPerformed
-
-    private void panelTableadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panelTableadoMousePressed
-
+    
+    /**
+     * Acción de pulsar el botón de 'ACTUALIZAR' de la sección 'PEDIDOS'
+     * 
+     * @param evt evento
+     */
     private void recargarPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarPedidosActionPerformed
         mostrarPedidos();
     }//GEN-LAST:event_recargarPedidosActionPerformed
-
+    
+    /**
+     * Accíón de hacer check en el checkbox de 'Auto Actualizar' para que se vayan actualizando los pedidos automaticamente
+     * 
+     * @param evt evento
+     */
     private void autoUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_autoUpdateActionPerformed
         JCheckBox hilo = (JCheckBox) evt.getSource();
         if (hilo.isSelected()) {
@@ -383,40 +382,69 @@ public class VentanaMercader extends javax.swing.JFrame {
             interrumpirHilo();
         }
     }//GEN-LAST:event_autoUpdateActionPerformed
-
+    
+    /**
+     * Acción de hacer check en el checkbox de 'Mostrar Todos'
+     * 
+     * @param evt evento
+     */
     private void checkTodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkTodosActionPerformed
         mostrarPedidos();
     }//GEN-LAST:event_checkTodosActionPerformed
-
+    
+    /**
+     * Acción de hacer check en el checkbox de 'Para Preparar'
+     * 
+     * @param evt evento
+     */
     private void checkParaPrepararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkParaPrepararActionPerformed
         mostrarPedidosPagados();
 
     }//GEN-LAST:event_checkParaPrepararActionPerformed
-
-    private void panelTableadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panelTableadoMouseClicked
-
+    
+    /**
+     * Acción de pulsar en el botón 'PERSONALIZA TU NEGOCIO' de seccion de 'INICIO'
+     * 
+     * @param evt 
+     */
     private void btnModificarNegocioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarNegocioActionPerformed
         DialogoEditarNegocio dialogoEditarNegocio = new DialogoEditarNegocio(this,negocio,updateInicio,true);
         dialogoEditarNegocio.setVisible(true);
 
     }//GEN-LAST:event_btnModificarNegocioActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el boton updateInicio
+     * 
+     * @param evt evento
+     */
     private void updateInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateInicioActionPerformed
         negocio = NegocioDao.negocioDeMercader(mercader);
         cargarInicio();
 
     }//GEN-LAST:event_updateInicioActionPerformed
-
+    
+    /**
+     * Acción de hacer check en el checkbox de 'Para enviar'
+     * 
+     * @param evt evento
+     */
     private void checkParaEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkParaEnviarActionPerformed
         mostrarPedidosEnPreparacion();
     }//GEN-LAST:event_checkParaEnviarActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el botón 'RECARGAR PRODUCTOS' de la sección 'PRODUCTOS'
+     * 
+     * @param evt 
+     */
     private void recargarProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarProductosActionPerformed
         mostrarProductos();
     }//GEN-LAST:event_recargarProductosActionPerformed
-
+    
+    /**
+     * Inicia algunos elementos y comportamientos de la ventana de merader
+     */
     private void inicilizacion() {
         confirmarCierre();
         cargarInicio();
@@ -424,7 +452,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         mostrarPedidos();
         englobarRadioButtons();
     }
-
+    
+    /**
+     * Carga los datos del mercader y rellena los campos con su información
+     */
     private void cargarInicio() {
         mercader = UsuarioDao.obtenerDatosUsuario(mercader);
         labelNombreMercader.setText(mercader.getNombre() + "  " + mercader.getApellidos());
@@ -432,7 +463,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         imagenesUtil.imagenB64Ajlabel(ImagenDao.obtenerImagenPorId(new Imagen(negocio.getId_img())), imgNegocio);
 
     }
-
+    
+    /**
+     * Muestra los paneles de los productos del negocio en la sección 'PEDIDOS'
+     */
     public void mostrarProductos() {
         //interrumpirHilo();
         panelProductos.removeAll();
@@ -452,7 +486,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelProductos.revalidate();
         panelProductos.repaint();
     }
-
+    
+    /**
+     * Interrumpe el hilo de actualización automaticas
+     */
     private void interrumpirHilo() {
         if (hiloUpdate != null) {
             hiloUpdate.interrupt();
@@ -460,7 +497,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         }
 
     }
-
+    
+    /**
+     * Crea el hilo de la actualización automática de productos
+     */
     private void crearHiloActualizacionDeProductos() {
         if (hiloUpdate == null) {
             hiloUpdate = new Thread(new Runnable() {
@@ -480,7 +520,10 @@ public class VentanaMercader extends javax.swing.JFrame {
             hiloUpdate.start();
         }
     }
-
+    
+    /**
+     * Muestra los paneles de los pedidos que tiene el estado 'pagado'
+     */
     private void mostrarPedidosPagados() {
         //crearHiloActualizacionDeProductos();
         ActionListener actualizarPedidos = new ActionListener() {
@@ -506,7 +549,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelPedidos.repaint();
 
     }
-
+    
+    /**
+     * Muestra los paneles de los pedidos que tiene el estado 'en_preparacion'
+     */
     private void mostrarPedidosEnPreparacion() {
         //crearHiloActualizacionDeProductos();
         ActionListener actualizarPedidos = new ActionListener() {
@@ -532,7 +578,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelPedidos.repaint();
 
     }
-
+    
+    /**
+     * Muestra los paneles de todos los pedidos
+     */
     private void mostrarPedidos() {
         //crearHiloActualizacionDeProductos();
         ActionListener actualizarPedidos = new ActionListener() {
@@ -571,14 +620,20 @@ public class VentanaMercader extends javax.swing.JFrame {
         panelPedidos.repaint();
 
     }
-
+    
+    /**
+     * Engloba los distintos checkbox de estado en el mismo grupo
+     */
     public void englobarRadioButtons() {
         ButtonGroup grupoEstados = new ButtonGroup();
         grupoEstados.add(checkTodos);
         grupoEstados.add(checkParaPreparar);
         grupoEstados.add(checkParaEnviar);
     }
-
+    
+    /**
+     * Realiza el cierre definitivo de la ventana de registro de negocio
+     */
     public void confirmarCierre() {
         try {
             this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
@@ -594,7 +649,10 @@ public class VentanaMercader extends javax.swing.JFrame {
         }
 
     }
-
+    
+    /**
+     * Muestra un cuadro de diálogo preguntando si queremos abandonar o no la ventana de mercader
+     */
     public void confirmarSalida() {
         Object[] options = {"Si","No"};
         

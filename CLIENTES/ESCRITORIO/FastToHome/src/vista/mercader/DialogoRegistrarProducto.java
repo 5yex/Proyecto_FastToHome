@@ -30,8 +30,10 @@ import vista.mercader.VentanaMercader;
 import static util.imagenesUtil.imagenB64Ajlabel;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa el diálogo de registrar producto
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
  */
 public class DialogoRegistrarProducto extends javax.swing.JDialog {
 
@@ -40,17 +42,26 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
     private JButton btActualizar;
 
     /**
-     * Creates new form VentanaRegistroNegocio
-     *
-     * @param user
+     * Construye un DialogoRegistrarProducto
+     * 
+     * @param parent Frame padre del diálogo
+     * @param btActualizar botón 'RECARGAR PRODUCTOS' de la sección 'PRODUCTOS'
+     * @param neg obejto de tipo Negocio al que pertenece el producto
+     * @param modal No se puede clickar en la ventana padre si está a true
      */
     public DialogoRegistrarProducto(JFrame parent, JButton btActualizar, Negocio neg, boolean modal) {
         super(parent,modal);
         initComponents();
         this.btActualizar = btActualizar;
         this.neg = neg;
+        establecerIcono();
+    }
+    
+    /**
+     * Establece el icono del diálogo
+     */
+    private void establecerIcono() {
         this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
-        cargaInicial();
     }
 
     /**
@@ -215,14 +226,24 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción de pulsar el botón 'ABRIR IMAGEN'
+     * 
+     * @param evt evento
+     */
     private void botonPedirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPedirImagenActionPerformed
         new DialogoImagen(this, rootPaneCheckingEnabled, nImg).setVisible(true);
         if(nImg.getB64_imagen() != null && !nImg.getB64_imagen().isBlank()){
             imagenB64Ajlabel(nImg.getB64_imagen(),imgProducto);
         }
     }//GEN-LAST:event_botonPedirImagenActionPerformed
-
+    
+    /**
+     * Acción de pulsar el botón 'ACEPTAR'
+     * 
+     * @param evt evento
+     */
     private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
         if(nuevoProducto()){
             btActualizar.doClick();
@@ -230,19 +251,20 @@ public class DialogoRegistrarProducto extends javax.swing.JDialog {
             this.dispose();
         }
     }//GEN-LAST:event_botonAceptarActionPerformed
-
+    
+    /**
+     * Acción de pulsar el botón 'CANCELAR'
+     * 
+     * @param evt evento
+     */
     private void botonCacelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCacelarActionPerformed
         this.dispose();
     }//GEN-LAST:event_botonCacelarActionPerformed
-
-    private void cargaInicial() {
-//        listaCategorias = controlador.CategoriaDao.obtenerCategorias();
-//        for (Categoria listaCategoria : listaCategorias) {
-//            comboCategoria.addItem(listaCategoria.getNombre());
-//        }
-//        JOptionPane.showMessageDialog(null, User.getNombre() + " Bienvenido al equipo de mercaderes! \n A continuación podrás configurar tu negocio");
-    }
-
+    
+    /**
+     * Comprueba que se ha creado (o registrado) un nuevo producto del negocio
+     * @return true si se ha registrado el nuevo producto del negocio
+     */
     private boolean nuevoProducto() {
 
         try {

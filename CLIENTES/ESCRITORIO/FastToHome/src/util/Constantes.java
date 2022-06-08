@@ -7,8 +7,10 @@ package util;
 import java.time.LocalDate;
 
 /**
- *
- * @author Jesus
+ * Interfaz donde almacenamos las variables constantes y los patrones para las validaciones ademas de otros elementos
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
  */
 public interface Constantes {
 
@@ -30,20 +32,11 @@ public interface Constantes {
     final public String ERROR_CALCULO_PRECIO = "No se ha podido calcular el dinero total ganado";
 
     //MENSAJES DE INFORMACIÓN
-    final public String MENSAJE_CLAVE_USUARIO = "Inváido de 4 a 20 caracteres: ";
     final public String MENSAJE_PASS_INFO = "Al menos 8 caracteres, mayus y número";
-    final public String MENSAJE_ANIO_CAMPANIA = "\nDame el año de la campaña (Mayor o igual a 2020 y maximo " + ANIO_ACTUAL + "): ";
-    final public String MENSAJE_PRECIO_KILO = "Precio de la aceituna por kilo (pj:0.58 o 0.3): ";
     final public String MENSAJE_DNI_INFO = "Introduzca un dni válido (8 números y 1 letra)";
     final public String MENSAJE_NOMBRE_INFO = "Primera letra en mayuscula.";
     final public String MENSAJE_APELLIDO_INFO = "Primera letra en mayuscula.";
-    final public String MENSAJE_EDAD = "Edad (mayor o igual a 18 menor que 99): ";
-    final public String MENSAJE_KILOS = "Kilos recogidos (numero con 2 decimales): ";
-    final public String MENSAJE_FINCA = "Dame el nombre de la finca: ";
     final public String MENSAJE_FECHA = "Dame la fecha (formato: yyyy-mm-dd): ";
-    final public String MENSAJE_ID_RECOLECTOR = "Dame el id del recolector: ";
-    final public String MENSAJE_COD_PESADA = "Dame el codigo de la pesada: ";
-    final public String MENSAJE_COD_PRECIO = "Dame el codigo del precio: ";
     final public String MENSAJE_EMAIL_INFO = "Email inválido";
     final public String MENSAJE_TELEFONO_INFO = "Teléfono inválido";
     final public String MENSAJE_ERROR_RELLENO_DATOS = "Se ha producido un error al rellenar los datos, siga las intrucciones";
@@ -57,11 +50,7 @@ public interface Constantes {
     final public String PATRON_DNI = "(([x-z]|[X-Z]{1})([-]?)(\\d{7})([-]?)([a-z]|[A-Z]{1}))|((\\d{8})([-]?)([a-z]|[A-Z]{1}))";
     final public String PATRON_NOMBRES = "^(([A-ZÁÉÍÓÚÑ]{1}[a-záéíóúüñ]*)(\\s)?)((((((((de)|(del)|(la)|(las)|(los))\\s)?)?){1,2})(([A-ZÁÉÍÑÓ]{1}[a-záéíñóúü\\.]*)(\\s([A-ZÁÉÍÑÓ]{1}[a-záéíñóúü\\.]*))?){1})?)$";
     final public String PATRON_APELLIDOS = "^(([A-ZÁÉÍÓÚÑ]{1}[a-záéíóúüñ]*)(\\s)?)((((((((de)|(del)|(la)|(las)|(los))\\s)?)?){1,2})(([A-ZÁÉÍÑÓ]{1}[a-záéíñóúü\\.]*)(\\s([A-ZÁÉÍÑÓ]{1}[a-záéíñóúü\\.]*))?){1})?)$";
-    final public String PATRON_EDAD = "^(1[8-9]|[2-9][0-9])$";
-    final public String PATRON_KILOS = "^\\d*(\\.\\d{1})?\\d{0,1}$";
-    final public String PATRON_FINCA = "^([a-zA-Z ]{3,30})$";
     final public String PATRON_FECHA = "\\d{4}\\-(0?ERR[1-9]|1[012])\\-(0?[012][0-9]|3[01])";
-    final public String PATRON_IDENTIFICADOR = "^\\d+$";
     final public String PATRON_EMAIL = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
     final public String PATRON_TELEFONO = "(\\+34|0034|34)?[ -]*(6|7|9)[ -]*([0-9][ -]*){8}";
     

@@ -63,15 +63,42 @@ public class registroPaso3Direccion extends AppCompatActivity {
      */
 
     public void accionRegistro(View view){
-        direccion.setNumero(Integer.valueOf(numero.getText().toString()));
-        direccion.setCodigo_postal(Integer.valueOf(codigoPostal.getText().toString()));
-        direccion.setCiudad(ciudad.getText().toString());
-        direccion.setCalle(calle.getText().toString());
-        direccion.setOtros(otros.getText().toString());
 
+<<<<<<< HEAD
 
         System.err.println(user.getJSON()+direccion.getJSON());
         registerDirecion();
+=======
+        try {
+            String numero_casa = numero.getText().toString();
+            String cod_postal = codigoPostal.getText().toString();
+            String city = ciudad.getText().toString();
+            String street = calle.getText().toString();
+            String other = otros.getText().toString();
+
+            if(numero_casa.length() > 0 && cod_postal.length() > 0 && city.length() > 0 && street.length() > 0 && other.length() > 0){
+                int numeroEntero = Integer.valueOf(numero.getText().toString());
+                int cod_postalEntero = Integer.valueOf(codigoPostal.getText().toString());
+
+                direccion.setNumero(numeroEntero);
+                direccion.setCodigo_postal(cod_postalEntero);
+                direccion.setCiudad(ciudad.getText().toString());
+                direccion.setCalle(calle.getText().toString());
+                direccion.setOtros(otros.getText().toString());
+
+                System.err.println(user.getJSON() + direccion.getJSON());
+                registerDirecion();
+            }else{
+                Toast notificacion = Toast.makeText(this,"No debes dejar ningún campo vacío.",Toast.LENGTH_SHORT);
+                notificacion.show();
+            }
+
+
+        }catch (NumberFormatException exception){
+            Toast notificacion = Toast.makeText(this,"El numero de la calle y el codigo postal deben ser numeros enteros.",Toast.LENGTH_SHORT);
+            notificacion.show();
+        }
+>>>>>>> 9deaad0655521625e1afb5d3ec0372cf962e494a
     }
 
     private void registerCompleter(int idDireccion) {

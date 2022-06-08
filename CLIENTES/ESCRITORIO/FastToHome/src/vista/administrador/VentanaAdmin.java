@@ -39,14 +39,23 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private ArrayList<Usuario> arrayListMercaderes;
 
     /**
-     * Creates new form VentanaPrincipal
+     * Construye una VentanaAdmin
+     * 
+     * @param user Usuario de tipo administrador que ha iniciado sesión
      */
     public VentanaAdmin(Usuario user) {
         this.administrador = user;
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
+        establecerIcono();
         actualizarVentana();
         confirmarCierre();
+    }
+    
+    /**
+     * Establece el icono de la ventana
+     */
+    private void establecerIcono() {
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos/logoIcon.png")).getImage());
     }
 
     /**
@@ -126,11 +135,6 @@ public class VentanaAdmin extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(878, 665));
 
         panelTableado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        panelTableado.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                panelTableadoMousePressed(evt);
-            }
-        });
 
         labelBienvenido.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         labelBienvenido.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -414,12 +418,15 @@ public class VentanaAdmin extends javax.swing.JFrame {
             .addComponent(panelTableado)
         );
 
-        getAccessibleContext().setAccessibleName("Ventana Administrador");
-
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Acción de pulsar en el botón de 'MODIFICA TUS DATOS'
+     * 
+     * @param evt evento
+     */
     private void botonModificarDatosAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarDatosAdminActionPerformed
         DialogoActualizarDatos dmod = new DialogoActualizarDatos(this, true, administrador);
         dmod.setVisible(true);
@@ -429,7 +436,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
             actualizarVentana();
         }
     }//GEN-LAST:event_botonModificarDatosAdminActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el item 'Hacer mercader a este usuario' del popUpClientes
+     * 
+     * @param evt evento
+     */
     private void itemClienteAMercaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemClienteAMercaderActionPerformed
         //hacerMecader
         int filaSeleccionada = tablaClientes.getSelectedRow();
@@ -442,7 +454,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_itemClienteAMercaderActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el item 'Dar permisos de administración' del popUpClientes
+     * 
+     * @param evt evento
+     */
     private void itemClienteAAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemClienteAAdministradorActionPerformed
         //hacerAdmin
         int filaSeleccionada = tablaClientes.getSelectedRow();
@@ -455,28 +472,53 @@ public class VentanaAdmin extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_itemClienteAAdministradorActionPerformed
-
+    
+    /**
+     * Acción de hacer check en el checkbox 'Busqueda por nombre' de la seccion 'CLIENTES' 
+     * @param evt evento
+     */
     private void checkBusquedaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaClientesActionPerformed
         recargarTablaClientes();
     }//GEN-LAST:event_checkBusquedaClientesActionPerformed
-
+    
+    /**
+     * Acción de hacer check en el checkbox 'Busqueda por nombre' de la seccion 'MERCADERES' 
+     * @param evt evento
+     */
     private void checkBusquedaMercaderesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaMercaderesActionPerformed
         recargarTablaMercaderes();
     }//GEN-LAST:event_checkBusquedaMercaderesActionPerformed
-
+    
+    /**
+     * Acción de pulsar en la cabecera de la sección 'MERCADERES'
+     * @param evt evento
+     */
     private void recargarMercaderesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarMercaderesActionPerformed
         recargarTablaMercaderes();
     }//GEN-LAST:event_recargarMercaderesActionPerformed
-
+    
+    /**
+     * Acción de hacer check en el checkbox 'Busqueda por nombre' de la seccion 'ADMINISTRADORES' 
+     * @param evt evento
+     */
     private void checkBusquedaAdminsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBusquedaAdminsActionPerformed
         recargarTablaAdmins();
     }//GEN-LAST:event_checkBusquedaAdminsActionPerformed
-
+    
+    /**
+     * Acción de pulsar en la cabecera de la sección 'ADMINISTRADORES'
+     * @param evt evento
+     */
     private void recargarAdminsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarAdminsActionPerformed
         recargarTablaAdmins();
 
     }//GEN-LAST:event_recargarAdminsActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el item 'Degradar a cliente' del popUpAdministrador
+     * 
+     * @param evt evento
+     */
     private void itemAdminAClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAdminAClienteActionPerformed
         //degradar
         int filaSeleccionada = tablaAdmins.getSelectedRow();
@@ -495,7 +537,12 @@ public class VentanaAdmin extends javax.swing.JFrame {
 
         }
     }//GEN-LAST:event_itemAdminAClienteActionPerformed
-
+    
+    /**
+     * Acción de pulsar en el item 'Degradar a cliente' del popUpMercaderes
+     * 
+     * @param evt evento
+     */
     private void itemMercaderAClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMercaderAClienteActionPerformed
         //degradar
         int filaSeleccionada = tablaMercaderes.getSelectedRow();
@@ -507,17 +554,20 @@ public class VentanaAdmin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error al degradar a cliente a este usuario", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_itemMercaderAClienteActionPerformed
-
-    private void panelTableadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTableadoMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_panelTableadoMousePressed
-
+    
+    /**
+     * Acción de pulsar en la cabecera de la sección 'CLIENTES'
+     * @param evt evento
+     */
     private void recargarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recargarClientesActionPerformed
         recargarTablaClientes();
         recargarTablaMercaderes();
         recargarTablaAdmins();
     }//GEN-LAST:event_recargarClientesActionPerformed
-
+    
+    /**
+     * Actualiza la ventana de administrador
+     */
     private void actualizarVentana() {
         administrador = UsuarioDao.obtenerDatosUsuario(administrador);
         labelNombreAdmin.setText(administrador.getNombre() + " " + administrador.getApellidos());
@@ -526,7 +576,10 @@ public class VentanaAdmin extends javax.swing.JFrame {
         recargarTablaMercaderes();
         recargarTablaAdmins();
     }
-
+    
+    /**
+     * Obtiene la información para recargar la tabla con la información de los clientes
+     */
     public void recargarTablaClientes() {
         arrayListClientes = UsuarioDao.seleccionUsuariosClientes();
         if (checkBusquedaClientes.isSelected()) {
@@ -535,7 +588,10 @@ public class VentanaAdmin extends javax.swing.JFrame {
             recargarTabla(arrayListClientes, tablaClientes, null);
         }
     }
-
+    
+    /**
+     * Obtiene la información para recargar la tabla con la información de los mercaderes
+     */
     public void recargarTablaMercaderes() {
         arrayListMercaderes = UsuarioDao.seleccionUsuariosMercader();
         if (checkBusquedaMercaderes.isSelected()) {
@@ -544,7 +600,10 @@ public class VentanaAdmin extends javax.swing.JFrame {
             recargarTabla(arrayListMercaderes, tablaMercaderes, null);
         }
     }
-
+    
+    /**
+     * Obtiene la información para recargar la tabla con la información de los administradores
+     */
     public void recargarTablaAdmins() {
         arrayListAdmins = UsuarioDao.seleccionUsuariosAdmin();
         if (checkBusquedaAdmins.isSelected()) {
@@ -553,14 +612,22 @@ public class VentanaAdmin extends javax.swing.JFrame {
             recargarTabla(arrayListAdmins, tablaAdmins, null);
         }
     }
-
-    public void recargarTabla(ArrayList<Usuario> listaClientes, JTable tabla, String filtroNombre) {
+    
+    /**
+     * Recarga la tabla con la información obtenida
+     * 
+     * @param listaUsuarios Lista de usuarios de un tipo en concreto (cliente,mercader,admin)
+     * @param tabla Tabla con los datos de los usuarios
+     * @param filtroNombre Cadena por la que se va a filtrar los usuarios
+     */
+    public void recargarTabla(ArrayList<Usuario> listaUsuarios, JTable tabla, String filtroNombre) {
         tabla.setModel(new javax.swing.table.DefaultTableModel(
                 null,
                 new String[]{
                     "ID", "DNI", "EMAIL", "NOMBRE", "TELÉFONO"
                 }
         ) {
+            @Override
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return false;
             }
@@ -573,24 +640,29 @@ public class VentanaAdmin extends javax.swing.JFrame {
         //busqueda
         if (filtroNombre != null && !filtroNombre.isBlank()) {
             System.out.println("busqueda");
-            for (Usuario cliente : listaClientes) {
-                String nombreMayus = (cliente.getNombre() + " " + cliente.getApellidos()).toUpperCase();
+            for (Usuario usuario : listaUsuarios) {
+                String nombreMayus = (usuario.getNombre() + " " + usuario.getApellidos()).toUpperCase();
                 String busquedaMayus = filtroNombre.toUpperCase();
                 if (nombreMayus.contains(new StringBuffer(busquedaMayus))) {
-                    model.addRow(cliente.getRow());
+                    model.addRow(usuario.getRow());
                 }
             }
         } else {
             //Mostrar sin busqueda
-            for (Usuario cliente : listaClientes) {
-                model.addRow(cliente.getRow());
+            for (Usuario usuario : listaUsuarios) {
+                model.addRow(usuario.getRow());
             }
         }
     }
-    public void confirmarCierre() {
+    
+    /**
+     * Realiza el cierre definitivo de la ventana de registro de negocio
+     */
+    private void confirmarCierre() {
         try {
             this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
             addWindowListener(new WindowAdapter() {
+                @Override
                 public void windowClosing(WindowEvent e) {
                     confirmarSalida();
                 }
@@ -602,7 +674,10 @@ public class VentanaAdmin extends javax.swing.JFrame {
         }
 
     }
-
+    
+    /**
+     * Muestra un cuadro de diálogo preguntando si queremos abandonar o no la ventana de administrador.
+     */
     public void confirmarSalida() {
         Object[] options = {"Si","No"};
         
