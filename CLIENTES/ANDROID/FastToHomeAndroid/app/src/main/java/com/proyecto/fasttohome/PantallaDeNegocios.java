@@ -36,6 +36,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
 
     private RecyclerView recyclerViewNegocio;
     private RecyclerViewAdaptorNegocio adaptorNegocio;
+    private Usuario usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,7 +106,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
                         negocios.add(negocio);
                     }
 
-                    adaptorNegocio= new RecyclerViewAdaptorNegocio(negocios);
+                    adaptorNegocio= new RecyclerViewAdaptorNegocio(negocios,usuario);
                     recyclerViewNegocio.setAdapter(adaptorNegocio);
                 }
             } catch (JSONException | VolleyError e) {
