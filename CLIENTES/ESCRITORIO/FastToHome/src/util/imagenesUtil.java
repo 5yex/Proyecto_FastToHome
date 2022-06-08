@@ -62,7 +62,7 @@ public class imagenesUtil {
             label.setIcon(new ImageIcon(image.getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_SMOOTH)));
         } catch (Exception e) {
             label.setText("NO IMAGE");
-            System.out.println("no tienes icono");
+            //System.out.println("no tienes icono");
         }
     }
     
@@ -71,7 +71,7 @@ public class imagenesUtil {
         try {
             boton.setIcon(new ImageIcon(image.getImage().getScaledInstance(boton.getPreferredSize().width-2, boton.getPreferredSize().width-2, Image.SCALE_SMOOTH)));
         } catch (Exception e) {
-            System.out.println("no tienes icono");
+            //System.out.println("no tienes icono");
         }
     }
     
