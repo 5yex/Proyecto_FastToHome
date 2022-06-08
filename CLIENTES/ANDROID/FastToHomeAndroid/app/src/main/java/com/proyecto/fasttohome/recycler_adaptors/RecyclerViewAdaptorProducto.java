@@ -35,7 +35,15 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext().inflate(R.layout.item_producto,parent,false));
-        return null;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_producto,parent,false);
+        ViewHolder viewHolder = new ViewHolder(view);
+        return viewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.nombre.setText(listaProductos.get(position).getNombre());
+        holder.descripcion.setText(listaProductos.get(position).getDescripcion());
+        holder.precio.setText("Precio: " + listaProductos.get(position).getPrecio() + " €");
     }
 }
