@@ -339,7 +339,7 @@ public class Usuario {
     /**
      * Devuelve la contraseña del usuario
      * 
-     * @return 
+     * @return Contraseña del usuario
      */
     public String getPassword() {
         return password;
