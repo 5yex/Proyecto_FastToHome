@@ -14,6 +14,7 @@ import modelo.Direccion;
  * 
  * @author Jose Miguel Calderón, Jesús Rueda
  * @version 1.0
+ * @since 1.0
  */
 public class DialogoDireccion extends javax.swing.JDialog {
 
