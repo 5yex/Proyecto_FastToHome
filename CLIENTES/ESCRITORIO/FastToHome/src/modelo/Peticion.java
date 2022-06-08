@@ -79,7 +79,12 @@ public class Peticion {
     public void setDatos(String datos) {
         this.datos = datos;
     }
-
+    
+    /**
+     * Devuelve una cadena con los atributos del objeto de tipo Peticion
+     * 
+     * @return Una cadena con los atributos del objeto de tipo Peticion
+     */
     @Override
     public String toString() {
         return "Peticion{" + "comando=" + comando + ", datos=" + datos + '}';
