@@ -32,7 +32,7 @@ public class Peticion {
     /**
      * Construye una Peticion con los parámetros indicados
      * 
-     * @param comando 
+     * @param comando Acción a realizar por parte del servicio web
      * @param datos Datos necesarios para hacer la acción en el servicio web
      */
     public Peticion(String comando, String datos) {
