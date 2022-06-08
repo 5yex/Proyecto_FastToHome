@@ -44,11 +44,11 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.nombre.setText(listaProductos.get(position).getNombre());
         holder.descripcion.setText(listaProductos.get(position).getDescripcion());
-        holder.precio.setText("Precio: " + listaProductos.get(position).getPrecio() + " €");
+        holder.precio.setText("Precio: " + listaProductos.get(position).getPrecio() + "€");
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return listaProductos.size();
     }
 }
