@@ -75,7 +75,13 @@ public class Categoria {
     public void setId(int id) {
         this.id = id;
     }
-
+    
+    /**
+     * Devuelve el nombre de la categoria
+     * 
+     * @return nombre de la categoria
+     * @since 1.0
+     */
     public String getNombre() {
         return nombre;
     }
