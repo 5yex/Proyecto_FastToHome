@@ -16,7 +16,7 @@ import com.google.gson.Gson;
 public class Peticion {
     
     /**
-     * Acción a realizar por parte del servicio web
+     * Cadena con la acción a realizar por parte del servicio web
      * 
      * @since 1.0
      */
