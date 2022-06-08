@@ -33,6 +33,7 @@ public class Peticion {
      * Devuelve el comando con la acción a realizar por parte del servicio web
      * 
      * @return Comando con la acción a realizar por parte del servicio web
+     * @since 1.0
      */
     public String getComando() {
         return comando;
