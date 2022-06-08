@@ -97,7 +97,20 @@ public class Usuario {
     public Usuario(int id) {
         this.id = id;
     }
-
+    
+    /**
+     * Construye un Usuario con los parametros indicados
+     * 
+     * @param id
+     * @param nombre
+     * @param apellidos
+     * @param dni
+     * @param email
+     * @param tlf
+     * @param rol
+     * @param id_direccion
+     * @param password 
+     */
     public Usuario(int id, String nombre, String apellidos, String dni, String email, String tlf, String rol, int id_direccion, String password) {
         this.id = id;
         this.nombre = nombre;
