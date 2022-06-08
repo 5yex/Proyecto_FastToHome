@@ -122,7 +122,19 @@ public class Usuario {
         this.id_direccion = id_direccion;
         this.password = password;
     }
-
+    
+    /**
+     * Construye un Usuario con los parametros indicados
+     * 
+     * @param nombre Nombre del usuario
+     * @param apellidos Apellidos del usuario
+     * @param dni DNI del usuario
+     * @param email Correo del usuario
+     * @param tlf Número de telefono del usuario
+     * @param rol Rol que sigue el usuario
+     * @param id_direccion Número que identifica la dirección del usuario
+     * @param password Contraseña del usuario
+     */
     public Usuario(String nombre, String apellidos, String dni, String email, String tlf, String rol, int id_direccion, String password) {
         this.nombre = nombre;
         this.apellidos = apellidos;
