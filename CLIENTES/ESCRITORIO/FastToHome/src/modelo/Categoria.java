@@ -28,7 +28,10 @@ public class Categoria {
      * @since 1.0
      */
     private String nombre;
-
+    
+    /**
+     * Construye una Categoria con atributos a <code>null</code>
+     */
     public Categoria() {
     }
 
