@@ -58,7 +58,7 @@ public class Categoria {
     }
     
     /**
-     * Devuelve el número que identidica a la categoria en la base de datos
+     * Devuelve el número que identifica a la categoria en la base de datos
      * 
      * @return número que identidica a la categoria en la base de datos
      * @since 1.0
@@ -66,7 +66,12 @@ public class Categoria {
     public int getId() {
         return id;
     }
-
+    
+    /**
+     * Establece el número que identifica a la categoria en la base de datos
+     * 
+     * @param id Número que identifica a la categoria en la base de datos
+     */
     public void setId(int id) {
         this.id = id;
     }
