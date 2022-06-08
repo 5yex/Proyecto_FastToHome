@@ -21,6 +21,11 @@ public class Peticion {
      * @since 1.0
      */
     String comando;
+    
+    /**
+     * 
+     * @since 1.0
+     */
     String datos;
 
     public String getComando() {
