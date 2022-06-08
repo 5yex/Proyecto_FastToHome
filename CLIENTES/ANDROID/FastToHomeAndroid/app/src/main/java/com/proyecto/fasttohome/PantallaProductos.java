@@ -28,8 +28,8 @@ public class PantallaProductos extends AppCompatActivity {
 
     }
 
-    public List<Producto> obtenerProductosNegocio(){
+    public void obtenerProductosNegocio(){
         List<Producto> productos = new ArrayList<>();
-        
+
     }
 }
