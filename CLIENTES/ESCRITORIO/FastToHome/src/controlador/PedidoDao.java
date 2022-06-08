@@ -51,7 +51,7 @@ public class PedidoDao {
 
             }
         } else {
-            System.out.println("no hay ningun pedido");
+            //System.out.println("no hay ningun pedido");
         }
         return listaPedidosPagados;
     }
