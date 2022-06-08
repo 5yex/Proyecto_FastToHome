@@ -23,6 +23,7 @@ public class Peticion {
     String comando;
     
     /**
+     * Cadena con los datos necesarios para hacer la acción en el servicio web
      * 
      * @since 1.0
      */
