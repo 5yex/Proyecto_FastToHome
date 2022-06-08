@@ -340,11 +340,18 @@ public class Usuario {
      * Devuelve la contraseña del usuario
      * 
      * @return Contraseña del usuario
+     * @since 1.0
      */
     public String getPassword() {
         return password;
     }
-
+    
+    /**
+     * Establece la contraseña del usuario
+     * 
+     * @param password Contraseña del usuario
+     * 
+     */
     public void setPassword(String password) {
         this.password = password;
     }
