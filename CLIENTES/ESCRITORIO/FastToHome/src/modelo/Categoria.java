@@ -95,6 +95,11 @@ public class Categoria {
         this.nombre = nombre;
     }
     
+    /**
+     * Devuelve el objeto de tipo Categoria en forma de JSon
+     * 
+     * @return el objeto de tipo Categoria en forma de JSon
+     */
     public String getJSON(){
        return new Gson().toJson(this);
     }
