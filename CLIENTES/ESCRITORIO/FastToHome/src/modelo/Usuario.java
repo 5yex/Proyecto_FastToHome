@@ -60,7 +60,7 @@ public class Usuario {
     private String tlf;
     
     /**
-     * Rol o 'papel' que sigue el usuario
+     * Rol establecido para el usuario
      * 
      * @since 1.0
      */
