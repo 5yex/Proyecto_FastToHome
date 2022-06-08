@@ -254,15 +254,33 @@ public class Usuario {
     public String getEmail() {
         return email;
     }
-
+    
+    /**
+     * Establece el nombre del usuario
+     * 
+     * @param email Nombre del usuario
+     * @since 1.0
+     */
     public void setEmail(String email) {
         this.email = email;
     }
-
+    
+    /**
+     * Devuelve el número de telefono del usuario
+     * 
+     * @return Número de telefono del usuario
+     * @since 1.0
+     */
     public String getTlf() {
         return tlf;
     }
-
+    
+    /**
+     * Estable el número de telefono del usuario
+     * 
+     * @param tlf Número de telefono del usuario
+     * @since 1.0
+     */
     public void setTlf(String tlf) {
         this.tlf = tlf;
     }
