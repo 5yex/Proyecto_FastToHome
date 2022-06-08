@@ -9,6 +9,9 @@ import android.os.Bundle;
 import com.proyecto.fasttohome.modelo.Producto;
 import com.proyecto.fasttohome.recycler_adaptors.RecyclerViewAdaptorProducto;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PantallaProductos extends AppCompatActivity {
 
     private RecyclerView recyclerViewProducto;
@@ -25,5 +28,8 @@ public class PantallaProductos extends AppCompatActivity {
 
     }
 
-    public List<Producto>
+    public List<Producto> obtenerProductosNegocio(){
+        List<Producto> productos = new ArrayList<>();
+        
+    }
 }
