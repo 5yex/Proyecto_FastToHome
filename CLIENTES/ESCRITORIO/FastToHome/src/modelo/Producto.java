@@ -8,7 +8,7 @@ import com.google.gson.Gson;
 
 /**
  *
- * @author jmcbg
+ * @author 
  */
 public class Producto {
 
