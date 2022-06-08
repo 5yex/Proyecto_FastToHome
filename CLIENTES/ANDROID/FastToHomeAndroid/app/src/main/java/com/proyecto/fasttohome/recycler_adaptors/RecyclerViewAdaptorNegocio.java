@@ -5,10 +5,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.proyecto.fasttohome.PantallaDeNegocios;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Negocio;
 
@@ -27,8 +29,8 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
             //categoria = (TextView) itemView.findViewById(R.id.tvCategoriaNegocio);
 
             pedir = (Button) itemView.findViewById(R.id.pedir);
-            pedir.setOnClickListener(new View.OnClickListener() {
-
+            pedir.setOnClickListener(view -> {
+                Toast.makeText(ViewHolder.this, "Boton Pulsadp: " + nombre.getText().toString(), Toast.LENGTH_LONG).show();
             });
 
         }
