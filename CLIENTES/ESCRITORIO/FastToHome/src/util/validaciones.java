@@ -50,8 +50,8 @@ public class validaciones implements Constantes {
             String[] arrayLetras = {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"};
 
             resto = parteNumerica % 23;
-            System.out.println(resto);
-            System.out.println(arrayLetras[resto]);
+            //System.out.println(resto);
+            //System.out.println(arrayLetras[resto]);
 
             return (parteLetra.compareTo(arrayLetras[resto]) == 0);
             } catch (StringIndexOutOfBoundsException e) {
