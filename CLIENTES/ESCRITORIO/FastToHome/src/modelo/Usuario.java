@@ -79,7 +79,11 @@ public class Usuario {
      * @since 1.0
      */
     private String password;
-
+    
+    /**
+     * Construye un Usuario con parametos a <code>null</code>
+     * 
+     */
     public Usuario() {
     }
 
