@@ -360,7 +360,12 @@ public class Usuario {
     public void setPassword(String password) {
         this.password = password;
     }
-
+    
+    /**
+     * Devuelve el objeto de tipo Usuario en forma de JSon
+     * 
+     * @return el objeto de tipo Categoria en forma de JSon
+     */
     public String getJSON() {
         return new Gson().toJson(this);
     }
