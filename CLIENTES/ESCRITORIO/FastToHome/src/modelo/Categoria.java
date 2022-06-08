@@ -40,8 +40,8 @@ public class Categoria {
     /**
      * Construye una Categoria con los parámetros indicados
      * 
-     * @param id numero que identifica a la categoria
-     * @param nombre 
+     * @param id Número que identifica a la categoria
+     * @param nombre Nombre de la categoria 
      */
     public Categoria(int id, String nombre) {
         this.id = id;
