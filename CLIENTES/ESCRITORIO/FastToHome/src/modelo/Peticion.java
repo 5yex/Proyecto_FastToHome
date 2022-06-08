@@ -8,7 +8,9 @@ import com.google.gson.Gson;
 
 /**
  *
- * @author jmcbg
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
+ * @since 1.0
  */
 public class Peticion {
     String comando;
