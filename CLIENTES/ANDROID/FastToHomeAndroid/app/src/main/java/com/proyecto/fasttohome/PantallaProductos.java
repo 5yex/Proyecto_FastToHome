@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
 import com.proyecto.fasttohome.modelo.Producto;
 import com.proyecto.fasttohome.recycler_adaptors.RecyclerViewAdaptorProducto;
 
@@ -30,6 +32,9 @@ public class PantallaProductos extends AppCompatActivity {
 
     public void obtenerProductosNegocio(){
         List<Producto> productos = new ArrayList<>();
+
+        String url = getString(R.string.apiUrl);
+        RequestQueue queue = Volley.newRequestQueue(PantallaProductos.this);
 
     }
 }
