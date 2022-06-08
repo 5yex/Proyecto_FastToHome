@@ -67,7 +67,7 @@ public class UsuarioDao {
         user.setRol(usuarioJson.get("Rol").getAsString());
         user.setTlf(usuarioJson.get("tlf").getAsString());
 
-        System.out.println("controlador.UsuarioDao.obtenerDatosUsuario()   " + user.toString());
+        //System.out.println("controlador.UsuarioDao.obtenerDatosUsuario()   " + user.toString());
 
         return user;
     }
