@@ -16,9 +16,17 @@ import com.google.gson.Gson;
 public class Categoria {
     
     /**
+     * Numero identificador de la categorira en la base de datos
      * 
+     * @since 1.0
      */
     private int id;
+    
+    /**
+     * Nombre o título de la categoria
+     * 
+     * @since 1.0
+     */
     private String nombre;
 
     public Categoria() {
