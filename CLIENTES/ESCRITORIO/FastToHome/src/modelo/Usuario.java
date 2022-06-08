@@ -244,7 +244,12 @@ public class Usuario {
     public void setDni(String dni) {
         this.dni = dni;
     }
-
+    
+    /**
+     * Devuelve el correo del usuario
+     * 
+     * @return Correo del usuario
+     */
     public String getEmail() {
         return email;
     }
