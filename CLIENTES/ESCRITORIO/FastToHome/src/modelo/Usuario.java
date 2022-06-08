@@ -72,6 +72,12 @@ public class Usuario {
      * @since 1.0
      */
     private int id_direccion;
+    
+    /**
+     * Contraseña del usuario
+     * 
+     * @since 1.0
+     */
     private String password;
 
     public Usuario() {
