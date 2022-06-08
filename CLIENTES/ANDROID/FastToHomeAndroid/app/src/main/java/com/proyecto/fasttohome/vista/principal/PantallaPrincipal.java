@@ -87,6 +87,7 @@ public class PantallaPrincipal extends AppCompatActivity {
 
     public void pasarPantallaNegocios(View view){
         Intent i = new Intent(this, PantallaDeNegocios.class );
+        i.putExtra("user",user);
         startActivity(i);
     }
 }
