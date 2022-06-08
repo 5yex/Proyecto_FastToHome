@@ -56,7 +56,13 @@ public class Categoria {
     public Categoria(String nombre) {
         this.nombre = nombre;
     }
-
+    
+    /**
+     * Devuelve el número que identidica a la categoria en la base de datos
+     * 
+     * @return número que identidica a la categoria en la base de datos
+     * @since 1.0
+     */
     public int getId() {
         return id;
     }
