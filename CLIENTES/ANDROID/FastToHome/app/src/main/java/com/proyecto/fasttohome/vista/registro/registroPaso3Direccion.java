@@ -63,12 +63,8 @@ public class registroPaso3Direccion extends AppCompatActivity {
      */
 
     public void accionRegistro(View view){
-
-<<<<<<< HEAD
-
         System.err.println(user.getJSON()+direccion.getJSON());
         registerDirecion();
-=======
         try {
             String numero_casa = numero.getText().toString();
             String cod_postal = codigoPostal.getText().toString();
@@ -98,7 +94,6 @@ public class registroPaso3Direccion extends AppCompatActivity {
             Toast notificacion = Toast.makeText(this,"El numero de la calle y el codigo postal deben ser numeros enteros.",Toast.LENGTH_SHORT);
             notificacion.show();
         }
->>>>>>> 9deaad0655521625e1afb5d3ec0372cf962e494a
     }
 
     private void registerCompleter(int idDireccion) {
