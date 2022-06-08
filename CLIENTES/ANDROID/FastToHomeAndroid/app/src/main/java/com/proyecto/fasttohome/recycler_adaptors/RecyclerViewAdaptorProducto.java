@@ -1,6 +1,8 @@
 package com.proyecto.fasttohome.recycler_adaptors;
 
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,5 +28,14 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
 
     public List<Producto> listaProductos;
 
+    public RecyclerViewAdaptorProducto(List<Producto> listaProductos) {
+        this.listaProductos = listaProductos;
+    }
 
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext().inflate(R.layout.item_producto,parent,false));
+        return null;
+    }
 }
