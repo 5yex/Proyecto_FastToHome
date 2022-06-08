@@ -51,6 +51,12 @@ public class Usuario {
      * @since 1.0
      */
     private String email;
+    
+    /**
+     * Número de teléfono del usuario
+     * 
+     * @since 1.0
+     */
     private String tlf;
     private String rol;
     private int id_direccion;
