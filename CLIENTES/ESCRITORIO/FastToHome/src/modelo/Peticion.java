@@ -14,6 +14,12 @@ import com.google.gson.Gson;
  * @since 1.0
  */
 public class Peticion {
+    
+    /**
+     * Acción a realizar por parte del servicio web
+     * 
+     * @since 1.0
+     */
     String comando;
     String datos;
 
