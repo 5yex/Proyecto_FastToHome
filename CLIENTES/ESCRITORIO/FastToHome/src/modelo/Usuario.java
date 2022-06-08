@@ -58,6 +58,10 @@ public class Usuario {
      * @since 1.0
      */
     private String tlf;
+    
+    /**
+     * Rol o 'papel' que sigue el usuario  
+     */
     private String rol;
     private int id_direccion;
     private String password;
