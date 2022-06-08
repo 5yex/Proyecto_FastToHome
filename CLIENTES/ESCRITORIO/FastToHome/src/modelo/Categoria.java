@@ -31,6 +31,8 @@ public class Categoria {
     
     /**
      * Construye una Categoria con atributos a <code>null</code>
+     * 
+     * @since 1.0
      */
     public Categoria() {
     }
