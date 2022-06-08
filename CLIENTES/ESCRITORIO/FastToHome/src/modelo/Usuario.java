@@ -107,7 +107,7 @@ public class Usuario {
      * @param dni DNI del usuario
      * @param email Correo del usuario
      * @param tlf Número de telefono del usuario
-     * @param rol Rol que sigue el usuario
+     * @param rol Rol establecido para un usuario
      * @param id_direccion Número que identifica la dirección del usuario
      * @param password Contraseña del usuario
      */
@@ -131,7 +131,7 @@ public class Usuario {
      * @param dni DNI del usuario
      * @param email Correo del usuario
      * @param tlf Número de telefono del usuario
-     * @param rol Rol que sigue el usuario
+     * @param rol Rol establecido para un usuario
      * @param id_direccion Número que identifica la dirección del usuario
      * @param password Contraseña del usuario
      */
