@@ -85,7 +85,12 @@ public class Categoria {
     public String getNombre() {
         return nombre;
     }
-
+    
+    /**
+     * Establece el nombre de la categoria
+     * 
+     * @param nombre Nombre de la categoria
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
