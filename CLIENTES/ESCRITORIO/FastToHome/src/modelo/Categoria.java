@@ -7,11 +7,17 @@ package modelo;
 import com.google.gson.Gson;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa una categoria de un negocio
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
+ * @since 1.0
  */
 public class Categoria {
     
+    /**
+     * 
+     */
     private int id;
     private String nombre;
 
