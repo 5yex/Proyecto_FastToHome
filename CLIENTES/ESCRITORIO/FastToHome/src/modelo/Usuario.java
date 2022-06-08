@@ -249,6 +249,7 @@ public class Usuario {
      * Devuelve el correo del usuario
      * 
      * @return Correo del usuario
+     * @since 1.0
      */
     public String getEmail() {
         return email;
