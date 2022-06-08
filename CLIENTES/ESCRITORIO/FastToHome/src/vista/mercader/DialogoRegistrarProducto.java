@@ -34,6 +34,7 @@ import static util.imagenesUtil.imagenB64Ajlabel;
  * 
  * @author Jose Miguel Calderón, Jesús Rueda
  * @version 1.0
+ * @since 1.0
  */
 public class DialogoRegistrarProducto extends javax.swing.JDialog {
 
