@@ -294,7 +294,13 @@ public class Usuario {
     public String getRol() {
         return rol;
     }
-
+    
+    /**
+     * Establece un nuevo rol para el usuario
+     * 
+     * @param rol Rol establecido para un usuario
+     * @since 1.0
+     */
     public void setRol(String rol) {
         this.rol = rol;
     }
