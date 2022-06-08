@@ -58,7 +58,13 @@ public class Peticion {
     public String getDatos() {
         return datos;
     }
-
+    
+    /**
+     * Establece los datos necesarios para hacer la acción en el servicio web
+     * 
+     * @param datos Los datos necesarios para hacer la acción en el servicio web
+     * @since 1.0
+     */
     public void setDatos(String datos) {
         this.datos = datos;
     }
