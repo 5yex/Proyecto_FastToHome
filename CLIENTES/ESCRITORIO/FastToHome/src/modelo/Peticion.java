@@ -84,6 +84,7 @@ public class Peticion {
      * Devuelve una cadena con los atributos del objeto de tipo Peticion
      * 
      * @return Una cadena con los atributos del objeto de tipo Peticion
+     * @since 1.0
      */
     @Override
     public String toString() {
