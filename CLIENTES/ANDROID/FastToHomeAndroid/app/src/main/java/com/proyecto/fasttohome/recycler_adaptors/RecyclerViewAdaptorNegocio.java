@@ -27,7 +27,9 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
             //categoria = (TextView) itemView.findViewById(R.id.tvCategoriaNegocio);
 
             pedir = (Button) itemView.findViewById(R.id.pedir);
-            pedir.setOnClickListener
+            pedir.setOnClickListener(new View.OnClickListener() {
+
+            });
 
         }
 
