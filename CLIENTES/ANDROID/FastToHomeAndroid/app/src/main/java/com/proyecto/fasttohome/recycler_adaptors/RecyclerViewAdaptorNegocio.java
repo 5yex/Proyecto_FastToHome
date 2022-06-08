@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.proyecto.fasttohome.PantallaDeNegocios;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Negocio;
+import com.proyecto.fasttohome.modelo.Usuario;
 
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
         private TextView nombre, descripcion;
+        private Usuario usuario;
         private Button pedir;
 
         public ViewHolder(@NonNull View itemView) {
@@ -37,9 +39,10 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
     }
 
     public List<Negocio> listaNegocios;
-
-    public RecyclerViewAdaptorNegocio(List<Negocio> listaNegocios) {
+    Usuario usuario;
+    public RecyclerViewAdaptorNegocio(List<Negocio> listaNegocios, Usuario usuario) {
         this.listaNegocios = listaNegocios;
+        this.usuario = usuario;
     }
 
     @NonNull
@@ -55,6 +58,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.nombre.setText(listaNegocios.get(position).getNombre());
         holder.descripcion.setText(listaNegocios.get(position).getDescripcion());
+        holder.
         //holder.categoria.setText(listaNegocios.get(position).getId_categoria());
     }
 
