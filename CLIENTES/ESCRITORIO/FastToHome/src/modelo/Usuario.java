@@ -101,12 +101,12 @@ public class Usuario {
     /**
      * Construye un Usuario con los parametros indicados
      * 
-     * @param id
-     * @param nombre
-     * @param apellidos
-     * @param dni
-     * @param email
-     * @param tlf
+     * @param id Número que identifica al usuario en la base de datos
+     * @param nombre Nombre del usuario
+     * @param apellidos Apellidos del usuario
+     * @param dni DNI del usuario
+     * @param email Correo del usuario
+     * @param tlf Número de telefono del usuario
      * @param rol
      * @param id_direccion
      * @param password 
