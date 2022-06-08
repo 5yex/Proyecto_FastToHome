@@ -7,6 +7,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.modelo.Producto;
+
+import java.util.List;
 
 public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerViewAdaptorProducto.ViewHolder> {
 
@@ -21,5 +24,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         }
     }
 
-    public List<Prod>
+    public List<Producto> listaProductos;
+
+
 }
