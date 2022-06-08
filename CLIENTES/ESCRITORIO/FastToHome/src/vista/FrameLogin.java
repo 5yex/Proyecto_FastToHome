@@ -221,7 +221,7 @@ public class FrameLogin extends javax.swing.JFrame implements util.Constantes {
                 String passHash = user.getPassword();
                 passCorrecto = BCrypt.checkpw(tFieldPass, passHash);
                 if (passCorrecto) {
-                    System.out.println("vista.login.comprobarLogin()  -   LOGEADO");
+                    //System.out.println("vista.login.comprobarLogin()  -   LOGEADO");
                     user = UsuarioDao.obtenerDatosUsuario(user);
                     String rol = user.getRol();
                     switch (rol) {
