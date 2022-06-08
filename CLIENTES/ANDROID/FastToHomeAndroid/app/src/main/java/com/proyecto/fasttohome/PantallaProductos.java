@@ -1,6 +1,7 @@
 package com.proyecto.fasttohome;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -18,5 +19,8 @@ public class PantallaProductos extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_productos);
 
         recyclerViewProducto = (RecyclerView) findViewById(R.id.recyclerProductos);
+        recyclerViewProducto.setLayoutManager(new LinearLayoutManager(this));
+
+        
     }
 }
