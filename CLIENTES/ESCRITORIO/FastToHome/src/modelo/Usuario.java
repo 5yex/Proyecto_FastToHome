@@ -195,19 +195,42 @@ public class Usuario {
     public String getNombre() {
         return nombre;
     }
-
+    
+    /**
+     * Establece el nombre del usuario
+     * 
+     * @param nombre Nombre del usuario
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    
+    /**
+     * Devuelve el apellido del usuario
+     * 
+     * @return Apellido del usuario
+     * @since 1.0
+     */ 
     public String getApellidos() {
         return apellidos;
     }
 
+    /**
+     * Establece el apellido del usuario
+     * 
+     * @param apellidos Apellido del usuario
+     * @since 1.0
+     */
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
-
+    
+    /**
+     * Devuelve el DNI del usuario
+     * 
+     * @return DNI del usuario
+     * @since 1.0
+     */
     public String getDni() {
         return dni;
     }
