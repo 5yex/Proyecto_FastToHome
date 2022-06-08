@@ -108,7 +108,7 @@ public class Usuario {
      * @param email Correo del usuario
      * @param tlf Número de telefono del usuario
      * @param rol Rol que sigue el usuario
-     * @param id_direccion
+     * @param id_direccion Número que identifica la dirección del usuario
      * @param password 
      */
     public Usuario(int id, String nombre, String apellidos, String dni, String email, String tlf, String rol, int id_direccion, String password) {
