@@ -28,6 +28,7 @@ import vista.mercader.VentanaMercader;
  * 
  * @author Jose Miguel Calderón, Jesús Rueda
  * @version 1.0
+ * @since 1.0
  */
 public class registroNegocio extends javax.swing.JFrame {
 
