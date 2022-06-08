@@ -284,7 +284,13 @@ public class Usuario {
     public void setTlf(String tlf) {
         this.tlf = tlf;
     }
-
+    
+    /**
+     * Devuelve el rol establecido para un usuario
+     * 
+     * @return Rol establecido para un usuario
+     * @since 1.0
+     */
     public String getRol() {
         return rol;
     }
