@@ -30,7 +30,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
 
             pedir = (Button) itemView.findViewById(R.id.pedir);
             pedir.setOnClickListener(view -> {
-                Toast.makeText(ViewHolder.this, "Boton Pulsadp: " + nombre.getText().toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(null, ("Boton Pulsadp: " + nombre.getText().toString()), Toast.LENGTH_LONG).show();
             });
 
         }
