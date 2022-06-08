@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView18"
+            android:id="@+id/ppNombre"
             android:layout_width="357dp"
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
@@ -38,6 +38,19 @@
             android:text="Nombre"
             android:textColor="@color/textopanel"
             android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ppApellidos"
+            android:layout_width="357dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            android:text="Apellidos"
+            android:textColor="@color/textopanel"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

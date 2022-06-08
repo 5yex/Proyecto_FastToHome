@@ -69,6 +69,7 @@ public class registroPaso3Direccion extends AppCompatActivity {
         direccion.setCalle(calle.getText().toString());
         direccion.setOtros(otros.getText().toString());
 
+
         System.err.println(user.getJSON()+direccion.getJSON());
         registerDirecion();
     }

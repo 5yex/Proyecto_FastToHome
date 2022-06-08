@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -27,6 +29,7 @@ import java.util.Map;
 public class PantallaPrincipal extends AppCompatActivity {
 
     private Usuario user;
+    private TextView nombre,apellidos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +39,9 @@ public class PantallaPrincipal extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_principal);
 
         user = (Usuario) getIntent().getExtras().getSerializable("user");
+        nombre = (TextView) findViewById(R.id.ppNombre);
+        apellidos = (TextView) findViewById(R.id.ppApellidos);
         obtenerDatosUsuario();
-        System.out.println("User: " + user.toString());
     }
 
     public void obtenerDatosUsuario() {
@@ -53,14 +57,16 @@ public class PantallaPrincipal extends AppCompatActivity {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
                     user.setPassword(datos.getString("password"));
                     user.setId(datos.getInt("id"));
-                    user.setEmail(datos.getString("email"));
+                    user.setEmail(datos.getString("Email"));
                     user.setNombre(datos.getString("Nombre"));
                     user.setApellidos(datos.getString("apellidos"));
                     user.setDni(datos.getString("Dni"));
                     user.setId_direccion(datos.getInt("direccion_id"));
                     user.setRol(datos.getString("Rol"));
                     user.setTlf(datos.getString("tlf"));
+                    recargarVista();
                 }
+
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaPrincipal.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 finish();
@@ -74,6 +80,11 @@ public class PantallaPrincipal extends AppCompatActivity {
             }
         };
         queue.add(request);
+    }
+
+    private void recargarVista() {
+        nombre.setText(user.getNombre());
+        apellidos.setText(user.getApellidos());
     }
 
 
