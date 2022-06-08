@@ -374,7 +374,7 @@ public class Usuario {
     /**
      * Devuelve un array de objetos con la información para rellenar la fila de una tabla con información del usuario
      * 
-     * @return 
+     * @return Array de objetos con la información para rellenar la fila de una tabla con información del usuario
      */
     public Object[] getRow() {
         return new Object[]{id, dni, email, nombre, tlf};
