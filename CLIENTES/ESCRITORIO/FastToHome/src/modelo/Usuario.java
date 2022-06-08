@@ -145,11 +145,22 @@ public class Usuario {
         this.id_direccion = id_direccion;
         this.password = password;
     }
-
+    
+    /**
+     * Construye un Usuario con los parametros indicados
+     * 
+     * @param email Correo del usuario
+     */
     public Usuario(String email) {
         this.email = email;
     }
 
+    /**
+     * Construye un Usuario con los parametros indicados
+     * 
+     * @param email Correo del usuario
+     * @param password Contraseña del usuario
+     */
     public Usuario(String email, String password) {
         this.email = email;
         this.password = password;
