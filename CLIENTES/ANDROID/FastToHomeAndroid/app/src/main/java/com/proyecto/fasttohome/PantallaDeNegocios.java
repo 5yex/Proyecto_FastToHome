@@ -55,40 +55,6 @@ public class PantallaDeNegocios extends AppCompatActivity {
 
         String url = getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(PantallaDeNegocios.this);
-        /*JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
-                (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        try {
-
-                            JSONArray arrayDeJson = response.getJSONArray("datos");
-
-                            for (int i = 0; i < arrayDeJson.length(); i++){
-                                JSONObject objetoNegocioJSon = arrayDeJson.getJSONObject(i);
-                                Negocio negocio = new Negocio(Integer.parseInt(objetoNegocioJSon.get("id").toString()), objetoNegocioJSon.get("Nombre").toString(),objetoNegocioJSon.get("Descripcion").toString());
-                                negocios.add(negocio);
-                                System.out.println(negocio.toString());
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        // TODO: Handle error
-
-                    }
-                }){
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-                params.put("DATA", new Peticion("obtener_todos_negocios",null).getJSON());
-                return params;
-            }
-        };
-        queue.add(jsonObjectRequest);*/
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
             System.out.println(response);
             try {
