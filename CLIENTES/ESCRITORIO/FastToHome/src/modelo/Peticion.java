@@ -7,7 +7,8 @@ package modelo;
 import com.google.gson.Gson;
 
 /**
- *
+ * Clase que representa una petición que se realiza al servicio web
+ * 
  * @author Jose Miguel Calderón, Jesús Rueda
  * @version 1.0
  * @since 1.0
