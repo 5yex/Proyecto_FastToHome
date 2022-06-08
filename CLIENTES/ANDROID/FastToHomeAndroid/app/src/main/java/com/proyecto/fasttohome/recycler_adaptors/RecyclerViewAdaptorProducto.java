@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerViewAdaptorProducto.ViewHolder2> {
 
-    public static ViewHolder2 extends RecyclerView.ViewHolder{
+    public static ViewHolder2 extends RecyclerView.ViewHolder2{
         private TextView nombre, descripcion, precio;
 
-        public ViewHolder(View itemView){
+        public ViewHolder2(View itemView){
 
         }
     }
