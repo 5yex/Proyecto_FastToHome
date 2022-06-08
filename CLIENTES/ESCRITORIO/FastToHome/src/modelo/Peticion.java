@@ -91,6 +91,12 @@ public class Peticion {
         return "Peticion{" + "comando=" + comando + ", datos=" + datos + '}';
     }
     
+    /**
+     * Devuelve el objeto de tipo Peticion en forma de JSon
+     * 
+     * @return el objeto de tipo Peticion en forma de JSon
+     * @since 1.0
+     */
     public String getJSON(){
        return new Gson().toJson(this);
     }
