@@ -47,7 +47,12 @@ public class Categoria {
         this.id = id;
         this.nombre = nombre;
     }
-
+    
+    /**
+     * Construye una Categoria con los parámetros indicados
+     * 
+     * @param nombre Nombre de la categoria
+     */
     public Categoria(String nombre) {
         this.nombre = nombre;
     }
