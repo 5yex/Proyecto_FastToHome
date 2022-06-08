@@ -164,9 +164,7 @@ public class PanelPedido extends javax.swing.JPanel {
             pedido = PedidoDao.obtenerPedido(pedido);
             mostrarDatos();
             botonPedidos.doClick();
-        }/*else{
-            System.out.println("O SE PUEDE VISUALIZAR EL NUEVO ESTADO");
-        }*/
+        }
     }//GEN-LAST:event_pasarEstadoActionPerformed
 
 
