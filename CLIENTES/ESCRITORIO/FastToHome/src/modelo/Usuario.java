@@ -185,7 +185,12 @@ public class Usuario {
     public void setId(int id) {
         this.id = id;
     }
-
+    
+    /**
+     * Devuelve el nombre del usuario
+     * 
+     * @return Nombre del usuario
+     */
     public String getNombre() {
         return nombre;
     }
