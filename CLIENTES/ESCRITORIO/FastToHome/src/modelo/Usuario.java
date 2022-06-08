@@ -109,7 +109,7 @@ public class Usuario {
      * @param tlf Número de telefono del usuario
      * @param rol Rol que sigue el usuario
      * @param id_direccion Número que identifica la dirección del usuario
-     * @param password 
+     * @param password Contraseña del usuario
      */
     public Usuario(int id, String nombre, String apellidos, String dni, String email, String tlf, String rol, int id_direccion, String password) {
         this.id = id;
