@@ -33,8 +33,5 @@ public class PantallaProductos extends AppCompatActivity {
     public void obtenerProductosNegocio(){
         List<Producto> productos = new ArrayList<>();
 
-        String url = getString(R.string.apiUrl);
-        RequestQueue queue = Volley.newRequestQueue(PantallaProductos.this);
-
     }
 }
