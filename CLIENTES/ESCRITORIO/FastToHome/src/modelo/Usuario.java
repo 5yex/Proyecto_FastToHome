@@ -37,6 +37,12 @@ public class Usuario {
      * @since 1.0
      */
     private String apellidos;
+    
+    /**
+     * DNI del usuario
+     * 
+     * @since 1.0
+     */
     private String dni;
     private String email;
     private String tlf;
