@@ -19,7 +19,5 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
             descripcion = (TextView) itemView.findViewById(R.id.tvDescripcionProducto);
             precio = (TextView) itemView.findViewById(R.id.tvPrecioProducto);
         }
-
-        
     }
 }
