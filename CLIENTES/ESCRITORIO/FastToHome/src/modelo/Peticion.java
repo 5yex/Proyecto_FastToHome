@@ -29,6 +29,12 @@ public class Peticion {
      */
     String datos;
     
+    /**
+     * Construye una Peticion con los parámetros indicados
+     * 
+     * @param comando 
+     * @param datos Datos necesarios para hacer la acción en el servicio web
+     */
     public Peticion(String comando, String datos) {
         this.comando = comando;
         this.datos = datos;
