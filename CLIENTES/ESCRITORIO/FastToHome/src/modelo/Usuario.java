@@ -315,7 +315,13 @@ public class Usuario {
     public String toString() {
         return "Usuario{" + "id=" + id + ", nombre=" + nombre + ", dni=" + dni + ", email=" + email + ", tlf=" + tlf + ", rol=" + rol + ", id_direccion=" + id_direccion + ", password=" + password + '}';
     }
-
+    
+    /**
+     * Devuelve el número que identifica la direccion del usuario en la base de datos
+     * 
+     * @return Número que identifica la direccion del usuario en la base de datos
+     * @since 1.0
+     */
     public int getId_direccion() {
         return id_direccion;
     }
