@@ -29,6 +29,11 @@ public class Peticion {
      */
     String datos;
     
+    public Peticion(String comando, String datos) {
+        this.comando = comando;
+        this.datos = datos;
+    }
+    
     /**
      * Devuelve el comando con la acción a realizar por parte del servicio web
      * 
@@ -66,11 +71,6 @@ public class Peticion {
      * @since 1.0
      */
     public void setDatos(String datos) {
-        this.datos = datos;
-    }
-
-    public Peticion(String comando, String datos) {
-        this.comando = comando;
         this.datos = datos;
     }
 
