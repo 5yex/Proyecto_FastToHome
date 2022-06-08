@@ -306,9 +306,9 @@ public class Usuario {
     }
 
     /**
-     * Devuelve una cadena con los atributos del objetod de tipo Usuario
+     * Devuelve una cadena con los atributos del objeto de tipo Usuario
      *
-     * @return Cadena con los atributos del objetod de tipo Usuario
+     * @return Cadena con los atributos del objeto de tipo Usuario
      * @since 1.0
      */
     @Override
