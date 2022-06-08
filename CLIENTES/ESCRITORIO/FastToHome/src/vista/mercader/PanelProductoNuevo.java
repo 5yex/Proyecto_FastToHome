@@ -14,6 +14,7 @@ import vista.mercader.DialogoRegistrarProducto;
  * 
  * @author Jose Miguel Calderón, Jesús Rueda
  * @version 1.0
+ * @since 1.0
  */
 public class PanelProductoNuevo extends javax.swing.JPanel {
     JButton actualizar;
