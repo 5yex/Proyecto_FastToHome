@@ -9,8 +9,11 @@ import java.text.SimpleDateFormat;
 import java.util.Vector;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa un usuario de la aplicación
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
+ * @since 1.0
  */
 public class Usuario {
 
