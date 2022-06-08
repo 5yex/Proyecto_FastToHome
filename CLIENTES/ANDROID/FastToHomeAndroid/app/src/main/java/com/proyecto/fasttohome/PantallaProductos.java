@@ -32,6 +32,5 @@ public class PantallaProductos extends AppCompatActivity {
 
     public void obtenerProductosNegocio(){
         List<Producto> productos = new ArrayList<>();
-
     }
 }
