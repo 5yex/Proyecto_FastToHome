@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "C:\\Users\\jmcbg\\.gradle\\daemon\\7.3.3\\com.proyecto.fasttohome.app-mergeDebugResources-39:\\layout\\activity_pantalla_login.xml",
+        "source": "C:\\Users\\jmcbg\\.gradle\\daemon\\7.3.3\\com.proyecto.fasttohome.app-main-42:\\layout\\activity_pantalla_login.xml"
+    },
+    {
+        "merged": "com.proyecto.fasttohome.app-mergeDebugResources-39:/layout/activity_pantalla_principal.xml",
+        "source": "com.proyecto.fasttohome.app-main-42:/layout/activity_pantalla_principal.xml"
+    },
+    {
+        "merged": "C:\\Users\\jmcbg\\.gradle\\daemon\\7.3.3\\com.proyecto.fasttohome.app-mergeDebugResources-39:\\layout\\fragment_incio.xml",
+        "source": "C:\\Users\\jmcbg\\.gradle\\daemon\\7.3.3\\com.proyecto.fasttohome.app-main-42:\\layout\\fragment_incio.xml"
+    },
+    {
+        "merged": "C:\\Users\\jmcbg\\.gradle\\daemon\\7.3.3\\com.proyecto.fasttohome.app-mergeDebugResources-39:\\layout\\activity_registro_paso_password.xml",
+        "source": "C:\\Users\\jmcbg\\.gradle\\daemon\\7.3.3\\com.proyecto.fasttohome.app-main-42:\\layout\\activity_registro_paso_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\jmcbg\\.gradle\\daemon\\7.3.3\\com.proyecto.fasttohome.app-mergeDebugResources-39:\\layout\\activity_registro_paso_direccion_final.xml",
+        "source": "C:\\Users\\jmcbg\\.gradle\\daemon\\7.3.3\\com.proyecto.fasttohome.app-main-42:\\layout\\activity_registro_paso_direccion_final.xml"
+    },
+    {
+        "merged": "C:\\Users\\jmcbg\\.gradle\\daemon\\7.3.3\\com.proyecto.fasttohome.app-mergeDebugResources-39:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\jmcbg\\.gradle\\daemon\\7.3.3\\com.proyecto.fasttohome.app-main-42:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\jmcbg\\.gradle\\daemon\\7.3.3\\com.proyecto.fasttohome.app-mergeDebugResources-39:\\layout\\activity_registro_paso_datos_usuario.xml",
+        "source": "C:\\Users\\jmcbg\\.gradle\\daemon\\7.3.3\\com.proyecto.fasttohome.app-main-42:\\layout\\activity_registro_paso_datos_usuario.xml"
+    },
+    {
+        "merged": "C:\\Users\\jmcbg\\.gradle\\daemon\\7.3.3\\com.proyecto.fasttohome.app-mergeDebugResources-39:\\layout\\activity_pantalla_principal.xml",
+        "source": "C:\\Users\\jmcbg\\.gradle\\daemon\\7.3.3\\com.proyecto.fasttohome.app-main-42:\\layout\\activity_pantalla_principal.xml"
+    },
+    {
+        "merged": "C:\\Users\\jmcbg\\.gradle\\daemon\\7.3.3\\com.proyecto.fasttohome.app-mergeDebugResources-39:\\layout\\fragment_pedidos.xml",
+        "source": "C:\\Users\\jmcbg\\.gradle\\daemon\\7.3.3\\com.proyecto.fasttohome.app-main-42:\\layout\\fragment_pedidos.xml"
+    }
+]
