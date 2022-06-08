@@ -335,7 +335,12 @@ public class Usuario {
     public void setId_direccion(int id_direccion) {
         this.id_direccion = id_direccion;
     }
-
+    
+    /**
+     * Devuelve la contraseña del usuario
+     * 
+     * @return 
+     */
     public String getPassword() {
         return password;
     }
