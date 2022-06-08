@@ -169,7 +169,8 @@ public class Usuario {
     /**
      * Devuelve el número que identifica al usuario en la base de datos
      * 
-     * @return 
+     * @return el número que identifica al usuario en la base de datos
+     * @since 1.0
      */
     public int getId() {
         return id;
