@@ -21,5 +21,5 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         }
     }
 
-    public List<>
+    public List<Prod>
 }
