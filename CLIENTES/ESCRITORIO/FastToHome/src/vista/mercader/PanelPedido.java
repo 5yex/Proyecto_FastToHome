@@ -19,6 +19,7 @@ import modelo.Producto;
  * 
  * @author Jose Miguel Calderón, Jesus Rueda
  * @versio 1.0
+ * @since 1.0
  */
 public class PanelPedido extends javax.swing.JPanel {
     private Pedido pedido;
