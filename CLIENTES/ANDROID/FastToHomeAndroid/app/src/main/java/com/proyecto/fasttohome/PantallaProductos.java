@@ -16,5 +16,7 @@ public class PantallaProductos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_productos);
+
+        recyclerViewProducto = (RecyclerView) findViewById(R.id.recyclerProductos);
     }
 }
