@@ -43,6 +43,7 @@ public class Peticion {
      * Establece el comando con la acción a realizar por parte del servicio web
      * 
      * @param comando Comando con la acción a realizar por parte del servicio web
+     * @since 1.0
      */
     public void setComando(String comando) {
         this.comando = comando;
