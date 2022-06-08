@@ -370,7 +370,12 @@ public class Usuario {
     public String getJSON() {
         return new Gson().toJson(this);
     }
-
+    
+    /**
+     * Devuelve un array de objetos con la información para rellenar la fila de una tabla con información del usuario
+     * 
+     * @return 
+     */
     public Object[] getRow() {
         return new Object[]{id, dni, email, nombre, tlf};
 
