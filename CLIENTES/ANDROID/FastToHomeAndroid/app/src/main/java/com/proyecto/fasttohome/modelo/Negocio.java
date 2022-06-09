@@ -6,11 +6,13 @@ package com.proyecto.fasttohome.modelo;
 
 import com.google.gson.Gson;
 
+import java.io.Serializable;
+
 /**
  *
  * @author jmcbg
  */
-public class Negocio {
+public class Negocio implements Serializable {
     private int id_negocio;
     private int id_direccion;
     private int id_categoria;
