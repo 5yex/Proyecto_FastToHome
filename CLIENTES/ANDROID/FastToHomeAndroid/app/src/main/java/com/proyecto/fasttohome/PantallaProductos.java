@@ -38,6 +38,8 @@ public class PantallaProductos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_productos);
+        usuario = (Usuario) getIntent().getExtras().getSerializable("user");
+        negocio = (Negocio) getIntent().getExtras().getSerializable("negocio");
 
         recyclerViewProducto = (RecyclerView) findViewById(R.id.recyclerProductos);
         recyclerViewProducto.setLayoutManager(new LinearLayoutManager(this));
