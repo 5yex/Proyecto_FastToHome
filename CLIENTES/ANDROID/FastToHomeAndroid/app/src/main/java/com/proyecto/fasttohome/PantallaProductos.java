@@ -34,6 +34,6 @@ public class PantallaProductos extends AppCompatActivity {
 
         List<Producto> productos = new ArrayList<>();
 
-
+        String url = "http://10.0"
     }
 }
