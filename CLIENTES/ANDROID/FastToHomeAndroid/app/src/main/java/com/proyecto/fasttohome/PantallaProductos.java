@@ -79,7 +79,7 @@ public class PantallaProductos extends AppCompatActivity {
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaProductos.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                //finish();
+                finish();
             }
         }, this::onErrorResponse) {
             @Override

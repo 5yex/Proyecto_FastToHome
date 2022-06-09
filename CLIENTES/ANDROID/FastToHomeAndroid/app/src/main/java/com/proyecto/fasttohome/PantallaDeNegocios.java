@@ -78,7 +78,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaDeNegocios.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                //finish();
+                finish();
             }
         }, this::onErrorResponse) {
             @Override
