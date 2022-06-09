@@ -5,6 +5,8 @@
 package com.proyecto.fasttohome.modelo;
 
 import com.google.gson.Gson;
+
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -12,7 +14,7 @@ import java.util.Date;
  * @author jmcbg
  */
 
-public class Pedido {
+public class Pedido implements Serializable {
     private int id_pedido;
     private int id_usuario;
     private int id_negocio;
