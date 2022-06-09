@@ -71,6 +71,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
         holder.nombre.setText(listaNegocios.get(position).getNombre());
         holder.descripcion.setText(listaNegocios.get(position).getDescripcion());
         holder.usuario = usuario;
+        holder.negocio = new Negocio(listaNegocios.get(position).getId_negocio());
         //holder.categoria.setText(listaNegocios.get(position).getId_categoria());
     }
 
