@@ -1,5 +1,7 @@
 package com.proyecto.fasttohome.recycler_adaptors;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.proyecto.fasttohome.PantallaDeNegocios;
+import com.proyecto.fasttohome.PantallaProductos;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Usuario;
@@ -22,7 +25,9 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
     public static class ViewHolder extends RecyclerView.ViewHolder{
         private TextView nombre, descripcion;
         private Usuario usuario;
+        private Negocio negocio;
         private Button pedir;
+        private Context contexto;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -31,8 +36,15 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
             //categoria = (TextView) itemView.findViewById(R.id.tvCategoriaNegocio);
 
             pedir = (Button) itemView.findViewById(R.id.pedir);
+            contexto = itemView.getContext();
             pedir.setOnClickListener(view -> {
-                System.out.println("Boton Pulsado por usuario: "+usuario.getNombre() + " Nombre de negocio: "+ nombre.getText().toString());
+                Intent intent = new Intent(contexto, PantallaProductos.class);
+                /*Pedido pedido = new Pedido (usuario.getId(),negocio.getId_negocio());
+                intent.putExtra("pedido",pedido);*/
+                intent.putExtra("user",usuario);
+                intent.putExtra("negocio",negocio);
+                contexto.startActivity(intent);
+                //System.out.println("Boton Pulsado por usuario: "+usuario.getNombre() + " Nombre de negocio: "+ nombre.getText().toString());
             });
 
         }
