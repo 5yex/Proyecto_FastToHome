@@ -12,8 +12,10 @@ import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Producto;
+import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.recycler_adaptors.RecyclerViewAdaptorProducto;
 
 import org.json.JSONArray;
@@ -29,6 +31,8 @@ public class PantallaProductos extends AppCompatActivity {
 
     private RecyclerView recyclerViewProducto;
     private RecyclerViewAdaptorProducto adaptorProducto;
+    private Usuario usuario;
+    private Negocio negocio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
