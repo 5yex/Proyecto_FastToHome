@@ -62,6 +62,7 @@ public class PantallaPrincipal extends AppCompatActivity {
                     user.setId_direccion(datos.getInt("direccion_id"));
                     user.setRol(datos.getString("Rol"));
                     user.setTlf(datos.getString("tlf"));
+
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaPrincipal.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
