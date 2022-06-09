@@ -34,6 +34,9 @@ public class PantallaProductos extends AppCompatActivity {
 
         List<Producto> productos = new ArrayList<>();
 
-        String url = "http://10.0"
+        String url = "http://10.0.2.2/php/webService/api.php";
+        RequestQueue queue = Volley.newRequestQueue(PantallaProductos.this);
+        StringR
+
     }
 }
