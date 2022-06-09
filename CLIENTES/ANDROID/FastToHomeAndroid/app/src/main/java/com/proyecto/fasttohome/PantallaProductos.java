@@ -44,7 +44,7 @@ public class PantallaProductos extends AppCompatActivity {
         recyclerViewProducto = (RecyclerView) findViewById(R.id.recyclerProductos);
         recyclerViewProducto.setLayoutManager(new LinearLayoutManager(this));
 
-
+        obtenerProductosNegocio();
     }
 
     public void obtenerProductosNegocio() {
