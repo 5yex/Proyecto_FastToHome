@@ -10,6 +10,8 @@ import com.google.gson.Gson;
  * Clase que representa la cesta con los productos del pedido
  * 
  * @author Jose Miguel Cálderón, Jesús Rueda
+ * @version 1.0
+ * @since 1.0
  */
 public class Cesta {
     
