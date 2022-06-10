@@ -97,8 +97,6 @@ class Producto extends Conexion{
         $resultado = $sentencia->execute();
 
         if ($resultado != 1) {
-            //ocurrio un error al insertar
-            printf('aaa');
             return FALSE;
         }
 
