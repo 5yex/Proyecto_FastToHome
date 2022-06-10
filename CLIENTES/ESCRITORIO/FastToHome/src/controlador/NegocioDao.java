@@ -30,9 +30,10 @@ public class NegocioDao {
     }
     
     /**
+     * Realiza la consulta para devolver un objeto de tipo Negocio con el negocio de un mercader
      * 
-     * @param user
-     * @return 
+     * @param user Mercader propietario del negocio
+     * @return objeto de tipo Negocio con los datos del negocio de un mercader
      */
     public static Negocio negocioDeMercader(Usuario user) {
         Negocio negocio = new Negocio();
