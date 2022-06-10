@@ -76,10 +76,10 @@ public class Pedido {
     /**
      * Construye un Pedido con los parametros indicados
      * 
-     * @param id_pedido
-     * @param id_usuario
-     * @param id_negocio
-     * @param fecha_hora
+     * @param id_pedido Número que identifica el pedido en la base de datos
+     * @param id_usuario Número que identidica al usuario que ha realizado el pedido en la base de datos
+     * @param id_negocio Número que identidfica el negocio donde se ha realizado el pedido en la base de datos
+     * @param fecha_hora Fecha y hora del pedido
      * @param estado
      * @param total
      * @param transporte 
