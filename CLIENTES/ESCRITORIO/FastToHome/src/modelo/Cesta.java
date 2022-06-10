@@ -130,7 +130,7 @@ public class Cesta {
     }
     
     /**
-     * Devuelve
+     * Devuelve la cantidad de un producto
      * 
      * @return 
      */
