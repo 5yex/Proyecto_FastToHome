@@ -152,7 +152,13 @@ public class Direccion {
     public int getId_direccion() {
         return id_direccion;
     }
-
+    
+    /**
+     * Establece el número que identifica una direccíón en la base de datos
+     * 
+     * @param id_direccion Número que identifica una direccíón en la base de datos
+     * @since 1.0
+     */
     public void setId_direccion(int id_direccion) {
         this.id_direccion = id_direccion;
     }
