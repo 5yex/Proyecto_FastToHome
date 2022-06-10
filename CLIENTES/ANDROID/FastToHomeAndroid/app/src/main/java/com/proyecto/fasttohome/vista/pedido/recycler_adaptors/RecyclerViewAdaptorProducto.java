@@ -65,6 +65,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
                 productosSeleccionados.put(productoActual,oldValue+1);
             };
         });
+
         holder.DEL.setOnClickListener(view -> {
             int productoActual = listaProductos.get(position).getId_producto();
             if(productosSeleccionados.containsKey(productoActual)){
