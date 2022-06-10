@@ -281,9 +281,10 @@ public class Direccion {
     }
     
     /**
+     * Devuelve el objeto de tipo Usuario en forma de JSon
      * 
-     * 
-     * @return 
+     * @return el objeto de tipo Categoria en forma de JSon
+     * @since 1.0
      */
     public String getJSON() {
         return new Gson().toJson(this);
