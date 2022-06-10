@@ -83,6 +83,7 @@ public class PantallaProductos extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
+                negocio.toString();
                 params.put("DATA", new Peticion("obtener_productos_negocio", negocio.getJSON()).getJSON());
                 return params;
             }
