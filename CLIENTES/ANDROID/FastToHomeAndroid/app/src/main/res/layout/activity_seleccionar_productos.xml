@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleGravity="left"
+            app:expandedTitleGravity="left|bottom"
             app:expandedTitleMarginEnd="0dp"
             app:expandedTitleMarginStart="10dp"
             app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Body1"
