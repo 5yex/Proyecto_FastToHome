@@ -261,7 +261,13 @@ public class Pedido {
     public String getJSON(){
        return new Gson().toJson(this);
     }
-
+    
+    /**
+     * Devuelve una cadena con los atributos del objeto de tipo Pedido
+     *
+     * @return Cadena con los atributos del objeto de tipo Pedido
+     * @since 1.0
+     */
     @Override
     public String toString() {
         return "Pedido{" + "id_pedido=" + id_pedido + ", id_usuario=" + id_usuario + ", id_negocio=" + id_negocio + ", fecha_hora=" + fecha_hora + ", estado=" + estado + ", total=" + total + ", transporte=" + transporte + '}';
