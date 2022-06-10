@@ -24,14 +24,14 @@ public class Pedido {
     private int id_pedido;
     
     /**
-     * Número que identidica al usuario que ha realizado el pedido en la base de datos
+     * Número que identifica al usuario que ha realizado el pedido en la base de datos
      * 
      * @since 1.0
      */
     private int id_usuario;
     
     /**
-     * Número que identidfica el negocio donde se ha realizado el pedido en la base de datos
+     * Número que identifica el negocio donde se ha realizado el pedido en la base de datos
      * 
      * @since 1.0
      */
