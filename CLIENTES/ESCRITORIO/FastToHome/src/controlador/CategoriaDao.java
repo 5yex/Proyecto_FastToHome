@@ -53,7 +53,7 @@ public class CategoriaDao {
     }
     
     /**
-     * Devuelve un número con el identificador de una categoria dado su nombre
+     * Realiza la consulta para devolver un número con el identificador de una categoria dado su nombre
      * 
      * @param categoria objeto de tipo Categoria del que queremos obtener el identificador
      * @return Número con el identificador de una categoria dado su nombre
