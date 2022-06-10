@@ -80,9 +80,9 @@ public class Pedido {
      * @param id_usuario Número que identidica al usuario que ha realizado el pedido en la base de datos
      * @param id_negocio Número que identidfica el negocio donde se ha realizado el pedido en la base de datos
      * @param fecha_hora Fecha y hora del pedido
-     * @param estado
-     * @param total
-     * @param transporte 
+     * @param estado Estado en el que se encuentra el pedido
+     * @param total Total de dinero pagado
+     * @param transporte Forma de transporte del pedido
      */
     public Pedido(int id_pedido, int id_usuario, int id_negocio, Date fecha_hora, String estado, double total, String transporte) {
         this.id_pedido = id_pedido;
