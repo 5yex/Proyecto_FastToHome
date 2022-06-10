@@ -277,7 +277,12 @@ public class Negocio {
         this.id_img = id_img;
     }
     
-    
+    /**
+     * Devuelve el objeto de tipo Negocio en forma de JSon
+     * 
+     * @return el objeto de tipo Negocio en forma de JSon
+     * @since 1.0
+     */
     public String getJSON(){
        return new Gson().toJson(this);
     }
