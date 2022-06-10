@@ -50,7 +50,8 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             nombre = (TextView) itemView.findViewById(R.id.tvNombreNegocio);
-            descripcion = (TextView) itemView.findViewById(R.id.tvDescripcionNegocio);
+            image= (ImageView) itemView.findViewById(R.id.imagenNegocio);
+            //descripcion = (TextView) itemView.findViewById(R.id.tvDescripcionNegocio);
             //categoria = (TextView) itemView.findViewById(R.id.tvCategoriaNegocio);
 
             pedir = (Button) itemView.findViewById(R.id.pedir);
@@ -87,12 +88,11 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.nombre.setText(listaNegocios.get(position).getNombre());
-        holder.descripcion.setText(listaNegocios.get(position).getDescripcion());
+        //holder.descripcion.setText(listaNegocios.get(position).getDescripcion());
         holder.usuario = usuario;
         holder.negocio = new Negocio(listaNegocios.get(position).getId_negocio());
         Picasso.get().setLoggingEnabled(true);
-        Picasso.get().load(imgUrl).
-
+        Picasso.get().load(listaNegocios.get(position).getUrl_imagen()).into(holder.image);
 
         //holder.image.setImageBitmap(ImagenesUtil.BaseStringToBitmap(listaNegocios.get(position).getId_img()));
         //holder.categoria.setText(listaNegocios.get(position).getId_categoria());
