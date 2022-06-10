@@ -132,7 +132,8 @@ public class Cesta{
     /**
      * Devuelve la cantidad de un producto
      * 
-     * @return 
+     * @return Cantidad de un producto
+     * @since 1.0
      */
     public int getCantidad() {
         return cantidad;
