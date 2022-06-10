@@ -13,7 +13,7 @@ import com.google.gson.Gson;
  * @version 1.0
  * @since 1.0
  */
-public class Cesta {
+public class Cesta{
     
     /**
      * Número que identifica la cesta en la base de datos
