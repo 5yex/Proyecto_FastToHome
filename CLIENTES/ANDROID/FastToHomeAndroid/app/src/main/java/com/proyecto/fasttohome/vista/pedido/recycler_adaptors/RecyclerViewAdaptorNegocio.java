@@ -9,17 +9,32 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.util.ImagenesUtil;
+import com.proyecto.fasttohome.vista.pedido.PantallaDeNegocios;
 import com.proyecto.fasttohome.vista.pedido.SeleccionarProductos;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Usuario;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerViewAdaptorNegocio.ViewHolder> {
 
@@ -74,8 +89,13 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
         holder.descripcion.setText(listaNegocios.get(position).getDescripcion());
         holder.usuario = usuario;
         holder.negocio = new Negocio(listaNegocios.get(position).getId_negocio());
-        holder.image.setImageBitmap(ImagenesUtil.BaseStringToBitmap(listaNegocios.get(position).get));
+
+
+
+      //  holder.image.setImageBitmap(ImagenesUtil.BaseStringToBitmap(listaNegocios.get(position).getId_img()));
         //holder.categoria.setText(listaNegocios.get(position).getId_categoria());
+
+
     }
 
     @Override

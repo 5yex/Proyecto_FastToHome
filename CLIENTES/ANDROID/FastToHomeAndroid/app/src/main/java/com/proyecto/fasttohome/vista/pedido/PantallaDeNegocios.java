@@ -47,7 +47,6 @@ public class PantallaDeNegocios extends AppCompatActivity {
 
     public void obtenerNegocios(){
         List<Negocio> negocios = new ArrayList<Negocio>();
-
         String url = getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(PantallaDeNegocios.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
