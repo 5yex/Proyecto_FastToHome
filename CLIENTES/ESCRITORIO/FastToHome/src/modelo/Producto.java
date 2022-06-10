@@ -15,7 +15,11 @@ import com.google.gson.Gson;
  */
 public class Producto {
     
-    
+    /**
+     * Número que identifica al producto en la base de datos
+     * 
+     * @since 1.0
+     */
     private int id_producto;
     private int id_negocio;
     private String nombre;
