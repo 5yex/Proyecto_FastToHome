@@ -77,8 +77,8 @@ public class Pedido {
      * Construye un Pedido con los parametros indicados
      * 
      * @param id_pedido Número que identifica el pedido en la base de datos
-     * @param id_usuario Número que identidica al usuario que ha realizado el pedido en la base de datos
-     * @param id_negocio Número que identidfica el negocio donde se ha realizado el pedido en la base de datos
+     * @param id_usuario Número que identifica al usuario que ha realizado el pedido en la base de datos
+     * @param id_negocio Número que identifica el negocio donde se ha realizado el pedido en la base de datos
      * @param fecha_hora Fecha y hora del pedido
      * @param estado Estado en el que se encuentra el pedido
      * @param total Total de dinero pagado
@@ -97,8 +97,8 @@ public class Pedido {
     /**
      * Construye un Pedido con los parametros indicados
      * 
-     * @param id_usuario Número que identidica al usuario que ha realizado el pedido en la base de datos
-     * @param id_negocio Número que identidfica el negocio donde se ha realizado el pedido en la base de datos
+     * @param id_usuario Número que identifica al usuario que ha realizado el pedido en la base de datos
+     * @param id_negocio Número que identifica el negocio donde se ha realizado el pedido en la base de datos
      * @param fecha_hora Fecha y hora del pedido
      * @param estado Estado en el que se encuentra el pedido
      * @param total Total de dinero pagado
