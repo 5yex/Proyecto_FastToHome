@@ -246,7 +246,13 @@ public class Negocio {
     public String getDescripcion() {
         return descripcion;
     }
-
+    
+    /**
+     * Establece la descripción del negocio
+     * 
+     * @param descripcion Descripción del negocio
+     * @since 1.0
+     */
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
