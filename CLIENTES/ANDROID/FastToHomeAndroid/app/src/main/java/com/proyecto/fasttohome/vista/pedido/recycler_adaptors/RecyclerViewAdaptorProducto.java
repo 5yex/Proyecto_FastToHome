@@ -57,7 +57,10 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         holder.precio.setText("Precio: " + listaProductos.get(position).getPrecio() + "€");
 
         holder.ADD.setOnClickListener(view -> {
-            if(productosSeleccionados.containsKey(""));
+            int productoActual = listaProductos.get(position).getId_producto();
+            if(!productosSeleccionados.containsKey(productoActual)){
+                productosSeleccionados.put(new cesta())
+            };
         });
         holder.DEL.setOnClickListener(view -> {
 
