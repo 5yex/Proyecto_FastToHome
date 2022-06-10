@@ -18,7 +18,7 @@ import com.android.volley.toolbox.Volley;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
-import com.proyecto.fasttohome.vista.principal.PantallaPrincipal;
+import com.proyecto.fasttohome.vista.PantallaPrincipal;
 import com.proyecto.fasttohome.vista.registro.registroPaso1DatosUsuario;
 
 import org.json.JSONException;

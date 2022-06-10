@@ -1,17 +1,26 @@
-package com.proyecto.fasttohome;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+package com.proyecto.fasttohome.vista.pedido;
 
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.View;
+import android.widget.Toast;
+
+import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.databinding.ActivitySeleccionarProductosBinding;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Producto;
@@ -27,8 +36,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class PantallaProductos extends AppCompatActivity {
+public class SeleccionarProductos extends AppCompatActivity {
 
+    private ActivitySeleccionarProductosBinding binding;
     private RecyclerView recyclerViewProducto;
     private RecyclerViewAdaptorProducto adaptorProducto;
     private Usuario usuario;
@@ -37,7 +47,24 @@ public class PantallaProductos extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pantalla_productos);
+
+        binding = ActivitySeleccionarProductosBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        Toolbar toolbar = binding.toolbar;
+        setSupportActionBar(toolbar);
+        CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
+        toolBarLayout.setTitle(getTitle());
+
+        FloatingActionButton fab = binding.fab;
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
         usuario = (Usuario) getIntent().getExtras().getSerializable("user");
         negocio = (Negocio) getIntent().getExtras().getSerializable("negocio");
 
@@ -52,7 +79,7 @@ public class PantallaProductos extends AppCompatActivity {
     public void obtenerProductosNegocio() {
         List<Producto> productos = new ArrayList<Producto>();
         String url = getString(R.string.apiUrl);;
-        RequestQueue queue = Volley.newRequestQueue(PantallaProductos.this);
+        RequestQueue queue = Volley.newRequestQueue(SeleccionarProductos.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
             System.out.println(response);
             try {
@@ -76,7 +103,7 @@ public class PantallaProductos extends AppCompatActivity {
                     recyclerViewProducto.setAdapter(adaptorProducto);
                 }
             } catch (JSONException | VolleyError e) {
-                Toast.makeText(PantallaProductos.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(SeleccionarProductos.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
                 finish();
             }
         }, this::onErrorResponse) {
@@ -91,7 +118,7 @@ public class PantallaProductos extends AppCompatActivity {
     }
 
     private void onErrorResponse(VolleyError error) {
-        Toast.makeText(PantallaProductos.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
+        Toast.makeText(SeleccionarProductos.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
         finish();
     }
 }

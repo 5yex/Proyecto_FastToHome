@@ -5,13 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.EditText;
 import android.widget.Toast;
 
 
 import com.proyecto.fasttohome.R;
-import com.proyecto.fasttohome.Validaciones;
+import com.proyecto.fasttohome.util.Validaciones;
 import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Usuario;
 

@@ -19,14 +19,19 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".vista.pedido.SeleccionarProductos"
+            android:exported="false"
+            android:label="@string/title_activity_seleccionar_productos"
+            android:theme="@style/Theme.FastToHome.NoActionBar" />
+        <activity
             android:name=".PantallaProductos"
             android:exported="false" />
         <activity
-            android:name=".PantallaDeNegocios"
+            android:name=".vista.pedido.PantallaDeNegocios"
             android:exported="false"
             android:label="Selecciona un establecimiento" />
         <activity
-            android:name=".vista.principal.PantallaPrincipal"
+            android:name=".vista.PantallaPrincipal"
             android:label="Bienvenido: " />
         <activity
             android:name=".vista.login.PantallaLogin"

@@ -1,4 +1,4 @@
-package com.proyecto.fasttohome;
+package com.proyecto.fasttohome.vista.pedido;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,21 +7,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.recycler_adaptors.RecyclerViewAdaptorNegocio;
-import com.proyecto.fasttohome.vista.login.PantallaLogin;
-import com.proyecto.fasttohome.vista.principal.PantallaPrincipal;
 
 import org.json.JSONArray;
 import org.json.JSONException;
