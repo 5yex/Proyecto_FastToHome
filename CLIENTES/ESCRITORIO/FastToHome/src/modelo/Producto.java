@@ -21,6 +21,11 @@ public class Producto {
      * @since 1.0
      */
     private int id_producto;
+    
+    /**
+     * Número que identidfica el negocio al que pertenece el producto en la base de datos
+     * 
+     */
     private int id_negocio;
     private String nombre;
     private double precio;
