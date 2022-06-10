@@ -49,7 +49,15 @@ public class Producto {
      * @since 1.0
      */
     private String descripcion;
+    
+    
     private int stock;
+    
+    /**
+     * Número que identifica a la imagen del producto en la base de datos
+     * 
+     * @since 1.0
+     */
     private int id_img;
 
     public int getId_img() {
