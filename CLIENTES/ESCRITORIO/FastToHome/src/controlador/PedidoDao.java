@@ -16,11 +16,20 @@ import modelo.Pedido;
 import modelo.Peticion;
 
 /**
- *
- * @author Jesus
+ * Clase donde se realizan las consultas realicionadas con los pedidos
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
+ * @since 1.0
  */
 public class PedidoDao {
-
+    
+    /**
+     * Realiza la consulta para devolver una lista con los pedidos pagados que estan almacenados en la base de datos
+     * 
+     * @param negocio
+     * @return 
+     */
     public static ArrayList<Pedido> seleccionPedidosPagados(Negocio negocio) {
         SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_pedidos_pagados", negocio.getJSON()));
