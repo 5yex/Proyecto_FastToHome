@@ -15,7 +15,14 @@ import com.google.gson.Gson;
  */
 public class Cesta {
     
+    /**
+     * Número que identifica la cesta en la base de datos
+     */
     private int id_cesta;
+    
+    /**
+     * 
+     */
     private int id_producto;
     private int id_pedido;
     private int cantidad;
