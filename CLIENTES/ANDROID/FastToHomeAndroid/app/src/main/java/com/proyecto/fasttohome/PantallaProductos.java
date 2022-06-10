@@ -52,7 +52,7 @@ public class PantallaProductos extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(PantallaProductos.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
             System.out.println(response);
-            System.out.println(negocio.getId_negocio().toString());
+            System.out.println("Id de nogocio" + negocio.getId_negocio());
             try {
                 JSONObject resp = new JSONObject(response);
                 if ((resp.getBoolean("error")) == true) {
