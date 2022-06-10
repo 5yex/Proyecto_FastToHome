@@ -15,6 +15,12 @@ import java.util.Date;
  * @since 1.0
  */
 public class Pedido {
+    
+    /**
+     * Número que identifica el pedido en la base de datos
+     * 
+     * @since 1.0
+     */
     private int id_pedido;
     private int id_usuario;
     private int id_negocio;
@@ -30,7 +36,18 @@ public class Pedido {
      */
     public Pedido() {
     }
-
+    
+    /**
+     * 
+     * 
+     * @param id_pedido
+     * @param id_usuario
+     * @param id_negocio
+     * @param fecha_hora
+     * @param estado
+     * @param total
+     * @param transporte 
+     */
     public Pedido(int id_pedido, int id_usuario, int id_negocio, Date fecha_hora, String estado, double total, String transporte) {
         this.id_pedido = id_pedido;
         this.id_usuario = id_usuario;
