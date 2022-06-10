@@ -64,7 +64,7 @@ public class Negocio {
     private int id_img;
     
     /**
-     * 
+     * Construye un negocio con parametros a <code>null</code>
      */
     public Negocio() {
     }
