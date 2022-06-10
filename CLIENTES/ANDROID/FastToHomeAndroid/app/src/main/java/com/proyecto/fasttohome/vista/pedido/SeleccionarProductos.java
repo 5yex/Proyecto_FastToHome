@@ -73,6 +73,7 @@ public class SeleccionarProductos extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
         productosSeleccionados = new HashMap<Integer, Cesta>();
         recyclerViewProducto = (RecyclerView) findViewById(R.id.recyclerProductos);
         recyclerViewProducto.setLayoutManager(new LinearLayoutManager(this));
