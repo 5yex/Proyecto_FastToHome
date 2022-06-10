@@ -8,8 +8,11 @@ import com.google.gson.Gson;
 import java.util.Date;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa un pedido realizado por un usuario
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
+ * @since 1.0
  */
 public class Pedido {
     private int id_pedido;
