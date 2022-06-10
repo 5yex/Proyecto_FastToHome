@@ -31,7 +31,7 @@ public class Pedido {
     private int id_usuario;
     
     /**
-     * Número que identidfica el negocio se ha realizado el pedido en la base de datos
+     * Número que identidfica el negocio donde se ha realizado el pedido en la base de datos
      * 
      * @since 1.0
      */
