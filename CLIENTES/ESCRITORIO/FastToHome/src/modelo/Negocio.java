@@ -36,7 +36,7 @@ public class Negocio {
     private int id_categoria;
     
     /**
-     * Número que identidica al propietario del negocio en la base de datos
+     * Número que identifica al propietario del negocio en la base de datos
      * 
      * @since 1.0
      */
@@ -74,13 +74,13 @@ public class Negocio {
     /**
      * Construye un negocio con los parametros indicados
      * 
-     * @param id_negocio
-     * @param id_direccion
-     * @param id_categoria
-     * @param id_mercader
-     * @param nombre
-     * @param descripcion
-     * @param id_img 
+     * @param id_negocio Número que identifica un negocio en la base de datos
+     * @param id_direccion Número que identifica la dirección del negocio en la base de datos
+     * @param id_categoria Número que identifica la categoría del negocio en la base de datos
+     * @param id_mercader Número que identifica al propietario del negocio en la base de datos
+     * @param nombre Nombre del negocio
+     * @param descripcion Descripción del negocio
+     * @param id_img Número que identifica la imagen asociada al negocio en la base de datos
      */
     public Negocio(int id_negocio, int id_direccion, int id_categoria, int id_mercader, String nombre, String descripcion, int id_img) {
         this.id_negocio = id_negocio;
@@ -91,7 +91,17 @@ public class Negocio {
         this.descripcion = descripcion;
         this.id_img = id_img;
     }
-
+    
+    /**
+     * Construye un negocio con los parametros indicados
+     * 
+     * @param id_direccion Número que identifica la dirección del negocio en la base de datos
+     * @param id_categoria Número que identifica la categoría del negocio en la base de datos
+     * @param id_mercader Número que identifica al propietario del negocio en la base de datos
+     * @param nombre Nombre del negocio
+     * @param descripcion Descripción del negocio
+     * @param id_img Número que identifica la imagen asociada al negocio en la base de datos
+     */
     public Negocio(int id_direccion, int id_categoria, int id_mercader, String nombre, String descripcion, int id_img) {
         this.id_direccion = id_direccion;
         this.id_categoria = id_categoria;
@@ -100,7 +110,16 @@ public class Negocio {
         this.descripcion = descripcion;
         this.id_img = id_img;
     }
-
+    
+    /**
+     * Construye un negocio con los parametros indicados
+     * 
+     * @param id_direccion Número que identifica la dirección del negocio en la base de datos
+     * @param id_categoria Número que identifica la categoría del negocio en la base de datos
+     * @param id_mercader Número que identifica al propietario del negocio en la base de datos
+     * @param nombre Nombre del negocio
+     * @param descripcion Descripción del negocio
+     */
     public Negocio(int id_direccion, int id_categoria, int id_mercader, String nombre, String descripcion) {
         this.id_direccion = id_direccion;
         this.id_categoria = id_categoria;
