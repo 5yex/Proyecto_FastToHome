@@ -18,8 +18,14 @@ import modelo.Peticion;
  * @since 1.0
  */
 public class CategoriaDao {
-
-    public static boolean nuevoUsuario(Categoria categoria) {
+    
+    /**
+     * 
+     * 
+     * @param categoria
+     * @return 
+     */
+    public static boolean nuevaCategoria(Categoria categoria) {
         return gestion.hacerConsulta(new Peticion("nueva_categoria", categoria.getJSON()));
     }
 
