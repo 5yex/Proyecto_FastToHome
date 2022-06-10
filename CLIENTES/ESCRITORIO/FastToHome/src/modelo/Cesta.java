@@ -98,7 +98,13 @@ public class Cesta {
     public int getId_producto() {
         return id_producto;
     }
-
+    
+    /**
+     * Establece el número que identifica el producto introducido en la cesta en la base de datos
+     * 
+     * @param id_producto Número que identifica el producto introducido en la cesta en la base de datos
+     * @since 1.0
+     */
     public void setId_producto(int id_producto) {
         this.id_producto = id_producto;
     }
