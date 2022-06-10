@@ -206,7 +206,13 @@ public class Negocio {
     public int getId_mercader() {
         return id_mercader;
     }
-
+    
+    /**
+     * Establece el número que identifica al propietario del negocio en la base de datos
+     * 
+     * @param id_mercader Número que identifica al propietario del negocio en la base de datos
+     * @since 1.0
+     */
     public void setId_mercader(int id_mercader) {
         this.id_mercader = id_mercader;
     }
