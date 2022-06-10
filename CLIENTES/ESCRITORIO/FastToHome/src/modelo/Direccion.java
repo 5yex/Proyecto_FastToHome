@@ -264,18 +264,27 @@ public class Direccion {
     }
     
     /**
-     * 
+     * Devuelve 
      * 
      * @return 
      */
     public int getCoordenadas() {
         return coordenadas;
     }
-
+    
+    /**
+     * 
+     * @param coordenadas 
+     */
     public void setCoordenadas(int coordenadas) {
         this.coordenadas = coordenadas;
     }
-
+    
+    /**
+     * 
+     * 
+     * @return 
+     */
     public String getJSON() {
         return new Gson().toJson(this);
     }
