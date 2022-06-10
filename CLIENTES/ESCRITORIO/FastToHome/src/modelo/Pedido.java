@@ -74,7 +74,7 @@ public class Pedido {
     }
     
     /**
-     * 
+     * Construye un Pedido con los parametros indicados
      * 
      * @param id_pedido
      * @param id_usuario
