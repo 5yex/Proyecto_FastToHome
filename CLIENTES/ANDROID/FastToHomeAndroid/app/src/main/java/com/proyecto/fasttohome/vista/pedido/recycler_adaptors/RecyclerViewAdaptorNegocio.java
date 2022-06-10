@@ -26,6 +26,7 @@ import com.proyecto.fasttohome.vista.pedido.PantallaDeNegocios;
 import com.proyecto.fasttohome.vista.pedido.SeleccionarProductos;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Usuario;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -92,7 +93,16 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
         holder.usuario = usuario;
         holder.negocio = new Negocio(listaNegocios.get(position).getId_negocio());
         Picasso.get().setLoggingEnabled(true);
-        Picasso.get().load(listaNegocios.get(position).getUrl_imagen()).into(holder.image);
+        Picasso.get().load(listaNegocios.get(position).getUrl_imagen()).into(holder.image, new Callback() {
+            @Override
+            public void onSuccess() {
+                //imagen cargada
+            }
+            @Override
+            public void onError(Exception e) {
+                holder.image.setImageDrawable(R.drawable.ic_twotone_sync_problem_24);
+            }
+        }););
 
         //holder.image.setImageBitmap(ImagenesUtil.BaseStringToBitmap(listaNegocios.get(position).getId_img()));
         //holder.categoria.setText(listaNegocios.get(position).getId_categoria());
