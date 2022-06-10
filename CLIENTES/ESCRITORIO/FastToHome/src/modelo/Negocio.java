@@ -169,7 +169,9 @@ public class Negocio {
     
     /**
      * Establece el número que identifica la dirección del negocio en la base de datos
-     * @param id_direccion 
+     * 
+     * @param id_direccion
+     * @since 1.0
      */
     public void setId_direccion(int id_direccion) {
         this.id_direccion = id_direccion;
