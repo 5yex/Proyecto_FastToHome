@@ -39,7 +39,12 @@ public class DireccionDao {
         return gestion.consultaSeleccionUnico(new Peticion("nueva_direccion_devuelve_id", direccion.getJSON())).get("last_id").getAsInt();
     }
 
-
+    /**
+     * Devuelve un objeto de tipo Dirección con al dirección de un negocio
+     * 
+     * @param negocio objeto de tipo Negocio del que queremos obtener la dirección
+     * @return un objeto de tipo Dirección con al dirección de un negocio
+     */
     public static Direccion obtenerDireccionNegocio(Negocio negocio) {
         Direccion direccion = new Direccion();
 
