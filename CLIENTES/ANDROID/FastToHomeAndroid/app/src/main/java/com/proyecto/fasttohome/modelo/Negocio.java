@@ -24,6 +24,14 @@ public class Negocio implements Serializable {
     private int id_img;
     private Bitmap image;
 
+    public Bitmap getImage() {
+        return image;
+    }
+
+    public void setImage(Bitmap image) {
+        this.image = image;
+    }
+
     public Negocio() {
     }
 
