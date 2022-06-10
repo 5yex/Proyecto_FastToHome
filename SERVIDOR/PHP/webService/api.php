@@ -341,6 +341,7 @@ function obtenerTodosNegocios(){
     try {
         $negocio = new Negocio();
         $respuesta = $negocio->obtenerTodosNegocios();
+        printf(var_dump($respuesta));
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
