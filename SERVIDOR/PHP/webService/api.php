@@ -411,9 +411,16 @@ function obtenerProductosNegocio($datos){
 
     try {
         $producto = new Producto();
+        printf(var_dump($datos));
         $id = $datos->id_negocio;
         $producto->setId_negocio($id);
-        $respuesta = $producto->productosDeUnNegocio();       
+        
+        printf(var_dump($producto));
+        
+        $respuesta = $producto->productosDeUnNegocio();
+        
+         printf(var_dump($respuesta));
+        
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
