@@ -7,8 +7,11 @@ package modelo;
 import com.google.gson.Gson;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa la dirección de un usuario o negocio
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
+ * @since 1.0
  */
 public class Direccion {
 
