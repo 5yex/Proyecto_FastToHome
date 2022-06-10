@@ -131,7 +131,12 @@ public class Producto {
     public void setId_img(int id_img) {
         this.id_img = id_img;
     }
-
+    
+    /**
+     * Devuelve el número que identifica al producto en la base de datos
+     * 
+     * @return 
+     */
     public int getId_producto() {
         return id_producto;
     }
