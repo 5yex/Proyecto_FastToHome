@@ -21,6 +21,12 @@ public class Direccion {
      * @since 1.0
      */
     private int id_direccion;
+    
+    /**
+     * Nombre de la calle
+     * 
+     * @since 1.0
+     */
     private String calle;
     private int numero;
     private String ciudad;
