@@ -7,7 +7,8 @@ package modelo;
 import com.google.gson.Gson;
 
 /**
- *
+ * Clase que representa un negocio
+ * 
  * @author Jose Miguel Calderón, Jesús Rueda Tena
  * @version 1.0
  * @since 1.0
