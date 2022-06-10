@@ -41,7 +41,7 @@ public class PantallaProductos extends AppCompatActivity {
         usuario = (Usuario) getIntent().getExtras().getSerializable("user");
         negocio = (Negocio) getIntent().getExtras().getSerializable("negocio");
 
-        System.out.println(negocio.toString());
+        System.out.println(negocio.getJSON());
 
         recyclerViewProducto = (RecyclerView) findViewById(R.id.recyclerProductos);
         recyclerViewProducto.setLayoutManager(new LinearLayoutManager(this));
