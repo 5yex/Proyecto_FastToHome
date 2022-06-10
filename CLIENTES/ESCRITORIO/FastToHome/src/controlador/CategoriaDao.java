@@ -52,6 +52,13 @@ public class CategoriaDao {
         return listaCategorias;
     }
     
+    /**
+     * Devuelve un número con el identificador de una categoria dado su nombre
+     * 
+     * @param categoria objeto de tipo Categoria del que queremos obtener el identificador
+     * @return Número con el identificador de una categoria dado su nombre
+     * @since 1.0
+     */
     public static int ObtenerIdPorNombre(Categoria categoria){
          return gestion.consultaSeleccionUnico(new Peticion("obtener_id_categoria", categoria.getJSON())).get("id").getAsInt();
     }
