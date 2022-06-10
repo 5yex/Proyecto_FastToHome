@@ -89,6 +89,49 @@ public class PantallaDeNegocios extends AppCompatActivity {
         queue.add(request);
     }
 
+    public void imagen(){
+        List<Negocio> negocios = new ArrayList<Negocio>();
+        String url = getString(R.string.apiUrl);
+        RequestQueue queue = Volley.newRequestQueue(PantallaDeNegocios.this);
+        StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
+            System.out.println(response);
+            try {
+                JSONObject resp = new JSONObject(response);
+                if ((resp.getBoolean("error")) == true) {
+                    throw new VolleyError(resp.getString("datos"));
+                } else {
+                    JSONArray arrayDeJson = resp.getJSONArray("datos");
+
+                    for (int i = 0; i < arrayDeJson.length(); i++){
+                        JSONObject objetoNegocioJSon = arrayDeJson.getJSONObject(i);
+                        Negocio negocio = new Negocio();
+                        negocio.setId_negocio(Integer.parseInt(objetoNegocioJSon.get("id").toString()));
+                        negocio.setNombre(objetoNegocioJSon.get("Nombre").toString());
+                        negocio.setDescripcion(objetoNegocioJSon.get("Descripcion").toString());
+                        if(objetoNegocioJSon.get("imagenes_id") != null) {
+                            negocio.setId_img(objetoNegocioJSon.getInt("imagenes_id"));
+                        }
+                        negocios.add(negocio);
+                    }
+
+                    adaptorNegocio= new RecyclerViewAdaptorNegocio(negocios,usuario);
+                    recyclerViewNegocio.setAdapter(adaptorNegocio);
+                }
+            } catch (JSONException | VolleyError e) {
+                Toast.makeText(PantallaDeNegocios.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        }, this::onErrorResponse) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("DATA", new Peticion("obtener_todos_negocios", null).getJSON());
+                return params;
+            }
+        };
+        queue.add(request);
+    }
+
     private void onErrorResponse(VolleyError error) {
         Toast.makeText(PantallaDeNegocios.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
         finish();
