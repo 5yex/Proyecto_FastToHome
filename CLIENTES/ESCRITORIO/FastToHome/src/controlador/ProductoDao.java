@@ -12,13 +12,12 @@ import modelo.Peticion;
 import modelo.Producto;
 
 /**
- *
- * @author Jesus
- * obtener_productos_negocio
+ * Clase donde se realizan las consultas realicionadas con los productos
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
+ * @since 1.0
  */
-
-
-
 public class ProductoDao {
 
     public static boolean nuevoProducto(Producto product) {
