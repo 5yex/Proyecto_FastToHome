@@ -91,7 +91,7 @@ public class DireccionDao {
     }
     
     /**
-     * Realiza la consulta para actualizar la dirección y comprueba si se ha actualizado correctamente
+     * Actualiza la dirección en la base de datos y comprueba si se ha actualizado correctamente
      * 
      * @param direccion objeto de tipo Direccion con la dirección a actualizar
      * @return true si se ha realizado la actualización con éxito, false en caso contrario
