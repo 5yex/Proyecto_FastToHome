@@ -135,7 +135,9 @@ public class Pedido {
     
     /**
      * Devuelve el número que identidfica el usuario donde se ha realizado el pedido en la base de datos
-     * @return 
+     * 
+     * @return Número que identidfica el usuario donde se ha realizado el pedido en la base de datos
+     * @since 1.0
      */
     public int getId_usuario() {
         return id_usuario;
