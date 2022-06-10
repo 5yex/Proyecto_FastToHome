@@ -68,6 +68,15 @@ public class Producto {
     public Producto() {
     }
     
+    /**
+     * Construye un Producto con los parametros indicados
+     * 
+     * @param id_negocio
+     * @param nombre
+     * @param precio
+     * @param descripcion
+     * @param stock 
+     */
     public Producto(int id_negocio, String nombre, double precio, String descripcion, int stock) {
         this.id_negocio = id_negocio;
         this.nombre = nombre;
