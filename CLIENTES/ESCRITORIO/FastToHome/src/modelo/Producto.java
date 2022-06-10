@@ -61,7 +61,9 @@ public class Producto {
     private int id_img;
     
     /**
+     * Construye un Producto con parametros a <code>null</code>
      * 
+     * @since 1.0
      */
     public Producto() {
     }
