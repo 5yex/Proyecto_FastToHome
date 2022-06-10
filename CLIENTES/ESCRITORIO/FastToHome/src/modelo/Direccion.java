@@ -127,6 +127,7 @@ public class Direccion {
      * Devuelve si una dirección es valida o no
      * 
      * @return true si una dirección es valida y false en caso contrario
+     * @since 1.0
      */
     public boolean isValida() {
         return valida;
@@ -134,14 +135,20 @@ public class Direccion {
     
     /**
      * Establece si una dirección es valida o no
+     * 
      * @param valida Dirección valida
+     * @since 1.0
      */
     public void setValida(boolean valida) {
         this.valida = valida;
     }
 
-    
-
+    /**
+     * Devuelve el número que identifica una direccíón en la base de datos
+     * 
+     * @return Núm
+     * ero que identifica una direccíón en la base de datos
+     */
     public int getId_direccion() {
         return id_direccion;
     }
