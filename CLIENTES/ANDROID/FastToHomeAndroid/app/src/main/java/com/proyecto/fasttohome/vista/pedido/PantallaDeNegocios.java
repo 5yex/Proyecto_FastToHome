@@ -111,7 +111,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
                         if (objetoNegocioJSon.get("url") != null) {
                             String imgUrl = getString(R.string.imgUrl) + objetoNegocioJSon.getString("url");
                             Picasso.get().setLoggingEnabled(true);
-                            
+                            Picasso.get().load(imgUrl).in
                         }
                         negocios.add(negocio);
                     }

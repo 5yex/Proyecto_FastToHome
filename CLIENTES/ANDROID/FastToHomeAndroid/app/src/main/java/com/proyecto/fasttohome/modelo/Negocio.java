@@ -22,17 +22,19 @@ public class Negocio implements Serializable {
     private String nombre;
     private String descripcion;
     private int id_img;
-    private Bitmap image;
+    private String url_imagen;
 
-    public Bitmap getImage() {
-        return image;
-    }
 
-    public void setImage(Bitmap image) {
-        this.image = image;
-    }
 
     public Negocio() {
+    }
+
+    public String getUrl_imagen() {
+        return url_imagen;
+    }
+
+    public void setUrl_imagen(String url_imagen) {
+        this.url_imagen = url_imagen;
     }
 
     public Negocio(int id_negocio, String nombre, String descripcion) {
