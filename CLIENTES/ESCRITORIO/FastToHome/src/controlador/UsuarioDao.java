@@ -12,27 +12,31 @@ import modelo.Usuario;
 
 /**
  * Clase donde se realizan las consultas realicionadas con los usuarios
- * 
+ *
  * @author Jose Miguel Calderón, Jesús Rueda
  * @version 1.0
  * @since 1.0
  */
 public class UsuarioDao {
-    
+
     /**
-     * Inserta un nuevo usuario en la base de datos y comprueba si se ha insertado
-     * 
+     * Inserta un nuevo usuario en la base de datos y comprueba si se ha
+     * insertado
+     *
      * @param user objeto de tipo Usuario con los datos del usuario a insertar
-     * @return true si se ha insertado el el usuario corretamente, false en caso contrario
+     * @return true si se ha insertado el el usuario corretamente, false en caso
+     * contrario
      */
     public static boolean nuevoUsuario(Usuario user) {
         return gestion.hacerConsulta(new Peticion("nuevo_usuario", user.getJSON()));
     }
-    
+
     /**
-     * Realiza la consulta para devolver una cadena que identifica al usuario en la base de datos
-     * 
-     * @param user objeto de tipo Usuario del que queremos obtener el identificador
+     * Realiza la consulta para devolver una cadena que identifica al usuario en
+     * la base de datos
+     *
+     * @param user objeto de tipo Usuario del que queremos obtener el
+     * identificador
      * @return una cadena con el identificador del usuario en la base de datos
      */
     public static String obtenerIdCliente(Usuario user) {
@@ -51,12 +55,14 @@ public class UsuarioDao {
         return idCliente;
 
     }
-    
+
     /**
-     * Realiza la consulta para obtener la contraseña encriptada y el identificador de un usario en la base de datos
-     * 
+     * Realiza la consulta para obtener la contraseña encriptada y el
+     * identificador de un usario en la base de datos
+     *
      * @param user objeto de tipo Usuario con los datos del usaurip
-     * @return objeto de tipo usario con la contraseña encriptada e identificador
+     * @return objeto de tipo usario con la contraseña encriptada e
+     * identificador
      */
     public static Usuario getHash(Usuario user) {
         JsonObject ob = gestion.consultaSeleccionUnico(new Peticion("getHash", user.getJSON()));
@@ -67,10 +73,11 @@ public class UsuarioDao {
         }
         return null;
     }
-    
+
     /**
-     * Realiza la consulta para obtener los datos de un usario de la base de datos
-     * 
+     * Realiza la consulta para obtener los datos de un usario de la base de
+     * datos
+     *
      * @param user objeto de tipo Usuario del que queremos obtener sus datos
      * @return objeto de tipo Usuario con los datos del usuario
      */
@@ -95,50 +102,65 @@ public class UsuarioDao {
         user.setTlf(usuarioJson.get("tlf").getAsString());
 
         //System.out.println("controlador.UsuarioDao.obtenerDatosUsuario()   " + user.toString());
-
         return user;
     }
-    
+
     /**
-     * Actualiza el usuario en la base de datos y comprueba si se ha actualizado correctamente
-     * 
+     * Actualiza el usuario en la base de datos y comprueba si se ha actualizado
+     * correctamente
+     *
      * @param user objeto de tipo Usuario con los datos del usuario a actualizar
-     * @return true si se ha actualizado el usuario en la base de datos 
+     * @return true si se ha actualizado el usuario en la base de datos
      */
     public static boolean actualizarUsuario(Usuario user) {
         return gestion.hacerConsulta(new Peticion("actualizar_usuario", user.getJSON()));
     }
-    
+
     /**
-     * Realiza la consulta para asignar el rol de mercader a un usuario con el rol de cliente
-     * 
-     * @param user objeto de tipo Usuario al que se le va asignar el rol de mercader
-     * @return true si se ha asignado el rol correctamente, false en caso contrario
+     * Realiza la consulta para asignar el rol de mercader a un usuario con el
+     * rol de cliente
+     *
+     * @param user objeto de tipo Usuario al que se le va asignar el rol de
+     * mercader
+     * @return true si se ha asignado el rol correctamente, false en caso
+     * contrario
      */
     public static boolean asignarRolMercader(Usuario user) {
         return gestion.hacerConsulta(new Peticion("asignar_rol_mercader", user.getJSON()));
     }
-    
+
     /**
-     * Realiza la consulta para asignar el rol de administrador a un usuario con el rol de cliente
-     * 
-     * @param user objeto de tipo Usuario al que se le va asignar el rol de administrador
-     * @return true si se ha asignado el rol correctamente, false en caso contrario
+     * Realiza la consulta para asignar el rol de administrador a un usuario con
+     * el rol de cliente
+     *
+     * @param user objeto de tipo Usuario al que se le va asignar el rol de
+     * administrador
+     * @return true si se ha asignado el rol correctamente, false en caso
+     * contrario
      */
     public static boolean asignarRolAdministrador(Usuario user) {
         return gestion.hacerConsulta(new Peticion("asignar_rol_admin", user.getJSON()));
     }
-    
+
     /**
-     * Realiza la consulta para asignar el rol de cliente a un usuario que tenga el rol de mercader o administrador
-     * 
-     * @param user objeto de tipo Usuario al que se le va asignar el rol de cliente
-     * @return true si se ha asignado el rol correctamente, false en caso contrario
+     * Realiza la consulta para asignar el rol de cliente a un usuario que tenga
+     * el rol de mercader o administrador
+     *
+     * @param user objeto de tipo Usuario al que se le va asignar el rol de
+     * cliente
+     * @return true si se ha asignado el rol correctamente, false en caso
+     * contrario
      */
     public static boolean asignarRolCliente(Usuario user) {
         return gestion.hacerConsulta(new Peticion("asignar_rol_cliente", user.getJSON()));
     }
 
+    /**
+     * Realiza la consulta para obtener la lista de usuarios
+     *
+     * @param peticion
+     * @return
+     */
     public static ArrayList<Usuario> seleccionUsuarios(String peticion) {
 
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion(peticion, null));
@@ -184,7 +206,5 @@ public class UsuarioDao {
     public static ArrayList<Usuario> seleccionUsuariosMercader() {
         return seleccionUsuarios("obtener_usuarios_mercader");
     }
-
-    
 
 }
