@@ -90,6 +90,12 @@ public class DireccionDao {
         
     }
     
+    /**
+     * Actualiza la dirección y comprueba si se ha actualizado correctamente
+     * 
+     * @param direccion objeto de tipo Direccion con la dirección a actualizar
+     * @return true si se ha realizado la actualización con éxito
+     */
     public static boolean actualizarDireccion(Direccion direccion){
         return gestion.hacerConsulta(new Peticion("actualizar_direccion", direccion.getJSON()));
     }
