@@ -115,6 +115,7 @@ class Producto extends Conexion{
         $sentencia->bindParam(":id_neg", $id_negocio);
 
         $sentencia->execute();
+        
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
     
