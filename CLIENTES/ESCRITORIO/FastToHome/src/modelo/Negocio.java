@@ -216,7 +216,13 @@ public class Negocio {
     public void setId_mercader(int id_mercader) {
         this.id_mercader = id_mercader;
     }
-
+    
+    /**
+     * Devuelve el nombre del negocio
+     * 
+     * @return Nombre del negocio
+     * @since 1.0
+     */
     public String getNombre() {
         return nombre;
     }
