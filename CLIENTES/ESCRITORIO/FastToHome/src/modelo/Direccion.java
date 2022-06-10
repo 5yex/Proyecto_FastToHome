@@ -242,11 +242,21 @@ public class Direccion {
     public void setOtros(String otros) {
         this.otros = otros;
     }
-
+    
+    /**
+     * Establece el codigo postal
+     * 
+     * @return Codigo postal
+     * @since 1.0
+     */
     public int getCodigo_postal() {
         return codigo_postal;
     }
-
+    
+    /**
+     * 
+     * @param codigo_postal 
+     */
     public void setCodigo_postal(int codigo_postal) {
         this.codigo_postal = codigo_postal;
     }
