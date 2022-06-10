@@ -22,6 +22,11 @@ public class Pedido {
      * @since 1.0
      */
     private int id_pedido;
+    
+    /**
+     * Número que identidica al usuario que ha realizado el pedido en la base de datos
+     * 
+     */
     private int id_usuario;
     private int id_negocio;
     private Date fecha_hora;
