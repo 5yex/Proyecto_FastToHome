@@ -220,7 +220,13 @@ public class Producto {
     public String getDescripcion() {
         return descripcion;
     }
-
+    
+    /**
+     * Establece la descripcion de producto
+     * 
+     * @param descripcion Descripcion de producto
+     * @since 1.0
+     */
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
