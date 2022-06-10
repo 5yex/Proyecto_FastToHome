@@ -18,7 +18,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
         private TextView nombre, descripcion, precio;
-        private Button ADD;
+        private Button ADD,DEL;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
