@@ -77,7 +77,8 @@ public class gestion {
     }
 
     /**
-     *
+     * Realiza una consulta de selección que devuelve un único objeto o elemento
+     * 
      * @param peticion objeto de tipo Peticion con el comando a realizar por el php y datos para la
      * consulta
      * @return JsonObject con las filas que se han pedido en la consulta y sus
