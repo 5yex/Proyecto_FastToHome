@@ -225,7 +225,8 @@ public class Pedido {
     /**
      * Establece el total de dinero pagado
      * 
-     * @param total 
+     * @param total Total de dinero pagado
+     * @since 1.0
      */
     public void setTotal(double total) {
         this.total = total;
