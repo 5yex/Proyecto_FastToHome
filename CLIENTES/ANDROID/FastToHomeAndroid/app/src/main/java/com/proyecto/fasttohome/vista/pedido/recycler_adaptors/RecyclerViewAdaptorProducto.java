@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Producto;
-import com.proyecto.fasttohome.vista.pedido.seleccionarCantidad;
 
 import java.util.List;
 
@@ -50,7 +49,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         holder.descripcion.setText(listaProductos.get(position).getDescripcion());
         holder.precio.setText("Precio: " + listaProductos.get(position).getPrecio() + "€");
         holder.buy.setOnClickListener(view -> {
-            new seleccionarCantidad(1,10,holder.nombre.getText().toString(),0);
+            
         });
     }
 
