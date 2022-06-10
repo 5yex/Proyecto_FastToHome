@@ -20,10 +20,10 @@ import modelo.Peticion;
 public class CategoriaDao {
     
     /**
+     * Crea una nueva categoría y comprueba si se ha creado correctamente
      * 
-     * 
-     * @param categoria
-     * @return 
+     * @param categoria objeto de tipo Categoria a crear
+     * @return true si se ha creado la categoría con exito
      */
     public static boolean nuevaCategoria(Categoria categoria) {
         return gestion.hacerConsulta(new Peticion("nueva_categoria", categoria.getJSON()));
