@@ -194,15 +194,30 @@ public class UsuarioDao {
         return listaUsuarios;
 
     }
-
+    
+    /**
+     * Devuelve una lista con los usuarios que tienen el rol de cliente
+     * 
+     * @return lista con los usuarios que tienen el rol de cliente
+     */
     public static ArrayList<Usuario> seleccionUsuariosClientes() {
         return seleccionUsuarios("obtener_usuarios_clientes");
     }
-
+    
+    /**
+     * Devuelve una lista con los usuarios que tienen el rol de administrador
+     * 
+     * @return lista con los usuarios que tienen el rol de administrador
+     */
     public static ArrayList<Usuario> seleccionUsuariosAdmin() {
         return seleccionUsuarios("obtener_usuarios_admin");
     }
-
+    
+    /**
+     * Devuelve una lista con los usuarios que tienen el rol de mercader
+     * 
+     * @return lista con los usuarios que tienen el rol de mercader
+     */
     public static ArrayList<Usuario> seleccionUsuariosMercader() {
         return seleccionUsuarios("obtener_usuarios_mercader");
     }
