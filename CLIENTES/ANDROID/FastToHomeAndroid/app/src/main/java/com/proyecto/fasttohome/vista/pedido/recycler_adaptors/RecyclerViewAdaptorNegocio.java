@@ -102,7 +102,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
             public void onError(Exception e) {
                 holder.image.setImageDrawable(R.drawable.ic_twotone_sync_problem_24);
             }
-        }););
+        });
 
         //holder.image.setImageBitmap(ImagenesUtil.BaseStringToBitmap(listaNegocios.get(position).getId_img()));
         //holder.categoria.setText(listaNegocios.get(position).getId_categoria());
