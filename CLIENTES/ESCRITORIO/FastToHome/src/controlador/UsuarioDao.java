@@ -28,7 +28,13 @@ public class UsuarioDao {
     public static boolean nuevoUsuario(Usuario user) {
         return gestion.hacerConsulta(new Peticion("nuevo_usuario", user.getJSON()));
     }
-
+    
+    /**
+     * Realiza la consulta para devolver una cadena que identifica al usuario en la base de datos
+     * 
+     * @param user objeto de tipo Usuario del que queremos obtener el identificador
+     * @return una cadena con el identificador del usuario en la base de datos
+     */
     public static String obtenerIdCliente(Usuario user) {
         //Lo mismo pero compacto:
         //return gestion.consultaSeleccion(new Peticion("obtener_id_cliente", user.getJSON())).get("id").getAsString();
