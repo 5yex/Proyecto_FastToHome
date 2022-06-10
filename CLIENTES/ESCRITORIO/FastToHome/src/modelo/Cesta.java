@@ -142,13 +142,18 @@ public class Cesta{
     /**
      * Establece la cantidad de un producto
      * 
-     * @param cantidad 
+     * @param cantidad Cantidad de un producto
      * @since 1.0
      */
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
     
+    /**
+     * Devuelve el objeto de tipo Cesta en forma de JSon
+     * 
+     * @return el objeto de tipo Cesta en forma de JSon
+     */
     public String getJSON(){
        return new Gson().toJson(this);
     }
