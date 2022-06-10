@@ -146,7 +146,12 @@ public class Negocio {
     public int getId_negocio() {
         return id_negocio;
     }
-
+    
+    /**
+     * Establece el número que identifica un negocio en la base de datos
+     * @param id_negocio Número que identifica un negocio en la base de datos
+     * @since 1.0
+     */
     public void setId_negocio(int id_negocio) {
         this.id_negocio = id_negocio;
     }
