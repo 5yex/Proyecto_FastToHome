@@ -65,10 +65,10 @@ public class DireccionDao {
     }
     
     /**
-     * Devuelve un objeto de tipo Dirección con la dirección de un negocio
+     * Devuelve un objeto de tipo Dirección con la dirección de un usuario
      * 
-     * @param usaurio objeto de tipo Negocio del que queremos obtener la dirección
-     * @return un objeto de tipo Dirección con al dirección de un negocio
+     * @param usuario objeto de tipo Usuario del que queremos obtener la dirección
+     * @return un objeto de tipo Dirección con al dirección de un usuario
      */
     public static Direccion obtenerDireccionUsuario(Usuario usuario) {
         Direccion direccion = new Direccion();
