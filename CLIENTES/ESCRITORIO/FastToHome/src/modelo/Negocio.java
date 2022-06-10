@@ -236,7 +236,13 @@ public class Negocio {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    
+    /**
+     * Devuelve la descripción del negocio
+     * 
+     * @return Descripción del negocio
+     * @since 1.0
+     */
     public String getDescripcion() {
         return descripcion;
     }
