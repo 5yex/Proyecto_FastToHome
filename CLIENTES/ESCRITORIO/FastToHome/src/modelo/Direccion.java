@@ -122,11 +122,20 @@ public class Direccion {
     public Direccion() {
         this.valida = false;
     }
-
+    
+    /**
+     * Devuelve si una dirección es valida o no
+     * 
+     * @return true si una dirección es valida y false en caso contrario
+     */
     public boolean isValida() {
         return valida;
     }
-
+    
+    /**
+     * Establece si una dirección es valida o no
+     * @param valida Dirección valida
+     */
     public void setValida(boolean valida) {
         this.valida = valida;
     }
