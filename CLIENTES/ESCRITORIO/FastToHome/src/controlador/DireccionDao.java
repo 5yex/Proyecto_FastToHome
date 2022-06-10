@@ -11,8 +11,11 @@ import modelo.Peticion;
 import modelo.Usuario;
 
 /**
- *
- * @author Jesus
+ * Clase donde se realizan las consultas realicionadas con una dirección
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
+ * @since 1.0
  */
 public class DireccionDao {
 
