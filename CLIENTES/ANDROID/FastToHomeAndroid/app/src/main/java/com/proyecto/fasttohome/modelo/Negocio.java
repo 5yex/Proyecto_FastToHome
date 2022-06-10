@@ -4,6 +4,8 @@
  */
 package com.proyecto.fasttohome.modelo;
 
+import android.graphics.Bitmap;
+
 import com.google.gson.Gson;
 
 import java.io.Serializable;
@@ -20,6 +22,7 @@ public class Negocio implements Serializable {
     private String nombre;
     private String descripcion;
     private int id_img;
+    private Bitmap image;
 
     public Negocio() {
     }
