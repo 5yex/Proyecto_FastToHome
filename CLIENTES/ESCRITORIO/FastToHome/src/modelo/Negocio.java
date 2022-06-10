@@ -149,6 +149,7 @@ public class Negocio {
     
     /**
      * Establece el número que identifica un negocio en la base de datos
+     * 
      * @param id_negocio Número que identifica un negocio en la base de datos
      * @since 1.0
      */
