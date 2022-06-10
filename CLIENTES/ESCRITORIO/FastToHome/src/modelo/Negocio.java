@@ -20,6 +20,12 @@ public class Negocio {
      * @since 1.0
      */
     private int id_negocio;
+    
+    /**
+     * Número que identifica la dirección del negocio en la base de datos
+     * 
+     * @since 1.0
+     */
     private int id_direccion;
     private int id_categoria;
     private int id_mercader;
