@@ -57,7 +57,8 @@ public class SeleccionarProductos extends AppCompatActivity {
         Toolbar toolbar = binding.toolbar;
         setSupportActionBar(toolbar);
         CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
-
+        usuario = (Usuario) getIntent().getExtras().getSerializable("user");
+        negocio = (Negocio) getIntent().getExtras().getSerializable("negocio");
         imagenNegocio = findViewById(R.id.imgNegocioS);
         toolBarLayout.setTitle(negocio.getNombre());
         Picasso.get().load(negocio.getUrl_imagen()).into(imagenNegocio);
@@ -69,9 +70,6 @@ public class SeleccionarProductos extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
-        usuario = (Usuario) getIntent().getExtras().getSerializable("user");
-        negocio = (Negocio) getIntent().getExtras().getSerializable("negocio");
 
         System.out.println(negocio.toString());
 
