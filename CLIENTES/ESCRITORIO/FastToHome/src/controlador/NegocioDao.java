@@ -18,7 +18,8 @@ import modelo.Usuario;
  * @since 1.0
  */
 public class NegocioDao {
-
+    
+    
     public static boolean nuevoNegocio(Negocio negocio) {
         return gestion.hacerConsulta(new Peticion("nuevo_negocio", negocio.getJSON()));
     }
