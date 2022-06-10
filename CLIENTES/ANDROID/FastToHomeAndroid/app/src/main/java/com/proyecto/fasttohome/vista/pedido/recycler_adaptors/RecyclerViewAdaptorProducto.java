@@ -14,6 +14,7 @@ import com.proyecto.fasttohome.modelo.Cesta;
 import com.proyecto.fasttohome.modelo.Producto;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerViewAdaptorProducto.ViewHolder> {
@@ -33,7 +34,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
     }
 
     public List<Producto> listaProductos;
-    public ArrayList<Cesta> productosSeleccionados;
+    public HashMap<Integer,Cesta> productosSeleccionados;
 
     public RecyclerViewAdaptorProducto(List<Producto> listaProductos) {
         this.listaProductos = listaProductos;
@@ -54,7 +55,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         holder.precio.setText("Precio: " + listaProductos.get(position).getPrecio() + "€");
 
         holder.ADD.setOnClickListener(view -> {
-            
+
         });
         holder.DEL.setOnClickListener(view -> {
 
