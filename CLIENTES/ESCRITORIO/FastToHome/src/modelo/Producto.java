@@ -240,13 +240,21 @@ public class Producto {
     }
     
     /**
+     * Devuelve el objeto de tipo Usuario en forma de JSon
      * 
-     * @return 
+     * @return el objeto de tipo Categoria en forma de JSon
+     * @since 1.0
      */
     public String getJSON(){
        return new Gson().toJson(this);
     }
-
+    
+    /**
+     * Devuelve una cadena con los atributos del objeto de tipo Producto
+     *
+     * @return Cadena con los atributos del objeto de tipo Producto
+     * @since 1.0
+     */
     @Override
     public String toString() {
         return "Producto{" + "id_producto=" + id_producto + ", id_negocio=" + id_negocio + ", nombre=" + nombre + ", precio=" + precio + ", descripcion=" + descripcion + ", stock=" + stock + ", id_img=" + id_img + '}';
