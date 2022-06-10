@@ -134,15 +134,20 @@ public class Pedido {
     }
     
     /**
-     * Devuelve el número que identidfica el usuario donde se ha realizado el pedido en la base de datos
+     * Devuelve el número que identifica el usuario donde se ha realizado el pedido en la base de datos
      * 
-     * @return Número que identidfica el usuario donde se ha realizado el pedido en la base de datos
+     * @return Número que identifica el usuario donde se ha realizado el pedido en la base de datos
      * @since 1.0
      */
     public int getId_usuario() {
         return id_usuario;
     }
-
+    
+    /**
+     * Establece el Número que identifica el usuario donde se ha realizado el pedido en la base de datos
+     * 
+     * @param id_usuario 
+     */
     public void setId_usuario(int id_usuario) {
         this.id_usuario = id_usuario;
     }
