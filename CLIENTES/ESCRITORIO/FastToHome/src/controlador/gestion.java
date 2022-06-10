@@ -32,12 +32,11 @@ import org.apache.http.protocol.HTTP;
 public class gestion {
     
     /**
-     *  
+     * Realiza una consulta de insercción, modificación o actualización y comprueba si se ha realizado la consulta
      * 
      * @param peticion objeto de tipo Peticion con el comando a realizar por el php y datos para la
      * consulta
-     * @return JsonObject con las filas que se han pedido en la consulta y sus
-     * atributos
+     * @return 
      * @since 1.0
      */
     public static boolean hacerConsulta(Peticion peticion) {
