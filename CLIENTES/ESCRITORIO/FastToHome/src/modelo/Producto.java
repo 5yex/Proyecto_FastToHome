@@ -28,8 +28,26 @@ public class Producto {
      * @since 1.0
      */
     private int id_negocio;
+    
+    /**
+     * Nombre del producto
+     * 
+     * @since 1.0
+     */
     private String nombre;
+    
+    /**
+     * Precio del producto
+     * 
+     * @since 1.0
+     */
     private double precio;
+    
+    /**
+     * Descripción del producto
+     * 
+     * @since 1.0
+     */
     private String descripcion;
     private int stock;
     private int id_img;
