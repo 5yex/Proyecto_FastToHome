@@ -48,6 +48,10 @@ public class Negocio {
      * @since 1.0
      */
     private String nombre;
+    
+    /**
+     * Descripción del negocio
+     */
     private String descripcion;
     private int id_img;
 
