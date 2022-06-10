@@ -28,6 +28,12 @@ public class Direccion {
      * @since 1.0
      */
     private String calle;
+    
+    /**
+     * Número de la vivienda o negocio
+     * 
+     * @since 1.0
+     */
     private int numero;
     private String ciudad;
     private String otros;
