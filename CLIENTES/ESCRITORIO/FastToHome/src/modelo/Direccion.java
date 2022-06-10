@@ -56,17 +56,15 @@ public class Direccion {
      * @since 1.0
      */
     private int codigo_postal;
+    
+    
     private int coordenadas;
+    
+    /**
+     * Dirección valida 
+     */
     private boolean valida;
-
-    public boolean isValida() {
-        return valida;
-    }
-
-    public void setValida(boolean valida) {
-        this.valida = valida;
-    }
-
+    
     public Direccion(int id_direccion, String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenadas) {
         this.id_direccion = id_direccion;
         this.calle = calle;
@@ -93,6 +91,16 @@ public class Direccion {
     public Direccion() {
         this.valida = false;
     }
+
+    public boolean isValida() {
+        return valida;
+    }
+
+    public void setValida(boolean valida) {
+        this.valida = valida;
+    }
+
+    
 
     public int getId_direccion() {
         return id_direccion;
