@@ -74,6 +74,7 @@ public class Producto {
      * Establece el número que identifica a la imagen del producto en la base de datos
      * 
      * @param id_img Número que identifica a la imagen del producto en la base de datos
+     * @since 1.0
      */
     public void setId_img(int id_img) {
         this.id_img = id_img;
