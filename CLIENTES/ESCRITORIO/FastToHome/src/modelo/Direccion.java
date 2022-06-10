@@ -222,7 +222,13 @@ public class Direccion {
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
     }
-
+    
+    /**
+     * Devuelve los otros datos de la dirección
+     * 
+     * @return Otros datos de la dirección
+     * @since 1.0
+     */
     public String getOtros() {
         return otros;
     }
