@@ -91,10 +91,9 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
         holder.nombre.setText(listaNegocios.get(position).getNombre());
         //holder.descripcion.setText(listaNegocios.get(position).getDescripcion());
         holder.usuario = usuario;
-        holder.negocio = new Negocio(listaNegocios.get(position).getId_negocio());
         Picasso.get().setLoggingEnabled(true);
         Picasso.get().load(listaNegocios.get(position).getUrl_imagen()).into(holder.image);
-
+        holder.negocio = new Negocio(listaNegocios.get(position).getId_negocio());
         //holder.image.setImageBitmap(ImagenesUtil.BaseStringToBitmap(listaNegocios.get(position).getId_img()));
         //holder.categoria.setText(listaNegocios.get(position).getId_categoria());
 
