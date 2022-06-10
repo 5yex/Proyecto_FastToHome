@@ -277,6 +277,7 @@ public class Negocio {
         this.id_img = id_img;
     }
     
+    
     public String getJSON(){
        return new Gson().toJson(this);
     }
