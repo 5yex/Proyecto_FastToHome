@@ -116,7 +116,7 @@ class Negocio extends Conexion {
     }
     
     
-    public function obtenerTodosNegociosImagen(){
+    public function obtenerTodosNegociosImagenUrl(){
         $sql = "SELECT * FROM negocio INNER JOIN imagenes on negocio.imagenes_id = imagenes.id";
         
         $sentencia = $this->dblink->prepare($sql);
