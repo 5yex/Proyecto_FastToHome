@@ -51,7 +51,13 @@ public class UsuarioDao {
         return idCliente;
 
     }
-
+    
+    /**
+     * Realiza la consulta para obtener la contraseña encriptada y el identificador de un usario en la base de datos
+     * 
+     * @param user objeto de tipo Usuario con los datos del usaurip
+     * @return objeto de tipo usario con la contraseña encriptada e identificador
+     */
     public static Usuario getHash(Usuario user) {
         JsonObject ob = gestion.consultaSeleccionUnico(new Peticion("getHash", user.getJSON()));
         if (ob != null) {
