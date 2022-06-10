@@ -20,9 +20,9 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleMarginEnd="55dp"
-            app:expandedTitleMarginStart="48dp"
-            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:expandedTitleMarginEnd="0dp"
+            app:expandedTitleMarginStart="10dp"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Display2"
             app:expandedTitleTextColor="#000000"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
