@@ -63,7 +63,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
                     for (int i = 0; i < arrayDeJson.length(); i++) {
                         JSONObject objetoNegocioJSon = arrayDeJson.getJSONObject(i);
                         Negocio negocio = new Negocio();
-                        negocio.setId_negocio(Integer.parseInt(objetoNegocioJSon.get("id").toString()));
+                        negocio.setId_negocio(objetoNegocioJSon.getInt("id"));
                         negocio.setNombre(objetoNegocioJSon.get("Nombre").toString());
                         negocio.setDescripcion(objetoNegocioJSon.get("Descripcion").toString());
                         try{
