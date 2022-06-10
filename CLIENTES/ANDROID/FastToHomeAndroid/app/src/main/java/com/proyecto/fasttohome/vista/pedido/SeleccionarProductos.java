@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.databinding.ActivitySeleccionarProductosBinding;
+import com.proyecto.fasttohome.modelo.Cesta;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Producto;
@@ -41,6 +42,7 @@ import java.util.Map;
 public class SeleccionarProductos extends AppCompatActivity {
 
     private ActivitySeleccionarProductosBinding binding;
+    private HashMap<Integer, Cesta> productosSeleccionados;
     private RecyclerView recyclerViewProducto;
     private RecyclerViewAdaptorProducto adaptorProducto;
     private Usuario usuario;
@@ -63,6 +65,7 @@ public class SeleccionarProductos extends AppCompatActivity {
         toolBarLayout.setTitle(negocio.getNombre());
         Picasso.get().load(negocio.getUrl_imagen()).into(imagenNegocio);
         FloatingActionButton fab = binding.fab;
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
