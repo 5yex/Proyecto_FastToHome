@@ -103,7 +103,11 @@ public class Producto {
         this.descripcion = descripcion;
         this.stock = stock;
     }
-    
+    /**
+     * Construye un Producto con los parametros indicados
+     * 
+     * @param id_negocio Número que identidfica el negocio al que pertenece el producto en la base de datos
+     */
     public Producto(int id_negocio) {
         this.id_negocio = id_negocio;
     }
