@@ -266,7 +266,13 @@ public class Negocio {
     public int getId_img() {
         return id_img;
     }
-
+    
+    /**
+     * Establece el número que identifica la imagen asociada al negocio en la base de datos
+     * 
+     * @param id_img Número que identifica la imagen asociada al negocio en la base de datos
+     * @since 1.0
+     */
     public void setId_img(int id_img) {
         this.id_img = id_img;
     }
