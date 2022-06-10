@@ -162,8 +162,8 @@ public class PedidoDao {
     /**
      * Realiza la consulta para devolver un objeto de tipo Pedido
      * 
-     * @param pedido
-     * @return 
+     * @param pedido objeto de tipo Pedido del que queremos obtener más información
+     * @return objeto de tipo Pedido con toda su información
      */
     public static Pedido obtenerPedido(Pedido pedido) {
         SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
