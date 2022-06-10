@@ -158,7 +158,13 @@ public class PedidoDao {
     public static boolean actualizarEstadoPedido(Pedido pedido) {
         return gestion.hacerConsulta(new Peticion("actualizar_estado_pedido", pedido.getJSON()));
     }
-
+    
+    /**
+     * Realiza la consulta para devolver un objeto de tipo Pedido
+     * 
+     * @param pedido
+     * @return 
+     */
     public static Pedido obtenerPedido(Pedido pedido) {
         SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
         String json = pedido.getJSON();
