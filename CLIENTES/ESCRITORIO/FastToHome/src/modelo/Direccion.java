@@ -49,6 +49,12 @@ public class Direccion {
      * @since 1.0
      */
     private String otros;
+    
+    /**
+     * Codigo postal
+     * 
+     * @since 1.0
+     */
     private int codigo_postal;
     private int coordenadas;
     private boolean valida;
