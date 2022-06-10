@@ -59,6 +59,12 @@ public class NegocioDao {
         return negocio;
     }
     
+    /**
+     * Actualiza el negocio en la base de datos y comprueba si se ha actualizado correctamente
+     * 
+     * @param negocio objeto de tipo Negocio con los datos a ser actualizados
+     * @return true si se ha actuaizado con éxito, false en caso contrario
+     */
     public static boolean actualizarNegocio(Negocio negocio){
         return gestion.hacerConsulta(new Peticion("actualizar_negocio", negocio.getJSON()));
     }
