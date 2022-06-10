@@ -162,7 +162,13 @@ public class Direccion {
     public void setId_direccion(int id_direccion) {
         this.id_direccion = id_direccion;
     }
-
+    
+    /**
+     * Devuelve el nombre de la calle
+     * 
+     * @return Nombre de la calle
+     * @since 1.0
+     */
     public String getCalle() {
         return calle;
     }
