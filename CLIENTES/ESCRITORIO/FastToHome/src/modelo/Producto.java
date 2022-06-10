@@ -59,11 +59,22 @@ public class Producto {
      * @since 1.0
      */
     private int id_img;
-
+    
+    /**
+     * Devuelve el número que identifica a la imagen del producto en la base de datos
+     * 
+     * @return Número que identifica a la imagen del producto en la base de datos
+     * @since 1.0
+     */
     public int getId_img() {
         return id_img;
     }
-
+    
+    /**
+     * Establece el número que identifica a la imagen del producto en la base de datos
+     * 
+     * @param id_img Número que identifica a la imagen del producto en la base de datos
+     */
     public void setId_img(int id_img) {
         this.id_img = id_img;
     }
