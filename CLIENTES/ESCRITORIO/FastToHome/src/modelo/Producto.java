@@ -66,6 +66,27 @@ public class Producto {
     public Producto() {
     }
     
+    public Producto(int id_negocio, String nombre, double precio, String descripcion, int stock) {
+        this.id_negocio = id_negocio;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.descripcion = descripcion;
+        this.stock = stock;
+    }
+
+    public Producto(int id_producto, int id_negocio, String nombre, double precio, String descripcion, int stock) {
+        this.id_producto = id_producto;
+        this.id_negocio = id_negocio;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.descripcion = descripcion;
+        this.stock = stock;
+    }
+    
+    public Producto(int id_negocio) {
+        this.id_negocio = id_negocio;
+    }
+    
     /**
      * Devuelve el número que identifica a la imagen del producto en la base de datos
      * 
@@ -85,29 +106,10 @@ public class Producto {
     public void setId_img(int id_img) {
         this.id_img = id_img;
     }
+
     
+
     
-
-    public Producto(int id_negocio, String nombre, double precio, String descripcion, int stock) {
-        this.id_negocio = id_negocio;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.descripcion = descripcion;
-        this.stock = stock;
-    }
-
-    public Producto(int id_producto, int id_negocio, String nombre, double precio, String descripcion, int stock) {
-        this.id_producto = id_producto;
-        this.id_negocio = id_negocio;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.descripcion = descripcion;
-        this.stock = stock;
-    }
-
-    public Producto(int id_negocio) {
-        this.id_negocio = id_negocio;
-    }
 
     public int getId_producto() {
         return id_producto;
