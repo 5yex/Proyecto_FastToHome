@@ -107,7 +107,7 @@ class Negocio extends Conexion {
     }
     
     public function obtenerTodosNegocios(){
-        $sql = "SELECT * FROM negocio";
+        $sql = "SELECT * FROM negocio INNER JOIN imagenes on negocio.imagenes_id = imagenes.id";
         
         $sentencia = $this->dblink->prepare($sql);
         
@@ -144,6 +144,7 @@ class Negocio extends Conexion {
         $sentencia->execute();            
         return $sentencia->fetchAll(PDO::FETCH_OBJ);        
     }
+    
 
     public function modificarNegocio() {
         $sql = "UPDATE negocio set imagenes_id = :img, Nombre = :nom, Descripcion = :des, id_categoria = :cat  where id = :id ";
