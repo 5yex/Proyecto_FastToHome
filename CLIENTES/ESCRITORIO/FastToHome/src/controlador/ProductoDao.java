@@ -19,13 +19,17 @@ import modelo.Producto;
  * @since 1.0
  */
 public class ProductoDao {
-
+    
+    /**
+     * Inserta un nuevo producto en la base de datos y comprueba si se ha insertado
+     * 
+     * @param product objeto de tipo Producto con los datos del producto a insertar
+     * @return true si se ha insertado el el producto corretamente, false en caso contrario
+     */
     public static boolean nuevoProducto(Producto product) {
         return gestion.hacerConsulta(new Peticion("nuevo_producto", product.getJSON()));
     }
-
-    
-    
+ 
     public static ArrayList<Producto> selecciónProductosNegocio(Negocio negocio) {
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_productos_negocio", negocio.getJSON()));
         ArrayList<Producto> listaProductos = new ArrayList<>();
