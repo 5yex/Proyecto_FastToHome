@@ -22,7 +22,12 @@ public class Pedido {
     private String estado;
     private double total;
     private String transporte;
-
+    
+    /**
+     * Construye un Pedido con parametros a <code>null</code>
+     * 
+     * @since 1.0
+     */
     public Pedido() {
     }
 
