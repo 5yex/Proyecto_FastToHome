@@ -173,8 +173,9 @@ public class Producto {
     }
     
     /**
-     * Devuelve el número que identidfica el negocio al que pertenece el producto en la base de datos
-     * @return 1.0
+     * Devuelve el nombre del producto
+     * 
+     * @return Nombre del producto 
      * @since 1.0
      */
     public String getNombre() {
