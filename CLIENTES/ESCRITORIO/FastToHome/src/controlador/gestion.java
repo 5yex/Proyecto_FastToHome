@@ -32,7 +32,8 @@ import org.apache.http.protocol.HTTP;
 public class gestion {
     
     /**
-     *
+     *  
+     * 
      * @param peticion objeto de tipo Peticion con el comando a realizar por el php y datos para la
      * consulta
      * @return JsonObject con las filas que se han pedido en la consulta y sus
