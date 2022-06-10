@@ -194,13 +194,20 @@ public class Pedido {
     
     /**
      * Devuelve el estado en el que se encuentra el pedido
+     * 
      * @return Estado en el que se encuentra el pedido
      * @since 1.0
      */
     public String getEstado() {
         return estado;
     }
-
+    
+    /**
+     * Establece el estado en el que se encuentra el pedido
+     * 
+     * @param estado Estado en el que se encuentra el pedido
+     * @since 1.0
+     */
     public void setEstado(String estado) {
         this.estado = estado;
     }
