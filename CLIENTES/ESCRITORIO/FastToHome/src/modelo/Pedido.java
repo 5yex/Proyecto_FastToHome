@@ -157,6 +157,7 @@ public class Pedido {
      * Devuelve el número que identifica el negocio donde se ha realizado el pedido en la base de datos
      * 
      * @return Número que identifica el negocio donde se ha realizado el pedido en la base de datos
+     * @since 1.0
      */
     public int getId_negocio() {
         return id_negocio;
