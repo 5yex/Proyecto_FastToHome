@@ -159,6 +159,7 @@ public class Negocio {
     
     /**
      * Devuelve el número que identifica la dirección del negocio en la base de datos
+     * 
      * @return Número que identifica la dirección del negocio en la base de datos
      * @since 1.0
      */
