@@ -254,13 +254,20 @@ public class Direccion {
     }
     
     /**
+     * Devuelve el codigo postal
      * 
-     * @param codigo_postal 
+     * @param codigo_postal Codigo postal
+     * @since 1.0
      */
     public void setCodigo_postal(int codigo_postal) {
         this.codigo_postal = codigo_postal;
     }
-
+    
+    /**
+     * 
+     * 
+     * @return 
+     */
     public int getCoordenadas() {
         return coordenadas;
     }
