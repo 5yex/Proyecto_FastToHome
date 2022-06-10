@@ -170,17 +170,29 @@ public class Negocio {
     /**
      * Establece el número que identifica la dirección del negocio en la base de datos
      * 
-     * @param id_direccion
+     * @param id_direccion Número que identifica la dirección del negocio en la base de datos
      * @since 1.0
      */
     public void setId_direccion(int id_direccion) {
         this.id_direccion = id_direccion;
     }
-
+    
+    /**
+     * Devuelve el número que identifica la categoría del negocio en la base de datos
+     * 
+     * @return Número que identifica la categoría del negocio en la base de datos
+     * @since 1.0
+     */
     public int getId_categoria() {
         return id_categoria;
     }
-
+    
+    /**
+     * Establece el número que identifica la categoría del negocio en la base de datos
+     * 
+     * @param id_categoria Número que identifica la categoría del negocio en la base de datos
+     * @since 1.0
+     */
     public void setId_categoria(int id_categoria) {
         this.id_categoria = id_categoria;
     }
