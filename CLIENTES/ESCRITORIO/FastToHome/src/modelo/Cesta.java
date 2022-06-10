@@ -108,7 +108,13 @@ public class Cesta {
     public void setId_producto(int id_producto) {
         this.id_producto = id_producto;
     }
-
+    
+    /**
+     * Devuelve el número que identifica el pedido al que pertenece la cesta
+     * 
+     * @return Número que identifica el pedido al que pertenece la cesta
+     * @since 1.0
+     */
     public int getId_pedido() {
         return id_pedido;
     }
