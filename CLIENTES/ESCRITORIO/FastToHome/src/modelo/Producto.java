@@ -191,7 +191,13 @@ public class Producto {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    
+    /**
+     * Devuelve el precio del producto
+     * 
+     * @return Precio del producto
+     * @since 1.0
+     */
     public double getPrecio() {
         return precio;
     }
