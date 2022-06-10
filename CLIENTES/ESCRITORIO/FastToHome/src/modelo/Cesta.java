@@ -34,10 +34,21 @@ public class Cesta {
      * Cantidad de un producto
      */
     private int cantidad;
-
+    
+    /**
+     * Contruye una Cesta con parametros a <code>null</code>
+     */
     public Cesta() {
     }
-
+    
+    /**
+     * Contruye una Cesta con los parametros indicado
+     * 
+     * @param id_cesta
+     * @param id_producto
+     * @param id_pedido
+     * @param cantidad 
+     */
     public Cesta(int id_cesta, int id_producto, int id_pedido, int cantidad) {
         this.id_cesta = id_cesta;
         this.id_producto = id_producto;
