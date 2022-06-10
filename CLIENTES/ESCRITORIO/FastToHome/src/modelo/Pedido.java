@@ -36,8 +36,26 @@ public class Pedido {
      * @since 1.0
      */
     private int id_negocio;
+    
+    /**
+     * Fecha y hora del pedido
+     * 
+     * @since 1.0
+     */
     private Date fecha_hora;
+    
+    /**
+     * Estado en el que se encuentra el pedido
+     * 
+     * @since 1.0
+     */
     private String estado;
+    
+    /**
+     * Total de dinero pagado
+     * 
+     * @since 1.0
+     */
     private double total;
     private String transporte;
     
