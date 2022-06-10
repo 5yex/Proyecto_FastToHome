@@ -69,12 +69,13 @@ public class Direccion {
     
     /**
      * Construye una Direccion con los parametros indicados
+     * 
      * @param id_direccion Número que identifica una direccíón en la base de datos
      * @param calle Nombre de la calle
-     * @param numero
-     * @param ciudad
-     * @param otros
-     * @param codigo_postal
+     * @param numero Número de la vivienda o negocio
+     * @param ciudad Nombre de la ciudad
+     * @param otros Otros datos de la dirección
+     * @param codigo_postal Codigo postal
      * @param coordenadas 
      */
     public Direccion(int id_direccion, String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenadas) {
@@ -86,7 +87,17 @@ public class Direccion {
         this.codigo_postal = codigo_postal;
         this.coordenadas = coordenadas;
     }
-
+    
+    /**
+     * Construye una Direccion con los parametros indicados
+     * 
+     * @param calle Nombre de la calle
+     * @param numero Número de la vivienda o negocio
+     * @param ciudad Nombre de la ciudad
+     * @param otros Otros datos de la dirección
+     * @param codigo_postal Codigo postal
+     * @param coordenadas 
+     */
     public Direccion(String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenadas) {
         this.calle = calle;
         this.numero = numero;
@@ -95,7 +106,12 @@ public class Direccion {
         this.codigo_postal = codigo_postal;
         this.coordenadas = coordenadas;
     }
-
+    
+    /**
+     * Construye una Direccion con los parametros indicados
+     * 
+     * @param id_direccion Número que identifica una direccíón en la base de datos
+     */
     public Direccion(int id_direccion) {
         this.id_direccion = id_direccion;
     }
