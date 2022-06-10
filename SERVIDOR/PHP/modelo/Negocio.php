@@ -107,7 +107,7 @@ class Negocio extends Conexion {
     }
     
     public function obtenerTodosNegocios(){
-        $sql = "SELECT * FROM negocio INNER JOIN imagenes on negocio.imagenes_id = imagenes.id";
+        $sql = "SELECT n.id,n.id_mercader,n.id_categoria,n.Nombre,n.Descripcion,n.direccion_id,i.url FROM negocio n INNER JOIN imagenes i on n.imagenes_id = i.id; ";
         
         $sentencia = $this->dblink->prepare($sql);
         
