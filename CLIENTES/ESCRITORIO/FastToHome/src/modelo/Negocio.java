@@ -51,6 +51,8 @@ public class Negocio {
     
     /**
      * Descripción del negocio
+     * 
+     * @since 1.0
      */
     private String descripcion;
     private int id_img;
