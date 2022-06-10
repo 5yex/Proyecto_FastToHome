@@ -44,10 +44,10 @@ public class Cesta {
     /**
      * Contruye una Cesta con los parametros indicado
      * 
-     * @param id_cesta
-     * @param id_producto
-     * @param id_pedido
-     * @param cantidad 
+     * @param id_cesta Número que identifica la cesta en la base de datos
+     * @param id_producto Número que identifica el producto introducido en la cesta en la base de datos
+     * @param id_pedido Número que identifica el pedido al que pertenece la cesta
+     * @param cantidad Cantidad de un producto
      */
     public Cesta(int id_cesta, int id_producto, int id_pedido, int cantidad) {
         this.id_cesta = id_cesta;
@@ -55,7 +55,14 @@ public class Cesta {
         this.id_pedido = id_pedido;
         this.cantidad = cantidad;
     }
-
+    
+    /**
+     * Contruye una Cesta con los parametros indicado
+     * 
+     * @param id_producto Número que identifica el producto introducido en la cesta en la base de datos
+     * @param id_pedido Número que identifica el pedido al que pertenece la cesta
+     * @param cantidad Cantidad de un producto
+     */
     public Cesta(int id_producto, int id_pedido, int cantidad) {
         this.id_producto = id_producto;
         this.id_pedido = id_pedido;
