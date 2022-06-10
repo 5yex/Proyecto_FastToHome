@@ -23,7 +23,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 
 /**
- * 
+ * Clase con las distintas consultas al servidor web
  * 
  * @author Jose Miguel Calderón, Jesús Rueda
  * @version 1.0
