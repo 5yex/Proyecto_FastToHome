@@ -232,7 +232,13 @@ public class Direccion {
     public String getOtros() {
         return otros;
     }
-
+    
+    /**
+     * Estable los otros datos de la dirección
+     * 
+     * @param otros Otros datos de la dirección
+     * @since 1.0
+     */
     public void setOtros(String otros) {
         this.otros = otros;
     }
