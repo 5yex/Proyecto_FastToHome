@@ -261,15 +261,6 @@ public class Pedido {
     public String getJSON(){
        return new Gson().toJson(this);
     }
-    
-    /**
-     * Devuelve un array de objetos con la información para rellenar la fila de una tabla con información del pedido
-     * 
-     * @return Array de objetos con la información para rellenar la fila de una tabla con información del pedido
-     */
-    public Object[] getRow() {
-        return new Object[]{id_pedido, id_usuario, transporte, total, fecha_hora, estado};
-    }
 
     @Override
     public String toString() {
