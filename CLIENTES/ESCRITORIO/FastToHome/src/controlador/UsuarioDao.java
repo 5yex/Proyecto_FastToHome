@@ -156,10 +156,10 @@ public class UsuarioDao {
     }
 
     /**
-     * Realiza la consulta para obtener la lista de usuarios
+     * Realiza la consulta para obtener la lista de usuarios dependiendo del comando
      *
-     * @param comando_peticion
-     * @return
+     * @param comando_peticion cadena con el comando concreto
+     * @return lista de usuarios de del comando concreto
      */
     public static ArrayList<Usuario> seleccionUsuarios(String comando_peticion) {
 
