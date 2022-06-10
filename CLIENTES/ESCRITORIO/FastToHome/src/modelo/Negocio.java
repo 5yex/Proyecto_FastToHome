@@ -196,7 +196,13 @@ public class Negocio {
     public void setId_categoria(int id_categoria) {
         this.id_categoria = id_categoria;
     }
-
+    
+    /**
+     * Devuelve el número que identifica al propietario del negocio en la base de datos
+     * 
+     * @return Número que identifica al propietario del negocio en la base de datos
+     * @since 1.0
+     */
     public int getId_mercader() {
         return id_mercader;
     }
