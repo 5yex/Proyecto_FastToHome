@@ -61,14 +61,16 @@ public class Direccion {
     private int coordenadas;
     
     /**
-     * Dirección valida 
+     * Dirección valida
+     * 
+     * @since 1.0
      */
     private boolean valida;
     
     /**
      * Construye una Direccion con los parametros indicados
-     * @param id_direccion
-     * @param calle
+     * @param id_direccion Número que identifica una direccíón en la base de datos
+     * @param calle Nombre de la calle
      * @param numero
      * @param ciudad
      * @param otros
