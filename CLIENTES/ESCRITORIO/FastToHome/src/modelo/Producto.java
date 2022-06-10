@@ -84,7 +84,17 @@ public class Producto {
         this.descripcion = descripcion;
         this.stock = stock;
     }
-
+    
+    /**
+     * Construye un Producto con los parametros indicados
+     * 
+     * @param id_producto Número que identifica al producto en la base de datos
+     * @param id_negocio Número que identidfica el negocio al que pertenece el producto en la base de datos
+     * @param nombre Nombre del producto
+     * @param precio Precio del producto
+     * @param descripcion Descripción del producto
+     * @param stock 
+     */
     public Producto(int id_producto, int id_negocio, String nombre, double precio, String descripcion, int stock) {
         this.id_producto = id_producto;
         this.id_negocio = id_negocio;
