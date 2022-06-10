@@ -14,7 +14,8 @@ import com.google.gson.Gson;
  * @since 10
  */
 public class Producto {
-
+    
+    
     private int id_producto;
     private int id_negocio;
     private String nombre;
