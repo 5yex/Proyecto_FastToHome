@@ -211,7 +211,13 @@ public class Pedido {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-
+    
+    /**
+     * Devuelve el total de dinero pagado
+     * 
+     * @return Total de dinero pagado
+     * @since 1.0
+     */
     public double getTotal() {
         return total;
     }
