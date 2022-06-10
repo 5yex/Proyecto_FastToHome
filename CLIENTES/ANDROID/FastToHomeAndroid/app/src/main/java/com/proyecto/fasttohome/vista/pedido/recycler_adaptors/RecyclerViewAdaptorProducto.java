@@ -18,14 +18,15 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
         private TextView nombre, descripcion, precio;
-        private Button buy;
+        private Button ADD;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             nombre = (TextView) itemView.findViewById(R.id.tvNombreProducto);
             descripcion = (TextView) itemView.findViewById(R.id.tvDescripcionProducto);
             precio = (TextView) itemView.findViewById(R.id.tvPrecioProducto);
-            buy = (Button) itemView.findViewById(R.id.buy);
+            ADD = (Button) itemView.findViewById(R.id.ADD);
+            DEL = (Button) itemView.findViewById(R.id.DEL);
         }
     }
 
@@ -48,8 +49,8 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         holder.nombre.setText(listaProductos.get(position).getNombre());
         holder.descripcion.setText(listaProductos.get(position).getDescripcion());
         holder.precio.setText("Precio: " + listaProductos.get(position).getPrecio() + "€");
-        holder.buy.setOnClickListener(view -> {
-            
+        holder.ADD.setOnClickListener(view -> {
+
         });
     }
 

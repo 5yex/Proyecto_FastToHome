@@ -54,12 +54,13 @@
                     android:layout_height="match_parent">
 
                     <Button
+                        android:id="@+id/ADD"
                         android:layout_width="205dp"
                         android:layout_height="37dp"
                         android:text="AÑADIR UNIDAD" />
 
                     <Button
-                        android:id="@+id/button5"
+                        android:id="@+id/DEL"
                         android:layout_width="wrap_content"
                         android:layout_height="37dp"
                         android:text="ELIMINAR UNIDAD" />
