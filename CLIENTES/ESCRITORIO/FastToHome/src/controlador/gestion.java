@@ -129,6 +129,14 @@ public class gestion {
         }
     }
     
+    /**
+     * Realiza una consulta de selección que devuelve un varios objetos o elementos de un mismo tipo
+     * 
+     * @param peticion objeto de tipo Peticion con el comando a realizar por el php y datos para la
+     * consulta
+     * @return JsonObject con las filas que se han pedido en la consulta y sus
+     * atributos
+     */
     public static JsonArray consultaSeleccion(Peticion peticion) {
         String json = null;
         try {
@@ -174,6 +182,13 @@ public class gestion {
         }
     }
     
+    /**
+     * Devuelve una cadena con una imagen en base 64
+     *
+     * @param peticion objeto de tipo Peticion con el comando a realizar por el php y datos para la
+     * consulta
+     * @return una cadena con una imagen en base 64
+     */
     public static String consultaSeleccionImagen(Peticion peticion) {
         String json = null;
         try {
