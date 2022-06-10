@@ -281,9 +281,9 @@ public class Direccion {
     }
     
     /**
-     * Devuelve el objeto de tipo Usuario en forma de JSon
+     * Devuelve el objeto de tipo Direccion en forma de JSon
      * 
-     * @return el objeto de tipo Categoria en forma de JSon
+     * @return el objeto de tipo Direccion en forma de JSon
      * @since 1.0
      */
     public String getJSON() {
