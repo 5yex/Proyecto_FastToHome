@@ -158,12 +158,12 @@ public class UsuarioDao {
     /**
      * Realiza la consulta para obtener la lista de usuarios
      *
-     * @param peticion
+     * @param comando_peticion
      * @return
      */
-    public static ArrayList<Usuario> seleccionUsuarios(String peticion) {
+    public static ArrayList<Usuario> seleccionUsuarios(String comando_peticion) {
 
-        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion(peticion, null));
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion(comando_peticion, null));
 
         ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
 
