@@ -27,6 +27,7 @@ import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Producto;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.vista.pedido.recycler_adaptors.RecyclerViewAdaptorProducto;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -59,6 +60,8 @@ public class SeleccionarProductos extends AppCompatActivity {
 
         imagenNegocio = findViewById(R.id.imgNegocioS);
         toolBarLayout.setTitle(negocio.getNombre());
+        Picasso.get().load(negocio.getUrl_imagen()).into(imagenNegocio);
+
 
         FloatingActionButton fab = binding.fab;
         fab.setOnClickListener(new View.OnClickListener() {
