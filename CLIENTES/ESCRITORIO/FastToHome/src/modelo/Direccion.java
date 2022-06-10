@@ -19,7 +19,6 @@ public class Direccion {
     private String otros;
     private int codigo_postal;
     private int coordenadas;
-    private int id_imagen;
     private boolean valida;
 
     public boolean isValida() {
@@ -28,14 +27,6 @@ public class Direccion {
 
     public void setValida(boolean valida) {
         this.valida = valida;
-    }
-
-    public int getId_imagen() {
-        return id_imagen;
-    }
-
-    public void setId_imagen(int id_imagen) {
-        this.id_imagen = id_imagen;
     }
 
     public Direccion(int id_direccion, String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenadas) {
