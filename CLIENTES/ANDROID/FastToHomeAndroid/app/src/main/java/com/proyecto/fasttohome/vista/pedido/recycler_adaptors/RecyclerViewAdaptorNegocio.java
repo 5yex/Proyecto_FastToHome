@@ -7,12 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.util.ImagenesUtil;
 import com.proyecto.fasttohome.vista.pedido.SeleccionarProductos;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Usuario;
@@ -23,7 +25,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
         private TextView nombre, descripcion;
-        private Bitmap image;
+        private ImageView image;
         private Usuario usuario;
         private Negocio negocio;
         private Button pedir;
@@ -72,7 +74,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
         holder.descripcion.setText(listaNegocios.get(position).getDescripcion());
         holder.usuario = usuario;
         holder.negocio = new Negocio(listaNegocios.get(position).getId_negocio());
-        holder.
+        holder.image.setImageBitmap(ImagenesUtil.BaseStringToBitmap(listaNegocios.get(position).get));
         //holder.categoria.setText(listaNegocios.get(position).getId_categoria());
     }
 
