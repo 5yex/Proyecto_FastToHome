@@ -7,8 +7,9 @@ package modelo;
 import com.google.gson.Gson;
 
 /**
- *
- * @author jmcbg
+ * Clase que representa la cesta con los productos del pedido
+ * 
+ * @author Jose Miguel Cálderón, Jesús Rueda
  */
 public class Cesta {
     
