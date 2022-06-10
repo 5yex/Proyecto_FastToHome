@@ -105,7 +105,14 @@ public class PedidoDao {
         }
         return listaPedidosEnPreparacion;
     }
-
+    
+    /**
+     * Realiza la consulta para devolver una lista con los todos los pedidos del día
+     * que están almacenados en la base de datos
+     * 
+     * @param negocio objeto de tipo Negocio del que vamos a obtener sus pedidos
+     * @return Lista con los todos los pedidos del día que están almacenados en la base de datos
+     */
     public static ArrayList<Pedido> seleccionTodosPedidos(Negocio negocio) {
         SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
 
