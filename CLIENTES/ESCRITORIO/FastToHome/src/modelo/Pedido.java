@@ -182,7 +182,12 @@ public class Pedido {
     public Date getFecha_hora() {
         return fecha_hora;
     }
-
+    
+    /**
+     * Establece la fecha y hora del pedido
+     * @param fecha_hora Fecha y hora del pedido
+     * @since 1.0
+     */
     public void setFecha_hora(Date fecha_hora) {
         this.fecha_hora = fecha_hora;
     }
