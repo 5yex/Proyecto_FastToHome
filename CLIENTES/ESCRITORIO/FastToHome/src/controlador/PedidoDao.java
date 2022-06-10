@@ -25,10 +25,11 @@ import modelo.Peticion;
 public class PedidoDao {
     
     /**
-     * Realiza la consulta para devolver una lista con los pedidos pagados que estan almacenados en la base de datos
+     * Realiza la consulta para devolver una lista con los pedidos del día pagados 
+     * que estan almacenados en la base de datos
      * 
-     * @param negocio
-     * @return 
+     * @param negocio objeto de tipo Negocio del que vamos a obtener sus pedidos
+     * @return Lista con los pedidos del día pagados que estan almacenados en la base de datos
      */
     public static ArrayList<Pedido> seleccionPedidosPagados(Negocio negocio) {
         SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
