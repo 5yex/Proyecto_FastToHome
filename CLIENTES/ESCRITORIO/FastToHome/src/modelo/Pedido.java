@@ -172,7 +172,13 @@ public class Pedido {
     public void setId_negocio(int id_negocio) {
         this.id_negocio = id_negocio;
     }
-
+    
+    /**
+     * Devuelve la fecha y hora del pedido
+     * 
+     * @return Fecha y hora del pedido 
+     * @since 1.0
+     */
     public Date getFecha_hora() {
         return fecha_hora;
     }
