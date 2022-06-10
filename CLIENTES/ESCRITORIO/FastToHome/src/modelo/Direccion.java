@@ -182,7 +182,13 @@ public class Direccion {
     public void setCalle(String calle) {
         this.calle = calle;
     }
-
+    
+    /**
+     * Devuelve el número de la vivienda o negocio
+     * 
+     * @return Número de la vivienda o negocio
+     * @since 1.0
+     */
     public int getNumero() {
         return numero;
     }
