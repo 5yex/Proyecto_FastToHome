@@ -57,6 +57,12 @@ public class Pedido {
      * @since 1.0
      */
     private double total;
+    
+    /**
+     * Forma de transporte del pedido
+     * 
+     * @since 1.0
+     */
     private String transporte;
     
     /**
