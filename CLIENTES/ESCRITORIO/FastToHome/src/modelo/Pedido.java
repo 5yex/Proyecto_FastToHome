@@ -113,7 +113,12 @@ public class Pedido {
         this.transporte = transporte;
     }
     
-
+    /**
+     * Devuelve el número que identifica el pedido en la base de datos
+     * 
+     * @return Número que identifica el pedido en la base de datos
+     * @since 1.0
+     */
     public int getId_pedido() {
         return id_pedido;
     }
