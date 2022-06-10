@@ -7,8 +7,11 @@ package modelo;
 import com.google.gson.Gson;
 
 /**
- *
- * @author 
+ * Clase que representa un producto de un negocio
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
+ * @since 10
  */
 public class Producto {
 
