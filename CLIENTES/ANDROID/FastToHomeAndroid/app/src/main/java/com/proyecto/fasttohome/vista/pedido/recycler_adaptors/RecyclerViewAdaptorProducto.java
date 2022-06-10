@@ -35,7 +35,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
 
     public List<Producto> listaProductos;
     //El key (int) será un id de producto para localizarlo mejor
-    public HashMap<Integer,Cesta> productosSeleccionados;
+    public HashMap<Integer,Integer> productosSeleccionados;
 
     public RecyclerViewAdaptorProducto(List<Producto> listaProductos,HashMap<Integer,Cesta> productosSeleccionados) {
         this.listaProductos = listaProductos;
