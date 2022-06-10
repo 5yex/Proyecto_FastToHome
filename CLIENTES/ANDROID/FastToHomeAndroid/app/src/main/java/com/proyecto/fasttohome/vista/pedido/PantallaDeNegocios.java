@@ -109,9 +109,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
                         negocio.setNombre(objetoNegocioJSon.get("Nombre").toString());
                         negocio.setDescripcion(objetoNegocioJSon.get("Descripcion").toString());
                         if (objetoNegocioJSon.get("url") != null) {
-                            String imgUrl = getString(R.string.imgUrl) + objetoNegocioJSon.getString("url");
-                            Picasso.get().setLoggingEnabled(true);
-                            Picasso.get().load(imgUrl).in
+                            negocio.setUrl_imagen(objetoNegocioJSon.getString("url"));
                         }
                         negocios.add(negocio);
                     }
