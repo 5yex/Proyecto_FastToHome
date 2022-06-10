@@ -11,11 +11,20 @@ import modelo.Peticion;
 import modelo.Usuario;
 
 /**
- *
- * @author jmcbg
+ * Clase donde se realizan las consultas realicionadas con los usuarios
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
+ * @since 1.0
  */
 public class UsuarioDao {
-
+    
+    /**
+     * Inserta un nuevo usuario en la base de datos y comprueba si se ha insertado
+     * 
+     * @param user objeto de tipo Usuario con los datos del usuario a insertar
+     * @return true si se ha insertado el el usuario corretamente, false en caso contrario
+     */
     public static boolean nuevoUsuario(Usuario user) {
         return gestion.hacerConsulta(new Peticion("nuevo_usuario", user.getJSON()));
     }
