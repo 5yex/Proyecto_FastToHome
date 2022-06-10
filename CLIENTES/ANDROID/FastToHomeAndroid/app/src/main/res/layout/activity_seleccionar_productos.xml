@@ -64,7 +64,7 @@
     <Button
         android:id="@+id/button5"
         android:layout_width="192dp"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
         android:text="Button"
         app:layout_anchor="@id/include"
         app:layout_anchorGravity="center" />
