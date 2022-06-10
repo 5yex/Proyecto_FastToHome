@@ -37,7 +37,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
     //El key (int) será un id de producto para localizarlo mejor
     public HashMap<Integer,Integer> productosSeleccionados;
 
-    public RecyclerViewAdaptorProducto(List<Producto> listaProductos,HashMap<Integer,Cesta> productosSeleccionados) {
+    public RecyclerViewAdaptorProducto(List<Producto> listaProductos,HashMap<Integer,Integer> productosSeleccionados) {
         this.listaProductos = listaProductos;
         this.productosSeleccionados = productosSeleccionados;
     }
@@ -59,8 +59,10 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         holder.ADD.setOnClickListener(view -> {
             int productoActual = listaProductos.get(position).getId_producto();
             if(!productosSeleccionados.containsKey(productoActual)){
-
-                productosSeleccionados.put(new Cesta(productoActual,))
+                productosSeleccionados.put(productoActual,1);
+            }else{
+                productosSeleccionados.get(productoActual);
+                productosSeleccionados.
             };
         });
         holder.DEL.setOnClickListener(view -> {
