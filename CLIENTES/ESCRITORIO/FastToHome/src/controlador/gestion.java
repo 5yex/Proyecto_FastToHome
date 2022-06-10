@@ -30,7 +30,15 @@ import org.apache.http.protocol.HTTP;
  * @since 1.0
  */
 public class gestion {
-
+    
+    /**
+     *
+     * @param peticion objeto de tipo Peticion con el comando a realizar por el php y datos para la
+     * consulta
+     * @return JsonObject con las filas que se han pedido en la consulta y sus
+     * atributos
+     * @since 1.0
+     */
     public static boolean hacerConsulta(Peticion peticion) {
         //System.out.println(peticion.toString());
         String json = null;
@@ -70,9 +78,9 @@ public class gestion {
 
     /**
      *
-     * @param peticion Objeto con comando a realizar por el php y datos para la
+     * @param peticion objeto de tipo Peticion con el comando a realizar por el php y datos para la
      * consulta
-     * @return json object con las filas que se han pedido en la consulta y sus
+     * @return JsonObject con las filas que se han pedido en la consulta y sus
      * atributos
      */
     public static JsonObject consultaSeleccionUnico(Peticion peticion) {
