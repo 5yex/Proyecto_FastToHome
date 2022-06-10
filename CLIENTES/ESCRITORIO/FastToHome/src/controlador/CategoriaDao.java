@@ -20,17 +20,17 @@ import modelo.Peticion;
 public class CategoriaDao {
     
     /**
-     * Crea una nueva categoría y comprueba si se ha creado correctamente
+     * Inserta una nueva categoría en la base de datos y comprueba si se ha insertado correctamente
      * 
-     * @param categoria objeto de tipo Categoria a crear
-     * @return true si se ha creado la categoría con exito, false en caso contrario
+     * @param categoria objeto de tipo Categoria a insertar
+     * @return true si se ha insertado la categoría con exito, false en caso contrario
      */
     public static boolean nuevaCategoria(Categoria categoria) {
         return gestion.hacerConsulta(new Peticion("nueva_categoria", categoria.getJSON()));
     }
     
     /**
-     * Devuelve una lista con las categorias almacenadas en la base de datos
+     * Realiza la consulta para devolver una lista con las categorias almacenadas en la base de datos
      * 
      * @return una lista con las categorias almacenadas en la base de datos
      */
