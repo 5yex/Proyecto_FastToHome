@@ -148,7 +148,13 @@ public class PedidoDao {
         }
         return listaPedidosEnPreparacion;
     }
-
+    
+    /**
+     * Actualiza el estado del pedido de la base de datos y comprueba si se ha actualizado correctamente
+     * 
+     * @param pedido objeto de tipo Pedido con los datos del pedido a actualizar
+     * @return true si se ha actualizado el estado correctamente, false en caso contrario
+     */
     public static boolean actualizarEstadoPedido(Pedido pedido) {
         return gestion.hacerConsulta(new Peticion("actualizar_estado_pedido", pedido.getJSON()));
     }
