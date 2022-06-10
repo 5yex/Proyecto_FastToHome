@@ -128,7 +128,12 @@ public class Cesta {
     public void setId_pedido(int id_pedido) {
         this.id_pedido = id_pedido;
     }
-
+    
+    /**
+     * Devuelve
+     * 
+     * @return 
+     */
     public int getCantidad() {
         return cantidad;
     }
