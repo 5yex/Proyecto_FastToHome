@@ -192,7 +192,13 @@ public class Direccion {
     public int getNumero() {
         return numero;
     }
-
+    
+    /**
+     * Establece el número de la vivienda o negocio
+     * 
+     * @param numero Número de la vivienda o negocio
+     * @since 1.0
+     */
     public void setNumero(int numero) {
         this.numero = numero;
     }
