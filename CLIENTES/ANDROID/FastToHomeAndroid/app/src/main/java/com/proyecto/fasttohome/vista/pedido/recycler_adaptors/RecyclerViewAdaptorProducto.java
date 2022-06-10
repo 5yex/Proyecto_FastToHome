@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Producto;
+import com.proyecto.fasttohome.vista.pedido.seleccionarCantidad;
 
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
             descripcion = (TextView) itemView.findViewById(R.id.tvDescripcionProducto);
             precio = (TextView) itemView.findViewById(R.id.tvPrecioProducto);
             buy = (Button) itemView.findViewById(R.id.buy);
-
+        }
     }
 
     public List<Producto> listaProductos;
@@ -47,7 +48,10 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.nombre.setText(listaProductos.get(position).getNombre());
         holder.descripcion.setText(listaProductos.get(position).getDescripcion());
-        holder.precio.setText("Precio: " + listaProductos.get(position).getPrecio() + "€");
+        holder.precio.setText("Precio: " + listaProductos.get(position).getPrecio() + "€");\
+        holder.buy.setOnClickListener(view -> {
+            new seleccionarCantidad(1,10,holder.nombre.getText().toString(),1);
+        });
     }
 
     @Override

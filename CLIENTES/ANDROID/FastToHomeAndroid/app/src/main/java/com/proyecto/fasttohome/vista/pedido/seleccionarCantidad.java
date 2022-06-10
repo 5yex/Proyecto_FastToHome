@@ -15,7 +15,7 @@ public class seleccionarCantidad extends DialogFragment
         int min, max, current;
         String title;
 
-        seleccionarCantidad(int min, int max, String title, int current)
+        public seleccionarCantidad(int min, int max, String title, int current)
         {
             this.min = min;
             this.max = max;
