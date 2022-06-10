@@ -58,6 +58,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
 
         holder.ADD.setOnClickListener(view -> {
 
+            if(productosSeleccionados.containsKey())
         });
         holder.DEL.setOnClickListener(view -> {
 
