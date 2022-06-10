@@ -36,7 +36,7 @@ public class gestion {
      * 
      * @param peticion objeto de tipo Peticion con el comando a realizar por el php y datos para la
      * consulta
-     * @return 
+     * @return true si se ha realizado la consulta con exito, false en caso contrario
      * @since 1.0
      */
     public static boolean hacerConsulta(Peticion peticion) {
