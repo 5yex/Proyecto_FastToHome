@@ -118,7 +118,13 @@ public class UsuarioDao {
     public static boolean asignarRolMercader(Usuario user) {
         return gestion.hacerConsulta(new Peticion("asignar_rol_mercader", user.getJSON()));
     }
-
+    
+    /**
+     * Realiza la consulta para asignar el rol de administrador a un usuario con el rol de cliente
+     * 
+     * @param user objeto de tipo Usuario al que se le va asignar el rol de administrador
+     * @return true si se ha asignado el rol correctamente, false en caso contrario
+     */
     public static boolean asignarRolAdministrador(Usuario user) {
         return gestion.hacerConsulta(new Peticion("asignar_rol_admin", user.getJSON()));
     }
