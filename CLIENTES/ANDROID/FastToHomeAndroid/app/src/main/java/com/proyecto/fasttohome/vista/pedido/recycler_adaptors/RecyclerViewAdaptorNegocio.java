@@ -92,7 +92,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
 
 
 
-      //  holder.image.setImageBitmap(ImagenesUtil.BaseStringToBitmap(listaNegocios.get(position).getId_img()));
+        //holder.image.setImageBitmap(ImagenesUtil.BaseStringToBitmap(listaNegocios.get(position).getId_img()));
         //holder.categoria.setText(listaNegocios.get(position).getId_categoria());
 
 
