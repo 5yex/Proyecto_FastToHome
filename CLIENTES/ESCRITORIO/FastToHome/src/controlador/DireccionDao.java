@@ -20,7 +20,7 @@ import modelo.Usuario;
 public class DireccionDao {
     
     /**
-     * Crea una nueva dirección y comprueba si se ha creado correctamente
+     * Inserta una nueva dirección en la base de datos y comprueba si se ha insertado correctamente
      * 
      * @param direccion objeto de tipo Direccion a almacenar
      * @return true si se ha almacenado la dirección correctamente, false en caso contrario
@@ -30,7 +30,7 @@ public class DireccionDao {
     }
     
     /**
-     * Crea una nueva dirección y devuelve el número que la identifica en la base de datos
+     * Inserta una nueva dirección y devuelve el número que la identifica en la base de datos
      * 
      * @param direccion objeto de tipo Direccion a almacenar
      * @return número que identifica la dirección que se acaba de almacenar en la base de datos
@@ -40,7 +40,7 @@ public class DireccionDao {
     }
 
     /**
-     * Devuelve un objeto de tipo Dirección con la dirección de un negocio
+     * Realiza la consulta para devolver un objeto de tipo Dirección con la dirección de un negocio
      * 
      * @param negocio objeto de tipo Negocio del que queremos obtener la dirección
      * @return un objeto de tipo Dirección con al dirección de un negocio
@@ -65,7 +65,7 @@ public class DireccionDao {
     }
     
     /**
-     * Devuelve un objeto de tipo Dirección con la dirección de un usuario
+     * Realiza la consulta para devolver un objeto de tipo Dirección con la dirección de un usuario
      * 
      * @param usuario objeto de tipo Usuario del que queremos obtener la dirección
      * @return un objeto de tipo Dirección con al dirección de un usuario
@@ -91,7 +91,7 @@ public class DireccionDao {
     }
     
     /**
-     * Actualiza la dirección y comprueba si se ha actualizado correctamente
+     * Realiza la consulta para actualizar la dirección y comprueba si se ha actualizado correctamente
      * 
      * @param direccion objeto de tipo Direccion con la dirección a actualizar
      * @return true si se ha realizado la actualización con éxito, false en caso contrario
