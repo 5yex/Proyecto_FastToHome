@@ -42,6 +42,12 @@ public class Direccion {
      * @since 1.0
      */
     private String ciudad;
+    
+    /**
+     * Otros datos de la dirección
+     * 
+     * @since 1.0
+     */
     private String otros;
     private int codigo_postal;
     private int coordenadas;
