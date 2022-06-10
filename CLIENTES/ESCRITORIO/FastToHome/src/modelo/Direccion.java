@@ -65,6 +65,16 @@ public class Direccion {
      */
     private boolean valida;
     
+    /**
+     * Construye una Direccion con los parametros indicados
+     * @param id_direccion
+     * @param calle
+     * @param numero
+     * @param ciudad
+     * @param otros
+     * @param codigo_postal
+     * @param coordenadas 
+     */
     public Direccion(int id_direccion, String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenadas) {
         this.id_direccion = id_direccion;
         this.calle = calle;
