@@ -202,7 +202,13 @@ public class Direccion {
     public void setNumero(int numero) {
         this.numero = numero;
     }
-
+    
+    /**
+     * Devuelve el nombre de la ciudad
+     * 
+     * @return Nombre de la ciudad
+     * @since 1.0
+     */
     public String getCiudad() {
         return ciudad;
     }
