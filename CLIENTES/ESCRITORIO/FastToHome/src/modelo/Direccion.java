@@ -146,8 +146,8 @@ public class Direccion {
     /**
      * Devuelve el número que identifica una direccíón en la base de datos
      * 
-     * @return Núm
-     * ero que identifica una direccíón en la base de datos
+     * @return Número que identifica una direccíón en la base de datos
+     * @since 1.0
      */
     public int getId_direccion() {
         return id_direccion;
