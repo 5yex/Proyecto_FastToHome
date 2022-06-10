@@ -74,7 +74,6 @@ public class PantallaDeNegocios extends AppCompatActivity {
                             e.printStackTrace();
                         }
                         negocios.add(negocio);
-                        negocios.add(negocio);
                     }
 
                     adaptorNegocio = new RecyclerViewAdaptorNegocio(negocios, usuario);
