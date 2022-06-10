@@ -40,13 +40,13 @@ public class PantallaDeNegocios extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_de_negocios);
         usuario = (Usuario) getIntent().getExtras().getSerializable("user");
 
-        recyclerViewNegocio=(RecyclerView) findViewById(R.id.recyclerNegocios);
+        recyclerViewNegocio = (RecyclerView) findViewById(R.id.recyclerNegocios);
         recyclerViewNegocio.setLayoutManager(new LinearLayoutManager(this));
 
         obtenerNegocios();
     }
 
-    public void obtenerNegocios(){
+    public void obtenerNegocios() {
         List<Negocio> negocios = new ArrayList<Negocio>();
 
         String url = getString(R.string.apiUrl);
@@ -60,19 +60,19 @@ public class PantallaDeNegocios extends AppCompatActivity {
                 } else {
                     JSONArray arrayDeJson = resp.getJSONArray("datos");
 
-                    for (int i = 0; i < arrayDeJson.length(); i++){
+                    for (int i = 0; i < arrayDeJson.length(); i++) {
                         JSONObject objetoNegocioJSon = arrayDeJson.getJSONObject(i);
                         Negocio negocio = new Negocio();
                         negocio.setId_negocio(Integer.parseInt(objetoNegocioJSon.get("id").toString()));
                         negocio.setNombre(objetoNegocioJSon.get("Nombre").toString());
                         negocio.setDescripcion(objetoNegocioJSon.get("Descripcion").toString());
-                        if(objetoNegocioJSon.get("imagenes_id") != null) {
+                        if (objetoNegocioJSon.get("imagenes_id") != null) {
                             negocio.setId_img(objetoNegocioJSon.getInt("imagenes_id"));
                         }
                         negocios.add(negocio);
                     }
 
-                    adaptorNegocio= new RecyclerViewAdaptorNegocio(negocios,usuario);
+                    adaptorNegocio = new RecyclerViewAdaptorNegocio(negocios, usuario);
                     recyclerViewNegocio.setAdapter(adaptorNegocio);
                 }
             } catch (JSONException | VolleyError e) {
@@ -90,7 +90,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
         queue.add(request);
     }
 
-    public void imagen(RequestQueue queue, int id_imagen){
+    public void imagen(RequestQueue queue, int id_imagen) {
         List<Negocio> negocios = new ArrayList<Negocio>();
         String url = getString(R.string.apiUrl);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
@@ -102,20 +102,21 @@ public class PantallaDeNegocios extends AppCompatActivity {
                 } else {
                     JSONArray arrayDeJson = resp.getJSONArray("datos");
 
-                    for (int i = 0; i < arrayDeJson.length(); i++){
+                    for (int i = 0; i < arrayDeJson.length(); i++) {
                         JSONObject objetoNegocioJSon = arrayDeJson.getJSONObject(i);
                         Negocio negocio = new Negocio();
                         negocio.setId_negocio(Integer.parseInt(objetoNegocioJSon.get("id").toString()));
                         negocio.setNombre(objetoNegocioJSon.get("Nombre").toString());
                         negocio.setDescripcion(objetoNegocioJSon.get("Descripcion").toString());
-                        if(objetoNegocioJSon.get("url") != null) {
+                        if (objetoNegocioJSon.get("url") != null) {
                             String imgUrl = getString(R.string.imgUrl) + objetoNegocioJSon.getString("url");
-                            Picasso.get().
+                            Picasso.get().setLoggingEnabled(true);
+                            
                         }
                         negocios.add(negocio);
                     }
 
-                    adaptorNegocio= new RecyclerViewAdaptorNegocio(negocios,usuario);
+                    adaptorNegocio = new RecyclerViewAdaptorNegocio(negocios, usuario);
                     recyclerViewNegocio.setAdapter(adaptorNegocio);
                 }
             } catch (JSONException | VolleyError e) {
