@@ -61,4 +61,12 @@
         app:layout_anchorGravity="bottom|end"
         app:srcCompat="@drawable/ic_baseline_info_24" />
 
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_anchor="@id/include"
+        app:layout_anchorGravity="center" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
