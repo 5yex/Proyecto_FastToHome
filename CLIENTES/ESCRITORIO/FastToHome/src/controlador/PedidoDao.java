@@ -65,7 +65,14 @@ public class PedidoDao {
         }
         return listaPedidosPagados;
     }
-
+    
+    /**
+     * Realiza la consulta para devolver una lista con los pedidos del día en preparación 
+     * que estan almacenados en la base de datos
+     * 
+     * @param negocio objeto de tipo Negocio del que vamos a obtener sus pedidos
+     * @return Lista con los pedidos del día en preparación que estan almacenados en la base de datos
+     */
     public static ArrayList<Pedido> seleccionPedidosEnPreparacion(Negocio negocio) {
         SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_pedidos_en_preparacion", negocio.getJSON()));
