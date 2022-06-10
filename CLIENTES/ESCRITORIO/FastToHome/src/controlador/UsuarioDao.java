@@ -67,7 +67,13 @@ public class UsuarioDao {
         }
         return null;
     }
-
+    
+    /**
+     * Realiza la consulta para obtener los datos de un usario de la base de datos
+     * 
+     * @param user objeto de tipo Usuario del que queremos obtener sus datos
+     * @return objeto de tipo Usuario con los datos del usuario
+     */
     public static Usuario obtenerDatosUsuario(Usuario user) {
         //generamos un json con los datos que vamos a pasarle al php, en este caso solo el usuario
         String json = user.getJSON();
@@ -92,11 +98,23 @@ public class UsuarioDao {
 
         return user;
     }
-
+    
+    /**
+     * Actualiza el usuario en la base de datos y comprueba si se ha actualizado correctamente
+     * 
+     * @param user objeto de tipo Usuario con los datos del usuario a actualizar
+     * @return true si se ha actualizado el usuario en la base de datos 
+     */
     public static boolean actualizarUsuario(Usuario user) {
         return gestion.hacerConsulta(new Peticion("actualizar_usuario", user.getJSON()));
     }
-
+    
+    /**
+     * Realiza la consulta para asignar el rol de mercader a un usuario con el rol de cliente
+     * 
+     * @param user objeto de tipo Usuario al que se le va asignar el rol de mercader
+     * @return true si se ha asignado el rol correctamente, false en caso contrario
+     */
     public static boolean asignarRolMercader(Usuario user) {
         return gestion.hacerConsulta(new Peticion("asignar_rol_mercader", user.getJSON()));
     }
