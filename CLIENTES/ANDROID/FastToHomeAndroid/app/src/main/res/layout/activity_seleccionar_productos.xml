@@ -22,6 +22,7 @@
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
+            app:expandedTitleTextColor="#000000"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <ImageView
@@ -39,7 +40,6 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#B0F44336"
                 app:layout_scrollFlags="scroll|enterAlways" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
