@@ -115,7 +115,10 @@ public class Direccion {
     public Direccion(int id_direccion) {
         this.id_direccion = id_direccion;
     }
-
+    
+    /**
+     * Construye una Dirección con parametros a <code>null</code> que establece una dirección invalida por defecto
+     */
     public Direccion() {
         this.valida = false;
     }
