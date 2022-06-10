@@ -10,8 +10,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.modelo.Cesta;
 import com.proyecto.fasttohome.modelo.Producto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerViewAdaptorProducto.ViewHolder> {
@@ -31,6 +33,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
     }
 
     public List<Producto> listaProductos;
+    public ArrayList<Cesta> productosSeleccionados;
 
     public RecyclerViewAdaptorProducto(List<Producto> listaProductos) {
         this.listaProductos = listaProductos;
@@ -49,7 +52,11 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         holder.nombre.setText(listaProductos.get(position).getNombre());
         holder.descripcion.setText(listaProductos.get(position).getDescripcion());
         holder.precio.setText("Precio: " + listaProductos.get(position).getPrecio() + "€");
+
         holder.ADD.setOnClickListener(view -> {
+
+        });
+        holder.DEL.setOnClickListener(view -> {
 
         });
     }
