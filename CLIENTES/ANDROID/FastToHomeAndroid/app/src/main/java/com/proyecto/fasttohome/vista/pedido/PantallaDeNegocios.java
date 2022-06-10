@@ -89,10 +89,9 @@ public class PantallaDeNegocios extends AppCompatActivity {
         queue.add(request);
     }
 
-    public void imagen(){
+    public void imagen(RequestQueue queue, int id_imagen){
         List<Negocio> negocios = new ArrayList<Negocio>();
         String url = getString(R.string.apiUrl);
-        RequestQueue queue = Volley.newRequestQueue(PantallaDeNegocios.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
             System.out.println(response);
             try {
