@@ -419,6 +419,8 @@ function obtenerProductosNegocio($datos){
         
         $respuesta = $producto->productosDeUnNegocio();
         
+         printf(var_dump($respuesta));
+        
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
