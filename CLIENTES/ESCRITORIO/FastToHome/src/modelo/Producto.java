@@ -107,10 +107,6 @@ public class Producto {
         this.id_img = id_img;
     }
 
-    
-
-    
-
     public int getId_producto() {
         return id_producto;
     }
