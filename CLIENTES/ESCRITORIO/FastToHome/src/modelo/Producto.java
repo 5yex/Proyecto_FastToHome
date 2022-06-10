@@ -201,7 +201,12 @@ public class Producto {
     public double getPrecio() {
         return precio;
     }
-
+    
+    /**
+     * Establece el precio del producto
+     * 
+     * @param precio Precio del producto
+     */
     public void setPrecio(double precio) {
         this.precio = precio;
     }
