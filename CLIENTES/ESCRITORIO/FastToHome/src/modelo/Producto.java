@@ -71,10 +71,10 @@ public class Producto {
     /**
      * Construye un Producto con los parametros indicados
      * 
-     * @param id_negocio
-     * @param nombre
-     * @param precio
-     * @param descripcion
+     * @param id_negocio Número que identidfica el negocio al que pertenece el producto en la base de datos
+     * @param nombre Nombre del producto
+     * @param precio Precio del producto
+     * @param descripcion Descripción del producto
      * @param stock 
      */
     public Producto(int id_negocio, String nombre, double precio, String descripcion, int stock) {
