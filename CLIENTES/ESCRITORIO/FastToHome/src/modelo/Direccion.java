@@ -212,7 +212,13 @@ public class Direccion {
     public String getCiudad() {
         return ciudad;
     }
-
+    
+    /**
+     * Establece el nombre de la ciudad
+     * 
+     * @param ciudad Nombre de la ciudad
+     * @since 1.0
+     */
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
     }
