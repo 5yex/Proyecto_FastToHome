@@ -29,7 +29,13 @@ public class ProductoDao {
     public static boolean nuevoProducto(Producto product) {
         return gestion.hacerConsulta(new Peticion("nuevo_producto", product.getJSON()));
     }
- 
+    
+    /**
+     * Realiza la consulta para devolver una lista con los productos de un negocio
+     * 
+     * @param negocio objeto de tipo Negocio con los datos del negocio
+     * @return Una lista con los productos de un negocio
+     */
     public static ArrayList<Producto> selecciónProductosNegocio(Negocio negocio) {
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_productos_negocio", negocio.getJSON()));
         ArrayList<Producto> listaProductos = new ArrayList<>();
