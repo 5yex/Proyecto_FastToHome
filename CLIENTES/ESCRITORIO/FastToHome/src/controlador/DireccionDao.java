@@ -18,7 +18,13 @@ import modelo.Usuario;
  * @since 1.0
  */
 public class DireccionDao {
-
+    
+    /**
+     * Crea una nueva dirección y comprueba si se ha creado correctamente
+     * 
+     * @param direccion objeto de tipo Direccion a almacenar
+     * @return true si se ha almacenado la dirección correctamente, false en caso contrario
+     */
     public static boolean nuevaDireccion(Direccion direccion) {
         return gestion.hacerConsulta(new Peticion("nueva_direccion", direccion.getJSON()));
     }
