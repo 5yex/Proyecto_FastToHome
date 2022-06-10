@@ -61,8 +61,6 @@ public class SeleccionarProductos extends AppCompatActivity {
         imagenNegocio = findViewById(R.id.imgNegocioS);
         toolBarLayout.setTitle(negocio.getNombre());
         Picasso.get().load(negocio.getUrl_imagen()).into(imagenNegocio);
-
-
         FloatingActionButton fab = binding.fab;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
