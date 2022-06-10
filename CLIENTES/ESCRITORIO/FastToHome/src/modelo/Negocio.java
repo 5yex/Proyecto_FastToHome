@@ -70,7 +70,18 @@ public class Negocio {
      */
     public Negocio() {
     }
-
+    
+    /**
+     * Construye un negocio con los parametros indicados
+     * 
+     * @param id_negocio
+     * @param id_direccion
+     * @param id_categoria
+     * @param id_mercader
+     * @param nombre
+     * @param descripcion
+     * @param id_img 
+     */
     public Negocio(int id_negocio, int id_direccion, int id_categoria, int id_mercader, String nombre, String descripcion, int id_img) {
         this.id_negocio = id_negocio;
         this.id_direccion = id_direccion;
