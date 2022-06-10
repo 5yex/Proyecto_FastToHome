@@ -21,10 +21,18 @@ public class Cesta {
     private int id_cesta;
     
     /**
-     * 
+     * Número que identifica el producto introducido en la cesta en la base de datos
      */
     private int id_producto;
+    
+    /**
+     * Número que identifica el pedido al que pertenece la cesta
+     */
     private int id_pedido;
+    
+    /**
+     * Cantidad de un producto
+     */
     private int cantidad;
 
     public Cesta() {
