@@ -181,7 +181,13 @@ public class Producto {
     public String getNombre() {
         return nombre;
     }
-
+    
+    /**
+     * Establece el nombre del producto
+     * 
+     * @param nombre Nombre del producto
+     * @since 1.0
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
