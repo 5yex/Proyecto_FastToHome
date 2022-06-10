@@ -11,7 +11,8 @@ import modelo.Categoria;
 import modelo.Peticion;
 
 /**
- *
+ * Clase donde se realizan las consultas realicionadas con la categoria del negocio
+ * 
  * @author Jose Miguel Calderón, Jesús Rueda
  * @version 1.0
  * @since 1.0
