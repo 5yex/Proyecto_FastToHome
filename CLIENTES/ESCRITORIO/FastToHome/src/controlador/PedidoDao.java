@@ -68,10 +68,10 @@ public class PedidoDao {
     
     /**
      * Realiza la consulta para devolver una lista con los pedidos del día en preparación 
-     * que estan almacenados en la base de datos
+     * que están almacenados en la base de datos
      * 
      * @param negocio objeto de tipo Negocio del que vamos a obtener sus pedidos
-     * @return Lista con los pedidos del día en preparación que estan almacenados en la base de datos
+     * @return Lista con los pedidos del día en preparación que están almacenados en la base de datos
      */
     public static ArrayList<Pedido> seleccionPedidosEnPreparacion(Negocio negocio) {
         SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
