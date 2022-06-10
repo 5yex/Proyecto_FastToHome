@@ -155,7 +155,8 @@ public class Producto {
     /**
      * Devueve el número que identidfica el negocio al que pertenece el producto en la base de datos
      * 
-     * @return 
+     * @return Número que identidfica el negocio al que pertenece el producto en la base de datos
+     * @since 1.0
      */
     public int getId_negocio() {
         return id_negocio;
