@@ -256,7 +256,13 @@ public class Negocio {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-
+    
+    /**
+     * Devuelve el número que identifica la imagen asociada al negocio en la base de datos
+     * 
+     * @return Número que identifica la imagen asociada al negocio en la base de datos
+     * @since 1.0
+     */
     public int getId_img() {
         return id_img;
     }
