@@ -241,7 +241,13 @@ public class Pedido {
     public String getTransporte() {
         return transporte;
     }
-
+    
+    /**
+     * Establece la forma de transporte del pedido
+     * 
+     * @param transporte Forma de transporte del pedido
+     * @since 1.0
+     */
     public void setTransporte(String transporte) {
         this.transporte = transporte;
     }
