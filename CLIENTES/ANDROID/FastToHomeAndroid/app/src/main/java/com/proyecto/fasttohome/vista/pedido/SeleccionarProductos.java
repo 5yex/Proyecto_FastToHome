@@ -42,7 +42,7 @@ import java.util.Map;
 public class SeleccionarProductos extends AppCompatActivity {
 
     private ActivitySeleccionarProductosBinding binding;
-    private HashMap<Integer, Cesta> productosSeleccionados;
+    private HashMap<Integer, Integer> productosSeleccionados;
     private RecyclerView recyclerViewProducto;
     private RecyclerViewAdaptorProducto adaptorProducto;
     private Usuario usuario;
@@ -93,7 +93,6 @@ public class SeleccionarProductos extends AppCompatActivity {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
                     JSONArray arrayDeJson = resp.getJSONArray("datos");
-
                     for (int i = 0; i < arrayDeJson.length(); i++) {
                         JSONObject objetoProductoJSon = arrayDeJson.getJSONObject(i);
                         Producto producto = new Producto();
