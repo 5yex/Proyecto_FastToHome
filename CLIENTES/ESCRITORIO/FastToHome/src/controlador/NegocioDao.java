@@ -9,9 +9,13 @@ import modelo.Usuario;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
 /**
- *
- * @author jmcbg
+ * Clase donde se realizan las consultas realicionadas con los negocios
+ * 
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
+ * @since 1.0
  */
 public class NegocioDao {
 
