@@ -100,7 +100,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
             }
             @Override
             public void onError(Exception e) {
-                holder.image.setImageDrawable(R.drawable.ic_twotone_sync_problem_24);
+                holder.image.setImageDrawable(findViewById(R.drawable.ic_twotone_sync_problem_24));
             }
         });
 
