@@ -17,6 +17,7 @@ import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.vista.pedido.recycler_adaptors.RecyclerViewAdaptorNegocio;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -109,7 +110,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
                         negocio.setDescripcion(objetoNegocioJSon.get("Descripcion").toString());
                         if(objetoNegocioJSon.get("url") != null) {
                             String imgUrl = getString(R.string.imgUrl) + objetoNegocioJSon.getString("url");
-                            
+                            Picasso.get().
                         }
                         negocios.add(negocio);
                     }
