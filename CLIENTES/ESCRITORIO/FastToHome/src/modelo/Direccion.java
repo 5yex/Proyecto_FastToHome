@@ -35,6 +35,12 @@ public class Direccion {
      * @since 1.0
      */
     private int numero;
+    
+    /**
+     * Nombre de la ciudad
+     * 
+     * @since 1.0
+     */
     private String ciudad;
     private String otros;
     private int codigo_postal;
