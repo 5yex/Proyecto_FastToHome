@@ -14,6 +14,11 @@ import com.google.gson.Gson;
  * @since 1.0
  */
 public class Negocio {
+    /**
+     * Número que identifica un negocio en la base de datos
+     * 
+     * @since 1.0
+     */
     private int id_negocio;
     private int id_direccion;
     private int id_categoria;
