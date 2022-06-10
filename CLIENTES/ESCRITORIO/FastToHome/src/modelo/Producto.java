@@ -151,7 +151,12 @@ public class Producto {
     public void setId_producto(int id_producto) {
         this.id_producto = id_producto;
     }
-
+    
+    /**
+     * Devueve el número que identidfica el negocio al que pertenece el producto en la base de datos
+     * 
+     * @return 
+     */
     public int getId_negocio() {
         return id_negocio;
     }
