@@ -100,7 +100,6 @@ public class SeleccionarProductos extends AppCompatActivity {
                         producto.setNombre(objetoProductoJSon.get("Nombre").toString());
                         producto.setDescripcion(objetoProductoJSon.get("Descripcion").toString());
                         producto.setPrecio(Double.parseDouble(objetoProductoJSon.get("Precio").toString()));
-
                         productos.add(producto);
                     }
 
