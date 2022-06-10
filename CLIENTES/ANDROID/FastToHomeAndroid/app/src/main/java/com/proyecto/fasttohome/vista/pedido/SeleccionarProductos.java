@@ -73,9 +73,7 @@ public class SeleccionarProductos extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
-        System.out.println(negocio.toString());
-
+        productosSeleccionados = new HashMap<Integer, Cesta>();
         recyclerViewProducto = (RecyclerView) findViewById(R.id.recyclerProductos);
         recyclerViewProducto.setLayoutManager(new LinearLayoutManager(this));
 
@@ -106,7 +104,7 @@ public class SeleccionarProductos extends AppCompatActivity {
                         productos.add(producto);
                     }
 
-                    adaptorProducto = new RecyclerViewAdaptorProducto(productos);
+                    adaptorProducto = new RecyclerViewAdaptorProducto(productos, productosSeleccionados);
                     recyclerViewProducto.setAdapter(adaptorProducto);
                 }
             } catch (JSONException | VolleyError e) {
