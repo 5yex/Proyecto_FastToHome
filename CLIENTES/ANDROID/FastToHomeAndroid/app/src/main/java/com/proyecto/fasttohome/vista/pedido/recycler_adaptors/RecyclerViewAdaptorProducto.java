@@ -67,12 +67,14 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         });
         holder.DEL.setOnClickListener(view -> {
             int productoActual = listaProductos.get(position).getId_producto();
-            if(!productosSeleccionados.containsKey(productoActual)){
-                productosSeleccionados.put(productoActual,1);
-            }else{
+            if(productosSeleccionados.containsKey(productoActual)){
                 int oldValue = productosSeleccionados.get(productoActual);
-                productosSeleccionados.put(productoActual,oldValue+1);
-            };
+                if(oldValue == 1 | oldValue > 0 ){
+                    productosSeleccionados.remove(productoActual);
+                }else{
+                    productosSeleccionados.put(productoActual,oldValue-1);
+                }
+            }
         });
     }
 
