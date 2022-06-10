@@ -161,11 +161,22 @@ public class Producto {
     public int getId_negocio() {
         return id_negocio;
     }
-
+    
+    /**
+     * Establece el número que identidfica el negocio al que pertenece el producto en la base de datos
+     * 
+     * @param id_negocio Número que identidfica el negocio al que pertenece el producto en la base de datos
+     * @since 1.0
+     */
     public void setId_negocio(int id_negocio) {
         this.id_negocio = id_negocio;
     }
-
+    
+    /**
+     * Devuelve el número que identidfica el negocio al que pertenece el producto en la base de datos
+     * @return 1.0
+     * @since 1.0
+     */
     public String getNombre() {
         return nombre;
     }
