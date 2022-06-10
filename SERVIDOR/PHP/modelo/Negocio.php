@@ -115,6 +115,16 @@ class Negocio extends Conexion {
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
     
+    
+    public function obtenerTodosNegociosImagen(){
+        $sql = "SELECT * FROM negocio INNER JOIN imagenes on negocio.imagenes_id = imagenes.id; ";
+        
+        $sentencia = $this->dblink->prepare($sql);
+        
+        $sentencia->execute();            
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }
+    
     public function obtenerIdNegocio(){
         $sql = "SELECT id FROM negocio WHERE Nombre = :nom";
         
