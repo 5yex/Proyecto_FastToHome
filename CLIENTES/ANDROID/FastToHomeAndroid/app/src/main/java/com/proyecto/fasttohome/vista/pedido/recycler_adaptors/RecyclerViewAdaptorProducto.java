@@ -62,7 +62,8 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
                 productosSeleccionados.put(productoActual,1);
             }else{
                 productosSeleccionados.get(productoActual);
-                productosSeleccionados.
+                productosSeleccionados.put(productoActual,(productoActual,));
+
             };
         });
         holder.DEL.setOnClickListener(view -> {
