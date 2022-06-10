@@ -138,7 +138,12 @@ public class Cesta{
     public int getCantidad() {
         return cantidad;
     }
-
+    
+    /**
+     * Establece la cantidad de un producto
+     * @param cantidad 
+     * @since 1.0
+     */
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
