@@ -210,7 +210,13 @@ public class Producto {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-
+    
+    /**
+     * Devuelve la descripcion de producto
+     * 
+     * @return Descripcion de producto
+     * @since 1.0
+     */
     public String getDescripcion() {
         return descripcion;
     }
