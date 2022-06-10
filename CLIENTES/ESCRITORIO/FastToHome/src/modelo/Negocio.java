@@ -128,8 +128,11 @@ public class Negocio {
         this.descripcion = descripcion;
     }
     
-    
-    
+    /**
+     * Construye un negocio con los parametros indicados
+     * 
+     * @param id_negocio Número que identifica un negocio en la base de datos
+     */
     public Negocio(int id_negocio) {
         this.id_negocio = id_negocio;
     }
