@@ -26,6 +26,7 @@ public class Pedido {
     /**
      * Número que identidica al usuario que ha realizado el pedido en la base de datos
      * 
+     * @since 1.0
      */
     private int id_usuario;
     private int id_negocio;
