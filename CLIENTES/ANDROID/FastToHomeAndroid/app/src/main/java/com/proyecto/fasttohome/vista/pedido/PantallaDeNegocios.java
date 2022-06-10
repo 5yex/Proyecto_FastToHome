@@ -117,8 +117,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
                     recyclerViewNegocio.setAdapter(adaptorNegocio);
                 }
             } catch (JSONException | VolleyError e) {
-                Toast.makeText(PantallaDeNegocios.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                finish();
+                Toast.makeText(PantallaDeNegocios.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         }, this::onErrorResponse) {
             @Override
