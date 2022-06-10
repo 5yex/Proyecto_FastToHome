@@ -191,7 +191,12 @@ public class Pedido {
     public void setFecha_hora(Date fecha_hora) {
         this.fecha_hora = fecha_hora;
     }
-
+    
+    /**
+     * Devuelve el estado en el que se encuentra el pedido
+     * @return Estado en el que se encuentra el pedido
+     * @since 1.0
+     */
     public String getEstado() {
         return estado;
     }
