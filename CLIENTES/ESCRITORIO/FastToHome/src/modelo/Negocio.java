@@ -27,6 +27,12 @@ public class Negocio {
      * @since 1.0
      */
     private int id_direccion;
+    
+    /**
+     * Número que identifica la categoría del negocio en la base de datos
+     * 
+     * @since 1.0
+     */
     private int id_categoria;
     private int id_mercader;
     private String nombre;
