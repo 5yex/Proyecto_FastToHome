@@ -5,8 +5,6 @@
 package modelo;
 
 import com.google.gson.Gson;
-import java.text.SimpleDateFormat;
-import java.util.Vector;
 
 /**
  * Clase que representa un usuario de la aplicación
