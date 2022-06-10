@@ -58,9 +58,14 @@ public class Negocio {
     
     /**
      * Número que identifica la imagen asociada al negocio en la base de datos
+     * 
+     * @since 1.0
      */
     private int id_img;
-
+    
+    /**
+     * 
+     */
     public Negocio() {
     }
 
