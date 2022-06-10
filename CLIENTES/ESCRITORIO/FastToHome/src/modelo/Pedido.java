@@ -126,7 +126,8 @@ public class Pedido {
     /**
      * Establece el número que identifica el pedido en la base de datos
      * 
-     * @param id_pedido Número que identifica el pedido en la base de datos 
+     * @param id_pedido Número que identifica el pedido en la base de datos
+     * @since 1.0
      */
     public void setId_pedido(int id_pedido) {
         this.id_pedido = id_pedido;
