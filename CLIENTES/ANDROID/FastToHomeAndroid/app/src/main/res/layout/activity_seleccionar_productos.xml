@@ -50,7 +50,7 @@
     <include
         android:id="@+id/include"
         layout="@layout/activity_seleccionar_productos_content"
-        android:layout_height="826dp" />
+         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
