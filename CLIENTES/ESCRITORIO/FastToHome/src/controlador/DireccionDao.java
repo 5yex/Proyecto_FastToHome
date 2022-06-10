@@ -29,7 +29,12 @@ public class DireccionDao {
         return gestion.hacerConsulta(new Peticion("nueva_direccion", direccion.getJSON()));
     }
     
-    
+    /**
+     * Crea una nueva dirección y devuelve el número que la identifica en la base de datos
+     * 
+     * @param direccion objeto de tipo Direccion a almacenar
+     * @return número que identifica la dirección que se acaba de almacenar en la base de datos
+     */
     public static int nuevaDireccionDevuelveId(Direccion direccion) {
         return gestion.consultaSeleccionUnico(new Peticion("nueva_direccion_devuelve_id", direccion.getJSON())).get("last_id").getAsInt();
     }
