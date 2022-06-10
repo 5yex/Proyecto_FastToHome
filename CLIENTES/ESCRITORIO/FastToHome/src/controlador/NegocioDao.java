@@ -19,7 +19,12 @@ import modelo.Usuario;
  */
 public class NegocioDao {
     
-    
+    /**
+     * Realiza la consulta para insertar un nuevo negocio en la base de datos y comprueba si se ha insertado
+     * 
+     * @param negocio objeto de tipo Negocio con el negocio a insertar
+     * @return true si se ha insertado correctamente
+     */
     public static boolean nuevoNegocio(Negocio negocio) {
         return gestion.hacerConsulta(new Peticion("nuevo_negocio", negocio.getJSON()));
     }
