@@ -61,6 +61,12 @@ public class Producto {
     private int id_img;
     
     /**
+     * 
+     */
+    public Producto() {
+    }
+    
+    /**
      * Devuelve el número que identifica a la imagen del producto en la base de datos
      * 
      * @return Número que identifica a la imagen del producto en la base de datos
@@ -79,9 +85,8 @@ public class Producto {
     public void setId_img(int id_img) {
         this.id_img = id_img;
     }
-
-    public Producto() {
-    }
+    
+    
 
     public Producto(int id_negocio, String nombre, double precio, String descripcion, int stock) {
         this.id_negocio = id_negocio;
