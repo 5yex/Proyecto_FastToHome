@@ -221,7 +221,12 @@ public class Pedido {
     public double getTotal() {
         return total;
     }
-
+    
+    /**
+     * Establece el total de dinero pagado
+     * 
+     * @param total 
+     */
     public void setTotal(double total) {
         this.total = total;
     }
