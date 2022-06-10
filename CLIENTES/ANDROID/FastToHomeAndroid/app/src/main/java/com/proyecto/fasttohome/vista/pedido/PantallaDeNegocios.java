@@ -65,6 +65,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
                         negocio.setId_negocio(Integer.parseInt(objetoNegocioJSon.get("id").toString()));
                         negocio.setNombre(objetoNegocioJSon.get("Nombre").toString());
                         negocio.setDescripcion(objetoNegocioJSon.get("Descripcion").toString());
+                        negocio.setId_img(objetoNegocioJSon.getString(""));
                         negocios.add(negocio);
                     }
 
