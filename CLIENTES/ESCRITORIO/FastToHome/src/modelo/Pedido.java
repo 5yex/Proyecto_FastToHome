@@ -231,7 +231,13 @@ public class Pedido {
     public void setTotal(double total) {
         this.total = total;
     }
-
+    
+    /**
+     * Devuelve la forma de transporte del pedido
+     * 
+     * @return Forma de transporte del pedido
+     * @since 1.0
+     */
     public String getTransporte() {
         return transporte;
     }
