@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.proyecto.fasttohome.R;
@@ -42,6 +43,7 @@ public class SeleccionarProductos extends AppCompatActivity {
     private RecyclerView recyclerViewProducto;
     private RecyclerViewAdaptorProducto adaptorProducto;
     private Usuario usuario;
+    private ImageView imagenNegocio;
     private Negocio negocio;
 
     @Override
@@ -54,7 +56,9 @@ public class SeleccionarProductos extends AppCompatActivity {
         Toolbar toolbar = binding.toolbar;
         setSupportActionBar(toolbar);
         CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
-        toolBarLayout.setTitle(getTitle());
+
+        imagenNegocio = findViewById(R.id.imgNegocioS);
+        toolBarLayout.setTitle(negocio.getNombre());
 
         FloatingActionButton fab = binding.fab;
         fab.setOnClickListener(new View.OnClickListener() {
