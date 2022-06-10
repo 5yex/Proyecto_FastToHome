@@ -28,7 +28,12 @@ public class CategoriaDao {
     public static boolean nuevaCategoria(Categoria categoria) {
         return gestion.hacerConsulta(new Peticion("nueva_categoria", categoria.getJSON()));
     }
-
+    
+    /**
+     * Devuelve una lista con las categorias almacenadas en la base de datos
+     * 
+     * @return una lista con las categorias almacenadas en la base de datos
+     */
     public static ArrayList<Categoria> obtenerCategorias() {
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_categorias", null));
 
