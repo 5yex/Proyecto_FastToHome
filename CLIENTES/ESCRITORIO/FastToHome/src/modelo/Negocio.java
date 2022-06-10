@@ -37,6 +37,8 @@ public class Negocio {
     
     /**
      * Número que identidica al propietario del negocio en la base de datos
+     * 
+     * @since 1.0
      */
     private int id_mercader;
     private String nombre;
