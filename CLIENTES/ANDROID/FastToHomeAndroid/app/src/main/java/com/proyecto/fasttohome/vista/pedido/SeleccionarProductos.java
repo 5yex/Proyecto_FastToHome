@@ -25,7 +25,7 @@ import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Producto;
 import com.proyecto.fasttohome.modelo.Usuario;
-import com.proyecto.fasttohome.recycler_adaptors.RecyclerViewAdaptorProducto;
+import com.proyecto.fasttohome.vista.pedido.recycler_adaptors.RecyclerViewAdaptorProducto;
 
 import org.json.JSONArray;
 import org.json.JSONException;

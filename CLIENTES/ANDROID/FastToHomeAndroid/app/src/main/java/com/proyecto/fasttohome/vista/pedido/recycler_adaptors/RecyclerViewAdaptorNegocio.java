@@ -1,7 +1,8 @@
-package com.proyecto.fasttohome.recycler_adaptors;
+package com.proyecto.fasttohome.vista.pedido.recycler_adaptors;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
         private TextView nombre, descripcion;
+        private Bitmap image;
         private Usuario usuario;
         private Negocio negocio;
         private Button pedir;
@@ -70,6 +72,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
         holder.descripcion.setText(listaNegocios.get(position).getDescripcion());
         holder.usuario = usuario;
         holder.negocio = new Negocio(listaNegocios.get(position).getId_negocio());
+        holder.
         //holder.categoria.setText(listaNegocios.get(position).getId_categoria());
     }
 

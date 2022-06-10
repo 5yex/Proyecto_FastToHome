@@ -1,4 +1,4 @@
-package com.proyecto.fasttohome.recycler_adaptors;
+package com.proyecto.fasttohome.vista.pedido.recycler_adaptors;
 
 import android.view.LayoutInflater;
 import android.view.View;
