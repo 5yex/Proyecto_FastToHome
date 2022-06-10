@@ -226,7 +226,13 @@ public class Negocio {
     public String getNombre() {
         return nombre;
     }
-
+    
+    /**
+     * Establece el nombre del negocio
+     * 
+     * @param nombre Nombre del negocio
+     * @since 1.0
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
