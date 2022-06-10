@@ -44,9 +44,13 @@
                 app:layout_scrollFlags="scroll|enterAlways" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
+
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/activity_seleccionar_productos_content" />
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_seleccionar_productos_content"
+        android:layout_height="826dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -55,6 +59,6 @@
         android:layout_marginEnd="@dimen/fab_margin"
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@drawable/ic_baseline_info_24" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
