@@ -59,11 +59,22 @@ public class ProductoDao {
         
         return listaProductos;
     }
-
+    
+    /**
+     * Actualiza el producto en la base de datos y comprueba si se ha actualizado correctamente
+     * 
+     * @param product objeto de tipo Producto con los datos del producto a actualizar
+     * @return true si se ha actualizado el producto en la base de datos
+     */
     public static boolean actualizarProducto(Producto product) {
         return gestion.hacerConsulta(new Peticion("actualizar_producto", product.getJSON()));
     }
-
+    
+    /**
+     * Borra un producto en la base datos y comprueba si se ha borrado correctamente
+     * @param product objeto de tipo Producto con los datos del producto a borrar
+     * @return true si se ha borrado el producto en la base de datos, false en caso contrario
+     */
     public static boolean borrarProducto(Producto product) {
         return gestion.hacerConsulta(new Peticion("borrar_producto", product.getJSON()));
     }
