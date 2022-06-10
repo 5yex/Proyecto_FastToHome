@@ -65,6 +65,8 @@ public class Negocio {
     
     /**
      * Construye un negocio con parametros a <code>null</code>
+     * 
+     * @since 1.0
      */
     public Negocio() {
     }
