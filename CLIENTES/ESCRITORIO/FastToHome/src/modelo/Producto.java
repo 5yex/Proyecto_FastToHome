@@ -135,12 +135,19 @@ public class Producto {
     /**
      * Devuelve el número que identifica al producto en la base de datos
      * 
-     * @return 
+     * @return Número que identifica al producto en la base de datos
+     * @since 1.0
      */
     public int getId_producto() {
         return id_producto;
     }
-
+    
+    /**
+     * Establece el número que identifica al producto en la base de datos
+     * 
+     * @param id_producto Número que identifica al producto en la base de datos
+     * @since 1.0
+     */
     public void setId_producto(int id_producto) {
         this.id_producto = id_producto;
     }
