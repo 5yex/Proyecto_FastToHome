@@ -59,7 +59,8 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         holder.ADD.setOnClickListener(view -> {
             int productoActual = listaProductos.get(position).getId_producto();
             if(!productosSeleccionados.containsKey(productoActual)){
-                productosSeleccionados.put(new cesta())
+
+                productosSeleccionados.put(new Cesta(productoActual,))
             };
         });
         holder.DEL.setOnClickListener(view -> {
