@@ -68,7 +68,13 @@ public class Cesta {
         this.id_pedido = id_pedido;
         this.cantidad = cantidad;
     }
-
+    
+    /**
+     * Devuelve el número que identifica el producto introducido en la cesta en la base de datos
+     * 
+     * @return número que identifica el producto introducido en la cesta en la base de datos
+     * @since 1.0
+     */
     public int getId_cesta() {
         return id_cesta;
     }
