@@ -172,7 +172,13 @@ public class Direccion {
     public String getCalle() {
         return calle;
     }
-
+    
+    /**
+     * Establece el nombre de la calle
+     * 
+     * @param calle Nombre de la calle
+     * @since 1.0
+     */
     public void setCalle(String calle) {
         this.calle = calle;
     }
