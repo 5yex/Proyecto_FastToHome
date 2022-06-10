@@ -239,6 +239,10 @@ public class Producto {
         this.stock = stock;
     }
     
+    /**
+     * 
+     * @return 
+     */
     public String getJSON(){
        return new Gson().toJson(this);
     }
