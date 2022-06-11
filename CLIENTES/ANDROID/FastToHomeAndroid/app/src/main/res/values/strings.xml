@@ -128,11 +128,9 @@
     <!-- Checkout activity -->
     <string name="title_activity_finalizar_pedido">Finalizar Pedido</string>
     <string name="checkout_item_description">Description</string>
-    <string name="googlepay_status_unavailable" translatable="false">Unfortunately, Google Pay is
-        not available on this phone.
-    </string>
-    <string name="payments_show_name" translatable="false">Successfully received payment data for
-        %s!
+    <string name="googlepay_status_unavailable" translatable="false">Desafortunadamente, Google Pay is
+        no esta disponible en tu telefono.</string>
+    <string name="payments_show_name" translatable="false">EL pago se realizo con éxito por %s!
     </string>
 
 
