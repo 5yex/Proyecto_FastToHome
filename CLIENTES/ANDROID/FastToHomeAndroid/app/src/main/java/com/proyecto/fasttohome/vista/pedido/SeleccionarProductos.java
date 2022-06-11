@@ -90,7 +90,7 @@ public class SeleccionarProductos extends AppCompatActivity {
                     irFinalizar();
                 }).show();
             }else {
-                new Toast.makeText(this, "No hayError en el pedido", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "No hayError en el pedido", Toast.LENGTH_LONG).show();
             }
 
         });
