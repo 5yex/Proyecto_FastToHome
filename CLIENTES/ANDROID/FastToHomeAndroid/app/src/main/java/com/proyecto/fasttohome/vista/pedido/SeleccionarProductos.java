@@ -2,6 +2,7 @@ package com.proyecto.fasttohome.vista.pedido;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.android.volley.Request;
@@ -32,6 +33,7 @@ import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Producto;
 import com.proyecto.fasttohome.modelo.Usuario;
+import com.proyecto.fasttohome.vista.PantallaPrincipal;
 import com.proyecto.fasttohome.vista.pedido.recycler_adaptors.RecyclerViewAdaptorProducto;
 import com.squareup.picasso.Picasso;
 
@@ -80,12 +82,17 @@ public class SeleccionarProductos extends AppCompatActivity {
         pantalla = (CoordinatorLayout)  findViewById(R.id.constraint);
         pedir = (Button) findViewById(R.id.doPedido);
         pedir.setOnClickListener(view -> {
-
+            irFinalizar();
         });
 
 
         obtenerProductosNegocio();
     }
+
+    public void irFinalizar() {
+        Intent i = new Intent(this, FinalizarPedido.class );
+        startActivity(i);
+    };
 
     public void obtenerProductosNegocio() {
         productos = new HashMap<>();
