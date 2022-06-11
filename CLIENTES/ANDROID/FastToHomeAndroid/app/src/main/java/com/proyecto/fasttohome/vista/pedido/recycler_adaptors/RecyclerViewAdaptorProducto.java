@@ -105,7 +105,6 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
             AlertDialog.Builder builder = new AlertDialog.Builder(holder.contexto);
         builder.setTitle("INFORMACIÓN DEL PRODUCTO").setMessage(productoActual.getDescripcion()).show();
         });
-
     }
 
     private void updateContador(@NonNull ViewHolder holder, int productoActual) {
