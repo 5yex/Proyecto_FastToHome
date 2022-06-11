@@ -87,7 +87,7 @@ public class SeleccionarProductos extends AppCompatActivity {
     }
 
     public void obtenerProductosNegocio() {
-        productos = new ArrayList<Producto>();
+        productos = new HashMap<>();
         String url = getString(R.string.apiUrl);;
         RequestQueue queue = Volley.newRequestQueue(SeleccionarProductos.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
