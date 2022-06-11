@@ -21,17 +21,17 @@ import java.util.List;
 public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerViewAdaptorProducto.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView nombre, descripcion, precio, cantidadActual;
-        private Button ADD, DEL;
+        private TextView nombre, precio, cantidadActual;
+        private Button ADD, DEL,INFO;
         private ImageView image;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             nombre = (TextView) itemView.findViewById(R.id.tvNombreProducto);
-           // descripcion = (TextView) itemView.findViewById(R.id.tvDescripcionProducto);
             precio = (TextView) itemView.findViewById(R.id.tvPrecioProducto);
             cantidadActual = (TextView) itemView.findViewById(R.id.CantidadProducto);
             ADD = (Button) itemView.findViewById(R.id.ADD);
             DEL = (Button) itemView.findViewById(R.id.DEL);
+            INFO = (Button) itemView.findViewById(R.id.info);
             image = (ImageView) itemView.findViewById(R.id.imageProducto);
         }
     }
