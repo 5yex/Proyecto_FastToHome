@@ -10,7 +10,7 @@ public class Texto {
         return sb.toString();
     }
     public static String leftPad(String in, int len) {
-        return new StringBuilder(in).append(genString(len - in.length() - 1)).toString();
+        return new StringBuilder(in).append(genString(len - in.length())).toString();
     }
 
 }
