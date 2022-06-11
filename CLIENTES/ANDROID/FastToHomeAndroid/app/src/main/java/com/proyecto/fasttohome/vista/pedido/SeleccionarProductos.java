@@ -82,7 +82,14 @@ public class SeleccionarProductos extends AppCompatActivity {
         pantalla = (CoordinatorLayout)  findViewById(R.id.constraint);
         pedir = (Button) findViewById(R.id.doPedido);
         pedir.setOnClickListener(view -> {
-            irFinalizar();
+            AlertDialog.Builder builder = new AlertDialog.Builder(SeleccionarProductos.this);
+            builder.setTitle("FINALIZAR PEDIDO").setMessage("¿Seguro que quieres finalizar el pedido?");
+            builder.setNegativeButton("Volver a mi pedido",null);
+            builder.setPositiveButton("Sí", (dialogInterface, i) -> {
+                irFinalizar();
+            }).show();
+
+
         });
 
 
