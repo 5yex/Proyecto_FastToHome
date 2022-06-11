@@ -7,7 +7,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
@@ -16,13 +16,13 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="246dp">
 
 
             <TextView
                 android:id="@+id/CantidadProducto"
-                android:layout_width="180dp"
-                android:layout_height="43dp"
+                android:layout_width="155dp"
+                android:layout_height="39dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="4dp"
                 android:paddingTop="5dp"
@@ -34,34 +34,20 @@
 
             <TextView
                 android:id="@+id/tvNombreProducto"
-                android:layout_width="381dp"
-                android:layout_height="59dp"
+                android:layout_width="230dp"
+                android:layout_height="42dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="TextView"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent" />
-
-
-            <TextView
-                android:id="@+id/tvDescripcionProducto"
-                android:layout_width="184dp"
-                android:layout_height="88dp"
-                android:layout_marginTop="8dp"
-                android:paddingTop="5dp"
-                android:text="TextView"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvNombreProducto" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvPrecioProducto"
-                android:layout_width="181dp"
-                android:layout_height="46dp"
-                android:layout_marginTop="4dp"
+                android:layout_width="146dp"
+                android:layout_height="40dp"
                 android:layout_marginEnd="4dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="2dp"
@@ -69,39 +55,40 @@
                 android:textSize="28sp"
                 android:textStyle="bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvDescripcionProducto" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/DEL"
-                android:layout_width="192dp"
-                android:layout_height="49dp"
-                android:layout_marginTop="4dp"
+                android:layout_width="156dp"
+                android:layout_height="56dp"
                 android:enabled="false"
                 android:text="Eliminar"
                 android:textSize="16sp"
                 app:icon="@drawable/ic_twotone_delete_forever_24"
                 app:iconPadding="0dp"
-                app:layout_constraintEnd_toEndOf="@+id/imageProducto"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageProducto" />
+                app:layout_constraintBottom_toTopOf="@+id/ADD"
+                app:layout_constraintStart_toStartOf="@+id/ADD" />
 
             <Button
                 android:id="@+id/ADD"
-                android:layout_width="181dp"
-                android:layout_height="49dp"
+                android:layout_width="156dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="1dp"
                 android:layout_marginEnd="4dp"
                 android:text="AÑADIR"
                 app:icon="@drawable/ic_twotone_add_shopping_cart_24"
+                app:layout_constraintBottom_toBottomOf="@+id/imageProducto"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/DEL" />
+                app:layout_constraintStart_toEndOf="@+id/imageProducto" />
 
             <ImageView
                 android:id="@+id/imageProducto"
-                android:layout_width="194dp"
-                android:layout_height="185dp"
-                android:layout_marginTop="8dp"
+                android:layout_width="218dp"
+                android:layout_height="197dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
                 android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvNombreProducto"
                 app:srcCompat="@drawable/ic_launcher_foreground" />
