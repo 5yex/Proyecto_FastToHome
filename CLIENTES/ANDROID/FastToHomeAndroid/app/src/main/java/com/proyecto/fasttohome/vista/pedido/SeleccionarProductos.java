@@ -84,7 +84,6 @@ public class SeleccionarProductos extends AppCompatActivity {
         pedir = (Button) findViewById(R.id.doPedido);
 
 
-       binding.coordinatorLayout2.onInterceptTouchEvent();
 
         obtenerProductosNegocio();
     }
