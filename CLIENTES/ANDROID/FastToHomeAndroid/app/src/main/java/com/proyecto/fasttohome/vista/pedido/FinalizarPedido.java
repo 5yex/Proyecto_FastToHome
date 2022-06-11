@@ -79,7 +79,8 @@ public class FinalizarPedido extends AppCompatActivity {
     private void actualizarResumen() {
         double precioTotal = 0;
         for (Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
-            precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
+            Producto producto = productos.get(entry.getKey());
+            precioTotal = precioTotal + (producto.getPrecio() * entry.getValue());
         }
     }
     /**
