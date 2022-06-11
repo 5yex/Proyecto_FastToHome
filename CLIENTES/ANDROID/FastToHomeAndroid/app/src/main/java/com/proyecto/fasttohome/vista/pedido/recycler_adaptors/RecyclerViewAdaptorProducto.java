@@ -14,11 +14,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Producto;
-import com.proyecto.fasttohome.vista.pedido.SeleccionarProductos;
 import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerViewAdaptorProducto.ViewHolder> {
 
@@ -115,11 +115,11 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
             holder.cantidadActual.setText("No llevas ninguno");
         }
 
-        int precioTotal = 0;
-
-        
-
-        holder.pedir.setText("Productos: " + productosSeleccionados.size() , );
+        double precioTotal = 0;
+        for(Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
+            precioTotal = precioTotal + (listaProductos.get(entry.getKey()).getPrecio() * entry.getValue());
+        }
+        holder.pedir.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal);
     }
 
     public HashMap<Integer, Integer> getProductosSeleccionados() {
