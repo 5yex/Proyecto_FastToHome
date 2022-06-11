@@ -46,7 +46,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
     public HashMap<Integer, Integer> productosSeleccionados;
 
     public RecyclerViewAdaptorProducto(HashMap <Integer, Producto> listaProductos, HashMap<Integer, Integer> productosSeleccionados) {
-        this.listaProductos = (List<Producto>) listaProductos.values();
+        this.listaProductos = new ArrayList<>(values);listaProductos.values();
         this.productosSeleccionados = productosSeleccionados;
     }
 
