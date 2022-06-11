@@ -60,7 +60,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         holder.nombre.setText(productoActual.getNombre());
         holder.descripcion.setText(productoActual.getDescripcion());
         holder.precio.setText("Precio: " + productoActual.getPrecio() + "€");
-        Picasso.get().load(productoActual.getUrl_imagen()).into(holder.);
+        Picasso.get().load(productoActual.getUrl_imagen()).into(holder.image);
         View.OnClickListener listener = view -> {
             if(holder.DEL.getId() == view.getId()){
                 if (productosSeleccionados.containsKey(productoActualId)) {
