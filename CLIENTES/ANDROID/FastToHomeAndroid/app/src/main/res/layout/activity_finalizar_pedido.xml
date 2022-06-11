@@ -62,7 +62,7 @@
         <include
             android:id="@+id/googlePayButton"
             layout="@layout/buy_with_googlepay_button"
-            android:layout_width="match_parent" />
+            android:layout_width="wrap_content" />
 
     </LinearLayout>
 </ScrollView>
