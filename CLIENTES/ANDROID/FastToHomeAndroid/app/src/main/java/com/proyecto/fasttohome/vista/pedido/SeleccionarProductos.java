@@ -83,7 +83,7 @@ public class SeleccionarProductos extends AppCompatActivity {
         pantalla = (CoordinatorLayout)  findViewById(R.id.constraint);
         pedir = (Button) findViewById(R.id.doPedido);
 
-       this.view.setOnTouchListener((view, motionEvent) -> {
+       setOnTouchListener((view, motionEvent) -> {
             double precioTotal = 0;
             for(Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
                 precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
