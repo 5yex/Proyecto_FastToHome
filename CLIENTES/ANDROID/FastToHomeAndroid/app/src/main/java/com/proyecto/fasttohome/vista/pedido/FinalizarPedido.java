@@ -1,5 +1,7 @@
 package com.proyecto.fasttohome.vista.pedido;
 
+import static com.proyecto.fasttohome.util.Texto.genString;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -90,7 +92,7 @@ public class FinalizarPedido extends AppCompatActivity {
         for (Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
             Producto producto = productos.get(entry.getKey());
             precioTotal = precioTotal + (producto.getPrecio() * entry.getValue());
-            lista.add(producto.getPrecio()  + "Eur. - " + entry.getValue() + "Uds. -  " + producto.getNombre());
+            lista.add();
             indice++;
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,lista);
