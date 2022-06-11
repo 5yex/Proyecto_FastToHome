@@ -69,6 +69,7 @@
                 tools:layout_editor_absoluteX="16dp" />
 
             <ListView
+                android:id="@+id/resumen"
                 android:layout_width="351dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
