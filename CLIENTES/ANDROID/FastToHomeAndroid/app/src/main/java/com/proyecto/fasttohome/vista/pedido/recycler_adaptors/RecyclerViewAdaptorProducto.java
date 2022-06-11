@@ -110,6 +110,17 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
             AlertDialog.Builder builder = new AlertDialog.Builder(holder.contexto);
         builder.setTitle("INFORMACIÓN DEL PRODUCTO").setMessage(productoActual.getDescripcion()).show();
         });
+
+        double precioTotal = 0;
+        for(Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
+            precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
+        }
+        if(precioTotal > 0) {
+            pedir.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal +"\nHACER PEDIDO");
+        }else {
+            pedir.setText("Pedir");
+        }
+
     }
 
     private void updateContador(@NonNull ViewHolder holder, int productoActual) {
@@ -119,11 +130,6 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
             holder.cantidadActual.setText("No llevas ninguno");
         }
 
-        double precioTotal = 0;
-        for(Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
-            precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
-        }
-        pedir.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal +"\nHACER PEDIDO");
     }
 
 
