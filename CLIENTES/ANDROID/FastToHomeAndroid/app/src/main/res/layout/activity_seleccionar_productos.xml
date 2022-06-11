@@ -74,7 +74,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="220pt"
         android:backgroundTint="#FA9170"
-        android:backgroundTintMode="src_in"
+        android:backgroundTintMode="add"
         android:text="Llevas x productos y x euros \n Hacer Pedido"
         app:cornerRadius="50dp"
         app:layout_anchorGravity="center" />
