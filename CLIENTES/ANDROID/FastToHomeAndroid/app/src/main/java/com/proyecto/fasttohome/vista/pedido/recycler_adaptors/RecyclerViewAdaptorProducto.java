@@ -114,6 +114,12 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         } else {
             holder.cantidadActual.setText("No llevas ninguno");
         }
+
+        int precioTotal = 0;
+
+        
+
+        holder.pedir.setText("Productos: " + productosSeleccionados.size() , );
     }
 
     public HashMap<Integer, Integer> getProductosSeleccionados() {
