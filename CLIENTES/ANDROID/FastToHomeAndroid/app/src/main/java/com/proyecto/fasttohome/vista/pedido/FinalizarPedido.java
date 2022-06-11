@@ -17,6 +17,7 @@ import com.google.android.gms.wallet.PaymentData;
 
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.databinding.ActivityFinalizarPedidoBinding;
+
 import com.proyecto.fasttohome.vista.pedido.viewmodel.CheckoutViewModel;
 
 import java.util.Locale;
@@ -24,10 +25,6 @@ import java.util.Locale;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
-/**
- * Checkout implementation for the app
- */
 public class FinalizarPedido extends AppCompatActivity {
 
     // Arbitrarily-picked constant integer you define to track a request for payment data activity.
@@ -118,6 +115,7 @@ public class FinalizarPedido extends AppCompatActivity {
                         PaymentData paymentData = PaymentData.getFromIntent(data);
                         handlePaymentSuccess(paymentData);
                         break;
+
                     case AppCompatActivity.RESULT_CANCELED:
                         // The user cancelled the payment attempt
                         break;
@@ -146,7 +144,10 @@ public class FinalizarPedido extends AppCompatActivity {
 
         try {
             JSONObject paymentMethodData = new JSONObject(paymentInfo).getJSONObject("paymentMethodData");
-             final JSONObject tokenizationData = paymentMethodData.getJSONObject("tokenizationData");
+            // If the gateway is set to "example", no payment information is returned - instead, the
+            // token will only consist of "examplePaymentMethodToken".
+
+            final JSONObject tokenizationData = paymentMethodData.getJSONObject("tokenizationData");
             final String token = tokenizationData.getString("token");
             final JSONObject info = paymentMethodData.getJSONObject("info");
             final String billingName = info.getJSONObject("billingAddress").getString("name");
