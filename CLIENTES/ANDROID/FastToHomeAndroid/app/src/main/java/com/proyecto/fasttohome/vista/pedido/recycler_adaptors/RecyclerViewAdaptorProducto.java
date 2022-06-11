@@ -38,8 +38,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
             eliminar = (Button) itemView.findViewById(R.id.DEL);
             info = (Button) itemView.findViewById(R.id.info);
             image = (ImageView) itemView.findViewById(R.id.imageProducto);
-            pedir = (Button) itemView.findViewById(R.id.doPedido);
-        }
+            }
     }
 
     public List<Producto> listaProductos;
