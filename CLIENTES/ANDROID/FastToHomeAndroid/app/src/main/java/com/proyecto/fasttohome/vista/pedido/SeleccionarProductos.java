@@ -88,8 +88,6 @@ public class SeleccionarProductos extends AppCompatActivity {
             builder.setPositiveButton("Sí", (dialogInterface, i) -> {
                 irFinalizar();
             }).show();
-
-
         });
 
 
@@ -98,6 +96,10 @@ public class SeleccionarProductos extends AppCompatActivity {
 
     public void irFinalizar() {
         Intent i = new Intent(this, FinalizarPedido.class );
+        i.putExtra("items",productosSeleccionados);
+        i.putExtra("productos",productos);
+        i.putExtra("usuario", usuario);
+        i.putExtra("negocio", negocio);
         startActivity(i);
     };
 
