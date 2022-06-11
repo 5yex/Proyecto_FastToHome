@@ -18,8 +18,12 @@ import com.google.android.gms.wallet.PaymentData;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.databinding.ActivityFinalizarPedidoBinding;
 
+import com.proyecto.fasttohome.modelo.Negocio;
+import com.proyecto.fasttohome.modelo.Producto;
+import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.util.CheckoutViewModel;
 
+import java.util.HashMap;
 import java.util.Locale;
 
 import org.json.JSONException;
@@ -35,6 +39,10 @@ public class FinalizarPedido extends AppCompatActivity {
     private ActivityFinalizarPedidoBinding layoutBinding;
     private View googlePayButton;
 
+    private HashMap<Integer, Integer> productosSeleccionados;
+    private HashMap<Integer, Producto> productos;
+    private Usuario usuario;
+    private Negocio negocio;
     /**
      * Initialize the Google Pay API on creation of the activity
      *
@@ -43,12 +51,15 @@ public class FinalizarPedido extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        usuario = (Usuario) getIntent().getExtras().getSerializable("user");
+        negocio = (Negocio) getIntent().getExtras().getSerializable("negocio");
+        productos = (HashMap<Integer, Producto>) getIntent().getExtras().getSerializable("productos");
+        productosSeleccionados = (HashMap<Integer, Integer>) getIntent().getExtras().getSerializable("productosSeleccionados");
         initializeUi();
 
         model = new ViewModelProvider(this).get(CheckoutViewModel.class);
         model.canUseGooglePay.observe(this, this::setGooglePayAvailable);
     }
-
     private void initializeUi() {
 
         // Use view binding to access the UI elements
@@ -58,6 +69,9 @@ public class FinalizarPedido extends AppCompatActivity {
         // The Google Pay button is a layout file – take the root view
         googlePayButton = layoutBinding.googlePayButton.getRoot();
         googlePayButton.setOnClickListener(this::requestPayment);
+
+
+
     }
 
     /**
