@@ -19,6 +19,17 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".FinalizarPedido"
+            android:exported="false"
+            android:label="@string/title_activity_finalizar_pedido"
+            android:theme="@style/Theme.FastToHome" />
+
+        <!-- This element is required to enable Google Pay in your app. -->
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+
+        <activity
             android:name=".vista.pedido.SeleccionarProductos"
             android:exported="false"
             android:label="@string/title_activity_seleccionar_productos"
