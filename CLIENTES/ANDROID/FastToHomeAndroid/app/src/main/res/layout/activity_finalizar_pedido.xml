@@ -47,13 +47,12 @@
                 android:id="@+id/detailTitle3"
                 android:layout_width="67dp"
                 android:layout_height="29dp"
-                android:layout_marginTop="320dp"
-                android:text="Precio:"
+                android:text="Total:"
                 android:textColor="?android:textColorPrimary"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/detailTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/list" />
 
             <TextView
                 android:id="@+id/detailPrice"
@@ -69,7 +68,7 @@
             <ListView
                 android:id="@+id/list"
                 android:layout_width="355dp"
-                android:layout_height="290dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
