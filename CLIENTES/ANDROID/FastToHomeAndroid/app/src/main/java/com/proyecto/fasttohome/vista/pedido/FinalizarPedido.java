@@ -118,7 +118,6 @@ public class FinalizarPedido extends AppCompatActivity {
                         PaymentData paymentData = PaymentData.getFromIntent(data);
                         handlePaymentSuccess(paymentData);
                         break;
-
                     case AppCompatActivity.RESULT_CANCELED:
                         // The user cancelled the payment attempt
                         break;
