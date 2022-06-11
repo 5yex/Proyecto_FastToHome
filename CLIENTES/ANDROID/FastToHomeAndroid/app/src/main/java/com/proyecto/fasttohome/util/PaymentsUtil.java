@@ -141,10 +141,6 @@ public class PaymentsUtil {
         // Optionally, you can add billing address/phone number associated with a CARD payment method.
         parameters.put("billingAddressRequired", false);
 
-        JSONObject billingAddressParameters = new JSONObject();
-        billingAddressParameters.put("format", "FULL");
-
-        parameters.put("billingAddressParameters", billingAddressParameters);
 
         cardPaymentMethod.put("parameters", parameters);
 
