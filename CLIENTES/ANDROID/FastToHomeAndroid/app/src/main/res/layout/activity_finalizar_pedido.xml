@@ -16,13 +16,13 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="632dp">
+            android:layout_height="579dp">
 
             <TextView
                 android:id="@+id/detailTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="16dp"
                 android:text="Resumen:"
                 android:textColor="?android:textColorPrimary"
@@ -32,13 +32,30 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/detailTitle2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/checkout_item_description"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="148dp"
+                android:text="Pagos:"
                 android:textColor="?android:textColorPrimary"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                tools:layout_editor_absoluteX="140dp"
-                tools:layout_editor_absoluteY="199dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/_dynamic" />
+
+            <TextView
+                android:id="@+id/detailTitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="Precio:"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/_dynamic" />
 
             <TextView
                 android:id="@+id/detailPrice"
@@ -46,8 +63,16 @@
                 android:layout_height="wrap_content"
                 android:text="10.00 Euros"
                 android:textColor="?android:textColorSecondary"
-                tools:layout_editor_absoluteX="122dp"
-                tools:layout_editor_absoluteY="271dp" />
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="446dp" />
+
+            <ListView
+                android:layout_width="351dp"
+                android:layout_height="333dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/detailTitle"
+                tools:layout_editor_absoluteX="1dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -56,6 +81,13 @@
             layout="@layout/buy_with_googlepay_button"
             android:layout_width="wrap_content"
             android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="346dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:text="Pagar" />
 
         <!--
             TODO Check out Google Pay's brand guidelines to discover all button types and styles:
