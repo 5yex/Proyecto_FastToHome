@@ -3,6 +3,7 @@ package com.proyecto.fasttohome.vista.pedido.recycler_adaptors;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -42,12 +43,13 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
             }
     }
 
+    public HashMap<Integer, Producto> productos;
     public ArrayList<Producto> listaProductos;
-    //El key (int) será un id de producto para localizarlo mejor
     public HashMap<Integer, Integer> productosSeleccionados;
 
     public RecyclerViewAdaptorProducto(HashMap <Integer, Producto> listaProductos, HashMap<Integer, Integer> productosSeleccionados) {
         this.listaProductos = new ArrayList<>(listaProductos.values());
+        this.productos = listaProductos;
         this.productosSeleccionados = productosSeleccionados;
     }
 
@@ -114,7 +116,16 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         } else {
             holder.cantidadActual.setText("No llevas ninguno");
         }
+
+        double precioTotal = 0;
+        for(Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
+            precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
+        }
+        binding.doPedido.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal +"\nHACER PEDIDO");
+        return super.dispatchTouchEvent(event);
+
     }
+
 
     public HashMap<Integer, Integer> getProductosSeleccionados() {
         return productosSeleccionados;
