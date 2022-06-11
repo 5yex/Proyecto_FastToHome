@@ -83,20 +83,21 @@ public class SeleccionarProductos extends AppCompatActivity {
         pantalla = (CoordinatorLayout)  findViewById(R.id.constraint);
         pedir = (Button) findViewById(R.id.doPedido);
 
-       setOnTouchListener((view, motionEvent) -> {
-            double precioTotal = 0;
-            for(Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
-                precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
-            }
-            binding.doPedido.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal +"\nHACER PEDIDO");
-            return false;
-        });
 
        binding.coordinatorLayout2.onInterceptTouchEvent();
 
         obtenerProductosNegocio();
     }
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        double precioTotal = 0;
+        for(Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
+            precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
+        }
+        binding.doPedido.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal +"\nHACER PEDIDO");
+        return super.onTouchEvent(event);
+    }
 
 
 
