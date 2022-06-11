@@ -26,7 +26,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private TextView nombre, precio, cantidadActual;
-        private Button add, eliminar, info,pedir;
+        private Button add, eliminar, info, pedir;
         private ImageView image;
         private Context contexto;
 
@@ -40,7 +40,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
             eliminar = (Button) itemView.findViewById(R.id.DEL);
             info = (Button) itemView.findViewById(R.id.info);
             image = (ImageView) itemView.findViewById(R.id.imageProducto);
-            }
+        }
     }
 
     public HashMap<Integer, Producto> productos;
@@ -93,6 +93,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
                 }
                 holder.eliminar.setEnabled(true);
             }
+            actualizarResumen();
             updateContador(holder, productoActualId);
         };
 
@@ -108,11 +109,22 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
 
         holder.info.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(holder.contexto);
-        builder.setTitle("INFORMACIÓN DEL PRODUCTO").setMessage(productoActual.getDescripcion()).show();
+            builder.setTitle("INFORMACIÓN DEL PRODUCTO").setMessage(productoActual.getDescripcion()).show();
         });
+    }
 
+    private void actualizarResumen() {
+        double precioTotal = 0;
+        for (Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
+            precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
+        }
 
-
+        if (precioTotal > 0) {
+            System.out.println("FKSDFSD");
+            pedir.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal + "\nHACER PEDIDO");
+        } else {
+            pedir.setText("Pedir");
+        }
     }
 
     private void updateContador(@NonNull ViewHolder holder, int productoActual) {
