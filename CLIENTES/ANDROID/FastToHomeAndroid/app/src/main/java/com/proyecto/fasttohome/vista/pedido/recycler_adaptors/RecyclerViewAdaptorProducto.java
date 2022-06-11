@@ -27,7 +27,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             nombre = (TextView) itemView.findViewById(R.id.tvNombreProducto);
-            descripcion = (TextView) itemView.findViewById(R.id.tvDescripcionProducto);
+           // descripcion = (TextView) itemView.findViewById(R.id.tvDescripcionProducto);
             precio = (TextView) itemView.findViewById(R.id.tvPrecioProducto);
             cantidadActual = (TextView) itemView.findViewById(R.id.CantidadProducto);
             ADD = (Button) itemView.findViewById(R.id.ADD);
@@ -58,7 +58,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         Producto productoActual = listaProductos.get(position);
         int productoActualId = productoActual.getId_producto();
         holder.nombre.setText(productoActual.getNombre());
-        holder.descripcion.setText(productoActual.getDescripcion());
+       // holder.descripcion.setText(productoActual.getDescripcion());
         holder.precio.setText("Precio: " + productoActual.getPrecio() + "€");
         Picasso.get().setLoggingEnabled(true);
         Picasso.get().load(productoActual.getUrl_imagen()).into(holder.image);
