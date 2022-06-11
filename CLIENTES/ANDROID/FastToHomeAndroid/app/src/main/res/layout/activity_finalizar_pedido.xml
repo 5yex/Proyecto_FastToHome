@@ -22,7 +22,6 @@
                 android:id="@+id/detailTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
                 android:layout_marginTop="16dp"
                 android:text="Resumen:"
                 android:textColor="?android:textColorPrimary"
@@ -35,7 +34,6 @@
                 android:id="@+id/detailTitle2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="148dp"
                 android:text="Pagos:"
                 android:textColor="?android:textColorPrimary"
@@ -48,7 +46,6 @@
                 android:id="@+id/detailTitle3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="20dp"
                 android:text="Precio:"
                 android:textColor="?android:textColorPrimary"
@@ -65,8 +62,8 @@
                 android:text="10.00 Euros"
                 android:textColor="?android:textColorSecondary"
                 android:textSize="12sp"
-                app:layout_constraintTop_toBottomOf="@+id/detailTitle3"
-                tools:layout_editor_absoluteX="16dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailTitle3" />
 
             <ListView
                 android:layout_width="351dp"
