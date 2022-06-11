@@ -5,7 +5,7 @@ public class Texto {
     public static String genString(int len) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < len; i++) {
-            sb.append(' ');
+            sb.append('⠀');
         }
         return sb.toString();
     }
