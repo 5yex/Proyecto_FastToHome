@@ -1,5 +1,7 @@
 package com.proyecto.fasttohome.vista.pedido.recycler_adaptors;
 
+import android.app.AlertDialog;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Producto;
+import com.proyecto.fasttohome.vista.pedido.SeleccionarProductos;
 import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
@@ -21,16 +24,19 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private TextView nombre, precio, cantidadActual;
-        private Button add, info,INFO;
+        private Button add, eliminar, info;
         private ImageView image;
+        private Context contexto;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            contexto = itemView.getContext();
             nombre = (TextView) itemView.findViewById(R.id.tvNombreProducto);
             precio = (TextView) itemView.findViewById(R.id.tvPrecioProducto);
             cantidadActual = (TextView) itemView.findViewById(R.id.CantidadProducto);
             add = (Button) itemView.findViewById(R.id.ADD);
-            info = (Button) itemView.findViewById(R.id.DEL);
-            INFO = (Button) itemView.findViewById(R.id.info);
+            eliminar = (Button) itemView.findViewById(R.id.DEL);
+            info = (Button) itemView.findViewById(R.id.info);
             image = (ImageView) itemView.findViewById(R.id.imageProducto);
         }
     }
@@ -57,52 +63,59 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         Producto productoActual = listaProductos.get(position);
         int productoActualId = productoActual.getId_producto();
         holder.nombre.setText(productoActual.getNombre());
-       // holder.descripcion.setText(productoActual.getDescripcion());
+        // holder.descripcion.setText(productoActual.getDescripcion());
         holder.precio.setText(productoActual.getPrecio() + "€");
         Picasso.get().setLoggingEnabled(true);
         Picasso.get().load(productoActual.getUrl_imagen()).into(holder.image);
         View.OnClickListener listener = view -> {
-            if(holder.info.getId() == view.getId()){
+            if (holder.eliminar.getId() == view.getId()) {
                 if (productosSeleccionados.containsKey(productoActualId)) {
                     int oldValue = productosSeleccionados.get(productoActualId);
                     if (oldValue < 2) {
                         productosSeleccionados.remove(productoActualId);
-                        holder.info.setEnabled(false);
+                        holder.eliminar.setEnabled(false);
                     } else {
                         productosSeleccionados.put(productoActualId, oldValue - 1);
                     }
                 }
             }
-            if(holder.add.getId() == view.getId()){
+            if (holder.add.getId() == view.getId()) {
                 if (!productosSeleccionados.containsKey(productoActualId)) {
                     productosSeleccionados.put(productoActualId, 1);
                 } else {
                     int oldValue = productosSeleccionados.get(productoActualId);
                     productosSeleccionados.put(productoActualId, oldValue + 1);
                 }
-                holder.info.setEnabled(true);
+                holder.eliminar.setEnabled(true);
             }
             updateContador(holder, productoActualId);
         };
 
-       holder.info.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                productosSeleccionados.remove(productoActualId);
-                holder.info.setEnabled(false);
-                updateContador(holder, productoActualId);
-                return true;
-            }
+        holder.eliminar.setOnLongClickListener(v -> {
+            productosSeleccionados.remove(productoActualId);
+            holder.eliminar.setEnabled(false);
+            updateContador(holder, productoActualId);
+            return true;
         });
+
         holder.add.setOnClickListener(listener);
-        holder.info.setOnClickListener(listener);
+        holder.eliminar.setOnClickListener(listener);
+
+        holder.info.setOnClickListener(view -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(con);
+            builder.setTitle("ATENCIÓN").setMessage("Si vuelves atrás cancelaras el pedido.\n ¿Seguro que quieres salir?");
+            builder.setNegativeButton("Volver a mi pedido",null);
+            builder.setPositiveButton("Sí", (dialogInterface, i) -> {
+                super.onBackPressed();
+            }).show();
+        });
 
     }
 
     private void updateContador(@NonNull ViewHolder holder, int productoActual) {
-        if(productosSeleccionados.containsKey(productoActual)){
-            holder.cantidadActual.setText("Te llevas: "+ productosSeleccionados.get(productoActual));
-        }else{
+        if (productosSeleccionados.containsKey(productoActual)) {
+            holder.cantidadActual.setText("Te llevas: " + productosSeleccionados.get(productoActual));
+        } else {
             holder.cantidadActual.setText("No llevas ninguno");
         }
     }
