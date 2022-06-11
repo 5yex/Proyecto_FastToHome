@@ -123,9 +123,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         for(Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
             precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
         }
-
-        Button pedido =
-        pedido.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal +"\nHACER PEDIDO");
+        pedir.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal +"\nHACER PEDIDO");
     }
 
 
