@@ -23,7 +23,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private TextView nombre, descripcion, precio, cantidadActual;
         private Button ADD, DEL;
-
+        private ImageView image;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             nombre = (TextView) itemView.findViewById(R.id.tvNombreProducto);
@@ -32,7 +32,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
             cantidadActual = (TextView) itemView.findViewById(R.id.CantidadProducto);
             ADD = (Button) itemView.findViewById(R.id.ADD);
             DEL = (Button) itemView.findViewById(R.id.DEL);
-            image = (ImageView) itemView.findViewById(R.id.);
+            image = (ImageView) itemView.findViewById(R.id.imageProducto);
         }
     }
 
