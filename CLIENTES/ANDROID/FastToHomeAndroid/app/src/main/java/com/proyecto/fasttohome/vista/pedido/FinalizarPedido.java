@@ -25,6 +25,7 @@ import com.proyecto.fasttohome.util.CheckoutViewModel;
 
 import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -43,6 +44,8 @@ public class FinalizarPedido extends AppCompatActivity {
     private HashMap<Integer, Producto> productos;
     private Usuario usuario;
     private Negocio negocio;
+
+
     /**
      * Initialize the Google Pay API on creation of the activity
      *
@@ -70,10 +73,15 @@ public class FinalizarPedido extends AppCompatActivity {
         googlePayButton = layoutBinding.googlePayButton.getRoot();
         googlePayButton.setOnClickListener(this::requestPayment);
 
-
+        actualizarResumen();
 
     }
-
+    private void actualizarResumen() {
+        double precioTotal = 0;
+        for (Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
+            precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
+        }
+    }
     /**
      * If isReadyToPay returned {@code true}, show the button and hide the "checking" text.
      * Otherwise, notify the user that Google Pay is not available. Please adjust to fit in with

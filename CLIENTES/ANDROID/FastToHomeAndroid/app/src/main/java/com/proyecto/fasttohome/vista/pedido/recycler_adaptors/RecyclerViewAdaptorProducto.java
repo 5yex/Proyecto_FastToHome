@@ -68,7 +68,6 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         Producto productoActual = listaProductos.get(position);
         int productoActualId = productoActual.getId_producto();
         holder.nombre.setText(productoActual.getNombre());
-        // holder.descripcion.setText(productoActual.getDescripcion());
         holder.precio.setText(productoActual.getPrecio() + "€");
         Picasso.get().setLoggingEnabled(true);
         Picasso.get().load(productoActual.getUrl_imagen()).into(holder.image);
