@@ -21,11 +21,12 @@
 
             <Button
                 android:id="@+id/info"
-                android:layout_width="107dp"
+                android:layout_width="102dp"
                 android:layout_height="56dp"
+                android:layout_marginEnd="4dp"
                 android:text="INFO"
-                app:icon="@drawable/ic_twotone_add_shopping_cart_24"
-                app:layout_constraintEnd_toStartOf="@+id/DEL"
+                app:icon="@drawable/ic_baseline_info_24"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/DEL" />
 
             <TextView
@@ -77,23 +78,25 @@
                 android:id="@+id/DEL"
                 android:layout_width="135dp"
                 android:layout_height="56dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="1dp"
                 android:enabled="false"
                 android:text="Borrar"
                 android:textSize="16sp"
                 app:icon="@drawable/ic_twotone_delete_forever_24"
                 app:iconPadding="0dp"
-                app:layout_constraintEnd_toStartOf="@+id/ADD"
-                app:layout_constraintTop_toTopOf="@+id/ADD" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageProducto" />
 
             <Button
                 android:id="@+id/ADD"
-                android:layout_width="135dp"
+                android:layout_width="130dp"
                 android:layout_height="56dp"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 android:text="AÑADIR"
                 app:icon="@drawable/ic_twotone_add_shopping_cart_24"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/CantidadProducto" />
+                app:layout_constraintStart_toEndOf="@+id/DEL"
+                app:layout_constraintTop_toTopOf="@+id/DEL" />
 
             <ImageView
                 android:id="@+id/imageProducto"
