@@ -36,7 +36,7 @@
                 android:layout_marginEnd="4dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="2dp"
-                android:text="No te llevas ninguno"
+                android:text="No llevas ninguno"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageProducto"
                 app:layout_constraintEnd_toEndOf="parent"

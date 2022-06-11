@@ -59,7 +59,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         int productoActualId = productoActual.getId_producto();
         holder.nombre.setText(productoActual.getNombre());
        // holder.descripcion.setText(productoActual.getDescripcion());
-        holder.precio.setText("Precio: " + productoActual.getPrecio() + "€");
+        holder.precio.setText(productoActual.getPrecio() + "€");
         Picasso.get().setLoggingEnabled(true);
         Picasso.get().load(productoActual.getUrl_imagen()).into(holder.image);
         View.OnClickListener listener = view -> {
@@ -105,7 +105,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         if(productosSeleccionados.containsKey(productoActual)){
             holder.cantidadActual.setText("Te llevas: "+ productosSeleccionados.get(productoActual));
         }else{
-            holder.cantidadActual.setText("No te llevas ninguno");
+            holder.cantidadActual.setText("No llevas ninguno");
         }
     }
 
