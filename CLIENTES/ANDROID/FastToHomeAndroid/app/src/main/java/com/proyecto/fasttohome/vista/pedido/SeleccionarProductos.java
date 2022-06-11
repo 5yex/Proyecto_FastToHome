@@ -117,16 +117,13 @@ public class SeleccionarProductos extends AppCompatActivity {
                     adaptorProducto = new RecyclerViewAdaptorProducto(productos, productosSeleccionados);
                     recyclerViewProducto.setAdapter(adaptorProducto);
 
-                    binding.constraint.setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View view, MotionEvent motionEvent) {
-                            double precioTotal = 0;
-                            for(Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
-                                precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
-                            }
-                            binding.doPedido.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal +" - HACER PEDIDO");
-                            return false;
+                    binding.constraint.setOnTouchListener((view, motionEvent) -> {
+                        double precioTotal = 0;
+                        for(Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
+                            precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
                         }
+                        binding.doPedido.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal +" - HACER PEDIDO");
+                        return false;
                     });
 
                 }
