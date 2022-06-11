@@ -18,7 +18,7 @@ import com.google.android.gms.wallet.PaymentData;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.databinding.ActivityFinalizarPedidoBinding;
 
-import com.proyecto.fasttohome.vista.pedido.viewmodel.CheckoutViewModel;
+import com.proyecto.fasttohome.util.CheckoutViewModel;
 
 import java.util.Locale;
 
