@@ -139,7 +139,7 @@ public class PaymentsUtil {
         parameters.put("allowedAuthMethods", getAllowedCardAuthMethods());
         parameters.put("allowedCardNetworks", getAllowedCardNetworks());
         // Optionally, you can add billing address/phone number associated with a CARD payment method.
-        parameters.put("billingAddressRequired", false);
+        parameters.put("billingAddressRequired", true);
 
         JSONObject billingAddressParameters = new JSONObject();
         billingAddressParameters.put("format", "FULL");
@@ -238,7 +238,7 @@ public class PaymentsUtil {
 
       /* An optional shipping address requirement is a top-level property of the PaymentDataRequest
       JSON object. */
-            paymentDataRequest.put("shippingAddressRequired", false);
+            paymentDataRequest.put("shippingAddressRequired", true);
 
             JSONObject shippingAddressParameters = new JSONObject();
             shippingAddressParameters.put("phoneNumberRequired", false);
