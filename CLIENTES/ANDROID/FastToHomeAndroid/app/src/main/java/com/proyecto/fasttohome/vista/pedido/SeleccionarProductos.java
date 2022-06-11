@@ -89,9 +89,7 @@ public class SeleccionarProductos extends AppCompatActivity {
     }
 
     @Override
-    
-
-    public boolean aBoolean(MotionEvent event) {
+    public boolean onTouchEvent(MotionEvent event) {
         double precioTotal = 0;
         for(Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
             precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
