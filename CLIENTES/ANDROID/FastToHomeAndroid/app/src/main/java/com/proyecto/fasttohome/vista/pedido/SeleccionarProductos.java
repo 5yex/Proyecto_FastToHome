@@ -95,6 +95,7 @@ public class SeleccionarProductos extends AppCompatActivity {
         obtenerProductosNegocio();
     }
 
+
     
 
     public void obtenerProductosNegocio() {
