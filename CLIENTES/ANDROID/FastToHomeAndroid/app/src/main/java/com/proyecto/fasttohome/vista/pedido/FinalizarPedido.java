@@ -130,10 +130,8 @@ public class FinalizarPedido extends AppCompatActivity {
 
         // The price provided to the API should include taxes and shipping.
         // This price is not displayed to the user.
-        long dummyPriceCents = 100;
-        long shippingCostCents = 900;
-        long totalPriceCents = dummyPriceCents + shippingCostCents;
-        final Task<PaymentData> task = model.getLoadPaymentDataTask(totalPriceCents);
+
+        final Task<PaymentData> task = model.getLoadPaymentDataTask(centimos);
 
         // Shows the payment sheet and forwards the result to the onActivityResult method.
         AutoResolveHelper.resolveTask(task, this, LOAD_PAYMENT_DATA_REQUEST_CODE);
