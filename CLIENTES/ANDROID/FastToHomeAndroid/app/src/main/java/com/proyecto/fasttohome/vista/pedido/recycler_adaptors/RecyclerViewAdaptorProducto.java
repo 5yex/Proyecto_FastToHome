@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -31,6 +32,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
             cantidadActual = (TextView) itemView.findViewById(R.id.CantidadProducto);
             ADD = (Button) itemView.findViewById(R.id.ADD);
             DEL = (Button) itemView.findViewById(R.id.DEL);
+            image = (ImageView) itemView.findViewById(R.id.);
         }
     }
 
@@ -58,7 +60,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         holder.nombre.setText(productoActual.getNombre());
         holder.descripcion.setText(productoActual.getDescripcion());
         holder.precio.setText("Precio: " + productoActual.getPrecio() + "€");
-        Picasso.get().load(productoActual.getUrl_imagen()).into(holder.image);
+        Picasso.get().load(productoActual.getUrl_imagen()).into(holder.);
         View.OnClickListener listener = view -> {
             if(holder.DEL.getId() == view.getId()){
                 if (productosSeleccionados.containsKey(productoActualId)) {
