@@ -25,6 +25,7 @@ import com.proyecto.fasttohome.modelo.Producto;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.util.CheckoutViewModel;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -84,13 +85,17 @@ public class FinalizarPedido extends AppCompatActivity {
 
     }
     private void actualizarResumen() {
+        String[] lista = new String[];
         double precioTotal = 0;
+        int indice = 0;
         for (Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
             Producto producto = productos.get(entry.getKey());
             precioTotal = precioTotal + (producto.getPrecio() * entry.getValue());
+            lista[indice] = producto.getNombre();
+            indice++;
         }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,productosSeleccionados.values());
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,);
         centimos = (int)(precioTotal*100);
     }
     /**
