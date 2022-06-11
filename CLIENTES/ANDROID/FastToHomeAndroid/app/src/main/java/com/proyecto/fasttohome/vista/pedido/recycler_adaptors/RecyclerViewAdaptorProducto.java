@@ -46,11 +46,13 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
     public HashMap<Integer, Producto> productos;
     public ArrayList<Producto> listaProductos;
     public HashMap<Integer, Integer> productosSeleccionados;
+    public Button pedir;
 
     public RecyclerViewAdaptorProducto(HashMap<Integer, Producto> listaProductos, HashMap<Integer, Integer> productosSeleccionados, Button pedir) {
         this.listaProductos = new ArrayList<>(listaProductos.values());
         this.productos = listaProductos;
         this.productosSeleccionados = productosSeleccionados;
+        this.pedir = pedir;
     }
 
     @NonNull
