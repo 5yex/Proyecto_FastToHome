@@ -122,7 +122,7 @@ public class SeleccionarProductos extends AppCompatActivity {
                         for(Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
                             precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
                         }
-                        binding.doPedido.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal +" - HACER PEDIDO");
+                        binding.doPedido.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal +"\nHACER PEDIDO");
                         return false;
                     });
 
