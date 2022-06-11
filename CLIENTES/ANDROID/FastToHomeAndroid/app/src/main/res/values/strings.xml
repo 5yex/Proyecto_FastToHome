@@ -126,7 +126,7 @@
     <string name="action_settings">Settings</string>
 
     <!-- Checkout activity -->
-    <string name="title_activity_finalizar_pedido">FinalizarPedido</string>
+    <string name="title_activity_finalizar_pedido">Finalizar Pedido</string>
     <string name="checkout_item_description">Description</string>
     <string name="googlepay_status_unavailable" translatable="false">Unfortunately, Google Pay is
         not available on this phone.
