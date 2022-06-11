@@ -50,13 +50,13 @@ public class SeleccionarProductos extends AppCompatActivity {
 
     private ActivitySeleccionarProductosBinding binding;
     private HashMap<Integer, Integer> productosSeleccionados;
+    private HashMap<Integer, Producto> productos;
+    private Usuario usuario;
+    private Negocio negocio;
     private RecyclerView recyclerViewProducto;
     private RecyclerViewAdaptorProducto adaptorProducto;
-    private Usuario usuario;
-    private ImageView imagenNegocio;
-    private Negocio negocio;
     private Button pedir;
-    private HashMap<Integer, Producto> productos;
+    private ImageView imagenNegocio;
     private CoordinatorLayout pantalla;
 
     @Override
