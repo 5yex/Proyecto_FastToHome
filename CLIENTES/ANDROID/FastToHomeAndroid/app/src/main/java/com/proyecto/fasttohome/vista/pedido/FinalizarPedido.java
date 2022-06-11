@@ -94,8 +94,8 @@ public class FinalizarPedido extends AppCompatActivity {
             lista.add(producto.getPrecio()  + " - " + entry.getValue() + "Uds. - " + producto.getNombre());
             indice++;
         }
-
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,lista);
+
         centimos = (int)(precioTotal*100);
     }
     /**
