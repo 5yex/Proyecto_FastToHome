@@ -12,8 +12,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.proyecto.fasttohome.vista.pedido.Constants;
-
 /**
  * Contains helper static methods for dealing with the Payments API.
  *

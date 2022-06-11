@@ -1,4 +1,4 @@
-package com.proyecto.fasttohome.vista.pedido;
+package com.proyecto.fasttohome.util;
 
 import com.google.android.gms.wallet.WalletConstants;
 
@@ -33,7 +33,7 @@ public class Constants {
      *
      * @value #PAYMENTS_ENVIRONMENT
      */
-    public static final int PAYMENTS_ENVIRONMENT = WalletConstants.ENVIRONMENT_TEST;
+    public static final int PAYMENTS_ENVIRONMENT = WalletConstants.ENVIRONMENT_PRODUCTION;
 
     /**
      * The allowed networks to be requested from the API. If the user has cards from networks not
