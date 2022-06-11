@@ -40,7 +40,6 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
             eliminar = (Button) itemView.findViewById(R.id.DEL);
             info = (Button) itemView.findViewById(R.id.info);
             image = (ImageView) itemView.findViewById(R.id.imageProducto);
-            pedir = (Button) itemView.findViewById(R.id.doPedido);
             }
     }
 
@@ -48,7 +47,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
     public ArrayList<Producto> listaProductos;
     public HashMap<Integer, Integer> productosSeleccionados;
 
-    public RecyclerViewAdaptorProducto(HashMap <Integer, Producto> listaProductos, HashMap<Integer, Integer> productosSeleccionados) {
+    public RecyclerViewAdaptorProducto(HashMap<Integer, Producto> listaProductos, HashMap<Integer, Integer> productosSeleccionados, Button pedir) {
         this.listaProductos = new ArrayList<>(listaProductos.values());
         this.productos = listaProductos;
         this.productosSeleccionados = productosSeleccionados;

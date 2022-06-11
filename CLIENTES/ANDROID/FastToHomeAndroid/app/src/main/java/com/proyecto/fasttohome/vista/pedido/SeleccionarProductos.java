@@ -88,18 +88,6 @@ public class SeleccionarProductos extends AppCompatActivity {
         obtenerProductosNegocio();
     }
 
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent event) {
-        double precioTotal = 0;
-        for(Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
-            precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
-        }
-        binding.doPedido.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal +"\nHACER PEDIDO");
-        return super.dispatchTouchEvent(event);
-    }
-
-
-
     public void obtenerProductosNegocio() {
         productos = new HashMap<>();
         String url = getString(R.string.apiUrl);;
@@ -127,7 +115,7 @@ public class SeleccionarProductos extends AppCompatActivity {
                         productos.put(producto.getId_producto(), producto);
                     }
 
-                    adaptorProducto = new RecyclerViewAdaptorProducto(productos, productosSeleccionados);
+                    adaptorProducto = new RecyclerViewAdaptorProducto(productos, productosSeleccionados,pedir);
                     recyclerViewProducto.setAdapter(adaptorProducto);
                 }
             } catch (JSONException | VolleyError e) {
