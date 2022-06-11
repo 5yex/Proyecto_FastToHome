@@ -132,6 +132,7 @@
         no esta disponible en tu telefono.</string>
     <string name="payments_show_name" translatable="false">EL pago se realizo con éxito por %s!
     </string>
+    <string name="title_activity_comprobar_zona">ComprobarZona</string>
 
 
 </resources>
