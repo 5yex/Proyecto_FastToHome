@@ -7,7 +7,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="198dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
@@ -79,7 +79,7 @@
                 android:layout_width="135dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="4dp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="8dp"
                 android:enabled="false"
                 android:text="Borrar"
                 android:textSize="16sp"
