@@ -91,7 +91,7 @@ public class FinalizarPedido extends AppCompatActivity {
             Producto producto = productos.get(entry.getKey());
             precioTotal = precioTotal + (producto.getPrecio() * entry.getValue());
             lista.add(producto.getPrecio()  + " - " + entry.getValue() + "Uds. - " + producto.getNombre());
-            System.out.println("LISTRA" + lista.size() + " - " + )
+            System.out.println("LISTRA" + lista.size() + " - " + productosSeleccionados.size() );
             indice++;
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,lista);
