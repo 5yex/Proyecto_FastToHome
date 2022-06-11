@@ -15,10 +15,12 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -50,6 +52,9 @@ public class SeleccionarProductos extends AppCompatActivity {
     private Usuario usuario;
     private ImageView imagenNegocio;
     private Negocio negocio;
+    private Button pedir;
+    private List<Producto> productos;
+    private CoordinatorLayout pantalla;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,12 +79,15 @@ public class SeleccionarProductos extends AppCompatActivity {
         productosSeleccionados = new HashMap<Integer, Integer>();
         recyclerViewProducto = (RecyclerView) findViewById(R.id.recyclerProductos);
         recyclerViewProducto.setLayoutManager(new LinearLayoutManager(this));
+        pantalla = (CoordinatorLayout)  findViewById(R.id.constraint);
+        pedir = (Button) findViewById(R.id.doPedido);
+
 
         obtenerProductosNegocio();
     }
 
     public void obtenerProductosNegocio() {
-        List<Producto> productos = new ArrayList<Producto>();
+        productos = new ArrayList<Producto>();
         String url = getString(R.string.apiUrl);;
         RequestQueue queue = Volley.newRequestQueue(SeleccionarProductos.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
@@ -107,6 +115,15 @@ public class SeleccionarProductos extends AppCompatActivity {
 
                     adaptorProducto = new RecyclerViewAdaptorProducto(productos, productosSeleccionados);
                     recyclerViewProducto.setAdapter(adaptorProducto);
+
+                    pantalla.setOnClickListener(view -> {
+                        double precioTotal = 0;
+                        for(Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
+                            precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
+                        }
+                        pedir.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal +" - HACER PEDIDO");
+                    });
+
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(SeleccionarProductos.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
