@@ -82,6 +82,7 @@ public class FinalizarPedido extends AppCompatActivity {
             Producto producto = productos.get(entry.getKey());
             precioTotal = precioTotal + (producto.getPrecio() * entry.getValue());
         }
+        int cents = (int)Math.round(precioTotal*100);
     }
     /**
      * If isReadyToPay returned {@code true}, show the button and hide the "checking" text.
