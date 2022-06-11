@@ -19,6 +19,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -116,12 +117,16 @@ public class SeleccionarProductos extends AppCompatActivity {
                     adaptorProducto = new RecyclerViewAdaptorProducto(productos, productosSeleccionados);
                     recyclerViewProducto.setAdapter(adaptorProducto);
 
-                    binding.doPedido.setOnClickListener(view -> {
-                        double precioTotal = 0;
-                        for(Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
-                            precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
+                    binding.constraint.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View view, MotionEvent motionEvent) {
+                            double precioTotal = 0;
+                            for(Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
+                                precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
+                            }
+                            binding.doPedido.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal +" - HACER PEDIDO");
+                            return false;
                         }
-                        binding.doPedido.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal +" - HACER PEDIDO");
                     });
 
                 }
