@@ -110,7 +110,7 @@ public class SeleccionarProductos extends AppCompatActivity {
                             producto.setUrl_imagen(imgUrl);
                         }catch (Exception e){
                         }
-                        productos.add(producto);
+                        productos.put(producto.getId_producto(), producto);
                     }
 
                     adaptorProducto = new RecyclerViewAdaptorProducto(productos, productosSeleccionados);
