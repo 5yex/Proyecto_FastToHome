@@ -54,7 +54,6 @@
     <include
         android:id="@+id/include"
         layout="@layout/activity_seleccionar_productos_content"
-        android:foreground="#B2F05742"
         android:foregroundTintMode="src_atop" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -70,19 +69,15 @@
 
     <Button
         android:id="@+id/doPedido"
-        android:layout_width="253dp"
+        android:layout_width="349dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="220pt"
+        android:backgroundTint="#FA9170"
         android:backgroundTintMode="src_in"
         android:text="Llevas x productos y x euros \n Hacer Pedido"
-        app:cornerRadius="50dp" />
-
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
-        android:layout_width="236dp"
-        android:layout_height="182dp"
-        android:background="#FFFFFF" />
+        app:cornerRadius="50dp"
+        app:layout_anchorGravity="center" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
