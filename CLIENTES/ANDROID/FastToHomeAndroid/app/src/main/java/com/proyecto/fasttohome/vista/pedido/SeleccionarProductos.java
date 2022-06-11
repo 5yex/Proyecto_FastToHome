@@ -83,14 +83,16 @@ public class SeleccionarProductos extends AppCompatActivity {
         pedir = (Button) findViewById(R.id.doPedido);
         pedir.setOnClickListener(view -> {
             if(productosSeleccionados.size()>0) {
-                
+                AlertDialog.Builder builder = new AlertDialog.Builder(SeleccionarProductos.this);
+                builder.setTitle("FINALIZAR PEDIDO").setMessage("¿Seguro que quieres finalizar el pedido?");
+                builder.setNegativeButton("Volver a mi pedido",null);
+                builder.setPositiveButton("Sí", (dialogInterface, i) -> {
+                    irFinalizar();
+                }).show();
+            }else {
+                new Toast().makeText(this, "No hayError en el pedido", Toast.LENGTH_LONG).show();
             }
-            AlertDialog.Builder builder = new AlertDialog.Builder(SeleccionarProductos.this);
-            builder.setTitle("FINALIZAR PEDIDO").setMessage("¿Seguro que quieres finalizar el pedido?");
-            builder.setNegativeButton("Volver a mi pedido",null);
-            builder.setPositiveButton("Sí", (dialogInterface, i) -> {
-                irFinalizar();
-            }).show();
+
         });
 
 
