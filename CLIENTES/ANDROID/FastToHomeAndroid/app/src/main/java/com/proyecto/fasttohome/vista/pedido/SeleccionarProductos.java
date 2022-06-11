@@ -92,11 +92,13 @@ public class SeleccionarProductos extends AppCompatActivity {
             return false;
         });
 
+       binding.coordinatorLayout2.onInterceptTouchEvent();
+
         obtenerProductosNegocio();
     }
 
 
-    
+
 
     public void obtenerProductosNegocio() {
         productos = new HashMap<>();
