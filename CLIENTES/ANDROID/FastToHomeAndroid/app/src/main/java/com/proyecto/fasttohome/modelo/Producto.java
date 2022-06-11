@@ -19,6 +19,8 @@ public class Producto {
     private String descripcion;
     private int stock;
     private int id_img;
+    private String url_imagen;
+
 
     public int getId_img() {
         return id_img;
