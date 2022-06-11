@@ -41,11 +41,11 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
             }
     }
 
-    public HashMap<Integer, Producto> listaProductos;
+    public List<Producto> listaProductos;
     //El key (int) será un id de producto para localizarlo mejor
     public HashMap<Integer, Integer> productosSeleccionados;
 
-    public RecyclerViewAdaptorProducto(HashMap<Integer, Producto> listaProductos, HashMap<Integer, Integer> productosSeleccionados) {
+    public RecyclerViewAdaptorProducto(List<Producto> listaProductos, HashMap<Integer, Integer> productosSeleccionados) {
         this.listaProductos = listaProductos;
         this.productosSeleccionados = productosSeleccionados;
     }
@@ -60,7 +60,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Producto productoActual = listaProductos.(position);
+        Producto productoActual = listaProductos.get(position);
         int productoActualId = productoActual.getId_producto();
         holder.nombre.setText(productoActual.getNombre());
         // holder.descripcion.setText(productoActual.getDescripcion());
