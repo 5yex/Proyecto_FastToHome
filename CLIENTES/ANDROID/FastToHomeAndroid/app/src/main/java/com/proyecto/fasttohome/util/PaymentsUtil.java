@@ -141,7 +141,7 @@ public class PaymentsUtil {
         // Optionally, you can add billing address/phone number associated with a CARD payment method.
         parameters.put("billingAddressRequired", false);
 
-       
+
 
         cardPaymentMethod.put("parameters", parameters);
 
