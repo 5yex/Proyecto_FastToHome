@@ -72,8 +72,7 @@ public class SeleccionarProductos extends AppCompatActivity {
         Picasso.get().load(negocio.getUrl_imagen()).into(imagenNegocio);
         FloatingActionButton fab = binding.fab;
 
-        fab.setOnClickListener(view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .show());
+        //fab.setOnClickListener(view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).show());
 
         productosSeleccionados = new HashMap<Integer, Integer>();
         recyclerViewProducto = (RecyclerView) findViewById(R.id.recyclerProductos);
