@@ -101,7 +101,7 @@ public class SeleccionarProductos extends AppCompatActivity {
 
     public void irFinalizar() {
         Intent i = new Intent(this, FinalizarPedido.class );
-        i.putExtra("items",productosSeleccionados);
+        i.putExtra("productosSeleccionados",productosSeleccionados);
         i.putExtra("productos",productos);
         i.putExtra("usuario", usuario);
         i.putExtra("negocio", negocio);
