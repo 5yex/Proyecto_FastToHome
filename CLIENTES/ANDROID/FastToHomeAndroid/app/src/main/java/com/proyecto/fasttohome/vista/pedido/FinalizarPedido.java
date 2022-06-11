@@ -67,7 +67,7 @@ public class FinalizarPedido extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        total= (TextView) findViewById(R.id.detailPrice);
+        total = findViewById(R.id.detailPrice);
         usuario = (Usuario) getIntent().getExtras().getSerializable("user");
         negocio = (Negocio) getIntent().getExtras().getSerializable("negocio");
         productos = (HashMap<Integer, Producto>) getIntent().getExtras().getSerializable("productos");
