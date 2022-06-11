@@ -45,13 +45,13 @@
                 <ImageView
                     android:id="@+id/imgNegocioS"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:minHeight="100dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/logograndeblanco"
                     app:layout_collapseMode="parallax"
                     app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
-                    app:srcCompat="@drawable/logograndeblanco" />
+                    app:srcCompat="@drawable/ic_launcher_foreground" />
 
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar"
