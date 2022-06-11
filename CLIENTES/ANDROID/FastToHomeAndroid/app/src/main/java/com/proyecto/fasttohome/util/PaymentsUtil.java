@@ -139,7 +139,7 @@ public class PaymentsUtil {
         parameters.put("allowedAuthMethods", getAllowedCardAuthMethods());
         parameters.put("allowedCardNetworks", getAllowedCardNetworks());
         // Optionally, you can add billing address/phone number associated with a CARD payment method.
-        parameters.put("billingAddressRequired", true);
+        parameters.put("billingAddressRequired", false);
 
         JSONObject billingAddressParameters = new JSONObject();
         billingAddressParameters.put("format", "FULL");
