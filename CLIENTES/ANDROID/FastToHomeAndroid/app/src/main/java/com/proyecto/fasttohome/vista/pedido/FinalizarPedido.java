@@ -45,6 +45,8 @@ public class FinalizarPedido extends AppCompatActivity {
     private Usuario usuario;
     private Negocio negocio;
 
+    private int centimos;
+
 
     /**
      * Initialize the Google Pay API on creation of the activity
@@ -82,7 +84,7 @@ public class FinalizarPedido extends AppCompatActivity {
             Producto producto = productos.get(entry.getKey());
             precioTotal = precioTotal + (producto.getPrecio() * entry.getValue());
         }
-        int cents = (int)Math.round(precioTotal*100);
+        centimos = (int)(precioTotal*100);
     }
     /**
      * If isReadyToPay returned {@code true}, show the button and hide the "checking" text.
