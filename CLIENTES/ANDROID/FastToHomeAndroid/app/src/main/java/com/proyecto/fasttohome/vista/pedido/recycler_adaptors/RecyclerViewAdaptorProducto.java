@@ -92,7 +92,6 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
                 productosSeleccionados.remove(productoActualId);
                 holder.DEL.setEnabled(false);
                 updateContador(holder, productoActualId);
-                Snackbar.make(v, "Has quitado: "+ holder.nombre.getText(), Snackbar.LENGTH_SHORT).setAction("Action", null).show();
                 return true;
             }
         });
