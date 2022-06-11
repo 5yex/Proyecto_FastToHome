@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -35,6 +36,7 @@ import java.util.Map;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 public class FinalizarPedido extends AppCompatActivity {
 
@@ -52,6 +54,7 @@ public class FinalizarPedido extends AppCompatActivity {
     private Negocio negocio;
 
     private ListView listaProductos;
+    private TextView total;
 
     private int centimos;
 
@@ -64,6 +67,7 @@ public class FinalizarPedido extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        total= (TextView) findViewById(R.id.detailPrice);
         usuario = (Usuario) getIntent().getExtras().getSerializable("user");
         negocio = (Negocio) getIntent().getExtras().getSerializable("negocio");
         productos = (HashMap<Integer, Producto>) getIntent().getExtras().getSerializable("productos");
