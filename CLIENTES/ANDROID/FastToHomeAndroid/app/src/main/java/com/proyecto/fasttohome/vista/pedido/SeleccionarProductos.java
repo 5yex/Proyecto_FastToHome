@@ -95,7 +95,7 @@ public class SeleccionarProductos extends AppCompatActivity {
             precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
         }
         binding.doPedido.setText("Productos: " + productosSeleccionados.size() + " Precio: " + precioTotal +"\nHACER PEDIDO");
-        return super.onTouchEvent(event);
+        return super.dispatchTouchEvent(event);
     }
 
 
