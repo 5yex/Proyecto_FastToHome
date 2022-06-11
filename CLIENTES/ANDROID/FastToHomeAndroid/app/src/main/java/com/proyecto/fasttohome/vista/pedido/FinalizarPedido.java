@@ -85,17 +85,17 @@ public class FinalizarPedido extends AppCompatActivity {
 
     }
     private void actualizarResumen() {
-        String[] lista = new String[];
+        private ArrayList<String> lista = new ArrayList<>();
         double precioTotal = 0;
         int indice = 0;
         for (Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
             Producto producto = productos.get(entry.getKey());
             precioTotal = precioTotal + (producto.getPrecio() * entry.getValue());
-            lista[indice] = producto.getNombre();
+            lista.add(producto.getPrecio()  + " - " + entry.getValue() + "Uds. - " + producto.getNombre());
             indice++;
         }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,lista);
         centimos = (int)(precioTotal*100);
     }
     /**
