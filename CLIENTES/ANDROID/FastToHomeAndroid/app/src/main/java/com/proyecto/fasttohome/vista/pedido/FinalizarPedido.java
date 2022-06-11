@@ -85,7 +85,7 @@ public class FinalizarPedido extends AppCompatActivity {
 
     }
     private void actualizarResumen() {
-        private ArrayList<String> lista = new ArrayList<>();
+        ArrayList<String> lista = new ArrayList<>();
         double precioTotal = 0;
         int indice = 0;
         for (Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
