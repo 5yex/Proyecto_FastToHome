@@ -19,7 +19,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".FinalizarPedido"
+            android:name=".vista.pedido.FinalizarPedido"
             android:exported="false"
             android:label="@string/title_activity_finalizar_pedido"
             android:theme="@style/Theme.FastToHome" />
