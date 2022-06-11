@@ -131,7 +131,7 @@ public class SeleccionarProductos extends AppCompatActivity {
     @Override
     public void onBackPressed() {
             AlertDialog.Builder builder = new AlertDialog.Builder(SeleccionarProductos.this);
-            builder.setTitle("ATENCIÓN").setMessage("PERDERAS TU PEDIDO AL SALIR\n¿Quiers salir?");
+            builder.setTitle("ATENCIÓN").setMessage("Si vuelves atrás cancelaras el pedido.\n¿Seguro que quieres salir?");
             builder.setNegativeButton("Volver a mi pedido",null);
             builder.setPositiveButton("Sí", (dialogInterface, i) -> {
                 super.onBackPressed();
