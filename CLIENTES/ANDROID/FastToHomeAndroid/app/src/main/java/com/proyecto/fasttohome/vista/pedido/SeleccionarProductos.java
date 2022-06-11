@@ -95,6 +95,8 @@ public class SeleccionarProductos extends AppCompatActivity {
         obtenerProductosNegocio();
     }
 
+    
+
     public void obtenerProductosNegocio() {
         productos = new HashMap<>();
         String url = getString(R.string.apiUrl);;
