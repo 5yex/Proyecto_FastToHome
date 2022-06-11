@@ -7,7 +7,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="367dp"
+        android:layout_height="362dp"
         android:layout_margin="6dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
@@ -23,8 +23,10 @@
 
             <TextView
                 android:id="@+id/tvNombreNegocio"
-                android:layout_width="372dp"
-                android:layout_height="63dp"
+                android:layout_width="359dp"
+                android:layout_height="66dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
                 android:fontFamily="sans-serif"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
@@ -38,46 +40,43 @@
                 android:id="@+id/imagenNegocio"
                 android:layout_width="387dp"
                 android:layout_height="227dp"
-                android:layout_marginTop="4dp"
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.625"
+                app:layout_constraintHorizontal_bias="0.428"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvNombreNegocio"
                 app:srcCompat="@drawable/ic_launcher_foreground" />
 
             <Button
                 android:id="@+id/pedir"
-                android:layout_width="62dp"
-                android:layout_height="73dp"
-                android:layout_marginEnd="4dp"
-                android:textSize="20sp"
+                android:layout_width="112dp"
+                android:layout_height="50dp"
+                android:text="PEDIR"
+                android:textSize="14sp"
                 android:textStyle="bold"
-                app:cornerRadius="50dp"
                 app:icon="@drawable/ic_baseline_shopping_basket_24"
                 app:iconPadding="0dp"
-                app:iconSize="30dp"
-                app:layout_constraintEnd_toStartOf="@+id/categoria"
-                app:layout_constraintTop_toBottomOf="@+id/imagenNegocio" />
+                app:layout_constraintTop_toTopOf="@+id/infoNeg"
+                tools:layout_editor_absoluteX="75dp" />
 
             <Button
                 android:id="@+id/infoNeg"
-                android:layout_width="62dp"
-                android:layout_height="73dp"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:cornerRadius="50dp"
                 app:icon="@drawable/ic_baseline_info_24"
                 app:iconPadding="0dp"
-                app:iconSize="30dp"
                 app:layout_constraintEnd_toStartOf="@+id/pedir"
+                app:layout_constraintHorizontal_bias="0.3"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imagenNegocio" />
 
             <TextView
                 android:id="@+id/categoria"
-                android:layout_width="215dp"
-                android:layout_height="43dp"
+                android:layout_width="173dp"
+                android:layout_height="38dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="4dp"
                 android:text="TextView"
