@@ -78,6 +78,12 @@
         android:text="Llevas x productos y x euros \n Hacer Pedido"
         app:cornerRadius="50dp" />
 
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="236dp"
+        android:layout_height="182dp"
+        android:background="#FFFFFF" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
