@@ -60,10 +60,8 @@ public class SeleccionarProductos extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         binding = ActivitySeleccionarProductosBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         Toolbar toolbar = binding.toolbar;
         setSupportActionBar(toolbar);
         CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
@@ -82,7 +80,9 @@ public class SeleccionarProductos extends AppCompatActivity {
         recyclerViewProducto.setLayoutManager(new LinearLayoutManager(this));
         pantalla = (CoordinatorLayout)  findViewById(R.id.constraint);
         pedir = (Button) findViewById(R.id.doPedido);
+        pedir.setOnClickListener(view -> {
 
+        });
 
 
         obtenerProductosNegocio();

@@ -133,7 +133,6 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         } else {
             holder.cantidadActual.setText("No llevas ninguno");
         }
-
     }
 
 
