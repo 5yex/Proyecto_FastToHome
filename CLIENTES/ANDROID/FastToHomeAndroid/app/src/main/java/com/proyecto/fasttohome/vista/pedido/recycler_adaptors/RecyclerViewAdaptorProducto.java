@@ -102,12 +102,8 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         holder.eliminar.setOnClickListener(listener);
 
         holder.info.setOnClickListener(view -> {
-            AlertDialog.Builder builder = new AlertDialog.Builder(con);
-            builder.setTitle("ATENCIÓN").setMessage("Si vuelves atrás cancelaras el pedido.\n ¿Seguro que quieres salir?");
-            builder.setNegativeButton("Volver a mi pedido",null);
-            builder.setPositiveButton("Sí", (dialogInterface, i) -> {
-                super.onBackPressed();
-            }).show();
+            AlertDialog.Builder builder = new AlertDialog.Builder(holder.contexto);
+        builder.setTitle("INFORMACIÓN DEL PRODUCTO").setMessage(productoActual.getDescripcion()).show();
         });
 
     }
