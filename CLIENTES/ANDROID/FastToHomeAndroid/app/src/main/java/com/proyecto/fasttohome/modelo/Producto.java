@@ -17,6 +17,15 @@ public class Producto {
     private int id_img;
     private String url_imagen;
 
+    public Producto() {
+    }
+    public Producto(int id_negocio, String nombre, double precio, String descripcion, int stock) {
+        this.id_negocio = id_negocio;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.descripcion = descripcion;
+        this.stock = stock;
+    }
 
     public int getId_img() {
         return id_img;
@@ -27,16 +36,8 @@ public class Producto {
     }
 
 
-    public Producto() {
-    }
 
-    public Producto(int id_negocio, String nombre, double precio, String descripcion, int stock) {
-        this.id_negocio = id_negocio;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.descripcion = descripcion;
-        this.stock = stock;
-    }
+
 
     public Producto(int id_negocio) {
         this.id_negocio = id_negocio;
@@ -92,5 +93,13 @@ public class Producto {
     
     public String getJSON(){
        return new Gson().toJson(this);
+    }
+
+    public String getUrl_imagen() {
+        return url_imagen;
+    }
+
+    public void setUrl_imagen(String url_imagen) {
+        this.url_imagen = url_imagen;
     }
 }
