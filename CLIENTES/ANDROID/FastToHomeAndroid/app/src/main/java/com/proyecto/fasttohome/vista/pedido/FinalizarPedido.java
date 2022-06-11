@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.gms.wallet.AutoResolveHelper;
 import com.google.android.gms.wallet.PaymentData;
 
+import com.proyecto.fasttohome.databinding.ActivityFinalizarPedidoBinding;
 import com.proyecto.fasttohome.vista.pedido.R;
 import com.proyecto.fasttohome.vista.pedido.viewmodel.CheckoutViewModel;
 

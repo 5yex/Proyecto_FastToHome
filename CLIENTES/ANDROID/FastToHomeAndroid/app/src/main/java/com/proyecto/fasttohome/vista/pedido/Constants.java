@@ -63,14 +63,14 @@ public class Constants {
      *
      * @value #COUNTRY_CODE Your local country
      */
-    public static final String COUNTRY_CODE = "US";
+    public static final String COUNTRY_CODE = "ES";
 
     /**
      * Required by the API, but not visible to the user.
      *
      * @value #CURRENCY_CODE Your local currency
      */
-    public static final String CURRENCY_CODE = "USD";
+    public static final String CURRENCY_CODE = "EUR";
 
     /**
      * Supported countries for shipping (use ISO 3166-1 alpha-2 country codes). Relevant only when
@@ -78,7 +78,7 @@ public class Constants {
      *
      * @value #SHIPPING_SUPPORTED_COUNTRIES
      */
-    public static final List<String> SHIPPING_SUPPORTED_COUNTRIES = Arrays.asList("US", "GB");
+    public static final List<String> SHIPPING_SUPPORTED_COUNTRIES = Arrays.asList("ES","US", "GB");
 
     /**
      * The name of your payment processor/gateway. Please refer to their documentation for more
