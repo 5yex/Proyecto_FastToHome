@@ -16,6 +16,7 @@ import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Producto;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +47,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
     public HashMap<Integer, Integer> productosSeleccionados;
 
     public RecyclerViewAdaptorProducto(HashMap <Integer, Producto> listaProductos, HashMap<Integer, Integer> productosSeleccionados) {
-        this.listaProductos = new ArrayList<>(values);listaProductos.values();
+        this.listaProductos = new ArrayList<>(listaProductos.values());
         this.productosSeleccionados = productosSeleccionados;
     }
 
