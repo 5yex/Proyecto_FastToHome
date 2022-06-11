@@ -35,7 +35,7 @@
             android:value="YOUR_API_KEY" />
 
         <activity
-            android:name=".ComprobarZona"
+            android:name=".vista.pedido.ComprobarZona"
             android:exported="false"
             android:label="@string/title_activity_comprobar_zona" />
         <activity
