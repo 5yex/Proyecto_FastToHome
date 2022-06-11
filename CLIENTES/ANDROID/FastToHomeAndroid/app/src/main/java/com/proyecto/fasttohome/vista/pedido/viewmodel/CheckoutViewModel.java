@@ -16,7 +16,7 @@ import com.google.android.gms.wallet.PaymentsClient;
 
 import org.json.JSONObject;
 
-import com.proyecto.fasttohome.vista.pedido.util.PaymentsUtil;
+import com.proyecto.fasttohome.util.PaymentsUtil;
 
 public class CheckoutViewModel extends AndroidViewModel {
 

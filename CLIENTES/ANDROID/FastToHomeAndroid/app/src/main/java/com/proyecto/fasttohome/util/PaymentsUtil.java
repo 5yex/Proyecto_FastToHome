@@ -1,4 +1,4 @@
-package com.proyecto.fasttohome.vista.pedido.util;
+package com.proyecto.fasttohome.util;
 
 import android.content.Context;
 
@@ -139,12 +139,9 @@ public class PaymentsUtil {
         parameters.put("allowedAuthMethods", getAllowedCardAuthMethods());
         parameters.put("allowedCardNetworks", getAllowedCardNetworks());
         // Optionally, you can add billing address/phone number associated with a CARD payment method.
-        parameters.put("billingAddressRequired", true);
+        parameters.put("billingAddressRequired", false);
 
-        JSONObject billingAddressParameters = new JSONObject();
-        billingAddressParameters.put("format", "FULL");
-
-        parameters.put("billingAddressParameters", billingAddressParameters);
+       
 
         cardPaymentMethod.put("parameters", parameters);
 
