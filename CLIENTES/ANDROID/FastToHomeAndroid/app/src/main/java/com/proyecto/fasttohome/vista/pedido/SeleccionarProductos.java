@@ -53,7 +53,7 @@ public class SeleccionarProductos extends AppCompatActivity {
     private ImageView imagenNegocio;
     private Negocio negocio;
     private Button pedir;
-    private List<Producto> productos;
+    private HashMap<Integer, Producto> productos;
     private CoordinatorLayout pantalla;
 
     @Override
