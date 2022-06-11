@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Producto;
 import com.squareup.picasso.Picasso;
@@ -22,15 +21,15 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private TextView nombre, precio, cantidadActual;
-        private Button ADD, DEL,INFO;
+        private Button add, info,INFO;
         private ImageView image;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             nombre = (TextView) itemView.findViewById(R.id.tvNombreProducto);
             precio = (TextView) itemView.findViewById(R.id.tvPrecioProducto);
             cantidadActual = (TextView) itemView.findViewById(R.id.CantidadProducto);
-            ADD = (Button) itemView.findViewById(R.id.ADD);
-            DEL = (Button) itemView.findViewById(R.id.DEL);
+            add = (Button) itemView.findViewById(R.id.ADD);
+            info = (Button) itemView.findViewById(R.id.DEL);
             INFO = (Button) itemView.findViewById(R.id.info);
             image = (ImageView) itemView.findViewById(R.id.imageProducto);
         }
@@ -63,40 +62,40 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         Picasso.get().setLoggingEnabled(true);
         Picasso.get().load(productoActual.getUrl_imagen()).into(holder.image);
         View.OnClickListener listener = view -> {
-            if(holder.DEL.getId() == view.getId()){
+            if(holder.info.getId() == view.getId()){
                 if (productosSeleccionados.containsKey(productoActualId)) {
                     int oldValue = productosSeleccionados.get(productoActualId);
                     if (oldValue < 2) {
                         productosSeleccionados.remove(productoActualId);
-                        holder.DEL.setEnabled(false);
+                        holder.info.setEnabled(false);
                     } else {
                         productosSeleccionados.put(productoActualId, oldValue - 1);
                     }
                 }
             }
-            if(holder.ADD.getId() == view.getId()){
+            if(holder.add.getId() == view.getId()){
                 if (!productosSeleccionados.containsKey(productoActualId)) {
                     productosSeleccionados.put(productoActualId, 1);
                 } else {
                     int oldValue = productosSeleccionados.get(productoActualId);
                     productosSeleccionados.put(productoActualId, oldValue + 1);
                 }
-                holder.DEL.setEnabled(true);
+                holder.info.setEnabled(true);
             }
             updateContador(holder, productoActualId);
         };
 
-       holder.DEL.setOnLongClickListener(new View.OnLongClickListener() {
+       holder.info.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
                 productosSeleccionados.remove(productoActualId);
-                holder.DEL.setEnabled(false);
+                holder.info.setEnabled(false);
                 updateContador(holder, productoActualId);
                 return true;
             }
         });
-        holder.ADD.setOnClickListener(listener);
-        holder.DEL.setOnClickListener(listener);
+        holder.add.setOnClickListener(listener);
+        holder.info.setOnClickListener(listener);
 
     }
 
