@@ -67,7 +67,6 @@ public class FinalizarPedido extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        total = findViewById(R.id.detailPrice);
         usuario = (Usuario) getIntent().getExtras().getSerializable("user");
         negocio = (Negocio) getIntent().getExtras().getSerializable("negocio");
         productos = (HashMap<Integer, Producto>) getIntent().getExtras().getSerializable("productos");
@@ -86,6 +85,8 @@ public class FinalizarPedido extends AppCompatActivity {
         // The Google Pay button is a layout file – take the root view
         googlePayButton = layoutBinding.googlePayButton.getRoot();
         googlePayButton.setOnClickListener(this::requestPayment);
+
+        total = findViewById(R.id.detailPrice);
 
         actualizarResumen();
 
