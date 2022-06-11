@@ -23,7 +23,7 @@
                 android:id="@+id/detailTitle"
                 android:layout_width="96dp"
                 android:layout_height="28dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:text="Resumen:"
                 android:textColor="?android:textColorPrimary"
                 android:textSize="20sp"
@@ -35,25 +35,25 @@
                 android:id="@+id/detailTitle2"
                 android:layout_width="63dp"
                 android:layout_height="30dp"
-                android:layout_marginTop="148dp"
+                android:layout_marginTop="88dp"
                 android:text="Pagos:"
                 android:textColor="?android:textColorPrimary"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/_dynamic" />
+                app:layout_constraintTop_toBottomOf="@+id/detailPrice" />
 
             <TextView
                 android:id="@+id/detailTitle3"
                 android:layout_width="67dp"
                 android:layout_height="29dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="320dp"
                 android:text="Precio:"
                 android:textColor="?android:textColorPrimary"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/_dynamic" />
+                app:layout_constraintTop_toBottomOf="@+id/detailTitle" />
 
             <TextView
                 android:id="@+id/detailPrice"
