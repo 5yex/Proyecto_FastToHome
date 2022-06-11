@@ -95,6 +95,7 @@ public class FinalizarPedido extends AppCompatActivity {
             indice++;
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,lista);
+
         listaProductos.setAdapter(adapter);
         centimos = (int)(precioTotal*100);
     }
