@@ -1,72 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".vista.pedido.SeleccionarProductos">
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="329dp"
-        android:fitsSystemWindows="true"
-        android:theme="@style/Theme.FastToHome.AppBarOverlay">
-
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/toolbar_layout"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="329dp"
             android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleGravity="left|bottom"
-            app:expandedTitleMarginEnd="0dp"
-            app:expandedTitleMarginStart="10dp"
-            app:expandedTitleTextColor="#00FF5722"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            android:theme="@style/Theme.FastToHome.AppBarOverlay">
 
-            <ImageView
-                android:id="@+id/imgNegocioS"
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="100dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/logograndeblanco"
-                app:layout_collapseMode="parallax"
-                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
-                app:srcCompat="@drawable/logograndeblanco" />
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleGravity="left|bottom"
+                app:expandedTitleMarginEnd="0dp"
+                app:expandedTitleMarginStart="10dp"
+                app:expandedTitleTextColor="#00FF5722"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_scrollFlags="scroll|enterAlways" />
+                <ImageView
+                    android:id="@+id/imgNegocioS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logograndeblanco"
+                    app:layout_collapseMode="parallax"
+                    app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                    app:srcCompat="@drawable/logograndeblanco" />
 
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_scrollFlags="scroll|enterAlways" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
 
     <include
         android:id="@+id/include"
         layout="@layout/activity_seleccionar_productos_content"
-         />
+        android:foreground="#B2F05742"
+        android:foregroundTintMode="src_atop" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/fab_margin"
+        app:backgroundTint="@color/principalFastToHome"
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end"
-        app:srcCompat="@drawable/ic_baseline_info_24" />
+        app:srcCompat="@drawable/ic_baseline_info_24"
+        app:tint="@android:color/white" />
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="192dp"
-        android:layout_height="64dp"
-        android:text="Button"
-        app:layout_anchor="@id/include"
-        app:layout_anchorGravity="center" />
+        android:layout_width="wrap_content"
+        android:layout_height="67dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="230pt"
+        android:backgroundTintMode="src_in"
+        android:text="Llevas x productos y x euros \n Hacer Pedido"
+        app:cornerRadius="50dp" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+

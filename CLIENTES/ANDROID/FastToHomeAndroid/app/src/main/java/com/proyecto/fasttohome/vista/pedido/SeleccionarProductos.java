@@ -1,5 +1,7 @@
 package com.proyecto.fasttohome.vista.pedido;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import com.android.volley.Request;
@@ -66,13 +68,8 @@ public class SeleccionarProductos extends AppCompatActivity {
         Picasso.get().load(negocio.getUrl_imagen()).into(imagenNegocio);
         FloatingActionButton fab = binding.fab;
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        fab.setOnClickListener(view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                .show());
 
         productosSeleccionados = new HashMap<Integer, Integer>();
         recyclerViewProducto = (RecyclerView) findViewById(R.id.recyclerProductos);
@@ -124,5 +121,15 @@ public class SeleccionarProductos extends AppCompatActivity {
     private void onErrorResponse(VolleyError error) {
         Toast.makeText(SeleccionarProductos.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
         finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+            AlertDialog.Builder builder = new AlertDialog.Builder(SeleccionarProductos.this);
+            builder.setTitle("ATENCIÓN").setMessage("PERDERAS TU PEDIDO AL SALIR\n¿Quiers salir?");
+            builder.setNegativeButton("Volver a mi pedido",null);
+            builder.setPositiveButton("Sí", (dialogInterface, i) -> {
+                super.onBackPressed();
+            }).show();
     }
 }

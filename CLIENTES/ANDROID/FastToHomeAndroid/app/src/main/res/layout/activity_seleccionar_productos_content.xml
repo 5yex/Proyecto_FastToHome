@@ -4,11 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFF3E4"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".vista.pedido.SeleccionarProductos"
     tools:showIn="@layout/activity_seleccionar_productos">
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerProductos"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        app:spanCount="2" />
 </androidx.core.widget.NestedScrollView>
