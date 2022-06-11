@@ -100,7 +100,7 @@ public class FinalizarPedido extends AppCompatActivity {
             lista.add(leftPad("€"+producto.getPrecio(),5)+leftPad("  Uds: "+ entry.getValue(),12)+"  "+producto.getNombre());
             indice++;
         }
-        total.setText(precioTotal + "Euros");
+        total.setText(String.valueOf(precioTotal + "Euros"));
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,lista);
         listaProductos = findViewById(R.id.list);
         listaProductos.setAdapter(adapter);
@@ -130,8 +130,10 @@ public class FinalizarPedido extends AppCompatActivity {
 
         // The price provided to the API should include taxes and shipping.
         // This price is not displayed to the user.
-
-        final Task<PaymentData> task = model.getLoadPaymentDataTask(centimos);
+        long dummyPriceCents = centimos;
+        long shippingCostCents = 0;
+        long totalPriceCents = dummyPriceCents + shippingCostCents;
+        final Task<PaymentData> task = model.getLoadPaymentDataTask(totalPriceCents);
 
         // Shows the payment sheet and forwards the result to the onActivityResult method.
         AutoResolveHelper.resolveTask(task, this, LOAD_PAYMENT_DATA_REQUEST_CODE);
