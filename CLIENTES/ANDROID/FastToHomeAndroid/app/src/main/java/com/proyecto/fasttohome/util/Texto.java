@@ -9,5 +9,9 @@ public class Texto {
         }
         return sb.toString();
     }
+    private static String leftPad(String in, int len) {
+        return new StringBuilder(in) //
+                .append(genString(len - in.length() - 1)).toString();
+    }
 
 }
