@@ -3,7 +3,6 @@ package com.proyecto.fasttohome.vista.pedido.recycler_adaptors;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Categoria;
-import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.vista.pedido.SeleccionarProductos;
 import com.proyecto.fasttohome.modelo.Negocio;
@@ -42,7 +40,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
             super(itemView);
             nombre = (TextView) itemView.findViewById(R.id.tvNombreNegocio);
             image = (ImageView) itemView.findViewById(R.id.imagenNegocio);
-            categoria = (TextView) itemView.findViewById(R.id.categoria);
+            categoria = (TextView) itemView.findViewById(R.id.tvCategoriaNegocio);
 
             pedir = (Button) itemView.findViewById(R.id.pedir);
             info = (Button) itemView.findViewById(R.id.infoNeg);
@@ -84,7 +82,8 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Negocio negocioActual = listaNegocios.get(position);
         holder.nombre.setText(negocioActual.getNombre());
-        holder.categoria.setText(categorias.size());
+        System.err.println(categorias.size());
+       // holder.categoria.setText(categorias.size());
         holder.usuario = usuario;
         holder.pedido = pedido;
         holder.negocio = negocioActual;
