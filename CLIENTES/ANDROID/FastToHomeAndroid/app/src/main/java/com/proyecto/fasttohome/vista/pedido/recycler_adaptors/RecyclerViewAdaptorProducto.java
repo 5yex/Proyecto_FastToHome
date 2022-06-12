@@ -92,7 +92,6 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
                 }
                 holder.eliminar.setEnabled(true);
             }
-            actualizarResumen();
             updateContador(holder, productoActualId);
         };
 
@@ -114,6 +113,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
 
     private void actualizarResumen() {
         double precioTotal = 0;
+
         for (Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
             precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
         }
@@ -124,8 +124,8 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
             pedir.setText("PEDIR");
         }
     }
-
     private void updateContador(@NonNull ViewHolder holder, int productoActual) {
+        actualizarResumen();
         if (productosSeleccionados.containsKey(productoActual)) {
             holder.cantidadActual.setText("Te llevas: " + productosSeleccionados.get(productoActual));
         } else {

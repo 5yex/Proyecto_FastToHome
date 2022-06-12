@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -29,6 +30,7 @@ import com.google.gson.Gson;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.databinding.ActivityFinalizarPedidoBinding;
 
+import com.proyecto.fasttohome.modelo.Cesta;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.modelo.Peticion;
@@ -271,14 +273,25 @@ public class FinalizarPedido extends AppCompatActivity {
                 Map<String, String> params = new HashMap<String, String>();
 
                 ArrayList<Object> DatosPedido = new ArrayList<>();
-
+                DatosPedido.add(pedido);
+                DatosPedido.add(getCesta());
+                                
                 String datos = new Gson().toJson(DatosPedido);
-                System.out.println(datos);
+                System.out.println("DATOS-PEDIDO: ==  !  " +datos);
                 params.put("DATA", new Peticion("nuevo_pedido", datos).getJSON());
                 return params;
             }
         };
         queue.add(request);
+    }
+
+    @NonNull
+    private ArrayList<Cesta> getCesta() {
+        ArrayList<Cesta> ProductosPedido = new ArrayList<>();
+        for (Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
+            ProductosPedido.add(new Cesta(entry.getKey(),pedido.getId_pedido(),entry.getValue()));
+        }
+        return ProductosPedido;
     }
 
 }
