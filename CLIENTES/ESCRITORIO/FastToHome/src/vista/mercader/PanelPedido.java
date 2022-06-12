@@ -15,6 +15,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import javax.annotation.processing.SupportedSourceVersion;
 import javax.lang.model.SourceVersion;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JMenu;
 import modelo.Direccion;
@@ -277,6 +278,9 @@ public class PanelPedido extends javax.swing.JPanel {
     }
     
     public void cargarContenidoDeCesta(){
+        DefaultListModel listaModeloCesta = new DefaultListModel();
+        
+        
         
     }
 }
