@@ -5,6 +5,9 @@
 package com.proyecto.fasttohome.modelo;
 
 import com.google.gson.Gson;
+
+import java.io.Serializable;
+
 /**
  * Clase que representa una dirección
  *
@@ -12,7 +15,7 @@ import com.google.gson.Gson;
  * @version 1.0
  * @since 1.0
  */
-public class Direccion {
+public class Direccion  implements Serializable {
 
     /**
      * Número que identifica una direccíón en la base de datos
