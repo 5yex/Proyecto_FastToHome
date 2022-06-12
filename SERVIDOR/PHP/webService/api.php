@@ -919,7 +919,7 @@ function obtenerCestaPedido($datos){
     
     try {
         $cesta = new Cesta();
-        $cesta->setId_pedido($id_pedido);
+        $cesta->setId_pedido($datos->id_pedido);
         
         $respuesta = $cesta->obtenerCestaPedido();
         if ($respuesta) {
