@@ -240,7 +240,7 @@ public class PanelPedido extends javax.swing.JPanel {
     }
     
     public void cargaDireccionPedido(){
-        Direccion direccion = DireccionDao.obtenerDireccionUsuario(new Usurio(pedido.getId_usuario()));
+        Direccion direccion = DireccionDao.obtenerDireccionUsuario(new Usuario(pedido.getId_usuario()));
     
     }
 }
