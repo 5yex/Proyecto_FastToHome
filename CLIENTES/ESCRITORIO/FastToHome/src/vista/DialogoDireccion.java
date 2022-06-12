@@ -19,7 +19,7 @@ import util.Constantes;
  * @version 1.0
  * @since 1.0
  */
-public class DialogoDireccion extends javax.swing.JDialog {
+public class DialogoDireccion extends javax.swing.JDialog implements Constantes{
 
     Direccion direccion;
 
@@ -248,7 +248,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
             String otros = varOtros.getText();
             String coordenadas = tfCoordenadas.getText();
             
-            if(coordenadas.length() > 0 && !validaciones.validar(coordendas,PATRON_COORDENADAS)){
+            if(coordenadas.length() > 0 && !validaciones.validar(coordenas, PAT)){
             }
             
             if (calle.length() == 0 || ciudad.length() == 0 || num <= 0 || (cp <= 0 && cp >= 99999)) {
