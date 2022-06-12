@@ -10,6 +10,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
+import android.location.Location;
 import android.os.Bundle;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -20,6 +21,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.databinding.ActivityComprobarZonaBinding;
 import com.proyecto.fasttohome.modelo.Usuario;
@@ -60,7 +62,7 @@ public class ComprobarZona extends FragmentActivity implements OnMapReadyCallbac
                     .addOnSuccessListener(this, new OnSuccessListener<Location>() {
                         @Override
                         public void onSuccess(Location location) {
-                            updateTextView(location);
+                            //(location);
                         }
                     });
         }
