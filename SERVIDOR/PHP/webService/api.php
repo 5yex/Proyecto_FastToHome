@@ -553,7 +553,7 @@ function obtenerUsuarioPorSuId($datos) {
     try {
         $cliente = new usuario();
         $cliente->setId($datos->id);
-        $respuesta = $cliente->usuarioCompleto();
+        $respuesta = $cliente->usuarioPorSuId();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
