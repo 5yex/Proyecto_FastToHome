@@ -50,7 +50,7 @@ public class gestion {
 
             //System.out.println("controlador.gestion.hacerConsulta() ---- PETICION ENVIADO: " + peticion.getJSON());
 
-            System.err.println("peticion.getJSON()");
+            System.err.println(peticion.getJSON());
             
             params.add(new BasicNameValuePair("DATA", peticion.getJSON()));
 
