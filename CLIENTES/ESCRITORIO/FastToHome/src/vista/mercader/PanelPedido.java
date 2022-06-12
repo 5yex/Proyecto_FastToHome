@@ -287,7 +287,6 @@ public class PanelPedido extends javax.swing.JPanel {
         listaModeloCesta.setSize(cesta.size());
         listaModeloCesta.removeAllElements();
         
-        
         for (Cesta elementoCesta : cesta) {
             Producto producto = new Producto();
             producto.setId_producto(elementoCesta.getId_producto());
