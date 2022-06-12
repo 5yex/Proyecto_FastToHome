@@ -135,7 +135,7 @@ if (empty($_POST["DATA"])) {
         case 'rellenar_cesta';
             rellenarCesta(json_decode($peticion->datos));
             break;
-        case 'contenido_cesta_producto';
+        case 'contenido_cesta_pedido';
             obtenerCestaPedido(json_decode($peticion->datos));
             break;
         
