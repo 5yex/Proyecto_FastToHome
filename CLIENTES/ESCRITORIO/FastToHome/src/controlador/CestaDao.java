@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import modelo.Cesta;
 import modelo.Pedido;
 import modelo.Peticion;
+import modelo.Usuario;
 
 /**
  *
@@ -24,24 +25,24 @@ public class CestaDao {
 
         if (jsonArray != null) {
             for (int i = 0; i < jsonArray.size(); i++) {
-                Usuario user = new Usuario();
+                Usuario cesta = new Usuario();
 
                 JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
 
-                user.setId(usuarioJson.get("id").getAsInt());
-                user.setDni(usuarioJson.get("Dni").getAsString());
-                user.setEmail(usuarioJson.get("Email").getAsString());
-                user.setId(usuarioJson.get("id").getAsInt());
+                cesta.setId(usuarioJson.get("id").getAsInt());
+                cesta.setDni(usuarioJson.get("Dni").getAsString());
+                cesta.setEmail(usuarioJson.get("Email").getAsString());
+                cesta.setId(usuarioJson.get("id").getAsInt());
                 if (!usuarioJson.get("direccion_id").isJsonNull()) {
-                    user.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
+                    cesta.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
                 }
-                user.setNombre(usuarioJson.get("Nombre").getAsString());
-                user.setApellidos(usuarioJson.get("apellidos").getAsString());
-                user.setPassword(usuarioJson.get("password").getAsString());
-                user.setRol(usuarioJson.get("Rol").getAsString());
-                user.setTlf(usuarioJson.get("tlf").getAsString());
+                cesta.setNombre(usuarioJson.get("Nombre").getAsString());
+                cesta.setApellidos(usuarioJson.get("apellidos").getAsString());
+                cesta.setPassword(usuarioJson.get("password").getAsString());
+                cesta.setRol(usuarioJson.get("Rol").getAsString());
+                cesta.setTlf(usuarioJson.get("tlf").getAsString());
 
-                listaUsuarios.add(user);
+                listaUsuarios.add(cesta);
 
             }
         }
