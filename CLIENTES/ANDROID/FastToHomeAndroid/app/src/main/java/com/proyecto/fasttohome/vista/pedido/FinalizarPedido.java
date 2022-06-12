@@ -178,6 +178,7 @@ public class FinalizarPedido extends AppCompatActivity {
                     case AppCompatActivity.RESULT_OK:
                         PaymentData paymentData = PaymentData.getFromIntent(data);
                         handlePaymentSuccess(paymentData);
+                        pedidoAfterPay();
                         break;
 
                     case AppCompatActivity.RESULT_CANCELED:
