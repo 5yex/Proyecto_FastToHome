@@ -25,6 +25,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.gms.wallet.AutoResolveHelper;
 import com.google.android.gms.wallet.PaymentData;
 
+import com.google.gson.Gson;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.databinding.ActivityFinalizarPedidoBinding;
 
@@ -268,7 +269,12 @@ public class FinalizarPedido extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("DATA", new Peticion("realizar_pedido", negocio.getJSON()).getJSON());
+
+                ArrayList<Object> DatosPedido = new ArrayList<>();
+
+                String datos = new Gson().toJson(DatosPedido);
+
+                params.put("DATA", new Peticion("realizar_pedido", datos).getJSON());
                 return params;
             }
         };
