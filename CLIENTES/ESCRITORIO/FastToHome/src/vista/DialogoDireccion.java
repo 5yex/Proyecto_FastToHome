@@ -261,7 +261,7 @@ public class DialogoDireccion extends javax.swing.JDialog implements Constantes{
                 direccion.setNumero(num);
                 direccion.setOtros(otros);
                 direccion.setValida(true);
-                direccion.setCoordenada(coordenadas);
+                direccion.setCoordenadas(coordenadas);
 
         } catch (NumberFormatException ex) {
             error.setText("Campos Numérico Incorrectos");
