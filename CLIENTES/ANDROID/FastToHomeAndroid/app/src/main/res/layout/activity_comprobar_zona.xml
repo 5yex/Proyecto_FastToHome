@@ -16,10 +16,19 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="395dp"
         android:layout_height="347dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:context=".vista.pedido.ComprobarZona" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="391dp"
+        android:layout_height="60dp"
+        android:text="Comprobar Zona"
+        app:layout_constraintTop_toBottomOf="@+id/map"
+        tools:layout_editor_absoluteX="1dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
