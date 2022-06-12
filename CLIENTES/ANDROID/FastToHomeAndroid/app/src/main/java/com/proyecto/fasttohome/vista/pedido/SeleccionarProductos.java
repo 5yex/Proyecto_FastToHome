@@ -100,6 +100,7 @@ public class SeleccionarProductos extends AppCompatActivity {
         i.putExtra("productos",productos);
         i.putExtra("usuario", usuario);
         i.putExtra("negocio", negocio);
+        i.putExtra("pedido",pedido);
         startActivity(i);
     };
 

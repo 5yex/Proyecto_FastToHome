@@ -45,13 +45,6 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
             pedir = (Button) itemView.findViewById(R.id.pedir);
             info = (Button) itemView.findViewById(R.id.infoNeg);
             contexto = itemView.getContext();
-            pedir.setOnClickListener(view -> {
-                Intent intent = new Intent(contexto, SeleccionarProductos.class);
-                intent.putExtra("user", usuario);
-                intent.putExtra("negocio", negocio);
-                intent.putExtra("pedido", pedido);
-                contexto.startActivity(intent);
-            });
         }
     }
 
