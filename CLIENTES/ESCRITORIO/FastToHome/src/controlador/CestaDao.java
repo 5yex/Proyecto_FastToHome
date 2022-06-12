@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import modelo.Cesta;
 import modelo.Pedido;
 import modelo.Peticion;
-import modelo.Usuario;
 
 /**
  *
@@ -40,8 +39,6 @@ public class CestaDao {
         }
 
         return contenidoCesta;
-
-    }
     }
     
 }
