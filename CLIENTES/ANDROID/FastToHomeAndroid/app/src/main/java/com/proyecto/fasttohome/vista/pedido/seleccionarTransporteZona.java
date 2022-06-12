@@ -19,6 +19,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.navigation.NavType;
+
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationServices;
@@ -59,6 +61,7 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
     Usuario user;
     Pedido pedido;
     Direccion direccion;
+    boolean pararUbicacion
 
     // Initializing other items
     // from layout file
@@ -70,6 +73,7 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccionar_transporte_zona);
+        pararUbicacion= false;
         pedirDron = (Button) findViewById(R.id.btTransporteDron);
         pedirRepartidor = (Button) findViewById(R.id.btTransporteRepartidor);
         servicio = (TextView) findViewById(R.id.servicio);
