@@ -22,6 +22,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.navigation.NavType;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationServices;
@@ -44,10 +49,17 @@ import com.google.maps.android.PolyUtil;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Pedido;
+import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
+import com.proyecto.fasttohome.vista.registro.registroPaso3Direccion;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class seleccionarTransporteZona extends AppCompatActivity implements OnMapReadyCallback, LocationListener {
     private FusedLocationProviderClient fusedLocationClient;
@@ -59,6 +71,7 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
     Polygon polygonDron;
     Polygon polygonReparto;
     FusedLocationProviderClient mFusedLocationClient;
+    LatLng coordenadasActuales;
     Usuario user;
     Pedido pedido;
     Direccion direccion;
@@ -82,6 +95,8 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(seleccionarTransporteZona.this);
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+        //RECEPCION DEL ACTIVITY ANTERIOR
         user = (Usuario) getIntent().getExtras().getSerializable("user");
         direccion = (Direccion) getIntent().getExtras().getSerializable("direccion");
 
@@ -95,19 +110,55 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
 
 
     private void comenzarPedido(View view) {
-        System.out.println("comenzar pedido");
-        pedido = new Pedido();
-        pedido.setEstado("pendiente_pago");
-        if (view.getId() == R.id.btTransporteDron) {
-            pedido.setTransporte("dron");
-        } else {
-            pedido.setTransporte("repartidor");
+        if(coordenadasActuales != null){
+            pararUbicacion=true;
+            direccion.setCoordenadas(coordenadasActuales.latitude+","+coordenadasActuales.longitude);
+
+            System.out.println("comenzar pedido");
+            pedido = new Pedido();
+            pedido.setEstado("pendiente_pago");
+            if (view.getId() == R.id.btTransporteDron) {
+                pedido.setTransporte("dron");
+            } else {
+                pedido.setTransporte("repartidor");
+            }
+
+
+            Intent i = new Intent(this, PantallaDeNegocios.class);
+            i.putExtra("user", user);
+            i.putExtra("pedido", pedido);
+            startActivity(i);
         }
-        pararUbicacion=true;
-        Intent i = new Intent(this, PantallaDeNegocios.class);
-        i.putExtra("user", user);
-        i.putExtra("pedido", pedido);
-        startActivity(i);
+    }
+
+    private void actualizaDireccionYContinua() {
+        String url = getString(R.string.apiUrl);
+        RequestQueue queue = Volley.newRequestQueue(seleccionarTransporteZona.this);
+        StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
+            System.out.println(response);
+            try {
+                JSONObject resp = new JSONObject(response);
+                if ((resp.getBoolean("error")) == true) {
+                    throw new VolleyError(resp.getString("datos"));
+                } else {
+                    JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
+                    int DireccionId = datos.getInt("last_id");
+                    if (DireccionId != -1){
+                        
+                    }
+                }
+            } catch (JSONException | VolleyError e) {
+                Toast.makeText(seleccionarTransporteZona.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        }, error -> Toast.makeText(seleccionarTransporteZona.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show()) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("DATA", new Peticion("nueva_direccion_devuelve_id", direccion.getJSON()).getJSON());
+                return params;
+            }
+        };
+        queue.add(request);
     }
 
 
@@ -140,12 +191,12 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
         if (location == null) {
             getLastLocation();
         } else {
-            LatLng actual = new LatLng(location.getLatitude(), location.getLongitude());
-            mMap.addMarker(marker.position(actual));
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(actual, 14F));
+            coordenadasActuales = new LatLng(location.getLatitude(), location.getLongitude());
+            mMap.addMarker(marker.position(coordenadasActuales));
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(coordenadasActuales, 14F));
             Handler handler = new Handler();
             //Hilo para actualizar recursivamente
-            comprobarServicio(actual);
+            comprobarServicio(coordenadasActuales);
             if (!pararUbicacion) {
                 final Runnable r = new Runnable() {
                     public void run() {
