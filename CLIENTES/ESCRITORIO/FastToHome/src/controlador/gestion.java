@@ -50,6 +50,8 @@ public class gestion {
 
             //System.out.println("controlador.gestion.hacerConsulta() ---- PETICION ENVIADO: " + peticion.getJSON());
 
+            System.err.println("peticion.getJSON()");
+            
             params.add(new BasicNameValuePair("DATA", peticion.getJSON()));
 
             httpPost.setEntity(new UrlEncodedFormEntity(params,HTTP.UTF_8));
