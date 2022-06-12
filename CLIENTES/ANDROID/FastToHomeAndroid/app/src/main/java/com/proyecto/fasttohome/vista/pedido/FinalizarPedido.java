@@ -273,7 +273,7 @@ public class FinalizarPedido extends AppCompatActivity {
                 ArrayList<Object> DatosPedido = new ArrayList<>();
 
                 String datos = new Gson().toJson(DatosPedido);
-
+                System.out.println(datos);
                 params.put("DATA", new Peticion("nuevo_pedido", datos).getJSON());
                 return params;
             }
