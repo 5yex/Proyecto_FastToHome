@@ -84,7 +84,6 @@ public class PantallaPrincipal extends AppCompatActivity {
         };
         queue.add(request);
     }
-
     public void obtenerDireccionUsuario() {
         String url = getString(R.string.apiUrl);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
@@ -121,8 +120,6 @@ public class PantallaPrincipal extends AppCompatActivity {
         };
         queue.add(request);
     }
-
-
     public void pasarPantallaUbicacion(View view){
         Intent i = new Intent(this, seleccionarTransporteZona.class );
         i.putExtra("user",user);
