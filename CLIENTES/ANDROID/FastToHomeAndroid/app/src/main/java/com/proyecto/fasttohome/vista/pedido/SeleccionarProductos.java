@@ -162,9 +162,14 @@ public class SeleccionarProductos extends AppCompatActivity {
     public void onBackPressed() {
             AlertDialog.Builder builder = new AlertDialog.Builder(SeleccionarProductos.this);
             builder.setTitle("ATENCIÓN").setMessage("Si vuelves atrás cancelaras el pedido.\n ¿Seguro que quieres salir?");
-            builder.setNegativeButton("Volver a mi pedido",null);
-            builder.setPositiveButton("Sí", (dialogInterface, i) -> {
-                super.onBackPressed();
+            builder.setNegativeButton("VOLVER A MI PEDIDO",null);
+            builder.setPositiveButton("SALIR DEL PEDIDO", (dialogInterface, i) -> {
+                irPrincipal();
             }).show();
     }
+    public void irPrincipal() {
+        Intent i = new Intent(this, PantallaPrincipal.class );
+        i.putExtra("user", usuario);
+        startActivity(i);
+    };
 }
