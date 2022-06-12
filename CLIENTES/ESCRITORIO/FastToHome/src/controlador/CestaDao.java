@@ -25,16 +25,16 @@ public class CestaDao {
 
         if (jsonArray != null) {
             for (int i = 0; i < jsonArray.size(); i++) {
-                Cesta cesta = new Cesta();
+                Cesta elementoCesta = new Cesta();
 
                 JsonObject cestaJson = jsonArray.get(i).getAsJsonObject();
                 
-                cesta.setId_cesta(cestaJson.get("id").getAsInt());
-                cesta.setCantidad(cestaJson.get("Cantidad").getAsInt());
-                cesta.setId_pedido(cestaJson.get("id_pedido").getAsInt());
-                cesta.setId_producto(cestaJson.get("id_producto").getAsInt());
+                elementoCesta.setId_cesta(cestaJson.get("id").getAsInt());
+                elementoCesta.setCantidad(cestaJson.get("Cantidad").getAsInt());
+                elementoCesta.setId_pedido(cestaJson.get("id_pedido").getAsInt());
+                elementoCesta.setId_producto(cestaJson.get("id_producto").getAsInt());
 
-                contenidoCesta.add(cesta);
+                contenidoCesta.add(elementoCesta);
 
             }
         }
