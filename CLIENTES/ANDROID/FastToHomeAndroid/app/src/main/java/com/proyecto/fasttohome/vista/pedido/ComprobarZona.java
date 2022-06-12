@@ -48,6 +48,7 @@ public class ComprobarZona extends FragmentActivity implements OnMapReadyCallbac
         comprobarZona= findViewById(R.id.comprobarZona);
         comprobarZona.setOnClickListener(view -> {
             getLastLocation();
+            System.out.println("asdfas");
         });
 
     }
