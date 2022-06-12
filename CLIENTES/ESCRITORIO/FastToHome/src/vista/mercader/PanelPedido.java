@@ -7,6 +7,7 @@ package vista.mercader;
 import com.formdev.flatlaf.ui.FlatButtonBorder;
 import controlador.DireccionDao;
 import controlador.PedidoDao;
+import controlador.UsuarioDao;
 import java.awt.Desktop;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -263,7 +264,7 @@ public class PanelPedido extends javax.swing.JPanel {
     }
     
     public void cargaDireccionPedido(){
-        Usuario usuario_pedido = new Usuario(pedido.getId_usuario());
+        Usuario usuario_pedido = UsuarioDao.obtenerUsuarioPorSuId(new Usuario(pedido.getId_usuario()));
         Direccion direccion = DireccionDao.obtenerDireccionUsuario(usuario_pedido);
         
         infoDireccion.setEditable(false);
