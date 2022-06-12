@@ -5,6 +5,7 @@
 package vista.mercader;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
+import controlador.DireccionDao;
 import controlador.PedidoDao;
 import java.awt.event.ActionListener;
 import javax.annotation.processing.SupportedSourceVersion;
@@ -70,7 +71,9 @@ public class PanelPedido extends javax.swing.JPanel {
         numPedido = new javax.swing.JLabel();
         tipoTransporte = new javax.swing.JLabel();
         estadoActualPedido = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        verMapa = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        infoDireccion = new javax.swing.JTextArea();
 
         tituloTransporte.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         tituloTransporte.setText("TRANSPORTE:");
@@ -107,11 +110,14 @@ public class PanelPedido extends javax.swing.JPanel {
         estadoActualPedido.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         estadoActualPedido.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
+        verMapa.setBackground(new java.awt.Color(240, 87, 66));
+        verMapa.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        verMapa.setForeground(new java.awt.Color(255, 255, 255));
+        verMapa.setLabel("VER MAPA");
+
+        infoDireccion.setColumns(20);
+        infoDireccion.setRows(5);
+        jScrollPane2.setViewportView(infoDireccion);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -119,25 +125,26 @@ public class PanelPedido extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(numPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(tipoTransporte, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(estadoActualPedido))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pasarEstado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(tituloIdPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(tituloTransporte, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                        .addComponent(tituloEstadoPedido)))
+                        .addComponent(tituloEstadoPedido))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pasarEstado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(verMapa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
@@ -155,12 +162,14 @@ public class PanelPedido extends javax.swing.JPanel {
                         .addGap(1, 1, 1))
                     .addComponent(estadoActualPedido, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(tipoTransporte, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(17, 17, 17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(verMapa, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pasarEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(19, 19, 19))
         );
@@ -179,22 +188,20 @@ public class PanelPedido extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_pasarEstadoActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel estadoActualPedido;
+    private javax.swing.JTextArea infoDireccion;
     private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel numPedido;
     private javax.swing.JButton pasarEstado;
     private javax.swing.JLabel tipoTransporte;
     private javax.swing.JLabel tituloEstadoPedido;
     private javax.swing.JLabel tituloIdPedido;
     private javax.swing.JLabel tituloTransporte;
+    private javax.swing.JButton verMapa;
     // End of variables declaration//GEN-END:variables
     
     /**
@@ -230,6 +237,8 @@ public class PanelPedido extends javax.swing.JPanel {
         this.setBorder(new FlatButtonBorder());
     }
     
+    public void cargaDireccionPedido(){
+        Direccion direccion = DireccionDao.obtenerDireccionUsuario(new Usurio(pedido.getId_usuario()));
     
     
 }
