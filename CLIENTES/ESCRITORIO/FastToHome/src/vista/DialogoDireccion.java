@@ -226,6 +226,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
             varCalle.setText(direccion.getCalle());
             varCiudad.setText(direccion.getCiudad());
             varOtros.setText(direccion.getOtros());
+            tfCoordenadas.setText(direccion.getCoordenadas());
         }
     }
     
