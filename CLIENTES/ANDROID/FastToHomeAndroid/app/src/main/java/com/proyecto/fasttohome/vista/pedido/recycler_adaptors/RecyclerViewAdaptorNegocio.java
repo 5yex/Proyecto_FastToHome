@@ -82,6 +82,14 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
             builder.setTitle("INFORMACIÓN DEL NEGOCIO");
             builder.setMessage(negocioActual.getDescripcion()).show();
         });
+        holder.pedir.setOnClickListener(view -> {
+            pedido.setId_negocio(negocioActual.getId_negocio());
+            Intent intent = new Intent(holder.contexto, SeleccionarProductos.class);
+            intent.putExtra("user", usuario);
+            intent.putExtra("negocio", negocioActual);
+            intent.putExtra("pedido", pedido);
+            holder.contexto.startActivity(intent);
+        });
     }
 
     @Override
