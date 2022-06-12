@@ -30,18 +30,9 @@ public class CestaDao {
 
                 JsonObject cestaJson = jsonArray.get(i).getAsJsonObject();
 
-                cesta.setId(cestaJson.get("id").getAsInt());
-                cesta.setDni(cestaJson.get("Dni").getAsString());
-                cesta.setEmail(cestaJson.get("Email").getAsString());
-                cesta.setId(cestaJson.get("id").getAsInt());
-                if (!cestaJson.get("direccion_id").isJsonNull()) {
-                    cesta.setId_direccion(cestaJson.get("direccion_id").getAsInt());
-                }
-                cesta.setNombre(cestaJson.get("Nombre").getAsString());
-                cesta.setApellidos(cestaJson.get("apellidos").getAsString());
-                cesta.setPassword(cestaJson.get("password").getAsString());
-                cesta.setRol(cestaJson.get("Rol").getAsString());
-                cesta.setTlf(cestaJson.get("tlf").getAsString());
+                cesta.setCantidad(cestaJson.get("Cantidad").getAsInt());
+                cesta.setId_pedido(cestaJson.get("id_pedido").getAsInt());
+                cesta.setId_producto(cestaJson.get("id_producto").getAsInt());
 
                 contenidoCesta.add(cesta);
 
