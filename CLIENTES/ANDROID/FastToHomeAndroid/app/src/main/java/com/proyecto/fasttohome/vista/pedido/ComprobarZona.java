@@ -27,7 +27,7 @@ public class ComprobarZona extends FragmentActivity implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         user = (Usuario) getIntent().getExtras().getSerializable("user");
-        System.out.println(user.getJSON);
+        System.out.println(user.getJSON());
         binding = ActivityComprobarZonaBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
