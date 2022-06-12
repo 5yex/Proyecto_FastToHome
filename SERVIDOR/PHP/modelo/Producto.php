@@ -172,5 +172,8 @@ class Producto extends Conexion{
         
         return TRUE;
     }
-
+    
+    public function obtenerDatosProducto(){
+        $sql = "SELECT * FROM producto WHERE id = 1 order by Nombre;";
+    }
 }
