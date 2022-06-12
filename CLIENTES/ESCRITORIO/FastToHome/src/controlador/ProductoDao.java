@@ -41,6 +41,8 @@ public class ProductoDao {
      * @return Una lista con los productos de un negocio
      */
     public static ArrayList<Producto> seleccionProductosNegocio(Negocio negocio) {
+        Negocio ne =  new Negocio();
+        ne.setId_negocio(7);
         System.err.println(negocio.getJSON());
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_productos_negocio", negocio.getJSON()));
         ArrayList<Producto> listaProductos = new ArrayList<>();
