@@ -40,7 +40,6 @@ public class PantallaDeNegocios extends AppCompatActivity {
     private RecyclerViewAdaptorNegocio adaptorNegocio;
     private Usuario usuario;
     private Pedido pedido;
-    private Direccion direccion;
     private HashMap<Integer, Categoria> categorias;
     private List<Negocio> negocios;
 
@@ -51,7 +50,6 @@ public class PantallaDeNegocios extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_de_negocios);
         //RECEPCION DEL ACTIVITY ANTERIOR
         usuario = (Usuario) getIntent().getExtras().getSerializable("user");
-        direccion = (Direccion) getIntent().getExtras().getSerializable("direccion");
         pedido = (Pedido) getIntent().getExtras().getSerializable("pedido");
 
         recyclerViewNegocio = (RecyclerView) findViewById(R.id.recyclerNegocios);

@@ -30,6 +30,7 @@ import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.databinding.ActivitySeleccionarProductosBinding;
 import com.proyecto.fasttohome.modelo.Cesta;
 import com.proyecto.fasttohome.modelo.Negocio;
+import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Producto;
 import com.proyecto.fasttohome.modelo.Usuario;
@@ -53,6 +54,7 @@ public class SeleccionarProductos extends AppCompatActivity {
     private HashMap<Integer, Producto> productos;
     private Usuario usuario;
     private Negocio negocio;
+    private Pedido pedido;
     private RecyclerView recyclerViewProducto;
     private RecyclerViewAdaptorProducto adaptorProducto;
     private Button pedir;
@@ -69,6 +71,7 @@ public class SeleccionarProductos extends AppCompatActivity {
         CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
         usuario = (Usuario) getIntent().getExtras().getSerializable("user");
         negocio = (Negocio) getIntent().getExtras().getSerializable("negocio");
+        pedido = (Pedido) getIntent().getExtras().getSerializable("pedido");
         imagenNegocio = findViewById(R.id.imgNegocioS);
         toolBarLayout.setTitle(negocio.getNombre());
         Picasso.get().load(negocio.getUrl_imagen()).into(imagenNegocio);
