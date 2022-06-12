@@ -82,7 +82,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Negocio negocioActual = listaNegocios.get(position);
         holder.nombre.setText(negocioActual.getNombre());
-        System.err.println(categorias.size());
+        System.err.println(categorias.size()+"  "+negocioActual.getId_categoria()+ " "+categorias.containsKey(negocioActual.getId_categoria()));
         holder.categoria.setText("prueba");
         holder.usuario = usuario;
         holder.pedido = pedido;
