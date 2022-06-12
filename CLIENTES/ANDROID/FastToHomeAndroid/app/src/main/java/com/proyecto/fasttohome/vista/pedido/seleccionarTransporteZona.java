@@ -12,6 +12,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +25,7 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
+
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.Dash;
 import com.google.android.gms.maps.model.Dot;
@@ -35,7 +37,11 @@ import com.google.android.gms.maps.model.Polygon;
 import com.google.android.gms.maps.model.PolygonOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.maps.android.PolyUtil;
 import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.modelo.Direccion;
+import com.proyecto.fasttohome.modelo.Pedido;
+import com.proyecto.fasttohome.modelo.Usuario;
 
 import java.util.Arrays;
 import java.util.List;
@@ -45,8 +51,14 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
     MapView mapView;
     GoogleMap mMap;
     MarkerOptions marker;
-    Button btnGetLocation;
+    Button pedirDron,pedirRepartidor;
+    TextView servicio;
+    Polygon polygonDron;
+    Polygon polygonReparto;
     FusedLocationProviderClient mFusedLocationClient;
+    Usuario user;
+    Pedido pedido;
+    Direccion direccion;
 
     // Initializing other items
     // from layout file
@@ -58,17 +70,39 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccionar_transporte_zona);
-
-
-        // Gets the MapView from the XML layout and creates it
+        pedirDron = (Button) findViewById(R.id.btTransporteDron);
+        pedirRepartidor = (Button) findViewById(R.id.btTransporteRepartidor);
+        servicio = (TextView) findViewById(R.id.servicio);
         mapView = (MapView) findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(seleccionarTransporteZona.this);
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        user = (Usuario) getIntent().getExtras().getSerializable("user");
 
-        // method to get the location
+        View.OnClickListener listener = view -> {
+            comenzarPedido(view);
+        };
+        pedirDron.setOnClickListener(listener);
+        pedirRepartidor.setOnClickListener(listener);
         getLastLocation();
     }
+
+
+    private void comenzarPedido(View view) {
+        pedido = new Pedido();
+        pedido.setEstado("pendiente_pago");
+        if(view.getId() == R.id.btTransporteDron){
+            pedido.setTransporte("dron");
+        }else{
+            pedido.setTransporte("repartidor");
+        }
+        Intent i = new Intent(this, PantallaDeNegocios.class );
+        i.putExtra("user",user);
+        i.putExtra("pedido",pedido);
+
+        startActivity(i);
+    }
+
 
     @SuppressLint("MissingPermission")
     private void getLastLocation() {
@@ -109,6 +143,9 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(actual, 14F));
                 Handler handler = new Handler();
                 //Hilo para actualizar recursivamente
+
+                comprobarServicio(actual);
+
                 final Runnable r = new Runnable() {
                     public void run() {
                         getLastLocation();
@@ -117,6 +154,29 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
                 handler.postDelayed(r, 1500);
             }
     }
+
+    private void comprobarServicio(LatLng actual) {
+        boolean estaEnAreaDron = PolyUtil.containsLocation(actual,polygonDron.getPoints(),true);
+        boolean estaEnAreaRepartior = PolyUtil.containsLocation(actual,polygonReparto.getPoints(),true);
+
+        if(estaEnAreaDron){
+            pedirDron.setEnabled(true);
+        }else{
+            pedirDron.setEnabled(false);
+        }
+        if(estaEnAreaRepartior){
+            pedirRepartidor.setEnabled(true);
+        }else{
+            pedirRepartidor.setEnabled(false);
+        }
+
+        if(!pedirDron.isEnabled() && !pedirRepartidor.isEnabled()){
+            servicio.setText(getString(R.string.servicioNoDisponible));
+        }else{
+            servicio.setText(getString(R.string.servicioDisponible));
+        }
+    }
+
 
     // method to check for permissions
     private boolean checkPermissions() {
@@ -157,7 +217,7 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
     public void onMapReady(@NonNull GoogleMap googleMap) {
 
         mMap = googleMap;
-        Polygon polygonDron = mMap.addPolygon(new PolygonOptions()
+        polygonDron = mMap.addPolygon(new PolygonOptions()
                 .clickable(true)
                 .add(new LatLng(38.9403638,-5.8632235),
                         new LatLng(38.9559078,-5.841610),
@@ -168,7 +228,7 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
         polygonDron.setTag("alpha");
         stylePolygon(polygonDron);
 
-        Polygon polygonReparto = mMap.addPolygon(new PolygonOptions()
+        polygonReparto = mMap.addPolygon(new PolygonOptions()
                 .clickable(true)
                 .add(new LatLng(38.9490172, -5.8563517),
                         new LatLng(38.9595173, -5.8558423),

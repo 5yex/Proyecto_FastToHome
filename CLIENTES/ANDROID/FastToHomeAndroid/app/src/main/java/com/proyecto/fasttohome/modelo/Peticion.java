@@ -6,11 +6,13 @@ package com.proyecto.fasttohome.modelo;
 
 import com.google.gson.Gson;
 
+import java.io.Serializable;
+
 /**
  *
  * @author jmcbg
  */
-public class Peticion {
+public class Peticion implements Serializable {
     String comando;
     String datos;
 

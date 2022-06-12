@@ -19,6 +19,7 @@ import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.vista.PantallaPrincipal;
+import com.proyecto.fasttohome.vista.pedido.seleccionarTransporteZona;
 import com.proyecto.fasttohome.vista.registro.registroPaso1DatosUsuario;
 
 import org.json.JSONException;
@@ -61,6 +62,8 @@ public class PantallaLogin extends AppCompatActivity {
         Intent i = new Intent(this, registroPaso1DatosUsuario.class );
         startActivity(i);
     };
+
+
 
     /**
      * Comprueba la contrasña llamando a la api rest con volley

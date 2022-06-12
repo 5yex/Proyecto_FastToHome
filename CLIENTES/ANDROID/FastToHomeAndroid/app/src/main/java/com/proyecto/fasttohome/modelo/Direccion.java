@@ -20,8 +20,16 @@ public class Direccion implements Serializable {
     private String ciudad;
     private String otros;
     private int codigo_postal;
-    private int coordenadas;
+    private String coordenadas;
     private int id_imagen;
+
+    public String getCoordenadas() {
+        return coordenadas;
+    }
+
+    public void setCoordenadas(String coordenadas) {
+        this.coordenadas = coordenadas;
+    }
 
     public int getId_imagen() {
         return id_imagen;
@@ -31,31 +39,12 @@ public class Direccion implements Serializable {
         this.id_imagen = id_imagen;
     }
 
-    public Direccion(int id_direccion, String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenadas) {
-        this.id_direccion = id_direccion;
-        this.calle = calle;
-        this.numero = numero;
-        this.ciudad = ciudad;
-        this.otros = otros;
-        this.codigo_postal = codigo_postal;
-        this.coordenadas = coordenadas;
-    }
-
-    public Direccion(String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenadas) {
-        this.calle = calle;
-        this.numero = numero;
-        this.ciudad = ciudad;
-        this.otros = otros;
-        this.codigo_postal = codigo_postal;
-        this.coordenadas = coordenadas;
-    }
 
     public Direccion(int id_direccion) {
         this.id_direccion = id_direccion;
     }
 
     public Direccion() {
-
     }
 
     public int getId_direccion() {
@@ -106,13 +95,6 @@ public class Direccion implements Serializable {
         this.codigo_postal = codigo_postal;
     }
 
-    public int getCoordenadas() {
-        return coordenadas;
-    }
-
-    public void setCoordenadas(int coordenadas) {
-        this.coordenadas = coordenadas;
-    }
 
     public String getJSON() {
         return new Gson().toJson(this);

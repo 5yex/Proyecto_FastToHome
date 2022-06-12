@@ -7,33 +7,57 @@
     tools:context=".vista.pedido.seleccionarTransporteZona">
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/tvNormal"
+        android:layout_width="224dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="REPARTO NORMAL"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/colorNaranja"
+        app:layout_constraintTop_toTopOf="@+id/colorNaranja" />
+
+    <ImageView
+        android:id="@+id/colorNaranja"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorVerde"
+        app:srcCompat="@drawable/zona_reparto" />
+
+    <TextView
+        android:id="@+id/zonas"
         android:layout_width="356dp"
         android:layout_height="28dp"
         android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
         android:text="@string/zonas"
         android:textColor="?android:textColorPrimary"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="321dp" />
+        app:layout_constraintTop_toBottomOf="@+id/mapView" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btTransporteRepartidor"
         android:layout_width="200dp"
         android:layout_height="65dp"
         android:layout_marginEnd="16dp"
+        android:enabled="false"
         android:text="@string/transporteRepartidor"
         app:icon="@drawable/ic_twotone_pedal_bike_24"
         app:iconTint="#00FFFFFF"
         app:iconTintMode="src_atop"
-        app:layout_constraintBottom_toBottomOf="@+id/button6"
+        app:layout_constraintBottom_toBottomOf="@+id/btTransporteDron"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView"
-        android:layout_width="397dp"
-        android:layout_height="292dp"
+        android:layout_width="401dp"
+        android:layout_height="271dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -41,32 +65,68 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btTransporteDron"
         android:layout_width="150dp"
         android:layout_height="65dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
+        android:enabled="false"
         android:text="@string/transporteDron"
         app:icon="@mipmap/ic_launcher_foreground"
         app:iconSize="50dp"
         app:iconTint="#00FFFFFF"
         app:iconTintMode="src_atop"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button7"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/btTransporteRepartidor"
+        app:layout_constraintHorizontal_bias="0.783"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#BD6767" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/transportes"
         android:layout_width="234dp"
-        android:layout_height="41dp"
+        android:layout_height="35dp"
         android:layout_marginStart="12dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="4dp"
         android:text="Transportes disponibles:"
         android:textColor="?android:textColorPrimary"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintBottom_toTopOf="@+id/btTransporteDron"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDron"
+        android:layout_width="224dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="REPARTO EN DRON"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/colorVerde"
+        app:layout_constraintTop_toTopOf="@+id/colorVerde" />
+
+    <ImageView
+        android:id="@+id/colorVerde"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zonas"
+        app:srcCompat="@drawable/zona_dron" />
+
+    <TextView
+        android:id="@+id/servicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/servicioNoDisponible"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/transportes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNormal"
+        app:layout_constraintVertical_bias="0.532" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

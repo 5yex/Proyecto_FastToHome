@@ -10,6 +10,9 @@
     <string name="titulosRegistro">Registro</string>
     <string name="transporteDron">DRON</string>
     <string name="transporteRepartidor">REPARTIDOR</string>
+    <string name="servicioDisponible">¡El servicio está disponible en tu ubicación!</string>
+    <string name="servicioNoDisponible">El servicio no está disponible en tu ubicación.</string>
+
     <string name="zonas">Zonas del mapa:</string>
 
 

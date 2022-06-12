@@ -13,8 +13,8 @@ import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.proyecto.fasttohome.vista.pedido.PantallaDeNegocios;
 import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.vista.pedido.seleccionarTransporteZona;
@@ -28,6 +28,8 @@ import java.util.Map;
 public class PantallaPrincipal extends AppCompatActivity {
 
     private Usuario user;
+    private Direccion direccion;
+    private RequestQueue queue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,15 +37,18 @@ public class PantallaPrincipal extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_pantalla_principal);
-
+        queue = Volley.newRequestQueue(PantallaPrincipal.this);
         user = (Usuario) getIntent().getExtras().getSerializable("user");
+        direccion = new Direccion();
         obtenerDatosUsuario();
-        System.out.println("User: " + user.toString());
+        obtenerDireccionUsuario();
+
+        System.out.println("User: " + user.getJSON());
+        System.out.println("Direccion: " + direccion.getJSON());
     }
 
     public void obtenerDatosUsuario() {
         String url = getString(R.string.apiUrl);
-        RequestQueue queue = Volley.newRequestQueue(PantallaPrincipal.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
             System.out.println(response);
             try {
@@ -61,14 +66,16 @@ public class PantallaPrincipal extends AppCompatActivity {
                     user.setId_direccion(datos.getInt("direccion_id"));
                     user.setRol(datos.getString("Rol"));
                     user.setTlf(datos.getString("tlf"));
-
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaPrincipal.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
                 finish();
             }
-        }, this::onErrorResponse) {
+        }, error -> {
+            Toast.makeText(PantallaPrincipal.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
+            finish();
+        }) {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
@@ -79,17 +86,42 @@ public class PantallaPrincipal extends AppCompatActivity {
         queue.add(request);
     }
 
-
-    private void onErrorResponse(VolleyError error) {
-        Toast.makeText(PantallaPrincipal.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
-        finish();
+    public void obtenerDireccionUsuario() {
+        String url = getString(R.string.apiUrl);
+        StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
+            System.out.println(response);
+            try {
+                JSONObject resp = new JSONObject(response);
+                if ((resp.getBoolean("error")) == true) {
+                    throw new VolleyError(resp.getString("datos"));
+                } else {
+                    JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
+                    direccion.setCalle(datos.getString("Calle"));
+                    direccion.setNumero(datos.getInt("Numero"));
+                    direccion.setCiudad(datos.getString("Ciudad"));
+                    direccion.setCodigo_postal(datos.getInt("CP"));
+                    direccion.setOtros(datos.getString("Otros"));
+                    direccion.setCoordenadas(datos.getString("Coordenadas"));
+                }
+            } catch (JSONException | VolleyError e) {
+                Toast.makeText(PantallaPrincipal.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                e.printStackTrace();
+                finish();
+            }
+        }, error -> {
+            Toast.makeText(PantallaPrincipal.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
+            finish();
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("DATA", new Peticion("obtener_direccion", user.getJSON()).getJSON());
+                return params;
+            }
+        };
+        queue.add(request);
     }
 
-    public void pasarPantallaNegocios(View view){
-        Intent i = new Intent(this, PantallaDeNegocios.class );
-        i.putExtra("user",user);
-        startActivity(i);
-    }
 
     public void pasarPantallaUbicacion(View view){
         Intent i = new Intent(this, seleccionarTransporteZona.class );

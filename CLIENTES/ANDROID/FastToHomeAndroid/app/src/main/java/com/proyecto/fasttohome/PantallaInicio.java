@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 
 import com.proyecto.fasttohome.vista.login.PantallaLogin;
+import com.proyecto.fasttohome.vista.pedido.seleccionarTransporteZona;
 
 public class PantallaInicio extends AppCompatActivity {
 
@@ -23,6 +24,10 @@ public class PantallaInicio extends AppCompatActivity {
 
     public void pantallaLogin(View view){
         Intent i = new Intent(this, PantallaLogin.class );
+        startActivity(i);
+    }
+    public void pasarPantallaUbicacion(View view){
+        Intent i = new Intent(this, seleccionarTransporteZona.class );
         startActivity(i);
     }
 
