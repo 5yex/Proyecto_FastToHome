@@ -292,6 +292,7 @@ public class PanelPedido extends javax.swing.JPanel {
         for (Cesta elementoCesta : cesta) {
             Producto producto = new Producto(elementoCesta.getId_producto());
             producto = ProductoDao.obtenerProductoPorId(producto);
+            System.out.println(producto.getNombre());
             listaModeloCesta.addElement("Producto: " + producto.getNombre()+ "Cantidad: " + elementoCesta.getCantidad());
         }
         
