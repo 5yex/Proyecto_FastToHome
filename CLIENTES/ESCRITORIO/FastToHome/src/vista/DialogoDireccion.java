@@ -243,6 +243,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
             String calle = varCalle.getText();
             String ciudad = varCiudad.getText();
             String otros = varOtros.getText();
+            String coordenadas = tfCoordenadas.getText();
 
             if (calle.length() == 0 | ciudad.length() == 0) {
                 throw new IOException("Rellena todos los campos");
