@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentActivity;
 import android.Manifest;
 import android.location.Location;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -54,7 +55,7 @@ public class ComprobarZona extends FragmentActivity implements OnMapReadyCallbac
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney, 2.0F));
     }
 
-    private void getLastLocation() {
+    private void getLastLocation(View view) {
         LocationRequest mLocationRequest = LocationRequest.create();
         mLocationRequest.setInterval(60000);
         mLocationRequest.setFastestInterval(5000);
