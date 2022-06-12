@@ -35,7 +35,7 @@
                 android:id="@+id/detailTitle2"
                 android:layout_width="63dp"
                 android:layout_height="30dp"
-                android:layout_marginTop="88dp"
+                android:layout_marginTop="60dp"
                 android:text="Pagos:"
                 android:textColor="?android:textColorPrimary"
                 android:textSize="20sp"
@@ -56,12 +56,12 @@
 
             <TextView
                 android:id="@+id/detailPrice"
-                android:layout_width="69dp"
-                android:layout_height="20dp"
+                android:layout_width="125dp"
+                android:layout_height="28dp"
                 android:layout_marginTop="11dp"
                 android:text="10.00 Euros"
                 android:textColor="?android:textColorSecondary"
-                android:textSize="12sp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/detailTitle3" />
 
