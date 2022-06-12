@@ -47,13 +47,10 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
             contexto = itemView.getContext();
             pedir.setOnClickListener(view -> {
                 Intent intent = new Intent(contexto, SeleccionarProductos.class);
-                /*Pedido pedido = new Pedido (usuario.getId(),negocio.getId_negocio());
-                intent.putExtra("pedido",pedido);*/
                 intent.putExtra("user", usuario);
                 intent.putExtra("negocio", negocio);
                 intent.putExtra("pedido", pedido);
                 contexto.startActivity(intent);
-                //System.out.println("Boton Pulsado por usuario: "+usuario.getNombre() + " Nombre de negocio: "+ nombre.getText().toString());
             });
         }
     }
