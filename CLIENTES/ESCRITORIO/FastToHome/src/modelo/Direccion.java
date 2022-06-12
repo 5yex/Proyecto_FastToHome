@@ -80,7 +80,7 @@ public class Direccion {
      * @param ciudad Nombre de la ciudad
      * @param otros Otros datos de la dirección
      * @param codigo_postal Codigo postal
-     * @param coordenadas 
+     * @param coordenadas Cadena con las coordenadas de la dirección
      */
     public Direccion(int id_direccion, String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenadas) {
         this.id_direccion = id_direccion;
@@ -100,7 +100,7 @@ public class Direccion {
      * @param ciudad Nombre de la ciudad
      * @param otros Otros datos de la dirección
      * @param codigo_postal Codigo postal
-     * @param coordenadas 
+     * @param coordenadas Cadena con las coordenadas de la dirección
      */
     public Direccion(String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenadas) {
         this.calle = calle;
@@ -268,9 +268,9 @@ public class Direccion {
     }
     
     /**
-     * Devuelve 
+     * Devuelve una cadena con las coordenadas de la dirección
      * 
-     * @return 
+     * @return la cadena con las coordenadas de la dirección
      */
     public int getCoordenadas() {
         return coordenadas;
