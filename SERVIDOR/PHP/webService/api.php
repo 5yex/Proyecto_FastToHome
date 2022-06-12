@@ -433,6 +433,24 @@ function obtenerProductosNegocio($datos){
     }
 }
 
+function obtenerDatosProducto($datos){
+    require_once '../modelo/Producto.php';
+    
+    try {
+        $producto = new Producto();
+        $id = $datos->id_negocio;
+        $producto->setId_negocio($id);
+        $respuesta = $producto->productosDeUnNegocio();       
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error en la obtencion de los datos de un producto');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
 function obtenerIdCliente($datos) {
     require_once '../modelo/usuario.php';
     try {
