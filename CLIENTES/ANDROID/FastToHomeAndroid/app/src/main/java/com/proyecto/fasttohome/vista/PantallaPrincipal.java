@@ -13,7 +13,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.proyecto.fasttohome.vista.pedido.ComprobarZona;
 import com.proyecto.fasttohome.vista.pedido.PantallaDeNegocios;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Peticion;
