@@ -30,7 +30,7 @@ public class seleccionarTransporteZona extends AppCompatActivity {
         mapView.onCreate(savedInstanceState);
 
 
-        mapView.getMapAsync();
+        mapView.getMapAsync(this);
 
     }
 }
