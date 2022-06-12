@@ -41,8 +41,6 @@ public class PantallaPrincipal extends AppCompatActivity {
         user = (Usuario) getIntent().getExtras().getSerializable("user");
         direccion = new Direccion();
         obtenerDatosUsuario();
-        obtenerDireccionUsuario();
-
         System.out.println("User: " + user.getJSON());
         System.out.println("Direccion: " + direccion.getJSON());
     }
@@ -66,6 +64,7 @@ public class PantallaPrincipal extends AppCompatActivity {
                     user.setId_direccion(datos.getInt("direccion_id"));
                     user.setRol(datos.getString("Rol"));
                     user.setTlf(datos.getString("tlf"));
+                    obtenerDireccionUsuario();
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaPrincipal.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -115,7 +114,8 @@ public class PantallaPrincipal extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("DATA", new Peticion("obtener_direccion", direccion.getJSON()).getJSON());
+                params.put("DATA", new Peticion("obtener_direccion", user.getJSON()).getJSON());
+                System.out.println("Imprimir direccion");
                 return params;
             }
         };
