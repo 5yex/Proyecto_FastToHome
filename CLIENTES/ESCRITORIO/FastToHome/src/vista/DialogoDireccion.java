@@ -78,6 +78,8 @@ public class DialogoDireccion extends javax.swing.JDialog {
         labelCiudad1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         varOtros = new javax.swing.JTextArea();
+        labelCoordenadas = new javax.swing.JLabel();
+        tfCoordenadas = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Diálogo Dirección");
@@ -116,6 +118,8 @@ public class DialogoDireccion extends javax.swing.JDialog {
         varOtros.setPreferredSize(new java.awt.Dimension(232, 70));
         jScrollPane1.setViewportView(varOtros);
 
+        labelCoordenadas.setText("Coordenadas:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -146,9 +150,13 @@ public class DialogoDireccion extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(aceptar))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(labelCiudad1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(labelCoordenadas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(labelCiudad1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 386, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
+                            .addComponent(tfCoordenadas))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -171,6 +179,10 @@ public class DialogoDireccion extends javax.swing.JDialog {
                     .addComponent(labelCiudad1)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCoordenadas)
+                    .addComponent(tfCoordenadas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(aceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cancelar)
@@ -262,7 +274,9 @@ public class DialogoDireccion extends javax.swing.JDialog {
     private javax.swing.JLabel labelCalle;
     private javax.swing.JLabel labelCiudad;
     private javax.swing.JLabel labelCiudad1;
+    private javax.swing.JLabel labelCoordenadas;
     private javax.swing.JLabel laberNumero;
+    private javax.swing.JTextField tfCoordenadas;
     private javax.swing.JTextField varCP;
     private javax.swing.JTextField varCalle;
     private javax.swing.JTextField varCiudad;

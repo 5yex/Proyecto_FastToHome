@@ -56,10 +56,16 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="aceptar" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="labelCiudad1" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="labelCoordenadas" alignment="0" max="32767" attributes="0"/>
+                          <Component id="labelCiudad1" alignment="0" max="32767" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="386" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane1" pref="379" max="32767" attributes="0"/>
+                          <Component id="tfCoordenadas" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -89,6 +95,11 @@
                   <Component id="jScrollPane1" min="-2" pref="70" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="labelCoordenadas" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfCoordenadas" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="aceptar" alignment="3" max="32767" attributes="0"/>
                   <Component id="cancelar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -178,5 +189,12 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JLabel" name="labelCoordenadas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Coordenadas:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfCoordenadas">
+    </Component>
   </SubComponents>
 </Form>
