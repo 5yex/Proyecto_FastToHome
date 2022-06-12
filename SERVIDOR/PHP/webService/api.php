@@ -133,7 +133,7 @@ if (empty($_POST["DATA"])) {
             rellenarCesta(json_decode($peticion->datos));
             break;
         case 'contenido_cesta_producto';
-            obtenerCestaPedido(json_decode($peticion->datos))
+            obtenerCestaPedido(json_decode($peticion->datos));
             break;
         
         //imagenes
