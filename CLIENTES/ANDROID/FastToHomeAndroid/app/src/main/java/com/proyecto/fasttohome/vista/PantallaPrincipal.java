@@ -17,6 +17,7 @@ import com.proyecto.fasttohome.vista.pedido.PantallaDeNegocios;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
+import com.proyecto.fasttohome.vista.pedido.seleccionarTransporteZona;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -91,7 +92,7 @@ public class PantallaPrincipal extends AppCompatActivity {
     }
 
     public void pasarPantallaUbicacion(View view){
-        Intent i = new Intent(this, ComprobarZona.class );
+        Intent i = new Intent(this, seleccionarTransporteZona.class );
         i.putExtra("user",user);
         startActivity(i);
     }
