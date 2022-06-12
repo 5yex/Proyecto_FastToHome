@@ -148,6 +148,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
         Toast.makeText(PantallaDeNegocios.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
         irPrincipal();
     }
+
     public void irPrincipal() {
         Intent i = new Intent(this, PantallaPrincipal.class );
         i.putExtra("user", usuario);
