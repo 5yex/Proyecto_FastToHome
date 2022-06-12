@@ -252,7 +252,7 @@ public class DialogoDireccion extends javax.swing.JDialog implements Constantes{
                 throw new IOException("Ejempo de coordenada: 32.2424,-4.23234");
             }
             
-            if (calle.length() == 0 || ciudad.length() == 0 || num <= 0 || (cp <= 0 && cp >= 99999)) {
+            if (calle.length() == 0 || ciudad.length() == 0 || num <= 0 || (cp <= 0 && cp >= 99999) || otros.length() == 0) {
                 throw new IOException("Solo puedes dejar sin rellenar las coordenadas");
             }
                 direccion.setCalle(calle);
