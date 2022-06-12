@@ -45,6 +45,7 @@ public class ComprobarZona extends FragmentActivity implements OnMapReadyCallbac
         user = (Usuario) getIntent().getExtras().getSerializable("user");
         binding = ActivityComprobarZonaBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        comprobarZona = findViewById(R.id.comprobarZona);
         comprobarZona.setOnClickListener(view -> {
             getLastLocation();
         });
