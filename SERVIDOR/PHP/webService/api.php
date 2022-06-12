@@ -672,7 +672,7 @@ function hacerPedido($datos){
         $pedido->setEstado($dPedido->estado);
         $pedido->setId_usuario($dPedido->id_usuario);
         $pedido->setId_negocio($dPedido->id_negocio);
-        $pedido->setFecha_hora((new DateTime(now()))->format('Y-m-d H:i:s'));
+        $pedido->setFecha_hora((new DateTime())->format('Y-m-d H:i:s'));
         $pedido->setTotal($dPedido->total);
         $pedido->setTransporte($dPedido->transporte);
         if ($pedido->agregar()) {
