@@ -25,8 +25,6 @@ if (empty($_POST["DATA"])) {
         case 'obtener_usuario_por_su_id';
             obtenerUsuarioPorSuId(json_decode($peticion->datos));
             break;
-               
-
         case 'nuevo_usuario';
             nuevoUsuario(json_decode($peticion->datos));
             break;
