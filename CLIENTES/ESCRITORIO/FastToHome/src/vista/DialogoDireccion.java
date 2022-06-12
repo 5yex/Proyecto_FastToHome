@@ -249,7 +249,7 @@ public class DialogoDireccion extends javax.swing.JDialog implements Constantes{
             String coordenadas = tfCoordenadas.getText();
             
             if(coordenadas.length() > 0 && !validaciones.validar(coordenadas, PATRON_COORDENADAS)){
-                throw new IOException("Ejempo de patrón : 32.2424,-4.23234");
+                throw new IOException("Ejempo de patrón de contraseña: 32.2424,-4.23234");
             }
             
             if (calle.length() == 0 || ciudad.length() == 0 || num <= 0 || (cp <= 0 && cp >= 99999)) {
