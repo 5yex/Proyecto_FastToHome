@@ -101,6 +101,7 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
         } else {
             pedido.setTransporte("repartidor");
         }
+        pararUbicacion=true;
         Intent i = new Intent(this, PantallaDeNegocios.class);
         i.putExtra("user", user);
         i.putExtra("pedido", pedido);
@@ -139,11 +140,10 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
         } else {
             LatLng actual = new LatLng(location.getLatitude(), location.getLongitude());
             mMap.addMarker(marker.position(actual));
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(actual, 14F));
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(actual, 14F));
             Handler handler = new Handler();
             //Hilo para actualizar recursivamente
             comprobarServicio(actual);
-
             if (!pararUbicacion) {
                 final Runnable r = new Runnable() {
                     public void run() {
