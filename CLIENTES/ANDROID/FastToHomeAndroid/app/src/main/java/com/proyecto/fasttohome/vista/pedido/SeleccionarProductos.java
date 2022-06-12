@@ -1,7 +1,6 @@
 package com.proyecto.fasttohome.vista.pedido;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -12,7 +11,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -20,15 +18,12 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.databinding.ActivitySeleccionarProductosBinding;
-import com.proyecto.fasttohome.modelo.Cesta;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.modelo.Peticion;
@@ -42,9 +37,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class SeleccionarProductos extends AppCompatActivity {
@@ -138,7 +131,10 @@ public class SeleccionarProductos extends AppCompatActivity {
                 Toast.makeText(SeleccionarProductos.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
                 finish();
             }
-        }, this::onErrorResponse) {
+        }, error -> {
+            Toast.makeText(SeleccionarProductos.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
+            finish();
+        }) {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
@@ -147,11 +143,6 @@ public class SeleccionarProductos extends AppCompatActivity {
             }
         };
         queue.add(request);
-    }
-
-    private void onErrorResponse(VolleyError error) {
-        Toast.makeText(SeleccionarProductos.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
-        finish();
     }
 
     @Override

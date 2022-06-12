@@ -1,6 +1,5 @@
 package com.proyecto.fasttohome.vista.pedido;
 
-import static com.proyecto.fasttohome.util.Texto.genString;
 import static com.proyecto.fasttohome.util.Texto.leftPad;
 
 import android.content.Intent;
@@ -16,6 +15,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.wallet.AutoResolveHelper;
@@ -26,6 +30,7 @@ import com.proyecto.fasttohome.databinding.ActivityFinalizarPedidoBinding;
 
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Pedido;
+import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Producto;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.util.CheckoutViewModel;
@@ -35,9 +40,9 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 public class FinalizarPedido extends AppCompatActivity {
 
@@ -59,7 +64,6 @@ public class FinalizarPedido extends AppCompatActivity {
 
     private int centimos;
 
-
     /**
      * Initialize the Google Pay API on creation of the activity
      *
@@ -79,6 +83,7 @@ public class FinalizarPedido extends AppCompatActivity {
         model = new ViewModelProvider(this).get(CheckoutViewModel.class);
         model.canUseGooglePay.observe(this, this::setGooglePayAvailable);
     }
+
     private void initializeUi() {
 
         // Use view binding to access the UI elements
@@ -94,6 +99,7 @@ public class FinalizarPedido extends AppCompatActivity {
         actualizarResumen();
 
     }
+
     private void actualizarResumen() {
         ArrayList<String> lista = new ArrayList<>();
         double precioTotal = 0;
@@ -101,15 +107,16 @@ public class FinalizarPedido extends AppCompatActivity {
         for (Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
             Producto producto = productos.get(entry.getKey());
             precioTotal = precioTotal + (producto.getPrecio() * entry.getValue());
-            lista.add(leftPad("€"+producto.getPrecio(),5)+leftPad("  Uds: "+ entry.getValue(),12)+"  "+producto.getNombre());
+            lista.add(leftPad("€" + producto.getPrecio(), 5) + leftPad("  Uds: " + entry.getValue(), 12) + "  " + producto.getNombre());
             indice++;
         }
         total.setText(String.valueOf(precioTotal + " Euros"));
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,lista);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista);
         listaProductos = findViewById(R.id.list);
         listaProductos.setAdapter(adapter);
-        centimos = (int)(precioTotal*100);
+        centimos = (int) (precioTotal * 100);
     }
+
     private void finalizarPedido() {
 
     }
@@ -139,10 +146,8 @@ public class FinalizarPedido extends AppCompatActivity {
 
         // The price provided to the API should include taxes and shipping.
         // This price is not displayed to the user.
-        long dummyPriceCents = centimos;
-        long shippingCostCents = 0;
-        long totalPriceCents = dummyPriceCents + shippingCostCents;
-        final Task<PaymentData> task = model.getLoadPaymentDataTask(totalPriceCents);
+
+        final Task<PaymentData> task = model.getLoadPaymentDataTask(centimos);
 
         // Shows the payment sheet and forwards the result to the onActivityResult method.
         AutoResolveHelper.resolveTask(task, this, LOAD_PAYMENT_DATA_REQUEST_CODE);
@@ -237,4 +242,37 @@ public class FinalizarPedido extends AppCompatActivity {
 
         Log.e("loadPaymentData failed", errorString);
     }
+
+    private void pedidoAfterPay() {
+
+        productos = new HashMap<>();
+        String url = getString(R.string.apiUrl);
+        RequestQueue queue = Volley.newRequestQueue(FinalizarPedido.this);
+        StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
+            System.out.println(response);
+            try {
+                JSONObject resp = new JSONObject(response);
+                if ((resp.getBoolean("error")) == true) {
+                    throw new VolleyError(resp.getString("datos"));
+                } else {
+
+                }
+            } catch (JSONException | VolleyError e) {
+                Toast.makeText(FinalizarPedido.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        }, volleyError -> {
+            Toast.makeText(FinalizarPedido.this, "ERROR DE CONEXIÓN = " + volleyError, Toast.LENGTH_SHORT).show();
+            finish();
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("DATA", new Peticion("realizar_pedido", negocio.getJSON()).getJSON());
+                return params;
+            }
+        };
+        queue.add(request);
+    }
+
 }
