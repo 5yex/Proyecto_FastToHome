@@ -79,7 +79,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
                         }
                         negocios.add(negocio);
                     }
-                    adaptorNegocio = new RecyclerViewAdaptorNegocio(negocios, usuario,pedido,direccion);
+                    adaptorNegocio = new RecyclerViewAdaptorNegocio(negocios, usuario,pedido);
                     recyclerViewNegocio.setAdapter(adaptorNegocio);
                 }
             } catch (JSONException | VolleyError e) {

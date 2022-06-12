@@ -79,10 +79,11 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Negocio negocioActual = listaNegocios.get(position);
         holder.nombre.setText(negocioActual.getNombre());
-        //holder.descripcion.setText(listaNegocios.get(position).getDescripcion());
         holder.usuario = usuario;
-        Picasso.get().load(negocioActual.getUrl_imagen()).into(holder.image);
+        holder.pedido = pedido;
         holder.negocio = negocioActual;
+        Picasso.get().load(negocioActual.getUrl_imagen()).into(holder.image);
+
         //holder.categoria.setText(listaNegocios.get(position).getId_categoria());
         holder.info.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(holder.contexto);
