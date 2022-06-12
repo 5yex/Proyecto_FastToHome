@@ -53,6 +53,7 @@ public interface Constantes {
     final public String PATRON_FECHA = "\\d{4}\\-(0?ERR[1-9]|1[012])\\-(0?[012][0-9]|3[01])";
     final public String PATRON_EMAIL = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
     final public String PATRON_TELEFONO = "(\\+34|0034|34)?[ -]*(6|7|9)[ -]*([0-9][ -]*){8}";
+    final public String PATRON_COORDENADAS = "^(-?\\d+(.\\d+)?),\\s*(-?\\d+(.\\d+)?)$";
     
     
     //VARIABLES FIJAS (CONSTANTES)
