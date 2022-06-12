@@ -120,12 +120,6 @@ public class FinalizarPedido extends AppCompatActivity {
         centimos = (int) (precioTotal * 100);
         pedido.setTotal(precioTotal);
     }
-
-    private void finalizarPedido() {
-
-    }
-
-
     /**
      * If isReadyToPay returned {@code true}, show the button and hide the "checking" text.
      * Otherwise, notify the user that Google Pay is not available. Please adjust to fit in with
