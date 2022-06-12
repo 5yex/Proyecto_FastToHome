@@ -295,7 +295,7 @@ public class PanelPedido extends javax.swing.JPanel {
             Producto producto = new Producto();
             producto.setId_producto(elementoCesta.getId_producto());
             producto = ProductoDao.obtenerProductoPorId(producto);
-            listaModeloCesta.addElement("Producto: " + producto.getNombre()+ "Cantidad: " + elementoCesta.getCantidad());
+            listaModeloCesta.addElement(producto.getNombre()+ ", " + elementoCesta.getCantidad() + " unidades");
         }
         
         this.listaProductosDeCesta.setModel(listaModeloCesta);
