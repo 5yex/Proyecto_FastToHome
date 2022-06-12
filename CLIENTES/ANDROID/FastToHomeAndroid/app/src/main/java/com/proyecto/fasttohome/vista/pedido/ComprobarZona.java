@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentActivity;
 import android.Manifest;
 import android.os.Bundle;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -39,6 +40,24 @@ public class ComprobarZona extends FragmentActivity implements OnMapReadyCallbac
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney").draggable(false));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,20));
+    }
+
+    private void getLastLocation() {
+        FusedLocationProviderClient fusedLocationClient;
+        fusedLocationClient =
+                LocationServices.getFusedLocationProviderClient(this);
+        if (ActivityCompat.checkSelfPermission(this, ACCESS_FINE_LOCATION)
+                == PERMISSION_GRANTED ||
+                ActivityCompat.checkSelfPermission(this, ACCESS_COARSE_LOCATION)
+                        == PERMISSION_GRANTED) {
+            fusedLocationClient.getLastLocation()
+                    .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                        @Override
+                        public void onSuccess(Location location) {
+                            updateTextView(location);
+                        }
+                    });
+        }
     }
 
 
