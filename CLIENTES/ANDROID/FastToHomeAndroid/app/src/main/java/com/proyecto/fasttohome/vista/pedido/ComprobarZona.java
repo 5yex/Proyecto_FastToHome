@@ -13,6 +13,7 @@ import android.Manifest;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -36,7 +37,7 @@ public class ComprobarZona extends FragmentActivity implements OnMapReadyCallbac
     private GoogleMap mMap;
     private ActivityComprobarZonaBinding binding;
     Usuario user;
-    But
+    Button
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
