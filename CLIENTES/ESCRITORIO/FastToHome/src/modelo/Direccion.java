@@ -272,7 +272,7 @@ public class Direccion {
      * 
      * @return la cadena con las coordenadas de la dirección
      */
-    public int getCoordenadas() {
+    public String getCoordenadas() {
         return coordenadas;
     }
     
@@ -281,7 +281,7 @@ public class Direccion {
      * 
      * @param coordenadas una cadena con las coordenadas de la dirección
      */
-    public void setCoordenadas(int coordenadas) {
+    public void setCoordenadas(String coordenadas) {
         this.coordenadas = coordenadas;
     }
     
