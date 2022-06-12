@@ -37,6 +37,7 @@ public class ComprobarZona extends FragmentActivity implements OnMapReadyCallbac
     private ActivityComprobarZonaBinding binding;
     Usuario user;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +53,7 @@ public class ComprobarZona extends FragmentActivity implements OnMapReadyCallbac
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney, 2.0F));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney, 12.0F));
     }
 
     private void getLastLocation(View view) {
