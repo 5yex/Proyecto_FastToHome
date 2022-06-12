@@ -901,11 +901,12 @@ function obtenerCestaPedido($datos){
         $cesta = new Cesta();
         $cesta->setId_pedido($id_pedido);
         
-        /*$respuesta = $cesta->
+        $respuesta = $cesta->obtenerCestaPedido();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
-            mandarRespuesta(true, 'Error en obtener la cesta del pedido');*/
+            mandarRespuesta(true, 'Error en obtener la cesta del pedido');
+        }
         
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
