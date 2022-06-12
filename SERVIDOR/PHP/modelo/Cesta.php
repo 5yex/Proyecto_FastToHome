@@ -54,8 +54,8 @@ class Cesta extends Conexion{
         $id_producto = $this->getId_producto();
         
         $sentencia->bindParam(":cant", $cantidad);
-        $sentencia->bindParam(":ped", $this->id_pedido);
-        $sentencia->bindParam(":pro", $this->id_producto);
+        $sentencia->bindParam(":ped", $id_pedido);
+        $sentencia->bindParam(":pro", $id_producto);
         
         $resultado = $sentencia->execute();
 
