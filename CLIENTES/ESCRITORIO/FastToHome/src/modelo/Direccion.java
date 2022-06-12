@@ -82,7 +82,7 @@ public class Direccion {
      * @param codigo_postal Codigo postal
      * @param coordenadas Cadena con las coordenadas de la dirección
      */
-    public Direccion(int id_direccion, String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenadas) {
+    public Direccion(int id_direccion, String calle, int numero, String ciudad, String otros, int codigo_postal, String coordenadas) {
         this.id_direccion = id_direccion;
         this.calle = calle;
         this.numero = numero;
@@ -102,7 +102,7 @@ public class Direccion {
      * @param codigo_postal Codigo postal
      * @param coordenadas Cadena con las coordenadas de la dirección
      */
-    public Direccion(String calle, int numero, String ciudad, String otros, int codigo_postal, int coordenadas) {
+    public Direccion(String calle, int numero, String ciudad, String otros, int codigo_postal, String coordenadas) {
         this.calle = calle;
         this.numero = numero;
         this.ciudad = ciudad;
