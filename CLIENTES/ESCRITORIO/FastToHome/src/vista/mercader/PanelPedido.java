@@ -285,7 +285,8 @@ public class PanelPedido extends javax.swing.JPanel {
     
     public void cargarContenidoDeCesta(){
         
-        ArrayList<Cesta> cesta = CestaDao.obtenerContenidoCestaPedido(pedido);
+        ArrayList<Cesta> cesta = new ArrayList<>();
+        cesta = CestaDao.obtenerContenidoCestaPedido(pedido);
         DefaultListModel listaModeloCesta = new DefaultListModel();
         System.out.println(cesta.toString());
         
