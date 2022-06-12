@@ -8,6 +8,7 @@ import com.formdev.flatlaf.ui.FlatButtonBorder;
 import controlador.CestaDao;
 import controlador.DireccionDao;
 import controlador.PedidoDao;
+import controlador.ProductoDao;
 import controlador.UsuarioDao;
 import java.awt.Desktop;
 import java.awt.event.ActionListener;
@@ -289,6 +290,7 @@ public class PanelPedido extends javax.swing.JPanel {
         
         for (Cesta elementoCesta : cesta) {
             Producto producto = new Producto(elementoCesta.getId_producto());
+            producto = ProductoDao.obtenerProductoPorId(producto);
             listaModeloCesta.addElement("Producto: " + producto.getNombre()+ "Cantidad: " + elementoCesta.getCantidad());
         }
         
