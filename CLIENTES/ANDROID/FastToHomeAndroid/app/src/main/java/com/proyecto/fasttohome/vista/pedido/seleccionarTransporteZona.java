@@ -78,7 +78,6 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
         mapView.getMapAsync(seleccionarTransporteZona.this);
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         user = (Usuario) getIntent().getExtras().getSerializable("user");
-
         View.OnClickListener listener = view -> {
             comenzarPedido(view);
         };
@@ -89,6 +88,7 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
 
 
     private void comenzarPedido(View view) {
+        System.out.println("comenzar pedido");
         pedido = new Pedido();
         pedido.setEstado("pendiente_pago");
         if(view.getId() == R.id.btTransporteDron){
