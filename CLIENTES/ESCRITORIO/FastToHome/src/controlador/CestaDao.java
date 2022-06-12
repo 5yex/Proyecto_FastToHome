@@ -43,7 +43,7 @@ public class CestaDao {
                 cesta.setRol(cestaJson.get("Rol").getAsString());
                 cesta.setTlf(cestaJson.get("tlf").getAsString());
 
-                listaUsuarios.add(cesta);
+                contenidoCesta.add(cesta);
 
             }
         }
