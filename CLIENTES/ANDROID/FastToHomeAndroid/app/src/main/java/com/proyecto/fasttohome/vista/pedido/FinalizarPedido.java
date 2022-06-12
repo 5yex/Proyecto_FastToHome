@@ -25,6 +25,7 @@ import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.databinding.ActivityFinalizarPedidoBinding;
 
 import com.proyecto.fasttohome.modelo.Negocio;
+import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.modelo.Producto;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.util.CheckoutViewModel;
@@ -47,12 +48,12 @@ public class FinalizarPedido extends AppCompatActivity {
 
     private ActivityFinalizarPedidoBinding layoutBinding;
     private View googlePayButton;
-
+    
     private HashMap<Integer, Integer> productosSeleccionados;
     private HashMap<Integer, Producto> productos;
     private Usuario usuario;
     private Negocio negocio;
-
+    private Pedido pedido;
     private ListView listaProductos;
     private TextView total;
 
