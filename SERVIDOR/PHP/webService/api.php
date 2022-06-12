@@ -657,14 +657,25 @@ function hacerPedido($datos){
     require_once '../modelo/Pedido.php';
     
     try{
+        
+        print_r($datos);
+        
         $pedido = new Pedido();
         $pedido->setId_usuario($id_usuario);
         $pedido->setId_negocio($id_negocio);
         $pedido->setFecha_hora($fecha_hora);
         $pedido->setTotal($total);
         $pedido->setTransporte($transporte);
-
         if ($pedido->agregar()) {
+            
+            
+            
+            
+            
+            
+            
+            
+            
             mandarRespuesta(false, 'Se realizó un pedido con exito');
         } else {
             mandarRespuesta(true, 'No se pudo procesar el pedido');
