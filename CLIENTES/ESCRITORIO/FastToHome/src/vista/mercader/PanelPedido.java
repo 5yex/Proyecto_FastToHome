@@ -206,7 +206,11 @@ public class PanelPedido extends javax.swing.JPanel {
         Usuario usuario_pedido = UsuarioDao.obtenerUsuarioPorSuId(new Usuario(pedido.getId_usuario()));
         Direccion direccion = DireccionDao.obtenerDireccionUsuario(usuario_pedido);
         
-        String urlDireccion = "https://www.google.es/maps/@"+direccion.getCoordenadas()+",20z";
+       
+       // String urlDireccion = "https://www.google.es/maps/@"+direccion.getCoordenadas()+",20z";
+        
+          String urlDireccion = " http://maps.google.com/maps?q="+direccion.getCoordenadas()+"&ll="+direccion.getCoordenadas()+"&z=20z";
+
             try { 
                 Desktop.getDesktop().browse(new URL(urlDireccion).toURI()); 
             } catch (IOException | URISyntaxException e) { 
