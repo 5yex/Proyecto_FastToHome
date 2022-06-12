@@ -276,6 +276,8 @@ public class PanelPedido extends javax.swing.JPanel {
         
     }
     
-    public void obtenerContenidoDeCesta(){
+    public void cargarContenidoDeCesta(){
+        
+        
     }
 }
