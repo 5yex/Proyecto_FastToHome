@@ -80,7 +80,7 @@ public class ProductoDao {
     }
     
     public static Producto obtenerProductoPorId(Producto product){
-        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_productos_negocio", product.getJSON()));
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_datos_producto", product.getJSON()));
         
         JsonObject productoJson = jsonArray.get(i).getAsJsonObject();
                 Producto producto = new Producto();
