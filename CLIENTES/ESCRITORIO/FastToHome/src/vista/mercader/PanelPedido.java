@@ -290,7 +290,7 @@ public class PanelPedido extends javax.swing.JPanel {
         cesta = CestaDao.obtenerContenidoCestaPedido(pedido);
         DefaultListModel listaModeloCesta = new DefaultListModel();
         listaModeloCesta.removeAllElements();
-        this.listaProductosDeCesta = new JList(listaModeloCesta);
+        
         
         for (Cesta elementoCesta : cesta) {
             Producto producto = new Producto();
@@ -298,6 +298,8 @@ public class PanelPedido extends javax.swing.JPanel {
             producto = ProductoDao.obtenerProductoPorId(producto);
             listaModeloCesta.addElement(new JLabel("Producto: " + producto.getNombre()+ "Cantidad: " + elementoCesta.getCantidad()));
         }
+        
+        this.listaProductosDeCesta = new JList(listaModeloCesta);
         
         
         
