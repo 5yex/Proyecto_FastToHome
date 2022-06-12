@@ -438,8 +438,8 @@ function obtenerDatosProducto($datos){
     
     try {
         $producto = new Producto();
-        $producto->setId_negocio($id);
-        $respuesta = $producto->productosDeUnNegocio();       
+        $producto->setId_producto($id_producto);
+        $respuesta = $producto->;       
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
