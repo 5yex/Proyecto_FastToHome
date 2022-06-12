@@ -31,7 +31,6 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
         private Usuario usuario;
         private Negocio negocio;
         private Pedido pedido;
-        private
         private Button pedir, info;
         private Context contexto;
 
@@ -52,7 +51,6 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
                 intent.putExtra("user", usuario);
                 intent.putExtra("negocio", negocio);
                 intent.putExtra("pedido", pedido);
-                intent.putExtra("direccion", direccion);
                 contexto.startActivity(intent);
                 //System.out.println("Boton Pulsado por usuario: "+usuario.getNombre() + " Nombre de negocio: "+ nombre.getText().toString());
             });
@@ -61,10 +59,11 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
 
     public List<Negocio> listaNegocios;
     Usuario usuario;
-
-    public RecyclerViewAdaptorNegocio(List<Negocio> listaNegocios, Usuario usuario, Pedido pedido, Direccion direccion) {
+    Pedido pedido;
+    public RecyclerViewAdaptorNegocio(List<Negocio> listaNegocios, Usuario usuario, Pedido pedido) {
         this.listaNegocios = listaNegocios;
         this.usuario = usuario;
+        this.pedido = pedido;
     }
 
     @NonNull
