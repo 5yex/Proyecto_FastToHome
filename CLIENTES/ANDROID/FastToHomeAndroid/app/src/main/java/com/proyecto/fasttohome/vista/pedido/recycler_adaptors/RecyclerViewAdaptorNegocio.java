@@ -14,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.modelo.Direccion;
+import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.vista.pedido.SeleccionarProductos;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Usuario;
@@ -28,6 +30,8 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
         private ImageView image;
         private Usuario usuario;
         private Negocio negocio;
+        private Pedido pedido;
+        private
         private Button pedir, info;
         private Context contexto;
 
@@ -47,6 +51,8 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
                 intent.putExtra("pedido",pedido);*/
                 intent.putExtra("user", usuario);
                 intent.putExtra("negocio", negocio);
+                intent.putExtra("pedido", pedido);
+                intent.putExtra("direccion", direccion);
                 contexto.startActivity(intent);
                 //System.out.println("Boton Pulsado por usuario: "+usuario.getNombre() + " Nombre de negocio: "+ nombre.getText().toString());
             });
@@ -56,7 +62,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
     public List<Negocio> listaNegocios;
     Usuario usuario;
 
-    public RecyclerViewAdaptorNegocio(List<Negocio> listaNegocios, Usuario usuario) {
+    public RecyclerViewAdaptorNegocio(List<Negocio> listaNegocios, Usuario usuario, Pedido pedido, Direccion direccion) {
         this.listaNegocios = listaNegocios;
         this.usuario = usuario;
     }

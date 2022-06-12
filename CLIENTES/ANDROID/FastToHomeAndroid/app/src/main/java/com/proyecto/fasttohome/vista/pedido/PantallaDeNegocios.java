@@ -47,7 +47,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
         usuario = (Usuario) getIntent().getExtras().getSerializable("user");
         direccion = (Direccion) getIntent().getExtras().getSerializable("direccion");
         pedido = (Pedido) getIntent().getExtras().getSerializable("pedido");
-        
+
         recyclerViewNegocio = (RecyclerView) findViewById(R.id.recyclerNegocios);
         recyclerViewNegocio.setLayoutManager(new LinearLayoutManager(this));
 
@@ -79,7 +79,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
                         }
                         negocios.add(negocio);
                     }
-                    adaptorNegocio = new RecyclerViewAdaptorNegocio(negocios, usuario);
+                    adaptorNegocio = new RecyclerViewAdaptorNegocio(negocios, usuario,pedido,direccion);
                     recyclerViewNegocio.setAdapter(adaptorNegocio);
                 }
             } catch (JSONException | VolleyError e) {
