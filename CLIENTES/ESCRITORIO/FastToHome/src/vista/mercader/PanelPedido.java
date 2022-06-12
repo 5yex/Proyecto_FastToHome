@@ -270,6 +270,9 @@ public class PanelPedido extends javax.swing.JPanel {
         this.setBorder(new FlatButtonBorder());
     }
     
+    /**
+     * Carga 
+     */
     public void cargaDireccionPedido(){
         Usuario usuario_pedido = UsuarioDao.obtenerUsuarioPorSuId(new Usuario(pedido.getId_usuario()));
         Direccion direccion = DireccionDao.obtenerDireccionUsuario(usuario_pedido);
