@@ -105,11 +105,6 @@ public class PanelPedido extends javax.swing.JPanel {
         tituloEstadoPedido.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         tituloEstadoPedido.setText("ESTADO PEDIDO:");
 
-        listaProductosDeCesta.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane1.setViewportView(listaProductosDeCesta);
 
         tituloIdPedido.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -289,6 +284,7 @@ public class PanelPedido extends javax.swing.JPanel {
         ArrayList<Cesta> cesta;
         cesta = CestaDao.obtenerContenidoCestaPedido(pedido);
         DefaultListModel listaModeloCesta = new DefaultListModel();
+        listaModeloCesta.setSize(cesta.size());
         listaModeloCesta.removeAllElements();
         
         
