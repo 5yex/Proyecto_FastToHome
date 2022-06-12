@@ -105,7 +105,7 @@ class Producto extends Conexion{
     }
     
     public function productosDeUnNegocio() {
-        $sql = "SELECT p.id, p.id_negocio,p.Nombre,p.Precio,p.Descripcion,p.Stock,p.imagenes_id,i.url FROM producto p INNER JOIN imagenes i on p.imagenes_id = i.id WHERE id_negocio = 1 order by Nombre;";
+        $sql = "SELECT p.id, p.id_negocio,p.Nombre,p.Precio,p.Descripcion,p.Stock,p.imagenes_id,i.url FROM producto p INNER JOIN imagenes i on p.imagenes_id = i.id WHERE id_negocio = :id_neg order by Nombre;";
         
         $sentencia = $this->dblink->prepare($sql);
 
