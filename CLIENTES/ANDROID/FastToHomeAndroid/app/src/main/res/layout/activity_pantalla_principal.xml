@@ -12,7 +12,7 @@
         android:layout_width="355dp"
         android:layout_height="55dp"
         android:layout_marginBottom="4dp"
-        android:onClick="pasarPantallaNegocios"
+        android:onClick="pasarPantallaUbicacion"
         android:text="HACER PEDIDO"
         android:textSize="20sp"
         android:textStyle="bold|italic"
