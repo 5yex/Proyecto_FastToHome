@@ -277,8 +277,9 @@ public class Direccion {
     }
     
     /**
+     * Establece las coordenadas de la dirección
      * 
-     * @param coordenadas 
+     * @param coordenadas una cadena con las coordenadas de la dirección
      */
     public void setCoordenadas(int coordenadas) {
         this.coordenadas = coordenadas;
