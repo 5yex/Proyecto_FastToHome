@@ -5,10 +5,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".vista.pedido.ComprobarZona">
+    android:layout_height="match_parent">
 
     <androidx.fragment.app.FragmentContainerView
+
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="395dp"
@@ -16,7 +16,9 @@
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".vista.pedido.ComprobarZona">
+
     </androidx.fragment.app.FragmentContainerView>
     <Button
         android:id="@+id/comprobarZona"
