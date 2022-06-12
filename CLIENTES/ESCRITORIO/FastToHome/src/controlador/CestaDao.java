@@ -39,7 +39,7 @@ public class CestaDao {
             }
         }
 
-        return listaUsuarios;
+        return contenidoCesta;
 
     }
     }
