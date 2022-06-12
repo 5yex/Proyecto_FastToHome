@@ -9,6 +9,8 @@ import controlador.DireccionDao;
 import controlador.PedidoDao;
 import java.awt.Desktop;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import javax.annotation.processing.SupportedSourceVersion;
 import javax.lang.model.SourceVersion;
@@ -204,7 +206,7 @@ public class PanelPedido extends javax.swing.JPanel {
         String urlDireccion = "https://www.google.es/maps/@"+direccion.getCoordenadas()+"z";
             try { 
                 Desktop.getDesktop().browse(new URL(urlDireccion).toURI()); 
-            } catch (Exception e) { 
+            } catch (IOException | URISyntaxException e) { 
                 e.printStackTrace(); 
             }
     }//GEN-LAST:event_verMapaActionPerformed
