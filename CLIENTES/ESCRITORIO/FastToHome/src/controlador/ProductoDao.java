@@ -41,9 +41,10 @@ public class ProductoDao {
      * @return Una lista con los productos de un negocio
      */
     public static ArrayList<Producto> seleccionProductosNegocio(Negocio negocio) {
+        System.err.println("negocio.getJSON()");
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_productos_negocio", negocio.getJSON()));
         ArrayList<Producto> listaProductos = new ArrayList<>();
-        System.out.println("controlador.ProductoDao.selecciónProductosNegocio()     NUMERO PRODUCTOS: " + listaProductos.size());
+        System.out.println("controlador.ProductoDao.selecciónProductosNegocio()    NUMERO PRODUCTOS: " + listaProductos.size());
         if (jsonArray != null) {
             for (int i = 0; i < jsonArray.size(); i++) {
                 JsonObject productoJson = jsonArray.get(i).getAsJsonObject();
