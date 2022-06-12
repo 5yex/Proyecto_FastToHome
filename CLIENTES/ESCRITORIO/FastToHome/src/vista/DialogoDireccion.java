@@ -249,7 +249,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
 
             if (calle.length() == 0 || ciudad.length() == 0 || num <= 0 || (cp <= 0 && cp >= 99999)) {
                 throw new IOException("Solo puedes dejar sin rellenar las coordenadas");
-            } else if (){
+            } else{
                 direccion.setCalle(calle);
                 direccion.setCiudad(ciudad);
                 direccion.setCodigo_postal(cp);
