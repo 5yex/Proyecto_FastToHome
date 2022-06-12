@@ -5,6 +5,7 @@
 package controlador;
 
 import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import java.util.ArrayList;
 import modelo.Cesta;
 import modelo.Pedido;
@@ -25,7 +26,7 @@ public class CestaDao {
 
         if (jsonArray != null) {
             for (int i = 0; i < jsonArray.size(); i++) {
-                Usuario cesta = new Usuario();
+                Cesta cesta = new Cesta();
 
                 JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
 
