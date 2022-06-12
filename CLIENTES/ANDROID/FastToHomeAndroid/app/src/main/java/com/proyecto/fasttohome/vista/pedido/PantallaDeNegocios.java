@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
+import com.proyecto.fasttohome.vista.PantallaPrincipal;
 import com.proyecto.fasttohome.vista.pedido.recycler_adaptors.RecyclerViewAdaptorNegocio;
 import com.squareup.picasso.Picasso;
 
@@ -144,6 +146,11 @@ public class PantallaDeNegocios extends AppCompatActivity {
 
     private void onErrorResponse(VolleyError error) {
         Toast.makeText(PantallaDeNegocios.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
-        finish();
+        irPrincipal();
     }
+    public void irPrincipal() {
+        Intent i = new Intent(this, PantallaPrincipal.class );
+        i.putExtra("user", usuario);
+        startActivity(i);
+    };
 }
