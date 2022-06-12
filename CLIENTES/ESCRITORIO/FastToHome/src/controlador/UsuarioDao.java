@@ -104,6 +104,37 @@ public class UsuarioDao {
         //System.out.println("controlador.UsuarioDao.obtenerDatosUsuario()   " + user.toString());
         return user;
     }
+    
+    /**
+     * Realiza la consulta para obtener los datos de un usario de la base de
+     * datos
+     *
+     * @param user objeto de tipo Usuario del que queremos obtener sus datos
+     * @return objeto de tipo Usuario con los datos del usuario
+     */
+    public static Usuario obtenerUsuarioPorSuId(Usuario user) {
+        //generamos un json con los datos que vamos a pasarle al php, en este caso solo el usuario
+        String json = user.getJSON();
+        //hacemos una petición con el comando que deberá realizar el php, y los datos en json    
+        Peticion peticion = new Peticion("getUsuario", json);
+        //mandamos la peticion como consulta selección para obtener valores
+        JsonObject usuarioJson = gestion.consultaSeleccionUnico(peticion);
+        //de la respuesta, obtenemos el id    
+        user.setDni(usuarioJson.get("Dni").getAsString());
+        user.setEmail(usuarioJson.get("Email").getAsString());
+        user.setId(usuarioJson.get("id").getAsInt());
+        if (!usuarioJson.get("direccion_id").isJsonNull()) {
+            user.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
+        }
+        user.setNombre(usuarioJson.get("Nombre").getAsString());
+        user.setApellidos(usuarioJson.get("apellidos").getAsString());
+        user.setPassword(usuarioJson.get("password").getAsString());
+        user.setRol(usuarioJson.get("Rol").getAsString());
+        user.setTlf(usuarioJson.get("tlf").getAsString());
+
+        //System.out.println("controlador.UsuarioDao.obtenerDatosUsuario()   " + user.toString());
+        return user;
+    }
 
     /**
      * Actualiza el usuario en la base de datos y comprueba si se ha actualizado
