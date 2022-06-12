@@ -119,8 +119,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         }
 
         if (precioTotal > 0) {
-            System.out.println("FKSDFSD");
-            pedir.setText("PEDIR" + productosSeleccionados.size() + " PRODUCTOS, " + precioTotal + "€");
+            pedir.setText("ESTAS PIDIENDO " + productosSeleccionados.size() + " PRODUCTOS, POR" + precioTotal + "€");
         } else {
             pedir.setText("PEDIR");
         }
