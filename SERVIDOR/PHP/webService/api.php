@@ -438,7 +438,7 @@ function obtenerDatosProducto($datos){
     
     try {
         $producto = new Producto();
-        $producto->setId_producto($id_producto);
+        $producto->setId_producto($datos->id_producto);
         $respuesta = $producto->obtenerDatosProducto();       
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
