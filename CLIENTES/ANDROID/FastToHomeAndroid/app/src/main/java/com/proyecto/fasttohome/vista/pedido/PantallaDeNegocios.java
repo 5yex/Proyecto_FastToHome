@@ -13,7 +13,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Negocio;
+import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.vista.pedido.recycler_adaptors.RecyclerViewAdaptorNegocio;
@@ -33,6 +35,9 @@ public class PantallaDeNegocios extends AppCompatActivity {
     private RecyclerView recyclerViewNegocio;
     private RecyclerViewAdaptorNegocio adaptorNegocio;
     private Usuario usuario;
+    private Pedido pedido;
+    private Direccion direccion;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
