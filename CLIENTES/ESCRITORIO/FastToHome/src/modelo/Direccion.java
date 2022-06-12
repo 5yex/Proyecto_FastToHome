@@ -57,7 +57,11 @@ public class Direccion {
      */
     private int codigo_postal;
     
-    
+    /**
+     * Cadena con las coordenadas de la dirección
+     * 
+     * @since 1.0
+     */
     private int coordenadas;
     
     /**
