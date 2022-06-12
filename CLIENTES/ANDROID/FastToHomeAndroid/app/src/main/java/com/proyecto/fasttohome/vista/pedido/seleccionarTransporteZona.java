@@ -2,17 +2,22 @@ package com.proyecto.fasttohome.vista.pedido;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
+import com.google.android.gms.maps.model.LatLng;
 import com.proyecto.fasttohome.R;
 
 public class seleccionarTransporteZona extends AppCompatActivity {
     MapView mapView;
     GoogleMap map;
+    @SuppressLint("MissingPermission")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,13 +27,13 @@ public class seleccionarTransporteZona extends AppCompatActivity {
         mapView.onCreate(savedInstanceState);
 
         // Gets to GoogleMap from the MapView and does initialization stuff
-        map = mapView.getMap();
+        map = mapView.g
         map.getUiSettings().setMyLocationButtonEnabled(false);
         map.setMyLocationEnabled(true);
 
         // Needs to call MapsInitializer before doing any CameraUpdateFactory calls
         try {
-            MapsInitializer.initialize(this.getActivity());
+            MapsInitializer.initialize(seleccionarTransporteZona.this);
         } catch (GooglePlayServicesNotAvailableException e) {
             e.printStackTrace();
         }
