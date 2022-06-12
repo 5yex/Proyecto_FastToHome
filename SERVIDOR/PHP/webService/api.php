@@ -893,3 +893,21 @@ function rellenarCesta($datos){
         mandarRespuesta(true, $ex->getMessage());
     }
 }
+
+function obtenerCestaPedido($datos){
+    require_once '../modelo/Cesta.php';
+    
+    try {
+        $cesta = new Cesta();
+        $cesta->setId_pedido($id_pedido);
+        
+        $respuesta = $cesta->
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error en obtener la cesta del pedido');
+        
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
