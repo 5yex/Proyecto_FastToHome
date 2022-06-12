@@ -162,7 +162,6 @@ class Producto extends Conexion{
       
         $sentencia->bindParam(":id_prod", $id_producto);
         
-        // $sentencia->bindParam(":fot", $this->getFoto() );
         $resultado = $sentencia->execute();
 
         if ($resultado != 1) {
