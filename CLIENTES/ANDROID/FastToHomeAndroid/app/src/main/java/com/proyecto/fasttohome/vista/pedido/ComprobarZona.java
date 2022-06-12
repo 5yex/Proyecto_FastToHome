@@ -23,6 +23,7 @@ import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -54,6 +55,8 @@ public class ComprobarZona extends FragmentActivity implements OnMapReadyCallbac
     }
 
     public void onMapReady(GoogleMap googleMap) {
+        mMap = ((MapFragment) act.getFragmentManager()
+                .findFragmentById(R.id.map)).getMap();
         mMap = googleMap;
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-34, 151);
