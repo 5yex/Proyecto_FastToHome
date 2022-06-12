@@ -23,24 +23,14 @@ public class seleccionarTransporteZona extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccionar_transporte_zona);
 
+
+
+        // Gets the MapView from the XML layout and creates it
         mapView = (MapView) findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
 
-        // Gets to GoogleMap from the MapView and does initialization stuff
-        map = mapView.g
-        map.getUiSettings().setMyLocationButtonEnabled(false);
-        map.setMyLocationEnabled(true);
 
-        // Needs to call MapsInitializer before doing any CameraUpdateFactory calls
-        try {
-            MapsInitializer.initialize(seleccionarTransporteZona.this);
-        } catch (GooglePlayServicesNotAvailableException e) {
-            e.printStackTrace();
-        }
-
-        // Updates the location and zoom of the MapView
-        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(43.1, -87.9), 10);
-        map.animateCamera(cameraUpdate);
+        mapView.getMapAsync();
 
     }
 }
