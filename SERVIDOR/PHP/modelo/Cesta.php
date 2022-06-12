@@ -76,7 +76,7 @@ class Cesta extends Conexion{
         
         $id_pedido = $this->getId_pedido();
         
-        $sentencia->bindParam(":ped", $this->id_pedido);
+        $sentencia->bindParam(":ped", $id_pedido);
         
         $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
