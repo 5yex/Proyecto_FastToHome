@@ -81,11 +81,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
                         }
                         negocios.add(negocio);
                     }
-
-
-
-                    adaptorNegocio = new RecyclerViewAdaptorNegocio(negocios, usuario,pedido);
-                    recyclerViewNegocio.setAdapter(adaptorNegocio);
+                    obtenerCategoriasNegocios();
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaDeNegocios.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
