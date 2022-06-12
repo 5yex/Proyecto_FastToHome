@@ -233,6 +233,8 @@ public class PanelPedido extends javax.swing.JPanel {
     private void mostrarDatos() {
         pasarEstado.addActionListener(actualizarPedido);
         
+        cargaDireccionPedido();
+        
         pedido.toString();
         numPedido.setText(String.valueOf(pedido.getId_pedido()));
         tipoTransporte.setText(pedido.getTransporte());
