@@ -8,6 +8,10 @@
     <string name="buttonSiguientePaso">SIGUIENTE PASO</string>
 
     <string name="titulosRegistro">Registro</string>
+    <string name="transporteDron">DRON</string>
+    <string name="transporteRepartidor">REPARTIDOR</string>
+    <string name="zonas">Zonas del mapa:</string>
+
 
     <string name="userName">Nombre:</string>
     <string name="userDni">Dni:</string>
