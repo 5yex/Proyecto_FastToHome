@@ -319,5 +319,17 @@ class usuario extends conexion {
         //Insertó correctamente
         return TRUE;
     }
+    
+    public function usarioPorSuId(){
+        $sql = "SELECT * FROM usuarios where id = :id";
+
+        $sentencia = $this->dblink->prepare($sql);
+
+        $id = $this->getId();
+        $sentencia->bindParam(":id", $id);
+
+        $sentencia->execute();
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }
 
 }
