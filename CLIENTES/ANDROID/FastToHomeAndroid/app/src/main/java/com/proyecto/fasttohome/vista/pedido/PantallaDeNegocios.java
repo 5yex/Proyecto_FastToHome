@@ -39,6 +39,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
     private Pedido pedido;
     private Direccion direccion;
     private HashMap<Integer, Categoria> categorias;
+    private List<Negocio> negocios;
 
 
     @Override
@@ -57,7 +58,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
     }
 
     public void obtenerNegocios() {
-        List<Negocio> negocios = new ArrayList<Negocio>();
+        negocios = new ArrayList<Negocio>();
         String url = getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(PantallaDeNegocios.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
@@ -100,7 +101,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
 
 
     public void obtenerCategoriasNegocios() {
-        List<Negocio> negocios = new ArrayList<Negocio>();
+        categorias = new HashMap<>();
         String url = getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(PantallaDeNegocios.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
@@ -115,8 +116,8 @@ public class PantallaDeNegocios extends AppCompatActivity {
                         JSONObject job = arrayDeJson.getJSONObject(i);
                         categorias.put(job.getInt("id"),new Categoria(job.getInt("id"),job.getString("Nombre")));
                     }
-                    adaptorNegocio = new RecyclerViewAdaptorNegocio(negocios, usuario,pedido,categorias);
-                    recyclerViewNegocio.setAdapter(adaptorNegocio);
+
+                    rellenarRecyclerView();
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaDeNegocios.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -132,6 +133,12 @@ public class PantallaDeNegocios extends AppCompatActivity {
         };
         queue.add(request);
     }
+
+    private void rellenarRecyclerView() {
+        adaptorNegocio = new RecyclerViewAdaptorNegocio(negocios, usuario,pedido,categorias);
+        recyclerViewNegocio.setAdapter(adaptorNegocio);
+    }
+
     private void onErrorResponse(VolleyError error) {
         Toast.makeText(PantallaDeNegocios.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
         finish();
