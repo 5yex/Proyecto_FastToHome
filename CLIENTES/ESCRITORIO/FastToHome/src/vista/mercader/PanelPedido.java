@@ -272,7 +272,7 @@ public class PanelPedido extends javax.swing.JPanel {
         
         infoDireccion.setEditable(false);
         infoDireccion.setLineWrap(true);
-        infoDireccion.setText("DIRECCÍON USUARIO.\nCalle: " + direccion.getCalle() + 
+        infoDireccion.setText("DIRECCÍON DEL CLIENTE:\nCalle: " + direccion.getCalle() + 
                                                   "\nNúmero: " + direccion.getNumero() + 
                                                    "\nCiudad: " + direccion.getCiudad() +
                                                     "\nCP: " + direccion.getCodigo_postal());
