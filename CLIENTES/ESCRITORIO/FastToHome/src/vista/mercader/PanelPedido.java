@@ -116,6 +116,11 @@ public class PanelPedido extends javax.swing.JPanel {
         verMapa.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         verMapa.setForeground(new java.awt.Color(255, 255, 255));
         verMapa.setLabel("VER MAPA");
+        verMapa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                verMapaActionPerformed(evt);
+            }
+        });
 
         infoDireccion.setColumns(20);
         infoDireccion.setRows(5);
@@ -190,6 +195,10 @@ public class PanelPedido extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_pasarEstadoActionPerformed
 
+    private void verMapaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verMapaActionPerformed
+
+    }//GEN-LAST:event_verMapaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel estadoActualPedido;
@@ -249,6 +258,6 @@ public class PanelPedido extends javax.swing.JPanel {
                                                   "\nNúmero: " + direccion.getNumero() + 
                                                    "\nCiudad: " + direccion.getCiudad() +
                                                     "\nCP: " + direccion.getCodigo_postal());
-    
+        
     }
 }
