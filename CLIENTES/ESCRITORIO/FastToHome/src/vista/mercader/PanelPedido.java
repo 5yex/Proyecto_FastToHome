@@ -294,8 +294,5 @@ public class PanelPedido extends javax.swing.JPanel {
         
         listaProductosDeCesta = new JList<>(listaModeloCesta);
         
-        
-        
-        
     }
 }
