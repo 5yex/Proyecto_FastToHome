@@ -48,7 +48,6 @@ public class PantallaDeNegocios extends AppCompatActivity {
 
     public void obtenerNegocios() {
         List<Negocio> negocios = new ArrayList<Negocio>();
-
         String url = getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(PantallaDeNegocios.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
@@ -59,7 +58,6 @@ public class PantallaDeNegocios extends AppCompatActivity {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
                     JSONArray arrayDeJson = resp.getJSONArray("datos");
-
                     for (int i = 0; i < arrayDeJson.length(); i++) {
                         JSONObject objetoNegocioJSon = arrayDeJson.getJSONObject(i);
                         Negocio negocio = new Negocio();
