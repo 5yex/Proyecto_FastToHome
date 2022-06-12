@@ -70,7 +70,7 @@ class Cesta extends Conexion{
     }
     
     public function obtenerCestaPedido(){
-        $sql = "SELECT * FROMN cesta WHERE id_pedido = :id_ped";
+        $sql = "SELECT * FROM cesta WHERE id_pedido = :id_ped";
         
         $sentencia = $this->dblink->prepare($sql);
         
