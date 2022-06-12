@@ -111,7 +111,8 @@ class Negocio extends Conexion {
         
         $sentencia = $this->dblink->prepare($sql);
         
-        $sentencia->execute();            
+        $sentencia->execute();       
+        
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
     
