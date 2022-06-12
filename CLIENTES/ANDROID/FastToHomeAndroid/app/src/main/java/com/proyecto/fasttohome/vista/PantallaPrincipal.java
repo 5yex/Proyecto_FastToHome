@@ -123,6 +123,7 @@ public class PantallaPrincipal extends AppCompatActivity {
     public void pasarPantallaUbicacion(View view){
         Intent i = new Intent(this, seleccionarTransporteZona.class );
         i.putExtra("user",user);
+        i.putExtra("direccion",direccion);
         startActivity(i);
     }
 }
