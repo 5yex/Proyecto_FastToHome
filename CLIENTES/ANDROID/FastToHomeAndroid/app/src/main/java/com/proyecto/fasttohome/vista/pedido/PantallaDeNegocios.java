@@ -13,6 +13,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.modelo.Categoria;
 import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Pedido;
@@ -37,6 +38,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
     private Usuario usuario;
     private Pedido pedido;
     private Direccion direccion;
+    private HashMap<Integer, Categoria> categorias;
 
 
     @Override
@@ -79,6 +81,9 @@ public class PantallaDeNegocios extends AppCompatActivity {
                         }
                         negocios.add(negocio);
                     }
+
+
+
                     adaptorNegocio = new RecyclerViewAdaptorNegocio(negocios, usuario,pedido);
                     recyclerViewNegocio.setAdapter(adaptorNegocio);
                 }
@@ -134,7 +139,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("DATA", new Peticion("obtener_todos_negocios", null).getJSON());
+                params.put("DATA", new Peticion("obtener_categorias", null).getJSON());
                 return params;
             }
         };
