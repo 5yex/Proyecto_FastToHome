@@ -47,7 +47,7 @@ public class ComprobarZona extends FragmentActivity implements OnMapReadyCallbac
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney").draggable(false));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,20));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 20));
     }
 
     private void getLastLocation() {
@@ -58,7 +58,7 @@ public class ComprobarZona extends FragmentActivity implements OnMapReadyCallbac
                 == PERMISSION_GRANTED ||
                 ActivityCompat.checkSelfPermission(this, ACCESS_COARSE_LOCATION)
                         == PERMISSION_GRANTED) {
-            fusedLocationClient.getLastLocation()
+            fusedLocationClient.getCurrentLocation()
                     .addOnSuccessListener(this, new OnSuccessListener<Location>() {
                         @Override
                         public void onSuccess(Location location) {
