@@ -3,6 +3,7 @@ package com.proyecto.fasttohome.vista.pedido.recycler_adaptors;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.modelo.Categoria;
 import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.vista.pedido.SeleccionarProductos;
@@ -21,6 +23,7 @@ import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.squareup.picasso.Picasso;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerViewAdaptorNegocio.ViewHolder> {
@@ -33,6 +36,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
         private Pedido pedido;
         private Button pedir, info;
         private Context contexto;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -57,13 +61,15 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
         }
     }
 
-    public List<Negocio> listaNegocios;
-    Usuario usuario;
-    Pedido pedido;
-    public RecyclerViewAdaptorNegocio(List<Negocio> listaNegocios, Usuario usuario, Pedido pedido) {
+    private List<Negocio> listaNegocios;
+    private HashMap<Integer,Categoria> categorias;
+    private Usuario usuario;
+    private Pedido pedido;
+    public RecyclerViewAdaptorNegocio(List<Negocio> listaNegocios, Usuario usuario, Pedido pedido, HashMap<Integer,Categoria> categorias) {
         this.listaNegocios = listaNegocios;
         this.usuario = usuario;
         this.pedido = pedido;
+        this.categorias= categorias;
     }
 
     @NonNull

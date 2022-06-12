@@ -115,7 +115,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
                         JSONObject job = arrayDeJson.getJSONObject(i);
                         categorias.put(job.getInt("id"),new Categoria(job.getInt("id"),job.getString("Nombre")));
                     }
-                    adaptorNegocio = new RecyclerViewAdaptorNegocio(negocios, usuario,pedido);
+                    adaptorNegocio = new RecyclerViewAdaptorNegocio(negocios, usuario,pedido,categorias);
                     recyclerViewNegocio.setAdapter(adaptorNegocio);
                 }
             } catch (JSONException | VolleyError e) {
