@@ -71,6 +71,16 @@ class Cesta extends Conexion{
     
     public function obtenerCestaPedido(){
         $sql = "SELECT * FROMN cesta WHERE id_pedido = :id_ped";
+        
+        $sentencia = $this->dblink->prepare($sql);
+        
+        $id_pedido = $this->getId_pedido();
+        
+        $sentencia->bindParam(":ped", $this->id_pedido);
+        
+        $sentencia->execute();
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+        
     }
 
 }
