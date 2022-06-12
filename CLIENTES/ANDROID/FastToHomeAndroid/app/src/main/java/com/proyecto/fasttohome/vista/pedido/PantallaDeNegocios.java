@@ -117,8 +117,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
                     JSONArray arrayDeJson = resp.getJSONArray("datos");
                     for (int i = 0; i < arrayDeJson.length(); i++) {
                         JSONObject job = arrayDeJson.getJSONObject(i);
-
-                        categorias.put(job.getInt())
+                        categorias.put(job.getInt("id"),new Categoria(job.getInt("id"),job.getString()));
                     }
                     adaptorNegocio = new RecyclerViewAdaptorNegocio(negocios, usuario,pedido);
                     recyclerViewNegocio.setAdapter(adaptorNegocio);
