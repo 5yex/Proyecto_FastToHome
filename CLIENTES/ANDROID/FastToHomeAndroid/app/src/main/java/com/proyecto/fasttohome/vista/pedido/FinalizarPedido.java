@@ -48,7 +48,7 @@ public class FinalizarPedido extends AppCompatActivity {
 
     private ActivityFinalizarPedidoBinding layoutBinding;
     private View googlePayButton;
-    
+
     private HashMap<Integer, Integer> productosSeleccionados;
     private HashMap<Integer, Producto> productos;
     private Usuario usuario;
@@ -72,6 +72,7 @@ public class FinalizarPedido extends AppCompatActivity {
         negocio = (Negocio) getIntent().getExtras().getSerializable("negocio");
         productos = (HashMap<Integer, Producto>) getIntent().getExtras().getSerializable("productos");
         productosSeleccionados = (HashMap<Integer, Integer>) getIntent().getExtras().getSerializable("productosSeleccionados");
+
         initializeUi();
 
         model = new ViewModelProvider(this).get(CheckoutViewModel.class);
