@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="principalFastToHome">#f05742</color>
     <color name="textopanel">#FFFFFF</color>
+    <color name="back">#FFF3E4</color>
 </resources>
