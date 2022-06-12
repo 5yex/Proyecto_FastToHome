@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -53,7 +54,7 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
     MapView mapView;
     GoogleMap mMap;
     MarkerOptions marker;
-    Button pedirDron,pedirRepartidor;
+    Button pedirDron, pedirRepartidor;
     TextView servicio;
     Polygon polygonDron;
     Polygon polygonReparto;
@@ -61,7 +62,7 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
     Usuario user;
     Pedido pedido;
     Direccion direccion;
-    boolean pararUbicacion
+    boolean pararUbicacion;
 
     // Initializing other items
     // from layout file
@@ -73,7 +74,7 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccionar_transporte_zona);
-        pararUbicacion= false;
+        pararUbicacion = false;
         pedirDron = (Button) findViewById(R.id.btTransporteDron);
         pedirRepartidor = (Button) findViewById(R.id.btTransporteRepartidor);
         servicio = (TextView) findViewById(R.id.servicio);
@@ -95,60 +96,55 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
         System.out.println("comenzar pedido");
         pedido = new Pedido();
         pedido.setEstado("pendiente_pago");
-        if(view.getId() == R.id.btTransporteDron){
+        if (view.getId() == R.id.btTransporteDron) {
             pedido.setTransporte("dron");
-        }else{
+        } else {
             pedido.setTransporte("repartidor");
         }
-        Intent i = new Intent(this, PantallaDeNegocios.class );
-        i.putExtra("user",user);
-        i.putExtra("pedido",pedido);
+        Intent i = new Intent(this, PantallaDeNegocios.class);
+        i.putExtra("user", user);
+        i.putExtra("pedido", pedido);
         startActivity(i);
     }
 
 
     @SuppressLint("MissingPermission")
     private void getLastLocation() {
-        // check if permissions are given
-        if (checkPermissions()) {
-
-            // check if location is enabled
-            if (isLocationEnabled()) {
-                // getting last
-                // location from
-                // FusedLocationClient
-                // object
-                mFusedLocationClient.getCurrentLocation(PRIORITY_HIGH_ACCURACY, null).addOnCompleteListener(new OnCompleteListener<Location>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Location> task) {
-                        Location location = task.getResult();
-                        updateMapa(location);
-                    }
-                });
+        if (!pararUbicacion) {
+            if (checkPermissions()) {
+                if (isLocationEnabled()) {
+                    mFusedLocationClient.getCurrentLocation(PRIORITY_HIGH_ACCURACY, null).addOnCompleteListener(new OnCompleteListener<Location>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Location> task) {
+                            Location location = task.getResult();
+                            updateMapa(location);
+                        }
+                    });
+                } else {
+                    Toast.makeText(this, "Please turn on" + " your location...", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                    startActivity(intent);
+                }
             } else {
-                Toast.makeText(this, "Please turn on" + " your location...", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                startActivity(intent);
+                // if permissions aren't available,
+                // request for permissions
+                requestPermissions();
             }
-        } else {
-            // if permissions aren't available,
-            // request for permissions
-            requestPermissions();
         }
     }
 
     private void updateMapa(Location location) {
-            if (location == null) {
-                getLastLocation();
-            } else {
-                LatLng actual = new LatLng(location.getLatitude(), location.getLongitude());
-                mMap.addMarker(marker.position(actual));
-                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(actual, 14F));
-                Handler handler = new Handler();
-                //Hilo para actualizar recursivamente
+        if (location == null) {
+            getLastLocation();
+        } else {
+            LatLng actual = new LatLng(location.getLatitude(), location.getLongitude());
+            mMap.addMarker(marker.position(actual));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(actual, 14F));
+            Handler handler = new Handler();
+            //Hilo para actualizar recursivamente
+            comprobarServicio(actual);
 
-                comprobarServicio(actual);
-
+            if (!pararUbicacion) {
                 final Runnable r = new Runnable() {
                     public void run() {
                         getLastLocation();
@@ -156,26 +152,27 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
                 };
                 handler.postDelayed(r, 1500);
             }
+        }
     }
 
     private void comprobarServicio(LatLng actual) {
-        boolean estaEnAreaDron = PolyUtil.containsLocation(actual,polygonDron.getPoints(),true);
-        boolean estaEnAreaRepartior = PolyUtil.containsLocation(actual,polygonReparto.getPoints(),true);
+        boolean estaEnAreaDron = PolyUtil.containsLocation(actual, polygonDron.getPoints(), true);
+        boolean estaEnAreaRepartior = PolyUtil.containsLocation(actual, polygonReparto.getPoints(), true);
 
-        if(estaEnAreaDron){
+        if (estaEnAreaDron) {
             pedirDron.setEnabled(true);
-        }else{
+        } else {
             pedirDron.setEnabled(false);
         }
-        if(estaEnAreaRepartior){
+        if (estaEnAreaRepartior) {
             pedirRepartidor.setEnabled(true);
-        }else{
+        } else {
             pedirRepartidor.setEnabled(false);
         }
 
-        if(!pedirDron.isEnabled() && !pedirRepartidor.isEnabled()){
+        if (!pedirDron.isEnabled() && !pedirRepartidor.isEnabled()) {
             servicio.setText(getString(R.string.servicioNoDisponible));
-        }else{
+        } else {
             servicio.setText(getString(R.string.servicioDisponible));
         }
     }
@@ -205,29 +202,27 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
     public void
     onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
         if (requestCode == PERMISSION_ID) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 getLastLocation();
-            }else{
+            } else {
                 super.onBackPressed();
             }
         }
     }
 
-    @SuppressLint("MissingPermission")
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
 
         mMap = googleMap;
         polygonDron = mMap.addPolygon(new PolygonOptions()
                 .clickable(true)
-                .add(new LatLng(38.9403638,-5.8632235),
-                        new LatLng(38.9559078,-5.841610),
-                        new LatLng(38.9641799,-5.841169),
-                        new LatLng(38.9664046,-5.8663748),
-                        new LatLng(38.9620667,-5.9148691),
-                        new LatLng(38.930187,-5.895466)));
+                .add(new LatLng(38.9403638, -5.8632235),
+                        new LatLng(38.9559078, -5.841610),
+                        new LatLng(38.9641799, -5.841169),
+                        new LatLng(38.9664046, -5.8663748),
+                        new LatLng(38.9620667, -5.9148691),
+                        new LatLng(38.930187, -5.895466)));
         polygonDron.setTag("alpha");
         stylePolygon(polygonDron);
 
@@ -242,7 +237,7 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
         // Store a data object with the polygon, used here to indicate an arbitrary type.
         polygonReparto.setTag("beta");
         stylePolygon(polygonReparto);
-        marker = new MarkerOptions().position(new LatLng(0,0));
+        marker = new MarkerOptions().position(new LatLng(0, 0));
         getLastLocation();
 
         // Add a marker in Sydney and move the camera
@@ -273,7 +268,7 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
     private static final List<PatternItem> PATTERN_POLYGON_ALPHA = Arrays.asList(GAP, DASH);
 
     // Create a stroke pattern of a dot followed by a gap, a dash, and another gap.
-    private static final List<PatternItem> PATTERN_POLYGON_BETA =  Arrays.asList(DOT, GAP, DASH, GAP);
+    private static final List<PatternItem> PATTERN_POLYGON_BETA = Arrays.asList(DOT, GAP, DASH, GAP);
 
     /**
      * Styles the polygon, based on type.
@@ -325,12 +320,14 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
 
     @Override
     public void onPause() {
+        pararUbicacion = true;
         super.onPause();
         mapView.onPause();
     }
 
     @Override
     public void onDestroy() {
+        pararUbicacion = true;
         super.onDestroy();
         mapView.onDestroy();
     }
@@ -343,6 +340,5 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
 
     @Override
     public void onLocationChanged(@NonNull Location location) {
-
     }
 }
