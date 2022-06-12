@@ -545,6 +545,22 @@ function getUsuario($datos) {
     }
 }
 
+function obtenerUsuarioPorSuId($datos) {
+    require_once '../modelo/usuario.php';
+    try {
+        $cliente = new usuario();
+        $cliente->setId($datos->id);
+        $respuesta = $cliente->usuarioCompleto();
+        if ($respuesta) {
+            mandarRespuesta(false, $respuesta);
+        } else {
+            mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
+        }
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
 function obtenerTodosLosUsuarios(){
     require_once '../modelo/usuario.php';
     
