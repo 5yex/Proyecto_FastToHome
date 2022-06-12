@@ -174,6 +174,15 @@ class Producto extends Conexion{
     }
     
     public function obtenerDatosProducto(){
-        $sql = "SELECT * FROM producto WHERE id = 1 order by Nombre;";
+        $sql = "SELECT * FROM producto WHERE id = :id_prod";
+        
+        $sentencia = $this->dblink->prepare($sql);
+
+        $id_negocio = $this->getId_producto();
+        $sentencia->bindParam(":id_prod", $this->id_producto);
+
+        $sentencia->execute();
+        
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
 }
