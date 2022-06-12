@@ -43,7 +43,6 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -65,7 +64,8 @@ public class FinalizarPedido extends AppCompatActivity {
     private ListView listaProductos;
     private TextView total;
 
-    private int centimos;
+    private double precioTotal;
+    private int precioTotalCentimos;
 
     /**
      * Initialize the Google Pay API on creation of the activity
@@ -105,7 +105,7 @@ public class FinalizarPedido extends AppCompatActivity {
 
     private void actualizarResumen() {
         ArrayList<String> lista = new ArrayList<>();
-        double precioTotal = 0;
+        precioTotal = 0;
         int indice = 0;
         for (Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
             Producto producto = productos.get(entry.getKey());
@@ -117,7 +117,7 @@ public class FinalizarPedido extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista);
         listaProductos = findViewById(R.id.list);
         listaProductos.setAdapter(adapter);
-        centimos = (int) (precioTotal * 100);
+        precioTotalCentimos = (int) (precioTotal * 100);
     }
 
     private void finalizarPedido() {
@@ -150,7 +150,7 @@ public class FinalizarPedido extends AppCompatActivity {
         // The price provided to the API should include taxes and shipping.
         // This price is not displayed to the user.
 
-        final Task<PaymentData> task = model.getLoadPaymentDataTask(centimos);
+        final Task<PaymentData> task = model.getLoadPaymentDataTask(precioTotalCentimos);
 
         // Shows the payment sheet and forwards the result to the onActivityResult method.
         AutoResolveHelper.resolveTask(task, this, LOAD_PAYMENT_DATA_REQUEST_CODE);
