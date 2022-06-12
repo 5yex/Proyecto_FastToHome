@@ -275,7 +275,7 @@ public class FinalizarPedido extends AppCompatActivity {
                 ArrayList<Object> DatosPedido = new ArrayList<>();
                 DatosPedido.add(pedido);
                 DatosPedido.add(getCesta());
-                                
+
                 String datos = new Gson().toJson(DatosPedido);
                 System.out.println("DATOS-PEDIDO: ==  !  " +datos);
                 params.put("DATA", new Peticion("nuevo_pedido", datos).getJSON());
