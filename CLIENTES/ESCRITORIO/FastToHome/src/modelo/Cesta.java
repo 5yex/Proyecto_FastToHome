@@ -157,4 +157,17 @@ public class Cesta{
     public String getJSON(){
        return new Gson().toJson(this);
     }
+    
+    /**
+     * Devuelve una cadena con los atributos del objeto de tipo Cesta
+     *
+     * @return Cadena con los atributos del objeto de tipo Cesta
+     * @since 1.0
+     */
+    @Override
+    public String toString() {
+        return "Cesta{" + "id_cesta=" + id_cesta + ", id_producto=" + id_producto + ", id_pedido=" + id_pedido + ", cantidad=" + cantidad + '}';
+    }
+    
+    
 }
