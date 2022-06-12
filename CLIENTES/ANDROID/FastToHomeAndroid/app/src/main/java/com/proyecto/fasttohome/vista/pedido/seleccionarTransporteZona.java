@@ -99,7 +99,6 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
         Intent i = new Intent(this, PantallaDeNegocios.class );
         i.putExtra("user",user);
         i.putExtra("pedido",pedido);
-
         startActivity(i);
     }
 
