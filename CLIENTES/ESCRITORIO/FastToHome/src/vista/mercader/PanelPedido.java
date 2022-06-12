@@ -240,6 +240,7 @@ public class PanelPedido extends javax.swing.JPanel {
         pasarEstado.addActionListener(actualizarPedido);
         
         cargaDireccionPedido();
+        cargarContenidoDeCesta();
         
         pedido.toString();
         numPedido.setText(String.valueOf(pedido.getId_pedido()));
