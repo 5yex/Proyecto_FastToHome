@@ -116,17 +116,9 @@ public class PantallaDeNegocios extends AppCompatActivity {
                 } else {
                     JSONArray arrayDeJson = resp.getJSONArray("datos");
                     for (int i = 0; i < arrayDeJson.length(); i++) {
-                        JSONObject objetoNegocioJSon = arrayDeJson.getJSONObject(i);
-                        Negocio negocio = new Negocio();
-                        negocio.setId_negocio(objetoNegocioJSon.getInt("id"));
-                        negocio.setNombre(objetoNegocioJSon.get("Nombre").toString());
-                        negocio.setDescripcion(objetoNegocioJSon.get("Descripcion").toString());
-                        try{
-                            String imgUrl = getString(R.string.imgUrl) + objetoNegocioJSon.getString("url");
-                            negocio.setUrl_imagen(imgUrl);
-                        }catch (Exception e){
-                        }
-                        negocios.add(negocio);
+                        JSONObject job = arrayDeJson.getJSONObject(i);
+
+                        categorias.put(job.getInt())
                     }
                     adaptorNegocio = new RecyclerViewAdaptorNegocio(negocios, usuario,pedido);
                     recyclerViewNegocio.setAdapter(adaptorNegocio);
