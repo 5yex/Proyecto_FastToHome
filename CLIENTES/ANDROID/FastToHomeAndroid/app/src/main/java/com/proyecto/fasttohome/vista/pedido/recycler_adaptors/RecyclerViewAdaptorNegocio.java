@@ -29,7 +29,7 @@ import java.util.List;
 public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerViewAdaptorNegocio.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView nombre, descripcion;
+        private TextView nombre, categoria;
         private ImageView image;
         private Usuario usuario;
         private Negocio negocio;
@@ -42,8 +42,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
             super(itemView);
             nombre = (TextView) itemView.findViewById(R.id.tvNombreNegocio);
             image = (ImageView) itemView.findViewById(R.id.imagenNegocio);
-            //descripcion = (TextView) itemView.findViewById(R.id.tvDescripcionNegocio);
-            //categoria = (TextView) itemView.findViewById(R.id.tvCategoriaNegocio);
+            categoria = (TextView) itemView.findViewById(R.id.categoria);
 
             pedir = (Button) itemView.findViewById(R.id.pedir);
             info = (Button) itemView.findViewById(R.id.infoNeg);
@@ -89,10 +88,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
         holder.pedido = pedido;
         holder.negocio = negocioActual;
         Picasso.get().load(negocioActual.getUrl_imagen()).into(holder.image);
-
-
-
-        //holder.categoria.setText(listaNegocios.get(position).getId_categoria());
+        holder.categoria.setText(categorias.get(negocioActual.getId_categoria()).getNombre());
         holder.info.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(holder.contexto);
             builder.setTitle("INFORMACIÓN DEL NEGOCIO");
