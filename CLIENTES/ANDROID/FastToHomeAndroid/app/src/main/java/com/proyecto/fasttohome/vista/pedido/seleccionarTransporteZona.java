@@ -113,25 +113,10 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
         if(coordenadasActuales != null){
             pararUbicacion=true;
             direccion.setCoordenadas(coordenadasActuales.latitude+","+coordenadasActuales.longitude);
-
-            System.out.println("comenzar pedido");
-            pedido = new Pedido();
-            pedido.setEstado("pendiente_pago");
-            if (view.getId() == R.id.btTransporteDron) {
-                pedido.setTransporte("dron");
-            } else {
-                pedido.setTransporte("repartidor");
-            }
-
-
-            Intent i = new Intent(this, PantallaDeNegocios.class);
-            i.putExtra("user", user);
-            i.putExtra("pedido", pedido);
-            startActivity(i);
         }
     }
 
-    private void actualizaDireccionYContinua() {
+    private void actualizaDireccionYContinua(View view) {
         String url = getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(seleccionarTransporteZona.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
@@ -141,11 +126,18 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
                 if ((resp.getBoolean("error")) == true) {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
-                    JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
-                    int DireccionId = datos.getInt("last_id");
-                    if (DireccionId != -1){
-                        
+                    System.out.println("comenzar pedido");
+                    pedido = new Pedido();
+                    pedido.setEstado("pendiente_pago");
+                    if (view.getId() == R.id.btTransporteDron) {
+                        pedido.setTransporte("dron");
+                    } else {
+                        pedido.setTransporte("repartidor");
                     }
+                    Intent i = new Intent(this, PantallaDeNegocios.class);
+                    i.putExtra("user", user);
+                    i.putExtra("pedido", pedido);
+                    startActivity(i);
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(seleccionarTransporteZona.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -154,7 +146,7 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("DATA", new Peticion("nueva_direccion_devuelve_id", direccion.getJSON()).getJSON());
+                params.put("DATA", new Peticion("actualizar_direccion", direccion.getJSON()).getJSON());
                 return params;
             }
         };
