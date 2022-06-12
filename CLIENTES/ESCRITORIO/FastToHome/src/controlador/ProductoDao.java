@@ -78,5 +78,22 @@ public class ProductoDao {
     public static boolean borrarProducto(Producto product) {
         return gestion.hacerConsulta(new Peticion("borrar_producto", product.getJSON()));
     }
+    
+    public static Producto obtenerProductoPorId(Producto product){
+        JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_productos_negocio", product.getJSON()));
+        
+        JsonObject productoJson = jsonArray.get(i).getAsJsonObject();
+                Producto producto = new Producto();
+                producto.setId_producto(productoJson.get("id").getAsInt());
+                producto.setNombre(productoJson.get("Nombre").getAsString());
+                producto.setPrecio(Double.valueOf(productoJson.get("Precio").getAsString()));
+                producto.setDescripcion(productoJson.get("Descripcion").getAsString());
+                producto.setStock(productoJson.get("Stock").getAsInt());
+                if (!productoJson.get("imagenes_id").isJsonNull()) {
+                    producto.setId_img(productoJson.get("imagenes_id").getAsInt());
+                }
+                return producto;
+        
+    }
 
 }
