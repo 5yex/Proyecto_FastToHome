@@ -245,9 +245,9 @@ public class DialogoDireccion extends javax.swing.JDialog {
             String otros = varOtros.getText();
             String coordenadas = tfCoordenadas.getText();
 
-            if (calle.length() == 0 | ciudad.length() == 0) {
+            if (calle.length() == 0 || ciudad.length() == 0) {
                 throw new IOException("Rellena todos los campos");
-            } else {
+            } else{
                 direccion.setCalle(calle);
                 direccion.setCiudad(ciudad);
                 direccion.setCodigo_postal(cp);
