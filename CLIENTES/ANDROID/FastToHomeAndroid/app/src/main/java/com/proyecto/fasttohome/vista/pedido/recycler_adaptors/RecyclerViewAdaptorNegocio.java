@@ -83,7 +83,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
         Negocio negocioActual = listaNegocios.get(position);
         holder.nombre.setText(negocioActual.getNombre());
         System.err.println(categorias.size());
-        holder.categoria.setText(categorias.size());
+        holder.categoria.setText("prueba");
         holder.usuario = usuario;
         holder.pedido = pedido;
         holder.negocio = negocioActual;
