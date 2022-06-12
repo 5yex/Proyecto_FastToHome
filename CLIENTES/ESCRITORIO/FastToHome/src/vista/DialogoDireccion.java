@@ -148,7 +148,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(labelCiudad1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 387, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 386, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
