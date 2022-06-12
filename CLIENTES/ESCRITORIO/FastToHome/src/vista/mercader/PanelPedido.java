@@ -19,6 +19,7 @@ import javax.annotation.processing.SupportedSourceVersion;
 import javax.lang.model.SourceVersion;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
+import javax.swing.JList;
 import javax.swing.JMenu;
 import modelo.Cesta;
 import modelo.Direccion;
@@ -288,8 +289,9 @@ public class PanelPedido extends javax.swing.JPanel {
         for (Cesta elementoCesta : cesta) {
             Producto producto = new Producto(elementoCesta.getId_producto());
             listaModeloCesta.addElement("Producto: " + producto.getNombre()+ "Cantidad: " + elementoCesta.getCantidad());
-            
         }
+        
+        listaProductosDeCesta = new JList<>(listaModeloCesta);
         
         
         
