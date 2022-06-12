@@ -120,6 +120,12 @@ public class DialogoDireccion extends javax.swing.JDialog {
 
         labelCoordenadas.setText("Coordenadas:");
 
+        tfCoordenadas.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                tfCoordenadasFocusLost(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -214,6 +220,10 @@ public class DialogoDireccion extends javax.swing.JDialog {
             this.dispose();
         }
     }//GEN-LAST:event_aceptarActionPerformed
+
+    private void tfCoordenadasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfCoordenadasFocusLost
+        
+    }//GEN-LAST:event_tfCoordenadasFocusLost
     
     /**
      * Rellena los campos del DiálogoDireccion si la dirección no es nula
@@ -246,7 +256,7 @@ public class DialogoDireccion extends javax.swing.JDialog {
             String coordenadas = tfCoordenadas.getText();
 
             if (calle.length() == 0 || ciudad.length() == 0) {
-                throw new IOException("Rellena todos los campos");
+                throw new IOException("Solo puedes dejar sin rellenar las coordenadas");
             } else{
                 direccion.setCalle(calle);
                 direccion.setCiudad(ciudad);
