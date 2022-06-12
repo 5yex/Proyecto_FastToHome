@@ -77,7 +77,7 @@ public class PanelPedido extends javax.swing.JPanel {
         pasarEstado = new javax.swing.JButton();
         tituloEstadoPedido = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        listaProductosDeCesta = new javax.swing.JList<>();
         tituloIdPedido = new javax.swing.JLabel();
         numPedido = new javax.swing.JLabel();
         tipoTransporte = new javax.swing.JLabel();
@@ -102,12 +102,12 @@ public class PanelPedido extends javax.swing.JPanel {
         tituloEstadoPedido.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         tituloEstadoPedido.setText("ESTADO PEDIDO:");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        listaProductosDeCesta.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(listaProductosDeCesta);
 
         tituloIdPedido.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         tituloIdPedido.setText("ID PEDIDO:");
@@ -220,9 +220,9 @@ public class PanelPedido extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel estadoActualPedido;
     private javax.swing.JTextArea infoDireccion;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JList<String> listaProductosDeCesta;
     private javax.swing.JLabel numPedido;
     private javax.swing.JButton pasarEstado;
     private javax.swing.JLabel tipoTransporte;
