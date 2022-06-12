@@ -438,7 +438,6 @@ function obtenerDatosProducto($datos){
     
     try {
         $producto = new Producto();
-        $id = $datos->id_negocio;
         $producto->setId_negocio($id);
         $respuesta = $producto->productosDeUnNegocio();       
         if ($respuesta) {
