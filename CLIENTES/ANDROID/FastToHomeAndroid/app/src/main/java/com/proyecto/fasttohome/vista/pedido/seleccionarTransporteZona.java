@@ -46,4 +46,24 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,20F));
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+    }
 }
