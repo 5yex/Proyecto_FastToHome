@@ -35,6 +35,21 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
+        map = googleMap;
+        map.getUiSettings().setMyLocationButtonEnabled(false);
+        map.setMyLocationEnabled(true);
+       /*
+       //in old Api Needs to call MapsInitializer before doing any CameraUpdateFactory call
+        try {
+            MapsInitializer.initialize(this.getActivity());
+        } catch (GooglePlayServicesNotAvailableException e) {
+            e.printStackTrace();
+        }
+       */
 
+        // Updates the location and zoom of the MapView
+        /*CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(43.1, -87.9), 10);
+        map.animateCamera(cameraUpdate);*/
+        map.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(43.1, -87.9)));
     }
 }
