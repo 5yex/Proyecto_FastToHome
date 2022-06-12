@@ -148,7 +148,7 @@ public class DialogoDireccion extends javax.swing.JDialog implements Constantes{
                             .addComponent(varCiudad)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(error, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(37, 37, 37)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cancelar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(aceptar))
