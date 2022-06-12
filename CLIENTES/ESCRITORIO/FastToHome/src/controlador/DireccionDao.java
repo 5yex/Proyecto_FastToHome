@@ -58,7 +58,7 @@ public class DireccionDao {
         direccion.setCiudad(respuesta.get("Ciudad").getAsString());
         direccion.setCodigo_postal(respuesta.get("CP").getAsInt());
         direccion.setOtros(respuesta.get("Otros").getAsString());
-        direccion.setCoordenadas(respuesta.get("Coordenadas").getAsInt());
+        direccion.setCoordenadas(respuesta.get("Coordenadas").getAsString());
         
         return direccion;
         
@@ -84,7 +84,7 @@ public class DireccionDao {
         direccion.setCiudad(respuesta.get("Ciudad").getAsString());
         direccion.setCodigo_postal(respuesta.get("CP").getAsInt());
         direccion.setOtros(respuesta.get("Otros").getAsString());
-        direccion.setCoordenadas(respuesta.get("Coordenadas").getAsInt());
+        direccion.setCoordenadas(respuesta.get("Coordenadas").getAsString());
         
         return direccion;
         
