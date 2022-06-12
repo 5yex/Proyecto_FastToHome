@@ -119,7 +119,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         }
 
         if (precioTotal > 0) {
-            pedir.setText("LLEVAS " + productosSeleccionados.size() + ", POR" + precioTotal + "€");
+            pedir.setText("LLEVAS " + productosSeleccionados.size() + ", Total: " + precioTotal + "€");
         } else {
             pedir.setText("PEDIR");
         }
