@@ -298,7 +298,8 @@ public class PanelPedido extends javax.swing.JPanel {
             listaModeloCesta.addElement(new JLabel("Producto: " + producto.getNombre()+ "Cantidad: " + elementoCesta.getCantidad()));
         }
         
-        this.listaProductosDeCesta = new JList(listaModeloCesta);
+        //this.listaProductosDeCesta = new JList(listaModeloCesta);
+        this.listaProductosDeCesta.setModel(listaModeloCesta);
         
         
     }
