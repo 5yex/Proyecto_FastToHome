@@ -111,7 +111,7 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
         if(coordenadasActuales != null){
             pararUbicacion=true;
             direccion.setCoordenadas(coordenadasActuales.latitude+","+coordenadasActuales.longitude);
-
+            System.out.println(direccion.getJSON());
             String url = getString(R.string.apiUrl);
             RequestQueue queue = Volley.newRequestQueue(seleccionarTransporteZona.this);
             StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
