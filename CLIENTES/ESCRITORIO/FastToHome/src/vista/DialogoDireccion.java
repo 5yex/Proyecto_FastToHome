@@ -8,8 +8,9 @@ import java.io.IOException;
 import javax.swing.ImageIcon;
 import javax.swing.JDialog;
 import modelo.Direccion;
-import util.Constantes;
 import util.validaciones;
+
+import util.Constantes;
 
 /**
  * Clase que representa el diálogo de dirección
@@ -246,18 +247,19 @@ public class DialogoDireccion extends javax.swing.JDialog {
             String ciudad = varCiudad.getText();
             String otros = varOtros.getText();
             String coordenadas = tfCoordenadas.getText();
-
+            
+            if(coordenadas.length() > 0 && !validaciones.validar(coordendas,PATRON_COORDENADAS)){
+            }
+            
             if (calle.length() == 0 || ciudad.length() == 0 || num <= 0 || (cp <= 0 && cp >= 99999)) {
                 throw new IOException("Solo puedes dejar sin rellenar las coordenadas");
-            } else{
+            }
                 direccion.setCalle(calle);
                 direccion.setCiudad(ciudad);
                 direccion.setCodigo_postal(cp);
                 direccion.setNumero(num);
                 direccion.setOtros(otros);
                 direccion.setValida(true);
-            }else{
-            }
 
         } catch (NumberFormatException ex) {
             error.setText("Campos Numérico Incorrectos");
