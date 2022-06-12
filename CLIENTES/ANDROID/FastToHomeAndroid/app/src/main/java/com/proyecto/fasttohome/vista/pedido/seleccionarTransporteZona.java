@@ -37,7 +37,6 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
     public void onMapReady(@NonNull GoogleMap googleMap) {
         map = googleMap;
         map.getUiSettings().setMyLocationButtonEnabled(false);
-        map.setMyLocationEnabled(true);
        /*
        //in old Api Needs to call MapsInitializer before doing any CameraUpdateFactory call
         try {
