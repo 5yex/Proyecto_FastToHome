@@ -31,7 +31,7 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
         // Gets the MapView from the XML layout and creates it
         mapView = (MapView) findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
-        mapView.getMapAsync(this);
+        mapView.getMapAsync();
     }
 
     @Override
