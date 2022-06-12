@@ -45,6 +45,9 @@ public class ComprobarZona extends FragmentActivity implements OnMapReadyCallbac
         user = (Usuario) getIntent().getExtras().getSerializable("user");
         binding = ActivityComprobarZonaBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        comprobarZona.setOnClickListener(view -> {
+            getLastLocation();
+        });
 
 
     }
@@ -57,7 +60,7 @@ public class ComprobarZona extends FragmentActivity implements OnMapReadyCallbac
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney, 12.0F));
     }
 
-    private void getLastLocation(View view) {
+    private void getLastLocation() {
         LocationRequest mLocationRequest = LocationRequest.create();
         mLocationRequest.setInterval(60000);
         mLocationRequest.setFastestInterval(5000);
