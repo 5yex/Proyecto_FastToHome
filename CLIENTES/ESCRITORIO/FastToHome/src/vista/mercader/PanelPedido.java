@@ -249,7 +249,6 @@ public class PanelPedido extends javax.swing.JPanel {
                                                    "\nNúmero: " + direccion.getNumero() + 
                                                     "\nCiudad: " + direccion.getCiudad() +
                                                      "\nCP: " + direccion.getCodigo_postal());
-        
     
     }
 }
