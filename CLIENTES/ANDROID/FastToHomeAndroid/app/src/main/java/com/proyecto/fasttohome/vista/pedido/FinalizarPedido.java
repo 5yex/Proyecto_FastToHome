@@ -70,6 +70,7 @@ public class FinalizarPedido extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         usuario = (Usuario) getIntent().getExtras().getSerializable("user");
         negocio = (Negocio) getIntent().getExtras().getSerializable("negocio");
+        pedido = (Pedido) getIntent().getExtras().getSerializable("pedido");
         productos = (HashMap<Integer, Producto>) getIntent().getExtras().getSerializable("productos");
         productosSeleccionados = (HashMap<Integer, Integer>) getIntent().getExtras().getSerializable("productosSeleccionados");
 
