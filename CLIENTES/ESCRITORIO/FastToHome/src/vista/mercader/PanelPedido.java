@@ -278,6 +278,5 @@ public class PanelPedido extends javax.swing.JPanel {
     
     public void cargarContenidoDeCesta(){
         
-        
     }
 }
