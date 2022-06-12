@@ -147,8 +147,7 @@ public class gestion {
 
             List<NameValuePair> params = new ArrayList<>();
 
-            //prueba
-            //System.out.println("controlador.gestion.hacerConsulta() ---- PETICION ENVIADO: " + peticion.getJSON());
+            System.out.println("controlador.gestion.hacerConsulta() ---- PETICION ENVIADO: " + peticion.getJSON());
 
             params.add(new BasicNameValuePair("DATA", peticion.getJSON()));
 
@@ -163,7 +162,7 @@ public class gestion {
 
                 String htmlTxt = EntityUtils.toString(entity);
 
-                //System.out.println("controlador.gestion.hacerConsulta() ---- RECEPCIÓN: " + htmlTxt);
+                System.out.println("controlador.gestion.hacerConsulta() ---- RECEPCIÓN: " + htmlTxt);
 
                 JsonObject jsonObject = new JsonParser().parse(htmlTxt).getAsJsonObject();
 
