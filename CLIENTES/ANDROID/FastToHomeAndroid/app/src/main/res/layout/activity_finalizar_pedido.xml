@@ -53,9 +53,10 @@
                 tools:layout_editor_absoluteX="0dp">
 
                 <ListView
+                    android:id="@+id/list"
                     android:layout_width="355dp"
-                    android:layout_height="200dp"
-                    android:background="#FFE8C7"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
                     android:orientation="vertical" />
             </androidx.cardview.widget.CardView>
 
@@ -64,6 +65,7 @@
                 android:layout_width="67dp"
                 android:layout_height="29dp"
                 android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
                 android:text="Total:"
                 android:textColor="?android:textColorPrimary"
                 android:textSize="20sp"
@@ -75,7 +77,8 @@
                 android:id="@+id/detailPrice"
                 android:layout_width="125dp"
                 android:layout_height="28dp"
-                android:layout_marginTop="11dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
                 android:text="10.00 Euros"
                 android:textColor="?android:textColorSecondary"
                 android:textSize="20sp"
