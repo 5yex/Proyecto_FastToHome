@@ -144,14 +144,17 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
         System.out.println("comenzar pedido");
         pedido = new Pedido();
         pedido.setEstado("pendiente_pago");
+        
         if (view.getId() == R.id.btTransporteDron) {
             pedido.setTransporte("dron");
         } else {
             pedido.setTransporte("repartidor");
         }
+
         Intent i = new Intent(this, PantallaDeNegocios.class);
         i.putExtra("user", user);
         i.putExtra("pedido", pedido);
+        i.putExtra("direccion", direccion);
         startActivity(i);
     }
 
