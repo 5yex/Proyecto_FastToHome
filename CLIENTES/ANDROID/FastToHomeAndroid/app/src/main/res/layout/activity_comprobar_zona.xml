@@ -21,7 +21,7 @@
         tools:context=".vista.pedido.ComprobarZona" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/comprobarZona"
         android:layout_width="391dp"
         android:layout_height="60dp"
         android:text="Comprobar Zona"
