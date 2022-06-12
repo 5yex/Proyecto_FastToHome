@@ -320,7 +320,7 @@ class usuario extends conexion {
         return TRUE;
     }
     
-    public function usarioPorSuId(){
+    public function usuarioPorSuId(){
         $sql = "SELECT * FROM usuarios where id = :id";
 
         $sentencia = $this->dblink->prepare($sql);
