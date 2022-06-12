@@ -68,5 +68,9 @@ class Cesta extends Conexion{
         //Insertó correctamente
         return TRUE;
     }
+    
+    public function obtenerCestaPedido(){
+        
+    }
 
 }
