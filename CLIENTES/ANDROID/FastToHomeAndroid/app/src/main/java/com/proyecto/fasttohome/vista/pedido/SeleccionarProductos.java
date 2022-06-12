@@ -87,10 +87,7 @@ public class SeleccionarProductos extends AppCompatActivity {
             }else {
                 Toast.makeText(this, "Tienes que seleccionar productos", Toast.LENGTH_SHORT).show();
             }
-
         });
-
-
         obtenerProductosNegocio();
     }
 
