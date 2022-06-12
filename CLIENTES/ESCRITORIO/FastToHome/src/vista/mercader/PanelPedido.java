@@ -5,6 +5,7 @@
 package vista.mercader;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
+import controlador.CestaDao;
 import controlador.DireccionDao;
 import controlador.PedidoDao;
 import controlador.UsuarioDao;
@@ -13,11 +14,13 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.ArrayList;
 import javax.annotation.processing.SupportedSourceVersion;
 import javax.lang.model.SourceVersion;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JMenu;
+import modelo.Cesta;
 import modelo.Direccion;
 import modelo.Usuario;
 import modelo.Pedido;
@@ -278,7 +281,16 @@ public class PanelPedido extends javax.swing.JPanel {
     }
     
     public void cargarContenidoDeCesta(){
+        
+        ArrayList<Cesta> cesta = CestaDao.obtenerContenidoCestaPedido(pedido);
         DefaultListModel listaModeloCesta = new DefaultListModel();
+        
+        for (Cesta elementoCesta : cesta) {
+            Producto producto = new Producto(elementoCesta.getId_producto());
+            listaModeloCesta.addElement("Producto: " + producto.getNombre()+ "Cantidad: " + elementoCesta.getCantidad());
+            
+        }
+        
         
         
         
