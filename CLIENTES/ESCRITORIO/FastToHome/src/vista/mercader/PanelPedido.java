@@ -244,7 +244,11 @@ public class PanelPedido extends javax.swing.JPanel {
         Direccion direccion = DireccionDao.obtenerDireccionUsuario(usuario_pedido);
         
         infoDireccion.setEditable(false);
-        infoDireccion.setText(TOOL_TIP_TEXT_KEY);
+        infoDireccion.setLineWrap(true);
+        infoDireccion.setText("DIRECCÍON USUARIO. \nCalle: " + direccion.getCalle() + 
+                                                   "\nNúmero: " + direccion.getNumero() + 
+                                                    "\nCiudad: " + direccion.getCiudad() +
+                                                     "\nCP: " + direccion.getCodigo_postal());
         
     
     }
