@@ -55,6 +55,9 @@ if (empty($_POST["DATA"])) {
         case 'obtener_productos_negocio';
             obtenerProductosNegocio(json_decode($peticion->datos));
             break;
+        case 'obtener_datos_producto';
+            obtenerDatosProducto(json_decode($peticion->datos));
+            break;
         case 'actualizar_producto';
             actualizarProducto(json_decode($peticion->datos));
             break;
