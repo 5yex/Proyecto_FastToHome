@@ -658,24 +658,24 @@ function hacerPedido($datos){
     
     try{
         
-        print_r($datos);
         
+//           [estado] => pendiente_pago
+//I/System.out:             [id_negocio] => 1
+//I/System.out:             [id_pedido] => 0
+//I/System.out:             [id_usuario] => 47
+//I/System.out:             [total] => 378
+//I/System.out:             [transporte] => dron
+        
+        print_r($datos);
+        $dPedido = $datos[0];
         $pedido = new Pedido();
-        $pedido->setId_usuario($id_usuario);
-        $pedido->setId_negocio($id_negocio);
-        $pedido->setFecha_hora($fecha_hora);
-        $pedido->setTotal($total);
-        $pedido->setTransporte($transporte);
+        $pedido->setEstado($dPedido->estado);
+        $pedido->setId_usuario($dPedido->id_usuario);
+        $pedido->setId_negocio($dPedido->id_negocio);
+        $pedido->setFecha_hora((new DateTime(now()))->format('Y-m-d H:i:s'));
+        $pedido->setTotal($dPedido->total);
+        $pedido->setTransporte($dPedido->transporte);
         if ($pedido->agregar()) {
-            
-            
-            
-            
-            
-            
-            
-            
-            
             mandarRespuesta(false, 'Se realizó un pedido con exito');
         } else {
             mandarRespuesta(true, 'No se pudo procesar el pedido');
