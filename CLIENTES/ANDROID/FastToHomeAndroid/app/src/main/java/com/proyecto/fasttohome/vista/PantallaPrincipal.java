@@ -100,7 +100,7 @@ public class PantallaPrincipal extends AppCompatActivity {
                     direccion.setCodigo_postal(datos.getInt("CP"));
                     direccion.setOtros(datos.getString("Otros"));
                     direccion.setCoordenadas(datos.getString("Coordenadas"));
-                    direccion.setId_direccion(datos.getInt("direccion_id"));
+                    direccion.setId_direccion(datos.getInt("id"));
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaPrincipal.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
