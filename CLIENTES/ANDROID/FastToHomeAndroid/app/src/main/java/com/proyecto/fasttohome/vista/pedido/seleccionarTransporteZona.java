@@ -43,7 +43,7 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
         mMap.addMarker(new MarkerOptions()
                 .position(sydney)
                 .title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,20F));
 
     }
 }
