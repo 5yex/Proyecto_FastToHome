@@ -248,7 +248,7 @@ public class DialogoDireccion extends javax.swing.JDialog implements Constantes{
             String otros = varOtros.getText();
             String coordenadas = tfCoordenadas.getText();
             
-            if(coordenadas.length() > 0 && !validaciones.validar(coordenas, PAT)){
+            if(coordenadas.length() > 0 && !validaciones.validar(coordenadas, PATRON_COORDENADAS)){
             }
             
             if (calle.length() == 0 || ciudad.length() == 0 || num <= 0 || (cp <= 0 && cp >= 99999)) {
