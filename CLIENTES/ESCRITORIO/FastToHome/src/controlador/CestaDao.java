@@ -28,20 +28,20 @@ public class CestaDao {
             for (int i = 0; i < jsonArray.size(); i++) {
                 Cesta cesta = new Cesta();
 
-                JsonObject usuarioJson = jsonArray.get(i).getAsJsonObject();
+                JsonObject cestaJson = jsonArray.get(i).getAsJsonObject();
 
-                cesta.setId(usuarioJson.get("id").getAsInt());
-                cesta.setDni(usuarioJson.get("Dni").getAsString());
-                cesta.setEmail(usuarioJson.get("Email").getAsString());
-                cesta.setId(usuarioJson.get("id").getAsInt());
-                if (!usuarioJson.get("direccion_id").isJsonNull()) {
-                    cesta.setId_direccion(usuarioJson.get("direccion_id").getAsInt());
+                cesta.setId(cestaJson.get("id").getAsInt());
+                cesta.setDni(cestaJson.get("Dni").getAsString());
+                cesta.setEmail(cestaJson.get("Email").getAsString());
+                cesta.setId(cestaJson.get("id").getAsInt());
+                if (!cestaJson.get("direccion_id").isJsonNull()) {
+                    cesta.setId_direccion(cestaJson.get("direccion_id").getAsInt());
                 }
-                cesta.setNombre(usuarioJson.get("Nombre").getAsString());
-                cesta.setApellidos(usuarioJson.get("apellidos").getAsString());
-                cesta.setPassword(usuarioJson.get("password").getAsString());
-                cesta.setRol(usuarioJson.get("Rol").getAsString());
-                cesta.setTlf(usuarioJson.get("tlf").getAsString());
+                cesta.setNombre(cestaJson.get("Nombre").getAsString());
+                cesta.setApellidos(cestaJson.get("apellidos").getAsString());
+                cesta.setPassword(cestaJson.get("password").getAsString());
+                cesta.setRol(cestaJson.get("Rol").getAsString());
+                cesta.setTlf(cestaJson.get("tlf").getAsString());
 
                 listaUsuarios.add(cesta);
 
