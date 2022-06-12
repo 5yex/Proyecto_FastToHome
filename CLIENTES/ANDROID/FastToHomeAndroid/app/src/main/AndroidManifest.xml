@@ -48,6 +48,11 @@
             android:value="true" />
 
         <activity
+        android:name=".vista.pedido.seleccionarTransporteZona"
+        android:exported="false"
+        android:label="Medio de Transporte"
+         />
+        <activity
             android:name=".vista.pedido.SeleccionarProductos"
             android:exported="false"
             android:label="@string/title_activity_seleccionar_productos"
