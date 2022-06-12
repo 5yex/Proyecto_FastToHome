@@ -178,8 +178,8 @@ class Producto extends Conexion{
         
         $sentencia = $this->dblink->prepare($sql);
 
-        $id_negocio = $this->getId_producto();
-        $sentencia->bindParam(":id_prod", $this->id_producto);
+        $id_producto = $this->getId_producto();
+        $sentencia->bindParam(":id_prod", $id_producto);
 
         $sentencia->execute();
         
