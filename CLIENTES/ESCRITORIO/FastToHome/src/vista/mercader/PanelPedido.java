@@ -143,7 +143,7 @@ public class PanelPedido extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(numPedido)
-                        .addGap(8, 8, 8))
+                        .addGap(1, 1, 1))
                     .addComponent(estadoActualPedido, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(tipoTransporte, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
