@@ -42,7 +42,7 @@ public class ProductoDao {
      */
     public static ArrayList<Producto> seleccionProductosNegocio(Negocio negocio) {
         Negocio ne =  new Negocio();
-        ne.setId_negocio(1);
+        ne.setId_negocio(negocio.getId_negocio());
         negocio = ne;
         System.err.println(negocio.getJSON());
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("obtener_productos_negocio", negocio.getJSON()));
