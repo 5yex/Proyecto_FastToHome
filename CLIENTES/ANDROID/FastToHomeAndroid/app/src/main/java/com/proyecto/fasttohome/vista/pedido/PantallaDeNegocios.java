@@ -150,6 +150,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
         irPrincipal();
     }
 
+    @Override
     public void onBackPressed() {
         irPrincipal();
     }
