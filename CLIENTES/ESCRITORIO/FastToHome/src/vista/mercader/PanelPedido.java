@@ -284,8 +284,8 @@ public class PanelPedido extends javax.swing.JPanel {
         ArrayList<Cesta> cesta;
         cesta = CestaDao.obtenerContenidoCestaPedido(pedido);
         DefaultListModel listaModeloCesta = new DefaultListModel();
-        listaModeloCesta.setSize(cesta.size());
-        listaModeloCesta.removeAllElements();
+        /*listaModeloCesta.setSize(cesta.size());
+        listaModeloCesta.removeAllElements();*/
         
         for (Cesta elementoCesta : cesta) {
             Producto producto = new Producto();
