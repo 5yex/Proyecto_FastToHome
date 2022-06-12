@@ -38,9 +38,9 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            categoria = (TextView) itemView.findViewById(R.id.tvCategoriaNegocio);
             nombre = (TextView) itemView.findViewById(R.id.tvNombreNegocio);
             image = (ImageView) itemView.findViewById(R.id.imagenNegocio);
-            categoria = (TextView) itemView.findViewById(R.id.tvCategoriaNegocio);
 
             pedir = (Button) itemView.findViewById(R.id.pedir);
             info = (Button) itemView.findViewById(R.id.infoNeg);
@@ -83,7 +83,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
         Negocio negocioActual = listaNegocios.get(position);
         holder.nombre.setText(negocioActual.getNombre());
         System.err.println(categorias.size());
-       // holder.categoria.setText(categorias.size());
+        holder.categoria.setText(categorias.size());
         holder.usuario = usuario;
         holder.pedido = pedido;
         holder.negocio = negocioActual;
