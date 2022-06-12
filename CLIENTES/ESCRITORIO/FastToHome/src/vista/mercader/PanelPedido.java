@@ -12,6 +12,8 @@ import javax.annotation.processing.SupportedSourceVersion;
 import javax.lang.model.SourceVersion;
 import javax.swing.JButton;
 import javax.swing.JMenu;
+import modelo.Direccion;
+import modelo.Usuario;
 import modelo.Pedido;
 import modelo.Producto;
 
@@ -240,5 +242,5 @@ public class PanelPedido extends javax.swing.JPanel {
     public void cargaDireccionPedido(){
         Direccion direccion = DireccionDao.obtenerDireccionUsuario(new Usurio(pedido.getId_usuario()));
     
-    
+    }
 }
