@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -146,6 +147,10 @@ public class PantallaDeNegocios extends AppCompatActivity {
 
     private void onErrorResponse(VolleyError error) {
         Toast.makeText(PantallaDeNegocios.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
+        irPrincipal();
+    }
+
+    public void onBackPressed() {
         irPrincipal();
     }
 
