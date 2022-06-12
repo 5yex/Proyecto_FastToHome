@@ -36,7 +36,7 @@ public class ComprobarZona extends FragmentActivity implements OnMapReadyCallbac
     private GoogleMap mMap;
     private ActivityComprobarZonaBinding binding;
     Usuario user;
-
+    But
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
