@@ -15,16 +15,19 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.databinding.ActivityComprobarZonaBinding;
+import com.proyecto.fasttohome.modelo.Usuario;
 
 public class ComprobarZona extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private ActivityComprobarZonaBinding binding;
+    Usuario user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        user = (Usuario) getIntent().getExtras().getSerializable("user");
+        System.out.println(user.getJSON);
         binding = ActivityComprobarZonaBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
