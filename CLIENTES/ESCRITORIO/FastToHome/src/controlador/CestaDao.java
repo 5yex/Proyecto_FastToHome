@@ -21,7 +21,7 @@ public class CestaDao {
         
         JsonArray jsonArray = gestion.consultaSeleccion(new Peticion("contenido_cesta_pedido", pedido.getJSON()));
 
-        ArrayList<Cesta> contenidoCesta = new ArrayList<Cesta>();
+        ArrayList<Cesta> contenidoCesta = new ArrayList<>();
 
         if (jsonArray != null) {
             for (int i = 0; i < jsonArray.size(); i++) {
