@@ -46,22 +46,26 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
     }
 
     @Override
-    protected void onResume() {
+    public void onResume() {
+        mapView.onResume();
         super.onResume();
     }
 
     @Override
-    protected void onPause() {
+    public void onPause() {
         super.onPause();
+        mapView.onPause();
     }
 
     @Override
-    protected void onDestroy() {
+    public void onDestroy() {
         super.onDestroy();
+        mapView.onDestroy();
     }
 
     @Override
     public void onLowMemory() {
         super.onLowMemory();
+        mapView.onLowMemory();
     }
 }
