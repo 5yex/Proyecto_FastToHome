@@ -84,7 +84,6 @@ public class ProductoDao {
         //hacemos una petición con el comando que deberá realizar el php, y los datos en json    
         Peticion peticion = new Peticion("obtener_datos_producto", json);
         //mandamos la peticion como consulta selección para obtener valores
-        
         JsonObject productoJson = gestion.consultaSeleccionUnico(peticion);
                 Producto producto = new Producto();
                 producto.setId_producto(productoJson.get("id").getAsInt());
