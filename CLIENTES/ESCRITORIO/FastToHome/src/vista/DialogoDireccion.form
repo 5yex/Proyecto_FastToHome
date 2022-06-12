@@ -195,9 +195,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="tfCoordenadas">
-      <Events>
-        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="tfCoordenadasFocusLost"/>
-      </Events>
     </Component>
   </SubComponents>
 </Form>

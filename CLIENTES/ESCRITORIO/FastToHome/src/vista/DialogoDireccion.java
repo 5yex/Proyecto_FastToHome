@@ -8,6 +8,8 @@ import java.io.IOException;
 import javax.swing.ImageIcon;
 import javax.swing.JDialog;
 import modelo.Direccion;
+import util.Constantes;
+import util.validaciones;
 
 /**
  * Clase que representa el diálogo de dirección
@@ -120,12 +122,6 @@ public class DialogoDireccion extends javax.swing.JDialog {
 
         labelCoordenadas.setText("Coordenadas:");
 
-        tfCoordenadas.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                tfCoordenadasFocusLost(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -220,10 +216,6 @@ public class DialogoDireccion extends javax.swing.JDialog {
             this.dispose();
         }
     }//GEN-LAST:event_aceptarActionPerformed
-
-    private void tfCoordenadasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfCoordenadasFocusLost
-        
-    }//GEN-LAST:event_tfCoordenadasFocusLost
     
     /**
      * Rellena los campos del DiálogoDireccion si la dirección no es nula
@@ -255,15 +247,16 @@ public class DialogoDireccion extends javax.swing.JDialog {
             String otros = varOtros.getText();
             String coordenadas = tfCoordenadas.getText();
 
-            if (calle.length() == 0 || ciudad.length() == 0) {
+            if (calle.length() == 0 || ciudad.length() == 0 || num <= 0 || (cp <= 0 && cp >= 99999)) {
                 throw new IOException("Solo puedes dejar sin rellenar las coordenadas");
-            } else{
+            } else if (){
                 direccion.setCalle(calle);
                 direccion.setCiudad(ciudad);
                 direccion.setCodigo_postal(cp);
                 direccion.setNumero(num);
                 direccion.setOtros(otros);
                 direccion.setValida(true);
+            }else{
             }
 
         } catch (NumberFormatException ex) {
