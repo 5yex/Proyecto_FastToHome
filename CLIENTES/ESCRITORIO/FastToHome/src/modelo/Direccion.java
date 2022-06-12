@@ -62,7 +62,7 @@ public class Direccion {
      * 
      * @since 1.0
      */
-    private int coordenadas;
+    private String coordenadas;
     
     /**
      * Dirección valida
