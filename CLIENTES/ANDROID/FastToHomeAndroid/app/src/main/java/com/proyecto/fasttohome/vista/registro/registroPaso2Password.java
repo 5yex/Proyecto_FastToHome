@@ -49,7 +49,7 @@ public class registroPaso2Password extends AppCompatActivity {
         //getSupportActionBar().hide();
         setContentView(R.layout.activity_registro_paso_password);
 
-        boton = findViewById(R.id.buttonUsuario);
+
         user = (Usuario) getIntent().getExtras().getSerializable("user");
         funcion = getIntent().getExtras().getString("funcion");
         direccion = (Direccion) getIntent().getExtras().getSerializable("direccion");
@@ -57,6 +57,7 @@ public class registroPaso2Password extends AppCompatActivity {
         textoActualizar =  findViewById(R.id.textoActualizar);
         password = findViewById(R.id.etPasswordR);
         passwordConfirm = findViewById(R.id.etPasswordConfirmR);
+        boton = findViewById(R.id.buttonPassword);
 
         if (funcion.equals("update")) {
             boton.setText("Actualizar Contraseña");
