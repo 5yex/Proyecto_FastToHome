@@ -53,8 +53,7 @@ public class PantallaLogin extends AppCompatActivity {
         if (getIntent().getExtras() != null) {
             email.setText(getIntent().getExtras().getString("email"));
         }
-
-
+        leerCuentaGuardada();
     }
 
     public void irPrincipal() {
