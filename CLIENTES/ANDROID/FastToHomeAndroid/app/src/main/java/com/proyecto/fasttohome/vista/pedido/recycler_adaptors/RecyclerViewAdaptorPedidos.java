@@ -91,7 +91,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
         obtenerProductosNegocio(holder.contexto, pedidoActual,holder);
         obtenerCestaPedido(holder.contexto, pedidoActual,holder);
         holder.marcarRecibido.setOnClickListener(view -> {
-
+            setPedidoRecibido(holder.contexto, pedidoActual,holder);
         });
         /*
         holder.nombre.setText(negocioActual.getNombre());
@@ -209,7 +209,6 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
                         producto.setPrecio(Double.parseDouble(objetoProductoJSon.get("Precio").toString()));
                         productos.put(producto.getId_producto(), producto);
                     }
-
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(contexto, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
