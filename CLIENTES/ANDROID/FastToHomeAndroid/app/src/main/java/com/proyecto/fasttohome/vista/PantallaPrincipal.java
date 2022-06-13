@@ -175,7 +175,7 @@ public class PantallaPrincipal extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(PantallaPrincipal.this);
-        builder.setTitle("ATENCIÓN").setMessage("Si sales de aquí, cerrarás la sesión y tendrás que iniciar sesión de nuevo, ¿Seguro que quieres salir?");
+        builder.setTitle("ATENCIÓN").setMessage("¿Seguro que quieres salir?");
         builder.setNegativeButton("SEGUIR AQUÍ",null);
         builder.setNeutralButton("SALIR DE LA APLICAIÓN",(dialogInterface, i) -> {
             System.exit(0);
