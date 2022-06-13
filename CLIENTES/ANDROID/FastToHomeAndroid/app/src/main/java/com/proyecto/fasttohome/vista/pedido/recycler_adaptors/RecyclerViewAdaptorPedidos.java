@@ -61,6 +61,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
     }
 
     private List<Pedido> listaPedidos;
+    private HashMap<Integer, Producto> productos;
     private Usuario usuario;
     public RecyclerViewAdaptorPedidos(List<Pedido> listaPedidos, Usuario usuario) {
         this.listaPedidos = listaPedidos;
@@ -170,11 +171,6 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
                         producto.setNombre(objetoProductoJSon.get("Nombre").toString());
                         producto.setDescripcion(objetoProductoJSon.get("Descripcion").toString());
                         producto.setPrecio(Double.parseDouble(objetoProductoJSon.get("Precio").toString()));
-                        try{
-                            String imgUrl = getString(R.string.imgUrl) + objetoProductoJSon.getString("url");
-                            producto.setUrl_imagen(imgUrl);
-                        }catch (Exception e){
-                        }
                         productos.put(producto.getId_producto(), producto);
                     }
 
