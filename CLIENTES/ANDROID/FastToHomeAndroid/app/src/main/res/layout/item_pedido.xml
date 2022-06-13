@@ -52,7 +52,7 @@
                 tools:layout_editor_absoluteY="101dp" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/marcarRecibidoPedido"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="MARCAR COMO RECIBIDO"

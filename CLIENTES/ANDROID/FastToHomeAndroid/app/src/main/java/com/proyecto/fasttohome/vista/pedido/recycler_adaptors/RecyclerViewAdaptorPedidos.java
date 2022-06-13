@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Categoria;
+import com.proyecto.fasttohome.modelo.Cesta;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.modelo.Usuario;
@@ -27,7 +28,7 @@ import java.util.List;
 public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerViewAdaptorPedidos.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView nombre, categoria;
+        private TextView fechaPedido, numeroPedido,estadoPedido;
         private ImageView image;
         private Usuario usuario;
         private Negocio negocio;
@@ -35,24 +36,20 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
         private Button pedir, info;
         private Context contexto;
 
-
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            categoria = (TextView) itemView.findViewById(R.id.tvCategoriaNegocio);
-            nombre = (TextView) itemView.findViewById(R.id.tvNombreNegocio);
-            image = (ImageView) itemView.findViewById(R.id.imagenNegocio);
-
-            pedir = (Button) itemView.findViewById(R.id.pedir);
-            info = (Button) itemView.findViewById(R.id.infoNeg);
+            fechaPedido = itemView.findViewById(R.id.fechaPedido);
+            numeroPedido = itemView.findViewById(R.id.numeroPedido);
+            estadoPedido = itemView.findViewById(R.id.estadoPedido);
             contexto = itemView.getContext();
         }
     }
 
-    private List<Negocio> listaNegocios;
-    private HashMap<Integer,Categoria> categorias;
+    private List<Pedido> listaPedidos;
+    private HashMap<Integer, Cesta> productos;
     private Usuario usuario;
     private Pedido pedido;
-    public RecyclerViewAdaptorPedidos(List<Negocio> listaNegocios, Usuario usuario, Pedido pedido, HashMap<Integer,Categoria> categorias) {
+    public RecyclerViewAdaptorPedidos(List<Pedido> listaPedidos, Usuario usuario, Pedido pedido, HashMap<Integer, Cesta> productos) {
         this.listaNegocios = listaNegocios;
         this.usuario = usuario;
         this.pedido = pedido;
@@ -64,18 +61,21 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_pedido, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
-
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Negocio negocioActual = listaNegocios.get(position);
-        holder.nombre.setText(negocioActual.getNombre());
-        holder.categoria.setText(categorias.get(negocioActual.getId_categoria()).getNombre());
         holder.usuario = usuario;
         holder.pedido = pedido;
         holder.negocio = negocioActual;
+
+
+        /*
+        holder.nombre.setText(negocioActual.getNombre());
+        holder.categoria.setText(categorias.get(negocioActual.getId_categoria()).getNombre());
+
         Picasso.get().load(negocioActual.getUrl_imagen()).into(holder.image);
         holder.info.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(holder.contexto);
@@ -89,7 +89,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
             intent.putExtra("negocio", negocioActual);
             intent.putExtra("pedido", pedido);
             holder.contexto.startActivity(intent);
-        });
+        });*/
     }
 
     @Override
