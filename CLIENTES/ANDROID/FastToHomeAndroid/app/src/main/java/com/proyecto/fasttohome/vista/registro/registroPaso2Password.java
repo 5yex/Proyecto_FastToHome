@@ -60,6 +60,8 @@ public class registroPaso2Password extends AppCompatActivity {
 
         if (funcion.equals("update")) {
             boton.setText("Actualizar Contraseña");
+            campoActualizar.setVisibility(View.VISIBLE);
+            textoActualizar.setVisibility(View.VISIBLE);
         }
 
 
@@ -77,7 +79,7 @@ public class registroPaso2Password extends AppCompatActivity {
                         user.setPassword(BCrypt.hashpw(password.getText().toString(), BCrypt.gensalt(10)));
 
                         if (funcion.equals("update")) {
-
+                            comprobarPass();
                         }
                         if (funcion.equals("registro")) {
                             Intent i = new Intent(this, registroPaso3Direccion.class );
@@ -105,7 +107,7 @@ public class registroPaso2Password extends AppCompatActivity {
         }
     };
 
-    public void comprobarPass(View view) {
+    public void comprobarPass() {
         //String url = "http://10.0.2.2/php/webService/api.php";
         //Url del archivo strings.xml
         String url = getString(R.string.apiUrl);
@@ -122,19 +124,6 @@ public class registroPaso2Password extends AppCompatActivity {
                     user.setId(datos.getInt("id"));
                     if(BCrypt.checkpw(password.getText().toString(),user.getPassword())){
                        actualizarDatos();
-
-
-
-
-
-
-
-
-
-
-                        Intent i = new Intent(this, PantallaLogin.class );
-                        i.putExtra("email",user.getEmail());
-                        startActivity(i);
                     }else {
                         Toast.makeText(registroPaso2Password.this, "Tu contraseña es incorrecta", Toast.LENGTH_SHORT).show();
                     }

@@ -61,6 +61,7 @@ public class PantallaLogin extends AppCompatActivity {
     public void irRegistro(View view) {
         Intent i = new Intent(this, registroPaso1DatosUsuario.class );
         i.putExtra("funcion","registro");
+        i.putExtra("user", user);
         startActivity(i);
     };
 
@@ -88,7 +89,6 @@ public class PantallaLogin extends AppCompatActivity {
                         Toast.makeText(PantallaLogin.this, "Has iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
 
                         irPrincipal();
-                        //todo: Ir a siguiente pantalla
 
                     }else {
                         Toast.makeText(PantallaLogin.this, "Tu contraseña es incorrecta", Toast.LENGTH_SHORT).show();

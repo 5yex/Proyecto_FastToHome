@@ -55,12 +55,9 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         email = findViewById(R.id.ediTextemail);
         titulo = findViewById(R.id.titleDatosUsuarios);
         boton = findViewById(R.id.buttonUsuario);
-        user = (Usuario) getIntent().getExtras().getSerializable("user");
         funcion = getIntent().getExtras().getString("funcion");
-
-        System.out.println(funcion+" "+user.getJSON());
-
         if (funcion.equals("update")) {
+            user = (Usuario) getIntent().getExtras().getSerializable("user");
             titulo.setText("Actualizar Datos:");
             nombre.setText(user.getNombre());
             apellidos.setText(user.getApellidos());
