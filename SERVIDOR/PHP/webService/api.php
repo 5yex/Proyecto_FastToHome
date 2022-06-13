@@ -684,7 +684,6 @@ I/System.out:                 )*/
         
         foreach ($datos[1]as $value) {
             $producto->setCantidad($value->cantidad);
-            $producto->setId_pedido($value->id_pedido);
             $producto->setId_producto($value->id_producto);
             print_r($producto);
             $producto->agregar();
