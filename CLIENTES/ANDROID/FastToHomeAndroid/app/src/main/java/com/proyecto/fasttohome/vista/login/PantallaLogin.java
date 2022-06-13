@@ -125,6 +125,8 @@ public class PantallaLogin extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt("user_id",user.getId());
         editor.putString("hash",user.getPassword());
+        editor.commit();
+
         editor.apply();
     }
 
