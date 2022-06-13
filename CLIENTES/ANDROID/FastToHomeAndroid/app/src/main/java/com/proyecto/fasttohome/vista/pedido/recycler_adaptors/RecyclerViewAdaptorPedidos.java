@@ -3,6 +3,7 @@ package com.proyecto.fasttohome.vista.pedido.recycler_adaptors;
 import static com.proyecto.fasttohome.util.Texto.leftPad;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +29,7 @@ import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Producto;
 import com.proyecto.fasttohome.modelo.Usuario;
+import com.proyecto.fasttohome.vista.PantallaPrincipal;
 import com.proyecto.fasttohome.vista.pedido.PantallaDePedidos;
 import com.proyecto.fasttohome.vista.pedido.SeleccionarProductos;
 
@@ -120,7 +122,9 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
                 if ((resp.getBoolean("error")) == true) {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
-                   
+                    Intent i = new Intent(contexto, PantallaPrincipal.class);
+                    i.putExtra("user", usuario);
+                    contexto.startActivity(i);
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(contexto, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -131,7 +135,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("DATA", new Peticion("contenido_cesta_pedido", pedido.getJSON()).getJSON());
+                params.put("DATA", new Peticion("actualizar_estado_pedido", pedido.getJSON()).getJSON());
                 return params;
             }
         };
