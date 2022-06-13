@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -19,7 +20,6 @@ import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.vista.login.PantallaLogin;
-import com.proyecto.fasttohome.vista.pedido.SeleccionarProductos;
 import com.proyecto.fasttohome.vista.pedido.seleccionarTransporteZona;
 
 import org.json.JSONException;
@@ -33,6 +33,7 @@ public class PantallaPrincipal extends AppCompatActivity {
     private Usuario user;
     private Direccion direccion;
     private RequestQueue queue;
+    private TextView nombre, apellidos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,9 @@ public class PantallaPrincipal extends AppCompatActivity {
         user = (Usuario) getIntent().getExtras().getSerializable("user");
         direccion = new Direccion();
         obtenerDatosUsuario();
+        nombre = findViewById(R.id.nombreUser);
+
+        //obtener_pedidos_cliente
     }
 
     public void obtenerDatosUsuario() {
