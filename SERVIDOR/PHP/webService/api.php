@@ -675,6 +675,7 @@ function hacerPedido($datos){
             print_r($producto);
             $producto->agregar();
         }
+        $pedido->setId_pedido($id_pedido);
         $pedido->setEstado("pagado");
         $pedido->actualizacionEstadoPedido();
         mandarRespuesta(false, 'Se realizó un pedido con exito');
