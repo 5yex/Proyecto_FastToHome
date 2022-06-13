@@ -83,8 +83,7 @@ public class PantallaDePedidos extends AppCompatActivity {
                     rellenarRecyclerView();
                 }
             } catch (JSONException | VolleyError e) {
-                Toast.makeText(PantallaDePedidos.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                finish();
+                Toast.makeText(PantallaDePedidos.this, "No hay ningún pedido", Toast.LENGTH_SHORT).show();
             }
         }, this::onErrorResponse) {
             @Override
