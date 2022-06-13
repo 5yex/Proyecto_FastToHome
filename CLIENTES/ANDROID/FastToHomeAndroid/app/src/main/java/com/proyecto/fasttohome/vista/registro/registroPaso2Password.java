@@ -136,7 +136,6 @@ public class registroPaso2Password extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                user = new Usuario();
                 params.put("DATA", new Peticion("getHash", user.getJSON()).getJSON());
                 return params;
             }
