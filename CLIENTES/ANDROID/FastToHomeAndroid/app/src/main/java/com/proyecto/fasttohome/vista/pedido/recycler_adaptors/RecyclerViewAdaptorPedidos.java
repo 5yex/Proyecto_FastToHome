@@ -31,7 +31,6 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
         private TextView fechaPedido, numeroPedido,estadoPedido;
         private ImageView image;
         private Usuario usuario;
-        private Negocio negocio;
         private Pedido pedido;
         private Button pedir, info;
         private Context contexto;
@@ -66,10 +65,10 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Negocio negocioActual = listaNegocios.get(position);
+        Pedido pedidoActual = listaPedidos.get(position);
         holder.usuario = usuario;
-        holder.pedido = pedido;
-        holder.negocio = negocioActual;
+        holder.pedido = pedidoActual;
+
 
 
         /*
