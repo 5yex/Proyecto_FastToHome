@@ -87,7 +87,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
         holder.fechaPedido.setText(pedidoActual.getFecha_hora());
         holder.estadoPedido.setText(pedidoActual.getEstado());
         obtenerProductosNegocio(holder.contexto, pedidoActual,holder);
-
+        obtenerCestaPedido(holder.contexto, pedidoActual,holder);
 
         /*
         holder.nombre.setText(negocioActual.getNombre());
@@ -128,7 +128,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
                         product.setId_cesta(obj.getInt("id"));
                         product.setId_pedido(obj.getInt("id_pedido "));
                         product.setId_producto(obj.getInt("id_producto "));
-                        product.setCantidad(obj.getInt(""));
+                        product.setCantidad(obj.getInt("Cantidad"));
                     }
                     ArrayList<String> lista = new ArrayList<>();
                     for (Cesta product: listaProductosCesta) {
