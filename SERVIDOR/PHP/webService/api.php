@@ -679,9 +679,10 @@ I/System.out:                 )*/
         
         
         $idPedido = $pedido->agregarConId()[0]->last_id;
+        $producto = new Cesta();
+        $producto->setId_pedido($idPedido);
         
         foreach ($datos[1]as $value) {
-            $producto = new Cesta();
             $producto->setCantidad($value->cantidad);
             $producto->setId_pedido($value->id_pedido);
             $producto->setId_producto($value->id_producto);
