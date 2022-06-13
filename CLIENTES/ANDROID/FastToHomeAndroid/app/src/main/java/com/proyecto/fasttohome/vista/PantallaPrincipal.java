@@ -22,6 +22,7 @@ import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.vista.login.PantallaLogin;
 import com.proyecto.fasttohome.vista.pedido.PantallaDePedidos;
 import com.proyecto.fasttohome.vista.pedido.seleccionarTransporteZona;
+import com.proyecto.fasttohome.vista.registro.registroPaso1DatosUsuario;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -141,6 +142,12 @@ public class PantallaPrincipal extends AppCompatActivity {
         Intent i = new Intent(this, PantallaDePedidos.class );
         i.putExtra("user",user);
         i.putExtra("direccion",direccion);
+        startActivity(i);
+    }
+
+    public void pasarPantallaActualizarDatos(View view){
+        Intent i = new Intent(this, registroPaso1DatosUsuario.class );
+        i.putExtra("funcion","update");
         startActivity(i);
     }
     @Override
