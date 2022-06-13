@@ -92,4 +92,8 @@ public class Pedido implements Serializable {
     public void setTransporte(String transporte) {
         this.transporte = transporte;
     }
+
+    public String getJSON() {
+        return new Gson().toJson(this);
+    }
 }
