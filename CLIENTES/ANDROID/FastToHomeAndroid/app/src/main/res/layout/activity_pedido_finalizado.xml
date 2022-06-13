@@ -8,8 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="398dp"
-        android:layout_height="123dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
         android:background="@color/principalFastToHome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,15 +33,16 @@
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="384dp"
+        android:layout_width="319dp"
         android:layout_height="29dp"
         android:text="@string/pedido_finalizado_info"
         android:textAlignment="textEnd"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="276dp" />
+        tools:layout_editor_absoluteY="225dp" />
 
     <TextView
         android:id="@+id/textView11"
@@ -55,5 +56,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="168dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="96dp"
+        android:text="VOLVER"
+        android:textSize="20sp"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
