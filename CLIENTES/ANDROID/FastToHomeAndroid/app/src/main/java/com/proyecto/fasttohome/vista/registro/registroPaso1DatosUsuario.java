@@ -22,7 +22,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
     EditText dni;
     EditText telefono;
     EditText email;
-    String funcion
+    String funcion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,8 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         dni = findViewById(R.id.etDni);
         telefono = findViewById(R.id.etTelefono);
         email = findViewById(R.id.ediTextemail);
+
+
     }
 
 
