@@ -126,7 +126,8 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
                         JSONObject obj = arrayDeJson.getJSONObject(i);
                         Cesta product = new Cesta();
                         product.setId_cesta(obj.getInt("id"));
-                        product.setId_pedido(obj.getInt());
+                        product.setId_pedido(obj.getInt("id_pedido "));
+                        product.setId_producto(obj.getInt(""));
                     }
                     ArrayList<String> lista = new ArrayList<>();
                     for (Cesta product: listaProductosCesta) {
