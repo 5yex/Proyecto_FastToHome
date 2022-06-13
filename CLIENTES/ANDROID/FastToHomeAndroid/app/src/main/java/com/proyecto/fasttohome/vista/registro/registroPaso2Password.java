@@ -123,7 +123,7 @@ public class registroPaso2Password extends AppCompatActivity {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
                     user.setPassword(datos.getString("password"));
                     user.setId(datos.getInt("id"));
-                    if(BCrypt.checkpw(password.getText().toString(),user.getPassword())){
+                    if(BCrypt.checkpw(campoActualizar.getText().toString(),user.getPassword())){
                        actualizarDatos();
                     }else {
                         Toast.makeText(registroPaso2Password.this, "Tu contraseña es incorrecta", Toast.LENGTH_SHORT).show();
