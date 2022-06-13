@@ -85,7 +85,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
         Pedido pedidoActual = listaPedidos.get(position);
         holder.usuario = usuario;
         holder.pedido = pedidoActual;
-        holder.numeroPedido.setText(pedidoActual.getId_pedido());
+        holder.numeroPedido.setText("Num: "+pedidoActual.getId_pedido());
         holder.fechaPedido.setText(pedidoActual.getFecha_hora());
         holder.estadoPedido.setText(pedidoActual.getEstado());
         obtenerProductosNegocio(holder.contexto, pedidoActual,holder);
