@@ -119,10 +119,10 @@ public class PantallaLogin extends AppCompatActivity {
     }
 
     public void leerCuentaGuardada(){
-        user = new Usuario();
         SharedPreferences sharedPreferences = getSharedPreferences("fasttohome", MODE_PRIVATE);
-        user.setId(sharedPreferences.getInt("user_id",0));
-        user.setPassword(sharedPreferences.getString("hash",null));
+        int userId =sharedPreferences.getInt("user_id",0);
+        String hash = sharedPreferences.getString("hash",null);
+        if(userid == null | userId ==0 | )
     }
 
     public void salvarCuenta(Usuario user) {
