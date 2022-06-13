@@ -51,7 +51,7 @@ public class PantallaDePedidos extends AppCompatActivity {
         //RECEPCION DEL ACTIVITY ANTERIOR
         usuario = (Usuario) getIntent().getExtras().getSerializable("user");
 
-        recyclerViewPedidos = (RecyclerView) findViewById(R.id.recyclerNegocios);
+        recyclerViewPedidos = (RecyclerView) findViewById(R.id.recyclerPedidos);
         recyclerViewPedidos.setLayoutManager(new LinearLayoutManager(this));
 
         obtenerPedidos();
