@@ -59,7 +59,6 @@ public class PantallaPrincipal extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         obtenerDatosUsuario();
-        obtenerDireccionUsuario();
     }
 
 
