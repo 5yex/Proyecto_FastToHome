@@ -655,6 +655,7 @@ function obtenerUsuariosMercader(){
 
 function hacerPedido($datos){
     require_once '../modelo/Pedido.php';
+    require_once '../modelo/Cesta.php';
     
     try{
         
@@ -677,7 +678,10 @@ function hacerPedido($datos){
         $pedido->setTransporte($dPedido->transporte);
         
         
-        print_r($pedido->agregarConId()[0]->last_id);
+        $idPedido = $pedido->agregarConId()[0]->last_id;
+        
+        
+        
         
 //        if ($pedido->agregar()) {
 //            mandarRespuesta(false, 'Se realizó un pedido con exito');
