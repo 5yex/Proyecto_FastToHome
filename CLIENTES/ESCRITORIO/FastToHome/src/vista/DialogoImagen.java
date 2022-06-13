@@ -101,7 +101,6 @@ public class DialogoImagen extends javax.swing.JDialog {
             }
         });
 
-        jLabel1.setBackground(new java.awt.Color(204, 255, 204));
         jLabel1.setBorder(new FlatButtonBorder());
         jLabel1.setOpaque(true);
 
