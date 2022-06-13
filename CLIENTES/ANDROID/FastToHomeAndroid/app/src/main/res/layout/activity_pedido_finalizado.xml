@@ -10,7 +10,23 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="154dp" />
+        android:text="@string/pedido_finalizado_exito"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="137dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pedido_finalizado_gracias"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="260dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pedido_finalizado_info"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="389dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
