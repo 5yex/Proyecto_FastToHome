@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="controlador">
+  <ClassDiagramComponents>
+    <Class name="CategoriaDao" package="controlador" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="nuevaCategoria" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Categoria" name="categoria"/>
+        </Method>
+        <Method name="obtenerCategorias" returnType="ArrayList&lt;Categoria&gt;" visibility="public" isStatic="true"/>
+        <Method name="ObtenerIdPorNombre" returnType="int" visibility="public" isStatic="true">
+          <Argument type="Categoria" name="categoria"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CestaDao" package="controlador" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="obtenerContenidoCestaPedido" returnType="ArrayList&lt;Cesta&gt;" visibility="public" isStatic="true">
+          <Argument type="Pedido" name="pedido"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DireccionDao" package="controlador" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="nuevaDireccion" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Direccion" name="direccion"/>
+        </Method>
+        <Method name="nuevaDireccionDevuelveId" returnType="int" visibility="public" isStatic="true">
+          <Argument type="Direccion" name="direccion"/>
+        </Method>
+        <Method name="obtenerDireccionNegocio" returnType="Direccion" visibility="public" isStatic="true">
+          <Argument type="Negocio" name="negocio"/>
+        </Method>
+        <Method name="obtenerDireccionUsuario" returnType="Direccion" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="actualizarDireccion" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Direccion" name="direccion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="gestion" package="controlador" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="hacerConsulta" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Peticion" name="peticion"/>
+        </Method>
+        <Method name="consultaSeleccionUnico" returnType="JsonObject" visibility="public" isStatic="true">
+          <Argument type="Peticion" name="peticion"/>
+        </Method>
+        <Method name="consultaSeleccion" returnType="JsonArray" visibility="public" isStatic="true">
+          <Argument type="Peticion" name="peticion"/>
+        </Method>
+        <Method name="consultaSeleccionImagen" returnType="String" visibility="public" isStatic="true">
+          <Argument type="Peticion" name="peticion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ImagenDao" package="controlador" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="nuevaImagen" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Imagen" name="imagen"/>
+        </Method>
+        <Method name="nuevaImagenDevuelveId" returnType="int" visibility="public" isStatic="true">
+          <Argument type="Imagen" name="imagen"/>
+        </Method>
+        <Method name="obtenerImagenPorId" returnType="String" visibility="public" isStatic="true">
+          <Argument type="Imagen" name="imagen"/>
+        </Method>
+        <Method name="editarImagenPorId" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Imagen" name="imagen"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="NegocioDao" package="controlador" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="nuevoNegocio" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Negocio" name="negocio"/>
+        </Method>
+        <Method name="negocioDeMercader" returnType="Negocio" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="actualizarNegocio" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Negocio" name="negocio"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PedidoDao" package="controlador" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="seleccionPedidosPagados" returnType="ArrayList&lt;Pedido&gt;" visibility="public" isStatic="true">
+          <Argument type="Negocio" name="negocio"/>
+        </Method>
+        <Method name="seleccionPedidosEnPreparacion" returnType="ArrayList&lt;Pedido&gt;" visibility="public" isStatic="true">
+          <Argument type="Negocio" name="negocio"/>
+        </Method>
+        <Method name="seleccionTodosPedidos" returnType="ArrayList&lt;Pedido&gt;" visibility="public" isStatic="true">
+          <Argument type="Negocio" name="negocio"/>
+        </Method>
+        <Method name="actualizarEstadoPedido" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Pedido" name="pedido"/>
+        </Method>
+        <Method name="obtenerPedido" returnType="Pedido" visibility="public" isStatic="true">
+          <Argument type="Pedido" name="pedido"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProductoDao" package="controlador" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="nuevoProducto" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Producto" name="product"/>
+        </Method>
+        <Method name="seleccionProductosNegocio" returnType="ArrayList&lt;Producto&gt;" visibility="public" isStatic="true">
+          <Argument type="Negocio" name="negocio"/>
+        </Method>
+        <Method name="actualizarProducto" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Producto" name="product"/>
+        </Method>
+        <Method name="borrarProducto" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Producto" name="product"/>
+        </Method>
+        <Method name="obtenerProductoPorId" returnType="Producto" visibility="public" isStatic="true">
+          <Argument type="Producto" name="product"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UsuarioDao" package="controlador" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="nuevoUsuario" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="obtenerIdCliente" returnType="String" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="getHash" returnType="Usuario" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="obtenerDatosUsuario" returnType="Usuario" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="obtenerUsuarioPorSuId" returnType="Usuario" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="actualizarUsuario" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="asignarRolMercader" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="asignarRolAdministrador" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="asignarRolCliente" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="seleccionUsuarios" returnType="ArrayList&lt;Usuario&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="comando_peticion"/>
+        </Method>
+        <Method name="seleccionUsuariosClientes" returnType="ArrayList&lt;Usuario&gt;" visibility="public" isStatic="true"/>
+        <Method name="seleccionUsuariosAdmin" returnType="ArrayList&lt;Usuario&gt;" visibility="public" isStatic="true"/>
+        <Method name="seleccionUsuariosMercader" returnType="ArrayList&lt;Usuario&gt;" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
