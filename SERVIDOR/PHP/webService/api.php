@@ -672,7 +672,6 @@ function hacerPedido($datos){
         foreach ($datos[1]as $value) {
             $producto->setCantidad($value->cantidad);
             $producto->setId_producto($value->id_producto);
-            print_r($producto);
             $producto->agregar();
         }
         $pedido->setId_pedido($id_pedido);
