@@ -146,6 +146,7 @@ public class PantallaLogin extends AppCompatActivity {
 
 
     public void salvarCuenta(Usuario user) {
+        System.out.println("salvarCuenta");
         SharedPreferences sharedPreferences = getSharedPreferences("fasttohome", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("email", user.getEmail());
