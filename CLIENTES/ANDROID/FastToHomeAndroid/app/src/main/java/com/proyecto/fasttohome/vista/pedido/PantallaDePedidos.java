@@ -87,7 +87,7 @@ public class PantallaDePedidos extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("DATA", new Peticion("obtener_todos_negocios", null).getJSON());
+                params.put("DATA", new Peticion("obtener_pedidos_cliente", usuario.getJSON()).getJSON());
                 return params;
             }
         };
