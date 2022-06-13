@@ -55,13 +55,6 @@ public class PantallaPrincipal extends AppCompatActivity {
         //obtener_pedidos_cliente
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        obtenerDatosUsuario();
-    }
-
-
     public void obtenerDatosUsuario() {
         String url = getString(R.string.apiUrl);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
