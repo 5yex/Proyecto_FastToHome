@@ -53,15 +53,15 @@
 
             <ListView
                 android:id="@+id/cestaPedido"
-                android:layout_width="377dp"
-                android:layout_height="107dp"
-                android:layout_marginBottom="24dp"
+                android:layout_width="367dp"
+                android:layout_height="127dp"
+                android:layout_marginBottom="28dp"
                 android:isScrollContainer="true"
                 android:nestedScrollingEnabled="true"
                 android:overScrollMode="always"
                 app:layout_constraintBottom_toTopOf="@+id/marcarRecibidoPedido"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.666"
+                app:layout_constraintHorizontal_bias="0.538"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -72,18 +72,6 @@
                 android:text="MARCAR COMO RECIBIDO"
                 app:layout_constraintBottom_toBottomOf="parent"
                 tools:layout_editor_absoluteX="5dp" />
-
-            <TextView
-                android:id="@+id/nombreNegocioPedido"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:text="TextView"
-                android:textSize="16sp"
-                android:textStyle="bold|italic"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/numeroPedido" />
 
             <TextView
                 android:id="@+id/precioTotalPedido"
