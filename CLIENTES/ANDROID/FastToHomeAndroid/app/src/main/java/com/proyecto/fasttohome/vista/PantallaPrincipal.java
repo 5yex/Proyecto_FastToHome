@@ -51,6 +51,7 @@ public class PantallaPrincipal extends AppCompatActivity {
         obtenerDatosUsuario();
         nombre = findViewById(R.id.nombreUser);
         apellidos = findViewById(R.id.apellidosUser);
+        System.out.println(user.getJSON());
 
         //obtener_pedidos_cliente
     }
