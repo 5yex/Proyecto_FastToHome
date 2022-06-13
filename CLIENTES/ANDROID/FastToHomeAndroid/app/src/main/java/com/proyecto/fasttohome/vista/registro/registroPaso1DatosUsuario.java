@@ -57,7 +57,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         System.out.println(funcion+" "+user.getJSON());
         titulo.setText("sfdfsdf Datos:");
 
-        if (funcion == "update") {
+        if (funcion.equals("update")) {
 
             titulo.setText("Actualizar Datos:");
             nombre.setText(user.getNombre());
