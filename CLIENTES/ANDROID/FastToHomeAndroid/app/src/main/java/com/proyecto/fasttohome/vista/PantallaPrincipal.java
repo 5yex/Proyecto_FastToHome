@@ -110,7 +110,7 @@ public class PantallaPrincipal extends AppCompatActivity {
             System.out.println(response);
             try {
                 JSONObject resp = new JSONObject(response);
-                if (resp.getBoolean("error") == true) {
+                if ((resp.getBoolean("error")) == true) {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
