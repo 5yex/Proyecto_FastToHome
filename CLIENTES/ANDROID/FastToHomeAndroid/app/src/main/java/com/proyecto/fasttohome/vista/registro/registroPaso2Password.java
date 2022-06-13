@@ -41,8 +41,9 @@ public class registroPaso2Password extends AppCompatActivity {
         password = findViewById(R.id.etPasswordR);
         passwordConfirm = findViewById(R.id.etPasswordConfirmR);
 
-        System.err.println(user.getJSON()+direccion.getJSON());
-
+        if (funcion.equals("update")) {
+            boton.setText("Actualizar Contraseña");
+        }
 
 
     }
@@ -58,7 +59,14 @@ public class registroPaso2Password extends AppCompatActivity {
                     if(pass.compareTo(passConfirm) == 0){
                         user.setPassword(BCrypt.hashpw(password.getText().toString(), BCrypt.gensalt(10)));
 
-                        Intent i = new Intent(this, registroPaso3Direccion.class );
+                        if (funcion.equals("update")) {
+
+
+                        }
+                        if (funcion.equals("registro")) {
+
+                        }
+                            Intent i = new Intent(this, registroPaso3Direccion.class );
                         i.putExtra("user", user);
                         i.putExtra("direccion", direccion);
                         i.putExtra("funcion","registro");
