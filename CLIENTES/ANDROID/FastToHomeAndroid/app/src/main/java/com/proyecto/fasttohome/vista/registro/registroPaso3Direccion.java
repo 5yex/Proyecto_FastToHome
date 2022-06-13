@@ -80,7 +80,7 @@ public class registroPaso3Direccion extends AppCompatActivity {
                 direccion.setCiudad(ciudad.getText().toString());
                 direccion.setCalle(calle.getText().toString());
                 direccion.setOtros(otros.getText().toString());
-                direccion.setCoordenadas("");
+                direccion.setCoordenadas(" ");
 
                 System.err.println(user.getJSON() + direccion.getJSON());
                 registerDirecion();
