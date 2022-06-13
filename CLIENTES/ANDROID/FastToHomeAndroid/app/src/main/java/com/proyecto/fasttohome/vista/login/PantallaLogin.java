@@ -43,7 +43,7 @@ public class PantallaLogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        user = new Usuario();
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
 
@@ -92,8 +92,9 @@ public class PantallaLogin extends AppCompatActivity {
                 } else {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
                     if(silent){
-                        if()
-
+                        if(user.getPassword() == datos.getString("password")){
+                            terminarInicioSesion();
+                        }
                     }else{
                         user.setPassword(datos.getString("password"));
                         user.setId(datos.getInt("id"));
@@ -115,7 +116,6 @@ public class PantallaLogin extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                user = new Usuario();
                 if(!silent){
                     user.setEmail(email.getText().toString());
                 }
