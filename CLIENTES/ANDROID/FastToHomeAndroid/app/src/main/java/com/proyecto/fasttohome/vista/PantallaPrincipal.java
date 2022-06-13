@@ -46,6 +46,7 @@ public class PantallaPrincipal extends AppCompatActivity {
         direccion = new Direccion();
         obtenerDatosUsuario();
         nombre = findViewById(R.id.nombreUser);
+        apellidos = findViewById(R.id.apellidosUser);
 
         //obtener_pedidos_cliente
     }
