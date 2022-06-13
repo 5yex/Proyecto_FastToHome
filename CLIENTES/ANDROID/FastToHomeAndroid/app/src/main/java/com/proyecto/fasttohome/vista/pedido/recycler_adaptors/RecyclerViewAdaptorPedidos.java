@@ -94,24 +94,6 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
         holder.marcarRecibido.setOnClickListener(view -> {
             setPedidoRecibido(holder.contexto, pedidoActual,holder);
         });
-        /*
-        holder.nombre.setText(negocioActual.getNombre());
-        holder.categoria.setText(categorias.get(negocioActual.getId_categoria()).getNombre());
-
-        Picasso.get().load(negocioActual.getUrl_imagen()).into(holder.image);
-        holder.info.setOnClickListener(view -> {
-            AlertDialog.Builder builder = new AlertDialog.Builder(holder.contexto);
-            builder.setTitle("INFORMACIÓN DEL NEGOCIO");
-            builder.setMessage(negocioActual.getDescripcion()).show();
-        });
-        holder.pedir.setOnClickListener(view -> {
-            pedido.setId_negocio(negocioActual.getId_negocio());
-            Intent intent = new Intent(holder.contexto, SeleccionarProductos.class);
-            intent.putExtra("user", usuario);
-            intent.putExtra("negocio", negocioActual);
-            intent.putExtra("pedido", pedido);
-            holder.contexto.startActivity(intent);
-        });*/
     }
     public void setPedidoRecibido(Context contexto, Pedido pedido, ViewHolder holder) {
         String url = contexto.getString(R.string.apiUrl);
