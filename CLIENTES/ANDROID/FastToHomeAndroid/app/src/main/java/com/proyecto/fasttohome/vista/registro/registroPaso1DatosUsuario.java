@@ -77,7 +77,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
                 if (validaciones(name, ape, nif, numTelefono, correo)) {
 
                     if (funcion == "update") {
-
+                        actualizarDatos();
                     }
                     if (funcion == "registro") {
                         Intent i = new Intent(this, registroPaso2Password.class);
@@ -156,7 +156,6 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
     }
 
     private void actualizarDatos() {
-        //Obtenemos la url del archivo strings.xml
         String url = getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(registroPaso1DatosUsuario.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
