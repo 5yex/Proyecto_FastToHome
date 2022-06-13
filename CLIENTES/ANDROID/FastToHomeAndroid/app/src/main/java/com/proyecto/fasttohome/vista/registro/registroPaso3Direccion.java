@@ -55,7 +55,6 @@ public class registroPaso3Direccion extends AppCompatActivity {
         otros = findViewById(R.id.etOtros);
         funcion = getIntent().getExtras().getString("funcion");
 
-        System.err.println(user.getJSON()+direccion.getJSON());
 
 
 

@@ -26,6 +26,7 @@
             android:value="${MAPS_API_KEY}" />
         <activity
             android:name=".vista.pedido.PantallaDePedidos"
+            android:label="Seguimiento:"
             android:exported="false" />
         <activity
             android:name=".vista.pedido.PedidoFinalizado"
