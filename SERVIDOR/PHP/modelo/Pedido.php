@@ -200,7 +200,7 @@ class Pedido extends Conexion{
     }
     
     public function obtenerPedidosClientes() {
-        $sql = "SELECT * FROM pedido WHERE id_usuario = :id_user AND estado like 'enviando'";
+        $sql = "SELECT * FROM pedido WHERE id_usuario = :id_user AND estado like 'enviando' OR estado like 'incidencia'";
         
         $sentencia = $this->dblink->prepare($sql);
 
