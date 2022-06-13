@@ -70,6 +70,8 @@ public class PantallaPrincipal extends AppCompatActivity {
                     user.setId_direccion(datos.getInt("direccion_id"));
                     user.setRol(datos.getString("Rol"));
                     user.setTlf(datos.getString("tlf"));
+                    nombre.setText(user.getNombre());
+                    apellidos.setText(user.getApellidos());
                     obtenerDireccionUsuario();
                 }
             } catch (JSONException | VolleyError e) {
