@@ -1,6 +1,7 @@
 package com.proyecto.fasttohome.vista.login;
 
-import static android.app.PendingIntent.getActivity;
+
+import static com.google.android.material.internal.ContextUtils.getActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -120,7 +121,8 @@ public class PantallaLogin extends AppCompatActivity {
     }
 
     public void salvarCuenta() {
-        
+        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+
     }
 
     @Override
