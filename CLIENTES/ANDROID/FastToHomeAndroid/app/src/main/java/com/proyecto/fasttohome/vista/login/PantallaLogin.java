@@ -94,6 +94,7 @@ public class PantallaLogin extends AppCompatActivity {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
                     if(silent){
                         if(user.getPassword().equals(datos.getString("password")) ){
+                            user.setId(datos.getInt("id"));
                             terminarInicioSesion();
                         }
                     }else{
@@ -148,6 +149,7 @@ public class PantallaLogin extends AppCompatActivity {
 
 
     public void salvarCuenta(Usuario user) {
+        //.edit().clear().apply();
         System.out.println("salvarCuenta");
         SharedPreferences sharedPreferences = getSharedPreferences("fasttohome", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
