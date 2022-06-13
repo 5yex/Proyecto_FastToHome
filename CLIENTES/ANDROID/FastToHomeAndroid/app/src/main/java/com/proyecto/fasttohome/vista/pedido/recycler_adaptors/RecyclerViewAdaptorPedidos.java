@@ -98,7 +98,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
         });*/
     }
 
-    public void obtenerProductosNegocio(Context contexto, Negocio negocio) {
+    public void obtenerProductosNegocio(Context contexto, Pedido pedido) {
         listaPedidos = new ArrayList<Pedido>();
         String url = contexto.getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(contexto);
@@ -124,7 +124,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("DATA", new Peticion("obtener_todos_negocios", negocio.getJSON());
+                params.put("DATA", new Peticion("contenido_cesta_pedido", pedido.getJSON()).getJSON());
                 return params;
             }
         };
