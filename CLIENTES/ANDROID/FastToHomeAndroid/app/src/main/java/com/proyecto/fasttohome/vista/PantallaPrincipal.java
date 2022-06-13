@@ -179,6 +179,7 @@ public class PantallaPrincipal extends AppCompatActivity {
         builder.setNegativeButton("SEGUIR AQUÍ",null);
         builder.setNeutralButton("SALIR DE LA APLICAIÓN",(dialogInterface, i) -> {
             finishAndRemoveTask();
+            System.exit(0);
         });
         builder.setPositiveButton("CERRAR SESIÓN", (dialogInterface, i) -> {
             getSharedPreferences("fasttohome", MODE_PRIVATE).edit().clear().apply();
