@@ -28,6 +28,7 @@ import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Producto;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.vista.pedido.PantallaDePedidos;
+import com.proyecto.fasttohome.vista.pedido.SeleccionarProductos;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -107,7 +108,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
     }
 
 
-    public void obtenerProductosNegocio(Context contexto, Pedido pedido, ViewHolder holder) {
+    public void obtenerCestaPedido(Context contexto, Pedido pedido, ViewHolder holder) {
         ArrayList<Producto> listaProductos = new ArrayList<Producto>();
         String url = contexto.getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(contexto);
@@ -123,10 +124,8 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
                         JSONObject objPedidos = arrayDeJson.getJSONObject(i);
 
                     }
-
-
                     ArrayList<String> lista = new ArrayList<>();
-                    for (Producto producto : listaProductos) {
+                    for (Producto : listaProductos) {
                         Producto producto = productos.get(entry.getKey());
                         precioTotal = precioTotal + (producto.getPrecio() * entry.getValue());
                         lista.add(leftPad("€" + producto.getPrecio(), 5) + leftPad("  Uds: " + entry.getValue(), 12) + "  " + producto.getNombre());
@@ -146,6 +145,54 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("DATA", new Peticion("contenido_cesta_pedido", pedido.getJSON()).getJSON());
+                return params;
+            }
+        };
+        queue.add(request);
+    }
+
+    public void obtenerProductosNegocio(Context contexto, Pedido pedido, ViewHolder holder) {
+        productos = new HashMap<>();
+        String url = contexto.getString(R.string.apiUrl);;
+        RequestQueue queue = Volley.newRequestQueue(contexto);
+        StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
+            System.out.println(response);
+            try {
+                JSONObject resp = new JSONObject(response);
+                if ((resp.getBoolean("error")) == true) {
+                    throw new VolleyError(resp.getString("datos"));
+                } else {
+                    JSONArray arrayDeJson = resp.getJSONArray("datos");
+                    for (int i = 0; i < arrayDeJson.length(); i++) {
+                        JSONObject objetoProductoJSon = arrayDeJson.getJSONObject(i);
+                        Producto producto = new Producto();
+                        producto.setId_producto(Integer.parseInt(objetoProductoJSon.get("id").toString()));
+                        producto.setNombre(objetoProductoJSon.get("Nombre").toString());
+                        producto.setDescripcion(objetoProductoJSon.get("Descripcion").toString());
+                        producto.setPrecio(Double.parseDouble(objetoProductoJSon.get("Precio").toString()));
+                        try{
+                            String imgUrl = getString(R.string.imgUrl) + objetoProductoJSon.getString("url");
+                            producto.setUrl_imagen(imgUrl);
+                        }catch (Exception e){
+                        }
+                        productos.put(producto.getId_producto(), producto);
+                    }
+
+                    adaptorProducto = new RecyclerViewAdaptorProducto(productos, productosSeleccionados,pedir);
+                    recyclerViewProducto.setAdapter(adaptorProducto);
+                }
+            } catch (JSONException | VolleyError e) {
+                Toast.makeText(contexto, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        }, error -> {
+            Toast.makeText(contexto, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                Negocio negocio = new Negocio();
+                negocio.setId_negocio(pedido.getId_negocio());
+                params.put("DATA", new Peticion("obtener_productos_negocio", negocio.getJSON()).getJSON());
                 return params;
             }
         };
