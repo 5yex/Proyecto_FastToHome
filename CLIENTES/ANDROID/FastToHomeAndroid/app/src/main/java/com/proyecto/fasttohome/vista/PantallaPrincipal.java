@@ -134,6 +134,7 @@ public class PantallaPrincipal extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
+                System.out.println((new Peticion("obtener_direccion", user.getJSON()).getJSON()));
                 params.put("DATA", new Peticion("obtener_direccion", user.getJSON()).getJSON());
                 System.out.println("Imprimir direccion");
                 return params;
