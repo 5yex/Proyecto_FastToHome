@@ -15,16 +15,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Categoria;
-import com.proyecto.fasttohome.modelo.Pedido;
-import com.proyecto.fasttohome.vista.pedido.SeleccionarProductos;
 import com.proyecto.fasttohome.modelo.Negocio;
+import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.modelo.Usuario;
+import com.proyecto.fasttohome.vista.pedido.SeleccionarProductos;
 import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 import java.util.List;
 
-public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerViewAdaptorNegocio.ViewHolder> {
+public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerViewAdaptorPedidos.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private TextView nombre, categoria;
@@ -52,7 +52,7 @@ public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerVie
     private HashMap<Integer,Categoria> categorias;
     private Usuario usuario;
     private Pedido pedido;
-    public RecyclerViewAdaptorNegocio(List<Negocio> listaNegocios, Usuario usuario, Pedido pedido, HashMap<Integer,Categoria> categorias) {
+    public RecyclerViewAdaptorPedidos(List<Negocio> listaNegocios, Usuario usuario, Pedido pedido, HashMap<Integer,Categoria> categorias) {
         this.listaNegocios = listaNegocios;
         this.usuario = usuario;
         this.pedido = pedido;

@@ -1,13 +1,12 @@
 package com.proyecto.fasttohome.vista.pedido;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -16,14 +15,12 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Categoria;
-import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.vista.PantallaPrincipal;
 import com.proyecto.fasttohome.vista.pedido.recycler_adaptors.RecyclerViewAdaptorNegocio;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,7 +31,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class PantallaDeNegocios extends AppCompatActivity {
+public class PantallaDePedidos extends AppCompatActivity {
 
     private RecyclerView recyclerViewNegocio;
     private RecyclerViewAdaptorNegocio adaptorNegocio;
@@ -61,7 +58,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
     public void obtenerNegocios() {
         negocios = new ArrayList<Negocio>();
         String url = getString(R.string.apiUrl);
-        RequestQueue queue = Volley.newRequestQueue(PantallaDeNegocios.this);
+        RequestQueue queue = Volley.newRequestQueue(PantallaDePedidos.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
             System.out.println(response);
             try {
@@ -88,7 +85,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
                     obtenerCategoriasNegocios();
                 }
             } catch (JSONException | VolleyError e) {
-                Toast.makeText(PantallaDeNegocios.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(PantallaDePedidos.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 finish();
             }
         }, this::onErrorResponse) {
@@ -106,7 +103,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
     public void obtenerCategoriasNegocios() {
         categorias = new HashMap<>();
         String url = getString(R.string.apiUrl);
-        RequestQueue queue = Volley.newRequestQueue(PantallaDeNegocios.this);
+        RequestQueue queue = Volley.newRequestQueue(PantallaDePedidos.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
             System.out.println(response);
             try {
@@ -124,7 +121,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
                     rellenarRecyclerView();
                 }
             } catch (JSONException | VolleyError e) {
-                Toast.makeText(PantallaDeNegocios.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(PantallaDePedidos.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 finish();
             }
         }, this::onErrorResponse) {
@@ -144,7 +141,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
     }
 
     private void onErrorResponse(VolleyError error) {
-        Toast.makeText(PantallaDeNegocios.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
+        Toast.makeText(PantallaDePedidos.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
         irPrincipal();
     }
 

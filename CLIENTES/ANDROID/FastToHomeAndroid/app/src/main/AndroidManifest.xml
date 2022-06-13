@@ -31,7 +31,7 @@
             android:name=".vista.pedido.FinalizarPedido"
             android:exported="false"
             android:label="@string/title_activity_finalizar_pedido"
-            android:theme="@style/Theme.FastToHome" /> <!-- This element is required to enable Google Pay in your app. -->
+            android:theme="@style/Theme.FastToHome" />
         <meta-data
             android:name="com.google.android.gms.wallet.api.enabled"
             android:value="true" />
@@ -72,7 +72,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

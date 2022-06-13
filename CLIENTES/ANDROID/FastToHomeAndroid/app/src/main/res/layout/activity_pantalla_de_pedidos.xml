@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vista.pedido.PantallaDeNegocios">
+    tools:context=".vista.pedido.PantallaDePedidos">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerNegocios"
+        android:id="@+id/recyclerPedidos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/back" />
