@@ -29,7 +29,7 @@
         android:layout_marginBottom="28dp"
         android:backgroundTint="@color/principalFastToHome"
         android:onClick="accionRegistro"
-        android:text="@string/buttonSiguientePaso"
+        android:text="@string/buttonFinalizarRegistro"
         android:textSize="16sp"
         android:textStyle="bold|italic"
         app:cornerRadius="50dp"
