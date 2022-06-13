@@ -243,7 +243,6 @@ function borrarProducto($datos) {
 function nuevaDireccionDevuelveId($datos) {
     require_once '../modelo/Direccion.php';
     try {
-        var_dump($datos);
         $direccion = new Direccion();
         $direccion->setCalle($datos->calle);
         $direccion->setNumero($datos->numero);
