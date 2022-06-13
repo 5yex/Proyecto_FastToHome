@@ -2,6 +2,7 @@ package com.proyecto.fasttohome.vista;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,7 @@ import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
+import com.proyecto.fasttohome.vista.pedido.SeleccionarProductos;
 import com.proyecto.fasttohome.vista.pedido.seleccionarTransporteZona;
 
 import org.json.JSONException;
@@ -126,5 +128,15 @@ public class PantallaPrincipal extends AppCompatActivity {
         i.putExtra("user",user);
         i.putExtra("direccion",direccion);
         startActivity(i);
+    }
+
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(PantallaPrincipal.this);
+        builder.setTitle("ATENCIÓN").setMessage("Si sales de aquí, cerrarás la sesión y tendrás que iniciar sesión de nuevo, ¿Seguro que quieres salir?");
+        builder.setNegativeButton("SEGUIR AQUÍ",null);
+        builder.setPositiveButton("CERRAR SESIÓN", (dialogInterface, i) -> {
+            Intent ia = new Intent(this, seleccionarTransporteZona.class );
+            startActivity(ia);
+        }).show();
     }
 }
