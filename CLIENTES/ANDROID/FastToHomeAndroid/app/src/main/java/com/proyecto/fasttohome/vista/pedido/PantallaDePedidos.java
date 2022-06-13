@@ -15,6 +15,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Categoria;
+import com.proyecto.fasttohome.modelo.Cesta;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.modelo.Peticion;
@@ -37,8 +38,8 @@ public class PantallaDePedidos extends AppCompatActivity {
     private RecyclerViewAdaptorPedidos adaptorNegocio;
     private Usuario usuario;
     private Pedido pedido;
-    private HashMap<Integer, Categoria> categorias;
-    private List<Negocio> negocios;
+    private List<Pedido> listaPedidos;
+    private HashMap<Integer, Cesta> productos;
 
 
     @Override
@@ -52,11 +53,11 @@ public class PantallaDePedidos extends AppCompatActivity {
         recyclerViewPedidos = (RecyclerView) findViewById(R.id.recyclerNegocios);
         recyclerViewPedidos.setLayoutManager(new LinearLayoutManager(this));
 
-        obtenerNegocios();
+        obtenerPedidos();
     }
 
-    public void obtenerNegocios() {
-        negocios = new ArrayList<Negocio>();
+    public void obtenerPedidos() {
+        listaPedidos = new ArrayList<Pedido>();
         String url = getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(PantallaDePedidos.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
@@ -68,19 +69,8 @@ public class PantallaDePedidos extends AppCompatActivity {
                 } else {
                     JSONArray arrayDeJson = resp.getJSONArray("datos");
                     for (int i = 0; i < arrayDeJson.length(); i++) {
-                        JSONObject objetoNegocioJSon = arrayDeJson.getJSONObject(i);
-                        Negocio negocio = new Negocio();
-                        negocio.setId_negocio(objetoNegocioJSon.getInt("id"));
-                        negocio.setNombre(objetoNegocioJSon.get("Nombre").toString());
-                        negocio.setDescripcion(objetoNegocioJSon.get("Descripcion").toString());
-                        negocio.setId_categoria(objetoNegocioJSon.getInt("id_categoria"));
-                        negocio.setId_direccion(objetoNegocioJSon.getInt("direccion_id"));
-                        try{
-                            String imgUrl = getString(R.string.imgUrl) + objetoNegocioJSon.getString("url");
-                            negocio.setUrl_imagen(imgUrl);
-                        }catch (Exception e){
-                        }
-                        negocios.add(negocio);
+                        JSONObject objPedidos = arrayDeJson.getJSONObject(i);
+
                     }
 
 
@@ -102,7 +92,7 @@ public class PantallaDePedidos extends AppCompatActivity {
     }
 
     private void rellenarRecyclerView() {
-        adaptorNegocio = new RecyclerViewAdaptorPedidos(negocios, usuario,pedido,categorias);
+        adaptorNegocio = new RecyclerViewAdaptorPedidos(listaPedidos, usuario,pedido,productos);
         recyclerViewPedidos.setAdapter(adaptorNegocio);
     }
 
