@@ -167,7 +167,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
                         Producto producto = productos.get(product.getId_producto());
                         int cantidad = product.getCantidad();
                         double precioTot = producto.getPrecio() * cantidad;
-                        lista.add(leftPad("€" + producto.getPrecio(), 5)  +"Tot: " +leftPad("€" + precioTot, 5)  +leftPad("  Uds: " + cantidad, 12) + "  " + producto.getNombre());
+                        lista.add(leftPad("€" + producto.getPrecio(), 5) +leftPad(" Uds: " + cantidad, 12) +"   Tot: " +leftPad("€" + precioTot, 5) + "  " + producto.getNombre());
                     }
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>(contexto, android.R.layout.simple_list_item_1, lista);
                     holder.listaProductos.setAdapter(adapter);
