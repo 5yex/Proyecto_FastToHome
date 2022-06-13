@@ -82,7 +82,9 @@ public class PantallaDePedidos extends AppCompatActivity {
                         }
                         negocios.add(negocio);
                     }
-                    obtenerCategoriasNegocios();
+
+
+
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaDePedidos.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
