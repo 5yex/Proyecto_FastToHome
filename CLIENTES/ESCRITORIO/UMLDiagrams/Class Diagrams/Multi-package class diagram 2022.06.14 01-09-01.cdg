@@ -74,7 +74,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="ImagenDao" package="controlador" visibility="public" xPosition="1520.0" yPosition="20.0">
+    <Class name="ImagenDao" package="controlador" visibility="public" xPosition="1164.0" yPosition="122.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -92,7 +92,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="NegocioDao" package="controlador" visibility="public" xPosition="1820.0" yPosition="20.0">
+    <Class name="NegocioDao" package="controlador" visibility="public" xPosition="2483.0" yPosition="915.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -107,7 +107,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="PedidoDao" package="controlador" visibility="public" xPosition="2120.0" yPosition="20.0">
+    <Class name="PedidoDao" package="controlador" visibility="public" xPosition="3879.0" yPosition="122.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -359,7 +359,7 @@
         <Method name="getJSON" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Negocio" package="modelo" visibility="public" xPosition="1820.0" yPosition="420.0">
+    <Class name="Negocio" package="modelo" visibility="public" xPosition="2017.0" yPosition="1305.0">
       <Fields>
         <Field name="id_negocio" type="int" visibility="private"/>
         <Field name="id_direccion" type="int" visibility="private"/>
@@ -431,7 +431,7 @@
         <Method name="getJSON" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Pedido" package="modelo" visibility="public" xPosition="2120.0" yPosition="420.0">
+    <Class name="Pedido" package="modelo" visibility="public" xPosition="4532.0" yPosition="243.0">
       <Fields>
         <Field name="id_pedido" type="int" visibility="private"/>
         <Field name="id_usuario" type="int" visibility="private"/>
@@ -670,9 +670,6 @@
         <Method name="getRow" returnType="Object[]" visibility="public"/>
       </Methods>
     </Class>
-    <Interface name="Constantes" package="util" visibility="public" xPosition="920.0" yPosition="820.0">
-      <Methods/>
-    </Interface>
     <Class name="imagenesUtil" package="util" visibility="public" xPosition="1220.0" yPosition="820.0">
       <Fields/>
       <Constructors/>
@@ -746,7 +743,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="DialogoActualizarDatos" package="vista.administrador" visibility="public" xPosition="2120.0" yPosition="820.0">
+    <Class name="DialogoActualizarDatos" package="vista.administrador" visibility="public" xPosition="3889.0" yPosition="1401.0">
       <Fields>
         <Field name="updateInicio" type="JButton" visibility="private"/>
         <Field name="usuario" type="Usuario" visibility="private"/>
@@ -800,8 +797,7 @@
         </Method>
         <Method name="establecerIcono" returnType="void" visibility="private"/>
         <Method name="validarpassiguales" returnType="boolean" visibility="private"/>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="updateConfirmActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -884,8 +880,7 @@ void" visibility="private"/>
       </Constructors>
       <Methods>
         <Method name="establecerIcono" returnType="void" visibility="private"/>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="botonModificarDatosAdminActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -966,8 +961,7 @@ void" visibility="private"/>
       </Constructors>
       <Methods>
         <Method name="establecerIcono" returnType="void" visibility="private"/>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="cancelarActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1011,8 +1005,7 @@ void" visibility="private"/>
       </Constructors>
       <Methods>
         <Method name="establecerIcono" returnType="void" visibility="private"/>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="botonActualizarDireccionActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1052,8 +1045,7 @@ void" visibility="private"/>
       </Constructors>
       <Methods>
         <Method name="establecerIcono" returnType="void" visibility="private"/>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="btnSeleccionarImagenActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1082,8 +1074,7 @@ void" visibility="private"/>
       </Constructors>
       <Methods>
         <Method name="establecerIcono" returnType="void" visibility="private"/>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="buttonRegistroActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1128,8 +1119,7 @@ void" visibility="private"/>
       </Constructors>
       <Methods>
         <Method name="establecerIcono" returnType="void" visibility="private"/>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="botonPedirImagenActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1143,7 +1133,7 @@ void" visibility="private"/>
         <Method name="editarProducto" returnType="boolean" visibility="private"/>
       </Methods>
     </Class>
-    <Class name="DialogoRegistrarProducto" package="vista.mercader" visibility="public" xPosition="1820.0" yPosition="1220.0">
+    <Class name="DialogoRegistrarProducto" package="vista.mercader" visibility="public" xPosition="2492.0" yPosition="2913.0">
       <Fields>
         <Field name="nImg" type="Imagen" visibility="private"/>
         <Field name="neg" type="Negocio" visibility="private"/>
@@ -1172,8 +1162,7 @@ void" visibility="private"/>
       </Constructors>
       <Methods>
         <Method name="establecerIcono" returnType="void" visibility="private"/>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="botonPedirImagenActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1186,7 +1175,7 @@ void" visibility="private"/>
         <Method name="nuevoProducto" returnType="boolean" visibility="private"/>
       </Methods>
     </Class>
-    <Class name="PanelPedido" package="vista.mercader" visibility="public" xPosition="2120.0" yPosition="1220.0">
+    <Class name="PanelPedido" package="vista.mercader" visibility="public" xPosition="5288.0" yPosition="1163.0">
       <Fields>
         <Field name="pedido" type="Pedido" visibility="private"/>
         <Field name="actualizarPedido" type="ActionListener" visibility="private"/>
@@ -1214,8 +1203,7 @@ void" visibility="private"/>
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="pasarEstadoActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1248,8 +1236,7 @@ void" visibility="private"/>
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="botonEliminarProductoActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1279,8 +1266,7 @@ void" visibility="private"/>
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="botonNuevoProductoActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1321,8 +1307,7 @@ void" visibility="private"/>
       </Constructors>
       <Methods>
         <Method name="establecerIcono" returnType="void" visibility="private"/>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="botonModificarDatosMercaderActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1400,8 +1385,7 @@ void" visibility="private"/>
       </Constructors>
       <Methods>
         <Method name="establecerIcono" returnType="void" visibility="private"/>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="registerConfirmActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1459,8 +1443,7 @@ void" visibility="private"/>
       </Constructors>
       <Methods>
         <Method name="establecerIcono" returnType="void" visibility="private"/>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="botonPedirDireccionActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1532,8 +1515,7 @@ void" visibility="private"/>
         </Method>
         <Method name="establecerIcono" returnType="void" visibility="private"/>
         <Method name="validarpassiguales" returnType="boolean" visibility="private"/>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="updateConfirmActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1616,8 +1598,7 @@ void" visibility="private"/>
       </Constructors>
       <Methods>
         <Method name="establecerIcono" returnType="void" visibility="private"/>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="botonModificarDatosAdminActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1664,7 +1645,7 @@ void" visibility="private"/>
         <Method name="confirmarSalida" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="DialogoEditarProducto1" package="vista.mercader" visibility="public" xPosition="2120.0" yPosition="1620.0">
+    <Class name="DialogoEditarProducto1" package="vista.mercader" visibility="public" xPosition="3687.0" yPosition="2833.0">
       <Fields>
         <Field name="nImg" type="Imagen" visibility="private"/>
         <Field name="producto" type="Producto" visibility="private"/>
@@ -1693,8 +1674,7 @@ void" visibility="private"/>
       </Constructors>
       <Methods>
         <Method name="establecerIcono" returnType="void" visibility="private"/>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="botonPedirImagenActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1737,8 +1717,7 @@ void" visibility="private"/>
       </Constructors>
       <Methods>
         <Method name="establecerIcono" returnType="void" visibility="private"/>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="botonPedirImagenActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1779,8 +1758,7 @@ void" visibility="private"/>
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="pasarEstadoActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1813,8 +1791,7 @@ void" visibility="private"/>
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="botonEliminarProductoActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1844,14 +1821,13 @@ void" visibility="private"/>
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="botonNuevoProductoActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
       </Methods>
     </Class>
-    <Class name="VentanaMercader1" package="vista.mercader" visibility="public" xPosition="1220.0" yPosition="2020.0">
+    <Class name="VentanaMercader1" package="vista.mercader" visibility="public" xPosition="1061.0" yPosition="3091.0">
       <Fields>
         <Field name="mercader" type="Usuario" visibility="private"/>
         <Field name="negocio" type="Negocio" visibility="private"/>
@@ -1886,8 +1862,7 @@ void" visibility="private"/>
       </Constructors>
       <Methods>
         <Method name="establecerIcono" returnType="void" visibility="private"/>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="botonModificarDatosMercaderActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -1928,58 +1903,61 @@ void" visibility="private"/>
         <Method name="confirmarSalida" returnType="void" visibility="public"/>
       </Methods>
     </Class>
+    <Interface name="Constantes" package="util" visibility="public" xPosition="920.0" yPosition="820.0">
+      <Methods/>
+    </Interface>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <HasRelation name="nImg" source="vista.registroNegocio" target="modelo.Imagen" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="nImg" source="vista.mercader.DialogoEditarProducto" target="modelo.Imagen" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="lg" source="FastToHome.principal" target="vista.FrameLogin" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="controlador.NegocioDao" target="modelo.Negocio" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="controlador.PedidoDao" target="modelo.Pedido" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="neg" source="vista.mercader.DialogoRegistrarProducto" target="modelo.Negocio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="negocio" source="vista.mercader.PanelProductoNuevo" target="modelo.Negocio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="nDireccion" source="vista.registroNegocio" target="modelo.Direccion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="controlador.CestaDao" target="modelo.Pedido" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="vista.DialogoDireccion" target="util.Constantes"/>
-    <UseRelation source="controlador.DireccionDao" target="modelo.Direccion" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="vista.FrameLogin" target="util.Constantes"/>
-    <HasRelation name="direccionUsuario" source="vista.registrarUsuario" target="modelo.Direccion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="vista.administrador.DialogoActualizarDatos" target="util.Constantes"/>
-    <HasRelation name="direccion" source="vista.DialogoDireccion" target="modelo.Direccion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="producto" source="vista.mercader.DialogoEditarProducto" target="modelo.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="pedido" source="vista.mercader.PanelPedido" target="modelo.Pedido" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="listaCategorias" source="vista.DialogoEditarNegocio" target="modelo.Categoria" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Categoria&gt;"/>
-    <HasRelation name="administrador" source="vista.administrador.VentanaAdmin" target="modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="vista.administrador.DialogoActualizarDatos" target="modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="util.validaciones" target="util.Constantes"/>
-    <HasRelation name="usuario" source="vista.administrador.DialogoActualizarDatos" target="modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="direccionUsuario" source="vista.administrador.DialogoActualizarDatos" target="modelo.Direccion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="User" source="vista.registroNegocio" target="modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="controlador.UsuarioDao" target="modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="producto" source="vista.mercader.PanelProducto" target="modelo.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="mercader" source="vista.mercader.VentanaMercader" target="modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="controlador.NegocioDao" target="modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="controlador.gestion" target="modelo.Peticion" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="nImg" source="vista.DialogoEditarNegocio" target="modelo.Imagen" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="arrayListMercaderes" source="vista.administrador.VentanaAdmin" target="modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Usuario&gt;"/>
-    <HasRelation name="nImg" source="vista.mercader.DialogoRegistrarProducto" target="modelo.Imagen" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="newUsuario" source="vista.registrarUsuario" target="modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="controlador.DireccionDao" target="modelo.Negocio" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="controlador.ImagenDao" target="modelo.Imagen" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="vista.registroNegocio" target="modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="arrayListClientes" source="vista.administrador.VentanaAdmin" target="modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Usuario&gt;"/>
-    <HasRelation name="direccionNegocio" source="vista.DialogoEditarNegocio" target="modelo.Direccion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="vista.DialogoEditarNegocio" target="modelo.Negocio" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="negocio" source="vista.DialogoEditarNegocio" target="modelo.Negocio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="controlador.ProductoDao" target="modelo.Producto" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="vista.FrameLogin" target="modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="listaCategorias" source="vista.registroNegocio" target="modelo.Categoria" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Categoria&gt;"/>
-    <HasRelation name="imagen" source="vista.DialogoImagen" target="modelo.Imagen" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="vista.registrarUsuario" target="util.Constantes"/>
-    <HasRelation name="negocio" source="vista.mercader.VentanaMercader" target="modelo.Negocio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="controlador.DireccionDao" target="modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="nImg" source="vista.mercader.DialogoEditarProducto" target="modelo.Imagen" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="producto" source="vista.mercader.DialogoEditarProducto" target="modelo.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listaCategorias" source="vista.DialogoEditarNegocio" target="modelo.Categoria" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Categoria&gt;"/>
+    <HasRelation name="producto" source="vista.mercader.PanelProducto" target="modelo.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="vista.DialogoEditarNegocio" target="modelo.Negocio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="newUsuario" source="vista.registrarUsuario" target="modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="nDireccion" source="vista.registroNegocio" target="modelo.Direccion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="vista.DialogoDireccion" target="util.Constantes"/>
+    <UseRelation source="controlador.CestaDao" target="modelo.Pedido" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="negocio" source="vista.mercader.VentanaMercader" target="modelo.Negocio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="imagen" source="vista.DialogoImagen" target="modelo.Imagen" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="arrayListAdmins" source="vista.administrador.VentanaAdmin" target="modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Usuario&gt;"/>
-    <UseRelation source="vista.administrador.VentanaAdmin" target="modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="vista.DialogoDireccion" target="modelo.Direccion" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="controlador.CategoriaDao" target="modelo.Categoria" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="vista.administrador.DialogoActualizarDatos" target="modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mercader" source="vista.mercader.VentanaMercader" target="modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="nImg" source="vista.mercader.DialogoRegistrarProducto" target="modelo.Imagen" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="vista.registroNegocio" target="modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.gestion" target="modelo.Peticion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="direccionNegocio" source="vista.DialogoEditarNegocio" target="modelo.Direccion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="direccion" source="vista.DialogoDireccion" target="modelo.Direccion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="nImg" source="vista.registroNegocio" target="modelo.Imagen" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.NegocioDao" target="modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.NegocioDao" target="modelo.Negocio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="arrayListClientes" source="vista.administrador.VentanaAdmin" target="modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Usuario&gt;"/>
+    <HasRelation name="arrayListMercaderes" source="vista.administrador.VentanaAdmin" target="modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Usuario&gt;"/>
+    <UseRelation source="controlador.DireccionDao" target="modelo.Negocio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.ProductoDao" target="modelo.Producto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.DireccionDao" target="modelo.Direccion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.UsuarioDao" target="modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listaCategorias" source="vista.registroNegocio" target="modelo.Categoria" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Categoria&gt;"/>
+    <UseRelation source="controlador.PedidoDao" target="modelo.Pedido" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pedido" source="vista.mercader.PanelPedido" target="modelo.Pedido" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="vista.FrameLogin" target="util.Constantes"/>
+    <HasRelation name="direccionUsuario" source="vista.registrarUsuario" target="modelo.Direccion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="vista.FrameLogin" target="modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="vista.administrador.VentanaAdmin" target="modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="lg" source="FastToHome.principal" target="vista.FrameLogin" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="administrador" source="vista.administrador.VentanaAdmin" target="modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="negocio" source="vista.DialogoEditarNegocio" target="modelo.Negocio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuario" source="vista.administrador.DialogoActualizarDatos" target="modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="neg" source="vista.mercader.DialogoRegistrarProducto" target="modelo.Negocio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="vista.registrarUsuario" target="util.Constantes"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="vista.administrador.DialogoActualizarDatos" target="util.Constantes"/>
+    <HasRelation name="nImg" source="vista.DialogoEditarNegocio" target="modelo.Imagen" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.ImagenDao" target="modelo.Imagen" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="User" source="vista.registroNegocio" target="modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="negocio" source="vista.mercader.PanelProductoNuevo" target="modelo.Negocio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="direccionUsuario" source="vista.administrador.DialogoActualizarDatos" target="modelo.Direccion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="util.validaciones" target="util.Constantes"/>
   </ClassDiagramRelations>
 </ClassDiagram>
