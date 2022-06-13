@@ -1,6 +1,4 @@
-package com.proyecto.fasttohome.vista.registro;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.proyecto.fasttohome.vista.actualizarDatos;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,13 +6,16 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.proyecto.fasttohome.R;
-import com.proyecto.fasttohome.util.Validaciones;
 import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Usuario;
+import com.proyecto.fasttohome.util.Validaciones;
+import com.proyecto.fasttohome.vista.registro.registroPaso2Password;
 
 
-public class registroPaso1DatosUsuario extends AppCompatActivity {
+public class updateDatosUsuario extends AppCompatActivity {
     Usuario user = new Usuario();
     Direccion direccion = new Direccion();
     EditText nombre;
