@@ -178,6 +178,7 @@ public class PantallaPrincipal extends AppCompatActivity {
         builder.setTitle("ATENCIÓN").setMessage("Si sales de aquí, cerrarás la sesión y tendrás que iniciar sesión de nuevo, ¿Seguro que quieres salir?");
         builder.setNegativeButton("SEGUIR AQUÍ",null);
         builder.setPositiveButton("CERRAR SESIÓN", (dialogInterface, i) -> {
+            getSharedPreferences("fasttohome", MODE_PRIVATE).edit().clear().apply();
             Intent ia = new Intent(this, PantallaLogin.class );
             startActivity(ia);
         }).show();

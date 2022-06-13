@@ -145,8 +145,6 @@ public class PantallaLogin extends AppCompatActivity {
         }
 
     }
-
-
     public void salvarCuenta(Usuario user) {
         //.edit().clear().apply();
         System.out.println("salvarCuenta");
