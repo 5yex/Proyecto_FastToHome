@@ -677,7 +677,7 @@ function hacerPedido($datos){
         $pedido->setTransporte($dPedido->transporte);
         
         
-        print_r($pedido->agregarConId());
+        print_r($pedido->agregarConId()[0]->last_id);
         
 //        if ($pedido->agregar()) {
 //            mandarRespuesta(false, 'Se realizó un pedido con exito');
