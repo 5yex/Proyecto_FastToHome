@@ -51,10 +51,6 @@ public class registroPaso3Direccion extends AppCompatActivity {
         codigoPostal = findViewById(R.id.etCodigoPostal);
         ciudad = findViewById(R.id.etCiudad);
         otros = findViewById(R.id.etOtros);
-        System.err.println(user.getJSON()+direccion.getJSON());
-
-
-
     }
 
     /**
