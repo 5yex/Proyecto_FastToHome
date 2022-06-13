@@ -55,10 +55,8 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         user = (Usuario) getIntent().getExtras().getSerializable("user");
         funcion = getIntent().getExtras().getString("funcion");
         System.out.println(funcion+" "+user.getJSON());
-        titulo.setText("sfdfsdf Datos:");
 
         if (funcion.equals("update")) {
-
             titulo.setText("Actualizar Datos:");
             nombre.setText(user.getNombre());
             apellidos.setText(user.getApellidos());
@@ -85,10 +83,10 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
                 int numero_movil = Integer.parseInt(numTelefono);
                 if (validaciones(name, ape, nif, numTelefono, correo)) {
 
-                    if (funcion == "update") {
+                    if (funcion.equals("update")) {
                         actualizarDatos();
                     }
-                    if (funcion == "registro") {
+                    if (funcion.equals("registro")) {
                         Intent i = new Intent(this, registroPaso2Password.class);
                         i.putExtra("funcion", "registro");
                         i.putExtra("user", user);
