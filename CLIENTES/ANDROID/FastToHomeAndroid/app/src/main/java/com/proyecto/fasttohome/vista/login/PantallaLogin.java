@@ -90,8 +90,6 @@ public class PantallaLogin extends AppCompatActivity {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
                     user.setPassword(datos.getString("password"));
                     user.setId(datos.getInt("id"));
-
-
                     if(BCrypt.checkpw(password.getText().toString(),user.getPassword())){
                         terminarInicioSesion();
                     }else {
@@ -121,8 +119,9 @@ public class PantallaLogin extends AppCompatActivity {
     }
 
     public void leerCuentaGuardada(){
+        user = new Usuario();
         SharedPreferences sharedPreferences = getSharedPreferences("fasttohome", MODE_PRIVATE);
-        SharedPreferences.
+        user.setId();
     }
 
     public void salvarCuenta(Usuario user) {
