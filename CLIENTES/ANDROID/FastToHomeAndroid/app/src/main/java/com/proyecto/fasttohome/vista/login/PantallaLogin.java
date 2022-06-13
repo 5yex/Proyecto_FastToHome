@@ -136,6 +136,7 @@ public class PantallaLogin extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("fasttohome", MODE_PRIVATE);
         String email = sharedPreferences.getString("email", null);
         String hash = sharedPreferences.getString("hash", null);
+        System.out.println(email + hash);
         if ((email != null && !email.isEmpty()  && hash != null && !hash.isEmpty())) {
             user.setPassword(hash);
             user.setEmail(email);
