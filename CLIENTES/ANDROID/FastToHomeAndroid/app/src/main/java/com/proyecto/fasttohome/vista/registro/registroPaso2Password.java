@@ -52,10 +52,13 @@ public class registroPaso2Password extends AppCompatActivity {
                 if(Validaciones.validar(passConfirm,getString(R.string.patron_pass))){
                     if(pass.compareTo(passConfirm) == 0){
                         user.setPassword(BCrypt.hashpw(password.getText().toString(), BCrypt.gensalt(10)));
+
                         Intent i = new Intent(this, registroPaso3Direccion.class );
                         i.putExtra("user", user);
                         i.putExtra("direccion", direccion);
+                        i.putExtra("funcion","registro");
                         startActivity(i);
+
                     }else{
                         Toast notificacion = Toast.makeText(this,"Lo campos contraseña y confirmar contraseña deben coincidir.",Toast.LENGTH_LONG);
                         notificacion.show();
