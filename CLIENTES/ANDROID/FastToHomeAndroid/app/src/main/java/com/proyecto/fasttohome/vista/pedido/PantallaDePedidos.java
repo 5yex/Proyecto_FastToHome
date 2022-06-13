@@ -2,6 +2,7 @@ package com.proyecto.fasttohome.vista.pedido;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,6 +41,7 @@ public class PantallaDePedidos extends AppCompatActivity {
     private RecyclerViewAdaptorPedidos adaptorNegocio;
     private Usuario usuario;
     private List<Pedido> listaPedidos;
+
 
 
     @Override

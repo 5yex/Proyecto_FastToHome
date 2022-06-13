@@ -1,11 +1,15 @@
 package com.proyecto.fasttohome.vista.pedido.recycler_adaptors;
 
+import static com.proyecto.fasttohome.util.Texto.leftPad;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +25,7 @@ import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.modelo.Peticion;
+import com.proyecto.fasttohome.modelo.Producto;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.vista.pedido.PantallaDePedidos;
 
@@ -42,12 +47,14 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
         private Pedido pedido;
         private Button pedir, info;
         private Context contexto;
+        private ListView listaProductos;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             fechaPedido = itemView.findViewById(R.id.fechaPedido);
             numeroPedido = itemView.findViewById(R.id.numeroPedido);
             estadoPedido = itemView.findViewById(R.id.estadoPedido);
+            listaProductos = itemView.findViewById(R.id.cestaPedido);
             contexto = itemView.getContext();
         }
     }
@@ -76,7 +83,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
         holder.numeroPedido.setText(pedidoActual.getId_pedido());
         holder.fechaPedido.setText(pedidoActual.getFecha_hora());
         holder.estadoPedido.setText(pedidoActual.getEstado());
-
+        obtenerProductosNegocio(holder.contexto, pedidoActual,holder);
 
 
         /*
@@ -99,8 +106,9 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
         });*/
     }
 
-    public void obtenerProductosNegocio(Context contexto, Pedido pedido) {
-        listaPedidos = new ArrayList<Pedido>();
+
+    public void obtenerProductosNegocio(Context contexto, Pedido pedido, ViewHolder holder) {
+        ArrayList<Producto> listaProductos = new ArrayList<Producto>();
         String url = contexto.getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(contexto);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
@@ -113,8 +121,20 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
                     JSONArray arrayDeJson = resp.getJSONArray("datos");
                     for (int i = 0; i < arrayDeJson.length(); i++) {
                         JSONObject objPedidos = arrayDeJson.getJSONObject(i);
-                        
+
                     }
+
+
+                    ArrayList<String> lista = new ArrayList<>();
+                    for (Producto producto : listaProductos) {
+                        Producto producto = productos.get(entry.getKey());
+                        precioTotal = precioTotal + (producto.getPrecio() * entry.getValue());
+                        lista.add(leftPad("€" + producto.getPrecio(), 5) + leftPad("  Uds: " + entry.getValue(), 12) + "  " + producto.getNombre());
+                        indice++;
+                    }
+                    total.setText(String.valueOf(precioTotal + " Euros"));
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista);
+                    holder.listaProductos.setAdapter(adapter);
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(contexto, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
