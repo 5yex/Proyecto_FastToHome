@@ -178,7 +178,6 @@ public class PantallaPrincipal extends AppCompatActivity {
         builder.setTitle("ATENCIÓN").setMessage("Si sales de aquí, cerrarás la sesión y tendrás que iniciar sesión de nuevo, ¿Seguro que quieres salir?");
         builder.setNegativeButton("SEGUIR AQUÍ",null);
         builder.setNeutralButton("SALIR DE LA APLICAIÓN",(dialogInterface, i) -> {
-            finishAndRemoveTask();
             System.exit(0);
         });
         builder.setPositiveButton("CERRAR SESIÓN", (dialogInterface, i) -> {
