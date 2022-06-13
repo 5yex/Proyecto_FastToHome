@@ -121,7 +121,8 @@ public class PantallaLogin extends AppCompatActivity {
     }
 
     public void leerCuentaGuardada(){
-
+        SharedPreferences sharedPreferences = getSharedPreferences("fasttohome", MODE_PRIVATE);
+        SharedPreferences.
     }
 
     public void salvarCuenta(Usuario user) {
