@@ -92,7 +92,7 @@ public class PantallaLogin extends AppCompatActivity {
                 } else {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
                     if(silent){
-
+                        if()
 
                     }else{
                         user.setPassword(datos.getString("password"));
@@ -116,7 +116,9 @@ public class PantallaLogin extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
                 user = new Usuario();
-                user.setEmail(email.getText().toString());
+                if(!silent){
+                    user.setEmail(email.getText().toString());
+                }
                 params.put("DATA", new Peticion("getHash", user.getJSON()).getJSON());
                 return params;
             }
