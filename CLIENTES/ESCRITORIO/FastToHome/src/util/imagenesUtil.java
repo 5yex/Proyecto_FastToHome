@@ -57,18 +57,6 @@ public class imagenesUtil {
     }
     
     
-    public static void imagenB64NegocioAjlabel(String imgBase64, JLabel label){
-        label.setText("");
-        try {
-            ImageIcon image = imagenesUtil.base64AImagen(imgBase64);
-            label.setIcon(new ImageIcon(image.getImage().getScaledInstance(label.getPreferredSize().width, label.getPreferredSize().height, Image.SCALE_SMOOTH)));
-            
-        } catch (Exception e) {
-            label.setText("NO IMAGE");
-            //System.out.println("no tienes icono");
-        }
-    }
-    
     public static void imagenProyectoAjlabel(ImageIcon image, JLabel label){
         label.setText("");
         try {
