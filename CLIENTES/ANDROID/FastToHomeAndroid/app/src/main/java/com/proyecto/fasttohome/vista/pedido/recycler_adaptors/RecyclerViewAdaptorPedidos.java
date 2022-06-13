@@ -22,6 +22,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.modelo.Cesta;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.modelo.Peticion;
@@ -110,7 +111,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
 
 
     public void obtenerCestaPedido(Context contexto, Pedido pedido, ViewHolder holder) {
-        ArrayList<Producto> listaProductos = new ArrayList<Producto>();
+        ArrayList<Cesta> listaProductosCesta = new ArrayList<Producto>();
         String url = contexto.getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(contexto);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
@@ -126,9 +127,9 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
 
                     }
                     ArrayList<String> lista = new ArrayList<>();
-                    for (Producto : listaProductos) {
-                        Producto producto = productos.get(entry.getKey());
-                        precioTotal = precioTotal + (producto.getPrecio() * entry.getValue());
+                    for (Cesta product: listaProductosCesta) {
+                        int cantidad = 
+
                         lista.add(leftPad("€" + producto.getPrecio(), 5) + leftPad("  Uds: " + entry.getValue(), 12) + "  " + producto.getNombre());
                         indice++;
                     }
@@ -174,8 +175,6 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
                         productos.put(producto.getId_producto(), producto);
                     }
 
-                    adaptorProducto = new RecyclerViewAdaptorProducto(productos, productosSeleccionados,pedir);
-                    recyclerViewProducto.setAdapter(adaptorProducto);
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(contexto, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
