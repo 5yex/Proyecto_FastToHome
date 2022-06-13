@@ -39,6 +39,7 @@ public class PantallaLogin extends AppCompatActivity {
     private EditText email;
     private EditText password;
     private Usuario user;
+    private  String
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,7 +122,7 @@ public class PantallaLogin extends AppCompatActivity {
     public void leerCuentaGuardada(){
         user = new Usuario();
         SharedPreferences sharedPreferences = getSharedPreferences("fasttohome", MODE_PRIVATE);
-        user.setId(sharedPreferences.getInt(""));
+        user.setId(sharedPreferences.getInt("user_id"));
     }
 
     public void salvarCuenta(Usuario user) {
