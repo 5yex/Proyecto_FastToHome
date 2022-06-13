@@ -59,7 +59,7 @@ public class registroPaso3Direccion extends AppCompatActivity {
 
     /**
      * Registra un usuario llamando a la api rest con volley
-     *
+     *  https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyCYF3r2xgvGA5oehQkJx3mCmOoRh6WNQvQ
      */
 
     public void accionRegistro(View view){
