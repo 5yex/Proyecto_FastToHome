@@ -122,6 +122,7 @@ public class registroPaso2Password extends AppCompatActivity {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
                     user.setPassword(datos.getString("password"));
                     user.setId(datos.getInt("id"));
+                    System.out.println(campoActualizar.getText().toString());
                     if(BCrypt.checkpw(campoActualizar.getText().toString(),user.getPassword())){
                        actualizarDatos();
                     }else {
