@@ -73,6 +73,9 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
 
         holder.usuario = usuario;
         holder.pedido = pedidoActual;
+        holder.numeroPedido.setText(pedidoActual.getId_pedido());
+        holder.fechaPedido.setText(pedidoActual.getFecha_hora());
+        holder.estadoPedido.setText(pedidoActual.getEstado());
 
 
 
@@ -110,7 +113,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
                     JSONArray arrayDeJson = resp.getJSONArray("datos");
                     for (int i = 0; i < arrayDeJson.length(); i++) {
                         JSONObject objPedidos = arrayDeJson.getJSONObject(i);
-
+                        
                     }
                 }
             } catch (JSONException | VolleyError e) {

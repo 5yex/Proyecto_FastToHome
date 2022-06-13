@@ -39,7 +39,6 @@ public class PantallaDePedidos extends AppCompatActivity {
     private RecyclerView recyclerViewPedidos;
     private RecyclerViewAdaptorPedidos adaptorNegocio;
     private Usuario usuario;
-    private Pedido pedido;
     private List<Pedido> listaPedidos;
 
 
@@ -49,7 +48,6 @@ public class PantallaDePedidos extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_de_pedidos);
         //RECEPCION DEL ACTIVITY ANTERIOR
         usuario = (Usuario) getIntent().getExtras().getSerializable("user");
-        pedido = (Pedido) getIntent().getExtras().getSerializable("pedido");
 
         recyclerViewPedidos = (RecyclerView) findViewById(R.id.recyclerNegocios);
         recyclerViewPedidos.setLayoutManager(new LinearLayoutManager(this));
@@ -71,11 +69,13 @@ public class PantallaDePedidos extends AppCompatActivity {
                     JSONArray arrayDeJson = resp.getJSONArray("datos");
                     for (int i = 0; i < arrayDeJson.length(); i++) {
                         JSONObject objPedidos = arrayDeJson.getJSONObject(i);
-                     pedido.setEstado(objPedidos.getString("estado"));
-                     pedido.setId_pedido(objPedidos.getInt("id"));
-                     pedido.setTotal(objPedidos.getDouble("total"));
-                     pedido.setTransporte(objPedidos.getString("transporte"));
-                     pedido.setFecha_hora(objPedidos.getString("fecha_hora"));
+                        Pedido pedido = new Pedido();
+                        pedido.setEstado(objPedidos.getString("estado"));
+                        pedido.setId_pedido(objPedidos.getInt("id"));
+                        pedido.setTotal(objPedidos.getDouble("total"));
+                        pedido.setTransporte(objPedidos.getString("transporte"));
+                        pedido.setFecha_hora(objPedidos.getString("fecha_hora"));
+                        listaPedidos.add(pedido);
                     }
                     rellenarRecyclerView();
                 }
@@ -110,8 +110,10 @@ public class PantallaDePedidos extends AppCompatActivity {
     }
 
     public void irPrincipal() {
-        Intent i = new Intent(this, PantallaPrincipal.class );
+        Intent i = new Intent(this, PantallaPrincipal.class);
         i.putExtra("user", usuario);
         startActivity(i);
-    };
+    }
+
+    ;
 }
