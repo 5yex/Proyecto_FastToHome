@@ -675,7 +675,6 @@ function hacerPedido($datos){
             $producto->agregar();
         }
         $pedido->setId_pedido($id_pedido);
-        $pedido->setEstado("pagado");
         $pedido->actualizacionEstadoPedido();
         mandarRespuesta(false, 'Se realizó un pedido con exito');
     }catch (PDOException $ex) {
