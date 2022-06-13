@@ -666,9 +666,9 @@ function hacerPedido($datos){
         $pedido->setFecha_hora((new DateTime())->format('Y-m-d H:i:s'));
         $pedido->setTotal($dPedido->total);
         $pedido->setTransporte($dPedido->transporte);
-        $idPedido = $pedido->agregarConId()[0]->last_id;
+        $id_pedido = $pedido->agregarConId()[0]->last_id;
         $producto = new Cesta();
-        $producto->setId_pedido($idPedido);
+        $producto->setId_pedido($id_pedido);
         foreach ($datos[1]as $value) {
             $producto->setCantidad($value->cantidad);
             $producto->setId_producto($value->id_producto);
