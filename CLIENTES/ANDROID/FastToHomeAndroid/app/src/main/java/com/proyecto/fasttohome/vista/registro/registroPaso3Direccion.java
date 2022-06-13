@@ -45,7 +45,7 @@ public class registroPaso3Direccion extends AppCompatActivity {
 
         user = (Usuario) getIntent().getExtras().getSerializable("user");
         direccion = (Direccion) getIntent().getExtras().getSerializable("direccion");
-
+        direccion.setCoordenadas(" ");
         calle =  findViewById(R.id.etCalle);
         numero = findViewById(R.id.etNumero);
         codigoPostal = findViewById(R.id.etCodigoPostal);
@@ -80,7 +80,6 @@ public class registroPaso3Direccion extends AppCompatActivity {
                 direccion.setCiudad(ciudad.getText().toString());
                 direccion.setCalle(calle.getText().toString());
                 direccion.setOtros(otros.getText().toString());
-                direccion.setCoordenadas(" ");
 
                 System.err.println(user.getJSON() + direccion.getJSON());
                 registerDirecion();
