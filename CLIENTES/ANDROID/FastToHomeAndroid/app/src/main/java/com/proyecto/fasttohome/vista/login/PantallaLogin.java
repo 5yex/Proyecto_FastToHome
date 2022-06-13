@@ -92,7 +92,7 @@ public class PantallaLogin extends AppCompatActivity {
                 } else {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
                     if(silent){
-                        if(user.getPassword() == datos.getString("password")){
+                        if(user.getPassword().equals(datos.getString("password")) ){
                             terminarInicioSesion();
                         }
                     }else{
