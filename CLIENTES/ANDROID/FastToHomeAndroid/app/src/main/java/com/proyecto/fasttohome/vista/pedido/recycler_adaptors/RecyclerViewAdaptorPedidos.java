@@ -44,12 +44,12 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private TextView fechaPedido, numeroPedido,estadoPedido;
-        private ImageView image;
         private Usuario usuario;
         private Pedido pedido;
-        private Button pedir, info;
         private Context contexto;
         private ListView listaProductos;
+        private Button marcarRecibido;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -58,6 +58,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
             estadoPedido = itemView.findViewById(R.id.estadoPedido);
             listaProductos = itemView.findViewById(R.id.cestaPedido);
             contexto = itemView.getContext();
+            marcarRecibido = itemView.findViewById(R.id.marcarRecibidoPedido);
         }
     }
 
@@ -80,7 +81,6 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Pedido pedidoActual = listaPedidos.get(position);
-
         holder.usuario = usuario;
         holder.pedido = pedidoActual;
         holder.numeroPedido.setText(pedidoActual.getId_pedido());
@@ -88,7 +88,9 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
         holder.estadoPedido.setText(pedidoActual.getEstado());
         obtenerProductosNegocio(holder.contexto, pedidoActual,holder);
         obtenerCestaPedido(holder.contexto, pedidoActual,holder);
+        holder.marcarRecibido.setOnClickListener(view -> {
 
+        });
         /*
         holder.nombre.setText(negocioActual.getNombre());
         holder.categoria.setText(categorias.get(negocioActual.getId_categoria()).getNombre());
@@ -108,7 +110,33 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
             holder.contexto.startActivity(intent);
         });*/
     }
-
+    public void setPedidoRecibido(Context contexto, Pedido pedido, ViewHolder holder) {
+        String url = contexto.getString(R.string.apiUrl);
+        RequestQueue queue = Volley.newRequestQueue(contexto);
+        StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
+            System.out.println(response);
+            try {
+                JSONObject resp = new JSONObject(response);
+                if ((resp.getBoolean("error")) == true) {
+                    throw new VolleyError(resp.getString("datos"));
+                } else {
+                   
+                }
+            } catch (JSONException | VolleyError e) {
+                Toast.makeText(contexto, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        }, volleyError -> {
+            Toast.makeText(contexto, "ERROR DE CONEXIÓN = " + volleyError, Toast.LENGTH_SHORT).show();
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("DATA", new Peticion("contenido_cesta_pedido", pedido.getJSON()).getJSON());
+                return params;
+            }
+        };
+        queue.add(request);
+    }
 
     public void obtenerCestaPedido(Context contexto, Pedido pedido, ViewHolder holder) {
         ArrayList<Cesta> listaProductosCesta = new ArrayList<>();
