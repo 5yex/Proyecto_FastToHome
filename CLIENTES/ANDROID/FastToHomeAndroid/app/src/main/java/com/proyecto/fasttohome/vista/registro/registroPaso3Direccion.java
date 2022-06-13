@@ -19,6 +19,7 @@ import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
+import com.proyecto.fasttohome.vista.PantallaPrincipal;
 import com.proyecto.fasttohome.vista.login.PantallaLogin;
 import com.proyecto.fasttohome.vista.pedido.seleccionarTransporteZona;
 
@@ -51,14 +52,14 @@ public class registroPaso3Direccion extends AppCompatActivity {
         user = (Usuario) getIntent().getExtras().getSerializable("user");
         direccion = (Direccion) getIntent().getExtras().getSerializable("direccion");
         direccion.setCoordenadas(" ");
-        calle =  findViewById(R.id.etCalle);
+        calle = findViewById(R.id.etCalle);
         numero = findViewById(R.id.etNumero);
         codigoPostal = findViewById(R.id.etCodigoPostal);
         ciudad = findViewById(R.id.etCiudad);
         otros = findViewById(R.id.etOtros);
 
         funcion = getIntent().getExtras().getString("funcion");
-        if(funcion.equals("update")){
+        if (funcion.equals("update")) {
             textoTitulo = findViewById(R.id.textoTituloDireccion);
             textoTitulo.setText("Actualizar Direccion");
             calle.setText(direccion.getCalle());
@@ -69,15 +70,14 @@ public class registroPaso3Direccion extends AppCompatActivity {
         }
 
 
-
     }
 
     /**
      * Registra un usuario llamando a la api rest con volley
-     *  https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyCYF3r2xgvGA5oehQkJx3mCmOoRh6WNQvQ
+     * https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyCYF3r2xgvGA5oehQkJx3mCmOoRh6WNQvQ
      */
 
-    public void accionRegistro(View view){
+    public void accionRegistro(View view) {
 
         try {
             String numero_casa = numero.getText().toString();
@@ -86,7 +86,7 @@ public class registroPaso3Direccion extends AppCompatActivity {
             String street = calle.getText().toString();
             String other = otros.getText().toString();
 
-            if(numero_casa.length() > 0 && cod_postal.length() > 0 && city.length() > 0 && street.length() > 0 && other.length() > 0){
+            if (numero_casa.length() > 0 && cod_postal.length() > 0 && city.length() > 0 && street.length() > 0 && other.length() > 0) {
                 int numeroEntero = Integer.valueOf(numero.getText().toString());
                 int cod_postalEntero = Integer.valueOf(codigoPostal.getText().toString());
 
@@ -98,14 +98,14 @@ public class registroPaso3Direccion extends AppCompatActivity {
 
                 System.err.println(user.getJSON() + direccion.getJSON());
                 registerDirecion();
-            }else{
-                Toast notificacion = Toast.makeText(this,"No debes dejar ningún campo vacío.",Toast.LENGTH_SHORT);
+            } else {
+                Toast notificacion = Toast.makeText(this, "No debes dejar ningún campo vacío.", Toast.LENGTH_SHORT);
                 notificacion.show();
             }
 
 
-        }catch (NumberFormatException exception){
-            Toast notificacion = Toast.makeText(this,"El numero de la calle y el codigo postal deben ser numeros enteros.",Toast.LENGTH_SHORT);
+        } catch (NumberFormatException exception) {
+            Toast notificacion = Toast.makeText(this, "El numero de la calle y el codigo postal deben ser numeros enteros.", Toast.LENGTH_SHORT);
             notificacion.show();
         }
     }
@@ -152,7 +152,7 @@ public class registroPaso3Direccion extends AppCompatActivity {
                 } else {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
                     int DireccionId = datos.getInt("last_id");
-                    if (DireccionId != -1){
+                    if (DireccionId != -1) {
                         registerCompleter(DireccionId);
                     }
                 }
@@ -170,44 +170,46 @@ public class registroPaso3Direccion extends AppCompatActivity {
         queue.add(request);
     }
 
-    private void updateDireccion(View view) {
+    private void updateDireccion() {
        /* if(coordenadasActuales != null) {
             pararUbicacion = true;
             direccion.setCoordenadas(coordenadasActuales.latitude + "," + coordenadasActuales.longitude);
         }*/
-            System.out.println(direccion.getJSON());
-            String url = getString(R.string.apiUrl);
-            RequestQueue queue = Volley.newRequestQueue(registroPaso3Direccion.this);
-            StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
-                System.out.println(response);
-                try {
-                    JSONObject resp = new JSONObject(response);
-                    if ((resp.getBoolean("error")) == true) {
-                        throw new VolleyError(resp.getString("datos"));
-                    } else {
-                        
-                    }
-                } catch (JSONException | VolleyError e) {
-                    Toast.makeText(registroPaso3Direccion.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        System.out.println(direccion.getJSON());
+        String url = getString(R.string.apiUrl);
+        RequestQueue queue = Volley.newRequestQueue(registroPaso3Direccion.this);
+        StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
+            System.out.println(response);
+            try {
+                JSONObject resp = new JSONObject(response);
+                if ((resp.getBoolean("error")) == true) {
+                    throw new VolleyError(resp.getString("datos"));
+                } else {
+                    Toast.makeText(registroPaso3Direccion.this, "Se ha actualizado con éxito", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(this, PantallaPrincipal.class);
+                    i.putExtra("user", user);
+                    startActivity(i);
                 }
-            }, error -> Toast.makeText(registroPaso3Direccion.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show()) {
-                @Override
-                protected Map<String, String> getParams() {
-                    Map<String, String> params = new HashMap<String, String>();
-                    params.put("DATA", new Peticion("actualizar_direccion", direccion.getJSON()).getJSON());
-                    return params;
-                }
-            };
-            queue.add(request);
+            } catch (JSONException | VolleyError e) {
+                Toast.makeText(registroPaso3Direccion.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        }, error -> Toast.makeText(registroPaso3Direccion.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show()) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("DATA", new Peticion("actualizar_direccion", direccion.getJSON()).getJSON());
+                return params;
+            }
+        };
+        queue.add(request);
 
-        }
+
     }
 
 
-
-    public void volverPantallaLogin(){
-        Intent i = new Intent(this, PantallaLogin.class );
-        i.putExtra("email",user.getEmail());
+    public void volverPantallaLogin() {
+        Intent i = new Intent(this, PantallaLogin.class);
+        i.putExtra("email", user.getEmail());
         startActivity(i);
     }
 }
