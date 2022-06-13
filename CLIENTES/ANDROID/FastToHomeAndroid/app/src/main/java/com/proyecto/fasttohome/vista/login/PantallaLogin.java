@@ -60,6 +60,7 @@ public class PantallaLogin extends AppCompatActivity {
 
     public void irRegistro(View view) {
         Intent i = new Intent(this, registroPaso1DatosUsuario.class );
+        i.putExtra("funcion","registro");
         startActivity(i);
     };
 

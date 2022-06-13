@@ -52,9 +52,10 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
                 int numero_movil = Integer.parseInt(numTelefono);
                 if(validaciones(name,ape,nif,numTelefono,correo)){
                     Intent i = new Intent(this, registroPaso2Password.class);
-
+                    i.putExtra("funcion","registro");
                     i.putExtra("user", user);
                     i.putExtra("direccion", direccion);
+
 
                     startActivity(i);
                 }
