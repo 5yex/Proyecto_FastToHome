@@ -109,8 +109,6 @@ public class registroPaso3Direccion extends AppCompatActivity {
                 Toast notificacion = Toast.makeText(this, "No debes dejar ningún campo vacío.", Toast.LENGTH_SHORT);
                 notificacion.show();
             }
-
-
         } catch (NumberFormatException exception) {
             Toast notificacion = Toast.makeText(this, "El numero de la calle y el codigo postal deben ser numeros enteros.", Toast.LENGTH_SHORT);
             notificacion.show();
