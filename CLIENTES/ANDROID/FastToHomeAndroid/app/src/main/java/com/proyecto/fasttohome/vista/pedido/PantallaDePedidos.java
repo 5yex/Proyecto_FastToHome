@@ -39,7 +39,6 @@ public class PantallaDePedidos extends AppCompatActivity {
     private Usuario usuario;
     private Pedido pedido;
     private List<Pedido> listaPedidos;
-    private HashMap<Integer, Cesta> productos;
 
 
     @Override
@@ -92,7 +91,7 @@ public class PantallaDePedidos extends AppCompatActivity {
     }
 
     private void rellenarRecyclerView() {
-        adaptorNegocio = new RecyclerViewAdaptorPedidos(listaPedidos, usuario,pedido,productos);
+        adaptorNegocio = new RecyclerViewAdaptorPedidos(listaPedidos, usuario,pedido);
         recyclerViewPedidos.setAdapter(adaptorNegocio);
     }
 

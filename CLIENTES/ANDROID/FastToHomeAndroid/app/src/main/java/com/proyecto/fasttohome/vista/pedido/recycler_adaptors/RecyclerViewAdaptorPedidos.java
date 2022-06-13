@@ -45,14 +45,12 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
     }
 
     private List<Pedido> listaPedidos;
-    private HashMap<Integer, Cesta> productos;
     private Usuario usuario;
     private Pedido pedido;
-    public RecyclerViewAdaptorPedidos(List<Pedido> listaPedidos, Usuario usuario, Pedido pedido, HashMap<Integer, Cesta> productos) {
+    public RecyclerViewAdaptorPedidos(List<Pedido> listaPedidos, Usuario usuario, Pedido pedido, HashMap<Integer) {
         this.listaPedidos = listaPedidos;
         this.usuario = usuario;
         this.pedido = pedido;
-        this.productos= productos;
     }
 
     @NonNull
@@ -66,6 +64,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Pedido pedidoActual = listaPedidos.get(position);
+
         holder.usuario = usuario;
         holder.pedido = pedidoActual;
 
@@ -93,6 +92,6 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
 
     @Override
     public int getItemCount() {
-        return listaNegocios.size();
+        return listaPedidos.size();
     }
 }
