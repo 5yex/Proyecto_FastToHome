@@ -137,7 +137,7 @@ public class PantallaLogin extends AppCompatActivity {
         String email = sharedPreferences.getString("email", null);
         String hash = sharedPreferences.getString("hash", null);
         System.out.println(email + hash);
-        if ((email != null && !email.isEmpty()  && hash != null && !hash.isEmpty())) {
+        if (email != null && !email.isEmpty()  && hash != null && !hash.isEmpty()) {
             user.setPassword(hash);
             user.setEmail(email);
             checkPass(true);
