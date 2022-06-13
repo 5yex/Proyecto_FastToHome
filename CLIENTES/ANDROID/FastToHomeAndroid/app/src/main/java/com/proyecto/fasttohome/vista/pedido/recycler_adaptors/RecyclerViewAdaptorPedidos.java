@@ -1,29 +1,36 @@
 package com.proyecto.fasttohome.vista.pedido.recycler_adaptors;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.proyecto.fasttohome.R;
-import com.proyecto.fasttohome.modelo.Categoria;
-import com.proyecto.fasttohome.modelo.Cesta;
-import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Pedido;
+import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
-import com.proyecto.fasttohome.vista.pedido.SeleccionarProductos;
-import com.squareup.picasso.Picasso;
+import com.proyecto.fasttohome.vista.pedido.PantallaDePedidos;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerViewAdaptorPedidos.ViewHolder> {
 
@@ -88,6 +95,44 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
             intent.putExtra("pedido", pedido);
             holder.contexto.startActivity(intent);
         });*/
+    }
+
+    public void obtenerProductosNegocio(Context contexto) {
+        listaPedidos = new ArrayList<Pedido>();
+        String url = contexto.getString(R.string.apiUrl);
+        RequestQueue queue = Volley.newRequestQueue(PantallaDePedidos);
+        StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
+            System.out.println(response);
+            try {
+                JSONObject resp = new JSONObject(response);
+                if ((resp.getBoolean("error")) == true) {
+                    throw new VolleyError(resp.getString("datos"));
+                } else {
+                    JSONArray arrayDeJson = resp.getJSONArray("datos");
+                    for (int i = 0; i < arrayDeJson.length(); i++) {
+                        JSONObject objPedidos = arrayDeJson.getJSONObject(i);
+
+                    }
+
+
+
+                }
+            } catch (JSONException | VolleyError e) {
+                Toast.makeText(PantallaDePedidos.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        }, volleyError -> {
+            Toast.makeText(PantallaDePedidos.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
+            finish();
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("DATA", new Peticion("obtener_todos_negocios", null).getJSON());
+                return params;
+            }
+        };
+        queue.add(request);
     }
 
     @Override
