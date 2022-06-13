@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="vista.mercader">
+  <ClassDiagramComponents>
+    <Class name="DialogoEditarProducto" package="vista.mercader" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nImg" type="Imagen" visibility="private"/>
+        <Field name="producto" type="Producto" visibility="private"/>
+        <Field name="btActualizar" type="JButton" visibility="private"/>
+        <Field name="DescripcionTXT" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="NombreTxt" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="botonAceptar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botonCacelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botonPedirImagen" type="javax.swing.JButton" visibility="private"/>
+        <Field name="errorTexto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="imgProducto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="precioProducto" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="textAreaDescripcion" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="txtPrecio" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="varNombre" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JFrame" name="parent"/>
+          <Argument type="JButton" name="btActualizar"/>
+          <Argument type="Producto" name="product"/>
+          <Argument type="boolean" name="modal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="establecerIcono" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="botonPedirImagenActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="botonAceptarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="botonCacelarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="cargaInicial" returnType="void" visibility="private"/>
+        <Method name="editarProducto" returnType="boolean" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="DialogoRegistrarProducto" package="vista.mercader" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="nImg" type="Imagen" visibility="private"/>
+        <Field name="neg" type="Negocio" visibility="private"/>
+        <Field name="btActualizar" type="JButton" visibility="private"/>
+        <Field name="DescripcionTXT" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="NombreTxt" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="botonAceptar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botonCacelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botonPedirImagen" type="javax.swing.JButton" visibility="private"/>
+        <Field name="errorTexto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="imgProducto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="precioProducto" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="textAreaDescripcion" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="txtPrecio" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="varNombre" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JFrame" name="parent"/>
+          <Argument type="JButton" name="btActualizar"/>
+          <Argument type="Negocio" name="neg"/>
+          <Argument type="boolean" name="modal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="establecerIcono" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="botonPedirImagenActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="botonAceptarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="botonCacelarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="nuevoProducto" returnType="boolean" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="PanelPedido" package="vista.mercader" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="pedido" type="Pedido" visibility="private"/>
+        <Field name="actualizarPedido" type="ActionListener" visibility="private"/>
+        <Field name="botonPedidos" type="JButton" visibility="private"/>
+        <Field name="estadoActualPedido" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="infoDireccion" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="listaProductosDeCesta" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="numPedido" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="pasarEstado" type="javax.swing.JButton" visibility="private"/>
+        <Field name="tipoTransporte" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="tituloEstadoPedido" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="tituloIdPedido" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="tituloTransporte" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="verMapa" type="javax.swing.JButton" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Pedido" name="pedido"/>
+          <Argument type="JButton" name="botonPedidos"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Pedido" name="pedido"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="pasarEstadoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="verMapaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="mostrarDatos" returnType="void" visibility="private"/>
+        <Method name="cargaDireccionPedido" returnType="void" visibility="public"/>
+        <Method name="cargarContenidoDeCesta" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PanelProducto" package="vista.mercader" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="producto" type="Producto" visibility="private"/>
+        <Field name="btUpdate" type="JButton" visibility="package"/>
+        <Field name="parent" type="JFrame" visibility="package"/>
+        <Field name="botonEditarProducto" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botonEliminarProducto" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botonInfoProducto" type="javax.swing.JButton" visibility="private"/>
+        <Field name="imgProducto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelPrecio" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="nombreProducto" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JFrame" name="parent"/>
+          <Argument type="Producto" name="prod"/>
+          <Argument type="JButton" name="btUpdate"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="botonEliminarProductoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="botonEditarProductoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="botonInfoProductoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="mostrarDatos" returnType="void" visibility="private"/>
+        <Method name="eliminarProducto" returnType="void" visibility="private"/>
+        <Method name="editarProducto" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="PanelProductoNuevo" package="vista.mercader" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="actualizar" type="JButton" visibility="package"/>
+        <Field name="negocio" type="Negocio" visibility="package"/>
+        <Field name="framePadre" type="JFrame" visibility="package"/>
+        <Field name="botonNuevoProducto" type="javax.swing.JButton" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JFrame" name="parent"/>
+          <Argument type="JButton" name="actualizar"/>
+          <Argument type="Negocio" name="negocio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="botonNuevoProductoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VentanaMercader" package="vista.mercader" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="mercader" type="Usuario" visibility="private"/>
+        <Field name="negocio" type="Negocio" visibility="private"/>
+        <Field name="hiloUpdate" type="Thread" visibility="package"/>
+        <Field name="autoUpdate" type="javax.swing.JCheckBox" visibility="private"/>
+        <Field name="botonModificarDatosMercader" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botonesPedidos" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="btnModificarNegocio" type="javax.swing.JButton" visibility="private"/>
+        <Field name="checkParaEnviar" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="checkParaPreparar" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="checkTodos" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="imgNegocio" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="labelBienvenido" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelNombreMercader" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="nombreNegocio" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="panelInicioAdmin" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelPedidos" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelProductos" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelTablaPedidos" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelTablaProductos" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelTableado" type="javax.swing.JTabbedPane" visibility="private"/>
+        <Field name="recargarPedidos" type="javax.swing.JButton" visibility="private"/>
+        <Field name="recargarProductos" type="javax.swing.JButton" visibility="private"/>
+        <Field name="updateInicio" type="javax.swing.JButton" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Usuario" name="user"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="establecerIcono" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="botonModificarDatosMercaderActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="recargarPedidosActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="autoUpdateActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="checkTodosActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="checkParaPrepararActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnModificarNegocioActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="updateInicioActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="checkParaEnviarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="recargarProductosActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="inicilizacion" returnType="void" visibility="private"/>
+        <Method name="cargarInicio" returnType="void" visibility="private"/>
+        <Method name="mostrarProductos" returnType="void" visibility="public"/>
+        <Method name="interrumpirHilo" returnType="void" visibility="private"/>
+        <Method name="crearHiloActualizacionDeProductos" returnType="void" visibility="private"/>
+        <Method name="mostrarPedidosPagados" returnType="void" visibility="private"/>
+        <Method name="mostrarPedidosEnPreparacion" returnType="void" visibility="private"/>
+        <Method name="mostrarPedidos" returnType="void" visibility="private"/>
+        <Method name="englobarRadioButtons" returnType="void" visibility="public"/>
+        <Method name="confirmarCierre" returnType="void" visibility="public"/>
+        <Method name="confirmarSalida" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
