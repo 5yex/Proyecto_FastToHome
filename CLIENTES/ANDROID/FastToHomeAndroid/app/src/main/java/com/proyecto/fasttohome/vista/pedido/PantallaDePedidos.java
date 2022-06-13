@@ -27,6 +27,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -74,7 +75,7 @@ public class PantallaDePedidos extends AppCompatActivity {
                      pedido.setId_pedido(objPedidos.getInt("id"));
                      pedido.setTotal(objPedidos.getDouble("total"));
                      pedido.setTransporte(objPedidos.getString("transporte"));
-                     pedido.setFecha_hora(objPedidos.getString("fecha_hora"));
+                     pedido.setFecha_hora(new Date.from(LocalDate.parse(objPedidos.getString("fecha_hora")).toIn));
                     }
                     rellenarRecyclerView();
                 }
