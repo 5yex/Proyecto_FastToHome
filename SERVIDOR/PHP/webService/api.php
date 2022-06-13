@@ -749,9 +749,8 @@ function obtenerPedidosCliente($datos) {
     require_once '../modelo/Pedido.php';
 
     try {
-        $pedido = new Pedido();
-        print_r(var_dump($datos));
-        $pedido->setId_usuario($datos->id_usuario);
+        $pedido = new Pedido();;
+        $pedido->setId_usuario($datos->id);
         $respuesta = $pedido->obtenerPedidosClientes();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
