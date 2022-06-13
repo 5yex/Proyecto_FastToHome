@@ -44,7 +44,7 @@
 
     <string name="pedido_finalizado_exito">Pedido finalizado con éxito</string>
     <string name="pedido_finalizado_gracias">¡Muchas grácias!</string>
-    <string name="pedido_finalizado_info">Puede hace seguimiento desde su ventana principal</string>
+    <string name="pedido_finalizado_info">Puede seguirlo desde su ventana principal</string>
     <!-- Checkout activity -->
     <string name="title_activity_finalizar_pedido">Finalizar Pedido</string>
     <string name="checkout_item_description">Description</string>
