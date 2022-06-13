@@ -36,11 +36,11 @@ public class registroPaso2Password extends AppCompatActivity {
     Direccion direccion;
     Button boton;
     String funcion;
-
     EditText password;
     EditText passwordConfirm;
     EditText campoActualizar;
     TextView textoActualizar;
+    TextView textoTitulo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +48,6 @@ public class registroPaso2Password extends AppCompatActivity {
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         //getSupportActionBar().hide();
         setContentView(R.layout.activity_registro_paso_password);
-
-
         user = (Usuario) getIntent().getExtras().getSerializable("user");
         funcion = getIntent().getExtras().getString("funcion");
         direccion = (Direccion) getIntent().getExtras().getSerializable("direccion");
@@ -58,9 +56,9 @@ public class registroPaso2Password extends AppCompatActivity {
         password = findViewById(R.id.etPasswordR);
         passwordConfirm = findViewById(R.id.etPasswordConfirmR);
         boton = findViewById(R.id.buttonPassword);
-
+        textoTitulo = findViewById(R.id.textoTituloContrasena);
         if (funcion.equals("update")) {
-
+            textoTitulo.setText("Editar contraseña");
             boton.setText("Actualizar Contraseña");
             campoActualizar.setVisibility(View.VISIBLE);
             textoActualizar.setVisibility(View.VISIBLE);
