@@ -50,10 +50,10 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
     private Usuario usuario;
     private Pedido pedido;
     public RecyclerViewAdaptorPedidos(List<Pedido> listaPedidos, Usuario usuario, Pedido pedido, HashMap<Integer, Cesta> productos) {
-        this.listaNegocios = listaNegocios;
+        this.listaPedidos = listaPedidos;
         this.usuario = usuario;
         this.pedido = pedido;
-        this.categorias= categorias;
+        this.productos= productos;
     }
 
     @NonNull
