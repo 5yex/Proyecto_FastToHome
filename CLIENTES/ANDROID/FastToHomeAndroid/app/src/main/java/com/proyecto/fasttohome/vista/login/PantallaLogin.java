@@ -121,7 +121,7 @@ public class PantallaLogin extends AppCompatActivity {
     }
 
     public void salvarCuenta() {
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("fasttohome", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
     }
