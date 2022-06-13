@@ -69,11 +69,9 @@ public class PantallaDePedidos extends AppCompatActivity {
                     JSONArray arrayDeJson = resp.getJSONArray("datos");
                     for (int i = 0; i < arrayDeJson.length(); i++) {
                         JSONObject objPedidos = arrayDeJson.getJSONObject(i);
-
+                        
                     }
-
-
-
+                    rellenarRecyclerView();
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaDePedidos.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
