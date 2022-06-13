@@ -183,7 +183,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("DATA", new Peticion("nuevo_usuario", user.getJSON()).getJSON());
+                params.put("DATA", new Peticion("actualizar_usuario", user.getJSON()).getJSON());
                 return params;
             }
         };
