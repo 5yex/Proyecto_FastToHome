@@ -253,7 +253,9 @@ public class FinalizarPedido extends AppCompatActivity {
                 if ((resp.getBoolean("error")) == true) {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
-
+                    Intent i = new Intent(this, seleccionarTransporteZona.class );
+                    i.putExtra("user", usuario);
+                    startActivity(i);
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(FinalizarPedido.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();

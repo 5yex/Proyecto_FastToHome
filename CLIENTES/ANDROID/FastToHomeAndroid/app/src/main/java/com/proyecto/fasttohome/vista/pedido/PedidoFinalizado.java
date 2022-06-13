@@ -14,7 +14,7 @@ import com.proyecto.fasttohome.vista.PantallaPrincipal;
 public class PedidoFinalizado extends AppCompatActivity {
 
     Button volver;
-    Usuario user;
+    Usuario usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +22,11 @@ public class PedidoFinalizado extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_pedido_finalizado);
+        usuario = (Usuario) getIntent().getExtras().getSerializable("user");
         volver = findViewById(R.id.volver);
         volver.setOnClickListener(view -> {
             Intent i = new Intent(this, PantallaPrincipal.class);
-            i.putExtra("user", user);
+            i.putExtra("user", usuario);
             startActivity(i);
         });
     }
