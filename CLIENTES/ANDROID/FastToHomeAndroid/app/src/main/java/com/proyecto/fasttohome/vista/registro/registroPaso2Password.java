@@ -58,7 +58,7 @@ public class registroPaso2Password extends AppCompatActivity {
         boton = findViewById(R.id.buttonPassword);
         textoTitulo = findViewById(R.id.textoTituloContrasena);
         if (funcion.equals("update")) {
-            textoTitulo.setText("Editar contraseña");
+            textoTitulo.setText("Editar contraseña:");
             boton.setText("Actualizar Contraseña");
             campoActualizar.setVisibility(View.VISIBLE);
             textoActualizar.setVisibility(View.VISIBLE);
