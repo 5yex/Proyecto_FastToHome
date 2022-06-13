@@ -18,15 +18,16 @@ public class Pedido implements Serializable {
     private int id_pedido;
     private int id_usuario;
     private int id_negocio;
-    private Date fecha_hora;
+    private String fecha_hora;
     private String estado;
     private double total;
     private String transporte;
 
     public Pedido() {
+
     }
 
-    public Pedido(int id_pedido, int id_usuario, int id_negocio, Date fecha_hora, String estado, double total, String transporte) {
+    public Pedido(int id_pedido, int id_usuario, int id_negocio, String fecha_hora, String estado, double total, String transporte) {
         this.id_pedido = id_pedido;
         this.id_usuario = id_usuario;
         this.id_negocio = id_negocio;
@@ -35,16 +36,6 @@ public class Pedido implements Serializable {
         this.total = total;
         this.transporte = transporte;
     }
-
-    public Pedido(int id_usuario, int id_negocio, Date fecha_hora, String estado, double total, String transporte) {
-        this.id_usuario = id_usuario;
-        this.id_negocio = id_negocio;
-        this.fecha_hora = fecha_hora;
-        this.estado = estado;
-        this.total = total;
-        this.transporte = transporte;
-    }
-    
 
     public int getId_pedido() {
         return id_pedido;
@@ -70,11 +61,11 @@ public class Pedido implements Serializable {
         this.id_negocio = id_negocio;
     }
 
-    public Date getFecha_hora() {
+    public String getFecha_hora() {
         return fecha_hora;
     }
 
-    public void setFecha_hora(Date fecha_hora) {
+    public void setFecha_hora(String fecha_hora) {
         this.fecha_hora = fecha_hora;
     }
 
@@ -101,20 +92,4 @@ public class Pedido implements Serializable {
     public void setTransporte(String transporte) {
         this.transporte = transporte;
     }
-    
-    public String getJSON(){
-       return new Gson().toJson(this);
-    }
-    
-    public Object[] getRow() {
-        return new Object[]{id_pedido, id_usuario, transporte, total, fecha_hora, estado};
-    }
-
-    @Override
-    public String toString() {
-        return "Pedido{" + "id_pedido=" + id_pedido + ", id_usuario=" + id_usuario + ", id_negocio=" + id_negocio + ", fecha_hora=" + fecha_hora + ", estado=" + estado + ", total=" + total + ", transporte=" + transporte + '}';
-    }
-    
-    
-    
 }

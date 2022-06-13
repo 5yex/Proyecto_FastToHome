@@ -75,6 +75,7 @@ public class PantallaDePedidos extends AppCompatActivity {
                      pedido.setId_pedido(objPedidos.getInt("id"));
                      pedido.setTotal(objPedidos.getDouble("total"));
                      pedido.setTransporte(objPedidos.getString("transporte"));
+                     pedido.setFecha_hora();
 
                     }
                     rellenarRecyclerView();
