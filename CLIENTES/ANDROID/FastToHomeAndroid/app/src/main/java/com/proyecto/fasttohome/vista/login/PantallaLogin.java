@@ -1,7 +1,10 @@
 package com.proyecto.fasttohome.vista.login;
 
+import static android.app.PendingIntent.getActivity;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -117,9 +120,7 @@ public class PantallaLogin extends AppCompatActivity {
     }
 
     public void salvarCuenta() {
-        SharedPreferences settings = getApplicationContext().getSharedPreferences(PREFS_NAME, 0);
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putInt("homeScore", YOUR_HOME_SCORE);
+        
     }
 
     @Override
