@@ -35,6 +35,7 @@ public class registroPaso3Direccion extends AppCompatActivity {
     EditText codigoPostal;
     EditText ciudad;
     EditText otros;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
