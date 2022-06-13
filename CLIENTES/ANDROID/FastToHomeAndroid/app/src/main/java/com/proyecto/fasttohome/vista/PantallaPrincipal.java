@@ -107,8 +107,7 @@ public class PantallaPrincipal extends AppCompatActivity {
     public void obtenerDireccionUsuario() {
         String url = getString(R.string.apiUrl);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
-            System.out .println("USUARIO MANDADO: " +user.getJSON());
-            System.out.println("RESPUESTA: "+response);
+            System.out.println(response);
             try {
                 JSONObject resp = new JSONObject(response);
                 if (resp.getBoolean("error") == true) {
