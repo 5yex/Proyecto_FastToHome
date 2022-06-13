@@ -108,6 +108,8 @@ public class PantallaLogin extends AppCompatActivity {
         };
         queue.add(request);
     }
+    @Override
+    public void onBackPressed() {}
 }
 
 
