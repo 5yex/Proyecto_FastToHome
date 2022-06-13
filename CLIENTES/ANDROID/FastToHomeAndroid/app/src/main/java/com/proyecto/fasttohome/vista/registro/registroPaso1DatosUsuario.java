@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.proyecto.fasttohome.R;
@@ -22,6 +23,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
     EditText dni;
     EditText telefono;
     EditText email;
+    TextView titulo;
     String funcion;
 
     @Override
@@ -36,7 +38,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         dni = findViewById(R.id.etDni);
         telefono = findViewById(R.id.etTelefono);
         email = findViewById(R.id.ediTextemail);
-
+        titulo = findViewById()
 
     }
 
