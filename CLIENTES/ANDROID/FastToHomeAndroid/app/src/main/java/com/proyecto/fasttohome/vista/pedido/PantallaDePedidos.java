@@ -77,7 +77,7 @@ public class PantallaDePedidos extends AppCompatActivity {
                         pedido.setTotal(objPedidos.getDouble("total"));
                         pedido.setTransporte(objPedidos.getString("transporte"));
                         pedido.setFecha_hora(objPedidos.getString("fecha_hora"));
-                        pedido.setId_negocio(objPedidos.getString("id_negocio"));
+                        pedido.setId_negocio(objPedidos.getInt("id_negocio"));
                         listaPedidos.add(pedido);
                     }
                     rellenarRecyclerView();
