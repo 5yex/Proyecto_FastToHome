@@ -675,11 +675,15 @@ function hacerPedido($datos){
         $pedido->setFecha_hora((new DateTime())->format('Y-m-d H:i:s'));
         $pedido->setTotal($dPedido->total);
         $pedido->setTransporte($dPedido->transporte);
-        if ($pedido->agregar()) {
-            mandarRespuesta(false, 'Se realizó un pedido con exito');
-        } else {
-            mandarRespuesta(true, 'No se pudo procesar el pedido');
-        }        
+        
+        
+        print_r($pedido->agregarConId());
+        
+//        if ($pedido->agregar()) {
+//            mandarRespuesta(false, 'Se realizó un pedido con exito');
+//        } else {
+//            mandarRespuesta(true, 'No se pudo procesar el pedido');
+//        }        
     }catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
