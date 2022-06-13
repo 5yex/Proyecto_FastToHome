@@ -8,18 +8,57 @@
     tools:context=".vista.PantallaPrincipal">
 
     <Button
+        android:id="@+id/button7"
+        android:layout_width="354dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="pasarPantallaPedidos"
+        android:text="SEGUIMIENTO PEDIDOS"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="354dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:onClick="pasarPantallaPedidos"
+        android:text="SEGUIMIENTO PEDIDOS"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonHacerPedido" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="354dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="12dp"
+        android:onClick="pasarPantallaPedidos"
+        android:text="DIRECCION"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/botonHacerPedido"
         android:layout_width="355dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="24dp"
         android:onClick="pasarPantallaUbicacion"
         android:text="HACER PEDIDO"
         android:textSize="20sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -60,13 +99,13 @@
         android:id="@+id/button4"
         android:layout_width="354dp"
         android:layout_height="52dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="12dp"
         android:onClick="pasarPantallaPedidos"
-        android:text="SEGUIMIENTO PEDIDOS"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="DATOS PERSONALES"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent" />
 
 
