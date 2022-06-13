@@ -24,14 +24,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
-        android:layout_height="232dp"
+        android:layout_height="120dp"
         android:background="@color/principalFastToHome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView18"
+            android:id="@+id/nombreUser"
             android:layout_width="357dp"
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
@@ -42,6 +42,17 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/apellidosUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="apellidos"
+            android:textColor="@color/textopanel"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/nombreUser"
+            app:layout_constraintTop_toBottomOf="@+id/nombreUser" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

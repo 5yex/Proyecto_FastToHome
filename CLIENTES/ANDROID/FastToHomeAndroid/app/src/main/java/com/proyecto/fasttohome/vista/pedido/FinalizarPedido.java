@@ -75,7 +75,7 @@ public class FinalizarPedido extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        usuario = (Usuario) getIntent().getExtras().getSerializable("user");
+        usuario = (Usuario) getIntent().getExtras().getSerializable("usuario");
         negocio = (Negocio) getIntent().getExtras().getSerializable("negocio");
         pedido = (Pedido) getIntent().getExtras().getSerializable("pedido");
         productos = (HashMap<Integer, Producto>) getIntent().getExtras().getSerializable("productos");
