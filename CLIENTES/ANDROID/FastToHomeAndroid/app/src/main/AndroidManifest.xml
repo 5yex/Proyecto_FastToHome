@@ -21,14 +21,12 @@
         android:theme="@style/Theme.FastToHome"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <activity
-            android:name=".PedidoFinalizado"
-            android:exported="false" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
-
+        <activity
+            android:name=".vista.pedido.PedidoFinalizado"
+            android:exported="false" />
         <activity
             android:name=".vista.pedido.FinalizarPedido"
             android:exported="false"
