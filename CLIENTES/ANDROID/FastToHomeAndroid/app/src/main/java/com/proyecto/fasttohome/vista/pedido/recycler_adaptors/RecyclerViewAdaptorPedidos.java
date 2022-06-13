@@ -47,7 +47,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
     private List<Pedido> listaPedidos;
     private Usuario usuario;
     private Pedido pedido;
-    public RecyclerViewAdaptorPedidos(List<Pedido> listaPedidos, Usuario usuario, Pedido pedido, HashMap<Integer) {
+    public RecyclerViewAdaptorPedidos(List<Pedido> listaPedidos, Usuario usuario, Pedido pedido) {
         this.listaPedidos = listaPedidos;
         this.usuario = usuario;
         this.pedido = pedido;
