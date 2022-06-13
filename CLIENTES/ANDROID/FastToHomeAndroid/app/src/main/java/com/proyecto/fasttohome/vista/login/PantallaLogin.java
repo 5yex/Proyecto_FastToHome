@@ -121,7 +121,8 @@ public class PantallaLogin extends AppCompatActivity {
     }
 
     public void salvarCuenta() {
-        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
 
     }
 
