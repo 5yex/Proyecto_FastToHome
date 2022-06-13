@@ -136,7 +136,7 @@ public class PedidoDao {
                     Logger.getLogger(PedidoDao.class.getName()).log(Level.SEVERE, null, ex);
                 }
 
-                pedido.setEstado(pedidoJson.get("estado").getAsString());
+                pedido.setEstado(pedidoJson.get("to").getAsString());
                 pedido.setTotal(pedidoJson.get("total").getAsDouble());
                 pedido.setTransporte(pedidoJson.get("transporte").getAsString());
 
