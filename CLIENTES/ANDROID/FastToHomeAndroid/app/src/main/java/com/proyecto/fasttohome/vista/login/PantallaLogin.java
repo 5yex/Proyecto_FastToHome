@@ -85,14 +85,19 @@ public class PantallaLogin extends AppCompatActivity {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
                     user.setPassword(datos.getString("password"));
                     user.setId(datos.getInt("id"));
+
+
                     if(BCrypt.checkpw(password.getText().toString(),user.getPassword())){
                         Toast.makeText(PantallaLogin.this, "Has iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
+
 
                         irPrincipal();
 
                     }else {
                         Toast.makeText(PantallaLogin.this, "Tu contraseña es incorrecta", Toast.LENGTH_SHORT).show();
                     }
+
+
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaLogin.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -109,6 +114,11 @@ public class PantallaLogin extends AppCompatActivity {
         };
         queue.add(request);
     }
+
+    public void salvarCuenta() {
+        
+    }
+
     @Override
     public void onBackPressed() {}
 }
