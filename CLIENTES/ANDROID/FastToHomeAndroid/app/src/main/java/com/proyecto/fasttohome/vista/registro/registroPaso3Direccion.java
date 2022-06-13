@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -36,13 +37,14 @@ public class registroPaso3Direccion extends AppCompatActivity {
     EditText ciudad;
     EditText otros;
     String funcion;
+    TextView textoTitulo;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // requestWindowFeature(Window.FEATURE_NO_TITLE);
-       // getSupportActionBar().hide();
+        // requestWindowFeature(Window.FEATURE_NO_TITLE);
+        // getSupportActionBar().hide();
         setContentView(R.layout.activity_registro_paso_direccion_final);
 
         user = (Usuario) getIntent().getExtras().getSerializable("user");
@@ -53,8 +55,17 @@ public class registroPaso3Direccion extends AppCompatActivity {
         codigoPostal = findViewById(R.id.etCodigoPostal);
         ciudad = findViewById(R.id.etCiudad);
         otros = findViewById(R.id.etOtros);
-        funcion = getIntent().getExtras().getString("funcion");
 
+        funcion = getIntent().getExtras().getString("funcion");
+        if(funcion.equals("update")){
+            textoTitulo = findViewById(R.id.textoTituloDireccion);
+            textoTitulo.setText("Actualizar Direccion");
+            calle.setText(direccion.getCalle());
+            numero.setText(direccion.getNumero());
+            codigoPostal.setText(direccion.getCodigo_postal());
+            ciudad.setText(direccion.getCiudad());
+            otros.setText(direccion.getOtros());
+        }
 
 
 
