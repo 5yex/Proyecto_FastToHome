@@ -97,8 +97,15 @@ public class registroPaso3Direccion extends AppCompatActivity {
                 direccion.setOtros(otros.getText().toString());
 
                 System.err.println(user.getJSON() + direccion.getJSON());
-                registerDirecion();
-            } else {
+
+                if (funcion.equals("registro")) {
+                    registerDirecion();
+                }
+                if (funcion.equals("update")) {
+                    updateDireccion();
+                }
+
+                } else {
                 Toast notificacion = Toast.makeText(this, "No debes dejar ningún campo vacío.", Toast.LENGTH_SHORT);
                 notificacion.show();
             }
@@ -175,7 +182,6 @@ public class registroPaso3Direccion extends AppCompatActivity {
             pararUbicacion = true;
             direccion.setCoordenadas(coordenadasActuales.latitude + "," + coordenadasActuales.longitude);
         }*/
-        System.out.println(direccion.getJSON());
         String url = getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(registroPaso3Direccion.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
@@ -202,8 +208,6 @@ public class registroPaso3Direccion extends AppCompatActivity {
             }
         };
         queue.add(request);
-
-
     }
 
 
