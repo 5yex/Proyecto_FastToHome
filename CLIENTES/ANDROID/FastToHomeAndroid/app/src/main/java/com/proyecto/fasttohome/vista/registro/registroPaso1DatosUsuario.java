@@ -45,7 +45,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
-        // getSupportActionBar().hide();
+        //getSupportActionBar().hide();
         setContentView(R.layout.activity_registro_paso_datos_usuario);
 
         nombre = findViewById(R.id.etNombre);
@@ -54,8 +54,10 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         telefono = findViewById(R.id.etTelefono);
         email = findViewById(R.id.ediTextemail);
         titulo = findViewById(R.id.titleDatosUsuarios);
+        boton = findViewById(R.id.buttonUsuario);
         user = (Usuario) getIntent().getExtras().getSerializable("user");
         funcion = getIntent().getExtras().getString("funcion");
+
         System.out.println(funcion+" "+user.getJSON());
 
         if (funcion.equals("update")) {
@@ -65,9 +67,8 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
             dni.setText(user.getDni());
             telefono.setText(user.getTlf());
             email.setText(user.getEmail());
+            boton.setText("Actualizar Datos");
         }
-
-
     }
 
 
