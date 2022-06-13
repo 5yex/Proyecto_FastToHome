@@ -204,7 +204,6 @@ class Pedido extends Conexion{
         
         $sentencia = $this->dblink->prepare($sql);
 
-        $id_usuario = $this->getId_usuario();
         $sentencia->bindParam(":id_user", $this->id_usuario);
 
         $sentencia->execute();
