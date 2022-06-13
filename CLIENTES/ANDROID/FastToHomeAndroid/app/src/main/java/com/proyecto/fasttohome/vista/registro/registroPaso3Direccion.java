@@ -63,7 +63,7 @@ public class registroPaso3Direccion extends AppCompatActivity {
             textoTitulo = findViewById(R.id.textoTituloDireccion);
             textoTitulo.setText("Actualizar Direccion");
             calle.setText(direccion.getCalle());
-            numero.setText(direccion.getNumero());
+            numero.setText((direccion.getNumero()+"");
             codigoPostal.setText(direccion.getCodigo_postal());
             ciudad.setText(direccion.getCiudad());
             otros.setText(direccion.getOtros());
