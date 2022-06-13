@@ -19,6 +19,7 @@ import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.util.Validaciones;
 import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Usuario;
+import com.proyecto.fasttohome.vista.PantallaPrincipal;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -56,6 +57,11 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
 
         if (funcion == "update") {
             titulo.setText("Actualizar Datos:");
+            nombre.setText(user.getNombre());
+            apellidos.setText(user.getApellidos());
+            dni.setText(user.getDni());
+            telefono.setText(user.getTlf());
+            email.setText(user.getEmail());
         }
 
 
@@ -166,7 +172,9 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
                     Toast.makeText(registroPaso1DatosUsuario.this, "Se ha actualizado con éxito", Toast.LENGTH_SHORT).show();
-
+                    Intent i = new Intent(this, PantallaPrincipal.class);
+                    i.putExtra("user", user);
+                    startActivity(i);
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(registroPaso1DatosUsuario.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
