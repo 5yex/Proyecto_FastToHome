@@ -93,10 +93,8 @@ public class PantallaLogin extends AppCompatActivity {
 
 
                     if(BCrypt.checkpw(password.getText().toString(),user.getPassword())){
-                        Toast.makeText(PantallaLogin.this, "Has iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
 
-
-                        irPrincipal();
+                        terminarInicioSesion();
 
                     }else {
                         Toast.makeText(PantallaLogin.this, "Tu contraseña es incorrecta", Toast.LENGTH_SHORT).show();
@@ -120,13 +118,17 @@ public class PantallaLogin extends AppCompatActivity {
         queue.add(request);
     }
 
-    public void salvarCuenta() {
+    private void terminarInicioSesion() {
+        salvarCuenta(user);
+        Toast.makeText(PantallaLogin.this, "Has iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
+        irPrincipal();
+    }
+
+    public void salvarCuenta(Usuario user) {
         SharedPreferences sharedPreferences = getSharedPreferences("fasttohome", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt("user_id",user.getId());
         editor.putString("hash",user.getPassword());
-        editor.commit();
-
         editor.apply();
     }
 
