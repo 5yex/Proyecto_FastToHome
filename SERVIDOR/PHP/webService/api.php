@@ -750,6 +750,7 @@ function obtenerPedidosCliente($datos) {
 
     try {
         $pedido = new Pedido();
+        print_r(var_dump($datos));
         $pedido->setId_usuario($datos->id_usuario);
         $respuesta = $pedido->obtenerPedidosClientes();
         if ($respuesta) {
