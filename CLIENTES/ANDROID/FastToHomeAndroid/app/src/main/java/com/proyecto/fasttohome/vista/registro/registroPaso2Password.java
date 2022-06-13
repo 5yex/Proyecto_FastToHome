@@ -60,7 +60,7 @@ public class registroPaso2Password extends AppCompatActivity {
         boton = findViewById(R.id.buttonPassword);
 
         if (funcion.equals("update")) {
-            
+
             boton.setText("Actualizar Contraseña");
             campoActualizar.setVisibility(View.VISIBLE);
             textoActualizar.setVisibility(View.VISIBLE);
