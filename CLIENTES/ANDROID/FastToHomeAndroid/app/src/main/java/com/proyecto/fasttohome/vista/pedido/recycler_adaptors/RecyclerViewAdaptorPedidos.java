@@ -45,7 +45,7 @@ import java.util.Map;
 public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerViewAdaptorPedidos.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView fechaPedido, numeroPedido,estadoPedido;
+        private TextView fechaPedido, numeroPedido,estadoPedido,precioTotal,nombreNegocio;
         private Usuario usuario;
         private Pedido pedido;
         private Context contexto;
@@ -59,6 +59,8 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
             numeroPedido = itemView.findViewById(R.id.numeroPedido);
             estadoPedido = itemView.findViewById(R.id.estadoPedido);
             listaProductos = itemView.findViewById(R.id.cestaPedido);
+            precioTotal = itemView.findViewById(R.id.precioTotalPedido);
+            nombreNegocio = itemView.findViewById(R.id.nombreNegocioPedido);
             contexto = itemView.getContext();
             marcarRecibido = itemView.findViewById(R.id.marcarRecibidoPedido);
         }
