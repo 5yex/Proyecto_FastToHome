@@ -163,6 +163,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
                     }
                     ArrayList<String> lista = new ArrayList<>();
                     for (Cesta product: listaProductosCesta) {
+                        System.out.println(product.getJSON());
                         Producto producto = productos.get(product.getId_producto());
                         int cantidad = product.getCantidad();
                         double precioTot = producto.getPrecio() * cantidad;
