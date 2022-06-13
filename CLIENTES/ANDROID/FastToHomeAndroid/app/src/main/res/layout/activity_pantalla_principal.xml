@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView18"
+            android:id="@+id/nombre"
             android:layout_width="357dp"
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
@@ -42,6 +42,17 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/apellidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="apellidos"
+            android:textColor="@color/textopanel"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="65dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
