@@ -658,16 +658,6 @@ function hacerPedido($datos){
     require_once '../modelo/Cesta.php';
     
     try{
-        
-        /*[1] => stdClass Object
-I/System.out:                 (
-I/System.out:                     [cantidad] => 4
-I/System.out:                     [id_cesta] => 0
-I/System.out:                     [id_pedido] => 0
-I/System.out:                     [id_producto] => 29
-I/System.out:                 )*/
-
-        print_r($datos);
         $dPedido = $datos[0];
         $pedido = new Pedido();
         $pedido->setEstado($dPedido->estado);
@@ -676,25 +666,18 @@ I/System.out:                 )*/
         $pedido->setFecha_hora((new DateTime())->format('Y-m-d H:i:s'));
         $pedido->setTotal($dPedido->total);
         $pedido->setTransporte($dPedido->transporte);
-        
-        
         $idPedido = $pedido->agregarConId()[0]->last_id;
         $producto = new Cesta();
         $producto->setId_pedido($idPedido);
-        
         foreach ($datos[1]as $value) {
             $producto->setCantidad($value->cantidad);
             $producto->setId_producto($value->id_producto);
             print_r($producto);
             $producto->agregar();
         }
-        
-        
-//        if ($pedido->agregar()) {
-//            mandarRespuesta(false, 'Se realizó un pedido con exito');
-//        } else {
-//            mandarRespuesta(true, 'No se pudo procesar el pedido');
-//        }        
+        $pedido->setEstado("pagado");
+        $pedido->actualizacionEstadoPedido();
+        mandarRespuesta(false, 'Se realizó un pedido con exito');
     }catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
