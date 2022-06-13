@@ -12,7 +12,7 @@
         android:layout_width="208dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:text="Actualiza tus datos:"
         android:textColor="?android:textColorPrimary"
         android:textSize="20sp"
@@ -25,12 +25,12 @@
         android:layout_width="354dp"
         android:layout_height="52dp"
         android:layout_marginBottom="16dp"
-        android:onClick="pasarPantallaPedidos"
+        android:onClick="pasarPantallaActualizarPassword"
         android:text="CONTRASEÑA"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -42,7 +42,7 @@
         android:text="SEGUIMIENTO PEDIDOS"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonHacerPedido" />
 
@@ -51,12 +51,12 @@
         android:layout_width="354dp"
         android:layout_height="52dp"
         android:layout_marginBottom="8dp"
-        android:onClick="pasarPantallaPedidos"
-        android:text="DIRECCION"
+        android:onClick="pasarPantallaActualizarDireccion"
+        android:text="DIRECCIÓN"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -113,12 +113,12 @@
         android:layout_width="354dp"
         android:layout_height="52dp"
         android:layout_marginBottom="12dp"
-        android:onClick="pasarPantallaPedidos"
+        android:onClick="pasarPantallaActualizarDatos"
         android:text="DATOS PERSONALES"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/button9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
 
