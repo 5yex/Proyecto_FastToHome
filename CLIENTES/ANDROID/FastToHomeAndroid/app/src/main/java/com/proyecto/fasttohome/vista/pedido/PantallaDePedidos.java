@@ -95,7 +95,7 @@ public class PantallaDePedidos extends AppCompatActivity {
     }
 
     private void rellenarRecyclerView() {
-        adaptorNegocio = new RecyclerViewAdaptorPedidos(listaPedidos, usuario,pedido);
+        adaptorNegocio = new RecyclerViewAdaptorPedidos(listaPedidos, usuario);
         recyclerViewPedidos.setAdapter(adaptorNegocio);
     }
 
