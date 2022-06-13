@@ -21,7 +21,7 @@
     <string name="userLastname">Apellidos:</string>
     <string name="userTlf">Teléfono:</string>
     <string name="userEmail">Correo Elecrónico:</string>
-    <string name="userPassword">Contraseña:</string>
+    <string name="userPassword">Contraseña nueva:</string>
     <string name="userPasswordConfirmation">Confirmar Contraseña:</string>
     <string name="userDirNumero">Número:</string>
     <string name="userDirCp">Código Postal:</string>
