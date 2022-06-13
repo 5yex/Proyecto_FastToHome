@@ -111,7 +111,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
 
 
     public void obtenerCestaPedido(Context contexto, Pedido pedido, ViewHolder holder) {
-        ArrayList<Cesta> listaProductosCesta = new ArrayList<Producto>();
+        ArrayList<Cesta> listaProductosCesta = new ArrayList<>();
         String url = contexto.getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(contexto);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
@@ -123,18 +123,18 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
                 } else {
                     JSONArray arrayDeJson = resp.getJSONArray("datos");
                     for (int i = 0; i < arrayDeJson.length(); i++) {
-                        JSONObject objPedidos = arrayDeJson.getJSONObject(i);
-
+                        JSONObject obj = arrayDeJson.getJSONObject(i);
+                        Cesta product = new Cesta();
+                        product.setId_cesta(obj.getInt(""));
                     }
                     ArrayList<String> lista = new ArrayList<>();
                     for (Cesta product: listaProductosCesta) {
-                        int cantidad = 
-
-                        lista.add(leftPad("€" + producto.getPrecio(), 5) + leftPad("  Uds: " + entry.getValue(), 12) + "  " + producto.getNombre());
-                        indice++;
+                        Producto producto = productos.get(product.getId_producto());
+                        int cantidad = product.getCantidad();
+                        double precioTot = producto.getPrecio() * cantidad;
+                        lista.add(leftPad("€" + producto.getPrecio(), 5)  +"Tot: " +leftPad("€" + precioTot, 5)  +leftPad("  Uds: " + cantidad, 12) + "  " + producto.getNombre());
                     }
-                    total.setText(String.valueOf(precioTotal + " Euros"));
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(contexto, android.R.layout.simple_list_item_1, lista);
                     holder.listaProductos.setAdapter(adapter);
                 }
             } catch (JSONException | VolleyError e) {
