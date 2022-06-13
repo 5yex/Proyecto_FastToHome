@@ -4,7 +4,6 @@
     package="com.proyecto.fasttohome">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -22,6 +21,9 @@
         android:theme="@style/Theme.FastToHome"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".PedidoFinalizado"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -37,10 +39,9 @@
             android:value="true" />
 
         <activity
-        android:name=".vista.pedido.seleccionarTransporteZona"
-        android:exported="false"
-        android:label="Medio de Transporte"
-         />
+            android:name=".vista.pedido.seleccionarTransporteZona"
+            android:exported="false"
+            android:label="Medio de Transporte" />
         <activity
             android:name=".vista.pedido.SeleccionarProductos"
             android:exported="false"

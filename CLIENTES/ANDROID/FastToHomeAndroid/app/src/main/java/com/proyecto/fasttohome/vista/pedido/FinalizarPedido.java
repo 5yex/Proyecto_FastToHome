@@ -243,7 +243,6 @@ public class FinalizarPedido extends AppCompatActivity {
     }
 
     private void pedidoAfterPay() {
-
         productos = new HashMap<>();
         String url = getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(FinalizarPedido.this);
@@ -267,14 +266,10 @@ public class FinalizarPedido extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-
                 ArrayList<Object> DatosPedido = new ArrayList<>();
                 DatosPedido.add(pedido);
                 DatosPedido.add(getCesta());
-
-                String datos = new Gson().toJson(DatosPedido);
-                System.out.println("DATOS-PEDIDO: ==  !  " +datos);
-                params.put("DATA", new Peticion("nuevo_pedido", datos).getJSON());
+                params.put("DATA", new Peticion("nuevo_pedido", new Gson().toJson(DatosPedido)).getJSON());
                 return params;
             }
         };
