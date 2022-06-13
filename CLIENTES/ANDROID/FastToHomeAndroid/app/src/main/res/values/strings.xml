@@ -6,6 +6,8 @@
     <string name="buttonEntrar">INICIAR SESIÓN</string>
     <string name="buttonRegistro">REGÍSTRATE</string>
     <string name="buttonSiguientePaso">SIGUIENTE PASO</string>
+    <string name="buttonFinalizarRegistro">FINALIZAR REGISTRO</string>
+
 
     <string name="titulosRegistro">Registro</string>
     <string name="transporteDron">DRON</string>
