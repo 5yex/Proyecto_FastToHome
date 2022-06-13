@@ -38,7 +38,10 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         dni = findViewById(R.id.etDni);
         telefono = findViewById(R.id.etTelefono);
         email = findViewById(R.id.ediTextemail);
-        titulo = findViewById()
+        titulo = findViewById(R.id.titleDatosUsuarios);
+        user = (Usuario) getIntent().getExtras().getSerializable("user");
+        funcion = getIntent().getExtras().getString("funcion");
+
 
     }
 
