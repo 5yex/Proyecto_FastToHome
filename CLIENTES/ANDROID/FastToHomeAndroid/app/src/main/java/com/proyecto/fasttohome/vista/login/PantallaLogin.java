@@ -123,7 +123,8 @@ public class PantallaLogin extends AppCompatActivity {
     public void salvarCuenta() {
         SharedPreferences sharedPreferences = getSharedPreferences("fasttohome", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(TEXT, );
+        editor.putInt("user_id",user.getId());
+        editor.putString("hash",user.getPassword());
     }
 
     @Override
