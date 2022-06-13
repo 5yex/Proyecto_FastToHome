@@ -18,7 +18,7 @@ public class Pedido implements Serializable {
     private int id_pedido;
     private int id_usuario;
     private int id_negocio;
-    private Date fecha_hora;
+    private String fecha_hora;
     private String estado;
     private double total;
     private String transporte;
