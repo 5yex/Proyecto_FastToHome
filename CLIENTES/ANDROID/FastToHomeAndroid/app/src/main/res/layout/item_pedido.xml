@@ -7,7 +7,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="195dp"
+        android:layout_height="274dp"
         android:layout_margin="6dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
@@ -17,7 +17,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="186dp"
+            android:layout_height="263dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp">
 
@@ -25,41 +25,43 @@
                 android:id="@+id/fechaPedido"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
                 android:text="TextView"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/estadoPedido"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/numeroPedido"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
                 android:text="TextView"
-                app:layout_constraintStart_toEndOf="@+id/fechaPedido"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/estadoPedido"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="68dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
                 android:text="TextView"
                 app:layout_constraintStart_toEndOf="@+id/numeroPedido"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ListView
                 android:id="@+id/cestaPedido"
-                android:layout_width="382dp"
-                android:layout_height="81dp"
+                android:layout_width="377dp"
+                android:layout_height="107dp"
+                android:layout_marginBottom="24dp"
                 android:isScrollContainer="true"
                 android:nestedScrollingEnabled="true"
                 android:overScrollMode="always"
                 app:layout_constraintBottom_toTopOf="@+id/marcarRecibidoPedido"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.666"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -69,7 +71,29 @@
                 android:layout_margin="5dp"
                 android:text="MARCAR COMO RECIBIDO"
                 app:layout_constraintBottom_toBottomOf="parent"
-                tools:layout_editor_absoluteX="35dp" />
+                tools:layout_editor_absoluteX="5dp" />
+
+            <TextView
+                android:id="@+id/nombreNegocioPedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/numeroPedido" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                android:text="precioTotal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cestaPedido" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
