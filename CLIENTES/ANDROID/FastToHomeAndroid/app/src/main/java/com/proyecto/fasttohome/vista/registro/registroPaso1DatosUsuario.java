@@ -22,6 +22,7 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
     EditText dni;
     EditText telefono;
     EditText email;
+    String funcion
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
