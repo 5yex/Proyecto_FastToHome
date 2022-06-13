@@ -100,6 +100,19 @@ class Pedido extends Conexion{
         return TRUE;
     }
     
+    
+    public function agregarConId() {
+        $resultado = $this->agregar();
+        if ($resultado) {
+            $sql = "SELECT LAST_INSERT_ID(id) as 'last_id' FROM pedido ORDER BY id DESC LIMIT 1";
+            $sentencia = $this->dblink->prepare($sql);
+            $resultado = $sentencia->execute();
+            return $sentencia->fetchAll(PDO::FETCH_OBJ);
+        }
+        return -1;
+    }
+    
+    
     public function calcularTotalPedido(){
         
         $sql = "SELECT totalPrecioPedido(:id_ped)";
