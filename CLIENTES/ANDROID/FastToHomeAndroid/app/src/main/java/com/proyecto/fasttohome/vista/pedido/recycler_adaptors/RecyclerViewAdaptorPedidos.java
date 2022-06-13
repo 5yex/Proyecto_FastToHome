@@ -90,7 +90,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
         holder.numeroPedido.setText("Num: "+pedidoActual.getId_pedido());
         holder.fechaPedido.setText(pedidoActual.getFecha_hora());
         holder.estadoPedido.setText(pedidoActual.getEstado());
-        holder.precioTotal.setText("Total pedido: "+pedidoActual.getTotal() + "  ")
+        holder.precioTotal.setText("Total pedido: "+pedidoActual.getTotal() + " €");
         obtenerProductosNegocio(holder.contexto, pedidoActual,holder);
         holder.marcarRecibido.setOnClickListener(view -> {
             setPedidoRecibido(holder.contexto, pedidoActual,holder);
