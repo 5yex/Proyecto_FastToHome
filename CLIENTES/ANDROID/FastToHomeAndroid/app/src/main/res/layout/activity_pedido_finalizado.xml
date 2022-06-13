@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/pedido_finalizado_exito"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         tools:layout_editor_absoluteX="112dp"
         tools:layout_editor_absoluteY="137dp" />
 
@@ -29,4 +30,5 @@
         android:text="@string/pedido_finalizado_info"
         tools:layout_editor_absoluteX="32dp"
         tools:layout_editor_absoluteY="389dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
