@@ -46,8 +46,7 @@ if (empty($_POST["DATA"])) {
         case 'asignar_rol_cliente';
             asignarRolCliente(json_decode($peticion->datos));
             break;
-        
-        
+
         //Casos de producto
         case 'nuevo_producto';
             nuevoProducto(json_decode($peticion->datos));
@@ -64,12 +63,12 @@ if (empty($_POST["DATA"])) {
         case 'borrar_producto';
             borrarProducto(json_decode($peticion->datos));
             break;
-            
+
         //Casos dirección
         case 'nueva_direccion';
             nuevaDireccion(json_decode($peticion->datos));
             break;
-         case 'nueva_direccion_devuelve_id';
+        case 'nueva_direccion_devuelve_id';
             nuevaDireccionDevuelveId(json_decode($peticion->datos));
             break;
         case 'obtener_direccion';
@@ -78,8 +77,7 @@ if (empty($_POST["DATA"])) {
         case 'actualizar_direccion';
             modificarDireccion(json_decode($peticion->datos));
             break;
-            
-            
+
         //Casos negocio
         case 'nuevo_negocio';
             nuevoNegocio(json_decode($peticion->datos));
@@ -96,7 +94,7 @@ if (empty($_POST["DATA"])) {
         case 'actualizar_negocio';
             actualizarNegocio(json_decode($peticion->datos));
             break;
-        
+
         //Casos de pedidos
         case 'nuevo_pedido';
             hacerPedido(json_decode($peticion->datos));
@@ -119,7 +117,7 @@ if (empty($_POST["DATA"])) {
         case 'obtener_pedidos_cliente';
             obtenerPedidosCliente(json_decode($peticion->datos));
             break;
-        
+
         //Casos de Categoria
         case 'nueva_categoria';
             nuevaCategoria(json_decode($peticion->datos));
@@ -129,8 +127,8 @@ if (empty($_POST["DATA"])) {
             break;
         case 'obtener_id_categoria';
             obtenerCategoriaPorNombre(json_decode($peticion->datos));
-            break;     
-        
+            break;
+
         //Casos de cesta
         case 'rellenar_cesta';
             rellenarCesta(json_decode($peticion->datos));
@@ -138,7 +136,10 @@ if (empty($_POST["DATA"])) {
         case 'contenido_cesta_pedido';
             obtenerCestaPedido(json_decode($peticion->datos));
             break;
-        
+        case 'obtenerProductosCestaPedido';
+            obtenerProductosCestaPedido(json_decode($peticion->datos));
+            break;
+
         //imagenes
         case 'nueva_imagen';
             nuevaImagen(json_decode($peticion->datos));
@@ -149,7 +150,7 @@ if (empty($_POST["DATA"])) {
         case 'editar_imagen_id';
             editarImagenPorId(json_decode($peticion->datos));
             break;
-        
+
         //Mandar Repuesta
         default;
             mandarRespuesta(true, 'comando no  reconocido');
@@ -201,7 +202,7 @@ function nuevoProducto($datos) {
     }
 }
 
-function actualizarProducto($datos){
+function actualizarProducto($datos) {
     require_once '../modelo/Producto.php';
     try {
         $producto = new Producto();
@@ -223,7 +224,7 @@ function actualizarProducto($datos){
     }
 }
 
-function borrarProducto($datos){
+function borrarProducto($datos) {
     require_once '../modelo/Producto.php';
     try {
         $producto = new Producto();
@@ -239,7 +240,6 @@ function borrarProducto($datos){
     }
 }
 
-
 function nuevaDireccionDevuelveId($datos) {
     require_once '../modelo/Direccion.php';
     try {
@@ -252,17 +252,16 @@ function nuevaDireccionDevuelveId($datos) {
         $direccion->setCoordenadas($datos->coordenadas);
 
         $respuesta = $direccion->agregarConId();
-        
+
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
-        } 
+        }
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
 }
-
 
 function nuevaDireccion($datos) {
     require_once '../modelo/Direccion.php';
@@ -285,7 +284,7 @@ function nuevaDireccion($datos) {
     }
 }
 
-function obtenerDireccion($datos){
+function obtenerDireccion($datos) {
     require_once '../modelo/Direccion.php';
     try {
         $direccion = new Direccion();
@@ -302,7 +301,7 @@ function obtenerDireccion($datos){
     }
 }
 
-function modificarDireccion($datos){
+function modificarDireccion($datos) {
     require_once '../modelo/Direccion.php';
     try {
         $direccion = new Direccion();
@@ -324,7 +323,7 @@ function modificarDireccion($datos){
     }
 }
 
-function nuevoNegocio($datos){
+function nuevoNegocio($datos) {
     require_once '../modelo/Negocio.php';
     try {
         $negocio = new Negocio();
@@ -334,7 +333,7 @@ function nuevoNegocio($datos){
         $negocio->setDescripcion($datos->descripcion);
         $negocio->setId_direccion($datos->id_direccion);
         $negocio->setId_imagen($datos->id_img);
-        
+
         if ($negocio->agregar()) {
             mandarRespuesta(false, 'Se ha realizado la insercion de un negocio');
         } else {
@@ -345,7 +344,7 @@ function nuevoNegocio($datos){
     }
 }
 
-function obtenerTodosNegocios(){
+function obtenerTodosNegocios() {
     require_once '../modelo/Negocio.php';
     try {
         $negocio = new Negocio();
@@ -376,7 +375,6 @@ function obtenerIdNegocio($datos) {
     }
 }
 
-
 function obtenerNegocioDeMercader($datos) {
     require_once '../modelo/Negocio.php';
     try {
@@ -393,7 +391,7 @@ function obtenerNegocioDeMercader($datos) {
     }
 }
 
-function actualizarNegocio($datos){
+function actualizarNegocio($datos) {
     require_once '../modelo/Negocio.php';
     try {
         $negocio = new Negocio();
@@ -403,7 +401,6 @@ function actualizarNegocio($datos){
         $negocio->setId_negocio($datos->id_negocio);
         $negocio->setId_imagen($datos->id_img);
 
-        
         if ($negocio->modificarNegocio()) {
             mandarRespuesta(false, 'Se actualizó el negocio');
         } else {
@@ -414,7 +411,7 @@ function actualizarNegocio($datos){
     }
 }
 
-function obtenerProductosNegocio($datos){
+function obtenerProductosNegocio($datos) {
     require_once '../modelo/Producto.php';
     require_once '../modelo/Negocio.php';
 
@@ -422,7 +419,7 @@ function obtenerProductosNegocio($datos){
         $producto = new Producto();
         $id = $datos->id_negocio;
         $producto->setId_negocio($id);
-        $respuesta = $producto->productosDeUnNegocio();       
+        $respuesta = $producto->productosDeUnNegocio();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
@@ -433,13 +430,13 @@ function obtenerProductosNegocio($datos){
     }
 }
 
-function obtenerDatosProducto($datos){
+function obtenerDatosProducto($datos) {
     require_once '../modelo/Producto.php';
-    
+
     try {
         $producto = new Producto();
         $producto->setId_producto($datos->id_producto);
-        $respuesta = $producto->obtenerDatosProducto();       
+        $respuesta = $producto->obtenerDatosProducto();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
@@ -505,13 +502,13 @@ function actualizarUsuario($datos) {
     }
 }
 
-function asignarRolMercader($datos){
+function asignarRolMercader($datos) {
     require_once '../modelo/usuario.php';
     try {
         $usuario = new usuario();
-        
+
         $usuario->setId($datos->id);
-        
+
         if ($usuario->asignarRolMerdader()) {
             mandarRespuesta(false, 'Se ha asignado el rol de mercader a un cliente');
         } else {
@@ -522,7 +519,7 @@ function asignarRolMercader($datos){
     }
 }
 
-function asignarRolCliente($datos){
+function asignarRolCliente($datos) {
     require_once '../modelo/usuario.php';
     try {
         $usuario = new usuario();
@@ -537,13 +534,13 @@ function asignarRolCliente($datos){
     }
 }
 
-function asignarRolAdministrador($datos){
+function asignarRolAdministrador($datos) {
     require_once '../modelo/usuario.php';
     try {
         $usuario = new usuario();
-        
+
         $usuario->setId($datos->id);
-        
+
         if ($usuario->asignarRolAdministrador()) {
             mandarRespuesta(false, 'Se ha asignado el rol de administrador a un cliente');
         } else {
@@ -587,9 +584,9 @@ function obtenerUsuarioPorSuId($datos) {
     }
 }
 
-function obtenerTodosLosUsuarios(){
+function obtenerTodosLosUsuarios() {
     require_once '../modelo/usuario.php';
-    
+
     try {
         $cliente = new usuario();
         $respuesta = $cliente->todosLosUsuarios();
@@ -603,9 +600,9 @@ function obtenerTodosLosUsuarios(){
     }
 }
 
-function obtenerUsuariosClientes(){
+function obtenerUsuariosClientes() {
     require_once '../modelo/usuario.php';
-    
+
     try {
         $cliente = new usuario();
         $respuesta = $cliente->todosUsuariosClientes();
@@ -619,10 +616,9 @@ function obtenerUsuariosClientes(){
     }
 }
 
-
-function obtenerUsuariosAdministrador(){
+function obtenerUsuariosAdministrador() {
     require_once '../modelo/usuario.php';
-    
+
     try {
         $cliente = new usuario();
         $respuesta = $cliente->todosUsuariosAdministrador();
@@ -636,10 +632,9 @@ function obtenerUsuariosAdministrador(){
     }
 }
 
-
-function obtenerUsuariosMercader(){
+function obtenerUsuariosMercader() {
     require_once '../modelo/usuario.php';
-    
+
     try {
         $cliente = new usuario();
         $respuesta = $cliente->todosUsuariosMercader();
@@ -653,11 +648,11 @@ function obtenerUsuariosMercader(){
     }
 }
 
-function hacerPedido($datos){
+function hacerPedido($datos) {
     require_once '../modelo/Pedido.php';
     require_once '../modelo/Cesta.php';
-    
-    try{
+
+    try {
         $dPedido = $datos[0];
         $pedido = new Pedido();
         $pedido->setEstado($dPedido->estado);
@@ -677,16 +672,15 @@ function hacerPedido($datos){
         $pedido->setId_pedido($id_pedido);
         $pedido->actualizacionEstadoPedido();
         mandarRespuesta(false, 'Se realizó un pedido con exito');
-    }catch (PDOException $ex) {
+    } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
-    
 }
 
-function obtenerPedidoUnico($datos){
+function obtenerPedidoUnico($datos) {
     require_once '../modelo/Pedido.php';
-    
-    try{
+
+    try {
         $pedido = new Pedido();
         $pedido->setId_pedido($datos->id_pedido);
         $respuesta = $pedido->obtenerPedido();
@@ -694,16 +688,16 @@ function obtenerPedidoUnico($datos){
             mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
-        }        
-    }catch (PDOException $ex) {
+        }
+    } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
 }
 
-function obtenerPedidosNegocioPagados($datos){
+function obtenerPedidosNegocioPagados($datos) {
     require_once '../modelo/Pedido.php';
-    
-    try{
+
+    try {
         $pedido = new Pedido();
         $pedido->setId_negocio($datos->id_negocio);
         $respuesta = $pedido->obtenerPedidosNegocioPagado();
@@ -711,16 +705,16 @@ function obtenerPedidosNegocioPagados($datos){
             mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
-        }        
-    }catch (PDOException $ex) {
+        }
+    } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
 }
 
-function obtenerPedidosNegocioEnPreparacion($datos){
+function obtenerPedidosNegocioEnPreparacion($datos) {
     require_once '../modelo/Pedido.php';
-    
-    try{
+
+    try {
         $pedido = new Pedido();
         $pedido->setId_negocio($datos->id_negocio);
         $respuesta = $pedido->obtenerPedidosNegocioEnPreparacion();
@@ -728,16 +722,16 @@ function obtenerPedidosNegocioEnPreparacion($datos){
             mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
-        }        
-    }catch (PDOException $ex) {
+        }
+    } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
 }
 
-function obtenerTodosPedidosNegocios($datos){
+function obtenerTodosPedidosNegocios($datos) {
     require_once '../modelo/Pedido.php';
-    
-    try{
+
+    try {
         $pedido = new Pedido();
         $pedido->setId_negocio($datos->id_negocio);
         $respuesta = $pedido->obtenerTodosPedidosNegocio();
@@ -745,16 +739,16 @@ function obtenerTodosPedidosNegocios($datos){
             mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
-        }        
-    }catch (PDOException $ex) {
+        }
+    } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
 }
 
-function obtenerPedidosCliente($datos){
+function obtenerPedidosCliente($datos) {
     require_once '../modelo/Pedido.php';
-    
-    try{
+
+    try {
         $pedido = new Pedido();
         $pedido->setId_usuario($datos->id_usuario);
         $respuesta = $pedido->obtenerPedidosClientes();
@@ -762,26 +756,26 @@ function obtenerPedidosCliente($datos){
             mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
-        }        
-    }catch (PDOException $ex) {
+        }
+    } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
 }
 
-function actualizarEstadoPedido($datos){
+function actualizarEstadoPedido($datos) {
     require_once '../modelo/Pedido.php';
-    
-    try{
+
+    try {
         $pedido = new Pedido();
         $pedido->setId_pedido($datos->id_pedido);
         $pedido->setEstado($datos->estado);
-        
+
         if ($pedido->actualizacionEstadoPedido()) {
             mandarRespuesta(false, "Se actualizó el estado del pedido");
         } else {
             mandarRespuesta(true, 'Error en la actualización del estado del pedido');
-        }        
-    }catch (PDOException $ex) {
+        }
+    } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
 }
@@ -792,10 +786,7 @@ function mandarRespuesta($error, $datos) {
     echo json_encode($respuesta);
 }
 
-
-
-
-function nuevaCategoria($datos){
+function nuevaCategoria($datos) {
     require_once '../modelo/Categoria.php';
     try {
         $categoria = new Categoria();
@@ -809,13 +800,11 @@ function nuevaCategoria($datos){
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
-    
 }
 
-
-function obtenerCategorias(){
+function obtenerCategorias() {
     require_once '../modelo/Categoria.php';
-    
+
     try {
         $categoria = new Categoria();
         $respuesta = $categoria->obtenerCategorias();
@@ -827,10 +816,9 @@ function obtenerCategorias(){
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
-
 }
 
-function obtenerCategoriaPorNombre($datos){
+function obtenerCategoriaPorNombre($datos) {
     require_once '../modelo/Categoria.php';
     try {
         $categoria = new Categoria();
@@ -846,26 +834,25 @@ function obtenerCategoriaPorNombre($datos){
     }
 }
 
-function nuevaImagen($datos){
+function nuevaImagen($datos) {
     require_once '../modelo/Imagen.php';
     try {
         $imagen = new Imagen();
         $imagen->setB64_imagen($datos->b64_imagen);
         $imagen->setUrl_imagen($datos->url_imagen);
         $respuesta = $imagen->agregarConId();
-        
+
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error fatal en el proceso obtencion de datos');
-        } 
-        
+        }
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
 }
 
-function obtenerImagenPorId($datos){
+function obtenerImagenPorId($datos) {
     require_once '../modelo/Imagen.php';
     try {
         $imagen = new Imagen();
@@ -879,12 +866,9 @@ function obtenerImagenPorId($datos){
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
-    
-    
 }
 
-
-function editarImagenPorId($datos){
+function editarImagenPorId($datos) {
     require_once '../modelo/Imagen.php';
     try {
         $imagen = new Imagen();
@@ -899,43 +883,66 @@ function editarImagenPorId($datos){
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
-    
-    
 }
 
-function rellenarCesta($datos){
+function rellenarCesta($datos) {
     require_once '../modelo/Cesta.php';
     try {
         $cesta = new Cesta();
         $cesta->setCantidad($cantidad);
         $cesta->setId_pedido($id_pedido);
         $cesta->setId_producto($id_producto);
-        
+
         if ($cesta->agregar()) {
             mandarRespuesta(false, 'Se rellenó la cesta');
         } else {
             mandarRespuesta(true, 'Error al rellenar la cesta');
         }
-        
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
 }
 
-function obtenerCestaPedido($datos){
+function obtenerCestaPedido($datos) {
     require_once '../modelo/Cesta.php';
-    
+
     try {
         $cesta = new Cesta();
         $cesta->setId_pedido($datos->id_pedido);
-        
+
         $respuesta = $cesta->obtenerCestaPedido();
         if ($respuesta) {
             mandarRespuesta(false, $respuesta);
         } else {
             mandarRespuesta(true, 'Error en obtener la cesta del pedido');
         }
-        
+    } catch (PDOException $ex) {
+        mandarRespuesta(true, $ex->getMessage());
+    }
+}
+
+function obtenerProductosCestaPedido($datos) {
+    require_once '../modelo/Cesta.php';
+    require_once '../modelo/Producto.php';
+    try {
+        $cesta = new Cesta();
+        $cesta->setId_pedido($datos->id_pedido);
+        $respuesta = $cesta->obtenerCestaPedido();
+        $productos = array();
+        if ($respuesta) {
+            foreach ($respuesta as $value) {
+                $producto = new Producto();
+                $producto->setId_producto($value->id_producto);
+                $productos[] = $producto->obtenerDatosProducto();
+            }
+            if ($productos) {
+                mandarRespuesta(false, $productos);
+            } else {
+                mandarRespuesta(true, 'Error en la obtencion de los datos de un producto');
+            }
+        } else {
+            mandarRespuesta(true, 'Error en obtener la cesta del pedido');
+        }
     } catch (PDOException $ex) {
         mandarRespuesta(true, $ex->getMessage());
     }
