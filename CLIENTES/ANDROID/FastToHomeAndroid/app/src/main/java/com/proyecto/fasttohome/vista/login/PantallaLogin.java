@@ -93,14 +93,10 @@ public class PantallaLogin extends AppCompatActivity {
 
 
                     if(BCrypt.checkpw(password.getText().toString(),user.getPassword())){
-
                         terminarInicioSesion();
-
                     }else {
                         Toast.makeText(PantallaLogin.this, "Tu contraseña es incorrecta", Toast.LENGTH_SHORT).show();
                     }
-
-
                 }
             } catch (JSONException | VolleyError e) {
                 Toast.makeText(PantallaLogin.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -122,6 +118,10 @@ public class PantallaLogin extends AppCompatActivity {
         salvarCuenta(user);
         Toast.makeText(PantallaLogin.this, "Has iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
         irPrincipal();
+    }
+
+    public void leerCuentaGuardada(){
+
     }
 
     public void salvarCuenta(Usuario user) {
