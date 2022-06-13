@@ -659,14 +659,14 @@ function hacerPedido($datos){
     
     try{
         
-        
-//           [estado] => pendiente_pago
-//I/System.out:             [id_negocio] => 1
-//I/System.out:             [id_pedido] => 0
-//I/System.out:             [id_usuario] => 47
-//I/System.out:             [total] => 378
-//I/System.out:             [transporte] => dron
-        
+        /*[1] => stdClass Object
+I/System.out:                 (
+I/System.out:                     [cantidad] => 4
+I/System.out:                     [id_cesta] => 0
+I/System.out:                     [id_pedido] => 0
+I/System.out:                     [id_producto] => 29
+I/System.out:                 )*/
+
         print_r($datos);
         $dPedido = $datos[0];
         $pedido = new Pedido();
@@ -680,7 +680,13 @@ function hacerPedido($datos){
         
         $idPedido = $pedido->agregarConId()[0]->last_id;
         
-        
+        foreach ($datos[1]as $value) {
+            $producto = new Cesta();
+            $producto->setCantidad($value->cantidad);
+            $producto->setId_pedido($value->id_pedido);
+            $producto->setId_producto($value->id_producto);
+            $producto->agregar();
+        }
         
         
 //        if ($pedido->agregar()) {
