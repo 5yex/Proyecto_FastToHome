@@ -130,7 +130,6 @@ public class seleccionarTransporteZona extends AppCompatActivity implements OnMa
                 @Override
                 protected Map<String, String> getParams() {
                     Map<String, String> params = new HashMap<String, String>();
-                    System.out.println(new Peticion("actualizar_direccion", direccion.getJSON()).getJSON());
                     params.put("DATA", new Peticion("actualizar_direccion", direccion.getJSON()).getJSON());
                     return params;
                 }
