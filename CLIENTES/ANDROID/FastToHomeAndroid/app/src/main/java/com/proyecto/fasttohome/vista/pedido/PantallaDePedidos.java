@@ -72,16 +72,8 @@ public class PantallaDePedidos extends AppCompatActivity {
                      pedido.setEstado(objPedidos.getString("estado"));
                      pedido.setId_pedido(objPedidos.getInt("id"));
                      pedido.setTotal(objPedidos.getDouble("total"));
-                     pedido.setTransporte(objPedidos.getString(""));
-
-
-
-
-                        /*
-                        * pedido.setId_pedido(pedidoJson.get("id").getAsInt());
-                pedido.setId_usuario(pedidoJson.get("id_usuario").getAsInt());
-                String fechaActual = pedidoJson.get("fecha_hora").getAsString();
-                        * */
+                     pedido.setTransporte(objPedidos.getString("transporte"));
+                     pedido.setFecha_hora(objPedidos.getString(""));
                     }
                     rellenarRecyclerView();
                 }
