@@ -253,7 +253,7 @@ public class FinalizarPedido extends AppCompatActivity {
                 if ((resp.getBoolean("error")) == true) {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
-                    Intent i = new Intent(this, seleccionarTransporteZona.class );
+                    Intent i = new Intent(this, PedidoFinalizado.class );
                     i.putExtra("user", usuario);
                     startActivity(i);
                 }
