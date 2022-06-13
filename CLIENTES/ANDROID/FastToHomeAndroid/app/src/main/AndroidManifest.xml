@@ -25,6 +25,9 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
         <activity
+            android:name=".vista.pedido.PantallaDePedidos"
+            android:exported="false" />
+        <activity
             android:name=".vista.pedido.PedidoFinalizado"
             android:exported="false" />
         <activity
