@@ -416,6 +416,7 @@ function obtenerProductosNegocio($datos) {
     require_once '../modelo/Negocio.php';
 
     try {
+        print_r(var_dump($datos));
         $producto = new Producto();
         $id = $datos->id_negocio;
         $producto->setId_negocio($id);
