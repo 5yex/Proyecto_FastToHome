@@ -110,7 +110,7 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
                     contexto.startActivity(i);
                 }
             } catch (JSONException | VolleyError e) {
-                Toast.makeText(contexto, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(contexto, "EL PEDIDO ESTÁ EN INCIDENCIA, LLAME A ATENCIÓN AL CLIENTE SI AÚN NO HA RECIBIDO UN REENBOLSO", Toast.LENGTH_SHORT).show();
             }
         }, volleyError -> {
             Toast.makeText(contexto, "ERROR DE CONEXIÓN = " + volleyError, Toast.LENGTH_SHORT).show();
