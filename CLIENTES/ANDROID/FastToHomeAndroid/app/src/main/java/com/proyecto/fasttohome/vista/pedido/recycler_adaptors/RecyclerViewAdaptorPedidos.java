@@ -18,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.proyecto.fasttohome.R;
+import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
@@ -97,10 +98,10 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
         });*/
     }
 
-    public void obtenerProductosNegocio(Context contexto) {
+    public void obtenerProductosNegocio(Context contexto, Negocio negocio) {
         listaPedidos = new ArrayList<Pedido>();
         String url = contexto.getString(R.string.apiUrl);
-        RequestQueue queue = Volley.newRequestQueue(PantallaDePedidos);
+        RequestQueue queue = Volley.newRequestQueue(contexto);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
             System.out.println(response);
             try {
@@ -113,22 +114,17 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
                         JSONObject objPedidos = arrayDeJson.getJSONObject(i);
 
                     }
-
-
-
                 }
             } catch (JSONException | VolleyError e) {
-                Toast.makeText(PantallaDePedidos.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                finish();
+                Toast.makeText(contexto, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         }, volleyError -> {
-            Toast.makeText(PantallaDePedidos.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
-            finish();
+            Toast.makeText(contexto, "ERROR DE CONEXIÓN = " + volleyError, Toast.LENGTH_SHORT).show();
         }) {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("DATA", new Peticion("obtener_todos_negocios", null).getJSON());
+                params.put("DATA", new Peticion("obtener_todos_negocios", negocio.getJSON());
                 return params;
             }
         };
