@@ -41,8 +41,11 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
         titulo = findViewById(R.id.titleDatosUsuarios);
         user = (Usuario) getIntent().getExtras().getSerializable("user");
         funcion = getIntent().getExtras().getString("funcion");
-        System.out.println("FUNCION "+ funcion);
-        
+
+        if(funcion == "update"){
+            titulo.setText("Actualizar Datos:");
+        }
+
 
     }
 
