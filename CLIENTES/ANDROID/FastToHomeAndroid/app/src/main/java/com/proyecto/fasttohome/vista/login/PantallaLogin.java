@@ -50,7 +50,7 @@ public class PantallaLogin extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_login);
         email = findViewById(R.id.eTEmail);
         password = findViewById(R.id.eTPassword);
-        if(getIntent().getExtras() != null){
+        if (getIntent().getExtras() != null) {
             email.setText(getIntent().getExtras().getString("email"));
         }
 
@@ -58,46 +58,59 @@ public class PantallaLogin extends AppCompatActivity {
     }
 
     public void irPrincipal() {
-       Intent i = new Intent(this, PantallaPrincipal.class );
-       i.putExtra("user", user);
-       startActivity(i);
-    };
-
-    public void irRegistro(View view) {
-        Intent i = new Intent(this, registroPaso1DatosUsuario.class );
-        i.putExtra("funcion","registro");
+        Intent i = new Intent(this, PantallaPrincipal.class);
         i.putExtra("user", user);
         startActivity(i);
-    };
+    }
+
+    ;
+
+    public void irRegistro(View view) {
+        Intent i = new Intent(this, registroPaso1DatosUsuario.class);
+        i.putExtra("funcion", "registro");
+        i.putExtra("user", user);
+        startActivity(i);
+    }
+
+    ;
 
 
-
-    /**
-     * Comprueba la contrasña llamando a la api rest con volley
-     */
     public void comprobarPass(View view) {
+        checkPass(false);
+    }
+
+
+    public void checkPass(Boolean silent) {
         //String url = "http://10.0.2.2/php/webService/api.php";
         //Url del archivo strings.xml
         String url = getString(R.string.apiUrl);
         RequestQueue queue = Volley.newRequestQueue(PantallaLogin.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
-            System.out.println(response);
             try {
                 JSONObject resp = new JSONObject(response);
                 if ((resp.getBoolean("error")) == true) {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
-                    user.setPassword(datos.getString("password"));
-                    user.setId(datos.getInt("id"));
-                    if(BCrypt.checkpw(password.getText().toString(),user.getPassword())){
-                        terminarInicioSesion();
-                    }else {
-                        Toast.makeText(PantallaLogin.this, "Tu contraseña es incorrecta", Toast.LENGTH_SHORT).show();
+                    if(silent){
+
+
+                    }else{
+                        user.setPassword(datos.getString("password"));
+                        user.setId(datos.getInt("id"));
+                        if (BCrypt.checkpw(password.getText().toString(), user.getPassword())) {
+                            terminarInicioSesion();
+                        } else {
+                            if(!silent){
+                                Toast.makeText(PantallaLogin.this, "Tu contraseña es incorrecta", Toast.LENGTH_SHORT).show();
+                            }
+                        }
                     }
                 }
             } catch (JSONException | VolleyError e) {
-                Toast.makeText(PantallaLogin.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                if(!silent) {
+                    Toast.makeText(PantallaLogin.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
             }
         }, error -> Toast.makeText(PantallaLogin.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show()) {
             @Override
@@ -118,23 +131,30 @@ public class PantallaLogin extends AppCompatActivity {
         irPrincipal();
     }
 
-    public void leerCuentaGuardada(){
+    public void leerCuentaGuardada() {
         SharedPreferences sharedPreferences = getSharedPreferences("fasttohome", MODE_PRIVATE);
-        int userId =sharedPreferences.getInt("user_id",0);
-        String hash = sharedPreferences.getString("hash",null);
-        if(userid == null | userId ==0 | )
+        String email = sharedPreferences.getString("email", null);
+        String hash = sharedPreferences.getString("hash", null);
+        if ((email != null && !email.isEmpty()  && hash != null && !hash.isEmpty())) {
+            user.setPassword(hash);
+            user.setEmail(email);
+            checkPass(true);
+        }
+
     }
+
 
     public void salvarCuenta(Usuario user) {
         SharedPreferences sharedPreferences = getSharedPreferences("fasttohome", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("user_id",user.getId());
-        editor.putString("hash",user.getPassword());
+        editor.putString("email", user.getEmail());
+        editor.putString("hash", user.getPassword());
         editor.apply();
     }
 
     @Override
-    public void onBackPressed() {}
+    public void onBackPressed() {
+    }
 }
 
 
