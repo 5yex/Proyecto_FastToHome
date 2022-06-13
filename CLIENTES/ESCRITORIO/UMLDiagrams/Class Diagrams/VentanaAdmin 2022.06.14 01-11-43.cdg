@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="VentanaAdmin">
+  <ClassDiagramComponents>
+    <Class name="VentanaAdmin" package="vista.administrador" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="administrador" type="Usuario" visibility="private"/>
+        <Field name="arrayListClientes" type="ArrayList&lt;Usuario&gt;" visibility="private"/>
+        <Field name="arrayListAdmins" type="ArrayList&lt;Usuario&gt;" visibility="private"/>
+        <Field name="arrayListMercaderes" type="ArrayList&lt;Usuario&gt;" visibility="private"/>
+        <Field name="botonModificarDatosAdmin" type="javax.swing.JButton" visibility="private"/>
+        <Field name="busquedaAdmins" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="busquedaClientes" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="busquedaMercaderes" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="checkBusquedaAdmins" type="javax.swing.JCheckBox" visibility="private"/>
+        <Field name="checkBusquedaClientes" type="javax.swing.JCheckBox" visibility="private"/>
+        <Field name="checkBusquedaMercaderes" type="javax.swing.JCheckBox" visibility="private"/>
+        <Field name="itemAdminACliente" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="itemClienteAAdministrador" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="itemClienteAMercader" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="itemMercaderACliente" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane4" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane5" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="labelBienvenido" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelNombreAdmin" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="panelInicioAdmin" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelTablaAdmins" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelTablaClientes" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelTablaMercaderes" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelTableado" type="javax.swing.JTabbedPane" visibility="private"/>
+        <Field name="popUpAdministrador" type="javax.swing.JPopupMenu" visibility="private"/>
+        <Field name="popUpClientes" type="javax.swing.JPopupMenu" visibility="private"/>
+        <Field name="popUpMercaderes" type="javax.swing.JPopupMenu" visibility="private"/>
+        <Field name="recargarAdmins" type="javax.swing.JButton" visibility="private"/>
+        <Field name="recargarClientes" type="javax.swing.JButton" visibility="private"/>
+        <Field name="recargarMercaderes" type="javax.swing.JButton" visibility="private"/>
+        <Field name="tablaAdmins" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tablaClientes" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tablaMercaderes" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Usuario" name="user"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="establecerIcono" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="botonModificarDatosAdminActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="itemClienteAMercaderActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="itemClienteAAdministradorActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="checkBusquedaClientesActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="checkBusquedaMercaderesActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="recargarMercaderesActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="checkBusquedaAdminsActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="recargarAdminsActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="itemAdminAClienteActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="itemMercaderAClienteActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="recargarClientesActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="actualizarVentana" returnType="void" visibility="private"/>
+        <Method name="recargarTablaClientes" returnType="void" visibility="public"/>
+        <Method name="recargarTablaMercaderes" returnType="void" visibility="public"/>
+        <Method name="recargarTablaAdmins" returnType="void" visibility="public"/>
+        <Method name="recargarTabla" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Usuario&gt;" name="listaUsuarios"/>
+          <Argument type="JTable" name="tabla"/>
+          <Argument type="String" name="filtroNombre"/>
+        </Method>
+        <Method name="confirmarCierre" returnType="void" visibility="private"/>
+        <Method name="confirmarSalida" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
