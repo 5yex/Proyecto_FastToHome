@@ -23,6 +23,8 @@ import com.proyecto.fasttohome.vista.login.PantallaLogin;
 import com.proyecto.fasttohome.vista.pedido.PantallaDePedidos;
 import com.proyecto.fasttohome.vista.pedido.seleccionarTransporteZona;
 import com.proyecto.fasttohome.vista.registro.registroPaso1DatosUsuario;
+import com.proyecto.fasttohome.vista.registro.registroPaso2Password;
+import com.proyecto.fasttohome.vista.registro.registroPaso3Direccion;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -150,6 +152,19 @@ public class PantallaPrincipal extends AppCompatActivity {
         i.putExtra("funcion","update");
         startActivity(i);
     }
+
+    public void pasarPantallaActualizarDireccion(View view){
+        Intent i = new Intent(this, registroPaso3Direccion.class );
+        i.putExtra("funcion","update");
+        startActivity(i);
+    }
+
+    public void pasarPantallaActualizarPassword(View view){
+        Intent i = new Intent(this, registroPaso2Password.class );
+        i.putExtra("funcion","update");
+        startActivity(i);
+    }
+
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(PantallaPrincipal.this);
