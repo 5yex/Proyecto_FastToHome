@@ -52,7 +52,7 @@ public class registroPaso2Password extends AppCompatActivity {
         funcion = getIntent().getExtras().getString("funcion");
         direccion = (Direccion) getIntent().getExtras().getSerializable("direccion");
         campoActualizar = findViewById(R.id.campoActualizar);
-        textoActualizar =  findViewById(R.id.textoActualizar);
+        textoActualizar = findViewById(R.id.textoActualizar);
         password = findViewById(R.id.etPasswordR);
         passwordConfirm = findViewById(R.id.etPasswordConfirmR);
         boton = findViewById(R.id.buttonPassword);
@@ -72,40 +72,46 @@ public class registroPaso2Password extends AppCompatActivity {
         String pass = password.getText().toString();
         String passConfirm = passwordConfirm.getText().toString();
 
-        if(pass.length() > 0 && passConfirm.length() > 0){
-            if(Validaciones.validar(pass,getString(R.string.patron_pass))){
-                if(Validaciones.validar(passConfirm,getString(R.string.patron_pass))){
-                    if(pass.compareTo(passConfirm) == 0){
+        if (pass.length() > 0 && passConfirm.length() > 0) {
+            if (Validaciones.validar(pass, getString(R.string.patron_pass))) {
+                if (Validaciones.validar(passConfirm, getString(R.string.patron_pass))) {
+                    if (pass.compareTo(passConfirm) == 0) {
                         user.setPassword(BCrypt.hashpw(password.getText().toString(), BCrypt.gensalt(10)));
-
                         if (funcion.equals("update")) {
-                            comprobarPass();
+                            if (Validaciones.validar(pass, getString(R.string.patron_pass))) {
+                                comprobarPass();
+                            } else {
+                                Toast notificacion = Toast.makeText(this, "Patrón incorrecto. Mínimo 8 caracteres, una mayúscula y un número", Toast.LENGTH_LONG);
+                                notificacion.show();
+                            }
                         }
                         if (funcion.equals("registro")) {
-                            Intent i = new Intent(this, registroPaso3Direccion.class );
+                            Intent i = new Intent(this, registroPaso3Direccion.class);
                             i.putExtra("user", user);
                             i.putExtra("direccion", direccion);
-                            i.putExtra("funcion","registro");
+                            i.putExtra("funcion", "registro");
                             startActivity(i);
                         }
-                    }else{
-                        Toast notificacion = Toast.makeText(this,"Lo campos contraseña y confirmar contraseña deben coincidir.",Toast.LENGTH_LONG);
+                    } else {
+                        Toast notificacion = Toast.makeText(this, "Lo campos contraseña y confirmar contraseña deben coincidir.", Toast.LENGTH_LONG);
                         notificacion.show();
                     }
-                }else{
-                    Toast notificacion = Toast.makeText(this,"Patrón incorrecto. Mínimo 8 caracteres, una mayúscula y un número",Toast.LENGTH_LONG);
+                } else {
+                    Toast notificacion = Toast.makeText(this, "Patrón incorrecto. Mínimo 8 caracteres, una mayúscula y un número", Toast.LENGTH_LONG);
                     notificacion.show();
                 }
-            }else{
-                Toast notificacion = Toast.makeText(this,"Patrón incorrecto. Mínimo 8 caracteres, una mayúscula y un número",Toast.LENGTH_LONG);
+            } else {
+                Toast notificacion = Toast.makeText(this, "Patrón incorrecto. Mínimo 8 caracteres, una mayúscula y un número", Toast.LENGTH_LONG);
                 notificacion.show();
             }
 
-        }else {
+        } else {
             Toast notificacion = Toast.makeText(this, "No puedes dejar ningún campo vacío", Toast.LENGTH_LONG);
             notificacion.show();
         }
-    };
+    }
+
+    ;
 
     public void comprobarPass() {
         //String url = "http://10.0.2.2/php/webService/api.php";
@@ -123,9 +129,9 @@ public class registroPaso2Password extends AppCompatActivity {
                     user.setPassword(datos.getString("password"));
                     user.setId(datos.getInt("id"));
                     System.out.println(campoActualizar.getText().toString());
-                    if(BCrypt.checkpw(campoActualizar.getText().toString(),user.getPassword())){
-                       actualizarDatos();
-                    }else {
+                    if (BCrypt.checkpw(campoActualizar.getText().toString(), user.getPassword())) {
+                        actualizarDatos();
+                    } else {
                         Toast.makeText(registroPaso2Password.this, "Tu contraseña es incorrecta", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -165,6 +171,7 @@ public class registroPaso2Password extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
+                user.setPassword(BCrypt.hashpw(campoActualizar.getText().toString(), BCrypt.gensalt(10));
                 params.put("DATA", new Peticion("actualizar_usuario", user.getJSON()).getJSON());
                 return params;
             }
