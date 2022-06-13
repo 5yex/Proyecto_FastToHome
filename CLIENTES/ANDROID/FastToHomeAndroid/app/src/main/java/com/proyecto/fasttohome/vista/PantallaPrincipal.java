@@ -165,6 +165,7 @@ public class PantallaPrincipal extends AppCompatActivity {
     public void pasarPantallaActualizarDireccion(View view){
         Intent i = new Intent(this, registroPaso3Direccion.class );
         i.putExtra("user",user);
+        i.putExtra("direccion",direccion);
         i.putExtra("funcion","update");
         startActivity(i);
     }
@@ -172,6 +173,7 @@ public class PantallaPrincipal extends AppCompatActivity {
     public void pasarPantallaActualizarPassword(View view){
         Intent i = new Intent(this, registroPaso2Password.class );
         i.putExtra("user",user);
+        i.putExtra("direccion",direccion);
         i.putExtra("funcion","update");
         startActivity(i);
     }
