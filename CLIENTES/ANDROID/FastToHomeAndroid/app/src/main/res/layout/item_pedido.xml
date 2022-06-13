@@ -25,9 +25,9 @@
                 android:id="@+id/fechaPedido"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="24dp"
                 android:text="TextView"
-                app:layout_constraintEnd_toStartOf="@+id/numeroPedido"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,27 +35,29 @@
                 android:id="@+id/numeroPedido"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="36dp"
                 android:text="TextView"
-                app:layout_constraintEnd_toStartOf="@+id/estadoPedido"
+                app:layout_constraintStart_toEndOf="@+id/fechaPedido"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/estadoPedido"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="68dp"
                 android:layout_marginTop="24dp"
                 android:text="TextView"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:layout_editor_absoluteX="245dp" />
+                app:layout_constraintStart_toEndOf="@+id/numeroPedido"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ListView
                 android:id="@+id/cestaPedido"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 app:layout_constraintBottom_toTopOf="@+id/marcarRecibidoPedido"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/marcarRecibidoPedido"
