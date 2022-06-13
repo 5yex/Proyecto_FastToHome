@@ -127,7 +127,8 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
                         Cesta product = new Cesta();
                         product.setId_cesta(obj.getInt("id"));
                         product.setId_pedido(obj.getInt("id_pedido "));
-                        product.setId_producto(obj.getInt(""));
+                        product.setId_producto(obj.getInt("id_producto "));
+                        product.setCantidad(obj.getInt(""));
                     }
                     ArrayList<String> lista = new ArrayList<>();
                     for (Cesta product: listaProductosCesta) {
