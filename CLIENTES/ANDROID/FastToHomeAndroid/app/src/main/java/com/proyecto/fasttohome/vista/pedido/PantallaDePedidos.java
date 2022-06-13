@@ -69,7 +69,9 @@ public class PantallaDePedidos extends AppCompatActivity {
                     JSONArray arrayDeJson = resp.getJSONArray("datos");
                     for (int i = 0; i < arrayDeJson.length(); i++) {
                         JSONObject objPedidos = arrayDeJson.getJSONObject(i);
-                     pedido.setId_negocio();
+                     pedido.setEstado(objPedidos.getString("estado"));
+                     pedido.setId_pedido(objPedidos.getInt("id"));
+                     pedido.setTotal();
 
 
 
