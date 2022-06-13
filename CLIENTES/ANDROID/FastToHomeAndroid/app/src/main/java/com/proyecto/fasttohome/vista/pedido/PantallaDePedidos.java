@@ -69,7 +69,16 @@ public class PantallaDePedidos extends AppCompatActivity {
                     JSONArray arrayDeJson = resp.getJSONArray("datos");
                     for (int i = 0; i < arrayDeJson.length(); i++) {
                         JSONObject objPedidos = arrayDeJson.getJSONObject(i);
-                        
+                     pedido.setId_negocio();
+
+
+
+
+                        /*
+                        * pedido.setId_pedido(pedidoJson.get("id").getAsInt());
+                pedido.setId_usuario(pedidoJson.get("id_usuario").getAsInt());
+                String fechaActual = pedidoJson.get("fecha_hora").getAsString();
+                        * */
                     }
                     rellenarRecyclerView();
                 }
