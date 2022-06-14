@@ -5,21 +5,15 @@
 package vista.mercader;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
-import com.formdev.flatlaf.ui.FlatDropShadowBorder;
 import controlador.ImagenDao;
 import controlador.ProductoDao;
-import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JMenu;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import modelo.Imagen;
-import modelo.Negocio;
 import modelo.Producto;
 import util.imagenesUtil;
-import vista.mercader.DialogoEditarProducto;
 
 /**
  * Clase que representa el panel con con el contenido del producto
