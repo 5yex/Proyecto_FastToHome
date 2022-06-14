@@ -271,7 +271,7 @@ public class PanelPedido extends javax.swing.JPanel {
     }
     
     /**
-     * Carga 
+     * Carga en pantalla los datos de la dirección del cliente
      */
     public void cargaDireccionPedido(){
         Usuario usuario_pedido = UsuarioDao.obtenerUsuarioPorSuId(new Usuario(pedido.getId_usuario()));
@@ -287,6 +287,9 @@ public class PanelPedido extends javax.swing.JPanel {
         
     }
     
+    /**
+     * Carga en pantalla el contenido de la cesta del pedido
+     */
     public void cargarContenidoDeCesta(){
         
         ArrayList<Cesta> cesta;
