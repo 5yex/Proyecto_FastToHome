@@ -42,7 +42,6 @@ public class registroPaso3Direccion extends AppCompatActivity {
     String funcion;
     TextView textoTitulo;
     Button botonActualizar;
-    Labe
 
 
     @Override
