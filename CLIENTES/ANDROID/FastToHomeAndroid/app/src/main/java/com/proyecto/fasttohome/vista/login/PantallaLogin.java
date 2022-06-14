@@ -90,7 +90,7 @@ public class PantallaLogin extends AppCompatActivity {
      * Método que lanza el botón iniciar sesión para hacer su acción.
      *
      * @param view
-     */
+     */ 
     public void comprobarPass(View view) {
         checkPass(false);
     }
