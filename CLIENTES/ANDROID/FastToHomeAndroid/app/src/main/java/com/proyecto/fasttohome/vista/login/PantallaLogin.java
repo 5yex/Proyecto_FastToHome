@@ -39,7 +39,7 @@ public class PantallaLogin extends AppCompatActivity {
     private EditText email;
     private EditText password;
     private Usuario user;
-    
+
     /**
      * Método para inicializar el activity pantalla login en su creación
      *
@@ -72,7 +72,11 @@ public class PantallaLogin extends AppCompatActivity {
 
 
 
-
+    /**
+     * Método para ir al comienzo del registro
+     *
+     * @param view
+     */
     public void irRegistro(View view) {
         Intent i = new Intent(this, registroPaso1DatosUsuario.class);
         i.putExtra("funcion", "registro");
