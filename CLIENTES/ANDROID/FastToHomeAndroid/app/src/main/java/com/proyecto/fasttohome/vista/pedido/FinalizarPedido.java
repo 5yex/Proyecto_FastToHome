@@ -64,6 +64,7 @@ public class FinalizarPedido extends AppCompatActivity {
     private Pedido pedido;
     private ListView listaProductos;
     private TextView total;
+    
 
     private int centimos;
 
