@@ -178,6 +178,13 @@ public class PantallaLogin extends AppCompatActivity {
         }
 
     }
+
+    /**
+     * Perodo que persiste la cuenta usando SharedPreferences, en modo privado.
+     *
+     * Guardaría el email y un hash de Bcrypt seguro.
+     * @param user
+     */
     public void salvarCuenta(Usuario user) {
         //.edit().clear().apply();
         System.out.println("salvarCuenta");
