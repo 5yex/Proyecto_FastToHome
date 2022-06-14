@@ -55,15 +55,18 @@ public class PantallaLogin extends AppCompatActivity {
         }
     }
 
+    /**
+     * Carga el Intent de la pantalla principal y le pasa el usuario
+     */
     public void irPrincipal() {
         Intent i = new Intent(this, PantallaPrincipal.class);
-        System.out.println(user.getJSON());
         i.putExtra("user", user);
         startActivity(i);
     }
 
-    ;
 
+
+    
     public void irRegistro(View view) {
         Intent i = new Intent(this, registroPaso1DatosUsuario.class);
         i.putExtra("funcion", "registro");
