@@ -118,6 +118,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
             precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
         }
 
+        precioTotal = Math.round(precioTotal * 100d) / 100d)
         if (precioTotal > 0) {
             pedir.setText("LLEVAS " + productosSeleccionados.size() + ", Total: " + precioTotal + "€");
         } else {
