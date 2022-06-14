@@ -4,25 +4,18 @@
  */
 package vista.administrador;
 
-import com.formdev.flatlaf.FlatLightLaf;
-import controlador.NegocioDao;
 import controlador.UsuarioDao;
-import java.awt.FlowLayout;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import javax.swing.JMenu;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
-import javax.swing.UIManager;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
-import modelo.Negocio;
 import modelo.Usuario;
-import vista.DialogoImagen;
 import vista.FrameLogin;
 
 /**
