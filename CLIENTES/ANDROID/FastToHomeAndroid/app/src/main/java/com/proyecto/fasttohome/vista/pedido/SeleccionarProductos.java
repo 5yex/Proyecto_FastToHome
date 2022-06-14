@@ -75,8 +75,12 @@ public class SeleccionarProductos extends AppCompatActivity {
         FloatingActionButton fab = binding.fab;
 
         fab.setOnClickListener(view -> {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?q="+direccion.getCoordenadas()+"&ll="+direccion.getCoordenadas()+"&z=20z"));
-            startActivity(browserIntent);
+            if(!direccion.getCoordenadas().isEmpty() && !direccion.getCoordenadas().length() > 5){
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?q="+direccion.getCoordenadas()+"&ll="+direccion.getCoordenadas()+"&z=20z"));
+                startActivity(browserIntent);
+            }else{
+                Toast.makeText(this, "Este negocio no ha configurado su ubicación", Toast.LENGTH_SHORT).show();
+            }
         });
 
         productosSeleccionados = new HashMap<Integer, Integer>();
