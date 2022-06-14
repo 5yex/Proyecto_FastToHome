@@ -168,6 +168,7 @@ public class SeleccionarProductos extends AppCompatActivity {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
+                    direccion = new Direccion();
                     direccion.setCalle(datos.getString("Calle"));
                     direccion.setNumero(datos.getInt("Numero"));
                     direccion.setCiudad(datos.getString("Ciudad"));
