@@ -29,6 +29,9 @@
             android:label="Seguimiento:"
             android:exported="false" />
         <activity
+            android:name=".vista.AcercarDe"
+            android:exported="false" />
+        <activity
             android:name=".vista.pedido.PedidoFinalizado"
             android:exported="false" />
         <activity
