@@ -75,7 +75,7 @@ public class SeleccionarProductos extends AppCompatActivity {
         FloatingActionButton fab = binding.fab;
 
         fab.setOnClickListener(view -> {
-            if(!direccion.getCoordenadas().isEmpty() && !direccion.getCoordenadas().length() > 5){
+            if(!direccion.getCoordenadas().isEmpty() && direccion.getCoordenadas().length() > 5){
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?q="+direccion.getCoordenadas()+"&ll="+direccion.getCoordenadas()+"&z=20z"));
                 startActivity(browserIntent);
             }else{
