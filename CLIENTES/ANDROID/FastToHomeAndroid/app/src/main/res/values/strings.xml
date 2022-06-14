@@ -22,7 +22,7 @@
     <string name="userDni">Dni:</string>
     <string name="userLastname">Apellidos:</string>
     <string name="userTlf">Teléfono:</string>
-    <string name="userEmail">Correo Elecrónico:</string>
+    <string name="userEmail">Correo Electrónico:</string>
     <string name="userPassword">Contraseña nueva:</string>
     <string name="userPasswordConfirmation">Confirmar Contraseña:</string>
     <string name="userDirNumero">Número:</string>
