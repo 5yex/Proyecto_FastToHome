@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,6 +41,7 @@ public class registroPaso3Direccion extends AppCompatActivity {
     EditText otros;
     String funcion;
     TextView textoTitulo;
+    Button botonActualizar;
 
 
     @Override
@@ -57,6 +59,7 @@ public class registroPaso3Direccion extends AppCompatActivity {
         codigoPostal = findViewById(R.id.etCodigoPostal);
         ciudad = findViewById(R.id.etCiudad);
         otros = findViewById(R.id.etOtros);
+        botonActualizar = findViewById(R.id.buttonDireccion);
 
         funcion = getIntent().getExtras().getString("funcion");
         if (funcion.equals("update")) {
@@ -67,6 +70,8 @@ public class registroPaso3Direccion extends AppCompatActivity {
             codigoPostal.setText(direccion.getCodigo_postal()+"");
             ciudad.setText(direccion.getCiudad());
             otros.setText(direccion.getOtros());
+            botonActualizar.setText("ACTUALIZAR");
+
         }
 
 
