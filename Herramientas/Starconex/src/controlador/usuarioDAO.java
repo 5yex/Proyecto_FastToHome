@@ -29,7 +29,7 @@ public class usuarioDAO {
             String query = "SELECT * FROM public.usuario where dni like '" + temp.getDni() + "' and clave like '" + temp.getClave() + "'";
             ResultSet result = conex.prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY).executeQuery();
             if (!result.first()) {
-                System.out.println("no hay," + temp.getDni() + temp.getClave());
+                //System.out.println("no hay," + temp.getDni() + temp.getClave());
                 return false;
             }
         } catch (SQLException ex) {
