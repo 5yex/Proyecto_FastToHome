@@ -56,7 +56,7 @@ public class contratosUsuario extends javax.swing.JPanel {
         for (contrato contratoTmp : listaContratos) {
             DefaultTableModel model = (DefaultTableModel) tablaContratos.getModel();
             model.addRow(contrato2row(contratoTmp, tarifaDAO.obtenerTarifa(conex, contratoTmp.getId_tarifa())));
-            System.out.println("vista.paneles.contratosUsuario.recargarTablaEmpleados()");
+            //System.out.println("vista.paneles.contratosUsuario.recargarTablaEmpleados()");
         }
     }
 
