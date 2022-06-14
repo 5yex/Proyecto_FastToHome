@@ -6,27 +6,16 @@ package vista.mercader;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
 import vista.*;
-import controlador.CategoriaDao;
-import controlador.DireccionDao;
 import controlador.ImagenDao;
-import controlador.NegocioDao;
 import controlador.ProductoDao;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import modelo.Categoria;
-import modelo.Direccion;
 import modelo.Imagen;
 import modelo.Negocio;
 import modelo.Producto;
-import modelo.Usuario;
-import util.imagenesUtil;
-import vista.mercader.VentanaMercader;
 import static util.imagenesUtil.imagenB64Ajlabel;
 
 /**
