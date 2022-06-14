@@ -41,7 +41,6 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Queue;
 
 public class SeleccionarProductos extends AppCompatActivity {
 
@@ -129,7 +128,7 @@ public class SeleccionarProductos extends AppCompatActivity {
                         producto.setDescripcion(objetoProductoJSon.get("Descripcion").toString());
                         producto.setPrecio(Double.parseDouble(objetoProductoJSon.get("Precio").toString()));
                         try{
-                            String imgUrl = getString(R.string.imgUrl) + objetoProductoJSon.getString("url");
+                            String imgUrl = getString(R.string.serverUrl) + objetoProductoJSon.getString("url");
                             producto.setUrl_imagen(imgUrl);
                         }catch (Exception e){
                         }

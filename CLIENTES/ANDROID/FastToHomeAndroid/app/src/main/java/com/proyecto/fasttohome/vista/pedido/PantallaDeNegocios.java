@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -16,14 +15,12 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Categoria;
-import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.vista.PantallaPrincipal;
 import com.proyecto.fasttohome.vista.pedido.recycler_adaptors.RecyclerViewAdaptorNegocio;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -79,7 +76,7 @@ public class PantallaDeNegocios extends AppCompatActivity {
                         negocio.setId_categoria(objetoNegocioJSon.getInt("id_categoria"));
                         negocio.setId_direccion(objetoNegocioJSon.getInt("direccion_id"));
                         try{
-                            String imgUrl = getString(R.string.imgUrl) + objetoNegocioJSon.getString("url");
+                            String imgUrl = getString(R.string.serverUrl) + objetoNegocioJSon.getString("url");
                             negocio.setUrl_imagen(imgUrl);
                         }catch (Exception e){
                         }

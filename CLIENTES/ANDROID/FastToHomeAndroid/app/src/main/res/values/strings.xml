@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name" translatable="false">FastToHome</string>
     <string name="apiUrl" translatable="false">http://10.0.2.2/php/webService/api.php</string>
-    <string name="imgUrl" translatable="false">http://10.0.2.2/php/webService/</string>
+    <string name="serverUrl" translatable="false">http://10.0.2.2/php/webService/</string>
+    <string name="licenciasUrl" translatable="false">http://10.0.2.2/php/webService/licencias/Licencias.html</string>
 
     <string name="buttonEntrar">INICIAR SESIÓN</string>
     <string name="buttonRegistro">REGÍSTRATE</string>
