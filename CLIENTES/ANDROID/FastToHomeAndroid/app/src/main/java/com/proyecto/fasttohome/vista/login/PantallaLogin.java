@@ -90,12 +90,19 @@ public class PantallaLogin extends AppCompatActivity {
      * Método que lanza el botón iniciar sesión para hacer su acción.
      *
      * @param view
-     */ 
+     */
     public void comprobarPass(View view) {
         checkPass(false);
     }
 
-
+    /**
+     * Método para comprobar el usuario y si existe, la contraseña llamando al apiRest con volley
+     *
+     * @param silent En caso false, realiza un funcionamiento dando info al usuario de los valores que ha introducido mal
+     *               <p>
+     *               En caso true, realiza un funcinoamiento silencioso para cuando es usado para cuando hace auto-login con
+     *               los datos persistidos de la aplicación.
+     */
     public void checkPass(Boolean silent) {
         //String url = "http://10.0.2.2/php/webService/api.php";
         //Url del archivo strings.xml
@@ -144,6 +151,7 @@ public class PantallaLogin extends AppCompatActivity {
         queue.add(request);
     }
 
+    
     private void terminarInicioSesion() {
         salvarCuenta(user);
         Toast.makeText(PantallaLogin.this, "Has iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
