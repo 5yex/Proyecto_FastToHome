@@ -2,6 +2,7 @@ package com.proyecto.fasttohome.vista.pedido;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.android.volley.Request;
@@ -24,6 +25,7 @@ import android.widget.Toast;
 
 import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.databinding.ActivitySeleccionarProductosBinding;
+import com.proyecto.fasttohome.modelo.Direccion;
 import com.proyecto.fasttohome.modelo.Negocio;
 import com.proyecto.fasttohome.modelo.Pedido;
 import com.proyecto.fasttohome.modelo.Peticion;
@@ -39,6 +41,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Queue;
 
 public class SeleccionarProductos extends AppCompatActivity {
 
@@ -51,6 +54,7 @@ public class SeleccionarProductos extends AppCompatActivity {
     private RecyclerView recyclerViewProducto;
     private RecyclerViewAdaptorProducto adaptorProducto;
     private Button pedir;
+    private Direccion direccion;
     private ImageView imagenNegocio;
     private CoordinatorLayout pantalla;
 
@@ -70,7 +74,11 @@ public class SeleccionarProductos extends AppCompatActivity {
         Picasso.get().load(negocio.getUrl_imagen()).into(imagenNegocio);
         FloatingActionButton fab = binding.fab;
 
-        //fab.setOnClickListener(view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).show());
+        fab.setOnClickListener(view -> {
+
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
+            startActivity(browserIntent);
+        });
 
         productosSeleccionados = new HashMap<Integer, Integer>();
         recyclerViewProducto = (RecyclerView) findViewById(R.id.recyclerProductos);
@@ -85,6 +93,7 @@ public class SeleccionarProductos extends AppCompatActivity {
             }
         });
         obtenerProductosNegocio();
+        obtenerDireccionNegocio();
     }
 
     public void irFinalizar() {
@@ -139,6 +148,44 @@ public class SeleccionarProductos extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("DATA", new Peticion("obtener_productos_negocio", negocio.getJSON()).getJSON());
+                return params;
+            }
+        };
+        queue.add(request);
+    }
+
+    public void obtenerDireccionNegocio() {
+        RequestQueue queue = Volley.newRequestQueue(SeleccionarProductos.this);
+        String url = getString(R.string.apiUrl);
+        StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
+            System.out.println(response);
+            try {
+                JSONObject resp = new JSONObject(response);
+                if ((resp.getBoolean("error")) == true) {
+                    throw new VolleyError(resp.getString("datos"));
+                } else {
+                    JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
+                    direccion.setCalle(datos.getString("Calle"));
+                    direccion.setNumero(datos.getInt("Numero"));
+                    direccion.setCiudad(datos.getString("Ciudad"));
+                    direccion.setCodigo_postal(datos.getInt("CP"));
+                    direccion.setOtros(datos.getString("Otros"));
+                    direccion.setCoordenadas(datos.getString("Coordenadas"));
+                    direccion.setId_direccion(datos.getInt("id"));
+                }
+            } catch (JSONException | VolleyError e) {
+                Toast.makeText(SeleccionarProductos.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                e.printStackTrace();
+                finish();
+            }
+        }, error -> {
+            Toast.makeText(SeleccionarProductos.this, "ERROR DE CONEXIÓN = " + error, Toast.LENGTH_SHORT).show();
+            finish();
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("DATA", new Peticion("obtener_direccion", negocio.getJSON()).getJSON());
                 return params;
             }
         };
