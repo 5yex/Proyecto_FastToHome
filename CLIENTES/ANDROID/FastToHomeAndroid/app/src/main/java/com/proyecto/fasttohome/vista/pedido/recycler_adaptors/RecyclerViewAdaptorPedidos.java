@@ -91,7 +91,9 @@ public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerVie
         holder.estadoPedido.setText(pedidoActual.getEstado());
         holder.precioTotal.setText("Total pedido: "+pedidoActual.getTotal() + " €");
         obtenerProductosNegocio(holder.contexto, pedidoActual,holder);
-        if(pedidoActual.getEstado().compareTo('enviando'))
+        if(pedidoActual.getEstado().compareTo("enviando") == 0){
+            holder.marcarRecibido.setEnabled(true);
+        }
         holder.marcarRecibido.setOnClickListener(view -> {
             setPedidoRecibido(holder.contexto, pedidoActual,holder);
         });
