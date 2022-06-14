@@ -171,7 +171,7 @@ public class registroPaso2Password extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                user.setPassword(BCrypt.hashpw(campoActualizar.getText().toString(), BCrypt.gensalt(10)));
+                user.setPassword(BCrypt.hashpw(passwordConfirm.getText().toString(), BCrypt.gensalt(10)));
                 params.put("DATA", new Peticion("actualizar_usuario", user.getJSON()).getJSON());
                 return params;
             }
