@@ -7,7 +7,6 @@ package vista.mercader;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import modelo.Negocio;
-import vista.mercader.DialogoRegistrarProducto;
 
 /**
  * Clase que representa un panel con un único botón para crear un nuevo producto
