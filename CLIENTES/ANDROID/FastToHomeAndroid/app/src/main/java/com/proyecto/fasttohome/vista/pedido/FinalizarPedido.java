@@ -118,6 +118,7 @@ public class FinalizarPedido extends AppCompatActivity {
             lista.add(leftPad("€" + producto.getPrecio(), 5) + leftPad("  Uds: " + entry.getValue(), 12) + "  " + producto.getNombre());
             indice++;
         }
+        precioTotal =(Math.round(precioTotal * 100d) / 100d);
         total.setText(String.valueOf(precioTotal + " Euros"));
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista);
         listaProductos = findViewById(R.id.list);
