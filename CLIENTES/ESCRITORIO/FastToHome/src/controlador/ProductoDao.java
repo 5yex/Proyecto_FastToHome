@@ -91,9 +91,9 @@ public class ProductoDao {
     }
     
     /**
-     * Realiza la consulta para obtener los datos de un producto mediante su identificador
-     * @param product
-     * @return 
+     * Realiza la consulta para obtener un objeto de tipo Producto mediante su identificador
+     * @param product objeto de tipo Producto del que queremos obtener los datos
+     * @return un objeto de tipo Producto
      */
     public static Producto obtenerProductoPorId(Producto product) {
         String json = product.getJSON();
