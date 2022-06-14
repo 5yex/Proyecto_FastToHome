@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -64,7 +65,7 @@ public class FinalizarPedido extends AppCompatActivity {
     private Pedido pedido;
     private ListView listaProductos;
     private TextView total;
-    
+    private Button pagar;
 
     private int centimos;
 
@@ -99,7 +100,10 @@ public class FinalizarPedido extends AppCompatActivity {
         googlePayButton.setOnClickListener(this::requestPayment);
 
         total = findViewById(R.id.detailPrice);
-
+        pagar = findViewById(R.id.pagar);
+        pagar.setOnClickListener(view -> {
+            pedidoAfterPay();
+        });
         actualizarResumen();
 
     }
