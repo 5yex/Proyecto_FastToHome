@@ -89,7 +89,12 @@ public class ProductoDao {
     public static boolean borrarProducto(Producto product) {
         return gestion.hacerConsulta(new Peticion("borrar_producto", product.getJSON()));
     }
-
+    
+    /**
+     * Realiza la consulta para obtener los datos de un producto mediante su identificador
+     * @param product
+     * @return 
+     */
     public static Producto obtenerProductoPorId(Producto product) {
         String json = product.getJSON();
         //hacemos una petición con el comando que deberá realizar el php, y los datos en json    
