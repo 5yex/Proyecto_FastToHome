@@ -76,7 +76,7 @@ public class SeleccionarProductos extends AppCompatActivity {
 
         fab.setOnClickListener(view -> {
 
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?q="+direccion.getCoordenadas()+"&ll="+direccion.getCoordenadas()+"&z=20z"));
             startActivity(browserIntent);
         });
 
