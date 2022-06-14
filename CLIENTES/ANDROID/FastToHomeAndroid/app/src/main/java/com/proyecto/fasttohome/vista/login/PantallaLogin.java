@@ -1,8 +1,16 @@
 package com.proyecto.fasttohome.vista.login;
 
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 
+=======
+import static com.google.android.material.internal.ContextUtils.getActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
+>>>>>>> parent of e6b9ebea (autoCommit 20220614.141804)
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -21,6 +29,10 @@ import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Peticion;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.vista.PantallaPrincipal;
+<<<<<<< HEAD
+=======
+import com.proyecto.fasttohome.vista.pedido.seleccionarTransporteZona;
+>>>>>>> parent of e6b9ebea (autoCommit 20220614.141804)
 import com.proyecto.fasttohome.vista.registro.registroPaso1DatosUsuario;
 
 import org.json.JSONException;
@@ -36,6 +48,7 @@ public class PantallaLogin extends AppCompatActivity {
     private EditText password;
     private Usuario user;
 
+<<<<<<< HEAD
     /**
      * Método para inicializar el activity pantalla login en su creación
      *
@@ -43,13 +56,18 @@ public class PantallaLogin extends AppCompatActivity {
      *                           y los enviados desde el activity padre.
      */
 
+=======
+>>>>>>> parent of e6b9ebea (autoCommit 20220614.141804)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         user = new Usuario();
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
+<<<<<<< HEAD
         //Método para leer cuenta Guardada
+=======
+>>>>>>> parent of e6b9ebea (autoCommit 20220614.141804)
         leerCuentaGuardada();
         setContentView(R.layout.activity_pantalla_login);
         email = findViewById(R.id.eTEmail);
@@ -59,10 +77,13 @@ public class PantallaLogin extends AppCompatActivity {
         }
     }
 
+<<<<<<< HEAD
     /**
      * Método para ir al activity principal
      */
 
+=======
+>>>>>>> parent of e6b9ebea (autoCommit 20220614.141804)
     public void irPrincipal() {
         Intent i = new Intent(this, PantallaPrincipal.class);
         System.out.println(user.getJSON());
@@ -70,6 +91,7 @@ public class PantallaLogin extends AppCompatActivity {
         startActivity(i);
     }
 
+<<<<<<< HEAD
     /**
      * Método para ir al comienzo del registro
      *
@@ -79,11 +101,18 @@ public class PantallaLogin extends AppCompatActivity {
     public void irRegistro(View view) {
         Intent i = new Intent(this, registroPaso1DatosUsuario.class);
         //Le pasamos como funcion "registro" para que actue como tal.
+=======
+    ;
+
+    public void irRegistro(View view) {
+        Intent i = new Intent(this, registroPaso1DatosUsuario.class);
+>>>>>>> parent of e6b9ebea (autoCommit 20220614.141804)
         i.putExtra("funcion", "registro");
         i.putExtra("user", user);
         startActivity(i);
     }
 
+<<<<<<< HEAD
     /**
      * Método que lanza el botón iniciar sesión para hacer su acción.
      *
@@ -101,6 +130,16 @@ public class PantallaLogin extends AppCompatActivity {
      *               En caso true, realiza un funcinoamiento silencioso para cuando es usado para cuando hace auto-login con
      *               los datos persistidos de la aplicación.
      */
+=======
+    ;
+
+
+    public void comprobarPass(View view) {
+        checkPass(false);
+    }
+
+
+>>>>>>> parent of e6b9ebea (autoCommit 20220614.141804)
     public void checkPass(Boolean silent) {
         //String url = "http://10.0.2.2/php/webService/api.php";
         //Url del archivo strings.xml
@@ -113,25 +152,42 @@ public class PantallaLogin extends AppCompatActivity {
                     throw new VolleyError(resp.getString("datos"));
                 } else {
                     JSONObject datos = resp.getJSONArray("datos").getJSONObject(0);
+<<<<<<< HEAD
                     if (silent) {
                         if (user.getPassword().equals(datos.getString("password"))) {
                             user.setId(datos.getInt("id"));
                             terminarInicioSesion();
                         }
                     } else {
+=======
+                    if(silent){
+                        if(user.getPassword().equals(datos.getString("password")) ){
+                            user.setId(datos.getInt("id"));
+                            terminarInicioSesion();
+                        }
+                    }else{
+>>>>>>> parent of e6b9ebea (autoCommit 20220614.141804)
                         user.setPassword(datos.getString("password"));
                         user.setId(datos.getInt("id"));
                         if (BCrypt.checkpw(password.getText().toString(), user.getPassword())) {
                             terminarInicioSesion();
                         } else {
+<<<<<<< HEAD
                             if (!silent) {
+=======
+                            if(!silent){
+>>>>>>> parent of e6b9ebea (autoCommit 20220614.141804)
                                 Toast.makeText(PantallaLogin.this, "Tu contraseña es incorrecta", Toast.LENGTH_SHORT).show();
                             }
                         }
                     }
                 }
             } catch (JSONException | VolleyError e) {
+<<<<<<< HEAD
                 if (!silent) {
+=======
+                if(!silent) {
+>>>>>>> parent of e6b9ebea (autoCommit 20220614.141804)
                     Toast.makeText(PantallaLogin.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
@@ -139,7 +195,11 @@ public class PantallaLogin extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
+<<<<<<< HEAD
                 if (!silent) {
+=======
+                if(!silent){
+>>>>>>> parent of e6b9ebea (autoCommit 20220614.141804)
                     user.setEmail(email.getText().toString());
                 }
                 params.put("DATA", new Peticion("getHash", user.getJSON()).getJSON());
@@ -149,31 +209,43 @@ public class PantallaLogin extends AppCompatActivity {
         queue.add(request);
     }
 
+<<<<<<< HEAD
     /**
      * Metodo ejecutado al finalizar un inicio de sesión válido
      * Llama al método salvarCuenta para persistir la cuenta
      */
+=======
+>>>>>>> parent of e6b9ebea (autoCommit 20220614.141804)
     private void terminarInicioSesion() {
         salvarCuenta(user);
         Toast.makeText(PantallaLogin.this, "Has iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
         irPrincipal();
     }
 
+<<<<<<< HEAD
     /**
      * Método que comprueba si hay una cuenta persistida
      *
      * En caso de que la haya, llamar a checkPass para comenzar un inicio de sesión silencioso
      * que comprueba si la cuenta persistida es válida o no de manera transparente al usuario.
      */
+=======
+>>>>>>> parent of e6b9ebea (autoCommit 20220614.141804)
     public void leerCuentaGuardada() {
         SharedPreferences sharedPreferences = getSharedPreferences("fasttohome", MODE_PRIVATE);
         String email = sharedPreferences.getString("email", null);
         String hash = sharedPreferences.getString("hash", null);
+<<<<<<< HEAD
         if (email != null && !email.isEmpty() && hash != null && !hash.isEmpty()) {
+=======
+        System.out.println(email + hash);
+        if (email != null && !email.isEmpty()  && hash != null && !hash.isEmpty()) {
+>>>>>>> parent of e6b9ebea (autoCommit 20220614.141804)
             user.setPassword(hash);
             user.setEmail(email);
             checkPass(true);
         }
+<<<<<<< HEAD
     }
 
     /**
@@ -183,6 +255,13 @@ public class PantallaLogin extends AppCompatActivity {
      * @param user
      */
     public void salvarCuenta(Usuario user) {
+=======
+
+    }
+    public void salvarCuenta(Usuario user) {
+        //.edit().clear().apply();
+        System.out.println("salvarCuenta");
+>>>>>>> parent of e6b9ebea (autoCommit 20220614.141804)
         SharedPreferences sharedPreferences = getSharedPreferences("fasttohome", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("email", user.getEmail());
