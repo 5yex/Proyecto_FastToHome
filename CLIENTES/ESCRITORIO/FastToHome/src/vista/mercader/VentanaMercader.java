@@ -4,35 +4,28 @@
  */
 package vista.mercader;
 
-import com.formdev.flatlaf.ui.FlatButtonBorder;
 import controlador.ImagenDao;
-import vista.registroNegocio;
 import controlador.NegocioDao;
 import controlador.PedidoDao;
 import controlador.ProductoDao;
 import controlador.UsuarioDao;
-import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JMenu;
 import javax.swing.JOptionPane;
 import modelo.Imagen;
 import modelo.Negocio;
 import modelo.Pedido;
 import modelo.Producto;
 import modelo.Usuario;
-import org.apache.http.impl.conn.SystemDefaultRoutePlanner;
 import util.WrapLayout;
 import util.imagenesUtil;
 import vista.FrameLogin;
