@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="Categoria" package="modelo" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getJSON" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cesta" package="modelo" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="id_cesta" type="int" visibility="private"/>
+        <Field name="id_producto" type="int" visibility="private"/>
+        <Field name="id_pedido" type="int" visibility="private"/>
+        <Field name="cantidad" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="id_cesta"/>
+          <Argument type="int" name="id_producto"/>
+          <Argument type="int" name="id_pedido"/>
+          <Argument type="int" name="cantidad"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="id_producto"/>
+          <Argument type="int" name="id_pedido"/>
+          <Argument type="int" name="cantidad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId_cesta" returnType="int" visibility="public"/>
+        <Method name="setId_cesta" returnType="void" visibility="public">
+          <Argument type="int" name="id_cesta"/>
+        </Method>
+        <Method name="getId_producto" returnType="int" visibility="public"/>
+        <Method name="setId_producto" returnType="void" visibility="public">
+          <Argument type="int" name="id_producto"/>
+        </Method>
+        <Method name="getId_pedido" returnType="int" visibility="public"/>
+        <Method name="setId_pedido" returnType="void" visibility="public">
+          <Argument type="int" name="id_pedido"/>
+        </Method>
+        <Method name="getCantidad" returnType="int" visibility="public"/>
+        <Method name="setCantidad" returnType="void" visibility="public">
+          <Argument type="int" name="cantidad"/>
+        </Method>
+        <Method name="getJSON" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Direccion" package="modelo" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="id_direccion" type="int" visibility="private"/>
+        <Field name="calle" type="String" visibility="private"/>
+        <Field name="numero" type="int" visibility="private"/>
+        <Field name="ciudad" type="String" visibility="private"/>
+        <Field name="otros" type="String" visibility="private"/>
+        <Field name="codigo_postal" type="int" visibility="private"/>
+        <Field name="coordenadas" type="String" visibility="private"/>
+        <Field name="valida" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id_direccion"/>
+          <Argument type="String" name="calle"/>
+          <Argument type="int" name="numero"/>
+          <Argument type="String" name="ciudad"/>
+          <Argument type="String" name="otros"/>
+          <Argument type="int" name="codigo_postal"/>
+          <Argument type="String" name="coordenadas"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="calle"/>
+          <Argument type="int" name="numero"/>
+          <Argument type="String" name="ciudad"/>
+          <Argument type="String" name="otros"/>
+          <Argument type="int" name="codigo_postal"/>
+          <Argument type="String" name="coordenadas"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="id_direccion"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="isValida" returnType="boolean" visibility="public"/>
+        <Method name="setValida" returnType="void" visibility="public">
+          <Argument type="boolean" name="valida"/>
+        </Method>
+        <Method name="getId_direccion" returnType="int" visibility="public"/>
+        <Method name="setId_direccion" returnType="void" visibility="public">
+          <Argument type="int" name="id_direccion"/>
+        </Method>
+        <Method name="getCalle" returnType="String" visibility="public"/>
+        <Method name="setCalle" returnType="void" visibility="public">
+          <Argument type="String" name="calle"/>
+        </Method>
+        <Method name="getNumero" returnType="int" visibility="public"/>
+        <Method name="setNumero" returnType="void" visibility="public">
+          <Argument type="int" name="numero"/>
+        </Method>
+        <Method name="getCiudad" returnType="String" visibility="public"/>
+        <Method name="setCiudad" returnType="void" visibility="public">
+          <Argument type="String" name="ciudad"/>
+        </Method>
+        <Method name="getOtros" returnType="String" visibility="public"/>
+        <Method name="setOtros" returnType="void" visibility="public">
+          <Argument type="String" name="otros"/>
+        </Method>
+        <Method name="getCodigo_postal" returnType="int" visibility="public"/>
+        <Method name="setCodigo_postal" returnType="void" visibility="public">
+          <Argument type="int" name="codigo_postal"/>
+        </Method>
+        <Method name="getCoordenadas" returnType="String" visibility="public"/>
+        <Method name="setCoordenadas" returnType="void" visibility="public">
+          <Argument type="String" name="coordenadas"/>
+        </Method>
+        <Method name="getJSON" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Imagen" package="modelo" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="b64_imagen" type="String" visibility="private"/>
+        <Field name="url_imagen" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="b64_imagen"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getB64_imagen" returnType="String" visibility="public"/>
+        <Method name="setB64_imagen" returnType="void" visibility="public">
+          <Argument type="String" name="b64_imagen"/>
+        </Method>
+        <Method name="getUrl_imagen" returnType="String" visibility="public"/>
+        <Method name="setUrl_imagen" returnType="void" visibility="public">
+          <Argument type="String" name="url_imagen"/>
+        </Method>
+        <Method name="getJSON" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Negocio" package="modelo" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="id_negocio" type="int" visibility="private"/>
+        <Field name="id_direccion" type="int" visibility="private"/>
+        <Field name="id_categoria" type="int" visibility="private"/>
+        <Field name="id_mercader" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="descripcion" type="String" visibility="private"/>
+        <Field name="id_img" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="id_negocio"/>
+          <Argument type="int" name="id_direccion"/>
+          <Argument type="int" name="id_categoria"/>
+          <Argument type="int" name="id_mercader"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="descripcion"/>
+          <Argument type="int" name="id_img"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="id_direccion"/>
+          <Argument type="int" name="id_categoria"/>
+          <Argument type="int" name="id_mercader"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="descripcion"/>
+          <Argument type="int" name="id_img"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="id_direccion"/>
+          <Argument type="int" name="id_categoria"/>
+          <Argument type="int" name="id_mercader"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="descripcion"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="id_negocio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId_negocio" returnType="int" visibility="public"/>
+        <Method name="setId_negocio" returnType="void" visibility="public">
+          <Argument type="int" name="id_negocio"/>
+        </Method>
+        <Method name="getId_direccion" returnType="int" visibility="public"/>
+        <Method name="setId_direccion" returnType="void" visibility="public">
+          <Argument type="int" name="id_direccion"/>
+        </Method>
+        <Method name="getId_categoria" returnType="int" visibility="public"/>
+        <Method name="setId_categoria" returnType="void" visibility="public">
+          <Argument type="int" name="id_categoria"/>
+        </Method>
+        <Method name="getId_mercader" returnType="int" visibility="public"/>
+        <Method name="setId_mercader" returnType="void" visibility="public">
+          <Argument type="int" name="id_mercader"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getDescripcion" returnType="String" visibility="public"/>
+        <Method name="setDescripcion" returnType="void" visibility="public">
+          <Argument type="String" name="descripcion"/>
+        </Method>
+        <Method name="getId_img" returnType="int" visibility="public"/>
+        <Method name="setId_img" returnType="void" visibility="public">
+          <Argument type="int" name="id_img"/>
+        </Method>
+        <Method name="getJSON" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pedido" package="modelo" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="id_pedido" type="int" visibility="private"/>
+        <Field name="id_usuario" type="int" visibility="private"/>
+        <Field name="id_negocio" type="int" visibility="private"/>
+        <Field name="fecha_hora" type="Date" visibility="private"/>
+        <Field name="estado" type="String" visibility="private"/>
+        <Field name="total" type="double" visibility="private"/>
+        <Field name="transporte" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="id_pedido"/>
+          <Argument type="int" name="id_usuario"/>
+          <Argument type="int" name="id_negocio"/>
+          <Argument type="Date" name="fecha_hora"/>
+          <Argument type="String" name="estado"/>
+          <Argument type="double" name="total"/>
+          <Argument type="String" name="transporte"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="id_usuario"/>
+          <Argument type="int" name="id_negocio"/>
+          <Argument type="Date" name="fecha_hora"/>
+          <Argument type="String" name="estado"/>
+          <Argument type="double" name="total"/>
+          <Argument type="String" name="transporte"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId_pedido" returnType="int" visibility="public"/>
+        <Method name="setId_pedido" returnType="void" visibility="public">
+          <Argument type="int" name="id_pedido"/>
+        </Method>
+        <Method name="getId_usuario" returnType="int" visibility="public"/>
+        <Method name="setId_usuario" returnType="void" visibility="public">
+          <Argument type="int" name="id_usuario"/>
+        </Method>
+        <Method name="getId_negocio" returnType="int" visibility="public"/>
+        <Method name="setId_negocio" returnType="void" visibility="public">
+          <Argument type="int" name="id_negocio"/>
+        </Method>
+        <Method name="getFecha_hora" returnType="Date" visibility="public"/>
+        <Method name="setFecha_hora" returnType="void" visibility="public">
+          <Argument type="Date" name="fecha_hora"/>
+        </Method>
+        <Method name="getEstado" returnType="String" visibility="public"/>
+        <Method name="setEstado" returnType="void" visibility="public">
+          <Argument type="String" name="estado"/>
+        </Method>
+        <Method name="getTotal" returnType="double" visibility="public"/>
+        <Method name="setTotal" returnType="void" visibility="public">
+          <Argument type="double" name="total"/>
+        </Method>
+        <Method name="getTransporte" returnType="String" visibility="public"/>
+        <Method name="setTransporte" returnType="void" visibility="public">
+          <Argument type="String" name="transporte"/>
+        </Method>
+        <Method name="getJSON" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Peticion" package="modelo" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="comando" type="String" visibility="package"/>
+        <Field name="datos" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="comando"/>
+          <Argument type="String" name="datos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getComando" returnType="String" visibility="public"/>
+        <Method name="setComando" returnType="void" visibility="public">
+          <Argument type="String" name="comando"/>
+        </Method>
+        <Method name="getDatos" returnType="String" visibility="public"/>
+        <Method name="setDatos" returnType="void" visibility="public">
+          <Argument type="String" name="datos"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getJSON" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Producto" package="modelo" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="id_producto" type="int" visibility="private"/>
+        <Field name="id_negocio" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="precio" type="double" visibility="private"/>
+        <Field name="descripcion" type="String" visibility="private"/>
+        <Field name="stock" type="int" visibility="private"/>
+        <Field name="id_img" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="id_negocio"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="double" name="precio"/>
+          <Argument type="String" name="descripcion"/>
+          <Argument type="int" name="stock"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="id_producto"/>
+          <Argument type="int" name="id_negocio"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="double" name="precio"/>
+          <Argument type="String" name="descripcion"/>
+          <Argument type="int" name="stock"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="id_negocio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId_img" returnType="int" visibility="public"/>
+        <Method name="setId_img" returnType="void" visibility="public">
+          <Argument type="int" name="id_img"/>
+        </Method>
+        <Method name="getId_producto" returnType="int" visibility="public"/>
+        <Method name="setId_producto" returnType="void" visibility="public">
+          <Argument type="int" name="id_producto"/>
+        </Method>
+        <Method name="getId_negocio" returnType="int" visibility="public"/>
+        <Method name="setId_negocio" returnType="void" visibility="public">
+          <Argument type="int" name="id_negocio"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getPrecio" returnType="double" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="getDescripcion" returnType="String" visibility="public"/>
+        <Method name="setDescripcion" returnType="void" visibility="public">
+          <Argument type="String" name="descripcion"/>
+        </Method>
+        <Method name="getStock" returnType="int" visibility="public"/>
+        <Method name="setStock" returnType="void" visibility="public">
+          <Argument type="int" name="stock"/>
+        </Method>
+        <Method name="getJSON" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Usuario" package="modelo" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellidos" type="String" visibility="private"/>
+        <Field name="dni" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="tlf" type="String" visibility="private"/>
+        <Field name="rol" type="String" visibility="private"/>
+        <Field name="id_direccion" type="int" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellidos"/>
+          <Argument type="String" name="dni"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="tlf"/>
+          <Argument type="String" name="rol"/>
+          <Argument type="int" name="id_direccion"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellidos"/>
+          <Argument type="String" name="dni"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="tlf"/>
+          <Argument type="String" name="rol"/>
+          <Argument type="int" name="id_direccion"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="email"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellidos" returnType="String" visibility="public"/>
+        <Method name="setApellidos" returnType="void" visibility="public">
+          <Argument type="String" name="apellidos"/>
+        </Method>
+        <Method name="getDni" returnType="String" visibility="public"/>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="String" name="dni"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="getTlf" returnType="String" visibility="public"/>
+        <Method name="setTlf" returnType="void" visibility="public">
+          <Argument type="String" name="tlf"/>
+        </Method>
+        <Method name="getRol" returnType="String" visibility="public"/>
+        <Method name="setRol" returnType="void" visibility="public">
+          <Argument type="String" name="rol"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getId_direccion" returnType="int" visibility="public"/>
+        <Method name="setId_direccion" returnType="void" visibility="public">
+          <Argument type="int" name="id_direccion"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="getJSON" returnType="String" visibility="public"/>
+        <Method name="getRow" returnType="Object[]" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="gestion" package="controlador" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="hacerConsulta" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Peticion" name="peticion"/>
+        </Method>
+        <Method name="consultaSeleccionUnico" returnType="JsonObject" visibility="public" isStatic="true">
+          <Argument type="Peticion" name="peticion"/>
+        </Method>
+        <Method name="consultaSeleccion" returnType="JsonArray" visibility="public" isStatic="true">
+          <Argument type="Peticion" name="peticion"/>
+        </Method>
+        <Method name="consultaSeleccionImagen" returnType="String" visibility="public" isStatic="true">
+          <Argument type="Peticion" name="peticion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CategoriaDao" package="controlador" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="nuevaCategoria" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Categoria" name="categoria"/>
+        </Method>
+        <Method name="obtenerCategorias" returnType="ArrayList&lt;Categoria&gt;" visibility="public" isStatic="true"/>
+        <Method name="ObtenerIdPorNombre" returnType="int" visibility="public" isStatic="true">
+          <Argument type="Categoria" name="categoria"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CestaDao" package="controlador" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="obtenerContenidoCestaPedido" returnType="ArrayList&lt;Cesta&gt;" visibility="public" isStatic="true">
+          <Argument type="Pedido" name="pedido"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DireccionDao" package="controlador" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="nuevaDireccion" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Direccion" name="direccion"/>
+        </Method>
+        <Method name="nuevaDireccionDevuelveId" returnType="int" visibility="public" isStatic="true">
+          <Argument type="Direccion" name="direccion"/>
+        </Method>
+        <Method name="obtenerDireccionNegocio" returnType="Direccion" visibility="public" isStatic="true">
+          <Argument type="Negocio" name="negocio"/>
+        </Method>
+        <Method name="obtenerDireccionUsuario" returnType="Direccion" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="actualizarDireccion" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Direccion" name="direccion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ImagenDao" package="controlador" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="nuevaImagen" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Imagen" name="imagen"/>
+        </Method>
+        <Method name="nuevaImagenDevuelveId" returnType="int" visibility="public" isStatic="true">
+          <Argument type="Imagen" name="imagen"/>
+        </Method>
+        <Method name="obtenerImagenPorId" returnType="String" visibility="public" isStatic="true">
+          <Argument type="Imagen" name="imagen"/>
+        </Method>
+        <Method name="editarImagenPorId" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Imagen" name="imagen"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="NegocioDao" package="controlador" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="nuevoNegocio" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Negocio" name="negocio"/>
+        </Method>
+        <Method name="negocioDeMercader" returnType="Negocio" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="actualizarNegocio" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Negocio" name="negocio"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PedidoDao" package="controlador" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="seleccionPedidosPagados" returnType="ArrayList&lt;Pedido&gt;" visibility="public" isStatic="true">
+          <Argument type="Negocio" name="negocio"/>
+        </Method>
+        <Method name="seleccionPedidosEnPreparacion" returnType="ArrayList&lt;Pedido&gt;" visibility="public" isStatic="true">
+          <Argument type="Negocio" name="negocio"/>
+        </Method>
+        <Method name="seleccionTodosPedidos" returnType="ArrayList&lt;Pedido&gt;" visibility="public" isStatic="true">
+          <Argument type="Negocio" name="negocio"/>
+        </Method>
+        <Method name="actualizarEstadoPedido" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Pedido" name="pedido"/>
+        </Method>
+        <Method name="obtenerPedido" returnType="Pedido" visibility="public" isStatic="true">
+          <Argument type="Pedido" name="pedido"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProductoDao" package="controlador" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="nuevoProducto" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Producto" name="product"/>
+        </Method>
+        <Method name="seleccionProductosNegocio" returnType="ArrayList&lt;Producto&gt;" visibility="public" isStatic="true">
+          <Argument type="Negocio" name="negocio"/>
+        </Method>
+        <Method name="actualizarProducto" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Producto" name="product"/>
+        </Method>
+        <Method name="borrarProducto" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Producto" name="product"/>
+        </Method>
+        <Method name="obtenerProductoPorId" returnType="Producto" visibility="public" isStatic="true">
+          <Argument type="Producto" name="product"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UsuarioDao" package="controlador" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="nuevoUsuario" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="obtenerIdCliente" returnType="String" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="getHash" returnType="Usuario" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="obtenerDatosUsuario" returnType="Usuario" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="obtenerUsuarioPorSuId" returnType="Usuario" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="actualizarUsuario" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="asignarRolMercader" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="asignarRolAdministrador" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="asignarRolCliente" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="user"/>
+        </Method>
+        <Method name="seleccionUsuarios" returnType="ArrayList&lt;Usuario&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="comando_peticion"/>
+        </Method>
+        <Method name="seleccionUsuariosClientes" returnType="ArrayList&lt;Usuario&gt;" visibility="public" isStatic="true"/>
+        <Method name="seleccionUsuariosAdmin" returnType="ArrayList&lt;Usuario&gt;" visibility="public" isStatic="true"/>
+        <Method name="seleccionUsuariosMercader" returnType="ArrayList&lt;Usuario&gt;" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="controlador.CestaDao" target="modelo.Pedido" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.DireccionDao" target="modelo.Negocio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.UsuarioDao" target="modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.ProductoDao" target="modelo.Producto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.NegocioDao" target="modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.ImagenDao" target="modelo.Imagen" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.NegocioDao" target="modelo.Negocio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.DireccionDao" target="modelo.Direccion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.PedidoDao" target="modelo.Pedido" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.gestion" target="modelo.Peticion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.DireccionDao" target="modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controlador.CategoriaDao" target="modelo.Categoria" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
