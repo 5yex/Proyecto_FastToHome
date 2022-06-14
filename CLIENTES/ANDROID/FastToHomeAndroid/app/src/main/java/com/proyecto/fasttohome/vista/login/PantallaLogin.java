@@ -160,7 +160,12 @@ public class PantallaLogin extends AppCompatActivity {
         Toast.makeText(PantallaLogin.this, "Has iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
         irPrincipal();
     }
-
+    /**
+     * Método que comprueba si hay una cuenta persistida
+     *
+     * En caso de que la haya, llamar a checkPass para comenzar un inicio de sesión silencioso
+     * que comprueba si la cuenta persistida es válida o no de manera transparente al usuario.
+     */
     public void leerCuentaGuardada() {
         SharedPreferences sharedPreferences = getSharedPreferences("fasttohome", MODE_PRIVATE);
         String email = sharedPreferences.getString("email", null);
