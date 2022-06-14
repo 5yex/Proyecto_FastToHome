@@ -119,7 +119,9 @@ public class registroPaso1DatosUsuario extends AppCompatActivity {
                 Toast.makeText(getBaseContext(), "!Presiona de nuevo quieres salir del registro!", Toast.LENGTH_SHORT).show();
             }
             back_pressed = System.currentTimeMillis();
-        };
+        }else{
+            super.onBackPressed();
+        }
     }
 
     public boolean validaciones(String name, String ape, String nif, String numTelefono, String correo) {
