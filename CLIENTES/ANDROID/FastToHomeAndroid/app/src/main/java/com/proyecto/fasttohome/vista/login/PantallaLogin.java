@@ -151,7 +151,10 @@ public class PantallaLogin extends AppCompatActivity {
         queue.add(request);
     }
 
-    
+    /**
+     * Metodo ejecutado al finalizar un inicio de sesión válido
+     * Llama al método salvarCuenta para persistir la cuenta
+     */
     private void terminarInicioSesion() {
         salvarCuenta(user);
         Toast.makeText(PantallaLogin.this, "Has iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
