@@ -39,7 +39,13 @@ public class PantallaLogin extends AppCompatActivity {
     private EditText email;
     private EditText password;
     private Usuario user;
-
+    
+    /**
+     * Método para inicializar el activity pantalla login en su creación
+     *
+     * @param savedInstanceState Contiene los datos más recientes del activity en caso de ser recargado,
+     *                           y los enviados desde el activity padre.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +72,7 @@ public class PantallaLogin extends AppCompatActivity {
 
 
 
-    
+
     public void irRegistro(View view) {
         Intent i = new Intent(this, registroPaso1DatosUsuario.class);
         i.putExtra("funcion", "registro");
