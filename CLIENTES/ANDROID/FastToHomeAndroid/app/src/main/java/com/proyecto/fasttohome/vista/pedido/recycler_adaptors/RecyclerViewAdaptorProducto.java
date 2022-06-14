@@ -115,7 +115,7 @@ public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerVi
         double precioTotal = 0;
 
         for (Map.Entry<Integer, Integer> entry : productosSeleccionados.entrySet()) {
-            precioTotal = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
+            Math.round(precioTotal * 100d) / 100d = precioTotal + (productos.get(entry.getKey()).getPrecio() * entry.getValue());
         }
 
         if (precioTotal > 0) {
