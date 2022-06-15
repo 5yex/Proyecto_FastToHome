@@ -10,8 +10,11 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
+ * Clase que representa un pedido realizado por un usuario
  *
- * @author jmcbg
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
+ * @since 1.0
  */
 
 public class Pedido implements Serializable {

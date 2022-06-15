@@ -34,6 +34,9 @@ import org.mindrot.jbcrypt.BCrypt;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Clase con la Pantalla de Logueo
+ */
 public class PantallaLogin extends AppCompatActivity {
 
     private EditText email;

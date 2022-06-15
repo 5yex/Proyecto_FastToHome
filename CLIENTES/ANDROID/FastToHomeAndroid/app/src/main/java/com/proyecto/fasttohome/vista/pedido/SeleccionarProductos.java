@@ -42,6 +42,9 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Clase que representa a la pantalla de selección de productos
+ */
 public class SeleccionarProductos extends AppCompatActivity {
 
     private ActivitySeleccionarProductosBinding binding;

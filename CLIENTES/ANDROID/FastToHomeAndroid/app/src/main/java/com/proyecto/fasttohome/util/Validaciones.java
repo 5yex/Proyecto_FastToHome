@@ -3,8 +3,21 @@ package com.proyecto.fasttohome.util;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Clase donde establecemos las distintos metodos con validaciones de campos que se pueden usar en otras clases
+ *
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
+ */
 public class Validaciones {
 
+    /**
+     * Valida si el campo introducido cumple el patrón
+     *
+     * @param campo campo rellenado por el usuario de la aplicación
+     * @param patron patron que debe serguir el campo introducido
+     * @return true si el campo introducido cumple el patrón
+     */
     public static boolean validar(String campo, String patron) {
 
         Pattern p = Pattern.compile(patron);
@@ -17,6 +30,12 @@ public class Validaciones {
         return false;
     }
 
+    /**
+     * Valida que el dni introducido es correcto
+     *
+     * @param dni DNI a verificar
+     * @return true si el dni introducido es correcto
+     */
     public static boolean validacionDNI(String dni) {
         dni.toUpperCase();
         if (dni.length() == 9) {

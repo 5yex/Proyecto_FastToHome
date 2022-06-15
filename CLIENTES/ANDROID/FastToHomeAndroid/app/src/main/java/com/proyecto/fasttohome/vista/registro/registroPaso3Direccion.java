@@ -31,6 +31,9 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Clase que representa a la pantalla donde establecemos la dirección del cliente
+ */
 public class registroPaso3Direccion extends AppCompatActivity {
     Usuario user;
     Direccion direccion;

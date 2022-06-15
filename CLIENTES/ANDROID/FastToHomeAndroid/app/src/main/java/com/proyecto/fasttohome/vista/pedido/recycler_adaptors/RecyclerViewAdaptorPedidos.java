@@ -42,6 +42,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Clase que representa a un pedido de la lista de pedidos de PantallaDePedidos
+ */
 public class RecyclerViewAdaptorPedidos extends RecyclerView.Adapter<RecyclerViewAdaptorPedidos.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

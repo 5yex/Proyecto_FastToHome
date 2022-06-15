@@ -35,6 +35,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Clase que representa a la pantalla donde se muestran los pedidos
+ */
 public class PantallaDePedidos extends AppCompatActivity {
 
     private RecyclerView recyclerViewPedidos;

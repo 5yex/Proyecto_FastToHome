@@ -22,6 +22,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Clase que representa un proucto de la lista de productos de SeleccionarProductos
+ */
 public class RecyclerViewAdaptorProducto extends RecyclerView.Adapter<RecyclerViewAdaptorProducto.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

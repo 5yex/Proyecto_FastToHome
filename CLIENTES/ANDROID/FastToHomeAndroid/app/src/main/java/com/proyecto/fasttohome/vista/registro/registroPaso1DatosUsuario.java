@@ -28,7 +28,9 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-
+/**
+ * Clase que representa la pantalla donde establecemos los datos del cliente para el registro
+ */
 public class registroPaso1DatosUsuario extends AppCompatActivity {
     Usuario user = new Usuario();
     Direccion direccion = new Direccion();

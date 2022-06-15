@@ -59,6 +59,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Clase que representa a pantalla donde se muestra la ubicacion del cliente y el método de transporte
+ */
 public class seleccionarTransporteZona extends AppCompatActivity implements OnMapReadyCallback, LocationListener {
     private FusedLocationProviderClient fusedLocationClient;
     MapView mapView;

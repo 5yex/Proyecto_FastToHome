@@ -24,6 +24,9 @@ import com.squareup.picasso.Picasso;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * Representa un negocio de la lista de negocios de la PantallaDeNegocios
+ */
 public class RecyclerViewAdaptorNegocio extends RecyclerView.Adapter<RecyclerViewAdaptorNegocio.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
