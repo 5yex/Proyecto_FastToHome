@@ -32,6 +32,9 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Clase que representa la pantalla tras el inicio de sesión donde se muestran las opciones para el cliente
+ */
 public class PantallaPrincipal extends AppCompatActivity {
 
     private Usuario user;

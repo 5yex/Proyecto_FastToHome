@@ -7,6 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.proyecto.fasttohome.R;
 
+/**
+ * Clase que muestra la pantalla con informacion sobre las dependencias y elementos de terceros utilizadas en la aplicación
+ */
 public class AcercarDe extends AppCompatActivity {
 
     @Override
