@@ -11,8 +11,11 @@ import com.google.gson.Gson;
 import java.io.Serializable;
 
 /**
+ * Clase que representa un negocio
  *
- * @author jmcbg
+ * @author Jose Miguel Calderón, Jesús Rueda Tena
+ * @version 1.0
+ * @since 1.0
  */
 public class Negocio implements Serializable {
     private int id_negocio;
