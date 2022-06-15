@@ -11,6 +11,9 @@ import com.proyecto.fasttohome.vista.AcercarDe;
 import com.proyecto.fasttohome.vista.login.PantallaLogin;
 import com.proyecto.fasttohome.vista.pedido.seleccionarTransporteZona;
 
+/**
+ * Clase que representa a la pantalla que se muestra al abrir la aplicación
+ */
 public class PantallaInicio extends AppCompatActivity {
 
     @Override
