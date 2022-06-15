@@ -38,7 +38,17 @@ public class Peticion {
      * @param datos Datos necesarios para hacer la acción en el servicio web
      */
     public Peticion(String comando, String datos) {
+        /**
+         * Cadena con la acción a realizar por parte del servicio web
+         *
+         * @since 1.0
+         */
         this.comando = comando;
+        /**
+         * Cadena con los datos necesarios para hacer la acción en el servicio web
+         *
+         * @since 1.0
+         */
         this.datos = datos;
     }
 
