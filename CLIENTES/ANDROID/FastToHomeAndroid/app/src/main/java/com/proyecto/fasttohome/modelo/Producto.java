@@ -5,8 +5,11 @@ import com.google.gson.Gson;
 import java.io.Serializable;
 
 /**
+ * Clase que representa un producto de un negocio
  *
- * @author jmcbg
+ * @author Jose Miguel Calderón, Jesús Rueda
+ * @version 1.0
+ * @since 10
  */
 public class Producto implements Serializable {
 
