@@ -38,9 +38,6 @@ public class Producto implements Serializable {
     }
 
 
-
-
-
     public Producto(int id_negocio) {
         this.id_negocio = id_negocio;
     }

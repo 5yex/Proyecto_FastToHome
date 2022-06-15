@@ -3,7 +3,7 @@
         var $dblink;
                 
         function __construct() {
-           $servidor = "mysql:host=localhost;dbname=pf";
+           $servidor = "mysql:host=localhost;dbname=fasttohome";
            $usuario = "root";
            $clave = "";
             
