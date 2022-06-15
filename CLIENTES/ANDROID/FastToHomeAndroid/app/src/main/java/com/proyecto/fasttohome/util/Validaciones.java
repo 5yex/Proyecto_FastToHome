@@ -30,6 +30,12 @@ public class Validaciones {
         return false;
     }
 
+    /**
+     * Valida que el dni introducido es correcto
+     *
+     * @param dni DNI a verificar
+     * @return true si el dni introducido es correcto
+     */
     public static boolean validacionDNI(String dni) {
         dni.toUpperCase();
         if (dni.length() == 9) {
