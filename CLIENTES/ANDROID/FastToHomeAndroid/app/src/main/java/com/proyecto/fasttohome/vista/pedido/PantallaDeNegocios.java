@@ -31,6 +31,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Clase que representa a la pantalla donde se muestran los negocios
+ */
 public class PantallaDeNegocios extends AppCompatActivity {
 
     private RecyclerView recyclerViewNegocio;
