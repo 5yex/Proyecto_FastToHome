@@ -31,6 +31,9 @@ import org.mindrot.jbcrypt.BCrypt;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Clase que representa la 
+ */
 public class registroPaso2Password extends AppCompatActivity {
     Usuario user;
     Direccion direccion;
