@@ -6,6 +6,8 @@ package com.proyecto.fasttohome.modelo;
 
 import com.google.gson.Gson;
 
+import java.io.Serializable;
+
 /**
  * Clase que representa una categoria de un negocio
  *
@@ -13,7 +15,7 @@ import com.google.gson.Gson;
  * @version 1.0
  * @since 1.0
  */
-public class Categoria {
+public class Categoria implements Serializable {
 
     /**
      * Numero identificador de la categorira en la base de datos

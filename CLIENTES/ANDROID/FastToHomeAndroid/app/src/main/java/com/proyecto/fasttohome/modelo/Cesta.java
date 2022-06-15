@@ -6,6 +6,8 @@ package com.proyecto.fasttohome.modelo;
 
 import com.google.gson.Gson;
 
+import java.io.Serializable;
+
 /**
  * Clase que representa la cesta con los productos del pedido
  *
@@ -13,7 +15,7 @@ import com.google.gson.Gson;
  * @version 1.0
  * @since 1.0
  */
-public class Cesta{
+public class Cesta implements Serializable {
 
     /**
      * Número que identifica la cesta en la base de datos
