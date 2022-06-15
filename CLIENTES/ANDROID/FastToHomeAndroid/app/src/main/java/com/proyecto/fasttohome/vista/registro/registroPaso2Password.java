@@ -32,7 +32,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Clase que representa la 
+ * Clase que representa la pantalla donde establecemos la contraseña del cliente
  */
 public class registroPaso2Password extends AppCompatActivity {
     Usuario user;
