@@ -48,6 +48,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * Clase donde se muestra el resumen del pedido y aparecen las opciones de pago
+ */
 public class FinalizarPedido extends AppCompatActivity {
 
     // Arbitrarily-picked constant integer you define to track a request for payment data activity.
