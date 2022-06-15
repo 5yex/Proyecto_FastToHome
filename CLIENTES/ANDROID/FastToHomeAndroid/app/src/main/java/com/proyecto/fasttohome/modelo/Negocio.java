@@ -18,12 +18,53 @@ import java.io.Serializable;
  * @since 1.0
  */
 public class Negocio implements Serializable {
+    /**
+     * Número que identifica un negocio en la base de datos
+     *
+     * @since 1.0
+     */
     private int id_negocio;
+
+    /**
+     * Número que identifica la dirección del negocio en la base de datos
+     *
+     * @since 1.0
+     */
     private int id_direccion;
+
+    /**
+     * Número que identifica la categoría del negocio en la base de datos
+     *
+     * @since 1.0
+     */
     private int id_categoria;
+
+    /**
+     * Número que identifica al propietario del negocio en la base de datos
+     *
+     * @since 1.0
+     */
     private int id_mercader;
+
+    /**
+     * Nombre del negocio
+     *
+     * @since 1.0
+     */
     private String nombre;
+
+    /**
+     * Descripción del negocio
+     *
+     * @since 1.0
+     */
     private String descripcion;
+
+    /**
+     * Número que identifica la imagen asociada al negocio en la base de datos
+     *
+     * @since 1.0
+     */
     private int id_img;
     private String url_imagen;
 
