@@ -17,7 +17,7 @@ import java.util.Vector;
  * @version 1.0
  * @since 1.0
  */
-public class Usuario {
+public class Usuario implements Serializable{
 
     /**
      * Número que identifica al usuario en la base de datos

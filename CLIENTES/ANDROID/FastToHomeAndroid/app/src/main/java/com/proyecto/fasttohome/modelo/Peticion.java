@@ -15,7 +15,7 @@ import java.io.Serializable;
  * @version 1.0
  * @since 1.0
  */
-public class Peticion {
+public class Peticion implements Serializable{
 
     /**
      * Cadena con la acción a realizar por parte del servicio web
