@@ -13,13 +13,52 @@ import java.io.Serializable;
  */
 public class Producto implements Serializable {
 
+    /**
+     * Número que identifica al producto en la base de datos
+     *
+     * @since 1.0
+     */
     private int id_producto;
+
+    /**
+     * Número que identidfica el negocio al que pertenece el producto en la base de datos
+     *
+     * @since 1.0
+     */
     private int id_negocio;
+
+    /**
+     * Nombre del producto
+     *
+     * @since 1.0
+     */
     private String nombre;
+
+    /**
+     * Precio del producto
+     *
+     * @since 1.0
+     */
     private double precio;
+
+    /**
+     * Descripción del producto
+     *
+     * @since 1.0
+     */
     private String descripcion;
+
+
     private int stock;
+
+    /**
+     * Número que identifica a la imagen del producto en la base de datos
+     *
+     * @since 1.0
+     */
     private int id_img;
+
+    
     private String url_imagen;
 
     public Producto() {
