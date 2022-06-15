@@ -11,6 +11,9 @@ import com.proyecto.fasttohome.R;
 import com.proyecto.fasttohome.modelo.Usuario;
 import com.proyecto.fasttohome.vista.PantallaPrincipal;
 
+/**
+ * Clase que representa a la pantalla con el resumen del pedido finalizado
+ */
 public class PedidoFinalizado extends AppCompatActivity {
 
     Button volver;
